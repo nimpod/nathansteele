@@ -134,7 +134,7 @@ export default class App extends Component {
 
   render() {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div className="App">
                     <ScrollToTop />
                     <Navbar />
@@ -155,7 +155,7 @@ export default class App extends Component {
                     </Switch>
                     <script src="./js/particles.min.js"></script>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         );
   }
 
