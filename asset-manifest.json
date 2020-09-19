@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/nathansteele/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/nathansteele/static/js/main.7c81a6b4.chunk.js",
+    "main.js.map": "/nathansteele/static/js/main.7c81a6b4.chunk.js.map",
+    "runtime-main.js": "/nathansteele/static/js/runtime-main.a2f3e498.js",
+    "runtime-main.js.map": "/nathansteele/static/js/runtime-main.a2f3e498.js.map",
+    "static/js/2.3a82e776.chunk.js": "/nathansteele/static/js/2.3a82e776.chunk.js",
+    "static/js/2.3a82e776.chunk.js.map": "/nathansteele/static/js/2.3a82e776.chunk.js.map",
+    "index.html": "/nathansteele/index.html",
+    "precache-manifest.b917bd593650ce8369398bb7578d25c7.js": "/nathansteele/precache-manifest.b917bd593650ce8369398bb7578d25c7.js",
+    "service-worker.js": "/nathansteele/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/nathansteele/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.3a82e776.chunk.js.LICENSE.txt": "/nathansteele/static/js/2.3a82e776.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2f3e498.js",
+    "static/js/2.3a82e776.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.7c81a6b4.chunk.js"
+  ]
+}
