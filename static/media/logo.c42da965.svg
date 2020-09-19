@@ -1,0 +1,14 @@
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <polygon class="b" points="0 4 6 4 0 2"></polygon>
+  <polygon class="d" points="6 4 3 0 0 2"></polygon>
+  <polygon class="a" points="6 4 3 0 6 4"></polygon>
+  <polygon class="d" points="0 2 0 4 3 0"></polygon>
+  <polygon class="d" points="6 2 3 6 0 2"></polygon>
+  <polygon class="a" points="6 4 6 4 6 4"></polygon>
+  <polygon class="e" points="0 4 6 4 6 2"></polygon>
+  <polygon class="f" points="0 4 3 6 6 2"></polygon>
+  <polygon class="f" points="3 6 6 2 3 0"></polygon>
+  <polygon class="b" points="6 4 6 2 6 2"></polygon>
+  <polygon class="c" points="6 4 0 2 3 0"></polygon>
+  <polygon class="b" points="3 0 6 4 0 2"></polygon>
+</svg>
