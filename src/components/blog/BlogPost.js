@@ -19,25 +19,23 @@ class BlogPost extends Component {
         console.log(this.props);
         
         return (
-            <div className="wrapper blog-post">
-                <div>
-                    <Link to='/blog' className="back-to-previous-page" title="Back to blog archive">
-                        <ArrowLeft />
-                    </Link>
-                    <h3 className="blog-post-title">{this.props.post.title}</h3>
-                    <p className="blog-post-author">
-                        <User />
-                        Nathan Steele
-                    </p>
-                    <p className="blog-post-date">
-                        <Calendar />
-                        {this.props.post.date}
-                    </p>
-                    <div className="blog-post-content" dangerouslySetInnerHTML={{__html: this.props.post.content}}></div>
-                    <button className="delete-button" onClick={this.handleDeletePost}>
-                        Delete post
-                    </button>
-                </div>
+            <div className="page-wrapper blog-post">
+                <Link to='/blog' className="back-to-previous-page" title="Back to blog archive">
+                    <ArrowLeft />
+                </Link>
+                <h3 className="blog-post-title">{this.props.post.title}</h3>
+                <p className="blog-post-author">
+                    <User />
+                    Nathan Steele
+                </p>
+                <p className="blog-post-date">
+                    <Calendar />
+                    {this.props.post.date}
+                </p>
+                <div className="blog-post-content" dangerouslySetInnerHTML={{__html: this.props.post.content}}></div>
+                <button className="delete-button" onClick={this.handleDeletePost}>
+                    Delete post
+                </button>
             </div>
         )
     }

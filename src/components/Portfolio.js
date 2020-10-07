@@ -12,6 +12,7 @@ import ProjectImageSpaceInvaders from '../img/spaceinvaders.png'
 import ProjectImageWebDevUniProject from '../img/web-dev-thumbnail.PNG'
 import ProjectImagePong from '../img/pc.jpg'
 import CV from '../img/cv.pdf'
+import Particles from 'react-particles-js';
 
 {/*
     What do the custom attributes on Link mean? Those enable react-scroll animations. Do not fear future traveller, I am here to help you:
@@ -26,9 +27,137 @@ import CV from '../img/cv.pdf'
 */}
 
 
+
+const AMOUNT_OF_PARTICLES = 10;
+const DENSITY_OF_PARTICLES = 100;
+const TYPE_OF_PARTICLES = "circle"; /* "circle", "square", "triangle", "polygon" */
+const PARTICLE_OPACITY = 0.1;
+const PARTICLE_SIZE = 7.5;
+const PARTICLE_SPEED = 2.6;
+const PARTICLE_DIRECTION = "none" /* "none", "bottom", "right", "left", etc... */
+const PARTICLE_COLOUR_1 = "#001d4c";
+const PARTICLE_COLOUR_2 = "#447684";
+const PARTICLE_COLOUR_3 = "#d86700";
+const PARTICLE_COLOUR_4 = "#a26fb0";
+const AMOUNT_OF_LINES = 300;
+const LINE_COLOUR = "#999";
+const LINE_OPACITY = 0.15;
+const LINE_WIDTH = 0.9;
+
+const particlesConig =
+{
+  "particles": {
+    "number": {
+      "value": AMOUNT_OF_PARTICLES,
+      "density": {
+        "enable": true,
+        "value_area": DENSITY_OF_PARTICLES
+      }
+    },
+    "color": {
+      "value": [PARTICLE_COLOUR_1, PARTICLE_COLOUR_2, PARTICLE_COLOUR_3, PARTICLE_COLOUR_4]
+    },
+    "shape": {
+      "type": TYPE_OF_PARTICLES,
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 15
+      }
+    },
+    "opacity": {
+      "value": PARTICLE_OPACITY,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1.5,
+        "opacity_min": 0.15,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": PARTICLE_SIZE,
+      "random": false,
+      "anim": {
+        "enable": true,
+        "speed": PARTICLE_SPEED,
+        "size_min": 0.15,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": AMOUNT_OF_LINES,
+      "color": LINE_COLOUR,
+      "opacity": LINE_OPACITY,
+      "width": LINE_WIDTH
+    },
+    "move": {
+      "enable": true,
+      "speed": PARTICLE_SPEED,
+      "direction": PARTICLE_DIRECTION,
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}
+
+
 const Portfolio = (props) => {
     return (
-        <div className="wrapper">
+        <div className="page-wrapper portfolio">
+            <div id="particles-js">
+                <Particles params={particlesConig} />
+            </div>
             <section id="about">
                 <h2 className="page-title">NATHAN STEELE</h2>
                 <div className="center-me">
@@ -42,7 +171,7 @@ const Portfolio = (props) => {
                     <a className="email" href="nathanjoshuasteele@gmail.com" target = "_blank"><i className="fa fa-envelope"></i></a>
                 </div>
                 <div id="about-desc">
-                    <p>I write code, think about data, over analyse my life, and create digital experiences.</p>
+                    <p>I code, think about data, over analyse my life, and create digital experiences.</p>
                     <p>Computer science student at Newcastle University.</p>
                     <div className="arrow-to-projects center-me">
                         <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>

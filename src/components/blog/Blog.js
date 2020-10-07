@@ -30,7 +30,7 @@ class Blog extends Component {
         })
 
         return(
-            <div className="wrapper blog">
+            <div className="page-wrapper blog">
                 <h4 className="center-me">Blog Archive</h4>
                 <div className="posts-container">
                     <table>

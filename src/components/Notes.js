@@ -6,7 +6,7 @@ class Notes extends Component {
 
     render() {
         return(
-            <div className="wrapper notes">
+            <div className="page-wrapper notes">
                 <h4 className="center-me">Notes</h4>
             </div>
         )

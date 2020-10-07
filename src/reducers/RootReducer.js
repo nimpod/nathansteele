@@ -40,12 +40,12 @@ const initState = {
         },
         {
             id: "5",
-            date: "July 6, 2018",
-            title: "5G: If you build it, we will fill it",
-            content: "<div class='intro-container'><ul><li>What is 5G? Why do we care? How much faster does the pipe get? What can we do with a faster pipe? How does this relate to VR, cars or broadbrand? What's the killer app?</li><li>Really, unless you work in a few very narrow niches, you shouldn't be spending much time thinking about it.</li></ul></div><hr /><p>In early 200, right at the top of the dotcom bubble, the mobile bubble and the broadband bubble, European mobile operators spend $1000bn on licensses for 3G sprectrum. Now almost 20 years later, I've just got back from CES, and 5G is a topic. Manu of my friends at big companies tell me that 'what is 5G?' floats around a lot corporate headquarters almost as much as 'what is machine learning?'</p><p>There are a bunch of different ways to answer this...</p><h6>First, what actual changes should we expect?</h6><p>Without going into the technical details (any more than absolutley necessary), what do we actually get from this? A fatter pipe.</p>",
+            date: "September 9, 2020",
+            title: "Working from home as an intern during the COVID-19 pandemic",
+            content: "<div class='intro-container'>It was challening</div><hr />",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "this is the blurb",
-            tags: "internet; networks"
+            tags: "life"
         },
         {
             id: "6",
@@ -235,7 +235,34 @@ const initState = {
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "this is the blurb",
             tags: "python; data analysis"
-        }
+        },
+        {
+            id: "12",
+            date: "October 7, 2020",
+            title: "Are non-carbon based lifeforms possible?",
+            content: "",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: "astronomy; bio"
+        },
+        {
+            id: "13",
+            date: "October 7, 2020",
+            title: "Gorgonocephalus arcticus",
+            content: "",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: "bio"
+        },
+        {
+            id: "14",
+            date: "October 7, 2020",
+            title: "A subsurface ocean on Enceladus",
+            content: "",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: "astronomy"
+        },
     ],
 
     universityAssignments: [

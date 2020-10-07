@@ -13,7 +13,7 @@ class UniversityAssignment extends Component {
         console.log(this.props);
 
         return (
-            <div className="wrapper universityAssignment">
+            <div className="page-wrapper universityAssignment">
                 <div>
                     <Link to='/university' className="back-to-previous-page" title="Back to blog archive">
                         <ArrowLeft />

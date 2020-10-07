@@ -101,7 +101,11 @@ body {
   position: fixed;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+}
+/* only put the core elements on top of #particles-js, not the entire page because it removes the interactivity */
+#about p, #about a, #about h2, #projects .project {
+  z-index: 1;
+  position: relative;
 }
 
 /* ------------------------------------------<2: NAVBAR (includes top and side navigation)>------------------------------------------ */
@@ -214,13 +218,24 @@ header .sidebar ul a {
 }
 
 svg.logo {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   stroke: rgb(26, 9, 39);
   stroke-width: 0.1px;
-  stroke-opacity: 0.25;
+  stroke-opacity: 0.11;
   z-index: 10;
 }
+
+svg.logo polygon:hover {
+  cursor: pointer;
+  fill-opacity: 0.50;
+}
+
+.sw {fill:none;stroke:black;stroke-width:3px;}
+.fo {fill-opacity:0.2;}
+.color1 {fill:red;}
+.color2 {fill:lime;}
+.color3 {fill:blue;}
 
 svg.logo polygon.a { fill: rgb(177, 170, 89); fill-opacity: 1; }
 svg.logo polygon.b { fill: rgb(255, 239, 69); fill-opacity: 0.84; }
@@ -261,18 +276,18 @@ svg.logo polygon:hover {
 
 
 /* ------------------------------------------<3: MAIN CONTAINER>------------------------------------------ */
-.wrapper {
+.page-wrapper {
   font-size: 2.5rem;
   padding: 10px;
   z-index: 999;
   height: 100vh;
 }
 
-.wrapper.university,
-.wrapper.universityAssignment,
-.wrapper.blog,
-.wrapper.blog-post,
-.wrapper.notes {
+.page-wrapper.university,
+.page-wrapper.universityAssignment,
+.page-wrapper.blog,
+.page-wrapper.blog-post,
+.page-wrapper.notes {
   background-color: rgb(251, 251, 251);
 }
 
@@ -296,6 +311,7 @@ svg.logo polygon:hover {
 /* ------------------------------------------<4: #about SECTION>------------------------------------------ */
 #about, #projects, #contact {
   height: 100vh;
+  padding: 0 25px;
 }
 
 #about {
@@ -366,8 +382,8 @@ div .smooth-scroll-btn:hover {
 }
 
 /* Media queries for the project images */
-@media screen and (min-width: 1920px) { .project img { width: 18.5vw; } }
-@media screen and (max-width: 1920px) { .project img { width: 15.9vw; } }
+@media screen and (min-width: 1910px) { .project img { width: 18.5vw; } }
+@media screen and (max-width: 1900px) { .project img { width: 15.9vw; } }
 @media screen and (max-width: 1879px) { .project img { width: 18.9vw; } }
 @media screen and (max-width: 1595px) { .project img { width: 24.1vw; } }
 @media screen and (max-width: 1282px) { .project img { width: 32.1vw; } }
@@ -560,11 +576,12 @@ table .tag .internet { background-color: rgb(154, 230, 180); color: rgb(34, 84, 
 table .tag .astronomy { background-color: rgb(235, 213, 250); color: rgb(83, 34, 116); }
 table .tag .mathematics { background-color: rgb(230, 207, 154); color: rgb(79, 84, 34); }
 table .tag .python { background-color: rgb(82, 112, 211); color: rgb(235, 235, 235); }
+table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31); }
 
 
 /* ------------------------------------------<8: BLOG POST PAGE>------------------------------------------ */
 .blog-post {
-  padding: 0.1em 2em; /* padding: 0px 550px; */
+  padding: 0 250px; /* padding: 0px 550px; */
   margin: 0px;
   height: 100%;
   min-height: 100vh;
@@ -588,7 +605,7 @@ table .tag .python { background-color: rgb(82, 112, 211); color: rgb(235, 235, 2
 
 .blog-post-title {
   color: rgb(33, 33, 33);
-  font-size: 6vw;
+  font-size: 6rem;
   font-weight: 900;
 }
 
