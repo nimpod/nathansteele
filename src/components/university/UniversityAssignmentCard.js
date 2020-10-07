@@ -14,11 +14,11 @@ class UniversityAssignmentCard extends Component {
                         </picture>
                     </div>
                     <div className="card-meta">
-                        <p className="card-module">{this.props.module}</p>
+                        <p className="card-moduleTitle">{this.props.moduleTitle}</p>
                         <p className="card-assignment">{this.props.assignment}</p>
-                        <p className="card-year">{this.props.year}</p>
+                        <p className="card-stage">{this.props.stage}</p>
                         <p className="card-date">{this.props.date}</p>
-                        <div className="card-percent">{this.props.percent}</div>
+                        <div className="card-percentage">{this.props.percentage}</div>
                     </div>
                 </Link>
             </div>

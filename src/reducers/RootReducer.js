@@ -268,21 +268,27 @@ const initState = {
     universityAssignments: [
         {
             id: "1",
-            date: "12/12/2018",
-            module: "Algorithm Design & Analysis",
+            date: "December 2018",
+            moduleTitle: "Algorithm Design & Analysis",
+            moduleCode: "CSC2023",
             assignment: "Bin Packing Algorithm Design & Analysis",
-            year: "2nd year",
-            percent: "92",
+            stage: "Stage 2",
+            percentage: "92%",
             thumbnail: "https://prod-discovery.edx-cdn.org/media/course/image/8e285de1-0242-4e94-8041-84231363caf4-d03410f48d5f.small.jpg",
-            content: "<p>This is the content</p>"
+            content: "<p class='intro'>Consider the following variant of the Bin Packing problem, called the Glass Cutting Problem.</p> \
+            <p class='intro'>We have an unlimited supply of two-dimensional glass sheets, each sheet having a width of W and a height of H. We also have a request of N rectangular shapes, with widths w1,w2,…,wN (where wi <= W, i=1,…,N) and heights h1,h2,…,hN (where hi <= H, i=1,…,N).</p> \
+            <p class='intro'>We use a glass cutting machine that conducts a specific type of cut, namely the guillotine cut. A guillotine cut is a cut from one edge of a sheet to the opposite edge, parallel to the remaining edges. In other words, when applied to a rectangle, the cut is of guillotine type if it produces two new rectangles. The cutting patterns for the sheets are produced in at most two stages (Figure 1). In the first stage, parallel (horizontal) guillotine cuts are produced on a sheet to produce a set of ‘shelves’. In the second stage, vertical guillotine cuts are made on each shelf to produce the required shapes. If the shapes in a shelf are not all of the same height, additional trimming of the shapes is required (Figure 2).</p> \
+            <p class='intro'>Shelves, parallel to the horizontal axis, have a height equal to the height of the leftmost shape in the shelf, and a width equals to W (the width of the sheet). All shapes in a shelf are placed such that the bottom side is on the shelf floor. There can be as many shelves in a sheet as needed as long as the total height of all shelves does not exceed H (the height of the sheet).</p> \
+            <p class='intro'>The problem is to place all the shapes on the smallest number of sheets. Therefore, you need to design an algorithm that lays out the shapes across as few sheets as possible under the following rules:</p> "
         },
         {
             id: "2",
-            date: "28/03/2019",
-            module: "Database Technologies",
+            date: "March 2019",
+            moduleTitle: "Database Technologies",
+            moduleCode: "CSC2024",
             assignment: "IMDb Rating Analysis",
-            year: "2nd year",
-            percent: "100",
+            stage: "Stage 2",
+            percentage: "100%",
             thumbnail: "https://geekflare.com/wp-content/uploads/2020/02/1_TBSV23ud8tae3E4szI5EDA-1.jpeg",
             content: "<p>This is the content</p>"
         }

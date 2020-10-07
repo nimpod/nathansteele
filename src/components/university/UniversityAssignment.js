@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { Link, NavLink, withRouter } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { ReactComponent as ArrowLeft } from "../../icons/arrowLeft.svg";
 import { ReactComponent as User } from "../../icons/user.svg";
@@ -14,23 +15,24 @@ class UniversityAssignment extends Component {
 
         return (
             <div className="page-wrapper universityAssignment">
-                <div>
-                    <Link to='/university' className="back-to-previous-page" title="Back to blog archive">
-                        <ArrowLeft />
-                    </Link>
-                    <h3 className="module">{this.props.theAssignment.module}</h3>
-                    <p className="assignment">{this.props.theAssignment.assignment}</p>
-                    <p className="year">{this.props.theAssignment.year}</p>
-                    <p className="author">
-                        <User />
-                        Nathan Steele
-                    </p>
-                    <p className="date">
-                        <Calendar />
-                        {this.props.theAssignment.date}
-                    </p>
-                    <p className="percent">{this.props.theAssignment.percent}</p>
-                    <div className="content" dangerouslySetInnerHTML={{__html: this.props.theAssignment.content}}></div>
+                <div className="wrapper">
+                    <div className="row">
+                        <div className="col-sm-6-6 col-md-9-12 col-smd-5-12 col-lg-4-12 page-info">
+                            <div>
+                                <h5>{this.props.theAssignment.moduleCode} - {this.props.theAssignment.moduleTitle}</h5>
+                                <h1>{this.props.theAssignment.assignment}</h1>
+                                <h5>DATE</h5>
+                                <h4>{this.props.theAssignment.date}</h4>
+                                <h5>STAGE</h5>
+                                <h4>{this.props.theAssignment.stage}</h4>
+                                <h5>PERCENTAGE</h5>
+                                <h4>{this.props.theAssignment.percentage}</h4>
+                            </div>
+                        </div>
+                        <div className="col-sm-6-6 col-md-9-12 col-smd-6-12 col-smd-offset-1-12 col-lg-6-12 col-lg-offset-2-12 page-content" dangerouslySetInnerHTML={{__html: this.props.theAssignment.content}}>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         )

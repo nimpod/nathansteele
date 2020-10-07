@@ -48,7 +48,7 @@ class Navbar extends Component {
      */
     render() {
         return (
-            <header className="navbar">
+            <header>
                 <ul className="left-navbar" onMouseLeave={this.deactivateSidebar}>
                     <NavLink to="/">
                         <Logo className="logo" onMouseOver={this.activateSidebar} />

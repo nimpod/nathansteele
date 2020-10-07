@@ -22,7 +22,7 @@ class Blog extends Component {
                                         { tag }
                                     </span> 
                                 </div>
-                            }                            
+                            }
                         })}
                     </td>
                 </tr>
@@ -31,7 +31,7 @@ class Blog extends Component {
 
         return(
             <div className="page-wrapper blog">
-                <h4 className="center-me">Blog Archive</h4>
+                <h2 className="center-me">Blog Archive</h2>
                 <div className="posts-container">
                     <table>
                         <thead>

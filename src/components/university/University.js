@@ -21,13 +21,13 @@ class University extends Component {
         
         const assignmentsDisplayed = universityAssignments.map(p => {
             return (
-                <UniversityAssignmentCard id={p.id} module={p.module} assignment={p.assignment} year={p.year} date={p.date} percent={p.percent} thumbnail={p.thumbnail} />
+                <UniversityAssignmentCard id={p.id} moduleTitle={p.moduleTitle} assignment={p.assignment} stage={p.stage} date={p.date} percentage={p.percentage} thumbnail={p.thumbnail} />
             )
         })
 
         return(
             <div className="page-wrapper university">
-                <h4 className="center-me">University Assignments</h4>
+                <h2 className="center-me">University Assignments</h2>
                 <div className="controls">
                     <div className="btn" title="Grid" onClick={this.useGridView}>
                         <GridIcon alt="Grid icon" />

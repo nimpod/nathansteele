@@ -103,7 +103,7 @@ body {
   height: 100vh;
 }
 /* only put the core elements on top of #particles-js, not the entire page because it removes the interactivity */
-#about p, #about a, #about h2, #projects .project {
+.portfolio p, .portfolio a, .portfolio h2, .portfolio .project {
   z-index: 1;
   position: relative;
 }
@@ -115,7 +115,7 @@ header {
   position: fixed;
   z-index: 10;
   opacity: 0.8;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   align-items: center;
 }
@@ -131,7 +131,7 @@ header ul {
   margin-top: 40px;
   margin-left: 20px;
   width: 70px;
-  display: flex;
+  display: flex !important;
   flex-direction: column; 
   justify-content: space-between;
 }
@@ -278,7 +278,6 @@ svg.logo polygon:hover {
 /* ------------------------------------------<3: MAIN CONTAINER>------------------------------------------ */
 .page-wrapper {
   font-size: 2.5rem;
-  padding: 10px;
   z-index: 999;
   height: 100vh;
 }
@@ -296,11 +295,9 @@ svg.logo polygon:hover {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   text-align: center;
-}
-
-#about-desc p {
-  color: var(--introtext);
-  font-weight: 200;
+  font-size: 3.75rem !important;
+  font-weight: bold !important;
+  margin-bottom: 50px !important;
 }
 
 *:focus {
@@ -315,9 +312,9 @@ svg.logo polygon:hover {
 }
 
 #about {
-  padding: 50px 200px 0px 200px;
+  padding: 120px 200px 0px 200px !important;
   text-align: center;
-  display: inline;
+  display: block;
 }
 
 #about img {
@@ -342,6 +339,15 @@ svg.logo polygon:hover {
   line-height: 1.4em;
 }
 
+#about-desc {
+  margin-top: 50px;
+}
+
+#about-desc p {
+  color: var(--introtext);
+  font-weight: 200;
+}
+
 .center-me {
   text-align: center;
 }
@@ -359,14 +365,53 @@ div .smooth-scroll-btn:hover {
 .arrow-to-projects {
   bottom: 100px;
   width: 100%;
-  position: absolute;
+  margin: 0 auto;
   margin-bottom: -10px;
 }
 
 .arrow-to-about {
   bottom: -100px;
   width: 100%;
-  position: absolute;
+}
+
+/* The contact buttons */
+.contact {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact i {
+  font-size: 50px;
+  color: var(--contact-btn-colour);
+}
+
+.contact a {
+  cursor: pointer;
+  text-decoration: none;
+  padding: 20px;    /* space out the contact icons */
+}
+
+.contact .cv .contact-btn {
+  background-color: var(--contact-btn-colour);
+  border: 1px solid var(--contact-btn-border-colour);
+  color: var(--contact-btn-font-colour);
+  opacity: 0.7;
+  font-size: 20px;
+  border-radius: var(--btn-border-radius);
+  padding: 20px;
+  display: inline-block;
+}
+
+.contact i:hover {
+  color: var(--contact-btn-colour-hover);
+  transition: 0.3s;
+}
+.contact-btn:hover {
+  background-color: var(--contact-btn-colour-hover) !important;
+  transition: 0.3s;
+  color: var(--bg1);
 }
 
 /* ------------------------------------------<5: #projects SECTION>------------------------------------------ */
@@ -458,49 +503,20 @@ div .smooth-scroll-btn:hover {
   color: var(--text);
 }
 
-/* ------------------------------------------<6: #contact SECTION>------------------------------------------ */
-.contact {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contact i {
-  font-size: 50px;
-  color: var(--contact-btn-colour);
-}
-
-.contact a {
-  cursor: pointer;
-  text-decoration: none;
-  padding: 20px;    /* space out the contact icons */
-}
-
-.contact .cv .contact-btn {
-  background-color: var(--contact-btn-colour);
-  border: 1px solid var(--contact-btn-border-colour);
-  color: var(--contact-btn-font-colour);
-  opacity: 0.7;
-  font-size: 20px;
-  border-radius: var(--btn-border-radius);
-  padding: 20px;
-  display: inline-block;
-}
-
-.contact i:hover {
-  color: var(--contact-btn-colour-hover);
-  transition: 0.3s;
-}
-.contact-btn:hover {
-  background-color: var(--contact-btn-colour-hover) !important;
-  transition: 0.3s;
-  color: var(--bg1);
-}
-
 
 /* ------------------------------------------<7: BLOG PAGE>------------------------------------------ */
+.page-wrapper.blog {
+  padding: 50px 0px;
+}
+
+.blog h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
 .posts-container {
   position: relative;
+  margin-top: 40px;
 }
 
 table {
@@ -681,9 +697,14 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
 
 
 /* ------------------------------------------<9: University>------------------------------------------ */
-.wrapper.university {
+.page-wrapper.university {
   /* padding: 100px 125px 100px 50px; */
-  padding: 1px 125px;
+  padding: 50px 125px;
+}
+
+.university h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .university .controls {
@@ -727,7 +748,7 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
   border: 4px solid rgb(251, 251, 251);
   border-radius: 7px;
   display: flex;
-  height: 220px;
+  height: 240px;
   flex-direction: column;
   position: relative;
 }
@@ -785,7 +806,7 @@ div.card-meta p {
   margin: 0;
 }
 
-p.card-module {
+p.card-moduleTitle {
   color: rgb(115, 115, 115);
   font-size: 12px;
   margin-bottom: 2px;
@@ -805,7 +826,7 @@ p.card-date {
   left: 9px;
 }
 
-p.card-year {
+p.card-stage {
   color: rgb(126, 126, 126);
   font-size: 11px;
   position: absolute;
@@ -813,14 +834,14 @@ p.card-year {
   right: 9px;
 }
 
-div.card-percent {
+div.card-percentage {
   color: rgb(255, 255, 255);
   font-size: 11px;
   line-height: 20px;
   margin: 0;
   background-color: rgb(62, 156, 7);
   border-radius: 10px;
-  width: 24px;
+  width: 33px;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -839,36 +860,124 @@ div.card-percent:hover::after {
 
 
 /* ------------------------------------------<10: UNIVERSITY ASSIGNMENT PAGE>------------------------------------------ */
-.universityAssignment {
-  padding: 0.1em 2em; /* padding: 0px 550px; */
-  margin: 0px;
-  height: 100%;
-  min-height: 100vh;
-  border-radius: 0px;
-  letter-spacing: 0px;
-  font-style: normal;
-  transition: 0.3s all;
+.page-wrapper.universityAssignment {
+  /* */
 }
+
+.page-wrapper.universityAssignment .wrapper {
+  width: 100%;
+  padding: 90px 20px;
+}
+
+@media (min-width: 1550px) {
+  .page-wrapper.universityAssignment .wrapper {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 90px 0px;
+  }
+}
+/* .page-info container */
+@media (min-width: 1280px) { 
+  .row > .col-lg-4-12 {
+    width: 33.333333%;
+  }
+}
+
+.page-info > div:first-child {
+  margin-top: 0;
+}
+.page-info > div {
+  margin-top: 43px;
+}
+
+
+/* .page-content container */
+.page-content {
+  margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+  .page-content {
+    margin-top: 55px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .row > .col-lg-offset-2-12 {
+    margin-left: 16.666666667%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .row > .col-lg-6-12 {
+    width: 50%;
+  }
+}
+
+.page-info h2, .page-info h1, .page-info h3, .page-info p.intro {
+  font-family: "Helvetica Now Display DW", sans-serif;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  color: #0f141e;
+}
+
+.page-info h5 {
+  font-weight: 400;
+  letter-spacing: 0.4em !important;
+  color: #878a8f;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+.page-info h4 {
+  font-weight: 800;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  padding-top: 1px;
+  padding-bottom: 4px;
+  font-weight: 500;
+  color: #0f141e;
+  letter-spacing: normal;
+}
+
+@media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
+  .page-info h1 {
+    font-size: 2.75rem;
+    line-height: 3.125rem;
+    padding-top: 4px;
+    padding-bottom: 1px;
+  }
+}
+
+
+.page-content p.intro {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+
+  font-weight: 500;
+  color: #878a8f;
+  letter-spacing: normal;
+}
+@media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
+  .page-content p.intro {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    padding: 2px 0px 3px 0px;
+  }
+}
+
+
 
 .universityAssignment svg {
   width: 13px;
   margin-right: 5px;
 }
 
-.universityAssignment > * {
-  font-size: 0.9rem;
-  padding-bottom: 40px;
-  color: rgb(134, 134, 134);
-}
-
 
 
 /* ------------------------------------------<10: MEDIA QUERIES>------------------------------------------ */
-/* dont display navbar items on mobiles that are too small */
-@media only screen and (max-width: 440px) { .left-navbar a { display: none; } }
-@media only screen and (max-width: 650px) { .right-navbar a { display: none; } }
-
-
 /* remove padding from the #about section as screen gets smaller */
 @media screen and (max-width: 1125px) { #about{ padding: 50px 170px 0px 170px; } }
 @media screen and (max-width: 990px) { #about{ padding: 50px 140px 0px 140px; } }
