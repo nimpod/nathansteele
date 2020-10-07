@@ -6,6 +6,6 @@ https://nimpod.github.io/nathansteele/
 ```
 git add .
 git commit -m "i changed something"
-git push
+git push origin master --force
 npm run deploy
 ```
