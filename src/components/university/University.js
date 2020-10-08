@@ -27,7 +27,7 @@ class University extends Component {
 
         return(
             <div className="page-wrapper university">
-                <h2 className="center-me">University Assignments</h2>
+                <h2 className="page-title center-me">University Assignments</h2>
                 <div className="controls">
                     <div className="btn" title="Grid" onClick={this.useGridView}>
                         <GridIcon alt="Grid icon" />

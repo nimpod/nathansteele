@@ -7,7 +7,7 @@ class Notes extends Component {
     render() {
         return(
             <div className="page-wrapper notes">
-                <h4 className="center-me">Notes</h4>
+                <h2 className="page-title center-me">Notes</h2>
             </div>
         )
     }

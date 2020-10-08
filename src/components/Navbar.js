@@ -15,6 +15,11 @@ class Navbar extends Component {
         var page = path.split('/').pop();
         console.log(hostname, path, page);
 
+        var navbarItems = document.getElementsByClassName('navlink');
+        for (var i = 0; i < navbarItems.length; i++) {
+            navbarItems[i].classList.remove('active');
+        }
+
         if (hostname === "localhost" || hostname === "127.0.0.1" || hostname === "") {
             console.log('is localhost');
 
@@ -31,42 +36,46 @@ class Navbar extends Component {
         }
     }
 
-    /* This function adds the active class to the sidebar */
-    activateSidebar = () => {
-        let sidebar = document.getElementsByClassName('sidebar')[0];
-        sidebar.classList.add('active');
-    }
-
-    /* This function removes the active class to the sidebar */
-    deactivateSidebar = () => {
-        let sidebar = document.getElementsByClassName('sidebar')[0];
-        sidebar.classList.remove('active');
-    }
-
     /**
      * content rendered to page
      */
     render() {
         return (
-            <header>
-                <ul className="left-navbar" onMouseLeave={this.deactivateSidebar}>
-                    <NavLink to="/">
-                        <Logo className="logo" onMouseOver={this.activateSidebar} />
+            <nav>
+                <ul>
+                    <NavLink to="/" className="navlink">
+                        <Logo className="logo" />
                     </NavLink>
-                    <div className="sidebar">
-                        <ul>
-                            {/*
-                            <NavLink to="/"><li>Nathan Steele</li></NavLink>
-                            <Link onClick={this.clickedPortfolioNavbarItem} to="about" spy={true} smooth={true} offset={0} duration={400}><li>About Me</li></Link>
-                            <Link onClick={this.clickedPortfolioNavbarItem} to="projects" spy={true} smooth={true} offset={0} duration={400}><li>Projects</li></Link>
-                            */}
-                            <NavLink to="/university"><li>University</li></NavLink>
-                            <NavLink to="/blog"><li>Blog</li></NavLink>
-                            <NavLink to="/notes"><li>Notes</li></NavLink>
-                        </ul>
-                    </div>
+
+                    <Link to="about" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <li>About</li>
+                    </Link>
+
+                    <span class="delimiter">/</span>
+
+                    <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <li>Projects</li>
+                    </Link>
+
+                    <span class="delimiter">/</span>
+
+                    <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <li>Blog</li>
+                    </NavLink>
+
+                    <span class="delimiter">/</span>
+
+                    <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <li>University</li>
+                    </NavLink>
+
+                    <span class="delimiter">/</span>
+
+                    <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <li>Notes</li>
+                    </NavLink>
                 </ul>
-            </header>
+            </nav>
         )
     }
 }

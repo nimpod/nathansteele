@@ -35,11 +35,11 @@ const PARTICLE_OPACITY = 0.1;
 const PARTICLE_SIZE = 7.5;
 const PARTICLE_SPEED = 2.6;
 const PARTICLE_DIRECTION = "none" /* "none", "bottom", "right", "left", etc... */
-const PARTICLE_COLOUR_1 = "#001d4c";
+const PARTICLE_COLOUR_1 = "#2ecc71";
 const PARTICLE_COLOUR_2 = "#447684";
 const PARTICLE_COLOUR_3 = "#d86700";
 const PARTICLE_COLOUR_4 = "#a26fb0";
-const AMOUNT_OF_LINES = 300;
+const AMOUNT_OF_LINES = 400;
 const LINE_COLOUR = "#999";
 const LINE_OPACITY = 0.15;
 const LINE_WIDTH = 0.9;
@@ -114,34 +114,34 @@ const particlesConig =
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "repulse"
+        "mode": "grab"
       },
       "onclick": {
         "enable": true,
-        "mode": "grab"
+        "mode": "push"
       },
       "resize": true
     },
     "modes": {
       "grab": {
-        "distance": 400,
+        "distance": 500,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.5
         }
       },
       "bubble": {
-        "distance": 400,
+        "distance": 200,
         "size": 40,
         "duration": 2,
         "opacity": 8,
-        "speed": 3
+        "speed": 1
       },
       "repulse": {
         "distance": 200,
         "duration": 0.4
       },
       "push": {
-        "particles_nb": 4
+        "particles_nb": 3
       },
       "remove": {
         "particles_nb": 2
@@ -159,35 +159,26 @@ const Portfolio = (props) => {
                 <Particles params={particlesConig} />
             </div>
             <section id="about">
-                <h2 className="page-title">NATHAN STEELE</h2>
-                <div className="center-me">
-                    <img id="me" src={PhotoOfMe} title="Volunteering in the rural villages of Muyembe, Uganda - 2016" />
-                </div>
-                <div className="contact">
-                    <a className="codepen" href="https://codepen.io/dashboard?type=view&opts_itemType=pen&opts_filter=all&opts_orderBy=id&opts_orderDirection=0&opts_tag=0&displayType=grid&previewType=iframe&page=0" target = "_blank"><i className="fab fa-codepen"></i></a>
-                    <a className="github" href="https://github.com/nimpod" target = "_blank"><i className="fab fa-github"></i></a>
-                    <a className="cv" href={CV}><div className="contact-btn">VIEW MY CV</div></a>
-                    <a className="linkedin" href="https://www.linkedin.com/in/nathan-steele-1564a3183/" target = "_blank"><i className="fab fa-linkedin"></i></a>
-                    <a className="email" href="nathanjoshuasteele@gmail.com" target = "_blank"><i className="fa fa-envelope"></i></a>
-                </div>
-                <div id="about-desc">
-                    <p>I code, think about data, over analyse my life, and create digital experiences.</p>
-                    <p>Computer science student at Newcastle University.</p>
-                    <div className="arrow-to-projects center-me">
-                        <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>
-                            <i className="fa fa-angle-down smooth-scroll-btn"></i>
-                        </Link>
-                    </div>
+                <p>Hi, I'm</p>
+                <h1>Nathan Steele</h1>
+                <p>I enjoy coding, trying to fix things and learning about the origins of life.<br />Currently studying a BSc in Computer Science at Newcastle University.</p>
+                <div className="arrow-to-projects">
+                    <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>
+                        <i className="fa fa-angle-down smooth-scroll-btn"></i>
+                    </Link>
                 </div>
             </section>
 
             <section id="projects">
-                <div className="arrow-to-about center-me">
-                    <Link activeClass="active" to="about" spy={true} smooth={true} offset={0} duration={400}>
-                        <i className="fa fa-angle-up smooth-scroll-btn"></i>
-                    </Link>
+                <div className="projects-header">
+                    <div className="arrow-to-about">
+                        <Link activeClass="active" to="about" spy={true} smooth={true} offset={0} duration={400}>
+                            <i className="fa fa-angle-up smooth-scroll-btn"></i>
+                        </Link>
+                    </div>
+                    <h2>My Projects</h2>
+                    <p>A glimpse of the projects I've been working on.</p>
                 </div>
-                <h2 className="page-title">MY PROJECTS</h2>
                 <div className="projects-container">
                     <div className="project mosaics-of-videos">
                         <div className="image">

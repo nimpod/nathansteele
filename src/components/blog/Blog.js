@@ -31,7 +31,7 @@ class Blog extends Component {
 
         return(
             <div className="page-wrapper blog">
-                <h2 className="center-me">Blog Archive</h2>
+                <h2 className="page-title center-me">Thoughts, tutorials & more!</h2>
                 <div className="posts-container">
                     <table>
                         <thead>

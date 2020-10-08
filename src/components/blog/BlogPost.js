@@ -21,21 +21,17 @@ class BlogPost extends Component {
         return (
             <div className="page-wrapper blog-post">
                 <Link to='/blog' className="back-to-previous-page" title="Back to blog archive">
-                    <ArrowLeft />
+                    <ArrowLeft className="svg-icon" />
+                    <span className="svg-beside-text">Back to blog archive</span>
                 </Link>
                 <h3 className="blog-post-title">{this.props.post.title}</h3>
-                <p className="blog-post-author">
-                    <User />
-                    Nathan Steele
-                </p>
-                <p className="blog-post-date">
-                    <Calendar />
-                    {this.props.post.date}
-                </p>
+                <p className="blog-post-date">{this.props.post.date}</p>
                 <div className="blog-post-content" dangerouslySetInnerHTML={{__html: this.props.post.content}}></div>
+                {/*
                 <button className="delete-button" onClick={this.handleDeletePost}>
                     Delete post
                 </button>
+                */}
             </div>
         )
     }
