@@ -31,8 +31,8 @@
 
 /* Lightmode */
 :root {
-  --bg1: rgb(255, 255, 255);    /* rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(251, 251, 251);    /* rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg1: rgb(255, 255, 255);  /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: rgb(232, 232, 232);    /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
 
   --text: rgb(128, 128, 128);
   --intro-text: rgb(33, 37, 41);
@@ -55,7 +55,7 @@
   --project-card-text-hover: rgb(94, 93, 93);
   --project-card-text-color: rgb(0, 0, 0);
 
-  --page-wrapper-bg: rgb(251, 251, 251);
+  --page-wrapper-bg: rgb(255, 255, 255);
   --page-title: rgba(0, 0, 0, 0.529);
 
   --blog-table-bg: rgb(255, 255, 255);
@@ -110,8 +110,8 @@
 
 /** DARK MODE  **/
 [data-theme="dark"] {
-  --bg1: rgb(35, 40, 48);    /* rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(4, 3, 3);    /* rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg1: rgb(34, 34, 34);   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: rgb(45, 42, 60);   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   
   --text: rgb(240, 240, 240);
   --intro-text: rgb(187, 187, 187);
@@ -134,7 +134,7 @@
   --project-card-text-hover: rgb(235, 235, 235);
   --project-card-text-color: var(--intro-text);
 
-  --page-wrapper-bg: rgb(21, 21, 25);
+  --page-wrapper-bg: rgb(31, 31, 31);
   --page-title: rgba(255, 255, 255, 0.652);
   
   --blog-table-bg: rgb(33, 33, 34);
@@ -200,18 +200,18 @@ body {
   margin: 0;
   background: linear-gradient(
       180deg,
-      var(--bg1),    /* transition from orange(#ff4400) to blue(#1666c1), at an angle of 132deg */
+      var(--bg1),
       var(--bg2)
   );
-  background-size: 1000% 1000%;
-  animation: animation_name 25s ease infinite;    /* lasts 30s, eases in, and is infinite */
+  background-size: 400%;
+  animation: animation_name 55s ease infinite;    /* lasts 30s, eases in, and is infinite */
 }
 
 @keyframes animation_name {
   /*                          (x,  y) */
-  0% { background-position:   0%   50%; }     /* x=top left, y=centre */
+  0% { background-position:   0%   0%; }     /* x=top left, y=centre */
   50% { background-position:  100% 50%; }     /* x=bottom left, y=centre */
-  100% { background-position: 0%   50%; }     /* x=top left, y=centre */
+  100% { background-position: 0%   100%; }     /* x=top left, y=centre */
 }
 
 #particles-js canvas{
@@ -220,7 +220,7 @@ body {
   height: 100vh;
 }
 /* only put the core elements on top of #particles-js, not the entire page because it removes the interactivity */
-.portfolio p, .portfolio a, .portfolio h2, .portfolio h1, .portfolio h3, .portfolio h4, .portfolio h5, .portfolio h6, .portfolio .project {
+.portfolio p, .portfolio a, .portfolio h2, .portfolio h1, .portfolio h3, .portfolio h4, .portfolio h5, .portfolio h6, .portfolio .project, .my-navbar {
   z-index: 1;
   position: relative;
 }
@@ -230,49 +230,47 @@ body {
 }
 
 /* ------------------------------------------<2: NAVBAR (includes top and side navigation)>------------------------------------------ */
-nav {
+.my-navbar {
   display: inline-block;
   vertical-align: middle;
-  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
 }
 
-nav ul {
+.my-navbar ul {
   margin: 0;
 }
 
-nav ul a {
+.my-navbar ul a {
   list-style: none;
   text-decoration: none;
   display: inline-block;
   color: var(--nav-item-text) !important;
   font-weight: 500;
 }
-nav ul a.active {
+.my-navbar ul a.active {
   color: var(--nav-item-text-active) !important;
 }
-nav ul a.active li {
+.my-navbar ul a.active li {
   background-color: var(--nav-item-bg-active);
 }
-nav ul a:hover {
+.my-navbar ul a:hover {
   text-decoration: none;
   cursor: pointer;
 }
 
-nav ul a li {
+.my-navbar ul a li {
   text-transform: uppercase;
   padding: 0.3em;
   margin: 0 0.4em;
   border-radius: 12px;
 }
-nav ul a li:hover {
+.my-navbar ul a li:hover {
   background-color: var(--nav-item-bg-hover);
 }
 
-nav ul .delimiter {
+.my-navbar ul .delimiter {
   font-family: Arial,sans-serif;
   font-weight: normal;
   letter-spacing: 0px;
@@ -321,7 +319,7 @@ svg:not(:root) {
 
 /* ---------------< Logo >--------------- */
 /* add padding to the logo's link container */
-nav ul a:first-child {
+.my-navbar ul a:first-child {
   padding: 1.2em 1.7em;
 }
 
@@ -380,7 +378,14 @@ svg.logo polygon:hover {
 /* ------------------------------------------<3: MAIN CONTAINER>------------------------------------------ */
 .page-wrapper {
   font-size: 2.5rem;
-  z-index: 999;
+  width: 100vw;
+  top: 0;
+  margin-top: -210px;
+}
+
+.page-wrapper.university,
+.page-wrapper.blog,
+.page-wrapper.notes {
   height: 100vh;
 }
 
@@ -389,9 +394,7 @@ svg.logo polygon:hover {
 .page-wrapper.blog,
 .page-wrapper.blog-post,
 .page-wrapper.notes {
-  /*
-  background-color: var(--page-wrapper-bg);
-  */
+  background-color: var(--page-wrapper-bg) !important;
 }
 
 .page-title {
@@ -412,6 +415,8 @@ svg.logo polygon:hover {
 .portfolio {
   top: 0;
   color: var(--intro-text);
+  height: 270vh;
+  padding-top: 100px;
 }
 
 .portfolio p {
@@ -620,7 +625,7 @@ svg.logo polygon:hover {
 
 /* ------------------------------------------<5: BLOG PAGE>------------------------------------------ */
 .page-wrapper.blog {
-  padding: 90px 0px;
+  padding: 13rem 0rem;
 }
 
 .blog h2 {
@@ -708,16 +713,23 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
 
 /* ------------------------------------------<6: BLOG POST PAGE>------------------------------------------ */
 .blog-post {
-  padding: 9rem 15rem;
+  padding: 15rem 15rem;
+  /*
   max-width: 80vw;
+  */
   margin-right: auto;
   margin-left: auto;
-  height: 100%;
   min-height: 100vh;
   border-radius: 0px;
   letter-spacing: 0px;
   font-style: normal;
   transition: 0.3s all;
+}
+
+.blog-post-content .intro,
+.blog-post-content .main,
+.blog-post-content .conclusion {
+  padding-bottom: 50px;
 }
 
 .blog-post-title {
@@ -732,7 +744,9 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
   color: var(--blog-post-date-text);
 }
 
-.blog-post-content p {
+.blog-post-content p,
+.blog-post-content ul li,
+.blog-post-content ol li {
   font-size: 18px;
   color: var(--blog-post-text);
   margin-left: 5px;
@@ -760,7 +774,7 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
 
 .blog-post-content h1, .blog-post-content h2, .blog-post-content h3, .blog-post-content h4, .blog-post-content h5, .blog-post-content h6 { 
   line-height: 1.3em;
-  margin-bottom: 30px;
+  margin-top: 40px;
   font-weight: 400;
 }
 .blog-post-content p, .blog-post-content ol, .blog-post-content ul { 
@@ -773,6 +787,7 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
   border: 2px solid transparent;
   border-radius: 10px;
   margin-left: -30px;
+  margin-left: -45px;
 }
 .back-to-previous-page span.svg-beside-text {
   font-size: 0.9rem;
@@ -804,7 +819,7 @@ svg.invertable-icon {
 /* ------------------------------------------<7: University>------------------------------------------ */
 .page-wrapper.university {
   /* padding: 100px 125px 100px 50px; */
-  padding: 90px 125px;
+  padding: 13rem 6rem;
 }
 
 .university h2 {
@@ -958,12 +973,11 @@ div.card-percent:hover::after {
 
 /* ------------------------------------------<8: UNIVERSITY ASSIGNMENT PAGE>------------------------------------------ */
 .page-wrapper.universityAssignment {
-  height: 100%;
+  padding: 6rem 0rem;
 }
 
 .page-wrapper.universityAssignment .wrapper {
   width: 100%;
-  padding: 120px 35px;
 }
 
 @media (min-width: 1550px) {
@@ -1085,7 +1099,7 @@ div.card-percent:hover::after {
 /* ------------------------------------------<9: NOTES>------------------------------------------ */
 .page-wrapper.notes {
   /* padding: 100px 125px 100px 50px; */
-  padding: 90px 125px;
+  padding: 13rem 1rem;
 }
 
 
@@ -1096,8 +1110,8 @@ div.card-percent:hover::after {
 
 
 /* hide nav items when screen is too small */
-@media screen and (max-width: 700px) { nav ul { padding: 0; } }
-@media screen and (max-width: 600px) { nav ul a li, .delimiter { display: none; } }
+@media screen and (max-width: 700px) { .my-navbar ul { padding: 0; } }
+@media screen and (max-width: 600px) { .my-navbar ul a li, .delimiter { display: none; } }
 
 /* make font size get smaller on blog table */
 @media only screen and (max-width: 1300px) { table { font-size: 0.9rem; transition: 0.3s all; } }

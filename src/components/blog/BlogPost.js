@@ -20,9 +20,9 @@ class BlogPost extends Component {
         
         return (
             <div className="page-wrapper blog-post">
-                <Link to='/blog' className="back-to-previous-page" title="Back to blog archive">
+                <Link to='/blog' className="back-to-previous-page" title="Back to blog">
                     <ArrowLeft className="invertable-icon" />
-                    <span className="svg-beside-text">Back to blog archive</span>
+                    <span className="svg-beside-text">Back to blog</span>
                 </Link>
                 <h3 className="blog-post-title">{this.props.post.title}</h3>
                 <p className="blog-post-date">{this.props.post.date}</p>

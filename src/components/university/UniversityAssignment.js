@@ -19,6 +19,10 @@ class UniversityAssignment extends Component {
                     <div className="row">
                         <div className="col-sm-6-6 col-md-9-12 col-smd-5-12 col-lg-4-12 page-info">
                             <div>
+                                <Link to='/university' className="back-to-previous-page" title="Back to assignments">
+                                    <ArrowLeft className="invertable-icon" />
+                                    <span className="svg-beside-text">Back to assignments</span>
+                                </Link>
                                 <h5>{this.props.theAssignment.moduleCode} - {this.props.theAssignment.moduleTitle}</h5>
                                 <h1>{this.props.theAssignment.assignmentTitle}</h1>
                                 <h5>DATE</h5>

@@ -21,16 +21,17 @@ class Navbar extends Component {
         for (var i = 0; i < navbarItems.length; i++) {
             navbarItems[i].classList.remove('active');
         }
-
+        
+        // Force reroute to homepage, on localhost
         if (hostname === "localhost" || hostname === "127.0.0.1" || hostname === "") {
-            console.log('is localhost');
-
-            if (page !== '') {
+            if (page !== '' || page !== '/') {
                 console.log('going to homepage');
                 this.props.history.push('/');
                 console.log("arrived at homepage?");
             }
         }
+
+        // Force reroute to homepage, on deployed website
         else if (page !== "index.html") {
             console.log("is index");
             this.props.history.push('/');
@@ -69,7 +70,7 @@ class Navbar extends Component {
      */
     render() {
         return (
-            <nav>
+            <div className="my-navbar">
                 <ul>
                     <NavLink to="/" className="navlink">
                         <Logo className="logo" />
@@ -112,7 +113,7 @@ class Navbar extends Component {
                         </span>
                     </div>
                 </ul>
-            </nav>
+            </div>
         )
     }
 }
