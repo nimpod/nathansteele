@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import { ReactComponent as Logo } from "../icons/logo.svg";
+import { ReactComponent as DarkThemeIcon } from "../icons/moon.svg";
+import { ReactComponent as LightThemeIcon } from "../icons/sun.svg";
 
 
 class Navbar extends Component {
@@ -36,6 +38,32 @@ class Navbar extends Component {
         }
     }
 
+
+    /**
+     * Event handler to switch between themes
+     */
+    switchTheme() {
+        let dataTheme = document.documentElement.getAttribute('data-theme');
+        let darkThemeIcon = document.documentElement.getElementsByClassName('inline-svg dark')[0];
+        let lightThemeIcon = document.documentElement.getElementsByClassName('inline-svg light')[0];
+
+        // changing from light to dark
+        if (dataTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            darkThemeIcon.setAttribute('hidden', true);
+            lightThemeIcon.removeAttribute('hidden');
+        }
+        
+        // changing from dark to light
+        else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            darkThemeIcon.removeAttribute('hidden');
+            lightThemeIcon.setAttribute('hidden', true);
+        }
+    }
+
     /**
      * content rendered to page
      */
@@ -51,29 +79,38 @@ class Navbar extends Component {
                         <li>About</li>
                     </Link>
 
-                    <span class="delimiter">/</span>
+                    <span className="delimiter">/</span>
 
                     <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
                         <li>Projects</li>
                     </Link>
 
-                    <span class="delimiter">/</span>
+                    <span className="delimiter">/</span>
 
                     <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
                         <li>Blog</li>
                     </NavLink>
 
-                    <span class="delimiter">/</span>
+                    <span className="delimiter">/</span>
 
                     <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">
                         <li>University</li>
                     </NavLink>
 
-                    <span class="delimiter">/</span>
+                    <span className="delimiter">/</span>
 
                     <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">
                         <li>Notes</li>
                     </NavLink>
+
+                    <div className="theme-toggle" onClick={this.switchTheme} aria-label="Click to enable dark mode" title="Click to enable dark mode7">
+                        <span className="inline-svg dark">
+                            <DarkThemeIcon />
+                        </span>
+                        <span className="inline-svg light" hidden="true">
+                            <LightThemeIcon />
+                        </span>
+                    </div>
                 </ul>
             </nav>
         )

@@ -21,7 +21,7 @@ class University extends Component {
         
         const assignmentsDisplayed = universityAssignments.map(p => {
             return (
-                <UniversityAssignmentCard id={p.id} moduleTitle={p.moduleTitle} assignment={p.assignment} stage={p.stage} date={p.date} percentage={p.percentage} thumbnail={p.thumbnail} />
+                <UniversityAssignmentCard id={p.id} moduleTitle={p.moduleTitle} moduleCode={p.moduleCode} assignmentTitle={p.assignmentTitle} stage={p.stage} date={p.date} percentage={p.percentage} thumbnail={p.thumbnail} />
             )
         })
 

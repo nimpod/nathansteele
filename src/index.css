@@ -4,47 +4,96 @@
     1: Setup
     2: Navbar
     3: Main container
-    4: #about section
-    5: #projects section
-    6: #contact section
-    7: Blog page
-    8: Blog post page
-    9: University page
+    4: Portfolio
+    5: Blog page
+    6: Blog post page
+    7: University page
+    8: University Assignment page
+    9: Notes page
     10: Media queries
 */
 
 /* ------------------------------------------<0: VARIABLES>------------------------------------------ */
+
+/* particles.js variables */
+:root {
+  --amount-of-particles: 15;
+  --density-of-particles: 100;
+  --type-of-particles: "circle";
+  --particle-opacity: 0.1;
+  --particle-size: 7.5;
+  --particle-speed: 2.6;
+  --particle-direction: "none";
+  --amount-of-lines: 400;
+  --line-opacity: 0;
+  --line-width: 0.5;
+}
+
 /* Lightmode */
 :root {
-  --header-bg: rgb(27, 28, 29);
-  --headings: rgb(29, 29, 29);
-  --header-btn-hover: rgb(67, 177, 175);
-  --header-btn-focus: rgb(93, 199, 197);
-  --header-text: rgb(0, 0, 0);
-  --header-height: 50px;
-
-  --sidebar-bg: rgb(255, 255, 255);
-  --sidebar-width: 110px;
-
-  /*
-  --bg1: rgb(104, 73, 218);
-  --bg2: rgba(102, 238, 165, 0.521);
-  */
-
-  /*
-  --bg1: rgb(79, 156, 158);
-  --bg2: rgba(255, 145, 0, 0.4);
-  */
-
-  --bg1: rgb(255, 255, 255);
-  --bg2: rgb(219, 212, 188);
+  --bg1: rgb(255, 255, 255);    /* rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: rgb(251, 251, 251);    /* rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
 
   --text: rgb(128, 128, 128);
-  --text-hover: rgb(39, 39, 39);
-  --introtext: rgb(0, 0, 0);
+  --intro-text: rgb(33, 37, 41);
+  --text-hyperlink: #007bff;
+
+  --nav-item-text: rgb(153, 153, 153);
+  --nav-item-text-active: rgb(5, 194, 191);
+  --nav-item-bg-active: rgba(67, 177, 175, 0.097);
+  --nav-item-bg-hover: rgba(67, 177, 175, 0.097);
+  --nav-delimiter: rgb(216, 216, 216);
+  --nav-item-theme-toggle-color: rgb(94, 86, 90);
+  --nav-item-theme-toggle-color-hover: rgb(0, 0, 0);
+  --nav-item-theme-toggle-border-color-active: rgb(46, 26, 36);
+
+  --arrow-smooth-scroll-btn: rgb(53, 53, 53);
+  --arrow-smooth-scroll-btn-hover:  rgb(88, 88, 88);
   
-  --proj-shadow: rgb(0, 0, 0);
-  --proj-bg: rgb(248, 249, 250);
+  --project-card-shadow: rgb(0, 0, 0);
+  --project-card-bg: rgb(248, 249, 250);
+  --project-card-text-hover: rgb(94, 93, 93);
+  --project-card-text-color: rgb(0, 0, 0);
+
+  --page-wrapper-bg: rgb(251, 251, 251);
+  --page-title: rgba(0, 0, 0, 0.529);
+
+  --blog-table-bg: rgb(255, 255, 255);
+  --blog-table-thead-bg: rgb(248, 248, 248);
+  --blog-table-border: rgb(237, 237, 237);
+  --blog-table-text: var(--text);
+  --blog-table-text-hover: rgb(0, 0, 0);
+  --blog-table-row-bg-hover: rgb(251, 251, 251);
+  --blog-table-tag-bg: rgb(236, 236, 236);
+  --blog-table-tag-text: rgb(27, 27, 27);
+
+  --blog-post-title-text: rgb(33, 33, 33);
+  --blog-post-date-text: rgb(134, 134, 134);
+  --blog-post-text: rgb(66, 66, 66);
+  --blog-post-back-to-table-text: rgb(128, 128, 128);
+  --blog-post-note-text: rgb(153, 153, 153);
+  --blog-post-hr: rgb(200, 200, 200);
+  --svg-icon-invert-percentage: 0%;
+
+  --university-controls-btn-bg: rgba(224, 222, 222, 0.609);
+  --university-controls-btn-svg-fill: rgb(156, 154, 154);
+  --university-card-box-shadow: rgba(12, 12, 13, 0.1);
+  --university-card-bg: rgb(255, 255, 255);
+  --university-card-border-color: rgb(251, 251, 251);
+  --university-card-border-color-hover: rgb(222, 222, 226);
+  --university-card-img-box-shadow: rgba(0, 0, 0, 0.15);
+  --university-card-img-bg-color: rgb(215, 215, 216);
+  --university-card-moduleTitle-text-color: rgb(115, 115, 115);
+  --university-card-assignmentTitle-text-color: rgb(12, 12, 13);
+  --university-card-date-text-color: rgb(126, 126, 126);
+  --university-card-stage-text-color: rgb(126, 126, 126);
+  --university-card-percentage-text-color: rgb(255, 255, 255);
+  --university-card-percentage-bg-color: rgb(62, 156, 7);
+
+  --university-assignment-title-text-color: rgb(15, 20, 30);
+  --university-assignment-subheading-text-color: rgb(135, 138, 143);
+  --university-assignment-subheading-detail-text-color: rgb(15, 20, 30);
+  --university-assignment-main-text-color: rgb(135, 138, 143);
 
   --contact-btn-colour: rgb(26, 26, 26);
   --contact-btn-font-colour: rgb(196, 196, 196);
@@ -52,24 +101,92 @@
   --contact-btn-text-colour: rgb(255, 255, 255);
   --contact-btn-colour-hover: rgb(88, 88, 88);
 
-  --btn-border-radius: 20px;
+  --particle-color-1: rgb(46, 204, 113);
+  --particle-color-2: rgb(27, 110, 235);
+  --particle-color-3: rgb(216, 103, 0);
+  --particle-color-4: rgb(162, 111, 176);
+  --line-color: rgb(153, 153, 153);
 }
 
-/*  Darkmode 
-:root {
-  --header-bg: rgb(27,28,29);
-  --headings: rgb(249, 249, 249);
-  --header-btn-hover: rgb(97, 97, 97);
-  --header-text: rgb(255, 255, 255);
-  --bg1: rgb(0, 0, 26);
-  --bg2: rgba(41, 41, 41, 0.719);
-  --text: rgb(255, 255, 255);
-  --introtext: rgb(197, 197, 197);
-  --proj-shadow: rgb(0, 0, 0);
-  --proj-bg: rgb(29, 31, 32);
-  --contact-btn: rgb(255, 255, 255);
+/** DARK MODE  **/
+[data-theme="dark"] {
+  --bg1: rgb(35, 40, 48);    /* rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: rgb(4, 3, 3);    /* rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  
+  --text: rgb(240, 240, 240);
+  --intro-text: rgb(187, 187, 187);
+  --text-hyperlink: #66b0ff;
+
+  --nav-item-text: rgb(192, 192, 192);
+  --nav-item-text-active: rgb(5, 194, 191);
+  --nav-item-bg-active: rgba(67, 177, 175, 0.097);
+  --nav-item-bg-hover: rgba(67, 177, 175, 0.097);
+  --nav-delimiter: rgb(56, 56, 56);
+  --nav-item-theme-toggle-color: rgb(192, 192, 192);
+  --nav-item-theme-toggle-color-hover: rgb(255, 255, 255);
+  --nav-item-theme-toggle-border-color-active: rgb(160, 157, 157);
+
+  --arrow-smooth-scroll-btn: rgb(141, 141, 141);
+  --arrow-smooth-scroll-btn-hover: rgb(88, 88, 88);
+
+  --project-card-shadow: rgb(82, 82, 82);
+  --project-card-bg: rgb(36, 36, 36);
+  --project-card-text-hover: rgb(235, 235, 235);
+  --project-card-text-color: var(--intro-text);
+
+  --page-wrapper-bg: rgb(21, 21, 25);
+  --page-title: rgba(255, 255, 255, 0.652);
+  
+  --blog-table-bg: rgb(33, 33, 34);
+  --blog-table-thead-bg: rgb(39, 39, 39);
+  --blog-table-border: rgb(19, 18, 18);
+  --blog-table-text: var(--intro-text);
+  --blog-table-text-hover: rgb(255, 255, 255);
+  --blog-table-row-bg-hover: rgb(43, 42, 46);
+  --blog-table-tag-bg: rgb(236, 236, 236);
+  --blog-table-tag-text: rgb(27, 27, 27);
+
+  --blog-post-title-text: rgb(199, 199, 199);
+  --blog-post-date-text: rgb(143, 148, 155);
+  --blog-post-text: rgb(129, 134, 143);
+  --blog-post-back-to-table-text: rgb(128, 128, 128);
+  --blog-post-note-text: rgb(153, 153, 153);
+  --blog-post-hr: rgb(200, 200, 200);
+  --svg-icon-invert-percentage: 100%;
+
+  --university-controls-btn-bg: rgba(82, 79, 79, 0.609);
+  --university-controls-btn-svg-fill: rgb(232, 232, 232);
+  --university-card-box-shadow: rgba(116, 116, 118, 0.1);
+  --university-card-bg: rgb(42, 43, 44);
+  --university-card-border-color: rgb(54, 55, 58);
+  --university-card-border-color-hover: rgb(81, 81, 85);
+  --university-card-img-box-shadow: rgba(99, 97, 97, 0.15);
+  --university-card-img-bg-color: rgb(92, 92, 94);
+  --university-card-moduleTitle-text-color: rgb(189, 188, 188);
+  --university-card-assignmentTitle-text-color: rgb(220, 220, 220);
+  --university-card-date-text-color: rgb(194, 194, 194);
+  --university-card-stage-text-color: rgb(194, 194, 194);
+  --university-card-percentage-text-color: rgb(255, 255, 255);
+  --university-card-percentage-bg-color: rgb(62, 156, 7);
+  
+  --university-assignment-title-text-color: rgb(198, 201, 206);
+  --university-assignment-subheading-text-color: rgb(161, 164, 168);
+  --university-assignment-subheading-detail-text-color: rgb(119, 120, 121);
+  --university-assignment-main-text-color: rgb(167, 170, 174);
+
+  --contact-btn-colour: rgb(26, 26, 26);
+  --contact-btn-font-colour: rgb(196, 196, 196);
+  --contact-btn-border-colour: rgb(0, 0, 0);
+  --contact-btn-text-colour: rgb(255, 255, 255);
+  --contact-btn-colour-hover: rgb(88, 88, 88);
+
+  --particle-color-1: rgb(130, 174, 148);
+  --particle-color-2: rgb(142, 203, 220);
+  --particle-color-3: rgb(238, 209, 182);
+  --particle-color-4: rgb(229, 135, 255);
+  --line-color: rgb(255, 255, 255);
 }
-*/
+
 
 /* ------------------------------------------<1: SETUP>------------------------------------------ */
 html {
@@ -108,6 +225,10 @@ body {
   position: relative;
 }
 
+.center-me {
+  text-align: center;
+}
+
 /* ------------------------------------------<2: NAVBAR (includes top and side navigation)>------------------------------------------ */
 nav {
   display: inline-block;
@@ -127,14 +248,14 @@ nav ul a {
   list-style: none;
   text-decoration: none;
   display: inline-block;
-  color: rgb(153, 153, 153) !important;
+  color: var(--nav-item-text) !important;
   font-weight: 500;
 }
 nav ul a.active {
-  color: rgb(5, 194, 191) !important;
+  color: var(--nav-item-text-active) !important;
 }
 nav ul a.active li {
-  background-color: rgba(67, 177, 175, 0.097);
+  background-color: var(--nav-item-bg-active);
 }
 nav ul a:hover {
   text-decoration: none;
@@ -147,6 +268,10 @@ nav ul a li {
   margin: 0 0.4em;
   border-radius: 12px;
 }
+nav ul a li:hover {
+  background-color: var(--nav-item-bg-hover);
+}
+
 nav ul .delimiter {
   font-family: Arial,sans-serif;
   font-weight: normal;
@@ -156,18 +281,45 @@ nav ul .delimiter {
   font-style: normal;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: rgb(179, 179, 179);
+  color: var(--nav-delimiter);
   padding-left: 0.1em;
   padding-right: 0em;
 }
 
-nav ul a li:hover {
-  background-color: rgba(67, 177, 175, 0.097);
+.theme-toggle {
+  color: var(--nav-item-theme-toggle-color);
+  border: 1px solid transparent;
+  background-color: transparent;
+  height: 42px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 150ms ease;
+  display: inline-block;
+  right: 20px;
+  top: 20px;
+  position: absolute;
+}
+.theme-toggle:hover {
+  color: var(--nav-item-theme-toggle-color-hover);
+}
+.theme-toggle:active {
+  border: 1px solid var(--nav-item-theme-toggle-border-color-active);
+}
+.theme-toggle .inline-svg {
+  width: 2.6em;
+}
+.inline-svg {
+  width: 1em;
+  display: block;
+}
+.inline-svg[hidden] {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
 }
 
-
 /* ---------------< Logo >--------------- */
-
 /* add padding to the logo's link container */
 nav ul a:first-child {
   padding: 1.2em 1.7em;
@@ -186,12 +338,6 @@ svg.logo polygon:hover {
   cursor: pointer;
   fill-opacity: 0.50;
 }
-
-.sw {fill:none;stroke:black;stroke-width:3px;}
-.fo {fill-opacity:0.2;}
-.color1 {fill:red;}
-.color2 {fill:lime;}
-.color3 {fill:blue;}
 
 svg.logo polygon.a { fill: rgb(177, 170, 89); fill-opacity: 1; }
 svg.logo polygon.b { fill: rgb(255, 239, 69); fill-opacity: 0.84; }
@@ -223,7 +369,7 @@ svg.logo polygon:hover {
 }
 
 .hamburger-menu-icon label[for=toggle] span {  
-  background-color: var(--header-text);
+  background-color: rgb(0, 0, 0);
   display: block;
   height: 5px;
   width: 30px;
@@ -243,11 +389,13 @@ svg.logo polygon:hover {
 .page-wrapper.blog,
 .page-wrapper.blog-post,
 .page-wrapper.notes {
-  background-color: rgb(251, 251, 251);
+  /*
+  background-color: var(--page-wrapper-bg);
+  */
 }
 
 .page-title {
-  color: rgba(0, 0, 0, 0.529);
+  color: var(--page-title);
   text-align: center;
   font-size: 3.15rem !important;
   font-weight: bold !important;
@@ -259,19 +407,67 @@ svg.logo polygon:hover {
   outline: none;
 }
 
-/* ------------------------------------------<4: #about SECTION>------------------------------------------ */
-#about, #projects, #contact {
+
+/* ------------------------------------------<4: PORTFOLIO>------------------------------------------ */
+.portfolio {
+  top: 0;
+  color: var(--intro-text);
+}
+
+.portfolio p {
+  font-size: 1.25rem;
+	line-height: 1.8em;
+	letter-spacing: -0.014em;
+	font-feature-settings: "ss03","zero","cv08","cv11" 1;
+  text-transform: none;
+}
+.portfolio h1 {
+  font-size: 6vw;
+  line-height: 0.9em;
+  margin: 0.2em 0 0.6em;
+  font-weight: 900;
+}
+.portfolio h2 {
+  font-size: 4vw;
+  font-weight: 900;
+  margin: 0.2em 0 0.6em;
+}
+
+.portfolio #about, 
+.portfolio #projects,
+.portfolio #contact {
   height: 100vh;
   padding: 0 25px;
 }
 
 #about, .projects-header {
   padding-left: 200px;
+  transition: padding-left 0.3s ease-out;
 }
 
+/* the arrow button that takes to an area on the same page */
+.smooth-scroll-btn {
+  width: 100%;
+  margin-top: 1.8em;
+}
+.smooth-scroll-btn a i {
+  font-size: 5rem;
+  cursor: pointer;
+  color: var(--arrow-smooth-scroll-btn);
+}
+.smooth-scroll-btn a i:hover {
+  color: var(--contact-btn-colour-hover);
+}
+
+/* --------------<#about SECTION> -------------- */
 #about {
   padding: 170px 0px 0px 200px !important;
   display: block;
+  top: auto;
+	right: auto;
+	bottom: auto;
+  max-width: 1500px;
+  margin-top: 100px;
 }
 
 #about img {
@@ -289,62 +485,6 @@ svg.logo polygon:hover {
     height: 230px;
     transition: 0.3s all;
   }
-}
-
-#about {
-	top: auto;
-	right: auto;
-	bottom: auto;
-  max-width: 1500px;
-  margin-top: 100px;
-}
-
-.portfolio {
-  top: 0;
-}
-
-.portfolio p {
-	font-size: 0.45em;
-	line-height: 1.8em;
-	letter-spacing: -0.014em;
-	font-feature-settings: "ss03","zero","cv08","cv11" 1;
-	color: #292e31;
-  text-transform: none;
-}
-.portfolio h1 {
-  font-size: 6vw;
-  line-height: 0.9em;
-  margin: 0.2em 0 0.6em;
-  font-weight: 900;
-}
-.portfolio h2 {
-  font-size: 4vw;
-  font-weight: 900;
-  margin: 0.2em 0 0.6em;
-}
-
-.center-me {
-  text-align: center;
-}
-
-/* the arrow button that takes you to my projects */
-div .smooth-scroll-btn {
-  font-size: 5rem;
-  cursor: pointer;
-  color: rgb(53, 53, 53);
-}
-div .smooth-scroll-btn:hover {
-  color: var(--contact-btn-colour-hover);
-}
-
-.arrow-to-projects {
-  width: 100%;
-  margin-top: 1.8em;
-}
-
-.arrow-to-about {
-  width: 100%;
-  margin-top: 1.8em;
 }
 
 /* The contact buttons */
@@ -372,7 +512,7 @@ div .smooth-scroll-btn:hover {
   color: var(--contact-btn-font-colour);
   opacity: 0.7;
   font-size: 20px;
-  border-radius: var(--btn-border-radius);
+  border-radius: 20px;
   padding: 20px;
   display: inline-block;
 }
@@ -387,7 +527,7 @@ div .smooth-scroll-btn:hover {
   color: var(--bg1);
 }
 
-/* ------------------------------------------<5: #projects SECTION>------------------------------------------ */
+/* --------------<#projects SECTION> -------------- */
 #projects {
   padding-top: 0px;
 }
@@ -421,9 +561,9 @@ div .smooth-scroll-btn:hover {
 */
 
 .project {
-  background-color: var(--proj-bg) !important;
-  border: 1px solid var(--proj-bg) !important;
-  box-shadow: 0 1px 3px 0 var(--proj-shadow),0 0 0 1px var(--proj-bg) !important;
+  background-color: var(--project-card-bg) !important;
+  border: 1px solid var(--project-card-bg) !important;
+  box-shadow: 0 1px 3px 0 var(--project-card-shadow),0 0 0 1px var(--project-card-bg) !important;
   text-align: left;
 }
 
@@ -440,7 +580,7 @@ div .smooth-scroll-btn:hover {
 }
 
 .project * {
-  color: var(--introtext);
+  color: var(--project-card-text-color);
 }
 
 .cropped {
@@ -451,7 +591,7 @@ div .smooth-scroll-btn:hover {
 .image {
   cursor: pointer;
   overflow: hidden;
-  border: 1px solid var(--proj-bg);
+  border: 1px solid var(--project-card-bg);
 }
 
 .proj-title {
@@ -467,18 +607,18 @@ div .smooth-scroll-btn:hover {
 
 /* Rules for when mouse hovers over a project */
 .project a:hover {
-  color: var(--text);
+  color: var(--project-card-text-hover);
 }
 .project img:hover {
   transition: opacity 0.5s;
   opacity: 0.4;
 }
 .image:hover + .proj-details > .proj-title > a {
-  color: var(--text);
+  color: var(--project-card-text-hover);
 }
 
 
-/* ------------------------------------------<7: BLOG PAGE>------------------------------------------ */
+/* ------------------------------------------<5: BLOG PAGE>------------------------------------------ */
 .page-wrapper.blog {
   padding: 90px 0px;
 }
@@ -497,14 +637,10 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
   font-size: 1.0rem;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--blog-table-bg);
   width: 80%;
   margin: 0 auto;
 }
-
-@media only screen and (max-width: 1300px) { table { font-size: 0.9rem; transition: 0.3s all; } }
-@media only screen and (max-width: 989px)  { table { font-size: 0.8rem; width: 95%; transition: 0.3s all; } }
-
 
 table tr, table tr a { 
   text-align: left; 
@@ -512,12 +648,12 @@ table tr, table tr a {
 
 table thead { 
   text-align: center;
-  background-color: rgb(248, 248, 248);
+  background-color: var(--blog-table-thead-bg);
 }
 
 table th, table td {
   padding: 0.3rem 0.5rem;
-  border: 1px solid rgb(237, 237, 237);
+  border: 1px solid var(--blog-table-border);
 }
 
 table td:nth-child(1) { width: 5%; }   /* ID column */
@@ -530,10 +666,11 @@ table tr {
 }
 
 table tr {
-  color: var(--text);
+  color: var(--blog-table-text);
 }
 
 table tr a {
+  color: var(--text-hyperlink);
   opacity: 0.6;  
   text-decoration: none;
 }
@@ -543,8 +680,8 @@ table tbody tr a:hover {
 }
 
 table tbody tr:hover {
-  color: #000;
-  background-color: rgb(251, 251, 251);
+  color: var(--blog-table-text-hover);
+  background-color: var(--blog-table-row-bg-hover);
 }
 
 table .tag {
@@ -558,8 +695,8 @@ table .tag span {
   font-size: 0.7rem;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: rgb(236, 236, 236);
-  color: rgb(27, 27, 27);
+  background-color: var(--blog-table-tag-bg);
+  color: var(--blog-table-tag-text);
 }
 
 table .tag .internet { background-color: rgb(154, 230, 180); color: rgb(34, 84, 61); }
@@ -569,10 +706,12 @@ table .tag .python { background-color: rgb(82, 112, 211); color: rgb(235, 235, 2
 table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31); }
 
 
-/* ------------------------------------------<8: BLOG POST PAGE>------------------------------------------ */
+/* ------------------------------------------<6: BLOG POST PAGE>------------------------------------------ */
 .blog-post {
-  padding: 150px 250px; /* padding: 0px 550px; */
-  margin: 0px;
+  padding: 9rem 15rem;
+  max-width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
   height: 100%;
   min-height: 100vh;
   border-radius: 0px;
@@ -581,47 +720,27 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
   transition: 0.3s all;
 }
 
-/*
-.blog-post-author > svg, 
-.blog-post-date > svg,
-.universityAssignment .author > svg,
-.universityAssignment .date > svg {
-  width: 13px;
-  margin-right: 15px;
-}
-
-.blog-post-title, .blog-post-date, .blog-post-author {
-  text-align: center;
-}
-*/
-
 .blog-post-title {
-  color: rgb(33, 33, 33);
-  font-size: 5rem;
+  color: var(--blog-post-title-text);
+  font-size: 4.4rem;
   font-weight: 900;
 }
 
 .blog-post-date {
   font-size: 0.9rem;
   padding-bottom: 40px;
-  color: rgb(134, 134, 134);
-}
-
-.blog-post-author {
-  font-size: 0.9rem;
-  padding-bottom: 40px;
-  color: rgb(134, 134, 134);
+  color: var(--blog-post-date-text);
 }
 
 .blog-post-content p {
   font-size: 18px;
-  color: rgb(66, 66, 66);
+  color: var(--blog-post-text);
   margin-left: 5px;
 }
 
 .blog-post-content p.note {
   font-size: 0.9rem;
-  color: rgb(153, 153, 153);
+  color: var(--blog-post-note-text);
   font-style: italic;
 }
 
@@ -635,19 +754,17 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
 }
 
 .blog-post-content hr {
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid var(--blog-post-hr);
   border-radius: 10px;
 }
 
-.blog-post-content h1, .blog-post-content h2, .blog-post-content h3, .blog-post-content h4, .blog-post-content h5, .blog-post-content h6 { line-height: 1.3em; margin-bottom: 30px; font-weight: 400; }
-.blog-post-content p, .blog-post-content ol, .blog-post-content ul { line-height: 1.7em; }
-
-.blog-post delete-button {
-  padding: 10px;
-  border-radius: var(--navbar-button-border-radius);
-  background-color: var(--navbar-bg-color);
-  color: var(--navbar-font-color);
-  border: 1px solid var(--navbar-button-border-color);
+.blog-post-content h1, .blog-post-content h2, .blog-post-content h3, .blog-post-content h4, .blog-post-content h5, .blog-post-content h6 { 
+  line-height: 1.3em;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.blog-post-content p, .blog-post-content ol, .blog-post-content ul { 
+  line-height: 1.7em;
 }
 
 .back-to-previous-page {
@@ -657,13 +774,12 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
   border-radius: 10px;
   margin-left: -30px;
 }
-
 .back-to-previous-page span.svg-beside-text {
   font-size: 0.9rem;
   padding-bottom: 40px;
-  color: rgb(134, 134, 134);
+  color: var(--blog-post-back-to-table-text);
 }
-.back-to-previous-page svg.svg-icon {
+.back-to-previous-page svg.invertable-icon {
   margin-bottom: -8px;
   width: 32px;
   height: 32px;
@@ -673,13 +789,19 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
   opacity: 0.5;
 }
 
-.red-text { color: red; }
-.blue-text { color: blue; }
-.green-text { color: rgb(2, 187, 2); }
-.pink-text {color: rgb(221, 0, 173); }
+svg.invertable-icon {
+  filter: invert(var(--svg-icon-invert-percentage));
+}
+
+.blog-post delete-button {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: var(--nav-item-bg-active);
+  color: var(--nav-item-text);
+}
 
 
-/* ------------------------------------------<9: University>------------------------------------------ */
+/* ------------------------------------------<7: University>------------------------------------------ */
 .page-wrapper.university {
   /* padding: 100px 125px 100px 50px; */
   padding: 90px 125px;
@@ -708,14 +830,14 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
   cursor: pointer;
 }
 .university .controls .btn:active {
-  background-color: rgba(224, 222, 222, 0.609);
+  background-color: var(--university-controls-btn-bg);
   transition: background-color 250ms ease-in-out;
 }
 
 .university .controls svg {
   width: 25px !important;
   height: 25px !important;
-  fill: rgb(156, 154, 154);
+  fill: var(--university-controls-btn-svg-fill);
 }
 
 .university .card-grid {
@@ -726,9 +848,9 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
 }
 
 .university .card-grid > .card {
-  box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1);
-  background: rgb(255, 255, 255);
-  border: 4px solid rgb(251, 251, 251);
+  box-shadow: 0 1px 4px 0 var(--university-card-box-shadow);
+  background: var(--university-card-bg);
+  border: 4px solid var(--university-card-border-color);
   border-radius: 7px;
   display: flex;
   height: 240px;
@@ -736,16 +858,8 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
   position: relative;
 }
 .university .card-grid > .card:hover {
-  border: 4px solid rgb(222, 222, 226);
+  border: 4px solid var(--university-card-border-color-hover);
   transition: border 200ms ease-in;
-}
-
-.university .card-grid > .card > a.card-link {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: #0060df;
 }
 
 .university .card-grid > .card > a.card-link > .card-img-wrapper {
@@ -761,8 +875,8 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
 }
 .university .card-grid > .card > a.card-link > .card-img-wrapper picture img {
   border-radius: 4px 4px 0 0;
-  box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.15);
-  background-color: #d7d7d8;
+  box-shadow: inset 0 0 0 0.5px var(--university-card-img-box-shadow);
+  background-color: var(--university-card-img-bg-color);
   position: absolute;
   top: 0;
   width: 100%;
@@ -790,19 +904,19 @@ div.card-meta p {
 }
 
 p.card-moduleTitle {
-  color: rgb(115, 115, 115);
+  color: var(--university-card-moduleTitle-text-color);
   font-size: 12px;
   margin-bottom: 2px;
 }
 
-p.card-assignment {
-  color: rgb(12, 12, 13);
+p.card-assignmentTitle {
+  color: var(--university-card-assignmentTitle-text-color);
   font-size: 16px;
   font-weight: 600;
 }
 
 p.card-date {
-  color: rgb(126, 126, 126);
+  color: var(--university-card-date-text-color);
   font-size: 11px;
   position: absolute;
   bottom: 0px;
@@ -810,7 +924,7 @@ p.card-date {
 }
 
 p.card-stage {
-  color: rgb(126, 126, 126);
+  color: var(--university-card-stage-text-color);
   font-size: 11px;
   position: absolute;
   bottom: 0px;
@@ -818,11 +932,11 @@ p.card-stage {
 }
 
 div.card-percentage {
-  color: rgb(255, 255, 255);
+  color: var(--university-card-percentage-text-color);
   font-size: 11px;
   line-height: 20px;
   margin: 0;
-  background-color: rgb(62, 156, 7);
+  background-color: var(--university-card-percentage-bg-color);
   border-radius: 10px;
   width: 33px;
   position: absolute;
@@ -842,7 +956,7 @@ div.card-percent:hover::after {
 }*/
 
 
-/* ------------------------------------------<10: UNIVERSITY ASSIGNMENT PAGE>------------------------------------------ */
+/* ------------------------------------------<8: UNIVERSITY ASSIGNMENT PAGE>------------------------------------------ */
 .page-wrapper.universityAssignment {
   height: 100%;
 }
@@ -900,13 +1014,13 @@ div.card-percent:hover::after {
 .page-info h2, .page-info h1, .page-info h3, .page-info p.intro {
   font-weight: 800;
   letter-spacing: -.01em;
-  color: #0f141e;
+  color: var(--university-assignment-title-text-color);
 }
 
 .page-info h5 {
   font-weight: 400;
   letter-spacing: 0.4em !important;
-  color: #878a8f;
+  color: var(--university-assignment-subheading-text-color);
   font-size: 0.875rem;
   line-height: 1.25rem;
   text-transform: uppercase;
@@ -920,7 +1034,7 @@ div.card-percent:hover::after {
   padding-top: 1px;
   padding-bottom: 4px;
   font-weight: 500;
-  color: #0f141e;
+  color: var(--university-assignment-subheading-detail-text-color);
   letter-spacing: normal;
 }
 
@@ -933,38 +1047,61 @@ div.card-percent:hover::after {
   }
 }
 
-
-.page-content p.intro {
+.page-content div.intro > p {
   font-size: 1.375rem;
   line-height: 1.875rem;
-
   font-weight: 500;
-  color: #878a8f;
+  color: var(--university-assignment-main-text-color);
   letter-spacing: normal;
 }
 @media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
-  .page-content p.intro {
+  .page-content div.intro > p {
     font-size: 1.375rem;
     line-height: 1.875rem;
     padding: 2px 0px 3px 0px;
   }
 }
 
+.page-content div.main p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: 100;
+  color: var(--university-assignment-main-text-color);
+  letter-spacing: normal;
+}
+@media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
+  .page-content div.main > p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}
+
+
 .universityAssignment svg {
   width: 13px;
   margin-right: 5px;
 }
 
-/* ------------------------------------------<10: NOTES>------------------------------------------ */
+/* ------------------------------------------<9: NOTES>------------------------------------------ */
 .page-wrapper.notes {
   /* padding: 100px 125px 100px 50px; */
   padding: 90px 125px;
 }
 
 
-/* ------------------------------------------<11: MEDIA QUERIES>------------------------------------------ */
+/* ------------------------------------------<10: MEDIA QUERIES>------------------------------------------ */
+@media screen and (max-width: 900px) { #about, .projects-header { padding-left: 100px !important; } #about p { margin-left: 7px; } }
+@media screen and (max-width: 700px) { #about, .projects-header { padding-left: 50px !important; } }
+@media screen and (max-width: 600px) { #about, .projects-header { padding-left: 35px !important; padding-right: 15px !important; } }
+
+
+/* hide nav items when screen is too small */
 @media screen and (max-width: 700px) { nav ul { padding: 0; } }
 @media screen and (max-width: 600px) { nav ul a li, .delimiter { display: none; } }
+
+/* make font size get smaller on blog table */
+@media only screen and (max-width: 1300px) { table { font-size: 0.9rem; transition: 0.3s all; } }
+@media only screen and (max-width: 989px)  { table { font-size: 0.8rem; width: 95%; transition: 0.3s all; } }
 
 /* remove padding from the #about section as screen gets smaller */
 @media screen and (max-width: 1125px) { #about{ padding: 50px 170px 0px 170px; } }
@@ -974,20 +1111,17 @@ div.card-percent:hover::after {
 @media screen and (max-width: 400px) { #about{ padding: 50px 5px 0px 5px; } }
 
 /* remove padding from a blog post as screen gets smaller */
-@media only screen and (max-width: 1400px) { .post { padding-left: 300px; padding-right: 300px; } }
-@media only screen and (max-width: 1100px) { .post { padding-left: 200px; padding-right: 200px; } }
-@media only screen and (max-width: 900px) { .post { padding-left: 100px; padding-right: 100px; } }
-@media only screen and (max-width: 700px) { .post { padding-left: 10px; padding-right: 10px; } }
+@media only screen and (max-width: 1500px) { .blog-post { padding-left: 300px; padding-right: 300px; } }
+@media only screen and (max-width: 1200px) { .blog-post { padding-left: 200px; padding-right: 200px; } }
+@media only screen and (max-width: 1100px) { .blog-post { padding-left: 100px; padding-right: 100px; } }
+@media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } }
+@media only screen and (max-width: 900px) { .blog-post { padding-left: 10px; padding-right: 10px; } }
 
 /* change size of contact buttons as page is resized */
 @media only screen and (max-width: 900px) { .contact i {  font-size: 45px; transition: 0.3s; } }
 @media only screen and (max-width: 700px) { .contact i {  font-size: 40px; transition: 0.3s; } }
 @media only screen and (max-width: 500px) { .contact i { font-size: 35px; transition: 0.3s; } }
 
-/* change font-size of #about section when page is resized */
-@media only screen and (max-width: 1150px) { #about p { font-size: 0.7em; transition: 0.3s; } }
-@media only screen and (max-width: 920px) { #about p { font-size: 0.65em; transition: 0.3s; } }
-@media only screen and (max-width: 730px) { #about p { font-size: 0.6em; transition: 0.3s; } }
 
 @media only screen and (max-width: 640px) { 
   .contact {

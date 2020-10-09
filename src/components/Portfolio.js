@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-scroll';
+import '../index.css';
 
 import PhotoOfMe from '../img/me.jpg'
 import ProjectImageAssembly from '../img/assembly.png'
@@ -26,23 +27,27 @@ import Particles from 'react-particles-js';
     https://www.npmjs.com/package/react-scroll
 */}
 
+const pc1 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-1'));
+const pc2 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-2'));
+const pc3 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-3'));
+const pc4 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-4'));
+console.log(pc1, pc2, pc3, pc4);
 
-
-const AMOUNT_OF_PARTICLES = 10;
+const AMOUNT_OF_PARTICLES = 15;
 const DENSITY_OF_PARTICLES = 100;
 const TYPE_OF_PARTICLES = "circle"; /* "circle", "square", "triangle", "polygon" */
 const PARTICLE_OPACITY = 0.1;
 const PARTICLE_SIZE = 7.5;
 const PARTICLE_SPEED = 2.6;
-const PARTICLE_DIRECTION = "none" /* "none", "bottom", "right", "left", etc... */
-const PARTICLE_COLOUR_1 = "#2ecc71";
-const PARTICLE_COLOUR_2 = "#447684";
-const PARTICLE_COLOUR_3 = "#d86700";
-const PARTICLE_COLOUR_4 = "#a26fb0";
+const PARTICLE_DIRECTION = "none" /* "none", "bottom", "right", "left", etc... */ 
+const PARTICLE_COLOUR_1 = "rgb(46, 204, 113)";
+const PARTICLE_COLOUR_2 = "rgb(27, 110, 235)";
+const PARTICLE_COLOUR_3 = "rgb(216, 103, 0)";
+const PARTICLE_COLOUR_4 = "rgb(162, 111, 176)";
 const AMOUNT_OF_LINES = 400;
-const LINE_COLOUR = "#999";
-const LINE_OPACITY = 0.15;
-const LINE_WIDTH = 0.9;
+const LINE_COLOUR = "rgb(153, 153, 153)";
+const LINE_OPACITY = 0;
+const LINE_WIDTH = 0.5;
 
 const particlesConig =
 {
@@ -162,18 +167,18 @@ const Portfolio = (props) => {
                 <p>Hi, I'm</p>
                 <h1>Nathan Steele</h1>
                 <p>I enjoy coding, trying to fix things and learning about the origins of life.<br />Currently studying a BSc in Computer Science at Newcastle University.</p>
-                <div className="arrow-to-projects">
+                <div className="smooth-scroll-btn">
                     <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>
-                        <i className="fa fa-angle-down smooth-scroll-btn"></i>
+                        <i className="fa fa-angle-down"></i>
                     </Link>
                 </div>
             </section>
 
             <section id="projects">
                 <div className="projects-header">
-                    <div className="arrow-to-about">
+                    <div className="smooth-scroll-btn">
                         <Link activeClass="active" to="about" spy={true} smooth={true} offset={0} duration={400}>
-                            <i className="fa fa-angle-up smooth-scroll-btn"></i>
+                            <i className="fa fa-angle-up"></i>
                         </Link>
                     </div>
                     <h2>My Projects</h2>

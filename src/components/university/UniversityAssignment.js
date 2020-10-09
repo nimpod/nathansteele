@@ -20,7 +20,7 @@ class UniversityAssignment extends Component {
                         <div className="col-sm-6-6 col-md-9-12 col-smd-5-12 col-lg-4-12 page-info">
                             <div>
                                 <h5>{this.props.theAssignment.moduleCode} - {this.props.theAssignment.moduleTitle}</h5>
-                                <h1>{this.props.theAssignment.assignment}</h1>
+                                <h1>{this.props.theAssignment.assignmentTitle}</h1>
                                 <h5>DATE</h5>
                                 <h4>{this.props.theAssignment.date}</h4>
                                 <h5>STAGE</h5>
@@ -29,7 +29,10 @@ class UniversityAssignment extends Component {
                                 <h4>{this.props.theAssignment.percentage}</h4>
                             </div>
                         </div>
-                        <div className="col-sm-6-6 col-md-9-12 col-smd-6-12 col-smd-offset-1-12 col-lg-6-12 col-lg-offset-2-12 page-content" dangerouslySetInnerHTML={{__html: this.props.theAssignment.content}}>
+                        <div className="col-sm-6-6 col-md-9-12 col-smd-6-12 col-smd-offset-1-12 col-lg-6-12 col-lg-offset-2-12 page-content" dangerouslySetInnerHTML={{__html: this.props.theAssignment.introContent}}>
+
+                        </div>
+                        <div className="page-content" dangerouslySetInnerHTML={{__html: this.props.theAssignment.mainContent}}>
 
                         </div>
                     </div>
