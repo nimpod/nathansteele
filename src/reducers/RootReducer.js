@@ -284,8 +284,8 @@ const initState = {
             ",
             mainContent: " \
             <div class='main'> \
-                <img src='https://github.com/nimpod/nathansteele/blob/master/src/img/university-assignments/figure1.PNG' /> \
-                <img src='https://github.com/nimpod/nathansteele/blob/master/src/img/university-assignments/figure2.PNG' /> \
+                <img src='https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/university-assignments/figure1.PNG' /> \
+                <img src='https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/university-assignments/figure2.PNG' /> \
                 <p>Shelves, parallel to the horizontal axis, have a height equal to the height of the leftmost shape in the shelf, and a width equals to W (the width of the sheet). All shapes in a shelf are placed such that the bottom side is on the shelf floor. There can be as many shelves in a sheet as needed as long as the total height of all shelves does not exceed H (the height of the sheet).</p> \
                 <p>The problem is to place all the shapes on the smallest number of sheets. Therefore, you need to design an algorithm that lays out the shapes across as few sheets as possible under the following rules:</p>  \
             </div> \
