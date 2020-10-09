@@ -68,6 +68,7 @@
   --blog-table-tag-text: rgb(27, 27, 27);
 
   --blog-post-title-text: rgb(33, 33, 33);
+  --blog-post-subTitle-text-color: rgb(38, 38, 38);
   --blog-post-date-text: rgb(134, 134, 134);
   --blog-post-text: rgb(66, 66, 66);
   --blog-post-back-to-table-text: rgb(128, 128, 128);
@@ -147,6 +148,7 @@
   --blog-table-tag-text: rgb(27, 27, 27);
 
   --blog-post-title-text: rgb(199, 199, 199);
+  --blog-post-subTitle-text-color: rgb(209, 209, 209);
   --blog-post-date-text: rgb(143, 148, 155);
   --blog-post-text: rgb(129, 134, 143);
   --blog-post-back-to-table-text: rgb(128, 128, 128);
@@ -776,6 +778,7 @@ table .tag .life { background-color: rgb(202, 202, 202); color: rgb(31, 31, 31);
   line-height: 1.3em;
   margin-top: 40px;
   font-weight: 400;
+  color: var(--blog-post-subTitle-text-color);
 }
 .blog-post-content p, .blog-post-content ol, .blog-post-content ul { 
   line-height: 1.7em;
