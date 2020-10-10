@@ -33,20 +33,20 @@ const pc3 = String(window.getComputedStyle(document.documentElement).getProperty
 const pc4 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-4'));
 console.log(pc1, pc2, pc3, pc4);
 
-const AMOUNT_OF_PARTICLES = 15;
-const DENSITY_OF_PARTICLES = 100;
+const AMOUNT_OF_PARTICLES = 88;
+const DENSITY_OF_PARTICLES = 700;
 const TYPE_OF_PARTICLES = "circle"; /* "circle", "square", "triangle", "polygon" */
-const PARTICLE_OPACITY = 0.1;
-const PARTICLE_SIZE = 7.5;
-const PARTICLE_SPEED = 2.6;
+const PARTICLE_OPACITY = 0.25;
+const PARTICLE_SIZE = 3.9;
+const PARTICLE_SPEED = 1.5;
 const PARTICLE_DIRECTION = "none" /* "none", "bottom", "right", "left", etc... */ 
-const PARTICLE_COLOUR_1 = "rgb(46, 204, 113)";
-const PARTICLE_COLOUR_2 = "rgb(27, 110, 235)";
-const PARTICLE_COLOUR_3 = "rgb(216, 103, 0)";
-const PARTICLE_COLOUR_4 = "rgb(162, 111, 176)";
-const AMOUNT_OF_LINES = 400;
+const PARTICLE_COLOUR_1 = "rgb(51, 177, 248)";
+const PARTICLE_COLOUR_2 = "rgb(131, 210, 56)";
+const PARTICLE_COLOUR_3 = "rgb(248, 194, 16)";
+const PARTICLE_COLOUR_4 = "rgb(170, 115, 255)";
+const AMOUNT_OF_LINES = 110;
 const LINE_COLOUR = "rgb(153, 153, 153)";
-const LINE_OPACITY = 0;
+const LINE_OPACITY = 0.25;
 const LINE_WIDTH = 0.5;
 
 const particlesConig =

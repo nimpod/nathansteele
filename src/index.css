@@ -55,7 +55,7 @@
   --project-card-text-hover: rgb(94, 93, 93);
   --project-card-text-color: rgb(0, 0, 0);
 
-  --page-wrapper-bg: rgb(255, 255, 255);
+  --page-wrapper-bg: rgb(251, 251, 251);
   --page-title: rgba(0, 0, 0, 0.529);
 
   --blog-table-bg: rgb(255, 255, 255);
@@ -107,20 +107,22 @@
   --particle-color-3: rgb(216, 103, 0);
   --particle-color-4: rgb(162, 111, 176);
   --line-color: rgb(153, 153, 153);
+
+  --text-highlight-color: rgb(5, 194, 191);
 }
 
 /** DARK MODE  **/
 [data-theme="dark"] {
-  --bg1: rgb(34, 34, 34);   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg1: rgb(50, 56, 64);   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
   --bg2: rgb(45, 42, 60);   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   
   --text: rgb(240, 240, 240);
-  --intro-text: rgb(187, 187, 187);
+  --intro-text: rgb(230, 219, 225);
   --text-hyperlink: #66b0ff;
 
-  --nav-item-text: rgb(192, 192, 192);
-  --nav-item-text-active: rgb(5, 194, 191);
-  --nav-item-bg-active: rgba(67, 177, 175, 0.097);
+  --nav-item-text: rgb(255, 255, 255);
+  --nav-item-text-active: rgb(56, 237, 234);
+  --nav-item-bg-active: rgba(67, 170, 177, 0.097);
   --nav-item-bg-hover: rgba(67, 177, 175, 0.097);
   --nav-delimiter: rgb(56, 56, 56);
   --nav-item-theme-toggle-color: rgb(192, 192, 192);
@@ -135,41 +137,42 @@
   --project-card-text-hover: rgb(235, 235, 235);
   --project-card-text-color: var(--intro-text);
 
-  --page-wrapper-bg: rgb(31, 31, 31);
+  --page-wrapper-bg: rgb(50, 56, 64);
   --page-title: rgba(255, 255, 255, 0.652);
   
-  --blog-table-bg: rgb(33, 33, 34);
-  --blog-table-thead-bg: rgb(39, 39, 39);
-  --blog-table-border: rgb(19, 18, 18);
+  --blog-table-bg: rgb(54, 59, 66);
+  --blog-table-thead-bg: rgb(49, 54, 59);
+  --blog-table-border: rgb(39, 47, 56);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: rgb(255, 255, 255);
-  --blog-table-row-bg-hover: rgb(43, 42, 46);
-  --blog-table-tag-bg: rgb(236, 236, 236);
-  --blog-table-tag-text: rgb(27, 27, 27);
+  --blog-table-row-bg-hover: rgb(64, 70, 77);
+  --blog-table-tag-bg: rgb(46, 45, 45);
+  --blog-table-tag-text: rgb(189, 189, 189);
 
   --blog-post-title-text: rgb(199, 199, 199);
   --blog-post-subTitle-text-color: rgb(209, 209, 209);
   --blog-post-date-text: rgb(143, 148, 155);
-  --blog-post-text: rgb(129, 134, 143);
-  --blog-post-back-to-table-text: rgb(128, 128, 128);
+  --blog-post-text: rgb(185, 186, 189);
+  --blog-post-back-to-table-text: rgb(181, 175, 175);
   --blog-post-note-text: rgb(153, 153, 153);
   --blog-post-hr: rgb(200, 200, 200);
   --svg-icon-invert-percentage: 100%;
 
   --university-controls-btn-bg: rgba(82, 79, 79, 0.609);
   --university-controls-btn-svg-fill: rgb(232, 232, 232);
-  --university-card-box-shadow: rgba(116, 116, 118, 0.1);
-  --university-card-bg: rgb(42, 43, 44);
-  --university-card-border-color: rgb(54, 55, 58);
-  --university-card-border-color-hover: rgb(81, 81, 85);
-  --university-card-img-box-shadow: rgba(99, 97, 97, 0.15);
-  --university-card-img-bg-color: rgb(92, 92, 94);
+  
+  --university-card-box-shadow: rgba(0, 0, 255, 0.1);
+  --university-card-bg: rgb(43, 47, 51);
+  --university-card-border-color: rgb(38, 42, 46);
+  --university-card-border-color-hover: rgb(27, 31, 34);
+  --university-card-img-box-shadow: rgba(233, 35, 35, 0.15);
+  --university-card-img-bg-color: rgb(43, 47, 51);
   --university-card-moduleTitle-text-color: rgb(189, 188, 188);
   --university-card-assignmentTitle-text-color: rgb(220, 220, 220);
   --university-card-date-text-color: rgb(194, 194, 194);
   --university-card-stage-text-color: rgb(194, 194, 194);
   --university-card-percentage-text-color: rgb(255, 255, 255);
-  --university-card-percentage-bg-color: rgb(62, 156, 7);
+  --university-card-percentage-bg-color: rgb(49, 118, 9);
   
   --university-assignment-title-text-color: rgb(198, 201, 206);
   --university-assignment-subheading-text-color: rgb(161, 164, 168);
@@ -182,11 +185,13 @@
   --contact-btn-text-colour: rgb(255, 255, 255);
   --contact-btn-colour-hover: rgb(88, 88, 88);
 
-  --particle-color-1: rgb(130, 174, 148);
-  --particle-color-2: rgb(142, 203, 220);
-  --particle-color-3: rgb(238, 209, 182);
-  --particle-color-4: rgb(229, 135, 255);
-  --line-color: rgb(255, 255, 255);
+  --particle-color-1: rgb(51, 177, 248);
+  --particle-color-2: rgb(131, 210, 56);
+  --particle-color-3: rgb(248, 194, 16);
+  --particle-color-4: rgb(170, 115, 255);
+  --line-color: rgb(51, 177, 248);
+
+  --text-highlight-color: rgb(3, 80, 79);
 }
 
 
@@ -388,7 +393,7 @@ svg.logo polygon:hover {
 .page-wrapper.university,
 .page-wrapper.blog,
 .page-wrapper.notes {
-  height: 100vh;
+  height: 111vh;
 }
 
 .page-wrapper.university,
@@ -1185,4 +1190,11 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #555;
+}
+
+::selection {
+  background: var(--text-highlight-color); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--text-highlight-color); /* Gecko Browsers */
 }
