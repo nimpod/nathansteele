@@ -140,12 +140,12 @@
   --page-wrapper-bg: rgb(50, 56, 64);
   --page-title: rgba(255, 255, 255, 0.652);
   
-  --blog-table-bg: rgb(54, 59, 66);
+  --blog-table-bg: rgb(50, 56, 64);
   --blog-table-thead-bg: rgb(49, 54, 59);
-  --blog-table-border: rgb(39, 47, 56);
+  --blog-table-border: rgb(50, 56, 64);
   --blog-table-text: var(--intro-text);
-  --blog-table-text-hover: rgb(255, 255, 255);
-  --blog-table-row-bg-hover: rgb(64, 70, 77);
+  --blog-table-text-hover: var(--intro-text);
+  --blog-table-row-bg-hover: rgb(50, 56, 64);
   --blog-table-tag-bg: rgb(46, 45, 45);
   --blog-table-tag-text: rgb(189, 189, 189);
 
@@ -649,7 +649,7 @@ table {
   border-collapse: collapse;
   font-size: 1.0rem;
   background-color: var(--blog-table-bg);
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
 }
 
@@ -663,13 +663,13 @@ table thead {
 }
 
 table th, table td {
-  padding: 0.3rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   border: 1px solid var(--blog-table-border);
 }
 
-table td:nth-child(1) { width: 20%; }   /* 1st column */
-table td:nth-child(2) { width: 10% }   /* 2nd column */
-table td:nth-child(3) { width: 70%; }  /* 3rd column */
+table td:nth-child(1) { width: 22%; }   /* 1st column */
+table td:nth-child(2) { width: 15% }   /* 2nd column */
+table td:nth-child(3) { width: 83%; }  /* 3rd column */
 table td:nth-child(4) { width: 0%; }  /* 4th column */
 
 table tr {
