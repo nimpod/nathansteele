@@ -11,8 +11,6 @@ class Blog extends Component {
         const postsDisplayed = posts.map(p => {
             return (                
                 <tr key={p.id}>
-                    <td> {p.id} </td>
-                    <td> <Link to={'/blog/' + p.id}>{p.title}</Link> </td>
                     <td> {p.date} </td>
                     <td> 
                         {p.tags.split(';').map(function(tag, index) {
@@ -25,23 +23,16 @@ class Blog extends Component {
                             }
                         })}
                     </td>
+                    <td> <Link to={'/blog/' + p.id}>{p.title}</Link> </td>
                 </tr>
             )
         })
 
         return(
             <div className="page-wrapper blog">
-                <h2 className="page-title center-me">Thoughts, tutorials & more!</h2>
+                <h2 className="page-title center-me">Blog Archive</h2>
                 <div className="posts-container">
                     <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Title</th>
-                                <th>Date</th>
-                                <th>Tags</th>
-                            </tr>
-                        </thead>
                         <tbody>
                             { postsDisplayed }
                         </tbody>
