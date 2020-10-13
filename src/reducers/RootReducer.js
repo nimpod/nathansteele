@@ -262,7 +262,7 @@ const initState = {
             content: "",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "this is the blurb",
-            tags: "Astronomy"
+            tags: "Astronomy; Biology"
         },
         {
             id: "13",
@@ -281,6 +281,51 @@ const initState = {
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "this is the blurb",
             tags: "Astronomy"
+        },
+        {
+            id: "15",
+            date: "October 7, 2020",
+            title: "The Beale Ciphers",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: "Cryptography"
+        },
+        {
+            id: "16",
+            date: "October 7, 2020",
+            title: "The Great Pyramid of Cholula",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: "History"
+        },
+        {
+            id: "17",
+            date: "October 7, 2020",
+            title: "Null Island",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: "Geography"
+        },
+        {
+            id: "18",
+            date: "October 7, 2020",
+            title: "Hematite Stalactite",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: "Rocks and Minerals"
+        },
+        {
+            id: "19",
+            date: "October 7, 2020",
+            title: "Leucochloridium",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: "Entomology"
         },
     ],
 

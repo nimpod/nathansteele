@@ -56,7 +56,7 @@
   --project-card-text-color: rgb(0, 0, 0);
 
   --page-wrapper-bg: rgb(251, 251, 251);
-  --page-title: rgba(0, 0, 0, 0.529);
+  --page-text-color: rgba(0, 0, 0, 0.529);
 
   --blog-table-bg: rgb(251, 251, 251);
   --blog-table-thead-bg: rgb(248, 248, 248);
@@ -118,7 +118,7 @@
   
   --text: rgb(240, 240, 240);
   --intro-text: rgb(230, 219, 225);
-  --text-hyperlink: #66b0ff;
+  --text-hyperlink: rgb(45, 206, 255);
 
   --nav-item-text: rgb(255, 255, 255);
   --nav-item-text-active: rgb(56, 237, 234);
@@ -138,7 +138,7 @@
   --project-card-text-color: var(--intro-text);
 
   --page-wrapper-bg: rgb(50, 56, 64);
-  --page-title: rgba(255, 255, 255, 0.652);
+  --page-text-color: rgba(255, 255, 255, 0.652);
   
   --blog-table-bg: rgb(50, 56, 64);
   --blog-table-thead-bg: rgb(49, 54, 59);
@@ -384,7 +384,6 @@ svg.logo polygon:hover {
 
 /* ------------------------------------------<3: MAIN CONTAINER>------------------------------------------ */
 .page-wrapper {
-  font-size: 2.5rem;
   width: 100vw;
   top: 0;
   margin-top: -210px;
@@ -405,7 +404,7 @@ svg.logo polygon:hover {
 }
 
 .page-title {
-  color: var(--page-title);
+  color: var(--page-text-color);
   text-align: center;
   font-size: 3.15rem !important;
   font-weight: bold !important;
@@ -640,6 +639,11 @@ svg.logo polygon:hover {
   font-weight: bold;
 }
 
+.blog p, .blog span {
+  font-size: 1.13rem;
+  color: var(--page-text-color);
+}
+
 .posts-container {
   position: relative;
 }
@@ -649,7 +653,7 @@ table {
   border-collapse: collapse;
   font-size: 1.0rem;
   background-color: var(--blog-table-bg);
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -667,9 +671,9 @@ table th, table td {
   border: 1px solid var(--blog-table-border);
 }
 
-table td:nth-child(1) { width: 22%; }   /* 1st column */
-table td:nth-child(2) { width: 15% }   /* 2nd column */
-table td:nth-child(3) { width: 83%; }  /* 3rd column */
+table td:nth-child(1) { width: 20%; }   /* 1st column */
+table td:nth-child(2) { width: 25% }   /* 2nd column */
+table td:nth-child(3) { width: 65%; }  /* 3rd column */
 table td:nth-child(4) { width: 0%; }  /* 4th column */
 
 table tr {
@@ -678,16 +682,17 @@ table tr {
 
 table tr {
   color: var(--blog-table-text);
+  height: 2px;
 }
 
 table tr a {
   color: var(--text-hyperlink);
-  opacity: 0.6;  
+  opacity: 0.7;
   text-decoration: none;
 }
 
 table tbody tr a:hover {
-  opacity: 1.0;  
+  opacity: 1;
 }
 
 table tbody tr:hover {
@@ -695,11 +700,11 @@ table tbody tr:hover {
   background-color: var(--blog-table-row-bg-hover);
 }
 
-table .tag {
+.tag {
   display: inline-block;
 }
 
-table .tag span {
+.tag span {
   margin-right: 4px;
   padding: 3px 5px;
   border-radius: 4px;
@@ -709,14 +714,99 @@ table .tag span {
   color: var(--blog-table-tag-text);
 }
 
-table .tag .Hardware { background-color: rgb(22, 94, 48); color: rgb(37, 216, 129); }
-table .tag .Astronomy { background-color: rgb(122, 77, 230); color: rgb(238, 238, 238); }
-table .tag .Mathematics { background-color: rgb(192, 86, 29); color: rgb(238, 238, 237); }
-table .tag .Python { background-color: rgb(128, 155, 243); color: rgb(235, 235, 235); }
-table .tag .Life { background-color: rgba(0, 0, 0, 0.864); color: rgb(255, 255, 255); }
-table .tag .Biology { background-color: rgb(80, 139, 20); color: rgb(255, 255, 255); }
-table .tag .React { background-color:rgb(9, 204, 188); color: rgb(255, 255, 255); }
+.tag .Hardware { background-color: rgb(22, 94, 48); color: rgb(37, 216, 129); }
+.tag .Astronomy { background-color: rgb(122, 77, 230); color: rgb(238, 238, 238); }
+.tag .Mathematics { background-color: rgb(192, 86, 29); color: rgb(238, 238, 237); }
+.tag .Python { background-color: rgb(128, 155, 243); color: rgb(235, 235, 235); }
+.tag .Life { background-color: rgba(0, 0, 0, 0.864); color: rgb(255, 255, 255); }
+.tag .Biology { background-color: rgb(80, 139, 20); color: rgb(255, 255, 255); }
+.tag .React { background-color:rgb(9, 204, 188); color: rgb(255, 255, 255); }
 
+/*
+.controls
+  .dropdown-btn-container
+    .dropdown-btn
+      div.btn
+      ul.dropdown-menu
+  ...
+*/
+
+.blog .controls {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.blog .controls .control-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+.blog .controls .control-container p {
+  flex: 1;
+}
+.blog .controls .control-container div {
+  flex: 10;
+}
+
+.drawer-gradient {
+  position: absolute;
+  width: 100%;
+  height: 28px;
+  background: linear-gradient(270deg, var(--drawer) 0%, rgba(122,122,122,0) 2%, rgba(122,122,122,0) 98%, var(--drawer) 100%);
+  pointer-events: none;
+}
+
+.control-container.filtering {
+  max-width: 1000px;
+  position: relative;
+}
+.filter-tag-btn-group {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.filter-tag-btn {
+  margin-right: 4px;
+}
+.filter-tag-btn:hover {
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 100ms ease-in;
+}
+.filter-tag-btn .inline-svg {
+  display: inline-block;
+  width: 1em;
+}
+.filter-tag-btn .inline-svg svg {
+  margin-bottom: 2px;
+  margin-left: 4px;
+}
+
+.sort-btn-group .sort-btn {
+  display: inline;
+  margin-right: 11px;
+}
+.sort-btn-group .sort-btn:hover  {
+  cursor: pointer;
+  opacity: 1;
+}
+.sort-btn-group .sort-btn:hover span {
+  color: rgb(9, 179, 134) !important;
+  transition: color 100ms ease-in;
+}
+
+.filter-tag-btn-group::-webkit-scrollbar {
+  width: 12px;
+}
+
+.filter-tag-btn-group::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(221, 43, 207, 0.522); 
+  border-radius: 10px;
+}
+
+.filter-tag-btn-group::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(45, 191, 123, 0.5); 
+}
 
 /* ------------------------------------------<6: BLOG POST PAGE>------------------------------------------ */
 .blog-post {
