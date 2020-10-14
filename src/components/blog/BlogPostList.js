@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
+import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
+import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 
 class BlogPostList extends Component {
 

@@ -4,7 +4,7 @@ const initState = {
     posts: [
         {
             id: "1",
-            date: "April 27, 2017",
+            date: "27 Apr 2017",
             title: "Cassini-Huygens",
             content: "<p>The Cassini spacecraft was launched in 1997 and arrived at Saturn in 2004. Cassini has had several missions since it’s arrival; it landed the Huygens: Titan Lander on Saturn’s moon Titan and photographed the liquid methane lakes which cover it’s surface. Recent studies have even shown Titan’s surface has intriguing similarities to the surface of the early Earth, a hard outer crust and soft underneath. (It remains the most distant landing of any human made spacecraft).</p><p>In 2004, Cassini observed geyser tendrils bursting jets of icy particles from Enceladus’s south polar region at speeds of 1,360mph. In 2014 Cassini confirmed the existence of a deep, warm, sub-surface ocean making it a prime suspect for life elsewhere in our Solar System. Enceladus’s ocean is 10-30km deep, whilst Earth’s average ocean depth is a mere 3.7km.</p><p>Cassini’s main missions was to observe and collect data about Saturn and it's moons. It’s been doing that for the last 14 years, capturing thousands of stunning photographs of Saturn and it’s moons and has travelled over 1 billion miles since launch, but unfortunately Cassini is approaching the end of it’s fantastic journey. On September 15th 2017, Cassini will dive into Saturn’s atmosphere, destroying the spacecraft in the process. This method was chosen because it is imperative to ensure protection and prevent biological contamination to any of the moons of Saturn thought to offer potential habitability.</p><p>Since November 30th 2016, Cassini has been going in and out of Saturn’s rings once every week, collecting data and photographing the ‘inside’ of the rings. No man-made spacecraft had ever attempted this before, and we got some incredible photos from it.</p><p>YESTERDAY, Cassini began it’s grand finale and took its first dive into Saturn’s atmosphere. Cassini reached 1900 miles above the top of Saturn’s clouds, and has been able to transmit stunning images of Saturn’s atmosphere. The photo’s attached to this post are from both the ring fly-by’s and some are photo’s NASA released yesterday from Cassini’s first dive. I love talking and sharing about this sort of stuff, as does everyone else! (Please let me know if you noticed any errors in my text, or if you have any comments or knowledge to bless me with, please do that)</p><p>I don’t think enough people know about the Cassini-Huygens mission and it's discoveries, and there’s a lot more that can be talked about, but unfortunately 'this margin is too small' to contain my ramblings. It will be regarded as one of the most successful space-related missions ever, so I thought this would be worth sharing since Cassini is still alive and it’s still gathering data, making new discoveries everyday and taking incredible photographs for the whole world to see. The fact that this isn't trending on any social medias, but politics crap about Donald Trump is constantly trending disgusts me, and that's my reason for making this post, to let people know these amazing scientific adventures are always happening, but for some bizarre reason we are all so focused on negativity and spread around social medias. Humans are clever, and can do amazing things, the Cassini mission is a great example amongst many other past and future missions. So yeah, don't forget to put September 15th 2017 in your calendar! It will be a very sad but exciting Friday. Thanks for reading 😊</p><p><a href='https://saturn.jpl.nasa.gov/galleries/raw-images/'>Over 300,000 raw images from Cassini, updated everyday</a></p><p><a href='https://www.youtube.com/watch?v=xrGAQCq9BMU'>A great video about Cassini's grand finale, by NASA themselves</a></p><p><a href='https://www.youtube.com/watch?v=CDGrhJ4kjFk'>Excellent video from a great educational channel</a></p><p><a href='https://www.youtube.com/watch?v=G0g4L6a6Ns4'>A fantastic Cassini news conference (4th April 2017):</a></p><p><a href='https://www.youtube.com/watch?v=_9GY6njkMI8&t=0s'>Good video about Cassini's grand finale, including a fun artsy compilation using NASA's Cassini photographs, from a terrible YouTube channel about conspiracy theories and unbelievably dumb ancient alien videos, but he made a good video this time</a></p>",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -13,7 +13,7 @@ const initState = {
         },
         {
             id: "2", 
-            date: "March 20, 2018", 
+            date: "29 Mar 2018", 
             title: "The Representation theory of the additive group scheme", 
             content: "<p>In this post we’ll describe the representation theory of the additive group scheme \\mathbb{G}_a over a field k. The answer turns out to depend dramatically on whether or not k has characteristic zero.</p><p>Preliminaries over an arbitrary ring</p><p>(All rings and algebras are commutative unless otherwise stated.)</p><p>The additive group scheme \\mathbb{G}_a over a base ring k has functor of points given by the underlying abelian group functor</p><p>This functor is represented by the free k-algebra k[x] together with the Hopf algebra structure given by the comultiplication</p><hr /><p>and antipode S(x) = -x, and so it is an affine group scheme whose underlying scheme is the affine line \\mathbb{A}^1 over k. From a Hopf algebra perspective, this Hopf algebra is special because it is the free Hopf algebra on a primitive element.</p><p>A representation of \\mathbb{G}_a can be described in a few equivalent ways. From the functor of points perspective, we first need to describe the functor of points perspective on a k-module: a k-module V has functor of points</p><p>making it an affine group scheme if V is finitely generated projective (in which case its ring of functions is the symmetric algebra S(V^{\\ast}) on the dual of V) but not in general, for example if k is a field and V is an infinite-dimensional vector space. Note that if V = k we recover \\mathbb{G}_a, and more generally if V = k^n we recover \\mathbb{G}_a^n.</p>",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -22,7 +22,7 @@ const initState = {
         },
         {
             id: "3",
-            date: "March 27, 2018", 
+            date: "27 Mar 2018", 
             title: "Singular value decomposition",
             content: "<p>In the previous post we described a fairly striahgroward argument, using generating functions and the saddle-point bound, for giving an upper bound.</p><p>hi</p>",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -31,7 +31,7 @@ const initState = {
         },
         {
             id: "4", 
-            date: "May 30, 2018", 
+            date: "30 May 2018", 
             title: "Gradient Descent",
             content: "<p class=\"note\">Note: this is a repost of a Facebook status I wrote off the cuff about a year ago, lightly edited. As such it has a different stylef from my other posts, but I still wanted to put somewhere where it'd be easier to find and share than Facebook.</p><p>Gradient descent, in its simpliest where you just subtract the gradient of your loss funcction J, is not dimensionally consistent: if the parameters you're optimising over have units of length, and the loss function is dimensionless, then the diriviatives you're substracting have units of inverse length.</p><p>This observation can be used to reinvent the learning rate, which, for dimensional consistency, must have units of length squared. It also suggests theat the learning rate outght to be set to something like L**2 for some kind of characteristic length scale L , which loosly speaking is the length at which the curvature of J starts to matter.</p>",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -40,7 +40,7 @@ const initState = {
         },
         {
             id: "5",
-            date: "September 9, 2020",
+            date: "09 Sep 2020",
             title: "Working from home as an intern during the COVID-19 pandemic",
             content: "<div class='intro-container'>It was challening</div><hr />",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -49,7 +49,7 @@ const initState = {
         },
         {
             id: "6",
-            date: "September 8, 2016",
+            date: "08 Sep 2016",
             title: "Why the moon landing was not a hoax",
             content: "<p>One of my friends at school was convinced that the moon landings were a hoax. He was pretty darn serious about and still bugs me to this day.\
                         I figured that this has gone on too long, and that for my own wellbeing as well as his, I should splatter my thoughts, frustrations and undeniable truth here in a blog post.</p>\
@@ -151,7 +151,7 @@ const initState = {
         },
         {
             id: "7",
-            date: "August 23, 2019",
+            date: "23 Aug 2019",
             title: "How to digitize Mini DV tapes",
             content: "\
             <div class='intro'> \
@@ -221,7 +221,7 @@ const initState = {
         },
         {
             id: "8",
-            date: "September 9, 2016",
+            date: "09 Sep 2016",
             title: "How to deploy a react app using Github pages",
             content: "",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -230,7 +230,7 @@ const initState = {
         },
         {
             id: "9",
-            date: "September 10, 2016",
+            date: "10 Sep 2017",
             title: "Analysing my IMDB ratings",
             content: "",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -239,7 +239,7 @@ const initState = {
         },
         {
             id: "10",
-            date: "September 11, 2016",
+            date: "11 Sep 2018",
             title: "How to use the Fitbit API",
             content: "",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -248,7 +248,7 @@ const initState = {
         },
         {
             id: "11",
-            date: "April 5, 2019",
+            date: "05 Apr 2019",
             title: "Design patterns",
             content: "<p>I had a Software Engineering lecture today on Design Patterns. Learning about the history behind design patterns and understanding how critical they are to the software engineering lifecycle was interesting, as well as learning about <a href='http://www.blackwasp.co.uk/gofpatterns.aspx'>'The Gang of Four'</a>. I was also interested to discover that design patterns are something all programmers kind of unknowingly use. Becoming consciously aware of which pattern I am using and which patterns I should have been using all along was an exciting discovery for me personally. Exciting enough for me to make a blog post on the Builder design pattern.</p><h6>What is a design pattern?</h6><p>Design patterns basically give your code a controlled idea of reuse. They capture reoccuring patterns and structure code accordingly. They aim to improve maintainenance by giving explicit specification of interactions and intetnt.</p><p>Architect Christopher Alexander eleqountly describes design patterns in his book <a href='https://en.wikipedia.org/wiki/A_Pattern_Language'>'A Pattern Language'</a>:<br><i>'Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over without ever doing it the same way twice'.</i> - Christopher Alexander, 1977<p><p>There are 3 main subsets of design patterns:</p><ul><li><b>Creational</b> - how are objects created?</li><li><b>Structural</b> - how is data structured?</li><li><b>Behavioural</b> - how do we interact with the objects</li></ul><p>There are many different types of design patterns within these 3 subsets such as the Singleton, Decorator, Template, Dependency and <b>Builder</b> design patterns.</p><h6>What is the Builder design pattern?</h6><p>The Builder design pattern lies within the <b>Creational</b> subset of design Patterns. So it is a design pattern concerned with the instantiation of an object.</p><p>Builders basically allow you to create complex objects where the attributes can be set in any order.</p><p>Builders prevents the problem of long constructor calls like these monsters:</p>",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -257,7 +257,7 @@ const initState = {
         },
         {
             id: "12",
-            date: "October 7, 2020",
+            date: "07 Oct 2020",
             title: "Are non-carbon based lifeforms possible?",
             content: "",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -266,7 +266,7 @@ const initState = {
         },
         {
             id: "13",
-            date: "October 7, 2020",
+            date: "07 Oct 2020",
             title: "Gorgonocephalus arcticus",
             content: "",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -275,7 +275,7 @@ const initState = {
         },
         {
             id: "14",
-            date: "October 7, 2020",
+            date: "09 Oct 2020",
             title: "A subsurface ocean on Enceladus",
             content: "",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -284,7 +284,7 @@ const initState = {
         },
         {
             id: "15",
-            date: "October 7, 2020",
+            date: "11 Oct 2020",
             title: "The Beale Ciphers",
             content: "blah",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -293,7 +293,7 @@ const initState = {
         },
         {
             id: "16",
-            date: "October 7, 2020",
+            date: "13 Oct 2020",
             title: "The Great Pyramid of Cholula",
             content: "blah",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -302,7 +302,7 @@ const initState = {
         },
         {
             id: "17",
-            date: "October 7, 2020",
+            date: "14 Oct 2020",
             title: "Null Island",
             content: "blah",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
@@ -311,16 +311,16 @@ const initState = {
         },
         {
             id: "18",
-            date: "October 7, 2020",
+            date: "14 Oct 2020",
             title: "Hematite Stalactite",
             content: "blah",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "this is the blurb",
-            tags: ["Rocks and Minerals"]
+            tags: ["Rocks-and-minerals"]
         },
         {
             id: "19",
-            date: "October 7, 2020",
+            date: "14 Oct 2020",
             title: "Leucochloridium",
             content: "blah",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",

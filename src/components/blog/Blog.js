@@ -34,20 +34,19 @@ class Blog extends Component {
         console.log(newArray);
     }
     
-    componentWillMount() {
+    componentDidMount() {
         const { posts } = this.props;       // json data from redux data store
         const setOfTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
 
-        /*
-        for (let i = 0; i < posts.length; i++) {
-            let tagsItem = posts[i].tags;
-            // console.log(tagsItem);
-        }
-        // console.log(setOfTags);
+        this.props.posts.map((p => {
+            console.log(p.tags);
+            p.tags.map((t => {
+                setOfTags.add(t);
+            }));
+        }));
 
         // sort the set of tags alphabetically, cause why not.
         const arrayOfTags = Array.from(setOfTags).sort();
-        this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.concat(arrayOfTags)});
 
         this.setState({tagCategories:
             arrayOfTags.map(tag => {
@@ -55,18 +54,21 @@ class Blog extends Component {
                     <span className="filter-tag-btn tag" onClick={this.toggleTag}>
                         <span className={tag}>
                             { tag }
+                            {/*
                             <div className="inline-svg inline-svg-plus">
                                 <PlusIcon />
                             </div>
                             <div className="inline-svg inline-svg-times" hidden="true">
                                 <CrossIcon />
                             </div>
+                            */}
                         </span>
                     </span>
                 );
             }) 
         });
-        */
+
+        console.log(arrayOfTags);
     }
 
     handleSearchBoxInput = (e) => {
@@ -94,17 +96,17 @@ class Blog extends Component {
             <div className="page-wrapper blog">
                 <h2 className="page-title center-me">Blog Archive</h2>
                 <div className="controls">
-                    <div className="control-container sorting">
-                        <p><strong>Sort by: </strong></p>
-                        <div className="sort-btn-group">
-                            <div className="sort-btn active"><span>Date</span></div>
-                            <div className="sort-btn"><span>Tags</span></div>
-                            <div className="sort-btn"><span>Title</span></div>
-                        </div>
+                    <div className="sort-btn-group">
+                        <span>Sort by: </span>
+                        <div className="sort-btn active" sortby="date"><span>Date</span></div>
+                        <div className="sort-btn" sortby="tags"><span>Tags</span></div>
+                        <div className="sort-btn" sortby="title"><span>Title</span></div>
                     </div>
-                    <div className="control-container searching">
-                        <p><strong>Search: </strong></p>
-                        <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Type in the title of a blog post!" />
+                    <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Type in the title of a blog post!" />
+                    <div className="tag-aquarium">
+                        {
+                            this.state.tagCategories
+                        }
                     </div>
                     {/* 
                     <div className="control-container filtering">
