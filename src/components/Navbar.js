@@ -104,6 +104,12 @@ class Navbar extends Component {
                         <li>Notes</li>
                     </NavLink>
 
+                    <div className="hamburger-menu-icon">
+                        <span />
+                        <span />
+                        <span />
+                    </div>
+
                     <div className="theme-toggle" onClick={this.switchTheme} aria-label="Click to enable dark mode" title="Click to enable dark mode7">
                         <span className="inline-svg dark">
                             <DarkThemeIcon />

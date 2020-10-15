@@ -126,7 +126,7 @@
   --nav-item-text-active: rgb(56, 237, 234);
   --nav-item-bg-active: rgba(67, 170, 177, 0.097);
   --nav-item-bg-hover: rgba(67, 177, 175, 0.097);
-  --nav-delimiter: rgb(56, 56, 56);
+  --nav-delimiter: rgb(153, 153, 153);
   --nav-item-theme-toggle-color: rgb(192, 192, 192);
   --nav-item-theme-toggle-color-hover: rgb(255, 255, 255);
   --nav-item-theme-toggle-border-color-active: rgb(160, 157, 157);
@@ -361,6 +361,7 @@ svg.logo polygon:hover {
   fill: rgb(67, 177, 175);
 }
 
+/*
 .hamburger-menu-icon {
   position: absolute;
   right: 40px;
@@ -383,6 +384,18 @@ svg.logo polygon:hover {
   height: 5px;
   width: 30px;
   border-radius: 50px;
+}*/
+
+.hamburger-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-menu-icon span {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
 }
 
 
@@ -430,7 +443,7 @@ svg.logo polygon:hover {
 }
 
 .portfolio p {
-  font-size: 1.25rem;
+  font-size: 1.2em;
 	line-height: 1.8em;
 	letter-spacing: -0.014em;
 	font-feature-settings: "ss03","zero","cv08","cv11" 1;
@@ -1282,14 +1295,16 @@ div.card-percent:hover::after {
 
 
 /* ------------------------------------------<10: MEDIA QUERIES>------------------------------------------ */
-@media screen and (max-width: 900px) { #about, .projects-header { padding-left: 100px !important; } #about p { margin-left: 7px; } }
-@media screen and (max-width: 700px) { #about, .projects-header { padding-left: 50px !important; } }
-@media screen and (max-width: 600px) { #about, .projects-header { padding-left: 35px !important; padding-right: 15px !important; } }
+@media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
+@media screen and (max-width: 900px) { .portfolio h1 { font-size: 50px; } .portfolio h2 { font-size: 40px; } }
+@media screen and (max-width: 900px) { #about, .projects-header { padding: 170px 25px 0px 25px !important;  } }
+@media screen and (max-width: 650px) { .smooth-scroll-btn { text-align: center; } }
+@media screen and (max-width: 600px) { #about, .projects-header { padding: 170px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
 
 /* hide nav items when screen is too small */
 @media screen and (max-width: 700px) { .my-navbar ul { padding: 0; } }
-@media screen and (max-width: 600px) { .my-navbar ul a li, .delimiter { display: none; } }
+@media screen and (max-width: 600px) { .my-navbar ul a li, .delimiter { display: none; }  .hamburger-menu-icon { display: inline-block; } }
 
 /* make font size get smaller on blog table */
 @media only screen and (max-width: 1300px) { table { font-size: 0.9rem; transition: 0.3s all; } }
@@ -1301,6 +1316,8 @@ div.card-percent:hover::after {
 @media screen and (max-width: 700px) { #about{ padding: 50px 90px 0px 90px; } }
 @media screen and (max-width: 500px) { #about{ padding: 50px 30px 0px 30px; } }
 @media screen and (max-width: 400px) { #about{ padding: 50px 5px 0px 5px; } }
+
+@media screen and (max-width: 900px) { .projects-container { padding: 0px 5px; } }
 
 /* remove padding from a blog post as screen gets smaller */
 @media only screen and (max-width: 1500px) { .blog-post { padding-left: 300px; padding-right: 300px; } }
