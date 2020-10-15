@@ -73,7 +73,6 @@
   --blog-post-subTitle-text-color: rgb(38, 38, 38);
   --blog-post-date-text: rgb(134, 134, 134);
   --blog-post-text: rgb(66, 66, 66);
-  --blog-post-back-to-table-text: rgb(128, 128, 128);
   --blog-post-note-text: rgb(153, 153, 153);
   --blog-post-hr: rgb(200, 200, 200);
   --svg-icon-invert-percentage: 0%;
@@ -111,6 +110,7 @@
   --line-color: rgb(153, 153, 153);
 
   --text-highlight-color: rgb(5, 194, 191);
+  --btn-hover-bg-color: rgb(238, 238, 238);
 }
 
 /** DARK MODE  **/
@@ -157,7 +157,6 @@
   --blog-post-subTitle-text-color: rgb(209, 209, 209);
   --blog-post-date-text: rgb(143, 148, 155);
   --blog-post-text: rgb(185, 186, 189);
-  --blog-post-back-to-table-text: rgb(181, 175, 175);
   --blog-post-note-text: rgb(153, 153, 153);
   --blog-post-hr: rgb(200, 200, 200);
   --svg-icon-invert-percentage: 100%;
@@ -196,6 +195,7 @@
   --line-color: rgb(51, 177, 248);
 
   --text-highlight-color: rgb(3, 80, 79);
+  --btn-hover-bg-color: rgb(51, 51, 51);
 }
 
 
@@ -773,15 +773,16 @@ div.tag-aquarium .tag span {
   margin-bottom: 20px;
 }
 
-.controls > div {
+.blog .controls > div {
   display: inline-block;
+  margin-right: 100px;
 }
 
 .controls > div.sort-btn-group {
   border: 1px solid var(--blog-table-searchbox-border-color);
   background-color: var(--blog-table-searchbox-bg-color);
   border-radius: 4px;
-  padding: 2px 12px;
+  padding: 6px 12px;
 }
 .controls > div.sort-btn-group > :nth-child(1) {
   font-weight: bold;
@@ -799,7 +800,6 @@ div.tag-aquarium .tag span {
 
 .controls > div.searchbox {
   float: left;
-  margin-right: 50px;
 }
 .controls > div.searchbox > input {
   border-radius: 4px;
@@ -807,9 +807,37 @@ div.tag-aquarium .tag span {
   background-color: var(--blog-table-searchbox-bg-color);
   color: var(--text);
   width: 250px;
-  padding: 3px;
+  padding: 8px;
 }
 
+.controls .tag-aquarium {
+  position: relative;
+}
+.controls .tag-aquarium > .dropdown-btn-tag-categories {
+  border: 1px solid var(--blog-table-searchbox-border-color);
+  background-color: var(--blog-table-searchbox-bg-color);
+  width: 200px;
+  border-radius: 4px;
+  padding: 6px;
+  width: 100px;
+}
+.controls .tag-aquarium > .dropdown-btn-tag-categories:hover {
+  cursor: pointer;
+  background-color: var(--btn-hover-bg-color);
+}
+.controls .tag-aquarium > .dropdown-btn-tag-categories svg {
+  display: inline;
+  margin-left: 10px;
+  opacity: 0.5;
+}
+.controls .tag-aquarium .dropdown-container-tag-categories {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: none;
+}
+
+/*
 .controls .tag-aquarium {
   width: 240px;
   height: 240px;
@@ -820,7 +848,7 @@ div.tag-aquarium .tag span {
   background-color: var(--blog-table-searchbox-bg-color);
   border: 1px solid var(--blog-table-searchbox-border-color);
 }
-
+*/
 
 /*
 .controls
@@ -904,9 +932,7 @@ div.tag-aquarium .tag span {
 /* ------------------------------------------<6: BLOG POST PAGE>------------------------------------------ */
 .blog-post {
   padding: 15rem 15rem;
-  /*
-  max-width: 80vw;
-  */
+  /* max-width: 80vw; */
   margin-right: auto;
   margin-left: auto;
   min-height: 100vh;
@@ -922,16 +948,43 @@ div.tag-aquarium .tag span {
   padding-bottom: 50px;
 }
 
-.blog-post-title {
-  color: var(--blog-post-title-text);
-  font-size: 4.4rem;
-  font-weight: 900;
+.back-to-previous-page {
+  display: inline-block;
+  color: inherit;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  margin-top: 20px;
+  position: absolute;
+}
+.back-to-previous-page svg.invertable-icon {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 100px;
+  opacity: 0.5;
+  transition: all 100ms ease-in;
+}
+.back-to-previous-page svg.invertable-icon:hover {
+  opacity: 1.0;
+  background-color: rgb(245, 245, 245);
+}
+.back-to-previous-page svg.invertable-icon:active {
+  background-color: rgb(223, 223, 223);
 }
 
+.blog-post-title {
+  color: var(--blog-post-title-text);
+  font-size: 4.1rem;
+  font-weight: 900;
+  display: inline-block;
+}
 .blog-post-date {
   font-size: 0.9rem;
   padding-bottom: 40px;
   color: var(--blog-post-date-text);
+}
+.blog-post-title, .blog-post-date {
+  margin-left: 75px;
 }
 
 .blog-post-content p,
@@ -972,38 +1025,9 @@ div.tag-aquarium .tag span {
   line-height: 1.7em;
 }
 
-.back-to-previous-page {
-  color: inherit;
-  padding: 5px;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  margin-left: -30px;
-  margin-left: -45px;
-}
-.back-to-previous-page span.svg-beside-text {
-  font-size: 0.9rem;
-  padding-bottom: 40px;
-  color: var(--blog-post-back-to-table-text);
-}
-.back-to-previous-page svg.invertable-icon {
-  margin-bottom: -8px;
-  width: 32px;
-  height: 32px;
-  padding: 7px;
-  border-radius: 6px;
-  border: 2px solid transparent;
-  opacity: 0.5;
-}
 
 svg.invertable-icon {
   filter: invert(var(--svg-icon-invert-percentage));
-}
-
-.blog-post delete-button {
-  padding: 10px;
-  border-radius: 4px;
-  background-color: var(--nav-item-bg-active);
-  color: var(--nav-item-text);
 }
 
 

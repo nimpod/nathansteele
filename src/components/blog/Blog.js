@@ -85,7 +85,12 @@ class Blog extends Component {
         } else if (e.target.localName === "svg" && e.target.parentElement.classList.contains('inline-svg')) {
             crossIcon = e.target.parentElement;
             plusIcon = e.target.parentElement.nextSibling;
+        } else {
+            crossIcon = document.getElementsByClassName('cross')[0];
+            plusIcon = document.getElementsByClassName('plus')[0];
         }
+
+        console.log(e.target);
 
         // clicked tag with intention of 'removing it'
         if (crossIcon.hidden === true) {
@@ -132,9 +137,13 @@ class Blog extends Component {
                     </div>
                     <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Type in the title of a blog post!" />
                     <div className="tag-aquarium">
-                        {
-                            this.state.tagCategories
-                        }
+                        <div className="dropdown-btn-tag-categories">
+                            <span>Filters</span>
+                            <ArrowDownIcon className="inline-svg invertable-icon" />
+                        </div>
+                        <div className="dropdown-container-tag-categories">
+                            { this.state.tagCategories }
+                        </div>
                     </div>
                     {/* 
                     <div className="control-container filtering">
