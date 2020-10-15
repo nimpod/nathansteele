@@ -51,17 +51,15 @@ class Blog extends Component {
         this.setState({tagCategories:
             arrayOfTags.map(tag => {
                 return (
-                    <span className="filter-tag-btn tag" onClick={this.toggleTag}>
+                    <span className="filter-tag-btn tag" onClick={this.handleTagFilter}>
                         <span className={tag}>
                             { tag }
-                            {/*
-                            <div className="inline-svg inline-svg-plus">
+                            <div className="inline-svg plus">
                                 <PlusIcon />
                             </div>
-                            <div className="inline-svg inline-svg-times" hidden="true">
+                            <div className="inline-svg cross" hidden="true">
                                 <CrossIcon />
                             </div>
-                            */}
                         </span>
                     </span>
                 );
@@ -77,19 +75,49 @@ class Blog extends Component {
     }
 
     handleTagFilter = (e) => {
-        this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.add(e.target.classList[0])});
+        let crossIcon = null;
+        let plusIcon = null;
+        let tagSelected = e.target.classList[0];
+
+        if (e.target.localName === "span" && e.target.childElementCount === 2) {
+            crossIcon = e.target.childNodes[1];
+            plusIcon = e.target.childNodes[2];
+        } else if (e.target.localName === "svg" && e.target.parentElement.classList.contains('inline-svg')) {
+            crossIcon = e.target.parentElement;
+            plusIcon = e.target.parentElement.nextSibling;
+        }
+
+        // clicked tag with intention of 'removing it'
+        if (crossIcon.hidden === true) {
+            console.log('HEEEEEEEEEEEEEEEEEEEEERE 1');
+            this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.delete(tagSelected)});
+            
+            crossIcon.removeAttribute('hidden');
+            plusIcon.setAttribute('hidden', true);
+        }
+        
+        // clicked tag with intention of 'adding it'
+        else {
+            console.log('HEEEEEEEEEEEEEEEEEEEEERE 2');
+
+            console.log(this.state.tagCategoriesSelected, tagSelected);
+            this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.add(tagSelected)});
+
+            crossIcon.setAttribute('hidden', true);
+            plusIcon.removeAttribute('hidden');
+        }
     }
-
+    
     render() {
-        // ||
-
         let filteredPosts = this.props.posts.filter((p) => {
             const arrayOfTags = Array.from(this.state.tagCategoriesSelected);
             console.log(arrayOfTags, p.tags, p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0);
-            // console.log(p.title, this.state.searchPost, p.title.toLowerCase().includes(this.state.searchPost.toLowerCase()));
+            let isTitleEqualToSearchbox = p.title.toLowerCase().includes(this.state.searchPost.toLowerCase());
+            let isSelectedTagMatching = p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0;
 
-            // return p.title.toLowerCase().includes(this.state.searchPost.toLowerCase()) || p.tags.filter(e => this.state.tagCategoriesSelected.indexOf(e) !== -1);
-            return p.title.toLowerCase().includes(this.state.searchPost.toLowerCase()) || p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0;
+            console.log(isTitleEqualToSearchbox, isSelectedTagMatching);
+
+            return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;
         });
 
         return(

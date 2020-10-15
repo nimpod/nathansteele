@@ -737,12 +737,20 @@ div.tag-aquarium .tag span {
 .tag .History { background-color:rgb(118, 104, 97); color: rgb(255, 255, 255); }
 .tag .Rocks-and-minerals { background-color:rgb(228, 124, 207); color: rgb(255, 255, 255); }
 
-
-
 .tag:hover {
   cursor: pointer;
-  opacity: 0.75;
-  transition: opacity 100ms ease-in;
+}
+.tag:hover span {
+  background-color: #ebebeb;
+  color: rgb(0, 0, 0);
+  transition: all 150ms ease-in;
+}
+
+.tag .inline-svg {
+  display: inline-block;
+}
+.tag .inline-svg svg {
+  margin-left: 4px;
 }
 
 /* blog controls */
