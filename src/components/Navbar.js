@@ -65,6 +65,11 @@ class Navbar extends Component {
         }
     }
 
+    /* allows user to open and close the mobile view of the navigation menu */
+    toggleMenu() {
+        document.documentElement.getElementsByClassName('my-navbar')[0].classList.toggle('active');
+    }
+
     /**
      * content rendered to page
      */
@@ -72,42 +77,43 @@ class Navbar extends Component {
         return (
             <div className="my-navbar">
                 <ul>
-                    <NavLink to="/" className="navlink">
+                    <NavLink to="/" className="navlink logo-container">
                         <Logo className="logo" />
                     </NavLink>
+                    <div className="left-nav">
+                        <Link to="about" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <li>About</li>
+                        </Link>
 
-                    <Link to="about" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                        <li>About</li>
-                    </Link>
+                        <span className="delimiter">/</span>
 
-                    <span className="delimiter">/</span>
+                        <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <li>Projects</li>
+                        </Link>
 
-                    <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                        <li>Projects</li>
-                    </Link>
+                        <span className="delimiter">/</span>
 
-                    <span className="delimiter">/</span>
+                        <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <li>Blog</li>
+                        </NavLink>
 
-                    <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                        <li>Blog</li>
-                    </NavLink>
+                        <span className="delimiter">/</span>
 
-                    <span className="delimiter">/</span>
+                        <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <li>University</li>
+                        </NavLink>
 
-                    <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                        <li>University</li>
-                    </NavLink>
+                        <span className="delimiter">/</span>
 
-                    <span className="delimiter">/</span>
+                        <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <li>Notes</li>
+                        </NavLink>
+                    </div>
 
-                    <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                        <li>Notes</li>
-                    </NavLink>
-
-                    <div className="hamburger-menu-icon">
-                        <span />
-                        <span />
-                        <span />
+                    <div id="menu-toggler" data-class="menu-active" class="hamburger-menu-icon" onClick={this.toggleMenu}>
+                        <span class="hamburger-line hamburger-line-top"></span>
+                        <span class="hamburger-line hamburger-line-middle"></span>
+                        <span class="hamburger-line hamburger-line-bottom"></span>
                     </div>
 
                     <div className="theme-toggle" onClick={this.switchTheme} aria-label="Click to enable dark mode" title="Click to enable dark mode7">

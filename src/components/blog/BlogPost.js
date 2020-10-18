@@ -17,6 +17,7 @@ class BlogPost extends Component {
 
     render() {
         console.log(this.props);
+        console.log(this.props.post.tags);
         
         return (
             <div className="page-wrapper blog-post">
@@ -26,6 +27,15 @@ class BlogPost extends Component {
                     </Link>
                     <h3 className="blog-post-title">{this.props.post.title}</h3>
                     <p className="blog-post-date">{this.props.post.date}</p>
+                    <div className="blog-post-tags">
+                        {
+                            this.props.post.tags.map((t => {
+                                return <div className="tag">
+                                    <span className={t}>{t}</span>
+                                </div>
+                            }))
+                        }
+                    </div>
                 </div>
                 <div className="blog-post-content" dangerouslySetInnerHTML={{__html: this.props.post.content}}></div>
                 {/*

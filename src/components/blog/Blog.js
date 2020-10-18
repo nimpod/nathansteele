@@ -135,7 +135,7 @@ class Blog extends Component {
                         <div className="sort-btn" sortby="tags"><span>Tags</span></div>
                         <div className="sort-btn" sortby="title"><span>Title</span></div>
                     </div>
-                    <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Type in the title of a blog post!" />
+                    <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="search for a blog post..." />
                     <div className="tag-aquarium">
                         <div className="dropdown-btn-tag-categories">
                             <span>Filters</span>

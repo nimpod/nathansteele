@@ -56,7 +56,7 @@
   --project-card-text-color: rgb(0, 0, 0);
 
   --page-wrapper-bg: rgb(251, 251, 251);
-  --page-text-color: rgba(0, 0, 0, 0.529);
+  --page-text-color: rgba(0, 0, 0, 0.755);
 
   --blog-table-bg: rgb(251, 251, 251);
   --blog-table-thead-bg: rgb(248, 248, 248);
@@ -74,7 +74,6 @@
   --blog-post-date-text: rgb(134, 134, 134);
   --blog-post-text: rgb(66, 66, 66);
   --blog-post-note-text: rgb(153, 153, 153);
-  --blog-post-hr: rgb(200, 200, 200);
   --svg-icon-invert-percentage: 0%;
 
   --university-controls-btn-bg: rgba(224, 222, 222, 0.609);
@@ -158,7 +157,6 @@
   --blog-post-date-text: rgb(143, 148, 155);
   --blog-post-text: rgb(185, 186, 189);
   --blog-post-note-text: rgb(153, 153, 153);
-  --blog-post-hr: rgb(200, 200, 200);
   --svg-icon-invert-percentage: 100%;
 
   --university-controls-btn-bg: rgba(82, 79, 79, 0.609);
@@ -248,11 +246,12 @@ body {
   top: 0;
   left: 0;
 }
-
 .my-navbar ul {
   margin: 0;
 }
-
+.my-navbar ul .left-nav {
+  display: inline;
+}
 .my-navbar ul a {
   list-style: none;
   text-decoration: none;
@@ -270,7 +269,6 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
 .my-navbar ul a li {
   text-transform: uppercase;
   padding: 0.3em;
@@ -280,7 +278,6 @@ body {
 .my-navbar ul a li:hover {
   background-color: var(--nav-item-bg-hover);
 }
-
 .my-navbar ul .delimiter {
   font-family: Arial,sans-serif;
   font-weight: normal;
@@ -294,6 +291,7 @@ body {
   padding-left: 0.1em;
   padding-right: 0em;
 }
+
 
 .theme-toggle {
   color: var(--nav-item-theme-toggle-color);
@@ -330,18 +328,33 @@ svg:not(:root) {
 
 /* ---------------< Logo >--------------- */
 /* add padding to the logo's link container */
-.my-navbar ul a:first-child {
+.my-navbar .logo-container {
   padding: 1.2em 1.7em;
 }
 
 svg.logo {
-  width: 65px;
-  height: 65px;
+  width: 75px;
+  height: 75px;
   stroke: rgb(26, 9, 39);
   stroke-width: 0.1px;
   stroke-opacity: 0.11;
   z-index: 10;
+  fill-opacity: 1;
 }
+svg.logo path:nth-of-type(3n+0) {  fill: rgb(21, 124, 47); }
+svg.logo path:nth-of-type(3n+1) {  fill: rgb(93, 218, 114); }
+svg.logo path:nth-of-type(3n+2) {  fill: rgba(7, 7, 7, 0); }
+
+svg.logo path:hover ~ * {
+  fill-opacity: 0.1;
+  fill: rgba(17, 14, 221, 0.234);
+  stroke-width: 5.1px;
+}
+svg.logo:active path {
+  fill: rgb(20, 35, 49);
+  transition: all 350ms ease;
+}
+
 
 svg.logo polygon:hover {
   cursor: pointer;
@@ -360,6 +373,22 @@ svg.logo polygon:hover {
   fill-opacity: 0.49;
   fill: rgb(67, 177, 175);
 }
+
+.logo-container span {
+	font-family: Varela Round,Helvetica,arial,sans-serif;
+	font-weight: normal;
+	text-transform: normal;
+	letter-spacing: 0px;
+	font-family: brandon-grotesque;
+	font-weight: 200;
+	font-style: normal;
+	line-height: 1.2em;
+	text-transform: none;
+	letter-spacing: .08em;
+  font-size: 26px;
+  color: var(--text) !important;
+}
+
 
 /*
 .hamburger-menu-icon {
@@ -387,16 +416,38 @@ svg.logo polygon:hover {
 }*/
 
 .hamburger-menu-icon {
-  display: none;
+  background: transparent;
+  border: none;
   cursor: pointer;
+  display: none;
+  outline: none;
+  height: 30px;
+  position: relative;
+  width: 30px;
+  z-index: 1000;
+  position: absolute;
+  top: 27px;
+  right: 100px;
 }
+.hamburger-menu-icon:active {
+  border: none;
+  outline: none;
+}
+.hamburger-menu-icon span.hamburger-line {
+  background: var(--blog-post-title-text);
+  height: 3px;
+  position: absolute;
+  left: 0;
+  transition: all .2s ease-out; 
+  width: 100%;
+}
+.hamburger-menu-icon:hover {
+  
+}
+span.hamburger-line-top { top: 3px; }
+span.hamburger-line-bottom { bottom: 3px; }
+span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 
-.hamburger-menu-icon span {
-  width: 35px;
-  height: 5px;
-  background-color: black;
-  margin: 6px 0;
-}
 
 
 /* ------------------------------------------<3: MAIN CONTAINER>------------------------------------------ */
@@ -718,13 +769,11 @@ table tbody tr:hover {
   background-color: var(--blog-table-row-bg-hover);
 }
 
-table .tag,
-div.tag-aquarium .tag {
+.tag {
   display: inline-block;
 }
 
-table .tag span,
-div.tag-aquarium .tag span {
+.tag span {
   margin-right: 4px;
   padding: 3px 5px;
   border-radius: 4px;
@@ -754,9 +803,12 @@ div.tag-aquarium .tag span {
   cursor: pointer;
 }
 .tag:hover span {
+  /*
   background-color: #ebebeb;
   color: rgb(0, 0, 0);
-  transition: all 150ms ease-in;
+  */
+  opacity: 0.75;
+  transition: all 100ms ease-in;
 }
 
 .tag .inline-svg {
@@ -931,7 +983,7 @@ div.tag-aquarium .tag span {
 
 /* ------------------------------------------<6: BLOG POST PAGE>------------------------------------------ */
 .blog-post {
-  padding: 15rem 15rem;
+  padding: 15rem 25rem;
   /* max-width: 80vw; */
   margin-right: auto;
   margin-left: auto;
@@ -948,7 +1000,42 @@ div.tag-aquarium .tag span {
   padding-bottom: 50px;
 }
 
-.back-to-previous-page {
+/*
+.blog-post-info
+  a.back-to-previous-page
+  h3.blog-post-title
+  p.blog-post-date
+  div.blog-post-tags
+*/
+.blog-post-info {
+  padding-bottom: 1em;
+}
+
+/* title of blog post */
+.blog-post-title {
+  color: var(--blog-post-title-text);
+  font-size: 3.5rem;
+  font-weight: 900;
+  display: inline-block;
+}
+
+/* date of blog post */
+.blog-post-date {
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+  color: var(--blog-post-date-text);
+}
+
+/* shift the some of the stuff in the blog-post-info container left a bit */
+.blog-post-title, .blog-post-date, .blog-post-tags {
+  margin-left: 75px;
+}
+
+.blog-post-tags > * {
+  margin-left: 10px;
+}
+
+.blog-post-info .back-to-previous-page {
   display: inline-block;
   color: inherit;
   border: 2px solid transparent;
@@ -972,19 +1059,10 @@ div.tag-aquarium .tag span {
   background-color: rgb(223, 223, 223);
 }
 
-.blog-post-title {
-  color: var(--blog-post-title-text);
-  font-size: 4.1rem;
-  font-weight: 900;
-  display: inline-block;
-}
-.blog-post-date {
-  font-size: 0.9rem;
-  padding-bottom: 40px;
-  color: var(--blog-post-date-text);
-}
-.blog-post-title, .blog-post-date {
-  margin-left: 75px;
+
+.blog-post-content {
+  padding-top: 1em;
+	border-top: 2px solid rgb(243, 243, 243);
 }
 
 .blog-post-content p,
@@ -1188,7 +1266,7 @@ div.card-percent:hover::after {
 
 /* ------------------------------------------<8: UNIVERSITY ASSIGNMENT PAGE>------------------------------------------ */
 .page-wrapper.universityAssignment {
-  padding: 6rem 0rem;
+  padding: 14rem 2rem;
 }
 
 .page-wrapper.universityAssignment .wrapper {
@@ -1199,7 +1277,7 @@ div.card-percent:hover::after {
   .page-wrapper.universityAssignment .wrapper {
     max-width: 1480px;
     margin: 0 auto;
-    padding: 150px 0px;
+    padding: 10px 0px;
   }
 }
 /* .page-info container */
@@ -1238,6 +1316,10 @@ div.card-percent:hover::after {
   .row > .col-lg-6-12 {
     width: 50%;
   }
+}
+
+.page-info .back-to-previous-page {
+  
 }
 
 .page-info h2, .page-info h1, .page-info h3, .page-info p.intro {
@@ -1324,11 +1406,38 @@ div.card-percent:hover::after {
 @media screen and (max-width: 900px) { .portfolio h1 { font-size: 50px; } .portfolio h2 { font-size: 40px; } }
 @media screen and (max-width: 900px) { #about, .projects-header { padding: 170px 25px 0px 25px !important;  } }
 @media screen and (max-width: 650px) { .smooth-scroll-btn { text-align: center; } }
-@media screen and (max-width: 600px) { #about, .projects-header { padding: 170px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
+@media screen and (max-width: 600px) { #about, .projects-header { padding: 250px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
 
 /* hide nav items when screen is too small */
-@media screen and (max-width: 700px) { .my-navbar ul { padding: 0; } }
-@media screen and (max-width: 600px) { .my-navbar ul a li, .delimiter { display: none; }  .hamburger-menu-icon { display: inline-block; } }
+@media screen and (max-width: 800px) { .my-navbar ul { padding: 0; } }
+@media screen and (max-width: 800px) {
+  .portfolio #about {
+    padding-bottom: 200px;
+  }
+  .my-navbar ul .left-nav {
+    display: none;
+  }
+  .my-navbar.active ul .left-nav {
+    position: absolute;
+    display: block;
+    right: 30px;
+    top: 70px;
+    border: 1px solid var(--nav-item-theme-toggle-border-color-active);
+  }
+  .my-navbar.active ul a {
+    display: block;
+  }
+  .my-navbar.active ul a li {
+    border-radius: 0px;
+    margin: 0;
+  }
+  .delimiter { 
+    display: none;  
+  } 
+  .hamburger-menu-icon { 
+    display: inline-block; 
+  }
+}
 
 /* make font size get smaller on blog table */
 @media only screen and (max-width: 1300px) { table { font-size: 0.9rem; transition: 0.3s all; } }
