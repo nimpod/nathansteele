@@ -307,7 +307,7 @@ const initState = {
             content: "blah",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "this is the blurb",
-            tags: ["Geography", "Oceanography"]
+            tags: ["Geography", "Oceanography", "Something"]
         },
         {
             id: "18",

@@ -129,13 +129,6 @@ class Blog extends Component {
             <div className="page-wrapper blog">
                 <h2 className="page-title center-me">Blog Archive</h2>
                 <div className="controls">
-                    <div className="sort-btn-group">
-                        <span>Sort by: </span>
-                        <div className="sort-btn active" sortby="date"><span>Date</span></div>
-                        <div className="sort-btn" sortby="tags"><span>Tags</span></div>
-                        <div className="sort-btn" sortby="title"><span>Title</span></div>
-                    </div>
-                    <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="search for a blog post..." />
                     <div className="tag-aquarium">
                         <div className="dropdown-btn-tag-categories">
                             <span>Filters</span>
@@ -145,6 +138,7 @@ class Blog extends Component {
                             { this.state.tagCategories }
                         </div>
                     </div>
+                    <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Search..." />
                     {/* 
                     <div className="control-container filtering">
                         <p><strong>Filter by: </strong></p>
@@ -156,6 +150,11 @@ class Blog extends Component {
                 </div>
                 <div className="posts-container">
                     <table>
+                        <thead>
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Tags</th>
+                        </thead>
                         <tbody>
                             <BlogPostList filteredPosts={filteredPosts} handleTagFilter={this.handleTagFilter} />
                         </tbody>
