@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f7a6cfc8de8d0ecc1a26d96aae7b172c",
+    "revision": "d2b06cbe533d094be4684b31744e3e3b",
     "url": "/nathansteele/index.html"
   },
   {
-    "revision": "e7b6e19d041dda58816c",
+    "revision": "746cb2757177e92a8a17",
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "8f88a7bce7e73cf4a570",
+    "revision": "9c0c3f68378fba96ad04",
     "url": "/nathansteele/static/css/main.8cbc9c85.chunk.css"
   },
   {
-    "revision": "e7b6e19d041dda58816c",
-    "url": "/nathansteele/static/js/2.34af1a6a.chunk.js"
+    "revision": "746cb2757177e92a8a17",
+    "url": "/nathansteele/static/js/2.187455d9.chunk.js"
   },
   {
     "revision": "c87550333da8df8ab4c80bd1d6e9defb",
-    "url": "/nathansteele/static/js/2.34af1a6a.chunk.js.LICENSE.txt"
+    "url": "/nathansteele/static/js/2.187455d9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8f88a7bce7e73cf4a570",
-    "url": "/nathansteele/static/js/main.d0e4edfb.chunk.js"
+    "revision": "9c0c3f68378fba96ad04",
+    "url": "/nathansteele/static/js/main.a8540574.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -44,16 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/bobomb.9a12ebd2.jpg"
   },
   {
-    "revision": "cd18b83b6a119a8277e04a4b10c6ff1b",
-    "url": "/nathansteele/static/media/calendar.cd18b83b.svg"
-  },
-  {
     "revision": "edf2351a614c072644366e790e474367",
     "url": "/nathansteele/static/media/cross.edf2351a.svg"
-  },
-  {
-    "revision": "a5ebf0d3b9c38de6c9d12ba82f874218",
-    "url": "/nathansteele/static/media/cv.a5ebf0d3.pdf"
   },
   {
     "revision": "6f9afe9dcfb0584e595a0b4b062c4c6d",
@@ -80,10 +72,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/logo.13387b86.svg"
   },
   {
-    "revision": "accdb9090b5b7186606e7f558dd5bbb8",
-    "url": "/nathansteele/static/media/me.accdb909.jpg"
-  },
-  {
     "revision": "47f6d10fb8bccd3b8ed0528115cd08dd",
     "url": "/nathansteele/static/media/moon.47f6d10f.svg"
   },
@@ -106,10 +94,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a245512d7e2e3c08c84d331f1ba80df8",
     "url": "/nathansteele/static/media/threeDots.a245512d.svg"
-  },
-  {
-    "revision": "4becf871287358fd3f65e36a754149df",
-    "url": "/nathansteele/static/media/user.4becf871.svg"
   },
   {
     "revision": "7c75513d150f618bffc123d53afb7960",
