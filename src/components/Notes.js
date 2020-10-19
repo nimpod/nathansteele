@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import { Link, NavLink, withRouter } from 'react-router-dom'
-import { connect }  from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 class Notes extends Component {
 

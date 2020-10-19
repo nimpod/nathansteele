@@ -1,11 +1,9 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import { Link, NavLink, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { ReactComponent as ArrowLeft } from "../../icons/arrowLeft.svg";
-import { ReactComponent as User } from "../../icons/user.svg";
-import { ReactComponent as Calendar } from "../../icons/calendar.svg";
 
 
 class UniversityAssignment extends Component {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom';
-import Particles from 'react-particles-js';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 // importing components for site
 import ScrollToTop from './js/ScrollToTop';
@@ -14,7 +13,6 @@ import BlogPost from './components/blog/BlogPost';
 
 import University from './components/university/University';
 import UniversityAssignment from './components/university/UniversityAssignment';
-import UniversityAssignmentCard from './components/university/UniversityAssignmentCard';
 
 // import ParticlesMin from './js/particles.min.js'
 // <script src="js/particles.min.js"></script>

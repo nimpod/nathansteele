@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-scroll';
 import '../index.css';
 
-import PhotoOfMe from '../img/me.jpg'
 import ProjectImageAssembly from '../img/assembly.png'
 import ProjectImageMosaicsOfVideos from '../img/mosaics-of-videos.png'
 import ProjectImageD3 from '../img/d3.PNG'
@@ -12,10 +11,9 @@ import ProjectImageFitbitDataAnalysis from '../img/fitbit-data-analysis.PNG'
 import ProjectImageSpaceInvaders from '../img/spaceinvaders.png'
 import ProjectImageWebDevUniProject from '../img/web-dev-thumbnail.PNG'
 import ProjectImagePong from '../img/pc.jpg'
-import CV from '../img/cv.pdf'
 import Particles from 'react-particles-js';
 
-{/*
+/*
     What do the custom attributes on Link mean? Those enable react-scroll animations. Do not fear future traveller, I am here to help you:
         onClick:        i am disappointed if you don't know this
         to:             the area to scroll to
@@ -25,7 +23,7 @@ import Particles from 'react-particles-js';
         offset:         scroll additional px
         duration:       time of the scroll animation
     https://www.npmjs.com/package/react-scroll
-*/}
+*/
 
 const pc1 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-1'));
 const pc2 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-2'));
@@ -172,7 +170,7 @@ const Portfolio = (props) => {
                     I write <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>code</Link>. 
                     I have a <a href="https://nimpod.github.io/nathansteele/#/blog">blog</a>. 
                     Sometimes I'm exploring the outside world on <a href='https://www.strava.com/athletes/45999759'>Strava</a>.
-                    Other times I'm <a href='#'>drawing</a>.
+                    Other times I'm <a href='/'>drawing</a>.
                     I also review films on <a href='https://www.imdb.com/user/ur54195044/?ref_=nv_usr_prof_2'>IMDb</a>.
                 </p>
                 <div className="smooth-scroll-btn">
@@ -196,7 +194,7 @@ const Portfolio = (props) => {
                     <div className="project mosaics-of-videos">
                         <div className="image">
                             <a href="https://github.com/nimpod/mosaics-of-videos">
-                                <img className="cropped" src={ProjectImageMosaicsOfVideos} />
+                                <img className="cropped" src={ProjectImageMosaicsOfVideos} alt="project thumbnail" />
                             </a>
                         </div>
                         <div className="proj-details">
@@ -211,7 +209,7 @@ const Portfolio = (props) => {
                     <div className="project D3js">
                         <div className="image">
                             <a href="https://codepen.io/cozminski_katax/pen/ROGKQd">
-                                <img className="cropped" src={ProjectImageD3} />
+                                <img className="cropped" src={ProjectImageD3}  alt="project thumbnail" />
                             </a>
                         </div>
                         <div className="proj-details">
@@ -226,7 +224,7 @@ const Portfolio = (props) => {
                     <div className="project fire-escape">
                         <div className="image">
                             <a href="https://github.com/nimpod/super-mario-bros-minigame">
-                                <img className="cropped" src={ProjectImageBobomb} />
+                                <img className="cropped" src={ProjectImageBobomb} alt="project thumbnail"  />
                             </a>
                         </div>
                         <div className="proj-details">
@@ -241,7 +239,7 @@ const Portfolio = (props) => {
                     <div className="project flappy-bird-app">
                         <div className="image">
                             <a href="https://github.com/nimpod">
-                                <img className="cropped" src={ProjectImageFlappyBird} />
+                                <img className="cropped" src={ProjectImageFlappyBird} alt="project thumbnail"  />
                             </a>
                         </div>
                         <div className="proj-details">
@@ -256,7 +254,7 @@ const Portfolio = (props) => {
                     <div className="project fitbit-data-analysis">
                         <div className="image">
                             <a href="https://github.com/nimpod/fitbit-data-analysis" target="_blank">
-                                <img className="cropped" src={ProjectImageFitbitDataAnalysis} />
+                                <img className="cropped" src={ProjectImageFitbitDataAnalysis} alt="project thumbnail"  />
                             </a>
                         </div>
                         <div className="proj-details">
@@ -271,7 +269,7 @@ const Portfolio = (props) => {
                     <div className="project space-invaders">
                         <div className="image">
                             <a href="https://github.com/nimpod/space-invaders">
-                                <img className="cropped" src={ProjectImageSpaceInvaders} />
+                                <img className="cropped" src={ProjectImageSpaceInvaders} alt="project thumbnail"  />
                             </a>
                         </div>
                         <div className="proj-details">
@@ -286,7 +284,7 @@ const Portfolio = (props) => {
                     <div className="project error-corrector">
                         <div className="image">
                             <a href="https://github.com/nimpod/decorruptor" target="_blank">
-                                <img className="cropped" src={ProjectImageAssembly}/>
+                                <img className="cropped" src={ProjectImageAssembly} alt="project thumbnail" />
                             </a>
                         </div>
                         <div className="proj-details">
@@ -300,7 +298,7 @@ const Portfolio = (props) => {
 
                     <div className="project html-css-tutorial-site">
                         <div className="image">
-                            <img className="cropped" src={ProjectImageWebDevUniProject} />
+                            <img className="cropped" src={ProjectImageWebDevUniProject} alt="project thumbnail"  />
                         </div>
                         <div className="proj-details">
                             <span className="proj-title">
@@ -314,7 +312,7 @@ const Portfolio = (props) => {
                     <div className="project pong">
                         <div className="image">
                             <a href="https://github.com/nimpod/pong" target="_blank">
-                                <img className="cropped" src={ProjectImagePong} />
+                                <img className="cropped" src={ProjectImagePong}  alt="project thumbnail" />
                             </a>
                         </div>
                         <div className="proj-details">

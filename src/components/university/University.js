@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { Link, NavLink, withRouter } from 'react-router-dom'
 import { connect }  from 'react-redux'
 import { ReactComponent as GridIcon } from "../../icons/grid.svg";
 import { ReactComponent as ListIcon } from "../../icons/list.svg";

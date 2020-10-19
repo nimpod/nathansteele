@@ -111,17 +111,17 @@ class Navbar extends Component {
                         </NavLink>
                     </div>
 
-                    <div id="menu-toggler" data-class="menu-active" class="hamburger-menu-icon" onClick={this.toggleMenu}>
-                        <span class="hamburger-line hamburger-line-top"></span>
-                        <span class="hamburger-line hamburger-line-middle"></span>
-                        <span class="hamburger-line hamburger-line-bottom"></span>
+                    <div id="menu-toggler" data-class="menu-active" className="hamburger-menu-icon" onClick={this.toggleMenu}>
+                        <span className="hamburger-line hamburger-line-top"></span>
+                        <span className="hamburger-line hamburger-line-middle"></span>
+                        <span className="hamburger-line hamburger-line-bottom"></span>
                     </div>
 
                     <div className="theme-toggle" onClick={this.switchTheme} aria-label="Click to enable dark mode" title="Click to enable dark mode7">
                         <span className="inline-svg dark">
                             <DarkThemeIcon />
                         </span>
-                        <span className="inline-svg light" hidden="true">
+                        <span className="inline-svg light" hidden={true}>
                             <LightThemeIcon />
                         </span>
                     </div>

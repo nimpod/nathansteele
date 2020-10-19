@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { Link } from 'react-router-dom'
 import { connect}  from 'react-redux'
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
@@ -28,7 +27,7 @@ class Blog extends Component {
             let tags = el.tags;
             
             for (let i = 0; i < tags.length; i++)
-                return tags[i] == tagSeleceted;
+                return tags[i] === tagSeleceted;
         });
 
         console.log(newArray);
@@ -51,13 +50,13 @@ class Blog extends Component {
         this.setState({tagCategories:
             arrayOfTags.map(tag => {
                 return (
-                    <span className="filter-tag-btn tag" onClick={this.handleTagFilter}>
+                    <span className="filter-tag-btn tag" key={tag} onClick={this.handleTagFilter}>
                         <span className={tag}>
                             { tag }
                             <div className="inline-svg plus">
                                 <PlusIcon />
                             </div>
-                            <div className="inline-svg cross" hidden="true">
+                            <div className="inline-svg cross" hidden={true}>
                                 <CrossIcon />
                             </div>
                         </span>
@@ -151,9 +150,11 @@ class Blog extends Component {
                 <div className="posts-container">
                     <table>
                         <thead>
-                            <th>Date</th>
-                            <th>Title</th>
-                            <th>Tags</th>
+                            <tr>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Tags</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <BlogPostList filteredPosts={filteredPosts} handleTagFilter={this.handleTagFilter} />

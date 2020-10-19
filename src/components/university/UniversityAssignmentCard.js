@@ -1,6 +1,5 @@
-import React, {Component} from 'react'
-import { Link, NavLink, withRouter} from 'react-router-dom'
-import { connect }  from 'react-redux'
+import React, {Component} from 'react';
+import { Link, withRouter} from 'react-router-dom';
 
 class UniversityAssignmentCard extends Component {
 
@@ -10,7 +9,7 @@ class UniversityAssignmentCard extends Component {
                 <Link to={'/university/' + this.props.id} className="card-link">
                     <div className="card-img-wrapper">
                         <picture className="card-image img">
-                            <img src={this.props.thumbnail} />
+                            <img src={this.props.thumbnail} alt="thumbnail" />
                         </picture>
                     </div>
                     <div className="card-meta">
