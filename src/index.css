@@ -113,6 +113,9 @@
   --btn-hover-bg-color: rgb(238, 238, 238);
   --btn-circular-hover-bg-color: rgb(245, 245, 245);
   --btn-circular-active-bg-color: rgb(223, 223, 223);
+
+  --scrollbar-thumb-bg-color-tags: rgb(179, 179, 179);
+  --scrollbar-track-bg-color-tags: rgb(218, 217, 217);
 }
 
 /** DARK MODE  **/
@@ -200,6 +203,9 @@
   --btn-hover-bg-color: rgb(51, 51, 51);
   --btn-circular-hover-bg-color: rgb(175, 175, 175);
   --btn-circular-active-bg-color: rgb(153, 153, 153);
+
+  --scrollbar-thumb-bg-color-tags: rgb(80, 80, 80);
+  --scrollbar-track-bg-color-tags: rgb(29, 29, 29);
 }
 
 
@@ -526,6 +532,14 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 .page-wrapper.blog,
 .page-wrapper.notes {
   height: 111vh;
+}
+
+.page-wrapper.blog,
+.page-wrapper.notes {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.page-wrapper.university {
   padding-left: 6rem;
   padding-right: 6rem;
 }
@@ -839,6 +853,7 @@ table tbody tr:hover {
 .tags {
   overflow-y: hidden;
   overflow-x: auto;
+  max-width: 120px;
 }
 
 .tag {
@@ -1566,16 +1581,28 @@ body::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: #F5F5F5;
 }
-
 body::-webkit-scrollbar {
   width: 12px;
   background-color: rgba(27, 28, 29, 0.87);
 }
-
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #555;
 }
+
+.tags::-webkit-scrollbar-track {
+  border-radius: 150px;
+  background-color: var(--scrollbar-track-bg-color-tags);
+}
+.tags::-webkit-scrollbar {
+  height: 7px;
+  border-radius: 150px;
+}
+.tags::-webkit-scrollbar-thumb {
+  border-radius: 150px;
+  background-color: var(--scrollbar-thumb-bg-color-tags);
+}
+
 
 ::selection {
   background: var(--text-highlight-color); /* WebKit/Blink Browsers */
