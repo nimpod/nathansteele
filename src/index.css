@@ -267,6 +267,7 @@ a:not([href]):not([class]):hover {
 }
 .my-navbar ul .left-nav {
   display: inline;
+  z-index: 11111;
 }
 .my-navbar ul a {
   list-style: none;
@@ -386,8 +387,8 @@ svg:not(:root) {
 }
 
 svg.logo {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   stroke: rgb(26, 9, 39);
   stroke-width: 0.1px;
   stroke-opacity: 0.11;
@@ -508,12 +509,8 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
   width: 100vw;
   top: 0;
   margin-top: -210px;
-}
-
-.page-wrapper.university,
-.page-wrapper.blog,
-.page-wrapper.notes {
-  height: 111vh;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .page-wrapper.university,
@@ -522,6 +519,15 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 .page-wrapper.blog-post,
 .page-wrapper.notes {
   background-color: var(--page-wrapper-bg) !important;
+  padding-top: 14rem;
+}
+
+.page-wrapper.university,
+.page-wrapper.blog,
+.page-wrapper.notes {
+  height: 111vh;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .page-title {
@@ -752,7 +758,7 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 
 /* ------------------------------------------<5: BLOG PAGE>------------------------------------------ */
 .page-wrapper.blog {
-  padding: 11rem 0rem;
+
 }
 
 .blog h2 {
@@ -1050,7 +1056,7 @@ table tbody tr:hover {
   div.blog-post-tags
 */
 .blog-post-info {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;  
 }
 
 /* title of blog post */
@@ -1058,14 +1064,22 @@ table tbody tr:hover {
   color: var(--blog-post-title-text);
   font-size: 3.5rem;
   font-weight: 900;
-  display: inline-block;
+  display: block;
 }
 
 /* date of blog post */
 .blog-post-date {
   font-size: 0.9rem;
-  padding-bottom: 20px;
   color: var(--blog-post-date-text);
+  display: inline-block;
+}
+
+/* the tags for this blog post */
+.blog-post-tags {
+  display: inline-block;
+}
+.blog-post-tags > * {
+  margin-left: 10px;
 }
 
 /* shift the some of the stuff in the blog-post-info container left a bit */
@@ -1073,16 +1087,12 @@ table tbody tr:hover {
   margin-left: 75px;
 }
 
-.blog-post-tags > * {
-  margin-left: 10px;
-}
-
 .blog-post-info .back-to-previous-page {
   display: inline-block;
   color: inherit;
   border: 2px solid transparent;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 15px;
   position: absolute;
 }
 .back-to-previous-page svg.invertable-icon {
@@ -1100,7 +1110,6 @@ table tbody tr:hover {
 .back-to-previous-page svg.invertable-icon:active {
   background-color: var(--btn-circular-active-bg-color);
 }
-
 
 .blog-post-content {
   padding-top: 1em;
@@ -1141,6 +1150,12 @@ table tbody tr:hover {
   font-weight: 400;
   color: var(--blog-post-subTitle-text-color);
 }
+
+/* remove any margin from the first element in a blog post */
+.blog-post-content div.intro > :nth-child(1) {
+  margin-top: 0px !important;
+}
+
 .blog-post-content p, .blog-post-content ol, .blog-post-content ul { 
   line-height: 1.7em;
 }
@@ -1153,8 +1168,7 @@ svg.invertable-icon {
 
 /* ------------------------------------------<7: University>------------------------------------------ */
 .page-wrapper.university {
-  /* padding: 100px 125px 100px 50px; */
-  padding: 11rem 6rem;
+
 }
 
 .university h2 {
@@ -1438,7 +1452,6 @@ div.card-percent:hover::after {
 /* ------------------------------------------<9: NOTES>------------------------------------------ */
 .page-wrapper.notes {
   /* padding: 100px 125px 100px 50px; */
-  padding: 13rem 1rem;
 }
 
 
@@ -1448,7 +1461,7 @@ div.card-percent:hover::after {
 @media screen and (max-width: 900px) { .portfolio h1 { font-size: 50px; } .portfolio h2 { font-size: 40px; } }
 @media screen and (max-width: 900px) { #about, .projects-header { padding: 170px 25px 0px 25px !important;  } }
 @media screen and (max-width: 650px) { .smooth-scroll-btn { text-align: center; } }
-@media screen and (max-width: 600px) { #about, .projects-header { padding: 250px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
+@media screen and (max-width: 600px) { #about, .projects-header { padding: 170px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
 
 /* hide nav items when screen is too small */
 @media screen and (max-width: 800px) { .my-navbar ul { padding: 0; } }
@@ -1461,6 +1474,7 @@ div.card-percent:hover::after {
   }
   .my-navbar.active ul .left-nav {
     position: absolute;
+    background-color: var(--bg1);
     display: block;
     right: 30px;
     top: 70px;
@@ -1487,7 +1501,7 @@ div.card-percent:hover::after {
 @media only screen and (max-width: 1200px)  { table { font-size: 0.85rem; width: 75%; } }
 @media only screen and (max-width: 1100px)  { table { font-size: 0.85rem; width: 85%; } }
 @media only screen and (max-width: 1000px)  { table { font-size: 0.8rem; width: 90%; } }
-@media only screen and (max-width: 700px)  { table, .tag span { font-size: 0.6rem; } }
+@media only screen and (max-width: 700px)  { table, .tag span { font-size: 0.55rem; } }
 
 /* remove padding from the #about section as screen gets smaller */
 @media screen and (max-width: 1125px) { #about{ padding: 50px 170px 0px 170px; } }
@@ -1498,13 +1512,17 @@ div.card-percent:hover::after {
 
 @media screen and (max-width: 900px) { .projects-container { padding: 0px 5px; } }
 
+@media screen and (max-width: 700px) { .page-title{ font-size: 2.4rem !important; } }
+
+@media screen and (max-width: 700px) { .blog-post-title, .blog-post-date, .blog-post-tags { margin-left: 50px; } }
+
 /* remove padding from a blog post as screen gets smaller */
 @media only screen and (max-width: 1500px) { .blog-post { padding-left: 300px; padding-right: 300px; } .blog-post-title { font-size: 3.2rem; } }
 @media only screen and (max-width: 1200px) { .blog-post { padding-left: 200px; padding-right: 200px; } .blog-post-title { font-size: 2.9rem; } }
 @media only screen and (max-width: 1100px) { .blog-post { padding-left: 100px; padding-right: 100px; } .blog-post-title { font-size: 2.6rem; } }
-@media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } .blog-post-title { font-size: 2.3rem; } }
-@media only screen and (max-width: 900px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.0rem; } }
-@media only screen and (max-width: 800px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 1.6rem; } .blog-post-content p { font-size: 0.9rem; } }
+@media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } .blog-post-title { font-size: 2.5rem; } }
+@media only screen and (max-width: 900px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.4rem; } }
+@media only screen and (max-width: 800px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.3rem; } .blog-post-content p { font-size: 0.9rem; } }
 
 /* change size of contact buttons as page is resized */
 @media only screen and (max-width: 900px) { .contact i {  font-size: 45px; transition: 0.3s; } }
