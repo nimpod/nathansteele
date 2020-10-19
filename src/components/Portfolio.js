@@ -44,10 +44,10 @@ const PARTICLE_COLOUR_1 = "rgb(51, 177, 248)";
 const PARTICLE_COLOUR_2 = "rgb(131, 210, 56)";
 const PARTICLE_COLOUR_3 = "rgb(248, 194, 16)";
 const PARTICLE_COLOUR_4 = "rgb(170, 115, 255)";
-const AMOUNT_OF_LINES = 110;
+const AMOUNT_OF_LINES = 150;
 const LINE_COLOUR = "rgb(153, 153, 153)";
-const LINE_OPACITY = 0.25;
-const LINE_WIDTH = 0.25;
+const LINE_OPACITY = 0.45;
+const LINE_WIDTH = 0.50;
 
 const particlesConig =
 {
@@ -166,7 +166,15 @@ const Portfolio = (props) => {
             <section id="about">
                 <p>Hi, I'm</p>
                 <h1>Nathan Steele</h1>
-                <p>I enjoy coding, trying to fix things and learning about the origins of life.<br />Currently studying a BSc in Computer Science at Newcastle University.</p>
+                <p>I enjoy coding, creating digital experiences and learning about the origins of life.</p>
+                <p>Currently studying a BSc in Computer Science at Newcastle University.</p>
+                <p>
+                    I write <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>code</Link>. 
+                    I have a <a href="https://nimpod.github.io/nathansteele/#/blog">blog</a>. 
+                    Sometimes I'm exploring the outside world on <a href='https://www.strava.com/athletes/45999759'>Strava</a>.
+                    Other times I'm <a href='#'>drawing</a>.
+                    I also review films on <a href='https://www.imdb.com/user/ur54195044/?ref_=nv_usr_prof_2'>IMDb</a>.
+                </p>
                 <div className="smooth-scroll-btn">
                     <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>
                         <i className="fa fa-angle-down"></i>

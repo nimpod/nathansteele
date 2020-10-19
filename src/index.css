@@ -244,6 +244,16 @@ body {
   text-align: center;
 }
 
+a:not([href]):not([class]) {
+  color: rgb(0, 123, 255) !important;
+  background-color: transparent !important;
+}
+a:not([href]):not([class]):hover {
+  text-decoration: underline !important;
+  color: rgb(2, 88, 181) !important;
+  cursor: pointer;
+}
+
 /* ------------------------------------------<2: NAVBAR (includes top and side navigation)>------------------------------------------ */
 .my-navbar {
   display: inline-block;
@@ -538,7 +548,7 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 
 .portfolio p {
   font-size: 1.2em;
-	line-height: 1.8em;
+	line-height: 1.4em;
 	letter-spacing: -0.014em;
 	font-feature-settings: "ss03","zero","cv08","cv11" 1;
   text-transform: none;
@@ -792,9 +802,9 @@ table thead th:hover {
   cursor: pointer;
 }
 
-table td:nth-child(1) { width: 15%; min-width: 80px; }   /* 1st column */
-table td:nth-child(2) { width: 70%;  }   /* 2nd column */
-table td:nth-child(3) { width: 25%; min-width: 160px; }  /* 3rd column */
+table td:nth-child(1) { width: 15%; min-width: 70px; }   /* 1st column */
+table td:nth-child(2) { width: 70%; min-width: 250px; }   /* 2nd column */
+table td:nth-child(3) { width: 25%; min-width: 100px; }  /* 3rd column */
 table td:nth-child(4) { width: 0%; }  /* 4th column */
 
 table tr {
