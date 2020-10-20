@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
+import { ReactComponent as ArrowIcon } from "../../icons/arrowRightTriangle.svg";
 
 class BlogPostList extends Component {
 
@@ -9,9 +10,12 @@ class BlogPostList extends Component {
             this.props.filteredPosts.map((p => {
                 return (
                     <tr key={p.id}>
-                        <td> {p.date} </td>
-                        <td> <Link to={'/blog/' + p.id}>{p.title}</Link> </td>
+                        <td>
+                            <ArrowIcon className="invertable-icon" style={{width: "0.6em", marginRight: "8px", marginBottom: "3px"}} />
+                            {p.date}
+                        </td>
                         <td> 
+                            <Link to={'/blog/' + p.id}>{p.title}</Link>
                             <div className="tags">
                                 {p.tags.map(function(tag, index) {
                                     if (tag) {

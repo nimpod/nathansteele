@@ -126,36 +126,12 @@ class Blog extends Component {
 
         return(
             <div className="page-wrapper blog">
-                <h2 className="page-title center-me">Blog Archive</h2>
-                <div className="controls">
-                    <div className="tag-aquarium">
-                        <div className="dropdown-btn-tag-categories">
-                            <span>Filters</span>
-                            <ArrowDownIcon className="inline-svg invertable-icon" />
-                        </div>
-                        <div className="dropdown-container-tag-categories">
-                            { this.state.tagCategories }
-                        </div>
-                    </div>
-                    <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Search..." />
-                    {/* 
-                    <div className="control-container filtering">
-                        <p><strong>Filter by: </strong></p>
-                        <div className="filter-tag-btn-group">
-                            { this.state.tagCategories }
-                        </div>
-                    </div>
-                    */}
-                </div>
+                <h2 className="page-title">Blog Archive</h2>
                 <div className="posts-container">
+                    <div className="controls">
+                        <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Search..." />
+                    </div>
                     <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Title</th>
-                                <th>Tags</th>
-                            </tr>
-                        </thead>
                         <tbody>
                             <BlogPostList filteredPosts={filteredPosts} handleTagFilter={this.handleTagFilter} />
                         </tbody>

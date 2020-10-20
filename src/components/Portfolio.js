@@ -44,8 +44,8 @@ const PARTICLE_COLOUR_3 = "rgb(248, 194, 16)";
 const PARTICLE_COLOUR_4 = "rgb(170, 115, 255)";
 const AMOUNT_OF_LINES = 150;
 const LINE_COLOUR = "rgb(153, 153, 153)";
-const LINE_OPACITY = 0.45;
-const LINE_WIDTH = 0.50;
+const LINE_OPACITY = 0.35;
+const LINE_WIDTH = 0.30;
 
 const particlesConig =
 {
