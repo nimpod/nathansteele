@@ -10,10 +10,7 @@ class BlogPostList extends Component {
             this.props.filteredPosts.map((p => {
                 return (
                     <tr key={p.id}>
-                        <td>
-                            <ArrowIcon className="invertable-icon" style={{width: "0.6em", marginRight: "8px", marginBottom: "3px"}} />
-                            {p.date}
-                        </td>
+                        <td>{p.date}</td>
                         <td> 
                             <Link to={'/blog/' + p.id}>{p.title}</Link>
                             <div className="tags">

@@ -6,7 +6,7 @@ import ScrollToTop from './js/ScrollToTop';
 import Navbar from './components/Navbar';
 import Portfolio from './components/Portfolio';
 
-import Notes from './components/Notes';
+import Notes from './components/notes/Notes';
 
 import Blog from './components/blog/Blog';
 import BlogPost from './components/blog/BlogPost';

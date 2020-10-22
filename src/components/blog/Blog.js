@@ -126,16 +126,18 @@ class Blog extends Component {
 
         return(
             <div className="page-wrapper blog">
-                <h2 className="page-title">Blog Archive</h2>
-                <div className="posts-container">
-                    <div className="controls">
-                        <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Search..." />
+                <div className="section-inner">
+                    <h2 className="page-title">Blog Posts</h2>
+                    <div className="posts-container">
+                        <div className="controls">
+                            <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Search..." />
+                        </div>
+                        <table>
+                            <tbody>
+                                <BlogPostList filteredPosts={filteredPosts} handleTagFilter={this.handleTagFilter} />
+                            </tbody>
+                        </table>
                     </div>
-                    <table>
-                        <tbody>
-                            <BlogPostList filteredPosts={filteredPosts} handleTagFilter={this.handleTagFilter} />
-                        </tbody>
-                    </table>
                 </div>
             </div>
         )

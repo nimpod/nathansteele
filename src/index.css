@@ -11,6 +11,9 @@
     8: University Assignment page
     9: Notes page
     10: Media queries
+    11: Animations
+    12: Scrollbars
+    13: Miscellaneous
 */
 
 /* ------------------------------------------<0: VARIABLES>------------------------------------------ */
@@ -37,15 +40,13 @@
   --text: rgb(128, 128, 128);
   --intro-text: rgb(33, 37, 41);
   --text-hyperlink: rgb(0, 123, 255);
-  --text-hyperlink-hover: rgb(75, 213, 255);
+  --text-hyperlink-hover: rgb(9, 194, 250);
 
-  --nav-item-text: rgb(153, 153, 153);
-  --nav-item-text-active: rgb(5, 194, 191);
-  --nav-item-bg-active: rgba(67, 177, 175, 0.097);
-  --nav-item-bg-hover: rgba(67, 177, 175, 0.097);
-  --nav-delimiter: rgb(216, 216, 216);
-  --nav-item-theme-toggle-color: rgb(94, 86, 90);
-  --nav-item-theme-toggle-color-hover: rgb(0, 0, 0);
+  --nav-bg-color: rgb(255, 255, 255);
+  --nav-shadow-color: rgba(0,0,0,.45);
+  --nav-item-text: rgb(33, 33, 33);
+  --nav-item-active-color: rgb(3, 170, 140);
+  --nav-item-border-bottom-hover: rgb(3, 170, 140);
   --nav-item-theme-toggle-border-color-active: rgb(46, 26, 36);
 
   --arrow-smooth-scroll-btn: rgb(53, 53, 53);
@@ -61,11 +62,11 @@
 
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(247, 247, 247);
-  --blog-table-border: var(--page-wrapper-bg);
+  --blog-table-border: rgba(0, 0, 0, 0.083);
   --blog-table-text: var(--text);
   --blog-table-text-hover: var(--text);
   --blog-table-row-bg-hover: rgb(251, 251, 251);
-  --blog-table-tag-bg: rgb(230, 230, 250);
+  --blog-table-tag-bg: rgb(218, 226, 219);
   --blog-table-tag-text: rgb(27, 27, 27);
   --blog-table-searchbox-bg-color: rgb(241, 241, 241);
   --blog-table-searchbox-border-color: rgb(241, 241, 241);
@@ -115,6 +116,9 @@
   --btn-circular-hover-bg-color: rgb(245, 245, 245);
   --btn-circular-active-bg-color: rgb(223, 223, 223);
 
+  --svg-color: rgb(94, 86, 90);
+  --svg-color-hover: rgb(0, 0, 0);
+
   --scrollbar-thumb-bg-color-tags: rgb(179, 179, 179);
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(218, 217, 217) */
 }
@@ -127,15 +131,13 @@
   --text: rgb(240, 240, 240);
   --intro-text: rgb(230, 219, 225);
   --text-hyperlink: rgb(45, 206, 255);
-  --text-hyperlink-hover: rgb(0, 195, 255);
-
+  --text-hyperlink-hover: rgb(51, 207, 255);
+  
+  --nav-bg-color: rgb(41, 42, 48);
+  --nav-shadow-color: rgba(0, 0, 0, 0.748);
+  --nav-item-border-bottom-hover: rgb(28, 206, 173);
   --nav-item-text: rgb(255, 255, 255);
-  --nav-item-text-active: rgb(56, 237, 234);
-  --nav-item-bg-active: rgba(67, 170, 177, 0.097);
-  --nav-item-bg-hover: rgba(67, 177, 175, 0.097);
-  --nav-delimiter: rgb(153, 153, 153);
-  --nav-item-theme-toggle-color: rgb(192, 192, 192);
-  --nav-item-theme-toggle-color-hover: rgb(255, 255, 255);
+  --nav-item-active-color: rgb(0, 255, 208);
   --nav-item-theme-toggle-border-color-active: rgb(160, 157, 157);
 
   --arrow-smooth-scroll-btn: rgb(141, 141, 141);
@@ -151,7 +153,7 @@
   
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(45, 51, 58);
-  --blog-table-border: var(--page-wrapper-bg);
+  --blog-table-border: rgba(255, 255, 255, 0.118);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
   --blog-table-row-bg-hover: var(--page-wrapper-bg);
@@ -206,6 +208,9 @@
   --btn-circular-hover-bg-color: rgb(175, 175, 175);
   --btn-circular-active-bg-color: rgb(153, 153, 153);
 
+  --svg-color: rgb(192, 192, 192);
+  --svg-color-hover: rgb(255, 255, 255);
+
   --scrollbar-thumb-bg-color-tags: rgb(80, 80, 80);
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */
 }
@@ -215,10 +220,13 @@
 html {
   overflow-y: scroll;
   overflow-x: hidden;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
 }
 
 body {
-  font-family: 'Karla', sans-serif !important;
+  /* font-family: "Karla", sans-serif !important; */
+  /* font-family: Helvetica !important; */
   padding: 0;
   margin: 0;
   background: linear-gradient(
@@ -228,13 +236,6 @@ body {
   );
   background-size: 400%;
   animation: animation_name 55s ease infinite;    /* lasts 30s, eases in, and is infinite */
-}
-
-@keyframes animation_name {
-  /*                          (x,  y) */
-  0% { background-position:   0%   0%; }     /* x=top left, y=centre */
-  50% { background-position:  100% 50%; }     /* x=bottom left, y=centre */
-  100% { background-position: 0%   100%; }     /* x=top left, y=centre */
 }
 
 #particles-js canvas{
@@ -252,31 +253,168 @@ body {
   text-align: center;
 }
 
-a:not([href]):not([class]) {
-  color: rgb(0, 123, 255) !important;
-  background-color: transparent !important;
+a {
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+  transition: color 100ms ease-out;
+  color: var(--text-hyperlink) !important;
+  opacity: 0.7;
 }
-a:not([href]):not([class]):hover {
+a:hover {
   text-decoration: underline !important;
-  color: rgb(2, 88, 181) !important;
+  color: var(--text-hyperlink-hover) !important;
   cursor: pointer;
+  opacity: 1.0;
+}
+
+@media (min-width: 1800px) {
+  .section-inner {
+    max-width: 1600px;
+  }
+}
+.section-inner {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 93%;
+}
+
+body, button, input, select, textarea, a {
+  color: rgb(0, 0, 0);
+  font-family: Helvetica !important;
+}
+
+h1, h2, h3, .website-logo-container a {
+  font-family: 'karla', cursive !important;
+}
+
+.inline-svg {
+  width: 1em;
+  display: block;
+}
+.inline-svg[hidden] {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
 }
 
 /* ------------------------------------------<2: NAVBAR (includes top and side navigation)>------------------------------------------ */
-.my-navbar {
+/* 
+  #nav
+    .nav-wrapper
+      .nav-left
+        .website-logo-container
+        .website-links
+      .nav-right
+        .theme-toggle
+*/
+#nav {
   display: inline-block;
-  vertical-align: middle;
+  position: fixed;
+  z-index: 1000;
   width: 100%;
   top: 0;
-  left: 0;
+  background-color: var(--nav-bg-color);
+  box-shadow: -1px 2px 6px var(--nav-shadow-color);
 }
-.my-navbar ul {
-  margin: 0;
+
+#nav .nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3em 0em;
+  font-size: 1.2rem;
 }
-.my-navbar ul .left-nav {
-  display: inline;
-  z-index: 11111;
+
+/* target every link in the entire #nav */
+#nav .nav-wrapper a {
+  color: var(--nav-item-text) !important;
+  text-decoration: none !important;
 }
+#nav .nav-wrapper a:hover {
+  cursor: pointer;
+  border-bottom: 3px solid var(--nav-item-border-bottom-hover);
+}
+#nav .nav-wrapper a.active {
+  color: var(--nav-item-active-color) !important;
+  opacity: 1;
+}
+
+/* target the div container .website-links */
+#nav .nav-wrapper .website-links {
+  display: inline-block;
+  font-size: 0.9em;
+}
+#nav .nav-wrapper .website-links a {
+  margin-left: 0.8em;
+  opacity: 0.7;
+}
+
+/* target the div container .website-logo-container */
+#nav .nav-wrapper .website-logo-container {
+  display: inline-block;
+  margin-right: 0.9em;
+  font-size: 1.2em;
+}
+
+/* styling the svg logo */
+svg.logo {
+  width: 60px;
+  height: 60px;
+  stroke: rgb(26, 9, 39);
+  stroke-width: 0.1px;
+  stroke-opacity: 0.11;
+  z-index: 10;
+  fill-opacity: 1;
+}
+svg.logo path:nth-of-type(3n+0) {  fill: rgb(21, 124, 47); }
+svg.logo path:nth-of-type(3n+1) {  fill: rgb(93, 218, 114); }
+svg.logo path:nth-of-type(3n+2) {  fill: rgba(7, 7, 7, 0); }
+
+svg.logo path:hover ~ * {
+  fill-opacity: 0.1;
+  fill: rgba(17, 14, 221, 0.234);
+  stroke-width: 5.1px;
+}
+svg.logo:active path {
+  fill: rgb(20, 35, 49);
+  transition: all 350ms ease;
+}
+
+#nav .nav-wrapper .nav-right > * {
+  margin-right: 0.9em;
+}
+
+/* dont display hamburger menu... */
+.hamburger-menu {
+  display: none !important;
+  padding: 2px 6px;
+}
+
+/* this div container wraps around any svg */
+.inline-svg-wrapper {
+  color: var(--svg-color);
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 150ms ease;
+  display: inline-block;
+}
+.inline-svg-wrapper:active {
+  border: 1px solid var(--nav-item-theme-toggle-border-color-active);
+}
+.inline-svg-wrapper:hover {
+  color: var(--svg-color-hover);
+}
+
+.theme-toggle .inline-svg { width: 33px; }
+.hamburger-menu .inline-svg { width: 20px; }
+
+
+/*
 .my-navbar ul a {
   list-style: none;
   text-decoration: none;
@@ -304,7 +442,6 @@ a:not([href]):not([class]):hover {
   background-color: var(--nav-item-bg-hover);
 }
 .my-navbar ul .delimiter {
-  font-family: Arial,sans-serif;
   font-weight: normal;
   letter-spacing: 0px;
   font-size: 14px;
@@ -356,7 +493,7 @@ a:not([href]):not([class]):hover {
 
 
 .theme-toggle {
-  color: var(--nav-item-theme-toggle-color);
+  color: var(--svg-color);
   border: 1px solid transparent;
   background-color: transparent;
   height: 42px;
@@ -369,7 +506,7 @@ a:not([href]):not([class]):hover {
   position: absolute;
 }
 .theme-toggle:hover {
-  color: var(--nav-item-theme-toggle-color-hover);
+  color: var(--svg-color-hover);
 }
 .theme-toggle:active {
   border: 1px solid var(--nav-item-theme-toggle-border-color-active);
@@ -388,8 +525,6 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* ---------------< Logo >--------------- */
-/* add padding to the logo's link container */
 .my-navbar .logo-container {
   padding: 1.2em 1.7em;
 }
@@ -437,11 +572,9 @@ svg.logo polygon:hover {
 }
 
 .logo-container span {
-	font-family: Varela Round,Helvetica,arial,sans-serif;
 	font-weight: normal;
 	text-transform: normal;
 	letter-spacing: 0px;
-	font-family: brandon-grotesque;
 	font-weight: 200;
 	font-style: normal;
 	line-height: 1.2em;
@@ -449,76 +582,14 @@ svg.logo polygon:hover {
 	letter-spacing: .08em;
   font-size: 26px;
   color: var(--text) !important;
-}
-
-
-/*
-.hamburger-menu-icon {
-  position: absolute;
-  right: 40px;
-  transition: 0.3s all;
-  display: flex;
-  align-items: center;
-}
-
-.hamburger-menu-icon label[for=toggle] {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 25px;
-  justify-content: space-between;
-}
-
-.hamburger-menu-icon label[for=toggle] span {  
-  background-color: rgb(0, 0, 0);
-  display: block;
-  height: 5px;
-  width: 30px;
-  border-radius: 50px;
 }*/
-
-.hamburger-menu-icon {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: none;
-  outline: none;
-  height: 30px;
-  position: relative;
-  width: 30px;
-  z-index: 1000;
-  position: absolute;
-  top: 27px;
-  right: 100px;
-}
-.hamburger-menu-icon:active {
-  border: none;
-  outline: none;
-}
-.hamburger-menu-icon span.hamburger-line {
-  background: var(--blog-post-title-text);
-  height: 3px;
-  position: absolute;
-  left: 0;
-  transition: all .2s ease-out; 
-  width: 100%;
-}
-.hamburger-menu-icon:hover {
-  
-}
-span.hamburger-line-top { top: 3px; }
-span.hamburger-line-bottom { bottom: 3px; }
-span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
-
 
 
 /* ------------------------------------------<3: MAIN CONTAINER>------------------------------------------ */
 .page-wrapper {
   width: 100vw;
   top: 0;
-  margin-top: -210px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-top: 6rem;
 }
 
 .page-wrapper.university,
@@ -527,31 +598,13 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 .page-wrapper.blog-post,
 .page-wrapper.notes {
   background-color: var(--page-wrapper-bg) !important;
-  padding-top: 14rem;
-}
-
-.page-wrapper.university,
-.page-wrapper.blog,
-.page-wrapper.notes {
-  height: 111vh;
-}
-
-.page-wrapper.blog,
-.page-wrapper.notes {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.page-wrapper.university {
-  padding-left: 6rem;
-  padding-right: 6rem;
 }
 
 .page-title {
   color: var(--page-text-color);
-  text-align: center;
-  font-size: 3.15rem !important;
+  font-size: 3.0rem !important;
   font-weight: bold !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 30px;
 }
 
 *:focus {
@@ -565,7 +618,7 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
   top: 0;
   color: var(--intro-text);
   height: 270vh;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .portfolio p {
@@ -577,6 +630,8 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 }
 .portfolio h1 {
   font-size: 6vw;
+  font-family: "Karla", sans-serif !important;
+
   line-height: 0.9em;
   margin: 0.2em 0 0.6em;
   font-weight: 900;
@@ -591,7 +646,6 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 .portfolio #projects,
 .portfolio #contact {
   height: 100vh;
-  padding: 0 25px;
 }
 
 #about, .projects-header {
@@ -615,7 +669,7 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 
 /* --------------<#about SECTION> -------------- */
 #about {
-  padding: 170px 0px 0px 200px !important;
+  padding: 110px 0px 0px 200px !important;
   display: block;
   top: auto;
 	right: auto;
@@ -751,6 +805,11 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 .proj-title {
   font-size: 1.4rem;
 }
+.proj-title a {
+  color: var(--project-card-text-color) !important;
+  opacity: 1.0;
+}
+
 .proj-date { 
   font-size: 0.8rem;
 }
@@ -789,7 +848,6 @@ span.hamburger-line-middle { top: 50%; transform: translateY(-50%); }
 
 .posts-container {
   position: relative;
-  margin-bottom: 50px;
 }
 
 table {
@@ -797,9 +855,8 @@ table {
   border-collapse: collapse;
   font-size: 1.0rem;
   background-color: var(--blog-table-bg);
-  transition: 0.3s all;
-  width: 50%;
-  margin: 0 auto;
+  transition: 300ms all;
+  width: 100%;
 }
 
 table tr {
@@ -815,18 +872,17 @@ table thead {
   background-color: var(--blog-table-thead-bg);
 }
 
-table th, table td {
-  padding: 0.15rem 0.5rem;
-  border: 1px solid var(--blog-table-border);
+table td {
+  padding: 0.25rem 0.0rem;
+  border-bottom: 1px dashed var(--blog-table-border);
 }
 
 table thead th:hover {
   cursor: pointer;
 }
 
-table td:nth-child(1) { min-width: 81px; max-width: 85px; }   /* 1st column */
-table td:nth-child(2) { min-width: 250px; }   /* 2nd column */
-table td:nth-child(3) { min-width: 100px; }  /* 3rd column */
+table td:nth-child(1) { width: 10%; max-width: 100px; min-width: 120px; }   /* 1st column */
+table td:nth-child(2) { width: 90%; }   /* 2nd column */
 
 table tr {
   line-height: 1.4;
@@ -834,18 +890,6 @@ table tr {
 
 table {
   color: var(--blog-table-text);
-}
-
-table tr a {
-  color: var(--text-hyperlink);
-  opacity: 0.7;
-  text-decoration: none;
-}
-
-table tbody tr a:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: var(--text-hyperlink-hover);
 }
 
 table tbody tr:hover {
@@ -866,7 +910,7 @@ table tbody tr:hover {
 }
 
 .tag span {
-  margin-right: 4px;
+  margin-right: 6px;
   padding: 2px 5px;
   border-radius: 4px;
   font-size: 0.7rem;
@@ -875,6 +919,7 @@ table tbody tr:hover {
   color: var(--blog-table-tag-text);
 }
 
+/*
 .tag .Hardware { background-color: rgb(22, 94, 48); color: rgb(37, 216, 129); }
 .tag .Astronomy { background-color: rgb(122, 77, 230); color: rgb(238, 238, 238); }
 .tag .Mathematics { background-color: rgb(192, 86, 29); color: rgb(238, 238, 237); }
@@ -888,6 +933,7 @@ table tbody tr:hover {
 .tag .Geography { background-color:rgb(166, 211, 143); color: rgb(255, 255, 255); }
 .tag .History { background-color:rgb(118, 104, 97); color: rgb(255, 255, 255); }
 .tag .Rocks-and-minerals { background-color:rgb(228, 124, 207); color: rgb(255, 255, 255); }
+*/
 
 .tag:hover {
   cursor: pointer;
@@ -911,7 +957,6 @@ table tbody tr:hover {
 /* blog controls */
 .blog .controls {
   width: 50%;
-  margin: 0 auto;
   margin-bottom: 20px;
   
 }
@@ -928,7 +973,8 @@ table tbody tr:hover {
 
 /* ------------------------------------------<6: BLOG POST PAGE>------------------------------------------ */
 .blog-post {
-  padding: 15rem 25rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
   /* max-width: 80vw; */
   margin-right: auto;
   margin-left: auto;
@@ -1102,7 +1148,7 @@ svg.invertable-icon {
 }
 
 .university .card-grid {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
   display: grid;
   grid-gap: 24px;
@@ -1219,7 +1265,8 @@ div.card-percent:hover::after {
 
 /* ------------------------------------------<8: UNIVERSITY ASSIGNMENT PAGE>------------------------------------------ */
 .page-wrapper.universityAssignment {
-  padding: 14rem 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .page-wrapper.universityAssignment .wrapper {
@@ -1356,49 +1403,29 @@ div.card-percent:hover::after {
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
 @media screen and (max-width: 900px) { .portfolio h1 { font-size: 50px; } .portfolio h2 { font-size: 40px; } }
-@media screen and (max-width: 900px) { #about, .projects-header { padding: 170px 25px 0px 25px !important;  } }
+@media screen and (max-width: 900px) { #about, .projects-header { padding: 100px 25px 0px 25px !important;  } }
 @media screen and (max-width: 650px) { .smooth-scroll-btn { text-align: center; } }
-@media screen and (max-width: 600px) { #about, .projects-header { padding: 170px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
+@media screen and (max-width: 600px) { #about, .projects-header { padding: 100px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
 
-/* hide nav items when screen is too small */
-@media screen and (max-width: 800px) { .my-navbar ul { padding: 0; } }
-@media screen and (max-width: 800px) {
-  .portfolio #about {
-    padding-bottom: 200px;
+/* anything that should be hidden in mobile goes here... */
+@media screen and (max-width: 725px) {
+  .website-links {
+    display: none !important;
   }
-  .my-navbar ul .left-nav {
-    display: none;
-  }
-  .my-navbar.active ul .left-nav {
-    position: absolute;
-    background-color: var(--bg1);
-    display: block;
-    right: 30px;
-    top: 70px;
-    border: 1px solid var(--nav-item-theme-toggle-border-color-active);
-  }
-  .my-navbar.active ul a {
-    display: block;
-  }
-  .my-navbar.active ul a li {
-    border-radius: 0px;
-    margin: 0;
-  }
-  .delimiter { 
-    display: none;  
-  } 
-  .hamburger-menu-icon { 
-    display: inline-block; 
+  .hamburger-menu {
+    display: inline-block !important;
   }
 }
 
 /* make font size get smaller on blog table */
-@media only screen and (max-width: 1400px) { table { font-size: 0.95rem; width: 55%; } }
-@media only screen and (max-width: 1300px) { table { font-size: 0.90rem; width: 65%;} }
-@media only screen and (max-width: 1200px)  { table { font-size: 0.85rem; width: 75%; } }
-@media only screen and (max-width: 1100px)  { table { font-size: 0.85rem; width: 85%; } }
-@media only screen and (max-width: 1000px)  { table { font-size: 0.8rem; width: 90%; } }
-@media only screen and (max-width: 700px)  { table, .tag span { font-size: 0.55rem; } }
+@media only screen and (max-width: 1400px) { table { font-size: 0.95rem; } }
+@media only screen and (max-width: 1300px) { table { font-size: 0.90rem; } }
+@media only screen and (max-width: 1200px)  { table { font-size: 0.85rem; } }
+@media only screen and (max-width: 1100px)  { table { font-size: 0.85rem;  } }
+@media only screen and (max-width: 1000px)  { table { font-size: 0.8rem;  } }
+@media only screen and (max-width: 700px)  { .tag span { font-size: 0.55rem; } }
+
+@media only screen and (max-width: 700px) { table td { padding: 0.5rem 0; } }
 
 /* remove padding from the #about section as screen gets smaller */
 @media screen and (max-width: 1125px) { #about{ padding: 50px 170px 0px 170px; } }
@@ -1421,55 +1448,73 @@ div.card-percent:hover::after {
 @media only screen and (max-width: 900px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.4rem; } }
 @media only screen and (max-width: 800px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.3rem; } .blog-post-content p { font-size: 0.9rem; } }
 
-/* change size of contact buttons as page is resized */
-@media only screen and (max-width: 900px) { .contact i {  font-size: 45px; transition: 0.3s; } }
-@media only screen and (max-width: 700px) { .contact i {  font-size: 40px; transition: 0.3s; } }
-@media only screen and (max-width: 500px) { .contact i { font-size: 35px; transition: 0.3s; } }
 
 
-@media only screen and (max-width: 640px) { 
-  .contact {
-      display: grid;
-      /* height: 100%;*/
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-gap: 1px 1px;
-      grid-template-areas: "codepen github linkedin email" "cv cv cv cv";
-    }
-    .contact a {
-        padding: 0px;
-    }
-    .codepen { grid-area: codepen; }
-    .github { grid-area: github; }
-    .cv { grid-area: cv; grid-column: 1 / 5; }
+/* ------------------------------------------<11: ANIMATIONS>------------------------------------------ */
+@keyframes animation_name {
+  /*                          (x,  y) */
+  0% { background-position:   0%   0%; }     /* x=top left, y=centre */
+  50% { background-position:  100% 50%; }     /* x=bottom left, y=centre */
+  100% { background-position: 0%   100%; }     /* x=top left, y=centre */
 }
 
-@media only screen and (max-width: 670px) {
-  #about {
-      margin: 0 auto;
+@keyframes slideInUp {
+  0% {
+    transform: translate3d(0, -100%, 0); 
+    visibility: visible;
+  } to {
+    transform: translateZ(0);
+  }
+}
+@keyframes slideOutDown { 
+  0% {
+    transform: translateZ(0)
+  } to { 
+    visibility: hidden;
+    transform: translate3d(0%, -100%, 0)
   }
 }
 
 
+.slideInUp {
+  animation-name: slideInUp;
+}
+.slideOutDown {
+  animation-name: slideOutDown
+}
+.animated.faster {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+
+
+/* ------------------------------------------<12: SCROLLBARS>------------------------------------------ */
 /* 
  The custom scrollbar I am using is not available in Firefox, Internet Explorer or Edge, and for those browsers the default scrollbar is used 
  Otherwise, this custom scrollbar will be used.
  Basically if you are using Chrome you get a funky custom scrollbar
-
-Inspiration for scrollbar: https://stackoverflow.com/questions/9251354/css-customized-scroll-bar-in-div
 */
 body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  border-radius: 10px;
-  background-color: #F5F5F5;
+  background-color: #dfdfdf;
 }
 body::-webkit-scrollbar {
-  width: 12px;
-  background-color: rgba(27, 28, 29, 0.87);
+  width: 10px;
+  height: 10px;
+  background-color: rgb(44, 62, 80);
 }
 body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #555;
+  background-color: rgb(136, 136, 136);
 }
 
 .tags::-webkit-scrollbar-thumb:hover {
@@ -1489,7 +1534,7 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--blog-table-bg);
 }
 
-
+/* ------------------------------------------<14: MISCELLANEOUS>------------------------------------------ */
 ::selection {
   background: var(--text-highlight-color); /* WebKit/Blink Browsers */
 }

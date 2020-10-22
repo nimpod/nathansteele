@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import '../index.css';
 
@@ -161,6 +162,7 @@ const Portfolio = (props) => {
             <div id="particles-js">
                 <Particles params={particlesConig} />
             </div>
+            
             <section id="about">
                 <p>Hi, I'm</p>
                 <h1>Nathan Steele</h1>
@@ -168,7 +170,7 @@ const Portfolio = (props) => {
                 <p>Currently studying a BSc in Computer Science at Newcastle University.</p>
                 <p>
                     I write <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>code</Link>. 
-                    I have a <a href="https://nimpod.github.io/nathansteele/#/blog">blog</a>. 
+                    I have a <NavLink to="/blog" className="navlink">blog</NavLink>. 
                     Sometimes I'm exploring the outside world on <a href='https://www.strava.com/athletes/45999759'>Strava</a>.
                     Other times I'm <a href='/'>drawing</a>.
                     I also review films on <a href='https://www.imdb.com/user/ur54195044/?ref_=nv_usr_prof_2'>IMDb</a>.

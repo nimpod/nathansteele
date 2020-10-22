@@ -339,14 +339,12 @@ const initState = {
             stage: "Stage 2",
             percentage: "92%",
             thumbnail: "https://prod-discovery.edx-cdn.org/media/course/image/8e285de1-0242-4e94-8041-84231363caf4-d03410f48d5f.small.jpg",
-            introContent: "\
+            content: "\
             <div class='intro'> \
                 <p>Consider the following variant of the Bin Packing problem, called the Glass Cutting Problem.</p> \
                 <p>We have an unlimited supply of two-dimensional glass sheets, each sheet having a width of W and a height of H. We also have a request of N rectangular shapes, with widths w1,w2,…,wN (where wi <= W, i=1,…,N) and heights h1,h2,…,hN (where hi <= H, i=1,…,N).</p> \
                 <p>We use a glass cutting machine that conducts a specific type of cut, namely the guillotine cut. A guillotine cut is a cut from one edge of a sheet to the opposite edge, parallel to the remaining edges. In other words, when applied to a rectangle, the cut is of guillotine type if it produces two new rectangles. The cutting patterns for the sheets are produced in at most two stages (Figure 1). In the first stage, parallel (horizontal) guillotine cuts are produced on a sheet to produce a set of ‘shelves’. In the second stage, vertical guillotine cuts are made on each shelf to produce the required shapes. If the shapes in a shelf are not all of the same height, additional trimming of the shapes is required (Figure 2).</p> \
             </div> \
-            ",
-            mainContent: " \
             <div class='main'> \
                 <img src='https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/university-assignments/figure1.PNG' /> \
                 <img src='https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/university-assignments/figure2.PNG' /> \
@@ -364,12 +362,10 @@ const initState = {
             stage: "Stage 2",
             percentage: "100%",
             thumbnail: "https://geekflare.com/wp-content/uploads/2020/02/1_TBSV23ud8tae3E4szI5EDA-1.jpeg",
-            introContent: "\
+            content: "\
             <div class='intro'> \
                 <p>Intro...</p> \
             </div> \
-            ",
-            mainContent: " \
             <div class='main'> \
                 <p>Main content ...</p> \
             </div> \

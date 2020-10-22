@@ -26,23 +26,25 @@ class University extends Component {
 
         return(
             <div className="page-wrapper university">
-                <h2 className="page-title center-me">University Assignments</h2>
-                <div className="controls">
-                    <div className="btn" title="Grid" onClick={this.useGridView}>
-                        <GridIcon alt="Grid icon" />
-                    </div>
-                    <div className="btn" title="List" onClick={this.useListView}>
-                        <ListIcon alt="List icon" />
-                    </div>
-                    <div className="dropdown" title="Sort by">
+                <div className="section-inner">
+                    <h2 className="page-title">University Assignments</h2>
+                    <div className="controls">
+                        <div className="btn" title="Grid" onClick={this.useGridView}>
+                            <GridIcon alt="Grid icon" />
+                        </div>
+                        <div className="btn" title="List" onClick={this.useListView}>
+                            <ListIcon alt="List icon" />
+                        </div>
+                        <div className="dropdown" title="Sort by">
 
+                        </div>
+                        <div className="dropdown" title="Group by">
+                            
+                        </div>
                     </div>
-                    <div className="dropdown" title="Group by">
-                        
+                    <div className="card-grid">
+                        { assignmentsDisplayed }
                     </div>
-                </div>
-                <div className="card-grid">
-                    { assignmentsDisplayed }
                 </div>
             </div>
         )

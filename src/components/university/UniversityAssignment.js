@@ -31,10 +31,7 @@ class UniversityAssignment extends Component {
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-sm-6-6 col-md-9-12 col-smd-6-12 col-smd-offset-1-12 col-lg-6-12 col-lg-offset-2-12 page-content" dangerouslySetInnerHTML={{__html: this.props.theAssignment.introContent}}>
-
-                        </div>
-                        <div className="page-content" dangerouslySetInnerHTML={{__html: this.props.theAssignment.mainContent}}>
+                        <div dangerouslySetInnerHTML={{__html: this.props.theAssignment.content}}>
 
                         </div>
                     </div>

@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from "../icons/logo.svg";
 import { ReactComponent as DarkThemeIcon } from "../icons/moon.svg";
 import { ReactComponent as LightThemeIcon } from "../icons/sun.svg";
 import { ReactComponent as ThreeDotsIcon } from "../icons/threeDots.svg";
+import { ReactComponent as HamburgerMenuIcon } from "../icons/hamburgerMenu.svg";
 
 
 class Navbar extends Component {
@@ -68,7 +69,27 @@ class Navbar extends Component {
 
     /* allows user to open and close the mobile view of the navigation menu */
     toggleMenu() {
-        document.documentElement.getElementsByClassName('my-navbar')[0].classList.toggle('active');
+        document.getElementById('nav').classList.toggle('active');
+    }
+
+    componentDidMount() {
+        let nav = document.getElementById("nav");
+        let lastScrollTop = 0;
+
+        if (nav !== null) {
+            window.addEventListener('scroll', function(e) {
+                var st = window.pageYOffset || document.documentElement.scrollTop;
+                console.log(st, lastScrollTop);
+                if (st > lastScrollTop) {
+                  nav.classList.add('slideOutDown');
+                  nav.classList.remove('slideInUp');
+                } else {
+                  nav.classList.add('slideInUp');
+                  nav.classList.remove('slideOutDown');
+                }
+                lastScrollTop = st <= 0 ? 0 : st;
+              })
+        }
     }
 
     /**
@@ -76,57 +97,41 @@ class Navbar extends Component {
      */
     render() {
         return (
-            <div className="my-navbar">
-                <ul>
-                    <NavLink to="/" className="navlink logo-container">
-                        <Logo className="logo" />
-                    </NavLink>
-                    <div className="left-nav">
-                        <Link to="about" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                            <li>About</li>
-                        </Link>
-
-                        <span className="delimiter">/</span>
-
-                        <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                            <li>Projects</li>
-                        </Link>
-
-                        <span className="delimiter">/</span>
-
-                        <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                            <li>Blog</li>
-                        </NavLink>
-
-                        <span className="delimiter">/</span>
-
-                        <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                            <li>University</li>
-                        </NavLink>
-
-                        <span className="delimiter">/</span>
-
-                        <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                            <li>Notes</li>
-                        </NavLink>
+            <header id="nav" className="animated faster slideInUp">
+                <div className="nav-wrapper section-inner">
+                    <div className="nav-left">
+                        <div className="website-logo-container">                            
+                            <NavLink to="/" className="navlink">
+                                {/* <Logo className="logo" /> */}
+                                /nimpod.github.io
+                            </NavLink>
+                        </div>
+                        <nav className="website-links">
+                            <Link to="about" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">About</Link>
+                            <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">Projects</Link>
+                            <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">Blog</NavLink>
+                            <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">University</NavLink>
+                            <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">Notes</NavLink>
+                        </nav>
                     </div>
-
-                    <div id="menu-toggler" data-class="menu-active" className="hamburger-menu-icon" onClick={this.toggleMenu}>
-                        <span className="hamburger-line hamburger-line-top"></span>
-                        <span className="hamburger-line hamburger-line-middle"></span>
-                        <span className="hamburger-line hamburger-line-bottom"></span>
+                    
+                    <div className="nav-right">
+                        <div className="theme-toggle inline-svg-wrapper" onClick={this.switchTheme} aria-label="Click to enable dark mode" title="Click to enable dark mode7">
+                            <span className="inline-svg dark">
+                                <DarkThemeIcon />
+                            </span>
+                            <span className="inline-svg light" hidden={true}>
+                                <LightThemeIcon />
+                            </span>
+                        </div>
+                        <div className="hamburger-menu inline-svg-wrapper" onClick={this.toggleMenu}>
+                            <span className="inline-svg">
+                                <HamburgerMenuIcon />
+                            </span>
+                        </div>
                     </div>
-
-                    <div className="theme-toggle" onClick={this.switchTheme} aria-label="Click to enable dark mode" title="Click to enable dark mode7">
-                        <span className="inline-svg dark">
-                            <DarkThemeIcon />
-                        </span>
-                        <span className="inline-svg light" hidden={true}>
-                            <LightThemeIcon />
-                        </span>
-                    </div>
-                </ul>
-            </div>
+                </div>
+            </header>
         )
     }
 }
