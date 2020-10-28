@@ -38,6 +38,7 @@
   --bg2: rgb(232, 232, 232);    /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
 
   --text: rgb(128, 128, 128);
+  --text-darker: rgb(68, 68, 68);
   --intro-text: rgb(33, 37, 41);
   --text-hyperlink: rgb(0, 123, 255);
   --text-hyperlink-hover: rgb(9, 194, 250);
@@ -99,6 +100,9 @@
   --university-assignment-subheading-detail-text-color: rgb(15, 20, 30);
   --university-assignment-main-text-color: rgb(135, 138, 143);
 
+  --sidebar-box-shadow: rgba(0, 0, 0, 0.083);
+  --sidebar-item-bg-color-hover: rgb(245, 245, 245);
+
   --contact-btn-colour: rgb(26, 26, 26);
   --contact-btn-font-colour: rgb(196, 196, 196);
   --contact-btn-border-colour: rgb(0, 0, 0);
@@ -129,6 +133,7 @@
   --bg2: rgb(45, 42, 60);   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   
   --text: rgb(240, 240, 240);
+  --text-darker: rgb(169, 169, 169);
   --intro-text: rgb(230, 219, 225);
   --text-hyperlink: rgb(45, 206, 255);
   --text-hyperlink-hover: rgb(51, 207, 255);
@@ -190,6 +195,9 @@
   --university-assignment-subheading-text-color: rgb(161, 164, 168);
   --university-assignment-subheading-detail-text-color: rgb(119, 120, 121);
   --university-assignment-main-text-color: rgb(167, 170, 174);
+
+  --sidebar-box-shadow: rgba(0, 0, 0, 0.083);
+  --sidebar-item-bg-color-hover: rgb(47, 47, 55);
 
   --contact-btn-colour: rgb(26, 26, 26);
   --contact-btn-font-colour: rgb(196, 196, 196);
@@ -592,7 +600,7 @@ svg.logo polygon:hover {
 .page-wrapper {
   width: 100vw;
   top: 0;
-  padding-top: 6rem;
+  padding-top: 5rem;
 }
 
 .page-wrapper.university,
@@ -1402,6 +1410,70 @@ div.card-percent:hover::after {
 }
 
 
+.notes-page {
+  height: 100%;
+}
+
+.notes, .notes-page h1 {
+  color: var(--blog-post-title-text);
+}
+
+.notes-page p {
+  color: var(--text-darker);
+}
+
+.notes-page .section-inner {
+  margin-left: calc(250px + 40px);
+}
+
+.notes-page .sidebar {
+  box-shadow: 4px 1px 11px var(--sidebar-box-shadow);
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.notes-page .sidebar ul {
+  list-style-type: none;
+  padding: 75px 0;
+  margin: 0;
+}
+.notes-page .sidebar ul a li {
+  display: block;
+  padding: 4px 10px;
+}
+.notes-page .sidebar ul a {
+  text-decoration: none !important;
+  color: var(--nav-item-text) !important;
+}
+.notes-page .sidebar ul a li:hover {
+  background-color: var(--sidebar-item-bg-color-hover);
+  color: inherit;
+}
+.notes-page .sidebar ul a.active {
+  color: var(--nav-item-active-color) !important;
+}
+
+.notes-page .subsection {
+  padding-bottom: 40px;
+  height: 100vh;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.083);
+}
+
+pre.prettyprint span.kwd::before {
+  content: "\A";
+  white-space: pre-line;
+}
+
+.notes-page .subsection p > code {
+  background-color: rgb(56, 56, 56);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 6px;
+}
+
 /* ------------------------------------------<10: MEDIA QUERIES>------------------------------------------ */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
@@ -1422,7 +1494,7 @@ div.card-percent:hover::after {
     right: 10px;
     background-color: var(--bg1);
     border-radius: 4px;
-    box-shadow: 3px 3px 13px 5px rgba(0, 0, 0, 0.083);
+    box-shadow: -1px 2px 6px var(--nav-shadow-color);
     padding: 3px 10px 3px 0px;
   }
   .website-links a {

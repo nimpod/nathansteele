@@ -14,6 +14,8 @@ import BlogPost from './components/blog/BlogPost';
 import University from './components/university/University';
 import UniversityAssignment from './components/university/UniversityAssignment';
 
+import CasioBasic from './components/notes/CasioBasic';
+
 // import ParticlesMin from './js/particles.min.js'
 // <script src="js/particles.min.js"></script>
 // <script src='../node_modules/sal.js/dist/sal.js'></script>
@@ -32,14 +34,15 @@ export default class App extends Component {
                   <Navbar />
 
                   <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
-                
+
                   <Switch>
                       <Route path='/' component={Portfolio} exact />
                       <Route path='/university' component={University} exact />
                       <Route path='/blog' component={Blog} exact />
-                      <Route path='/notes' component={Notes} />
+                      <Route path='/notes' component={Notes} exact />
                       <Route path='/blog/:post_id' component={BlogPost} />
                       <Route path='/university/:assignment_id' component={UniversityAssignment} />
+                      <Route path='/notes/casio_basic' component={CasioBasic} />
                   </Switch>
                   <script src="./js/particles.min.js"></script>
                 </div>

@@ -20,7 +20,7 @@ class Notes extends Component {
 
                     <h5>Programming</h5>
                     <ul>
-                        <li><Link>Casio BASIC</Link></li>
+                        <li><Link to='notes/casio_basic'>Casio BASIC</Link></li>
                         <li><Link>Java</Link></li>
                         <li><Link>Python</Link></li>
                         <li><Link>C</Link></li>
