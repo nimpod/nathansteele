@@ -384,7 +384,10 @@ svg.logo:active path {
 }
 
 #nav .nav-wrapper .nav-right > * {
+  /*
   margin-right: 0.9em;
+  */
+  margin-right: 0em;
 }
 
 /* dont display hamburger menu... */
@@ -781,6 +784,7 @@ svg.logo polygon:hover {
 
 .project a {
   text-decoration: none;
+  opacity: 0.9 !important;
 }
 
 .project img {
@@ -814,7 +818,7 @@ svg.logo polygon:hover {
   font-size: 0.8rem;
 }
 .proj-details { 
-  font-size: 0.94rem;
+  font-size: 0.85rem;
   padding: 3px 5px 10px 5px;
 }
 
@@ -822,9 +826,9 @@ svg.logo polygon:hover {
 .project a:hover {
   color: var(--project-card-text-hover);
 }
-.project img:hover {
-  transition: opacity 0.5s;
-  opacity: 0.4;
+.project a:hover {
+  transition: opacity 400ms;
+  opacity: 0.65 !important;
 }
 .image:hover + .proj-details > .proj-title > a {
   color: var(--project-card-text-hover);
@@ -973,8 +977,6 @@ table tbody tr:hover {
 
 /* ------------------------------------------<6: BLOG POST PAGE>------------------------------------------ */
 .blog-post {
-  padding-left: 25rem;
-  padding-right: 25rem;
   /* max-width: 80vw; */
   margin-right: auto;
   margin-left: auto;
@@ -1022,12 +1024,11 @@ table tbody tr:hover {
   display: inline-block;
 }
 .blog-post-tags > * {
-  margin-left: 10px;
 }
 
 /* shift the some of the stuff in the blog-post-info container left a bit */
 .blog-post-title, .blog-post-date, .blog-post-tags {
-  margin-left: 75px;
+  margin-left: 15px;
 }
 
 .blog-post-info .back-to-previous-page {
@@ -1035,12 +1036,10 @@ table tbody tr:hover {
   color: inherit;
   border: 2px solid transparent;
   border-radius: 10px;
-  margin-top: 15px;
-  position: absolute;
 }
 .back-to-previous-page svg.invertable-icon {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   padding: 10px;
   border-radius: 100px;
   opacity: 0.5;
@@ -1160,13 +1159,17 @@ svg.invertable-icon {
   border: 4px solid var(--university-card-border-color);
   border-radius: 7px;
   display: flex;
-  height: 240px;
+  height: 260px;
   flex-direction: column;
   position: relative;
 }
 .university .card-grid > .card:hover {
   border: 4px solid var(--university-card-border-color-hover);
   transition: border 200ms ease-in;
+}
+.university .card-grid > .card a {
+  opacity: 1.0;
+  text-decoration: none !important;
 }
 
 .university .card-grid > .card > a.card-link > .card-img-wrapper {
@@ -1409,8 +1412,22 @@ div.card-percent:hover::after {
 
 /* anything that should be hidden in mobile goes here... */
 @media screen and (max-width: 725px) {
+  #nav.active .website-links {
+    display: block !important;
+  }
   .website-links {
     display: none !important;
+    position: absolute;
+    top: 61px;
+    right: 10px;
+    background-color: var(--bg1);
+    border-radius: 4px;
+    box-shadow: 3px 3px 13px 5px rgba(0, 0, 0, 0.083);
+    padding: 3px 10px 3px 0px;
+  }
+  .website-links a {
+    display: block;
+    border-bottom: 3px solid transparent;
   }
   .hamburger-menu {
     display: inline-block !important;
