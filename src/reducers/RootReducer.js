@@ -327,6 +327,69 @@ const initState = {
             blurb: "this is the blurb",
             tags: ["Entomology"]
         },
+        {
+            id: "20",
+            date: "30 Sep 2022",
+            title: "What happens to the information that goes inside a black hole?",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Astronomy"]
+        },
+        {
+            id: "21",
+            date: "30 Sep 2022",
+            title: "Coolest moons in the Solar System",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Astronomy"]
+        },
+        {
+            id: "22",
+            date: "30 Sep 2022",
+            title: "Running form",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "All the different elements of good running form",
+            tags: ["Running"]
+        },
+        {
+            id: "23",
+            date: "30 Sep 2022",
+            title: "Flagematics",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "Mathematics + Flags",
+            tags: ["Vexilology", "Mathematics"]
+        },
+        {
+            id: "24",
+            date: "30 Sep 2022",
+            title: "My favourite quotes",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "A list of my favourite quotes",
+            tags: ["Docs"]
+        },
+        {
+            id: "25",
+            date: "30 Sep 2022",
+            title: "Worst 20 movies I've watched",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "",
+            tags: ["Films"]
+        },
+        {
+            id: "26",
+            date: "30 Sep 2022",
+            title: "Top 50 movie soundtracks",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "",
+            tags: ["Films", "Music"]
+        },
     ],
 
     universityAssignments: [

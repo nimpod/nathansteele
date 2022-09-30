@@ -79,7 +79,7 @@ class Navbar extends Component {
         if (nav !== null) {
             window.addEventListener('scroll', function(e) {
                 var st = window.pageYOffset || document.documentElement.scrollTop;
-                console.log(st, lastScrollTop);
+                // console.log('DEBUGGING: ', st, lastScrollTop);
                 if (st > lastScrollTop) {
                   nav.classList.add('slideOutDown');
                   nav.classList.remove('slideInUp');
@@ -107,8 +107,7 @@ class Navbar extends Component {
                             </NavLink>
                         </div>
                         <nav className="website-links">
-                            <Link to="about" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">About</Link>
-                            <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">Projects</Link>
+                             <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">Projects</Link>
                             <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">Blog</NavLink>
                             <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">University</NavLink>
                             <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">Notes</NavLink>

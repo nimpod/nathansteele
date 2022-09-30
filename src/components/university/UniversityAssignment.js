@@ -27,7 +27,6 @@ class UniversityAssignment extends Component {
                                 <h4>{this.props.theAssignment.percentage}</h4>
                                 <Link to='/university' className="back-to-previous-page" title="Back to assignments">
                                     <ArrowLeft className="invertable-icon" />
-                                    click to go back...
                                 </Link>
                             </div>
                         </div>

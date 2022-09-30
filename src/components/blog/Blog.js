@@ -38,7 +38,7 @@ class Blog extends Component {
         const setOfTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
 
         this.props.posts.map((p => {
-            console.log(p.tags);
+            // console.log('DEBUGGING: ', p.tags);
             p.tags.map((t => {
                 setOfTags.add(t);
             }));
@@ -77,9 +77,11 @@ class Blog extends Component {
         let crossIcon = null;
         let plusIcon = null;
         let tagSelected = e.target.classList[0];
+        
+        console.log(e.target)
 
-        if (e.target.localName === "span" && e.target.childElementCount === 2) {
-            crossIcon = e.target.childNodes[1];
+        if (e.target.localName === "span" && e.target.childNodes[0].nodeName === "#text") {
+            crossIcon = e.target.childNodes[1]; 
             plusIcon = e.target.childNodes[2];
         } else if (e.target.localName === "svg" && e.target.parentElement.classList.contains('inline-svg')) {
             crossIcon = e.target.parentElement;
@@ -89,37 +91,40 @@ class Blog extends Component {
             plusIcon = document.getElementsByClassName('plus')[0];
         }
 
-        console.log(e.target);
+        console.log(crossIcon)
+        console.log(plusIcon)
 
         // clicked tag with intention of 'removing it'
-        if (crossIcon.hidden === true) {
-            console.log('HEEEEEEEEEEEEEEEEEEEEERE 1');
-            this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.delete(tagSelected)});
+        if (crossIcon !== undefined) {
+            if (crossIcon.hidden === true) {
+                console.log('HEEEEEEEEEEEEEEEEEEEEERE 1');
+                this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.delete(tagSelected)});
+                
+                crossIcon.removeAttribute('hidden');
+                plusIcon.setAttribute('hidden', true);
+            }
             
-            crossIcon.removeAttribute('hidden');
-            plusIcon.setAttribute('hidden', true);
-        }
-        
-        // clicked tag with intention of 'adding it'
-        else {
-            console.log('HEEEEEEEEEEEEEEEEEEEEERE 2');
-
-            console.log(this.state.tagCategoriesSelected, tagSelected);
-            this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.add(tagSelected)});
-
-            crossIcon.setAttribute('hidden', true);
-            plusIcon.removeAttribute('hidden');
+            // clicked tag with intention of 'adding it'
+            else {
+                console.log('HEEEEEEEEEEEEEEEEEEEEERE 2');
+    
+                console.log(this.state.tagCategoriesSelected, tagSelected);
+                this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.add(tagSelected)});
+    
+                crossIcon.setAttribute('hidden', true);
+                plusIcon.removeAttribute('hidden');
+            }
         }
     }
     
     render() {
         let filteredPosts = this.props.posts.filter((p) => {
             const arrayOfTags = Array.from(this.state.tagCategoriesSelected);
-            console.log(arrayOfTags, p.tags, p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0);
+            // console.log('DEBUGGING: ', arrayOfTags, p.tags, p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0);
             let isTitleEqualToSearchbox = p.title.toLowerCase().includes(this.state.searchPost.toLowerCase());
             let isSelectedTagMatching = p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0;
 
-            console.log(isTitleEqualToSearchbox, isSelectedTagMatching);
+            // console.log('DEBUGGING: ', isTitleEqualToSearchbox, isSelectedTagMatching);
 
             return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;
         });

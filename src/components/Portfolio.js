@@ -13,6 +13,28 @@ import ProjectImageSpaceInvaders from '../img/spaceinvaders.png'
 import ProjectImageWebDevUniProject from '../img/web-dev-thumbnail.PNG'
 import ProjectImagePong from '../img/pc.jpg'
 import Particles from 'react-particles-js';
+import { getValueOfCSSVariable } from '../js/helpers'
+
+
+/* particlesjs variables (defined in css) */
+const PARTICLE_COUNT = getValueOfCSSVariable('--particle-count');
+const PARTICLE_DENSITY = getValueOfCSSVariable('--particle-density');
+const PARTICLE_OPACITY = getValueOfCSSVariable('--particle-opacity');
+const PARTICLE_SIZE = getValueOfCSSVariable('--particle-size');
+const PARTICLE_SPEED = getValueOfCSSVariable('--particle-speed');
+const PARTICLE_COLOUR_1 = getValueOfCSSVariable('--particle-color-1');
+const PARTICLE_COLOUR_2 = getValueOfCSSVariable('--particle-color-2');
+const PARTICLE_COLOUR_3 = getValueOfCSSVariable('--particle-color-3');
+const PARTICLE_COLOUR_4 = getValueOfCSSVariable('--particle-color-4');
+const PARTICLE_LINE_COLOUR = getValueOfCSSVariable('--particle-line-color');
+const LINE_COUNT = getValueOfCSSVariable('--line-count');
+const LINE_OPACITY = getValueOfCSSVariable('--line-opacity');
+const LINE_WIDTH = getValueOfCSSVariable('--line-width');
+const LINKED_LINE_OPACITY = getValueOfCSSVariable('--linked-line-opacity');
+const LINKED_LINE_RADIUS = getValueOfCSSVariable('--linked-line-radius')
+const PARTICLES_TO_SPAWN_ON_PUSH = 30;
+const PARTICLE_DIRECTION = "none";   /* "none", "bottom", "right", "left" */
+const PARTICLE_TYPE = "circle";  /* "circle", "square", "triangle", "polygon" */
 
 /*
     What do the custom attributes on Link mean? Those enable react-scroll animations. Do not fear future traveller, I am here to help you:
@@ -25,44 +47,21 @@ import Particles from 'react-particles-js';
         duration:       time of the scroll animation
     https://www.npmjs.com/package/react-scroll
 */
-
-const pc1 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-1'));
-const pc2 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-2'));
-const pc3 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-3'));
-const pc4 = String(window.getComputedStyle(document.documentElement).getPropertyValue('--particle-color-4'));
-console.log(pc1, pc2, pc3, pc4);
-
-const AMOUNT_OF_PARTICLES = 88;
-const DENSITY_OF_PARTICLES = 700;
-const TYPE_OF_PARTICLES = "circle"; /* "circle", "square", "triangle", "polygon" */
-const PARTICLE_OPACITY = 0.25;
-const PARTICLE_SIZE = 3.9;
-const PARTICLE_SPEED = 1.5;
-const PARTICLE_DIRECTION = "none" /* "none", "bottom", "right", "left", etc... */ 
-const PARTICLE_COLOUR_1 = "rgb(51, 177, 248)";
-const PARTICLE_COLOUR_2 = "rgb(131, 210, 56)";
-const PARTICLE_COLOUR_3 = "rgb(248, 194, 16)";
-const PARTICLE_COLOUR_4 = "rgb(170, 115, 255)";
-const AMOUNT_OF_LINES = 150;
-const LINE_COLOUR = "rgb(153, 153, 153)";
-const LINE_OPACITY = 0.35;
-const LINE_WIDTH = 0.30;
-
-const particlesConig =
+const particlesConfig =
 {
   "particles": {
     "number": {
-      "value": AMOUNT_OF_PARTICLES,
+      "value": PARTICLE_COUNT,
       "density": {
         "enable": true,
-        "value_area": DENSITY_OF_PARTICLES
+        "value_area": PARTICLE_DENSITY
       }
     },
     "color": {
       "value": [PARTICLE_COLOUR_1, PARTICLE_COLOUR_2, PARTICLE_COLOUR_3, PARTICLE_COLOUR_4]
     },
     "shape": {
-      "type": TYPE_OF_PARTICLES,
+      "type": PARTICLE_TYPE,
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -93,8 +92,8 @@ const particlesConig =
     },
     "line_linked": {
       "enable": true,
-      "distance": AMOUNT_OF_LINES,
-      "color": LINE_COLOUR,
+      "distance": LINE_COUNT,
+      "color": PARTICLE_LINE_COLOUR,
       "opacity": LINE_OPACITY,
       "width": LINE_WIDTH
     },
@@ -102,12 +101,12 @@ const particlesConig =
       "enable": true,
       "speed": PARTICLE_SPEED,
       "direction": PARTICLE_DIRECTION,
-      "random": false,
+      "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": false,
+        "enable": true,
         "rotateX": 600,
         "rotateY": 1200
       }
@@ -128,9 +127,9 @@ const particlesConig =
     },
     "modes": {
       "grab": {
-        "distance": 500,
+        "distance": LINKED_LINE_RADIUS,
         "line_linked": {
-          "opacity": 0.5
+          "opacity": LINKED_LINE_OPACITY
         }
       },
       "bubble": {
@@ -145,7 +144,7 @@ const particlesConig =
         "duration": 0.4
       },
       "push": {
-        "particles_nb": 3
+        "particles_nb": PARTICLES_TO_SPAWN_ON_PUSH
       },
       "remove": {
         "particles_nb": 2
@@ -160,20 +159,20 @@ const Portfolio = (props) => {
     return (
         <div className="page-wrapper portfolio">
             <div id="particles-js">
-                <Particles params={particlesConig} />
+                <Particles params={particlesConfig} />
             </div>
             
             <section id="about">
                 <p>Hi, I'm</p>
                 <h1>Nathan Steele</h1>
-                <p>I enjoy coding, creating digital experiences and learning about the origins of life.</p>
+                <p>I enjoy coding, creating digital experiences, and learning about the origins of life.</p>
                 <p>Currently studying a BSc in Computer Science at Newcastle University.</p>
                 <p>
                     I write <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>code</Link>. 
                     I have a <NavLink to="/blog" className="navlink">blog</NavLink>. 
                     Sometimes I'm exploring the outside world on <a href='https://www.strava.com/athletes/45999759'>Strava</a>.
                     Other times I'm <a href='/'>drawing</a>.
-                    I also review films on <a href='https://www.imdb.com/user/ur54195044/?ref_=nv_usr_prof_2'>IMDb</a>.
+                    I also review films on <a href='https://letterboxd.com/nbofni/'>Letterboxd</a>.
                 </p>
                 <div className="smooth-scroll-btn">
                     <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>
