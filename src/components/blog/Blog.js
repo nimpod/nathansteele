@@ -123,7 +123,6 @@ class Blog extends Component {
             // console.log('DEBUGGING: ', arrayOfTags, p.tags, p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0);
             let isTitleEqualToSearchbox = p.title.toLowerCase().includes(this.state.searchPost.toLowerCase());
             let isSelectedTagMatching = p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0;
-
             // console.log('DEBUGGING: ', isTitleEqualToSearchbox, isSelectedTagMatching);
 
             return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;

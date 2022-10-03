@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
-
 import { ReactComponent as ArrowLeft } from "../../icons/arrowLeft.svg";
+import { getRandomRGBA } from '../../js/helpers.js';
+
 
 class BlogPost extends Component {
 
@@ -11,6 +12,18 @@ class BlogPost extends Component {
      */
     handleDeletePost = () => {
         this.props.deletePost(this.props.post_id)
+    }
+
+    componentDidMount = () => {
+        let quotesContainer = document.querySelector('.messiahs-handbook');
+
+        if (quotesContainer !== null) {
+            let items = quotesContainer.getElementsByTagName('li')
+            
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.backgroundColor =  getRandomRGBA(0.05);
+            }
+        }
     }
 
     render() {

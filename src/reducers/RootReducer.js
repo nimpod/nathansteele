@@ -6,7 +6,66 @@ const initState = {
             id: "1",
             date: "27 Apr 2017",
             title: "Cassini-Huygens",
-            content: "<p>The Cassini spacecraft was launched in 1997 and arrived at Saturn in 2004. Cassini has had several missions since it’s arrival; it landed the Huygens: Titan Lander on Saturn’s moon Titan and photographed the liquid methane lakes which cover it’s surface. Recent studies have even shown Titan’s surface has intriguing similarities to the surface of the early Earth, a hard outer crust and soft underneath. (It remains the most distant landing of any human made spacecraft).</p><p>In 2004, Cassini observed geyser tendrils bursting jets of icy particles from Enceladus’s south polar region at speeds of 1,360mph. In 2014 Cassini confirmed the existence of a deep, warm, sub-surface ocean making it a prime suspect for life elsewhere in our Solar System. Enceladus’s ocean is 10-30km deep, whilst Earth’s average ocean depth is a mere 3.7km.</p><p>Cassini’s main missions was to observe and collect data about Saturn and it's moons. It’s been doing that for the last 14 years, capturing thousands of stunning photographs of Saturn and it’s moons and has travelled over 1 billion miles since launch, but unfortunately Cassini is approaching the end of it’s fantastic journey. On September 15th 2017, Cassini will dive into Saturn’s atmosphere, destroying the spacecraft in the process. This method was chosen because it is imperative to ensure protection and prevent biological contamination to any of the moons of Saturn thought to offer potential habitability.</p><p>Since November 30th 2016, Cassini has been going in and out of Saturn’s rings once every week, collecting data and photographing the ‘inside’ of the rings. No man-made spacecraft had ever attempted this before, and we got some incredible photos from it.</p><p>YESTERDAY, Cassini began it’s grand finale and took its first dive into Saturn’s atmosphere. Cassini reached 1900 miles above the top of Saturn’s clouds, and has been able to transmit stunning images of Saturn’s atmosphere. The photo’s attached to this post are from both the ring fly-by’s and some are photo’s NASA released yesterday from Cassini’s first dive. I love talking and sharing about this sort of stuff, as does everyone else! (Please let me know if you noticed any errors in my text, or if you have any comments or knowledge to bless me with, please do that)</p><p>I don’t think enough people know about the Cassini-Huygens mission and it's discoveries, and there’s a lot more that can be talked about, but unfortunately 'this margin is too small' to contain my ramblings. It will be regarded as one of the most successful space-related missions ever, so I thought this would be worth sharing since Cassini is still alive and it’s still gathering data, making new discoveries everyday and taking incredible photographs for the whole world to see. The fact that this isn't trending on any social medias, but politics crap about Donald Trump is constantly trending disgusts me, and that's my reason for making this post, to let people know these amazing scientific adventures are always happening, but for some bizarre reason we are all so focused on negativity and spread around social medias. Humans are clever, and can do amazing things, the Cassini mission is a great example amongst many other past and future missions. So yeah, don't forget to put September 15th 2017 in your calendar! It will be a very sad but exciting Friday. Thanks for reading 😊</p><p><a href='https://saturn.jpl.nasa.gov/galleries/raw-images/'>Over 300,000 raw images from Cassini, updated everyday</a></p><p><a href='https://www.youtube.com/watch?v=xrGAQCq9BMU'>A great video about Cassini's grand finale, by NASA themselves</a></p><p><a href='https://www.youtube.com/watch?v=CDGrhJ4kjFk'>Excellent video from a great educational channel</a></p><p><a href='https://www.youtube.com/watch?v=G0g4L6a6Ns4'>A fantastic Cassini news conference (4th April 2017):</a></p><p><a href='https://www.youtube.com/watch?v=_9GY6njkMI8&t=0s'>Good video about Cassini's grand finale, including a fun artsy compilation using NASA's Cassini photographs, from a terrible YouTube channel about conspiracy theories and unbelievably dumb ancient alien videos, but he made a good video this time</a></p>",
+            content: "<p>NASA's Cassini spacecraft embarked on an epic 7 year voyage to Saturn. Cassini was launched in 1997 and arrived at Saturn in 2004.</p>\
+                        <h3>Huygens Titan lander</h3>\
+                        <p>So we landed a spacecraft on Titan (one of Saturn's many moons!) It happened on July 1st 2004. Here's a <a href=\"https://www.youtube.com/watch?v=svmGxFaGILY\">ridiculously insane video</a> of the 2h 27m descent.</p>\
+                        <p>The Huygens probe landed just off the easternmost tip of a region called Adiri. Adiri is packed with lakes and islands.</p>\
+                        <picture class=\"img\">\
+                            <img width=600 height=400 src=\"https://i.ytimg.com/vi/svmGxFaGILY/maxresdefault.jpg\" />\
+                        </picture>\
+                        <p>The lakes of Titan are not comprised of liquid water though, but rather hydrocarbon fluids. The stuff we power our cars with. \"hundreds of times more natural gas and other liquid hydrocarbons than all the known oil and natural gas reserves on Earth\". It has been proven that Titan contains about 300 times the volume of Earth's proven oil reserves.</p>\
+                        <p>Calculations indicate wind speeds of less than 1 metre per second. We thought this would create some waves across the lakes, but none were observed.</p>\
+                        <p>It also rains liquid methane... Organic compounds are produced by ultraviolet radiation in the atmosphere, and the rain deposits all these compounds onto the surface forming the lakes. There is no reason why complex organic chemistry that gives rise to bacterial life could not emerge in this atmosphere.</p>\
+                        <p>Titan is also home to cryovolcanoes, which also contribute to adding methane to the atmosphere.</p>\
+                        <p>On Titan, the little sunlight it gets allows only about one centimeter of evaporation per year (versus one meter of water on Earth), but the atmosphere can hold the equivalent of about 10 meters of liquid before rain forms (versus about 2 cm on Earth). So Titan's weather is expected to feature downpours of several meters causing flash floods, interspersed by decades or centuries of drought (whereas typical weather on Earth includes a little rain most weeks). Cassini has observed equatorial rainstorms only once since 2004. Despite this, a number of long-standing tropical hydrocarbon lakes were unexpectedly discovered in 2012. This may explain the reason for the strange reappearance and disappearance of small islands which Cassini saw happening.</p>\
+                        <picture class=\"img\">\
+                            <img width=300 height=400 src=\"https://media.npr.org/assets/img/2017/10/16/titan-41d62a75c7b7376fe8ff872bb1deec3bc24a4a14.jpeg\" />\
+                        </picture>\
+                        <p>Titan is thought to be a prebiotic environment rich in complex organic chemistry. It has been suggested that life could exist in the lakes of liquid methane on Titan, just as organisms on Earth live in water. Such organisms would inhale H2 in place of O2, metabolize it with acetylene instead of glucose, and exhale methane instead of carbon dioxide.</p>\
+                        <p>When the spacecraft landed, it felt the surface as similar to a slightly more absorbent, sludgy mud texture... This is a photograph Huygens took when it landed!!!!</p>\
+                        <picture class=\"img\">\
+                            <img width=200 height=100 src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Huygens_surface_color_sr.jpg/200px-Huygens_surface_color_sr.jpg\" />\
+                        </picture>\
+                        <p>Huygens Titan lander remains the most distant landing of any human made spacecraft EVER.</p>\
+                        <p>We have even mapped the surface of Titan since then!</p>\
+                        <picture class=\"img\">\
+                            <img width=600 height=400 src=\"https://3iom3142cnb81rlnt6w4mtlr-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/fig1-7.jpg\" alt=\"https://aasnova.org/2018/05/21/bubbles-in-titans-seas/\" />\
+                        </picture>\
+                        <p>Unfortunately it's probably too cold on the surface for life as we know it to emerge. Titan-specific life could potentially evolve to work with the cold temperatures on Titan, but it's an unknown...</p>\
+                        <p>However, what about when the Sun expands into a red giant? Suddenly, Titan will start receiving much more heat and won't be as cold!</p>\
+                        <p>Temperatures could potentially be high enough to melt the ice mountains, allowing liquid water to flow into the liquid methane lakes which would of evaporated due to heat. The building blocks for DNA, RNA, proteins and cells could form. These chemical reactions could one day give rise to unique complex life.</p>\
+                        <p>In other words, Titan will become an Earth-like oasis when the Sun is dying. Our Earth will be long gone, but perhaps Titan will be the place to be when it goes supernova.</p>\
+                        <p>This Earth-like period could last anywhere between 100,000,000 - 500,000,000 years. Possibly not long enough for intelligent life to emerge, but long enough for some life to develop.</p>\
+                        \
+                        <h3>Enceladus</h3>\
+                        <p>In 2004, Cassini observed geyser tendrils bursting jets of icy particles from Enceladus’s south polar region at speeds of 1,360mph.</p>\
+                        <p>The geysers shoot out water vapor, other volatiles, and solid material, including sodium chloride crystals and ice particles, into space, totaling approximately 200 kilograms (440 lb) per second. This indicates geothermal energy.</p>\
+                        <p>In 2014 Cassini confirmed the existence of a deep, warm, sub-surface ocean making it a prime suspect for life elsewhere in our Solar System.</p>\
+                        <picture class=\"img\">\
+                            <img width=600 height=400 src=\"https://solarsystem.nasa.gov/system/news_items/main_images/13148_Enceladus_plumes-16x9-rotated-180.jpg\" alt=\"https://solarsystem.nasa.gov/news/13148/complex-organics-bubble-up-from-ocean-world-enceladus/\" />\
+                        </picture>\
+                        <p>Enceladus’s ocean is 10-30km deep, whilst Earth’s average ocean depth is a mere 3.7km.</p>\
+                        <p>In order for the liquid water to be useful, and be a source of life creating stuff, it needs to react with a rocky surface. Luckily, Enceladus has a rocky core, meaning geothermal reactions like the ones in Earth's oceans are likely happening as we speak.</p>\
+                        <p>This makes Enceladus the most likely candidate for extra terrestrial life in our solar system. Astrobiologists are almost certain extremophiles could develop in Enceledus's ocean.</p>\
+                        <picture class=\"img\">\
+                            <img width=600 height=400 src=\"https://solarsystem.nasa.gov/system/content_pages/main_images/1534_50_Enceladus_768.jpg\" alt=\"https://solarsystem.nasa.gov/missions/cassini/science/enceladus/\" />\
+                        </picture>\
+                        \
+                        <h3>The end of Cassini's mission</h3>\
+                        <p>Cassini’s main missions was to observe and collect data about Saturn and it's moons. It’s been doing that for the last 14 years, capturing thousands of stunning photographs of Saturn and it’s moons and has travelled over 1 billion miles since launch, but unfortunately Cassini is approaching the end of it’s fantastic journey. On September 15th 2017, Cassini will dive into Saturn’s atmosphere, destroying the spacecraft in the process. This method was chosen because it is imperative to ensure protection and prevent biological contamination to any of the moons of Saturn thought to offer potential habitability.</p>\
+                        <p>\
+                            Since November 30th 2016, Cassini has been going in and out of Saturn’s rings once every week, collecting data and photographing the ‘inside’ of the rings. No man-made spacecraft had ever attempted this before, and we got\
+                            \some <a href=\"https://www.youtube.com/watch?v=ROJOnOPHFvo\">incredible photos</a> from this final phase of the mission. NASA have also provided us with <a href=\"https://saturn.jpl.nasa.gov/galleries/raw-images/\">thousands of raw images</a> from Cassini.\
+                        </p>\
+                        <picture class=\"img\">\
+                            <img width=400 height=200 src=\"https://solarsystem.nasa.gov/internal_resources/1910/\" />\
+                        </picture>\
+                        <p>YESTERDAY, Cassini began it’s grand finale and took its first dive into Saturn’s atmosphere. Cassini reached 1900 miles above the top of Saturn’s clouds, and has been able to transmit stunning images of Saturn’s atmosphere. The photo’s attached to this post are from both the ring fly-by’s and some are photo’s NASA released yesterday from Cassini’s first dive. I love talking and sharing about this sort of stuff, as does everyone else! (Please let me know if you noticed any errors in my text, or if you have any comments or knowledge to bless me with, please do that)</p>\
+                        <p>I don’t think enough people know about the Cassini-Huygens mission and it's discoveries, and there’s a lot more that can be talked about, but unfortunately 'this margin is too small' to contain my ramblings. It will be regarded as one of the most successful space-related missions ever, so I thought this would be worth sharing since Cassini is still alive and it’s still gathering data, making new discoveries everyday and taking incredible photographs for the whole world to see. The fact that this isn't trending on any social medias, but politics crap about Donald Trump is constantly trending disgusts me, and that's my reason for making this post, to let people know these amazing scientific adventures are always happening, but for some bizarre reason we are all so focused on negativity and spread around social medias. Humans are clever, and can do amazing things, the Cassini mission is a great example amongst many other past and future missions. So yeah, don't forget to put September 15th 2017 in your calendar! It will be a very sad but exciting Friday. Thanks for reading 😊</p>\
+                        <p><a href='https://www.youtube.com/watch?v=xrGAQCq9BMU'>A great video about Cassini's grand finale, by NASA themselves</a></p>\
+                        <p><a href='https://www.youtube.com/watch?v=CDGrhJ4kjFk'>Excellent video from a great educational channel</a></p>\
+                        <p><a href='https://www.youtube.com/watch?v=G0g4L6a6Ns4'>A fantastic Cassini news conference (4th April 2017):</a></p>\
+                        <p><a href='https://www.youtube.com/watch?v=_9GY6njkMI8&t=0s'>Good video about Cassini's grand finale, including a fun artsy compilation using NASA's Cassini photographs, from a terrible YouTube channel about conspiracy theories and unbelievably dumb ancient alien videos, but he made a good video this time</a></p>",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "A summary the amazing history and dramatic conclusion to NASA's Cassini spacecraft mission",
             tags: ["Astronomy"]
@@ -366,11 +425,229 @@ const initState = {
         {
             id: "24",
             date: "30 Sep 2022",
-            title: "My favourite quotes",
-            content: "blah",
+            title: "The Messiah's Handbook",
+            content: "<ul class=\"messiahs-handbook\">\
+                        <li>\
+                            <p class=\"quote-str\">\"When you are faced with the possibility of an early death, it makes you realise that there are lots of things you want to do before your life is over.\"</p>\
+                            <p class=\"quote-person\">Stephen Hawking</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Most people are never going to die because they're never going to be born.\"</p>\
+                            <p class=\"quote-person\">Richard Dawkins</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Action expresses priorities.\"</p>\
+                            <p class=\"quote-person\">Gandhi</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"When you are faced with the possibility of an early death, it makes you realise that there are lots of things you want to do before your life is over.\"</p>\
+                            <p class=\"quote-person\">Stephen Hawking</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Either we are alone in the Universe or we are not. Both are equally terrifying.\"</p>\
+                            <p class=\"quote-person\">Arthur C. Clarke</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"The gulls who scorn perfection for the sake of travel go nowhere, slowly. Those who put aside travel for the sake of perfection go anywhere, instantly..\"</p>\
+                            <p class=\"quote-person\">Chiang</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"A river cuts through rock, not because of its power, but because of its persistence.\"</p>\
+                            <p class=\"quote-person\">James N. Watkins</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Twenty years from now you will be more disappointed by the things that you didn't do than by the ones that you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.\"</p>\
+                            <p class=\"quote-person\">Minecraft end game credits</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Let everything happen to you. Beauty and terror. Just keep going. No feeling is final.\"</p>\
+                            <p class=\"quote-person\">Rainer Maria Rilke</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Look again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love,  every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every superstar, every supreme leader,  every saint and sinner in the history of our species lived there-on a mote of dust suspended in a sunbeam.\"</p>\
+                            <p class=\"quote-person\">Carl Sagan</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Learning is finding out what you already know. Doing is demonstrating that you already know it. Teaching is reminding others that they know just as well as you. You are all learners, doers, teachers.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Your only obligation in any lifetime is to be true to yourself. Being true to anyone else or anything else is not only impossible, but the mark of a fake messiah.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"The simplest questions are the most profound. Where were you born? Where is your home? Where are you going? What are you doing? Think about these once in a while, and watch your answers change.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Happiness is not a station you arrive at, but a manner of travelling.\"</p>\
+                            <p class=\"quote-person\">Margaret Lee Runbeck</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Everything has its wonders, even darkness and silence... and I learn, whatever state I may be in, therin to be content.\"</p>\
+                            <p class=\"quote-person\">Hellen Keller</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"We are all born in cages with the door open. It's up to us to choose whether we leave the comfort of that cage to seek adventure.\"</p>\
+                            <p class=\"quote-person\">Dean Karnazes</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Failure is the opportunity to begin again. Only this time, more wisely.\"</p>\
+                            <p class=\"quote-person\">Kung Fu Panda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"However bad life may seem, there is always something you can do, and succeed at. While there's life, there is hope.\"</p>\
+                            <p class=\"quote-person\">Stephen Hawking</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Everything in this book may be wrong.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Focussing and investing yourself into something you are passionate about will always yield better results, than scattering yourself, spreading yourself thin and trying to focus on too many passions at once.\"</p>\
+                            <p class=\"quote-person\">Casey Neistat</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Any powerful idea is absolutely fascinating and absolutely useless until you decide to put it to work.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Everything is exactly as it is for a reason. The crumb on your table is no mystical reminder of this morning's cookie, it is there because you have chosen not to remove it. No exceptions.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"I do not exist to impress the world. I exist to live my life in a way that will make me happy.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"You're always free to change your mind and choose a different future, or a different past.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"'You don't do anything. Cosmic Law, remember? Like attracts like. Just be who you are, calm and clear and bright. Automatically, as we shine who we are, asking ourselves every minute is this what I really want to do, doing it only when we answer yes, automatically that turns away those who have nothing to learn from who we are and attracts those who do, and from whom we have to learn, as well.' 'But that takes a lot of faith, and meanwhile you get pretty lonely.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"You are led through your lifetime by the inner learning creature, the playful spiritual being that is your real self. Don't turn away from possible futures before you're certain you don't have anything to learn from them. You're always free to change your mind and choose a different future, or a different past.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"If a problem can be solved there is no use worrying about it. If it can't be solved, worrying will do no good.\"</p>\
+                            <p class=\"quote-person\">Donald Shimoda</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Don't be afraid to admit when you don't know something. The smartest people out there are also the ones learning the most each day.\"</p>\
+                            <p class=\"quote-person\">Captian Sparklez</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"You are in danger of living a life so comfortable and soft, that you will die without ever realizing your true potential.\"</p>\
+                            <p class=\"quote-person\">David Goggins</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"I run because if I didn’t, I’d be sluggish and glum and spend too much time on the couch. I run to breathe the fresh air. I run to explore. I run to escape the ordinary. I run to savor the trip along the way. Life becomes a little more vibrant, a little more intense. I like that.\"</p>\
+                            <p class=\"quote-person\">Dean Karnazes</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"These days, there are angry ghosts all around us - dead from wars, sickness, starvation - and nobody cares. So you say you're under a curse? So what? So's the whole damn world.\"</p>\
+                            <p class=\"quote-person\">Jigo, from Princess Mononoke</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"The secret of getting ahead is getting started.\"</p>\
+                            <p class=\"quote-person\">Mark Twain</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"But remember this, Japanese boy - airplanes are not tools for war, they are not for making money. Airplanes are beautiful dreams. Engineers turn dreams into reality.\"</p>\
+                            <p class=\"quote-person\">Caproni, from The Wind Rises</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"There are days when the sun does not shine and the rain does not pour, but the sky sinks quietly into itself, wraps itself up, is gray but not black, sultry, but not with the tension of an imminent thunderstorm.\"</p>\
+                            <p class=\"quote-person\">Joseph Knecht</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"For a committed person, there is no such thing as failure, only lessons learnt.\"</p>\
+                            <p class=\"quote-person\">Nathan Steele (me!)</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Running pain is not from running itself. It's from how we interact with the ground.\"</p>\
+                            <p class=\"quote-person\">John Kelly</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Don't compete with anyone, but compete with yourself.\"</p>\
+                            <p class=\"quote-person\">Eluid Kipchoge</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"I wasted so much time worrying about what could go wrong. But what did go wrong was never the things I worried about.\"</p>\
+                            <p class=\"quote-person\">Aksel, from 'The Worst Person in the World'</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"At my age the candles cost more than the cake. I'm not afraid of dying. I'm afraid I haven't been alive enough. It should be written on every school room blackboard: Life is a playground, or nothing.\"</p>\
+                            <p class=\"quote-person\">Nemo, from Mr Nobody</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"There comes a time in life where everything seems narrow. Choices have been made. I can only continue on. I know myself like the back of my hand. I can predict my every reaction. My life has been cast in cement with airbags and seatbelts. I've done everything to reach this point and now that I'm here, I'm fucking bored. The hardest thing is knowing whether I'm still alive.\"</p>\
+                            <p class=\"quote-person\">Nemo, from Mr Nobody</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Every path is the right path. Everything could've been anything else. And it would have just as much meaning.\"</p>\
+                            <p class=\"quote-person\">Nemo, from Mr Nobody</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"If you hear a voice within you saying 'you cannot paint', then by all means paint, and that voice will be silenced.\"</p>\
+                            <p class=\"quote-person\">Vincent Van Gogh</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Happiness can be found even in the darkest of times if one remembers to turn on the light.\"</p>\
+                            <p class=\"quote-person\">Albus Dumbledore</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"The pursuit of looking young accentuates the fear of growing old. So maybe if we embraced growing old, embraced our wrinkles and other people's wrinkles, maybe marketers would have less fear to work with and magnify.\"</p>\
+                            <p class=\"quote-person\">Matt Haig</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"People have forgotten what life is all about, they've forgotten what it feels like to be alive! They need to be reminded about what they have, and what they could loose.\"</p>\
+                            <p class=\"quote-person\">Leonard, from Awakening</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"How lucky I am to have something that makes saying goodbye hard.\"</p>\
+                            <p class=\"quote-person\">Winnie The Pooh</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Free time is the enemy of progress.\"</p>\
+                            <p class=\"quote-person\">Casey Neistat</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"I have no special talent. I am passionately curious.\"</p>\
+                            <p class=\"quote-person\">Albert Einstein</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"I'm not running away. But this is one corner in one country in one continent in one planet that's a corner of a galaxy that is a corner of a universe that is forever growing and shrinking and creating and destroying and never remaining the same for a single millisecond. And this is so much, SO MUCH, to see, Amy. Because it goes so fast. I'm not running away from things. I'm running to them before they flare and fade forever. That's all right. Our lives would never remain the same. They can't. One day, soon maybe, you'll stop. I've known for a while.\"</p>\
+                            <p class=\"quote-person\">Doctor Who</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Talent is pursued interest. In other words, anything that you're willing to practice, you can do.\"</p>\
+                            <p class=\"quote-person\">Bob Ross</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Life is suffering. It is hard. The world is cursed. But still, you find reasons to keep living.\"</p>\
+                            <p class=\"quote-person\">Osa, from Princess Mononoke</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"This great evil, where's it come from? How'd it steal into the world? What seed, what root did it grow from? Who's doing this? Who's killing us, robbing us of life and light, mocking us with the sight of what we might've known? Does our ruin benefit the earth, does it help the grass to grow, the sun to shine? Is this darkness in you, too? Have you passed through this night?.\"</p>\
+                            <p class=\"quote-person\">Edward Train, from The Thin Red Line</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"In later chapters, the Universe will seem different. The expansion of spacetime will make distant stars invisible, and the night skies will go dark. Perhaps life in the far future will wonder what it was like to live in the Universe's brilliant early days? We are lucky enough to know the answer. All we have to do is look up.\"</p>\
+                            <p class=\"quote-person\">Melodysheep</p>\
+                        </li>\
+                        <li>\
+                            <p class=\"quote-str\">\"Don't tell me what I can't do.\"</p>\
+                            <p class=\"quote-person\">John Locke</p>\
+                        </li>\
+                    </ul>\
+                    ",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "A list of my favourite quotes",
-            tags: ["Docs"]
+            tags: ["Notes"]
         },
         {
             id: "25",
