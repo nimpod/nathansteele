@@ -107,10 +107,18 @@ class Navbar extends Component {
                             </NavLink>
                         </div>
                         <nav className="website-links">
-                             <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">Projects</Link>
-                            <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">Blog</NavLink>
-                            <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">University</NavLink>
-                            <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">Notes</NavLink>
+                            <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                                <span>Projects</span>
+                            </Link>
+                            <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                                <span>Blog</span>
+                            </NavLink>
+                            <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                                <span>University</span>
+                            </NavLink>
+                            <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                                <span>Notes</span>
+                            </NavLink>
                         </nav>
                     </div>
                     

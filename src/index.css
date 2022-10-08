@@ -329,13 +329,20 @@ svg:not(:root) {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 700px) { 
+  .website-links a:hover { cursor: default; } 
+  .website-links a span:hover { cursor: pointer; } 
+}
+
+@media screen and (max-width: 340px) { #nav .nav-wrapper { font-size: 0.9rem; }}
+@media screen and (max-width: 290px) { #nav .nav-wrapper { font-size: 0.7rem; }}
+
 /* target every link in the entire #nav */
 #nav .nav-wrapper a {
   color: var(--nav-item-text) !important;
   text-decoration: none !important;
 }
-#nav .nav-wrapper a:hover {
-  cursor: pointer;
+#nav .nav-wrapper a span:hover {
   border-bottom: 3px solid var(--nav-item-border-bottom-hover);
 }
 #nav .nav-wrapper a.active {
@@ -873,6 +880,15 @@ table tr, table tr a {
   text-align: left; 
 }
 
+@media screen and (max-width: 700px) { 
+  table tr a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+  }
+}
+
 table thead { 
   text-align: center;
   background-color: var(--blog-table-thead-bg);
@@ -1028,8 +1044,7 @@ table tbody tr:hover {
 .blog-post-tags > * {
 }
 
-/* shift the some of the stuff in the blog-post-info container left a bit */
-.blog-post-title, .blog-post-date, .blog-post-tags {
+.blog-post-date, .blog-post-tags {
   margin-left: 15px;
 }
 
@@ -1038,6 +1053,7 @@ table tbody tr:hover {
   color: inherit;
   border: 2px solid transparent;
   border-radius: 10px;
+  margin-left: -5px;
 }
 .back-to-previous-page svg.invertable-icon {
   width: 38px;
@@ -1473,6 +1489,69 @@ pre.prettyprint span.kwd::before {
   padding: 6px;
 }
 
+
+/* -------------------------<9.1: Favourite quotes page>------------------------- */
+ul.messiahs-handbook {
+  list-style-type: none;
+  display: grid;
+  left: 0;
+  position: absolute;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+ul.messiahs-handbook li {
+  margin: 1px;
+  padding: 0 7px;
+  font-family: 'Roboto';
+  border-radius: 0px;
+  opacity: 0.75;
+  border: 2px solid rgba(141, 128, 128, 0);
+  /*
+  border: 2px solid rgba(22, 21, 22, 0.448);
+  height: fit-content;
+  width: fit-content;
+  align-self: center;
+  */
+}
+ul.messiahs-handbook li:hover {
+  opacity: 1.0;
+  border: 2px dashed var(--contact-btn-border-colour);
+}
+ul.messiahs-handbook li > p {
+  display: inline;
+}
+ul.messiahs-handbook p.quote-str {
+  font-size: 18px;
+  font-style: italic;
+  display: block;
+  text-align: left;
+}
+ul.messiahs-handbook p.quote-person {
+  font-size: 15px;
+  font-style: oblique;
+  font-weight: bolder;
+  display: block;
+  text-align: right;
+}
+
+.blog-post img {
+  border-radius: 8px;
+  height: auto;
+  max-height: 100%;
+}
+
+.blog-post img {
+  margin: 2em 0;
+}
+.blog-post img, .blog-post picture {
+  display: block;
+}
+.line {
+  border: 1px solid var(--blog-post-divider-color);
+  border-style: dotted;
+}
+
+
 /* ------------------------------------------<10: MEDIA QUERIES>------------------------------------------ */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
@@ -1527,6 +1606,7 @@ pre.prettyprint span.kwd::before {
 @media screen and (max-width: 900px) { .projects-container { padding: 0px 5px; } }
 
 @media screen and (max-width: 700px) { .page-title{ font-size: 2.4rem !important; } }
+@media screen and (max-width: 400px) { .page-title{ font-size: 1.8rem !important; } }
 
 @media screen and (max-width: 700px) { .blog-post-title, .blog-post-date, .blog-post-tags { margin-left: 50px; } }
 
@@ -1537,7 +1617,6 @@ pre.prettyprint span.kwd::before {
 @media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } .blog-post-title { font-size: 2.5rem; } }
 @media only screen and (max-width: 900px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.4rem; } }
 @media only screen and (max-width: 800px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.3rem; } .blog-post-content p { font-size: 0.9rem; } }
-
 
 
 /* ------------------------------------------<11: ANIMATIONS>------------------------------------------ */
@@ -1630,66 +1709,4 @@ body::-webkit-scrollbar-thumb {
 }
 ::-moz-selection {
   background: var(--text-highlight-color); /* Gecko Browsers */
-}
-
-
-/* ------------------------------------------<15: FAVOURITE QUOTES>------------------------------------------ */
-ul.messiahs-handbook {
-  list-style-type: none;
-  display: grid;
-  left: 0;
-  position: absolute;
-  grid-template-columns: repeat(4, 1fr);
-}
-ul.messiahs-handbook li {
-  margin: 1px;
-  padding: 0 7px;
-  font-family: 'Roboto';
-  border-radius: 0px;
-  opacity: 0.75;
-  border: 2px solid rgba(141, 128, 128, 0);
-  /*
-  border: 2px solid rgba(22, 21, 22, 0.448);
-  height: fit-content;
-  width: fit-content;
-  align-self: center;
-  */
-}
-ul.messiahs-handbook li:hover {
-  opacity: 1.0;
-  border: 2px dashed var(--contact-btn-border-colour);
-}
-ul.messiahs-handbook li > p {
-  display: inline;
-}
-ul.messiahs-handbook p.quote-str {
-  font-size: 18px;
-  font-style: italic;
-  display: block;
-  text-align: left;
-}
-ul.messiahs-handbook p.quote-person {
-  font-size: 15px;
-  font-style: oblique;
-  font-weight: bolder;
-  display: block;
-  text-align: right;
-}
-
-.blog-post img {
-  border-radius: 8px;
-  height: auto;
-  max-height: 100%;
-}
-
-.blog-post img {
-  margin: 2em 0;
-}
-.blog-post img, .blog-post picture {
-  display: block;
-}
-
-.line {
-  border: 1px solid var(--blog-post-divider-color);
-  border-style: dotted;
 }
