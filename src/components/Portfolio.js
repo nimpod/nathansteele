@@ -158,10 +158,12 @@ const particlesConfig =
 const Portfolio = (props) => {
     return (
         <div className="page-wrapper portfolio">
+            {/*
             <div id="particles-js">
                 <Particles params={particlesConfig} />
             </div>
-            
+            */}
+
             <section id="about">
                 <p>Hi, I'm</p>
                 <h1>Nathan Steele</h1>

@@ -369,26 +369,25 @@ svg:not(:root) {
 
 /* styling the svg logo */
 svg.logo {
-  width: 60px;
-  height: 60px;
-  stroke: rgb(26, 9, 39);
-  stroke-width: 0.1px;
-  stroke-opacity: 0.11;
+  width: 40px;
+  height: 40px;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 31.1px;
+  stroke-opacity: 1110.11;
   z-index: 10;
-  fill-opacity: 1;
 }
-svg.logo path:nth-of-type(3n+0) {  fill: rgb(21, 124, 47); }
-svg.logo path:nth-of-type(3n+1) {  fill: rgb(93, 218, 114); }
-svg.logo path:nth-of-type(3n+2) {  fill: rgba(7, 7, 7, 0); }
+svg.logo path {
+  fill: #73DC8C;
+}
 
 svg.logo path:hover ~ * {
-  fill-opacity: 0.1;
-  fill: rgba(17, 14, 221, 0.234);
-  stroke-width: 5.1px;
+  fill-opacity: 1.5;
+  fill: rgba(225, 255, 236, 0.935);
+  transition: fill 350ms ease;
 }
 svg.logo:active path {
-  fill: rgb(20, 35, 49);
-  transition: all 350ms ease;
+  fill: rgba(64, 107, 89, 0.897);
+  transition: fill 350ms ease;
 }
 
 #nav .nav-wrapper .nav-right > * {

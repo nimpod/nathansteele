@@ -10,6 +10,11 @@ import RootReducer from './reducers/RootReducer';
 
 
 const myStore = createStore(RootReducer);
-ReactDOM.render(<Provider store={myStore}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={myStore}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+);
 
 // serviceWorker.unregister();

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { Link } from 'react-scroll';
-import { ReactComponent as Logo } from "../icons/logo.svg";
+import { ReactComponent as Logo } from "../icons/logoNew.svg";
 import { ReactComponent as DarkThemeIcon } from "../icons/moon.svg";
 import { ReactComponent as LightThemeIcon } from "../icons/sun.svg";
 import { ReactComponent as ThreeDotsIcon } from "../icons/threeDots.svg";
@@ -102,14 +102,25 @@ class Navbar extends Component {
                     <div className="nav-left">
                         <div className="website-logo-container">                            
                             <NavLink to="/" className="navlink">
-                                {/* <Logo className="logo" /> */}
-                                /nimpod.github.io
+                                <Logo className="logo" />
                             </NavLink>
                         </div>
                         <nav className="website-links">
                             <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
                                 <span>Projects</span>
                             </Link>
+                            <NavLink to="/aboutme" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                                <span>About me</span>
+                            </NavLink>
+                            <NavLink to="/films" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                                <span>Films</span>
+                            </NavLink>
+                            <NavLink to="/music" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                                <span>Music</span>
+                            </NavLink>
+                            <NavLink to="/art" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                                <span>Art</span>
+                            </NavLink>
                             <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
                                 <span>Blog</span>
                             </NavLink>
