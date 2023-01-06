@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/nathansteele/static/css/main.de513e9c.chunk.css",
-    "main.js": "/nathansteele/static/js/main.6a123202.chunk.js",
-    "main.js.map": "/nathansteele/static/js/main.6a123202.chunk.js.map",
+    "main.css": "/nathansteele/static/css/main.fc64dd42.chunk.css",
+    "main.js": "/nathansteele/static/js/main.ade9232c.chunk.js",
+    "main.js.map": "/nathansteele/static/js/main.ade9232c.chunk.js.map",
     "runtime-main.js": "/nathansteele/static/js/runtime-main.a2f3e498.js",
     "runtime-main.js.map": "/nathansteele/static/js/runtime-main.a2f3e498.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/nathansteele/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.7cdaeac1.chunk.js": "/nathansteele/static/js/2.7cdaeac1.chunk.js",
-    "static/js/2.7cdaeac1.chunk.js.map": "/nathansteele/static/js/2.7cdaeac1.chunk.js.map",
+    "static/js/2.6ebe6174.chunk.js": "/nathansteele/static/js/2.6ebe6174.chunk.js",
+    "static/js/2.6ebe6174.chunk.js.map": "/nathansteele/static/js/2.6ebe6174.chunk.js.map",
     "index.html": "/nathansteele/index.html",
-    "precache-manifest.76ff5e441e33fd1db15bf1a9e775e0c5.js": "/nathansteele/precache-manifest.76ff5e441e33fd1db15bf1a9e775e0c5.js",
+    "precache-manifest.6fd20a1582418857451c488ca7c3f987.js": "/nathansteele/precache-manifest.6fd20a1582418857451c488ca7c3f987.js",
     "service-worker.js": "/nathansteele/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/nathansteele/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.de513e9c.chunk.css.map": "/nathansteele/static/css/main.de513e9c.chunk.css.map",
-    "static/js/2.7cdaeac1.chunk.js.LICENSE.txt": "/nathansteele/static/js/2.7cdaeac1.chunk.js.LICENSE.txt",
+    "static/css/main.fc64dd42.chunk.css.map": "/nathansteele/static/css/main.fc64dd42.chunk.css.map",
+    "static/js/2.6ebe6174.chunk.js.LICENSE.txt": "/nathansteele/static/js/2.6ebe6174.chunk.js.LICENSE.txt",
     "static/media/arrowDown.99634c62.svg": "/nathansteele/static/media/arrowDown.99634c62.svg",
     "static/media/arrowLeft.13aa582e.svg": "/nathansteele/static/media/arrowLeft.13aa582e.svg",
     "static/media/arrowRightTriangle.1daa6e9b.svg": "/nathansteele/static/media/arrowRightTriangle.1daa6e9b.svg",
@@ -26,7 +26,7 @@
     "static/media/grid.642adad6.svg": "/nathansteele/static/media/grid.642adad6.svg",
     "static/media/hamburgerMenu.a8d16ac1.svg": "/nathansteele/static/media/hamburgerMenu.a8d16ac1.svg",
     "static/media/list.1c5ae1f6.svg": "/nathansteele/static/media/list.1c5ae1f6.svg",
-    "static/media/logo.13387b86.svg": "/nathansteele/static/media/logo.13387b86.svg",
+    "static/media/logoNew.f9f4088c.svg": "/nathansteele/static/media/logoNew.f9f4088c.svg",
     "static/media/moon.47f6d10f.svg": "/nathansteele/static/media/moon.47f6d10f.svg",
     "static/media/mosaics-of-videos.png": "/nathansteele/static/media/mosaics-of-videos.a858265c.png",
     "static/media/pc.jpg": "/nathansteele/static/media/pc.d63300bc.jpg",
@@ -38,8 +38,8 @@
   "entrypoints": [
     "static/js/runtime-main.a2f3e498.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.7cdaeac1.chunk.js",
-    "static/css/main.de513e9c.chunk.css",
-    "static/js/main.6a123202.chunk.js"
+    "static/js/2.6ebe6174.chunk.js",
+    "static/css/main.fc64dd42.chunk.css",
+    "static/js/main.ade9232c.chunk.js"
   ]
 }
