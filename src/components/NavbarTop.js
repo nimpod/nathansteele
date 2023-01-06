@@ -8,7 +8,7 @@ import { ReactComponent as ThreeDotsIcon } from "../icons/threeDots.svg";
 import { ReactComponent as HamburgerMenuIcon } from "../icons/hamburgerMenu.svg";
 
 
-class Navbar extends Component {
+class NavbarTop extends Component {
     
     /**
      * when the user is not on the homepage, the 'About' and 'Projects' navbar buttons will get redirected to 'index.html'
@@ -69,11 +69,11 @@ class Navbar extends Component {
 
     /* allows user to open and close the mobile view of the navigation menu */
     toggleMenu() {
-        document.getElementById('nav').classList.toggle('active');
+        document.getElementById('nav-top').classList.toggle('active');
     }
 
     componentDidMount() {
-        let nav = document.getElementById("nav");
+        let nav = document.getElementById("nav-top");
         let lastScrollTop = 0;
 
         if (nav !== null) {
@@ -97,56 +97,49 @@ class Navbar extends Component {
      */
     render() {
         return (
-            <header id="nav" className="animated faster slideInUp">
-                <div className="nav-wrapper section-inner">
-                    <div className="nav-left">
-                        <div className="website-logo-container">                            
-                            <NavLink to="/" className="navlink">
-                                <Logo className="logo" />
-                            </NavLink>
-                        </div>
-                        <nav className="website-links">
-                            <Link to="projects" spy={true} smooth={true} offset={0} duration={400} onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                                <span>Projects</span>
-                            </Link>
-                            <NavLink to="/aboutme" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                                <span>About me</span>
-                            </NavLink>
-                            <NavLink to="/films" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                                <span>Films</span>
-                            </NavLink>
-                            <NavLink to="/music" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                                <span>Music</span>
-                            </NavLink>
-                            <NavLink to="/art" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                                <span>Art</span>
-                            </NavLink>
-                            <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                                <span>Blog</span>
-                            </NavLink>
-                            <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                                <span>University</span>
-                            </NavLink>
-                            <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">
-                                <span>Notes</span>
-                            </NavLink>
-                        </nav>
+            <header id="nav-top" className="animated faster slideInUp">
+                <div className="nav-left">
+                    <nav className="website-links">
+                        <NavLink to="/aboutme" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <span>About me</span>
+                        </NavLink>
+                        <NavLink to="/films" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <span>Films</span>
+                        </NavLink>
+                        <NavLink to="/music" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <span>Music</span>
+                        </NavLink>
+                        <NavLink to="/art" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <span>Art</span>
+                        </NavLink>
+                        <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <span>Blog</span>
+                        </NavLink>
+                        <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <span>University</span>
+                        </NavLink>
+                        <NavLink to="/portfolio" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <span>Portfolio</span>
+                        </NavLink>
+                        <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                            <span>Notes</span>
+                        </NavLink>
+                    </nav>
+                </div>
+                
+                <div className="nav-right">
+                    <div className="theme-toggle inline-svg-wrapper" onClick={this.switchTheme} aria-label="Click to enable dark mode" title="Click to enable dark mode7">
+                        <span className="inline-svg dark">
+                            <DarkThemeIcon />
+                        </span>
+                        <span className="inline-svg light" hidden={true}>
+                            <LightThemeIcon />
+                        </span>
                     </div>
-                    
-                    <div className="nav-right">
-                        <div className="theme-toggle inline-svg-wrapper" onClick={this.switchTheme} aria-label="Click to enable dark mode" title="Click to enable dark mode7">
-                            <span className="inline-svg dark">
-                                <DarkThemeIcon />
-                            </span>
-                            <span className="inline-svg light" hidden={true}>
-                                <LightThemeIcon />
-                            </span>
-                        </div>
-                        <div className="hamburger-menu inline-svg-wrapper" onClick={this.toggleMenu}>
-                            <span className="inline-svg">
-                                <HamburgerMenuIcon />
-                            </span>
-                        </div>
+                    <div className="hamburger-menu inline-svg-wrapper" onClick={this.toggleMenu}>
+                        <span className="inline-svg">
+                            <HamburgerMenuIcon />
+                        </span>
                     </div>
                 </div>
             </header>
@@ -154,4 +147,4 @@ class Navbar extends Component {
     }
 }
 
-export default withRouter(Navbar)
+export default withRouter(NavbarTop)

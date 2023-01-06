@@ -3,7 +3,8 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 
 // importing components for site
 import ScrollToTop from './js/ScrollToTop';
-import Navbar from './components/Navbar';
+import NavbarTop from './components/NavbarTop';
+import NavbarSide from './components/NavbarSide';
 import Portfolio from './components/Portfolio';
 
 import Notes from './components/notes/Notes';
@@ -31,13 +32,15 @@ export default class App extends Component {
             <HashRouter>
                 <div className="App">
                   <ScrollToTop />
-                  <Navbar />
+                  <NavbarSide />
+                  <NavbarTop />
 
                   <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 
                   <Switch>
-                      <Route path='/' component={Portfolio} exact />
+                      <Route path='/' exact />
                       <Route path='/university' component={University} exact />
+                      <Route path='/portfolio' component={Portfolio} exact />
                       <Route path='/blog' component={Blog} exact />
                       <Route path='/notes' component={Notes} exact />
                       <Route path='/blog/:post_id' component={BlogPost} />

@@ -163,33 +163,8 @@ const Portfolio = (props) => {
                 <Particles params={particlesConfig} />
             </div>
             */}
-
-            <section id="about">
-                <p>Hi, I'm</p>
-                <h1>Nathan Steele</h1>
-                <p>I enjoy coding, creating digital experiences, and learning about the origins of life.</p>
-                <p>Currently studying a BSc in Computer Science at Newcastle University.</p>
-                <p>
-                    I write <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>code</Link>. 
-                    I have a <NavLink to="/blog" className="navlink">blog</NavLink>. 
-                    Sometimes I'm exploring the outside world on <a href='https://www.strava.com/athletes/45999759'>Strava</a>.
-                    Other times I'm <a href='/'>drawing</a>.
-                    I also review films on <a href='https://letterboxd.com/nbofni/'>Letterboxd</a>.
-                </p>
-                <div className="smooth-scroll-btn">
-                    <Link activeClass="active" to="projects" spy={true} smooth={true} offset={0} duration={400}>
-                        <i className="fa fa-angle-down"></i>
-                    </Link>
-                </div>
-            </section>
-
             <section id="projects">
                 <div className="projects-header">
-                    <div className="smooth-scroll-btn">
-                        <Link activeClass="active" to="about" spy={true} smooth={true} offset={0} duration={400}>
-                            <i className="fa fa-angle-up"></i>
-                        </Link>
-                    </div>
                     <h2>My Projects</h2>
                     <p>A glimpse of the projects I've been working on.</p>
                 </div>

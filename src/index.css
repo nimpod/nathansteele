@@ -16,7 +16,7 @@
     13: Miscellaneous
 */
 
-/* ------------------------------------------<0: VARIABLES>------------------------------------------ */
+/* #region ----------------------------------<0: VARIABLES>---------------------------------- */
 
 /* particlejs variables */
 :root {
@@ -48,12 +48,22 @@
   --text-hyperlink: rgb(0, 123, 255);
   --text-hyperlink-hover: rgb(9, 194, 250);
 
-  --nav-bg-color: rgb(255, 255, 255);
+  --topnav-button-bg-color: rgb(234, 229, 229);
+  --topnav-button-bg-color-active: rgb(43, 39, 39);
+  --topnav-button-text-color: rgb(4, 3, 3);
+  --topnav-button-text-color-hover: rgb(255, 255, 255);
+  --topnav-button-text-color-active: rgb(54, 245, 149);
+  --button-border-color-onclick: rgb(206, 206, 206);
+
+  --logo-path-color: rgb(24, 185, 99);
+  --logo-path-color-onclick: rgba(5, 120, 72, 0.897);
+  --logo-stroke-color: rgb(26, 205, 121);
+  --logo-stroke-color-hover: rgb(244, 49, 49);
+
+  --nav-bg-color: rgb(253, 252, 251);
   --nav-shadow-color: rgba(0,0,0,.45);
   --nav-item-text: rgb(33, 33, 33);
-  --nav-item-active-color: rgb(3, 170, 140);
   --nav-item-border-bottom-hover: rgb(3, 170, 140);
-  --nav-item-theme-toggle-border-color-active: rgb(46, 26, 36);
 
   --arrow-smooth-scroll-btn: rgb(53, 53, 53);
   --arrow-smooth-scroll-btn-hover:  rgb(88, 88, 88);
@@ -128,8 +138,8 @@
 
 /** DARK MODE  **/
 [data-theme="dark"] {
-  --bg1: rgb(50, 56, 64);   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(50, 56, 64);   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg1: rgb(28, 24, 24); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: rgb(28, 24, 24); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
@@ -137,12 +147,22 @@
   --text-hyperlink: rgb(45, 206, 255);
   --text-hyperlink-hover: rgb(51, 207, 255);
   
-  --nav-bg-color: rgb(41, 42, 48);
+  --topnav-button-bg-color-active: rgb(73, 70, 70);
+  --topnav-button-bg-color: rgb(41, 39, 39);
+  --topnav-button-text-color: rgb(214, 214, 214);
+  --topnav-button-text-color-hover: rgb(255, 255, 255);
+  --topnav-button-text-color-active: rgb(0, 255, 208);
+  --button-border-color-onclick: rgb(82, 81, 81);
+
+  --logo-path-color: rgb(115, 220, 140);
+  --logo-path-color-onclick: rgba(236, 255, 230, 0.897);
+  --logo-stroke-color: rgb(0, 0, 0);
+  --logo-stroke-color-hover: rgb(0, 0, 0);
+
+  --nav-bg-color: rgb(28, 24, 24); /* rgb(41, 42, 48); */
   --nav-shadow-color: rgba(0, 0, 0, 0.748);
   --nav-item-border-bottom-hover: rgb(28, 206, 173);
   --nav-item-text: rgb(255, 255, 255);
-  --nav-item-active-color: rgb(0, 255, 208);
-  --nav-item-theme-toggle-border-color-active: rgb(160, 157, 157);
 
   --arrow-smooth-scroll-btn: rgb(141, 141, 141);
   --arrow-smooth-scroll-btn-hover: rgb(88, 88, 88);
@@ -152,7 +172,7 @@
   --project-card-text-hover: rgb(235, 235, 235);
   --project-card-text-color: var(--intro-text);
 
-  --page-wrapper-bg: rgb(50, 56, 64);
+  --page-wrapper-bg: var(--bg1);
   --page-text-color: rgba(255, 255, 255, 0.878);
   
   --blog-table-bg: var(--page-wrapper-bg);
@@ -215,30 +235,10 @@
   --scrollbar-thumb-bg-color-tags: rgb(80, 80, 80);
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */
 }
+/* #endregion */
 
 
-/* ------------------------------------------<1: SETUP>------------------------------------------ */
-html {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  line-height: 1.6;
-  letter-spacing: 0.06em;
-}
-
-body {
-  /* font-family: "Karla", sans-serif !important; */
-  /* font-family: Helvetica !important; */
-  padding: 0;
-  margin: 0;
-  background: linear-gradient(
-      180deg,
-      var(--bg1),
-      var(--bg2)
-  );
-  background-size: 400%;
-  animation: animation_name 55s ease infinite;    /* lasts 30s, eases in, and is infinite */
-}
-
+/* #region ----------------------------------<1: SETUP>---------------------------------- */
 #particles-js canvas{
   position: fixed;
   width: 100%;
@@ -254,7 +254,7 @@ body {
   text-align: center;
 }
 
-a {
+a:not(.website-logo) {
   border-bottom: 3px solid transparent;
   background-color: transparent;
   text-decoration: none;
@@ -263,7 +263,7 @@ a {
   color: var(--text-hyperlink) !important;
   opacity: 0.7;
 }
-a:hover {
+a:not(.website-logo):hover {
   text-decoration: underline !important;
   color: var(--text-hyperlink-hover) !important;
   cursor: pointer;
@@ -300,10 +300,44 @@ h1, h2, h3, .website-logo-container a {
 svg:not(:root) {
   overflow: hidden;
 }
+/* #endregion */
 
-/* ------------------------------------------<2: NAVBAR (includes top and side navigation)>------------------------------------------ */
+
+/* #region ----------------------------------<2: TOP-LEVEL CONTAINERS>---------------------------------- */
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+
+body {
+  /* font-family: "Karla", sans-serif !important; */
+  /* font-family: Helvetica !important; */
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+      180deg,
+      var(--bg1),
+      var(--bg2)
+  );
+  background-size: 400%;
+  animation: animation_name 55s ease infinite;    /* lasts 30s, eases in, and is infinite */
+}
+
+body > div#root > div.App {
+  display: flex;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  align-items: stretch;
+}
+/* #endregion */
+
+
+/* #region ----------------------------------<3: TOP NAVBAR>---------------------------------- */
 /* 
-  #nav
+  #nav-top
     .nav-wrapper
       .nav-left
         .website-logo-container
@@ -311,22 +345,16 @@ svg:not(:root) {
       .nav-right
         .theme-toggle
 */
-#nav {
-  display: inline-block;
+#nav-top {
+  display: flex;
   position: fixed;
   z-index: 1000;
-  width: 100%;
-  top: 0;
+  width: 100vw;
   background-color: var(--nav-bg-color);
-  box-shadow: -1px 2px 6px var(--nav-shadow-color);
-}
-
-#nav .nav-wrapper {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0.3em 0em;
+  padding: 0.7em 0em;
   font-size: 1.2rem;
+  margin-left: 3.5rem;
 }
 
 @media screen and (max-width: 700px) { 
@@ -334,68 +362,59 @@ svg:not(:root) {
   .website-links a span:hover { cursor: pointer; } 
 }
 
-@media screen and (max-width: 340px) { #nav .nav-wrapper { font-size: 0.9rem; }}
-@media screen and (max-width: 290px) { #nav .nav-wrapper { font-size: 0.7rem; }}
+@media screen and (max-width: 340px) { #nav-top { font-size: 0.9rem; }}
+@media screen and (max-width: 290px) { #nav-top { font-size: 0.7rem; }}
 
 /* target every link in the entire #nav */
-#nav .nav-wrapper a {
-  color: var(--nav-item-text) !important;
+#nav-top a {
+  color: var(--topnav-button-text-color) !important;
   text-decoration: none !important;
+  padding: 0.375rem;
+  background-color: var(--topnav-button-bg-color);
+  border-radius: 0.5rem;
 }
-#nav .nav-wrapper a span:hover {
-  border-bottom: 3px solid var(--nav-item-border-bottom-hover);
+#nav-top a:hover {
+  background-color: var(--topnav-button-bg-color-active);
+  color: var(--topnav-button-text-color-hover) !important;
 }
-#nav .nav-wrapper a.active {
-  color: var(--nav-item-active-color) !important;
+#nav-top a.active {
+  color: var(--topnav-button-text-color-active) !important;
+  background-color: var(--topnav-button-bg-color-active);
   opacity: 1;
 }
 
 /* target the div container .website-links */
-#nav .nav-wrapper .website-links {
+#nav-top .website-links {
   display: inline-block;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
-#nav .nav-wrapper .website-links a {
+#nav-top .website-links a {
   margin-left: 0.8em;
   opacity: 0.7;
 }
 
 /* target the div container .website-logo-container */
-#nav .nav-wrapper .website-logo-container {
+#nav-top .website-logo-container {
   display: inline-block;
   margin-right: 0.9em;
   font-size: 1.2em;
 }
 
-/* styling the svg logo */
-svg.logo {
-  width: 40px;
-  height: 40px;
-  stroke: rgb(0, 0, 0);
-  stroke-width: 31.1px;
-  stroke-opacity: 1110.11;
-  z-index: 10;
-}
-svg.logo path {
-  fill: #73DC8C;
+#nav-top .nav-left {
+  display: flex;
+  min-width: 0;
+  align-items: center;
 }
 
-svg.logo path:hover ~ * {
-  fill-opacity: 1.5;
-  fill: rgba(225, 255, 236, 0.935);
-  transition: fill 350ms ease;
-}
-svg.logo:active path {
-  fill: rgba(64, 107, 89, 0.897);
-  transition: fill 350ms ease;
-}
+/* float left 
+#nav-top .nav-left { margin-right: auto; }
+#nav-top .nav-right { margin-right: calc(3.5rem * 2); }
+*/
 
-#nav .nav-wrapper .nav-right > * {
-  /*
-  margin-right: 0.9em;
-  */
-  margin-right: 0em;
-}
+/* float right (closer to navbar)*/
+#nav-top .nav-right { margin-left: 50px; }
+
+
 
 /* dont display hamburger menu... */
 .hamburger-menu {
@@ -414,7 +433,7 @@ svg.logo:active path {
   display: inline-block;
 }
 .inline-svg-wrapper:active {
-  border: 1px solid var(--nav-item-theme-toggle-border-color-active);
+  border: 1px solid var(--button-border-color-onclick);
 }
 .inline-svg-wrapper:hover {
   color: var(--svg-color-hover);
@@ -422,180 +441,102 @@ svg.logo:active path {
 
 .theme-toggle .inline-svg { width: 33px; }
 .hamburger-menu .inline-svg { width: 20px; }
+/* #endregion */
 
 
-/*
-.my-navbar ul a {
-  list-style: none;
-  text-decoration: none;
-  display: inline-block;
-  color: var(--nav-item-text) !important;
-  font-weight: 500;
-}
-.my-navbar ul a.active {
-  color: var(--nav-item-text-active) !important;
-}
-.my-navbar ul a.active li {
-  background-color: var(--nav-item-bg-active);
-}
-.my-navbar ul a:hover {
-  text-decoration: none;
-  cursor: pointer;
-}
-.my-navbar ul a li {
-  text-transform: uppercase;
-  padding: 0.3em;
-  margin: 0 0.4em;
-  border-radius: 12px;
-}
-.my-navbar ul a li:hover {
-  background-color: var(--nav-item-bg-hover);
-}
-.my-navbar ul .delimiter {
-  font-weight: normal;
-  letter-spacing: 0px;
-  font-size: 14px;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--nav-delimiter);
-  padding-left: 0.1em;
-  padding-right: 0em;
+/* #region ----------------------------------<4: SIDE NAVBAR>---------------------------------- */
+/* 
+  #nav-side
+    .website-logo-container
+    .sidebar-menu
+*/
+#nav-side {
+  position: relative;
+  display: flex;
+  width: 3.5rem;
+  flex-direction: column;
+  align-items: stretch;
+  border-right-width: 1px;
 }
 
-.my-navbar div.extra-menu-btn {
-  border-radius: 50px;
-  padding: 10px;
-  margin: -10px 12px;
-  display: inline-block;
-  transition: background-color 50ms ease-in;
-  opacity: 0.5;
-}
-.my-navbar div.extra-menu-btn:hover {
-  cursor: pointer;
-  opacity: 1.0;
-  background-color: rgb(245, 245, 245);
-}
-.my-navbar div.extra-menu-btn:active {
-  background-color: rgb(223, 223, 223);
-}
-.my-navbar ul.extra-menu {
-  display: none;
-  width: auto;
-  padding: 5px;
-  position: absolute;
-  left: 620px;
-  top: 75px;
-  border: 1px solid var(--nav-item-theme-toggle-border-color-active);
-  background-color: var(--bg1);
-}
-.my-navbar ul.extra-menu.active {
-  display: block;
-}
-.my-navbar ul.extra-menu.active li {
-  list-style: none;
-  display: block;
-}
-.my-navbar ul.extra-menu.active li:hover {
-  background-color: var(--nav-item-bg-hover);
+#nav-side > .website-logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
-
-.theme-toggle {
-  color: var(--svg-color);
-  border: 1px solid transparent;
-  background-color: transparent;
-  height: 42px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 150ms ease;
-  display: inline-block;
-  right: 20px;
-  top: 20px;
-  position: absolute;
-}
-.theme-toggle:hover {
-  color: var(--svg-color-hover);
-}
-.theme-toggle:active {
-  border: 1px solid var(--nav-item-theme-toggle-border-color-active);
-}
-.theme-toggle .inline-svg {
-  width: 2.6em;
-}
-.inline-svg {
-  width: 1em;
-  display: block;
-}
-.inline-svg[hidden] {
-  display: none;
-}
-svg:not(:root) {
-  overflow: hidden;
+#nav-side > .sidebar-menu {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.my-navbar .logo-container {
-  padding: 1.2em 1.7em;
-}
-
+/* styling the svg logo */
 svg.logo {
   width: 50px;
   height: 50px;
-  stroke: rgb(26, 9, 39);
-  stroke-width: 0.1px;
-  stroke-opacity: 0.11;
+  stroke-width: 31.1px;
+  stroke-opacity: 1110.11;
   z-index: 10;
-  fill-opacity: 1;
-}
-svg.logo path:nth-of-type(3n+0) {  fill: rgb(21, 124, 47); }
-svg.logo path:nth-of-type(3n+1) {  fill: rgb(93, 218, 114); }
-svg.logo path:nth-of-type(3n+2) {  fill: rgba(7, 7, 7, 0); }
-
-svg.logo path:hover ~ * {
-  fill-opacity: 0.1;
-  fill: rgba(17, 14, 221, 0.234);
-  stroke-width: 5.1px;
-}
-svg.logo:active path {
-  fill: rgb(20, 35, 49);
-  transition: all 350ms ease;
+  border-radius: 0.5rem;
 }
 
-
-svg.logo polygon:hover {
-  cursor: pointer;
-  fill-opacity: 0.50;
+svg.logo path {
+  fill: var(--logo-path-color);
+  stroke: var(--logo-stroke-color);
 }
 
-svg.logo polygon.a { fill: rgb(177, 170, 89); fill-opacity: 1; }
-svg.logo polygon.b { fill: rgb(255, 239, 69); fill-opacity: 0.84; }
-svg.logo polygon.c { fill: rgb(255, 192, 203); fill-opacity: 0.28;  }
-svg.logo polygon.d { fill: rgb(193, 208, 96); fill-opacity: 0.64; }
-svg.logo polygon.e { fill: rgb(36, 94, 170); fill-opacity: 0.41; }
-svg.logo polygon.f { fill: rgb(63, 67, 31); fill-opacity: 0.29; }
+svg.logo:hover path:nth-child(1) { fill: rgb(255, 113, 113); transition: fill 0ms ease; }
+svg.logo:hover path:nth-child(2) { fill: rgb(98, 172, 250);  transition: fill 100ms ease;}
+svg.logo:hover path:nth-child(3) { fill: rgb(250, 237, 98);  transition: fill 200ms ease; }
+svg.logo:hover path:nth-child(4) { fill: rgb(98, 250, 159);  transition: fill 300ms ease; }
+svg.logo:hover path:nth-child(5) { fill: rgb(255, 142, 242); transition: fill 400ms ease; }
+svg.logo:hover path:nth-child(6) { fill: rgb(41, 136, 245);  transition: fill 500ms ease;}
+svg.logo:hover path:nth-child(7) { fill: rgb(255, 77, 77);   transition: fill 600ms ease;}
+svg.logo:hover path:nth-child(8) { fill: rgb(72, 255, 173);  transition: fill 650ms ease; }
+svg.logo:hover path:nth-child(9) { fill: rgb(55, 125, 255);  transition: fill 700ms ease;}
+svg.logo:hover path:nth-child(10) { fill: rgb(144, 255, 142);transition: fill 720ms ease; }
+svg.logo:hover path:nth-child(11) { fill: rgb(255, 188, 81); transition: fill 740ms ease;}
+svg.logo:hover path:nth-child(12) { fill: rgb(156, 99, 255); transition: fill 760ms ease; }
+svg.logo:hover path:nth-child(13) { fill: rgb(255, 142, 153);transition: fill 780ms ease; }
+svg.logo:hover path:nth-child(14) { fill: rgb(69, 91, 255); transition: fill 800ms ease; }
+svg.logo:hover path:nth-child(15) { fill: rgb(255, 230, 41); transition: fill 850ms ease; }
+svg.logo:hover path:nth-child(16) { fill: rgb(255, 255, 255); transition: fill 900ms ease; }
+svg.logo:hover path:nth-child(17) { fill: rgb(255, 255, 255); transition: fill 920ms ease; }
+svg.logo:hover path:nth-child(18) { fill: rgb(255, 255, 255); transition: fill 940ms ease; }
+svg.logo:hover path:nth-child(19) { fill: rgb(255, 255, 255); transition: fill 960ms ease; }
+svg.logo:hover path:nth-child(20) { fill: rgb(81, 243, 255);  transition: fill 980ms ease;}
+svg.logo:hover path:nth-child(21) { fill: rgb(255, 255, 255);  transition: fill 1000ms ease;}
+svg.logo:hover path:nth-child(22) { fill: rgb(255, 255, 255); transition: fill 1020ms ease;}
+svg.logo:hover path:nth-child(23) { fill: rgb(253, 52, 52);  transition: fill 1040ms ease;}
 
-svg.logo polygon:hover { 
-  cursor: pointer;
-  fill-opacity: 0.49;
-  fill: rgb(67, 177, 175);
-}
-
-.logo-container span {
-	font-weight: normal;
-	text-transform: normal;
-	letter-spacing: 0px;
-	font-weight: 200;
-	font-style: normal;
-	line-height: 1.2em;
-	text-transform: none;
-	letter-spacing: .08em;
-  font-size: 26px;
-  color: var(--text) !important;
+/*
+svg.logo:hover path {
+  fill: var(--logo-path-color-hover);
+  transition: fill 350ms ease;
+  stroke: var(--logo-stroke-color-hover);
 }*/
+/*
+svg.logo path:hover ~ * {
+  fill: rgba(249, 249, 249, 0.935);
+  transition: fill 350ms ease;
+}*/
+svg.logo {
+  border: 1.5px solid transparent;
+}
+svg.logo:active {
+  border: 1.5px solid var(--button-border-color-onclick) !important;
+  transition: all 150ms ease;
+}
+/* #endregion */
 
 
-/* ------------------------------------------<3: MAIN CONTAINER>------------------------------------------ */
+/* #region ----------------------------------<5: PAGE CONTAINER>---------------------------------- */
 .page-wrapper {
   width: 100vw;
   top: 0;
@@ -621,9 +562,10 @@ svg.logo polygon:hover {
   outline: 0;
   outline: none;
 }
+/* #endregion */
 
 
-/* ------------------------------------------<4: PORTFOLIO>------------------------------------------ */
+/* #region ----------------------------------<6: PORTFOLIO>---------------------------------- */
 .portfolio {
   top: 0;
   color: var(--intro-text);
@@ -840,9 +782,10 @@ svg.logo polygon:hover {
 .image:hover + .proj-details > .proj-title > a {
   color: var(--project-card-text-hover);
 }
+/* #endregion */
 
 
-/* ------------------------------------------<5: BLOG PAGE>------------------------------------------ */
+/* #region ----------------------------------<7: BLOG PAGE>---------------------------------- */
 .page-wrapper.blog {
 
 }
@@ -990,9 +933,10 @@ table tbody tr:hover {
   width: 150px;
   padding: 3px;
 }
+/* #endregion */
 
 
-/* ------------------------------------------<6: BLOG POST PAGE>------------------------------------------ */
+/* #region ----------------------------------<8: BLOG POST PAGE>---------------------------------- */
 .blog-post {
   /* max-width: 80vw; */
   margin-right: auto;
@@ -1123,9 +1067,10 @@ table tbody tr:hover {
 svg.invertable-icon {
   filter: invert(var(--svg-icon-invert-percentage));
 }
+/* #endregion */
 
 
-/* ------------------------------------------<7: University>------------------------------------------ */
+/* #region ----------------------------------<9: UNIVERSITY>---------------------------------- */
 .page-wrapper.university {
 
 }
@@ -1281,9 +1226,10 @@ div.card-percent:hover {
 div.card-percent:hover::after {
   content: ' %';
 }*/
+/* #endregion */
 
 
-/* ------------------------------------------<8: UNIVERSITY ASSIGNMENT PAGE>------------------------------------------ */
+/* #region ----------------------------------<10: UNIVERSITY ASSIGNMENT PAGE>---------------------------------- */
 .page-wrapper.universityAssignment {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1412,17 +1358,17 @@ div.card-percent:hover::after {
   }
 }
 
-
 .universityAssignment svg {
   width: 13px;
   margin-right: 5px;
 }
+/* #endregion */
 
-/* ------------------------------------------<9: NOTES>------------------------------------------ */
+
+/* #region ----------------------------------<11: NOTES>---------------------------------- */
 .page-wrapper.notes {
   /* padding: 100px 125px 100px 50px; */
 }
-
 
 .notes-page {
   height: 100%;
@@ -1466,7 +1412,7 @@ div.card-percent:hover::after {
   color: inherit;
 }
 .notes-page .sidebar ul a.active {
-  color: var(--nav-item-active-color) !important;
+  color: var(--topnav-button-text-color-active) !important;
 }
 
 .notes-page .subsection {
@@ -1487,9 +1433,10 @@ pre.prettyprint span.kwd::before {
   border-radius: 4px;
   padding: 6px;
 }
+/* #endregion */
 
 
-/* -------------------------<9.1: Favourite quotes page>------------------------- */
+/* #region ----------------------------------<11.1: FAVOURITE QUOTES PAGE>---------------------------------- */
 ul.messiahs-handbook {
   list-style-type: none;
   display: grid;
@@ -1549,9 +1496,10 @@ ul.messiahs-handbook p.quote-person {
   border: 1px solid var(--blog-post-divider-color);
   border-style: dotted;
 }
+/* #endregion */
 
 
-/* ------------------------------------------<10: MEDIA QUERIES>------------------------------------------ */
+/* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
 @media screen and (max-width: 900px) { .portfolio h1 { font-size: 50px; } .portfolio h2 { font-size: 40px; } }
@@ -1561,7 +1509,7 @@ ul.messiahs-handbook p.quote-person {
 
 /* anything that should be hidden in mobile goes here... */
 @media screen and (max-width: 725px) {
-  #nav.active .website-links {
+  #nav-top.active .website-links {
     display: block !important;
   }
   .website-links {
@@ -1616,9 +1564,10 @@ ul.messiahs-handbook p.quote-person {
 @media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } .blog-post-title { font-size: 2.5rem; } }
 @media only screen and (max-width: 900px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.4rem; } }
 @media only screen and (max-width: 800px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.3rem; } .blog-post-content p { font-size: 0.9rem; } }
+/* #endregion */
 
 
-/* ------------------------------------------<11: ANIMATIONS>------------------------------------------ */
+/* #region ----------------------------------<13: ANIMATIONS>---------------------------------- */
 @keyframes animation_name {
   /*                          (x,  y) */
   0% { background-position:   0%   0%; }     /* x=top left, y=centre */
@@ -1643,7 +1592,6 @@ ul.messiahs-handbook p.quote-person {
   }
 }
 
-
 .slideInUp {
   animation-name: slideInUp;
 }
@@ -1664,10 +1612,10 @@ ul.messiahs-handbook p.quote-person {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
+/* #endregion */
 
 
-
-/* ------------------------------------------<12: SCROLLBARS>------------------------------------------ */
+/* #region ----------------------------------<14: SCROLLBARS>------------------------------------------ */
 /* 
  The custom scrollbar I am using is not available in Firefox, Internet Explorer or Edge, and for those browsers the default scrollbar is used 
  Otherwise, this custom scrollbar will be used.
@@ -1701,11 +1649,14 @@ body::-webkit-scrollbar-thumb {
   border-radius: 150px;
   background-color: var(--blog-table-bg);
 }
+/* #endregion */
 
-/* ------------------------------------------<14: MISCELLANEOUS>------------------------------------------ */
+
+/* #region ------------------------------------<15: MISCELLANEOUS>------------------------------------------ */
 ::selection {
   background: var(--text-highlight-color); /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
   background: var(--text-highlight-color); /* Gecko Browsers */
 }
+/* #endregion */
