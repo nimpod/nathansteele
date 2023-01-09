@@ -41,7 +41,6 @@ class NavbarTop extends Component {
         }
     }
 
-
     /**
      * Event handler to switch between themes
      */
@@ -67,11 +66,16 @@ class NavbarTop extends Component {
         }
     }
 
-    /* allows user to open and close the mobile view of the navigation menu */
+    /**
+     * Function to allow user to open and close the mobile view of the navigation menu
+     */
     toggleMenu() {
         document.getElementById('nav-top').classList.toggle('active');
     }
 
+    /**
+     * Component did mount function
+     */
     componentDidMount() {
         let nav = document.getElementById("nav-top");
         let lastScrollTop = 0;
@@ -100,28 +104,28 @@ class NavbarTop extends Component {
             <header id="nav-top" className="animated faster slideInUp">
                 <div className="nav-left">
                     <nav className="website-links">
-                        <NavLink to="/aboutme" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <NavLink to="/aboutme" className="navlink">
                             <span>About me</span>
                         </NavLink>
-                        <NavLink to="/films" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <NavLink to="/films" className="navlink">
                             <span>Films</span>
                         </NavLink>
-                        <NavLink to="/music" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <NavLink to="/music" className="navlink">
                             <span>Music</span>
                         </NavLink>
-                        <NavLink to="/art" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <NavLink to="/art" className="navlink">
                             <span>Art</span>
                         </NavLink>
-                        <NavLink to="/blog" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <NavLink to="/blog" className="navlink">
                             <span>Blog</span>
                         </NavLink>
-                        <NavLink to="/university" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <NavLink to="/university" className="navlink">
                             <span>University</span>
                         </NavLink>
-                        <NavLink to="/portfolio" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <NavLink to="/portfolio" className="navlink">
                             <span>Portfolio</span>
                         </NavLink>
-                        <NavLink to="/notes" onClick={this.clickedPortfolioNavbarItem} className="navlink">
+                        <NavLink to="/notes" className="navlink">
                             <span>Notes</span>
                         </NavLink>
                     </nav>

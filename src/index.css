@@ -48,11 +48,12 @@
   --text-hyperlink: rgb(0, 123, 255);
   --text-hyperlink-hover: rgb(9, 194, 250);
 
-  --topnav-button-bg-color: rgb(234, 229, 229);
-  --topnav-button-bg-color-active: rgb(43, 39, 39);
+  --topnav-button-bg-color: rgb(234, 231, 231);
+  --topnav-button-bg-color-hover: rgb(219, 214, 214);
+  --topnav-button-bg-color-active: rgb(131, 130, 130);
   --topnav-button-text-color: rgb(4, 3, 3);
-  --topnav-button-text-color-hover: rgb(255, 255, 255);
-  --topnav-button-text-color-active: rgb(54, 245, 149);
+  --topnav-button-text-color-hover: rgb(0, 0, 0);
+  --topnav-button-text-color-active: rgb(51, 239, 145);
   --button-border-color-onclick: rgb(206, 206, 206);
 
   --logo-path-color: rgb(24, 185, 99);
@@ -60,10 +61,10 @@
   --logo-stroke-color: rgb(26, 205, 121);
   --logo-stroke-color-hover: rgb(244, 49, 49);
 
-  --nav-bg-color: rgb(253, 252, 251);
-  --nav-shadow-color: rgba(0,0,0,.45);
-  --nav-item-text: rgb(33, 33, 33);
-  --nav-item-border-bottom-hover: rgb(3, 170, 140);
+  --sidenav-bg-color: rgb(253, 252, 251);
+  --sidenav-shadow-color: rgba(0,0,0,.45);
+  --sidenav-item-text-color: rgb(33, 33, 33);
+  --sidenav-item-border-bottom-hover: rgb(3, 170, 140);
 
   --arrow-smooth-scroll-btn: rgb(53, 53, 53);
   --arrow-smooth-scroll-btn-hover:  rgb(88, 88, 88);
@@ -146,10 +147,11 @@
   --intro-text: rgb(230, 219, 225);
   --text-hyperlink: rgb(45, 206, 255);
   --text-hyperlink-hover: rgb(51, 207, 255);
-  
+
+  --topnav-button-bg-color: rgb(40, 38, 38);
+  --topnav-button-bg-color-hover: rgb(50, 47, 47);
   --topnav-button-bg-color-active: rgb(73, 70, 70);
-  --topnav-button-bg-color: rgb(41, 39, 39);
-  --topnav-button-text-color: rgb(214, 214, 214);
+  --topnav-button-text-color: rgb(163, 163, 163);
   --topnav-button-text-color-hover: rgb(255, 255, 255);
   --topnav-button-text-color-active: rgb(0, 255, 208);
   --button-border-color-onclick: rgb(82, 81, 81);
@@ -159,10 +161,10 @@
   --logo-stroke-color: rgb(0, 0, 0);
   --logo-stroke-color-hover: rgb(0, 0, 0);
 
-  --nav-bg-color: rgb(28, 24, 24); /* rgb(41, 42, 48); */
-  --nav-shadow-color: rgba(0, 0, 0, 0.748);
-  --nav-item-border-bottom-hover: rgb(28, 206, 173);
-  --nav-item-text: rgb(255, 255, 255);
+  --sidenav-bg-color: rgb(28, 24, 24); /* rgb(41, 42, 48); */
+  --sidenav-shadow-color: rgba(0, 0, 0, 0.748);
+  --sidenav-item-border-bottom-hover: rgb(28, 206, 173);
+  --sidenav-item-text-color: rgb(255, 255, 255);
 
   --arrow-smooth-scroll-btn: rgb(141, 141, 141);
   --arrow-smooth-scroll-btn-hover: rgb(88, 88, 88);
@@ -184,7 +186,7 @@
   --blog-table-tag-bg: rgb(46, 45, 45);
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-table-searchbox-bg-color: rgb(48, 47, 47);
-  --blog-table-searchbox-border-color: rgb(39, 39, 39);
+  --blog-table-searchbox-border-color: rgb(65, 65, 65);
 
   --blog-post-title-text: rgb(199, 199, 199);
   --blog-post-subTitle-text-color: rgb(209, 209, 209);
@@ -353,7 +355,7 @@ body > div#root > div.App {
   background-color: var(--nav-bg-color);
   align-items: center;
   padding: 0.7em 0em;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   margin-left: 3.5rem;
 }
 
@@ -372,9 +374,13 @@ body > div#root > div.App {
   padding: 0.375rem;
   background-color: var(--topnav-button-bg-color);
   border-radius: 0.5rem;
+  /*
+  display: inline-block;
+  min-width: 70px;
+  */
 }
 #nav-top a:hover {
-  background-color: var(--topnav-button-bg-color-active);
+  background-color: var(--topnav-button-bg-color-hover);
   color: var(--topnav-button-text-color-hover) !important;
 }
 #nav-top a.active {
@@ -459,6 +465,10 @@ body > div#root > div.App {
   border-right-width: 1px;
 }
 
+#nav-side > .website-logo-container > a.website-logo {
+  margin-left: 0.4rem;
+}
+
 #nav-side > .website-logo-container {
   position: relative;
   display: flex;
@@ -477,13 +487,18 @@ body > div#root > div.App {
 }
 
 /* styling the svg logo */
+a.website-logo:hover {
+  border-radius: 0.5rem;
+  background-color: var(--topnav-button-bg-color-active);
+  transition: background-color 350ms ease;
+}
+
 svg.logo {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   stroke-width: 31.1px;
   stroke-opacity: 1110.11;
   z-index: 10;
-  border-radius: 0.5rem;
 }
 
 svg.logo path {
@@ -491,29 +506,55 @@ svg.logo path {
   stroke: var(--logo-stroke-color);
 }
 
-svg.logo:hover path:nth-child(1) { fill: rgb(255, 113, 113); transition: fill 0ms ease; }
-svg.logo:hover path:nth-child(2) { fill: rgb(98, 172, 250);  transition: fill 100ms ease;}
-svg.logo:hover path:nth-child(3) { fill: rgb(250, 237, 98);  transition: fill 200ms ease; }
-svg.logo:hover path:nth-child(4) { fill: rgb(98, 250, 159);  transition: fill 300ms ease; }
-svg.logo:hover path:nth-child(5) { fill: rgb(255, 142, 242); transition: fill 400ms ease; }
-svg.logo:hover path:nth-child(6) { fill: rgb(41, 136, 245);  transition: fill 500ms ease;}
-svg.logo:hover path:nth-child(7) { fill: rgb(255, 77, 77);   transition: fill 600ms ease;}
-svg.logo:hover path:nth-child(8) { fill: rgb(72, 255, 173);  transition: fill 650ms ease; }
-svg.logo:hover path:nth-child(9) { fill: rgb(55, 125, 255);  transition: fill 700ms ease;}
-svg.logo:hover path:nth-child(10) { fill: rgb(144, 255, 142);transition: fill 720ms ease; }
-svg.logo:hover path:nth-child(11) { fill: rgb(255, 188, 81); transition: fill 740ms ease;}
-svg.logo:hover path:nth-child(12) { fill: rgb(156, 99, 255); transition: fill 760ms ease; }
-svg.logo:hover path:nth-child(13) { fill: rgb(255, 142, 153);transition: fill 780ms ease; }
-svg.logo:hover path:nth-child(14) { fill: rgb(69, 91, 255); transition: fill 800ms ease; }
-svg.logo:hover path:nth-child(15) { fill: rgb(255, 230, 41); transition: fill 850ms ease; }
-svg.logo:hover path:nth-child(16) { fill: rgb(255, 255, 255); transition: fill 900ms ease; }
-svg.logo:hover path:nth-child(17) { fill: rgb(255, 255, 255); transition: fill 920ms ease; }
-svg.logo:hover path:nth-child(18) { fill: rgb(255, 255, 255); transition: fill 940ms ease; }
-svg.logo:hover path:nth-child(19) { fill: rgb(255, 255, 255); transition: fill 960ms ease; }
-svg.logo:hover path:nth-child(20) { fill: rgb(81, 243, 255);  transition: fill 980ms ease;}
-svg.logo:hover path:nth-child(21) { fill: rgb(255, 255, 255);  transition: fill 1000ms ease;}
-svg.logo:hover path:nth-child(22) { fill: rgb(255, 255, 255); transition: fill 1020ms ease;}
-svg.logo:hover path:nth-child(23) { fill: rgb(253, 52, 52);  transition: fill 1040ms ease;}
+/* #region -------------< Svg colours >--------------- */
+svg.logo path:nth-child(1) { fill: rgb(255, 113, 113); }
+svg.logo path:nth-child(2) { fill: rgb(98, 172, 250);  }
+svg.logo path:nth-child(3) { fill: rgb(250, 237, 98);  }
+svg.logo path:nth-child(4) { fill: rgb(98, 250, 159);  }
+svg.logo path:nth-child(5) { fill: rgb(255, 142, 242); }
+svg.logo path:nth-child(6) { fill: rgb(41, 136, 245);  }
+svg.logo path:nth-child(7) { fill: rgb(255, 77, 77);   }
+svg.logo path:nth-child(8) { fill: rgb(72, 255, 173);  }
+svg.logo path:nth-child(9) { fill: rgb(55, 125, 255);  }
+svg.logo path:nth-child(10) { fill: rgb(144, 255, 142);}
+svg.logo path:nth-child(11) { fill: rgb(255, 188, 81); }
+svg.logo path:nth-child(12) { fill: rgb(156, 99, 255); }
+svg.logo path:nth-child(13) { fill: rgb(255, 142, 153);}
+svg.logo path:nth-child(14) { fill: rgb(69, 91, 255); }
+svg.logo path:nth-child(15) { fill: rgb(255, 230, 41); }
+svg.logo path:nth-child(16) { fill: rgb(255, 255, 255); }
+svg.logo path:nth-child(17) { fill: rgb(255, 255, 255); }
+svg.logo path:nth-child(18) { fill: rgb(255, 255, 255); }
+svg.logo path:nth-child(19) { fill: rgb(255, 255, 255); }
+svg.logo path:nth-child(20) { fill: rgb(81, 243, 255); }
+svg.logo path:nth-child(21) { fill: rgb(255, 255, 255); }
+svg.logo path:nth-child(22) { fill: rgb(255, 255, 255); }
+svg.logo path:nth-child(23) { fill: rgb(253, 52, 52);  }
+
+svg.logo:hover path:nth-child(1) { fill: var(--logo-path-color); transition: fill 0ms ease; }
+svg.logo:hover path:nth-child(2) { fill: var(--logo-path-color);  transition: fill 100ms ease;}
+svg.logo:hover path:nth-child(3) { fill: var(--logo-path-color);  transition: fill 200ms ease; }
+svg.logo:hover path:nth-child(4) { fill: var(--logo-path-color);  transition: fill 300ms ease; }
+svg.logo:hover path:nth-child(5) { fill: var(--logo-path-color); transition: fill 400ms ease; }
+svg.logo:hover path:nth-child(6) { fill: var(--logo-path-color);  transition: fill 500ms ease;}
+svg.logo:hover path:nth-child(7) { fill: var(--logo-path-color);  transition: fill 600ms ease;}
+svg.logo:hover path:nth-child(8) { fill: var(--logo-path-color);  transition: fill 650ms ease; }
+svg.logo:hover path:nth-child(9) { fill: var(--logo-path-color);  transition: fill 700ms ease;}
+svg.logo:hover path:nth-child(10) { fill: var(--logo-path-color); transition: fill 720ms ease; }
+svg.logo:hover path:nth-child(11) { fill: var(--logo-path-color); transition: fill 740ms ease;}
+svg.logo:hover path:nth-child(12) { fill: var(--logo-path-color); transition: fill 760ms ease; }
+svg.logo:hover path:nth-child(13) { fill: var(--logo-path-color); transition: fill 780ms ease; }
+svg.logo:hover path:nth-child(14) { fill: var(--logo-path-color); transition: fill 800ms ease; }
+svg.logo:hover path:nth-child(15) { fill: var(--logo-path-color); transition: fill 850ms ease; }
+svg.logo:hover path:nth-child(16) { fill: var(--logo-path-color); transition: fill 900ms ease; }
+svg.logo:hover path:nth-child(17) { fill: var(--logo-path-color); transition: fill 920ms ease; }
+svg.logo:hover path:nth-child(18) { fill: var(--logo-path-color); transition: fill 940ms ease; }
+svg.logo:hover path:nth-child(19) { fill: var(--logo-path-color); transition: fill 960ms ease; }
+svg.logo:hover path:nth-child(20) { fill: var(--logo-path-color);  transition: fill 980ms ease;}
+svg.logo:hover path:nth-child(21) { fill: var(--logo-path-color);  transition: fill 1000ms ease;}
+svg.logo:hover path:nth-child(22) { fill: var(--logo-path-color); transition: fill 1020ms ease;}
+svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fill 1040ms ease;}
+/* #endregion */
 
 /*
 svg.logo:hover path {
@@ -526,13 +567,8 @@ svg.logo path:hover ~ * {
   fill: rgba(249, 249, 249, 0.935);
   transition: fill 350ms ease;
 }*/
-svg.logo {
-  border: 1.5px solid transparent;
-}
-svg.logo:active {
-  border: 1.5px solid var(--button-border-color-onclick) !important;
-  transition: all 150ms ease;
-}
+
+
 /* #endregion */
 
 
@@ -922,16 +958,18 @@ table tbody tr:hover {
 .blog .controls {
   width: 50%;
   margin-bottom: 20px;
-  
 }
 
 .controls > div.searchbox > input {
-  border-radius: 7px;
-  border: 1px solid var(--blog-table-searchbox-border-color);
+  border-radius: 10px;
+  border: 2px solid var(--blog-table-searchbox-border-color);
   background-color: var(--blog-table-searchbox-bg-color);
   color: var(--text);
-  width: 150px;
-  padding: 3px;
+  width: 300px;
+  padding: 6px;
+}
+.controls > div.searchbox > input:active {
+  border: 2px solid transparent;
 }
 /* #endregion */
 
@@ -1405,7 +1443,7 @@ div.card-percent:hover::after {
 }
 .notes-page .sidebar ul a {
   text-decoration: none !important;
-  color: var(--nav-item-text) !important;
+  color: var(--sidenav-item-text-color) !important;
 }
 .notes-page .sidebar ul a li:hover {
   background-color: var(--sidebar-item-bg-color-hover);
@@ -1516,15 +1554,18 @@ ul.messiahs-handbook p.quote-person {
     display: none !important;
     position: absolute;
     top: 61px;
-    right: 10px;
+    right: 100px;
     background-color: var(--bg1);
-    border-radius: 4px;
     box-shadow: -1px 2px 6px var(--nav-shadow-color);
     padding: 3px 10px 3px 0px;
   }
   .website-links a {
     display: block;
     border-bottom: 3px solid transparent;
+    border-radius: 0px !important;
+  }
+  .website-links a:hover {
+    cursor: pointer;
   }
   .hamburger-menu {
     display: inline-block !important;
