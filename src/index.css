@@ -48,18 +48,20 @@
   --text-hyperlink: rgb(0, 123, 255);
   --text-hyperlink-hover: rgb(9, 194, 250);
 
-  --topnav-button-bg-color: rgb(234, 231, 231);
-  --topnav-button-bg-color-hover: rgb(219, 214, 214);
-  --topnav-button-bg-color-active: rgb(131, 130, 130);
+  --topnav-bg-color: rgba(253, 252, 251, 0.729);
+  --topnav-button-bg-color: rgb(253, 252, 251);
+  --topnav-button-bg-color-hover: rgb(216, 213, 213);
+  --topnav-button-bg-color-active: rgb(40, 39, 69);
   --topnav-button-text-color: rgb(4, 3, 3);
   --topnav-button-text-color-hover: rgb(0, 0, 0);
-  --topnav-button-text-color-active: rgb(51, 239, 145);
+  --topnav-button-text-color-active: rgb(255, 255, 255); 
+  --topnav-collapsed-shadow-color: rgba(0, 0, 0, 0.849);
   --button-border-color-onclick: rgb(206, 206, 206);
 
-  --logo-path-color: rgb(24, 185, 99);
+  --logo-path-color: rgb(3, 105, 51);
   --logo-path-color-onclick: rgba(5, 120, 72, 0.897);
-  --logo-stroke-color: rgb(26, 205, 121);
-  --logo-stroke-color-hover: rgb(244, 49, 49);
+  --logo-stroke-color: rgb(4, 4, 47);
+  --logo-stroke-color-hover: rgb(255, 255, 255);
 
   --sidenav-bg-color: rgb(253, 252, 251);
   --sidenav-shadow-color: rgba(0,0,0,.45);
@@ -148,6 +150,7 @@
   --text-hyperlink: rgb(45, 206, 255);
   --text-hyperlink-hover: rgb(51, 207, 255);
 
+  --topnav-bg-color: rgba(0, 0, 0, 0.496);
   --topnav-button-bg-color: rgb(40, 38, 38);
   --topnav-button-bg-color-hover: rgb(50, 47, 47);
   --topnav-button-bg-color-active: rgb(73, 70, 70);
@@ -161,7 +164,7 @@
   --logo-stroke-color: rgb(0, 0, 0);
   --logo-stroke-color-hover: rgb(0, 0, 0);
 
-  --sidenav-bg-color: rgb(28, 24, 24); /* rgb(41, 42, 48); */
+  --sidenav-bg-color: rgba(0, 0, 0, 0.123); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
   --sidenav-shadow-color: rgba(0, 0, 0, 0.748);
   --sidenav-item-border-bottom-hover: rgb(28, 206, 173);
   --sidenav-item-text-color: rgb(255, 255, 255);
@@ -272,16 +275,26 @@ a:not(.website-logo):hover {
   opacity: 1.0;
 }
 
-@media (min-width: 1800px) {
+@media (max-width: 2000px) {
   .section-inner {
-    max-width: 1600px;
+    margin: 0 auto;
+    width: 75%;
   }
 }
-.section-inner {
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 93%;
+@media (min-width: 1400px) {
+  .section-inner {
+    max-width: 1300px;
+  }
 }
+@media (max-width: 725px) {
+  .section-inner {
+    max-width: 600px;
+    margin: 0 !important;
+    padding-left: calc(3.5rem + 1rem) !important;
+
+  }
+}
+
 
 body, button, input, select, textarea, a {
   color: rgb(0, 0, 0);
@@ -352,7 +365,7 @@ body > div#root > div.App {
   position: fixed;
   z-index: 1000;
   width: 100vw;
-  background-color: var(--nav-bg-color);
+  background-color: var(--topnav-bg-color);
   align-items: center;
   padding: 0.7em 0em;
   font-size: 1.0rem;
@@ -360,8 +373,18 @@ body > div#root > div.App {
 }
 
 @media screen and (max-width: 700px) { 
-  .website-links a:hover { cursor: default; } 
-  .website-links a span:hover { cursor: pointer; } 
+  .website-links a:hover { cursor: default; }
+  .website-links a span:hover { cursor: pointer; }
+
+  #nav-top > .nav-right {
+    position: absolute;
+    right: 100px;
+    top: 10px;
+  }
+
+  #nav-top .website-links a {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 340px) { #nav-top { font-size: 0.9rem; }}
@@ -417,8 +440,8 @@ body > div#root > div.App {
 #nav-top .nav-right { margin-right: calc(3.5rem * 2); }
 */
 
-/* float right (closer to navbar)*/
-#nav-top .nav-right { margin-left: 50px; }
+/* float right (closer to navbar) */
+#nav-top .nav-right { margin-left: 20px; }
 
 
 
@@ -446,7 +469,7 @@ body > div#root > div.App {
 }
 
 .theme-toggle .inline-svg { width: 33px; }
-.hamburger-menu .inline-svg { width: 20px; }
+.hamburger-menu .inline-svg { width: 20px; height: 26px; }
 /* #endregion */
 
 
@@ -457,12 +480,14 @@ body > div#root > div.App {
     .sidebar-menu
 */
 #nav-side {
-  position: relative;
+  position: fixed;
   display: flex;
   width: 3.5rem;
+  height: 100vh;
   flex-direction: column;
   align-items: stretch;
   border-right-width: 1px;
+  background-color: var(--sidenav-bg-color);
 }
 
 #nav-side > .website-logo-container > a.website-logo {
@@ -489,13 +514,13 @@ body > div#root > div.App {
 /* styling the svg logo */
 a.website-logo:hover {
   border-radius: 0.5rem;
-  background-color: var(--topnav-button-bg-color-active);
+  background-color: var(--topnav-button-bg-color-hover);
   transition: background-color 350ms ease;
 }
 
 svg.logo {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   stroke-width: 31.1px;
   stroke-opacity: 1110.11;
   z-index: 10;
@@ -1553,13 +1578,13 @@ ul.messiahs-handbook p.quote-person {
   .website-links {
     display: none !important;
     position: absolute;
-    top: 61px;
+    top: 50px;
     right: 100px;
     background-color: var(--bg1);
-    box-shadow: -1px 2px 6px var(--nav-shadow-color);
-    padding: 3px 10px 3px 0px;
+    box-shadow: -1px 4px 6px var(--topnav-collapsed-shadow-color);
   }
   .website-links a {
+    margin: 0rem !important;
     display: block;
     border-bottom: 3px solid transparent;
     border-radius: 0px !important;
@@ -1569,6 +1594,8 @@ ul.messiahs-handbook p.quote-person {
   }
   .hamburger-menu {
     display: inline-block !important;
+  }
+  .hamburger-menu > .inline-svg > svg {
   }
 }
 
