@@ -39,8 +39,8 @@
 
 /** LIGHT MODE */
 :root {
-  --bg1: rgb(253, 252, 251);  /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(253, 252, 251);   /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg1: rgb(234, 234, 234);  /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: var(--bg1);   /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
 
   --text: rgb(128, 128, 128);
   --text-darker: rgb(68, 68, 68);
@@ -48,8 +48,12 @@
   --text-hyperlink: rgb(0, 123, 255);
   --text-hyperlink-hover: rgb(9, 194, 250);
 
+  --section-inner-bg-color: rgb(243, 243, 243);
+  --page-wrapper-bg: var(--bg1);
+  --page-text-color: rgba(0, 0, 0, 0.755);
+
   --topnav-bg-color: rgba(253, 252, 251, 0.729);
-  --topnav-button-bg-color: rgb(253, 252, 251);
+  --topnav-button-bg-color: var(--bg1);
   --topnav-button-bg-color-hover: rgb(216, 213, 213);
   --topnav-button-bg-color-active: rgb(40, 39, 69);
   --topnav-button-text-color: rgb(4, 3, 3);
@@ -63,7 +67,7 @@
   --logo-stroke-color: rgb(17, 15, 15);
   --logo-stroke-color-hover: rgb(255, 255, 255);
 
-  --sidenav-bg-color: rgb(253, 252, 251);
+  --sidenav-bg-color: rgba(253, 252, 251, 0);
   --sidenav-shadow-color: rgba(0,0,0,.45);
   --sidenav-item-text-color: rgb(33, 33, 33);
   --sidenav-item-border-bottom-hover: rgb(3, 170, 140);
@@ -79,9 +83,6 @@
   --project-card-text-hover: rgb(94, 93, 93);
   --project-card-text-color: rgb(0, 0, 0);
 
-  --page-wrapper-bg: rgb(253, 252, 251);
-  --page-text-color: rgba(0, 0, 0, 0.755);
-
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(247, 247, 247);
   --blog-table-border: rgba(0, 0, 0, 0.202);
@@ -90,8 +91,8 @@
   --blog-table-row-bg-hover: rgb(251, 251, 251);
   --blog-table-tag-bg: rgb(218, 226, 219);
   --blog-table-tag-text: rgb(27, 27, 27);
-  --blog-table-searchbox-bg-color: rgb(241, 241, 241);
-  --blog-table-searchbox-border-color: rgb(241, 241, 241);
+  --blog-table-searchbox-bg-color: rgb(230, 230, 230);
+  --blog-table-searchbox-border-color: rgb(226, 226, 226);
 
   --blog-post-title-text: rgb(33, 33, 33);
   --blog-post-subTitle-text-color: rgb(38, 38, 38);
@@ -150,8 +151,12 @@
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
   --intro-text: rgb(230, 219, 225);
-  --text-hyperlink: rgb(45, 206, 255);
-  --text-hyperlink-hover: rgb(51, 207, 255);
+  --text-hyperlink: rgb(29, 199, 251);
+  --text-hyperlink-hover: rgb(78, 202, 255);
+
+  --section-inner-bg-color: rgb(35, 31, 31);
+  --page-wrapper-bg: var(--bg1);
+  --page-text-color: rgba(255, 255, 255, 0.878);
 
   --topnav-bg-color: rgba(0, 0, 0, 0);
   --topnav-button-bg-color: rgb(40, 38, 38);
@@ -182,9 +187,6 @@
   --project-card-bg: rgb(36, 36, 36);
   --project-card-text-hover: rgb(235, 235, 235);
   --project-card-text-color: var(--intro-text);
-
-  --page-wrapper-bg: var(--bg1);
-  --page-text-color: rgba(255, 255, 255, 0.878);
   
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(45, 51, 58);
@@ -281,15 +283,24 @@ a:not(.website-logo):hover {
   opacity: 1.0;
 }
 
+.section-inner {
+  background-color: var(--section-inner-bg-color);
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 1px 12px 0 var(--university-card-box-shadow);
+}
+
 @media (max-width: 2000px) {
   .section-inner {
     margin: 0 auto;
-    width: 73%;
+    width: 75%;
   }
 }
 @media (min-width: 1400px) {
   .section-inner {
+    /*
     max-width: 1300px;
+    */
   }
 }
 
@@ -307,6 +318,12 @@ a:not(.website-logo):hover {
   .section-inner {
     margin: 0 auto;
     width: 95%;
+    margin-top: 30px;
+  }
+
+  .back-to-previous-page {
+    left: 70px;
+    top: 60px;
   }
 }
 
@@ -1054,7 +1071,7 @@ table tbody tr:hover {
 /* title of blog post */
 .blog-post-title {
   color: var(--blog-post-title-text);
-  font-size: 3.5rem;
+  font-size: 2.6rem;
   font-weight: 900;
   display: block;
 }
@@ -1066,6 +1083,22 @@ table tbody tr:hover {
   display: inline-block;
 }
 
+/* calendar icon next to date */
+.blog-post-date > svg {
+  width: 17px;
+  height: 17px;
+  opacity: 0.5;
+  margin-right: 7px;
+  margin-bottom: 4px;
+}
+
+.blog-post-date, .blog-post-tags {
+  margin-right: 15px;
+}
+.blog-post-date {
+  margin-left: 5px;
+}
+
 /* the tags for this blog post */
 .blog-post-tags {
   display: inline-block;
@@ -1073,16 +1106,14 @@ table tbody tr:hover {
 .blog-post-tags > * {
 }
 
-.blog-post-date, .blog-post-tags {
-  margin-left: 15px;
-}
-
 .blog-post-info .back-to-previous-page {
   display: inline-block;
+  position: absolute;
+  margin-left: -60px;
+  margin-top: 10px;
   color: inherit;
   border: 2px solid transparent;
   border-radius: 10px;
-  margin-left: -5px;
 }
 .back-to-previous-page svg.invertable-icon {
   width: 38px;
@@ -1102,7 +1133,9 @@ table tbody tr:hover {
 
 .blog-post-content {
   padding-top: 1em;
+  /*
 	border-top: 2px solid var(--blog-post-divider-color);
+  */
 }
 
 
@@ -1198,6 +1231,9 @@ table tbody tr:hover {
 
 svg.invertable-icon {
   filter: invert(var(--svg-icon-invert-percentage));
+}
+svg.invertable-icon:hover {
+  fill: rgb(254, 51, 122);
 }
 /* #endregion */
 

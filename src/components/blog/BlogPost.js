@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowLeft } from "../../icons/arrowLeft.svg";
+import { ReactComponent as Calendar } from "../../icons/calendar.svg";
 import { getRandomRGBA } from '../../js/helpers.js';
 
 
@@ -34,11 +35,14 @@ class BlogPost extends Component {
             <div className="page-wrapper blog-post">
                 <div className="section-inner">
                     <div className="blog-post-info">
-                        <h3 className="blog-post-title">{this.props.post.title}</h3>
                         <Link to='/blog' className="back-to-previous-page" title="Back to blog">
                             <ArrowLeft className="invertable-icon" />
                         </Link>
-                        <p className="blog-post-date">{this.props.post.date}</p>
+                        <h3 className="blog-post-title">{this.props.post.title}</h3>
+                        <span className="blog-post-date">
+                            <Calendar className='invertable-icon' />
+                            <span>{this.props.post.date}</span>
+                        </span>
                         <div className="blog-post-tags">
                             {
                                 this.props.post.tags.map((t => {

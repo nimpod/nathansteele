@@ -29,7 +29,7 @@ const initState = {
                         <p>Huygens Titan lander remains the most distant landing of any human made spacecraft EVER.</p>\
                         <p>We have even mapped the surface of Titan since then!</p>\
                         <picture class=\"img\">\
-                            <img width=600 height=400 src=\"https://3iom3142cnb81rlnt6w4mtlr-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/fig1-7.jpg\" alt=\"https://aasnova.org/2018/05/21/bubbles-in-titans-seas/\" />\
+                            <img width=600 height=400 src=\"https://aasnova.wpenginepowered.com/wp-content/uploads/2018/05/fig1-7.jpg\" alt=\"Map of Titan\" />\
                         </picture>\
                         <p>Unfortunately it's probably too cold on the surface for life as we know it to emerge. Titan-specific life could potentially evolve to work with the cold temperatures on Titan, but it's an unknown...</p>\
                         <p>However, what about when the Sun expands into a red giant? Suddenly, Titan will start receiving much more heat and won't be as cold!</p>\
@@ -42,7 +42,7 @@ const initState = {
                         <p>The geysers shoot out water vapor, other volatiles, and solid material, including sodium chloride crystals and ice particles, into space, totaling approximately 200 kilograms (440 lb) per second. This indicates geothermal energy.</p>\
                         <p>In 2014 Cassini confirmed the existence of a deep, warm, sub-surface ocean making it a prime suspect for life elsewhere in our Solar System.</p>\
                         <picture class=\"img\">\
-                            <img width=600 height=400 src=\"https://solarsystem.nasa.gov/system/news_items/main_images/13148_Enceladus_plumes-16x9-rotated-180.jpg\" alt=\"https://solarsystem.nasa.gov/news/13148/complex-organics-bubble-up-from-ocean-world-enceladus/\" />\
+                            <img width=600 height=400 src=\"https://solarsystem.nasa.gov/system/news_items/main_images/13148_Enceladus_plumes-16x9-rotated-180.jpg\" alt=\"Photograph of geysers on Enceladus spewing out liquid water\" />\
                         </picture>\
                         <p>Enceladus’s ocean is 10-30km deep, whilst Earth’s average ocean depth is a mere 3.7km.</p>\
                         <p>In order for the liquid water to be useful, and be a source of life creating stuff, it needs to react with a rocky surface. Luckily, Enceladus has a rocky core, meaning geothermal reactions like the ones in Earth's oceans are likely happening as we speak.</p>\
@@ -266,42 +266,42 @@ const initState = {
                         </thead> \
                         <tbody> \
                             <tr> \
-                                <td>Car</td> \
+                                <td><a href='https://content.instructables.com/FB7/LHFS/JB3ZPO82/FB7LHFSJB3ZPO82.jpg?auto=webp&frame=1&width=320&md=7889e426df2974e5d95b1817c52ede0f'>Car</a></td> \
                                 <td>70</td> \
                                 <td>0.03</td> \
                                 <td>0.00000113%</td> \
                                 <td>40,600,000</td>\
                             </tr> \
                             <tr> \
-                                <td>Sound</td> \
+                                <td><a href='https://en.wikipedia.org/wiki/Speed_of_sound'>Sound</a></td> \
                                 <td>760</td> \
                                 <td>0.339</td> \
                                 <td>0.00000113%</td> \
                                 <td>4,600,000</td>\
                             </tr> \
                             <tr> \
-                                <td>Voyager 1</td> \
+                                <td><a href='https://voyager.jpl.nasa.gov/'>Voyager 1</a></td> \
                                 <td>38,214</td> \
                                 <td>17.3</td> \
                                 <td>0.00000576%</td> \
                                 <td>6,300</td>\
                             </tr> \
                             <tr> \
-                                <td>Parker Solar Probe</td> \
+                                <td><a href='https://www.nasa.gov/content/goddard/parker-solar-probe/'>Parker Solar Probe</a></td> \
                                 <td>429,988</td> \
                                 <td>692</td> \
                                 <td>0.0023%</td> \
                                 <td>73,000</td>\
                             </tr> \
                             <tr> \
-                                <td>Solar sail (theoretical)</td> \
+                                <td><a href='https://www.planetary.org/articles/what-is-solar-sailing'>Solar sail (theoretical)</a></td> \
                                 <td>2,236,936</td> \
                                 <td>60,000</td> \
                                 <td>20%</td> \
                                 <td>21.23</td>\
                             </tr> \
                             <tr> \
-                                <td>Light speed</td> \
+                                <td><a href='https://www.space.com/15830-light-speed.html'>Light speed</a></td> \
                                 <td>670,616,629</td> \
                                 <td>300,000</td> \
                                 <td>100%</td> \
