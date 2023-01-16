@@ -6,8 +6,17 @@ const initState = {
             id: "1",
             date: "27 Apr 2017",
             title: "Cassini-Huygens",
-            content: "<p>NASA's Cassini spacecraft embarked on an epic 7 year voyage to Saturn. Cassini was launched in 1997 and arrived at Saturn in 2004.</p>\
-                        <h3>Huygens Titan lander</h3>\
+            content: "<div class='intro-text'> \
+                        <p>NASA's Cassini spacecraft embarked on an epic 7 year voyage to Saturn. Cassini was launched in 1997 and arrived at Saturn in 2004.</p>\
+                        <p>Here's a quick summary of the things we're going to discuss in this post...</p> \
+                        <ul> \
+                            <li>Huygens Titan lander</li> \
+                            <li>Enceladus</li> \
+                            <li>The end of Cassini's mission</li>\
+                        </ul>\
+                      </div> \
+                      <div id='section1'> \
+                        <h5 class='subgroup-title'>Huygens Titan lander</h5>\
                         <p>So we landed a spacecraft on Titan (one of Saturn's many moons!) It happened on July 1st 2004. Here's a <a href=\"https://www.youtube.com/watch?v=svmGxFaGILY\">ridiculously insane video</a> of the 2h 27m descent.</p>\
                         <p>The Huygens probe landed just off the easternmost tip of a region called Adiri. Adiri is packed with lakes and islands.</p>\
                         <picture class=\"img\">\
@@ -37,7 +46,9 @@ const initState = {
                         <p>In other words, Titan will become an Earth-like oasis when the Sun is dying. Our Earth will be long gone, but perhaps Titan will be the place to be when it goes supernova.</p>\
                         <p>This Earth-like period could last anywhere between 100,000,000 - 500,000,000 years. Possibly not long enough for intelligent life to emerge, but long enough for some life to develop.</p>\
                         \
-                        <h3>Enceladus</h3>\
+                    </div> \
+                    <div id='section2'> \
+                        <h5 class='subgroup-title'>Enceladus</h5>\
                         <p>In 2004, Cassini observed geyser tendrils bursting jets of icy particles from Enceladus’s south polar region at speeds of 1,360mph.</p>\
                         <p>The geysers shoot out water vapor, other volatiles, and solid material, including sodium chloride crystals and ice particles, into space, totaling approximately 200 kilograms (440 lb) per second. This indicates geothermal energy.</p>\
                         <p>In 2014 Cassini confirmed the existence of a deep, warm, sub-surface ocean making it a prime suspect for life elsewhere in our Solar System.</p>\
@@ -50,8 +61,9 @@ const initState = {
                         <picture class=\"img\">\
                             <img width=600 height=400 src=\"https://solarsystem.nasa.gov/system/content_pages/main_images/1534_50_Enceladus_768.jpg\" alt=\"https://solarsystem.nasa.gov/missions/cassini/science/enceladus/\" />\
                         </picture>\
-                        \
-                        <h3>The end of Cassini's mission</h3>\
+                    </div> \
+                    <div id='section3'> \
+                        <h5 class='subgroup-title'>The end of Cassini's mission</h5>\
                         <p>Cassini’s main missions was to observe and collect data about Saturn and it's moons. It’s been doing that for the last 14 years, capturing thousands of stunning photographs of Saturn and it’s moons and has travelled over 1 billion miles since launch, but unfortunately Cassini is approaching the end of it’s fantastic journey. On September 15th 2017, Cassini will dive into Saturn’s atmosphere, destroying the spacecraft in the process. This method was chosen because it is imperative to ensure protection and prevent biological contamination to any of the moons of Saturn thought to offer potential habitability.</p>\
                         <p>\
                             Since November 30th 2016, Cassini has been going in and out of Saturn’s rings once every week, collecting data and photographing the ‘inside’ of the rings. No man-made spacecraft had ever attempted this before, and we got\
@@ -65,7 +77,8 @@ const initState = {
                         <p><a href='https://www.youtube.com/watch?v=xrGAQCq9BMU'>A great video about Cassini's grand finale, by NASA themselves</a></p>\
                         <p><a href='https://www.youtube.com/watch?v=CDGrhJ4kjFk'>Excellent video from a great educational channel</a></p>\
                         <p><a href='https://www.youtube.com/watch?v=G0g4L6a6Ns4'>A fantastic Cassini news conference (4th April 2017):</a></p>\
-                        <p><a href='https://www.youtube.com/watch?v=_9GY6njkMI8&t=0s'>Good video about Cassini's grand finale, including a fun artsy compilation using NASA's Cassini photographs, from a terrible YouTube channel about conspiracy theories and unbelievably dumb ancient alien videos, but he made a good video this time</a></p>",
+                        <p><a href='https://www.youtube.com/watch?v=_9GY6njkMI8&t=0s'>Good video about Cassini's grand finale, including a fun artsy compilation using NASA's Cassini photographs, from a terrible YouTube channel about conspiracy theories and unbelievably dumb ancient alien videos, but he made a good video this time</a></p> \
+                    </div>",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "A summary the amazing history and dramatic conclusion to NASA's Cassini spacecraft mission",
             tags: ["Astronomy"]
@@ -680,15 +693,6 @@ const initState = {
             tags: ["Vexilology", "Mathematics"]
         },
         {
-            id: "25",
-            date: "30 Sep 2022",
-            title: "Worst 20 movies I've watched",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "",
-            tags: ["Films"]
-        },
-        {
             id: "26",
             date: "30 Sep 2022",
             title: "Top 50 movie soundtracks",
@@ -696,6 +700,24 @@ const initState = {
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "",
             tags: ["Films", "Music"]
+        },
+        {
+            id: "27",
+            date: "16 Jan 2022",
+            title: "Johannes Kepler",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "",
+            tags: ["Interesting-people", "Astronomy"]
+        },
+        {
+            id: "28",
+            date: "16 Jan 2022",
+            title: "Samuel Pepys",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "",
+            tags: ["Interesting-people"]
         },
     ],
 

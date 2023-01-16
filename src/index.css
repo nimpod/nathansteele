@@ -106,6 +106,9 @@
   --blog-post-divider-color: rgb(243, 243, 243);
   --svg-icon-invert-percentage: 0%;
 
+  --tags-text-color: rgb(75, 72, 72);
+  --tags-Hardware-text-color: rgb(17, 140, 81);
+
   --university-controls-btn-bg: rgba(224, 222, 222, 0.609);
   --university-controls-btn-svg-fill: rgb(156, 154, 154);
   --university-card-box-shadow: rgba(12, 12, 13, 0.1);
@@ -218,6 +221,9 @@
   --blog-post-divider-color: rgb(69, 69, 75);
   --svg-icon-invert-percentage: 100%;
 
+  --tags-text-color: rgb(255, 255, 255);
+  --tags-Hardware-text-color: rgb(37, 216, 129);
+
   --university-controls-btn-bg: rgba(82, 79, 79, 0.609);
   --university-controls-btn-svg-fill: rgb(232, 232, 232);
   
@@ -307,14 +313,11 @@ a:not(.website-logo):hover {
 @media (max-width: 2000px) {
   .section-inner {
     margin: 0 auto;
-    width: 75%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 800px) {
   .section-inner {
-    /*
     max-width: 1300px;
-    */
   }
 }
 
@@ -327,19 +330,6 @@ a:not(.website-logo):hover {
     padding-left: calc(3.5rem + 1rem) !important;
   }
 }*/
-
-@media (max-width: 725px) {
-  .section-inner {
-    margin: 0 auto;
-    width: 95%;
-    margin-top: 30px;
-  }
-
-  .back-to-previous-page {
-    left: 70px;
-    top: 60px;
-  }
-}
 
 
 body, button, input, select, textarea, a {
@@ -426,8 +416,8 @@ body > div#root > div.App {
 
   #nav-top > .nav-right {
     position: absolute;
-    right: 100px;
-    top: 10px;
+    right: 78px;
+    top: 15px;
   }
 
   #nav-top .website-links a {
@@ -467,7 +457,7 @@ body > div#root > div.App {
 }
 #nav-top .website-links a {
   margin-left: 0.8em;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* target the div container .website-logo-container */
@@ -986,6 +976,7 @@ table tbody tr:hover {
   display: inline;
 }
 
+/* text inside tag */
 .tag span {
   margin-right: 6px;
   padding: 2px 5px;
@@ -996,21 +987,37 @@ table tbody tr:hover {
   color: var(--blog-table-tag-text);
 }
 
-/*
-.tag .Hardware { background-color: rgb(22, 94, 48); color: rgb(37, 216, 129); }
-.tag .Astronomy { background-color: rgb(122, 77, 230); color: rgb(238, 238, 238); }
-.tag .Mathematics { background-color: rgb(192, 86, 29); color: rgb(238, 238, 237); }
-.tag .Python { background-color: rgb(128, 155, 243); color: rgb(235, 235, 235); }
-.tag .Life { background-color: rgba(0, 0, 0, 0.864); color: rgb(255, 255, 255); }
-.tag .Biology { background-color: rgb(80, 139, 20); color: rgb(255, 255, 255); }
-.tag .React { background-color:rgb(9, 204, 188); color: rgb(255, 255, 255); }
-.tag .Cryptography { background-color:rgb(21, 87, 81); color: rgb(255, 255, 255); }
-.tag .Entomology { background-color:rgb(82, 174, 142); color: rgb(255, 244, 159); }
-.tag .Oceanography { background-color:rgb(56, 85, 148); color: rgb(255, 255, 255); }
-.tag .Geography { background-color:rgb(166, 211, 143); color: rgb(255, 255, 255); }
-.tag .History { background-color:rgb(118, 104, 97); color: rgb(255, 255, 255); }
-.tag .Rocks-and-minerals { background-color:rgb(228, 124, 207); color: rgb(255, 255, 255); }
-*/
+/* lower opacity when hovering over tag */
+.blog-post-tags > .tag:hover > span,
+.tag:hover span {
+  opacity: 0.3 !important;
+}
+
+/* Style each possible category of tag */
+.tag span {
+  color: var(--tags-text-color);
+}
+.tag span.Hardware {
+  color: var(--tags-Hardware-text-color);
+}
+.tag .Hardware { background-color: rgba(22, 94, 48, 0.3); }
+.tag .Astronomy { background-color: rgba(123, 77, 230, 0.3); }
+.tag .Mathematics { background-color: rgba(192, 86, 29, 0.3); }
+.tag .Python { background-color: rgba(128, 155, 243, 0.3); }
+.tag .Life { background-color: rgba(0, 0, 0, 0.3); }
+.tag .Biology { background-color: rgba(79, 139, 20, 0.3); }
+.tag .React { background-color:rgba(9, 204, 188, 0.3); }
+.tag .Cryptography { background-color:rgba(21, 87, 81, 0.3); }
+.tag .Entomology { background-color:rgba(82, 174, 142, 0.3); }
+.tag .Oceanography { background-color:rgba(56, 85, 148, 0.3); }
+.tag .Geography { background-color:rgba(166, 211, 143, 0.3); }
+.tag .History { background-color:rgba(97, 105, 118, 0.3);  }
+.tag .Rocks-and-minerals { background-color:rgba(228, 124, 207, 0.3);  }
+.tag .Running { background-color:rgba(111, 191, 248, 0.3);  }
+.tag .Films { background-color:rgba(240, 143, 17, 0.3); }
+.tag .Vexilology { background-color:rgba(107, 17, 176, 0.3);  }
+.tag .Music { background-color:rgba(246, 234, 13, 0.3); }
+
 
 .tag:hover {
   cursor: pointer;
@@ -1139,8 +1146,6 @@ table tbody tr:hover {
 .blog-post-tags {
   display: inline-block;
 }
-.blog-post-tags > * {
-}
 
 .blog-post-info .back-to-previous-page {
   display: inline-block;
@@ -1233,6 +1238,13 @@ table tbody tr:hover {
   margin-top: 40px;
   font-weight: 400;
   color: var(--blog-post-subTitle-text-color);
+}
+
+
+.blog-post-content h5.subgroup-title {
+  border-bottom: 2px solid rgb(49, 48, 50);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* remove any margin from the first element in a blog post */
@@ -1704,7 +1716,7 @@ ul.messiahs-handbook p.quote-person {
     display: none !important;
     position: absolute;
     top: 50px;
-    right: 100px;
+    right: 85px;
     background-color: var(--bg1);
     box-shadow: -1px 4px 6px var(--topnav-collapsed-shadow-color);
   }
@@ -1725,7 +1737,31 @@ ul.messiahs-handbook p.quote-person {
 
   /* font size of searchbox */
   .controls > div.searchbox > input {
-    font-size: 14px;
+    font-size: 13px;
+    width: inherit;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  /* move content down a bit to make room for button */
+  .blog-post-content {
+    margin-top: 40px;
+  }
+  /* move button */
+  .back-to-previous-page {
+    left: 85px;
+    top: 140px;
+  }
+  /*
+  .back-to-previous-page::after {
+    content: 'Go back';
+  }*/
+
+  /* main container */
+  .section-inner {
+    margin: 0 auto;
+    width: 95%;
+    margin-top: -10px;
   }
 }
 
