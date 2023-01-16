@@ -58,15 +58,18 @@
   --topnav-collapsed-shadow-color: rgba(0, 0, 0, 0.849);
   --button-border-color-onclick: rgb(206, 206, 206);
 
-  --logo-path-color: rgb(3, 105, 51);
+  --logo-path-color: rgb(218, 234, 226);
   --logo-path-color-onclick: rgba(5, 120, 72, 0.897);
-  --logo-stroke-color: rgb(4, 4, 47);
+  --logo-stroke-color: rgb(17, 15, 15);
   --logo-stroke-color-hover: rgb(255, 255, 255);
 
   --sidenav-bg-color: rgb(253, 252, 251);
   --sidenav-shadow-color: rgba(0,0,0,.45);
   --sidenav-item-text-color: rgb(33, 33, 33);
   --sidenav-item-border-bottom-hover: rgb(3, 170, 140);
+
+  --scrollbar-clickybit-bg-color: rgb(18, 169, 119);
+  --scrolbar-notclickybit-bg-color: rgb(19, 18, 18); 
 
   --arrow-smooth-scroll-btn: rgb(53, 53, 53);
   --arrow-smooth-scroll-btn-hover:  rgb(88, 88, 88);
@@ -150,10 +153,10 @@
   --text-hyperlink: rgb(45, 206, 255);
   --text-hyperlink-hover: rgb(51, 207, 255);
 
-  --topnav-bg-color: rgba(0, 0, 0, 0.496);
+  --topnav-bg-color: rgba(0, 0, 0, 0);
   --topnav-button-bg-color: rgb(40, 38, 38);
   --topnav-button-bg-color-hover: rgb(50, 47, 47);
-  --topnav-button-bg-color-active: rgb(73, 70, 70);
+  --topnav-button-bg-color-active: rgb(83, 80, 80);
   --topnav-button-text-color: rgb(163, 163, 163);
   --topnav-button-text-color-hover: rgb(255, 255, 255);
   --topnav-button-text-color-active: rgb(0, 255, 208);
@@ -164,10 +167,13 @@
   --logo-stroke-color: rgb(0, 0, 0);
   --logo-stroke-color-hover: rgb(0, 0, 0);
 
-  --sidenav-bg-color: rgba(0, 0, 0, 0.123); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
+  --sidenav-bg-color: rgba(0, 0, 0, 0); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
   --sidenav-shadow-color: rgba(0, 0, 0, 0.748);
   --sidenav-item-border-bottom-hover: rgb(28, 206, 173);
   --sidenav-item-text-color: rgb(255, 255, 255);
+
+  --scrollbar-clickybit-bg-color: rgba(0, 255, 208, 0.26);
+  --scrolbar-notclickybit-bg-color: rgb(67, 66, 66); 
 
   --arrow-smooth-scroll-btn: rgb(141, 141, 141);
   --arrow-smooth-scroll-btn-hover: rgb(88, 88, 88);
@@ -278,7 +284,7 @@ a:not(.website-logo):hover {
 @media (max-width: 2000px) {
   .section-inner {
     margin: 0 auto;
-    width: 75%;
+    width: 73%;
   }
 }
 @media (min-width: 1400px) {
@@ -286,12 +292,21 @@ a:not(.website-logo):hover {
     max-width: 1300px;
   }
 }
+
+/* Accomodate for sidebar... */
+/*
 @media (max-width: 725px) {
   .section-inner {
     max-width: 600px;
     margin: 0 !important;
     padding-left: calc(3.5rem + 1rem) !important;
+  }
+}*/
 
+@media (max-width: 725px) {
+  .section-inner {
+    margin: 0 auto;
+    width: 95%;
   }
 }
 
@@ -365,11 +380,13 @@ body > div#root > div.App {
   position: fixed;
   z-index: 1000;
   width: 100vw;
-  background-color: var(--topnav-bg-color);
   align-items: center;
-  padding: 0.7em 0em;
+  padding: 0.9em 1em;
   font-size: 1.0rem;
   margin-left: 3.5rem;
+  /*
+  background-color: var(--topnav-bg-color);
+  */
 }
 
 @media screen and (max-width: 700px) { 
@@ -468,8 +485,13 @@ body > div#root > div.App {
   color: var(--svg-color-hover);
 }
 
-.theme-toggle .inline-svg { width: 33px; }
-.hamburger-menu .inline-svg { width: 20px; height: 26px; }
+.theme-toggle .inline-svg { 
+  width: 33px;
+}
+.hamburger-menu .inline-svg { 
+  width: 20px;
+  height: 28px;
+}
 /* #endregion */
 
 
@@ -482,7 +504,7 @@ body > div#root > div.App {
 #nav-side {
   position: fixed;
   display: flex;
-  width: 3.5rem;
+  width: 4.5rem;
   height: 100vh;
   flex-direction: column;
   align-items: stretch;
@@ -490,16 +512,13 @@ body > div#root > div.App {
   background-color: var(--sidenav-bg-color);
 }
 
-#nav-side > .website-logo-container > a.website-logo {
-  margin-left: 0.4rem;
-}
-
 #nav-side > .website-logo-container {
   position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -519,8 +538,8 @@ a.website-logo:hover {
 }
 
 svg.logo {
-  width: 40px;
-  height: 40px;
+  width: 57px;
+  height: 57px;
   stroke-width: 31.1px;
   stroke-opacity: 1110.11;
   z-index: 10;
@@ -556,29 +575,29 @@ svg.logo path:nth-child(21) { fill: rgb(255, 255, 255); }
 svg.logo path:nth-child(22) { fill: rgb(255, 255, 255); }
 svg.logo path:nth-child(23) { fill: rgb(253, 52, 52);  }
 
-svg.logo:hover path:nth-child(1) { fill: var(--logo-path-color); transition: fill 0ms ease; }
-svg.logo:hover path:nth-child(2) { fill: var(--logo-path-color);  transition: fill 100ms ease;}
-svg.logo:hover path:nth-child(3) { fill: var(--logo-path-color);  transition: fill 200ms ease; }
-svg.logo:hover path:nth-child(4) { fill: var(--logo-path-color);  transition: fill 300ms ease; }
-svg.logo:hover path:nth-child(5) { fill: var(--logo-path-color); transition: fill 400ms ease; }
-svg.logo:hover path:nth-child(6) { fill: var(--logo-path-color);  transition: fill 500ms ease;}
-svg.logo:hover path:nth-child(7) { fill: var(--logo-path-color);  transition: fill 600ms ease;}
-svg.logo:hover path:nth-child(8) { fill: var(--logo-path-color);  transition: fill 650ms ease; }
-svg.logo:hover path:nth-child(9) { fill: var(--logo-path-color);  transition: fill 700ms ease;}
-svg.logo:hover path:nth-child(10) { fill: var(--logo-path-color); transition: fill 720ms ease; }
-svg.logo:hover path:nth-child(11) { fill: var(--logo-path-color); transition: fill 740ms ease;}
-svg.logo:hover path:nth-child(12) { fill: var(--logo-path-color); transition: fill 760ms ease; }
-svg.logo:hover path:nth-child(13) { fill: var(--logo-path-color); transition: fill 780ms ease; }
-svg.logo:hover path:nth-child(14) { fill: var(--logo-path-color); transition: fill 800ms ease; }
-svg.logo:hover path:nth-child(15) { fill: var(--logo-path-color); transition: fill 850ms ease; }
-svg.logo:hover path:nth-child(16) { fill: var(--logo-path-color); transition: fill 900ms ease; }
-svg.logo:hover path:nth-child(17) { fill: var(--logo-path-color); transition: fill 920ms ease; }
-svg.logo:hover path:nth-child(18) { fill: var(--logo-path-color); transition: fill 940ms ease; }
-svg.logo:hover path:nth-child(19) { fill: var(--logo-path-color); transition: fill 960ms ease; }
-svg.logo:hover path:nth-child(20) { fill: var(--logo-path-color);  transition: fill 980ms ease;}
-svg.logo:hover path:nth-child(21) { fill: var(--logo-path-color);  transition: fill 1000ms ease;}
-svg.logo:hover path:nth-child(22) { fill: var(--logo-path-color); transition: fill 1020ms ease;}
-svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fill 1040ms ease;}
+svg.logo:hover path:nth-child(1) { fill: var(--logo-path-color); transition: fill 0ms ease-in-out; }
+svg.logo:hover path:nth-child(2) { fill: var(--logo-path-color);  transition: fill 100ms ease-in-out;}
+svg.logo:hover path:nth-child(3) { fill: var(--logo-path-color);  transition: fill 200ms ease-in-out; }
+svg.logo:hover path:nth-child(4) { fill: var(--logo-path-color);  transition: fill 300ms ease-in-out; }
+svg.logo:hover path:nth-child(5) { fill: var(--logo-path-color); transition: fill 400ms ease-in-out; }
+svg.logo:hover path:nth-child(6) { fill: var(--logo-path-color);  transition: fill 500ms ease-in-out;}
+svg.logo:hover path:nth-child(7) { fill: var(--logo-path-color);  transition: fill 600ms ease-in-out;}
+svg.logo:hover path:nth-child(8) { fill: var(--logo-path-color);  transition: fill 650ms ease-in-out; }
+svg.logo:hover path:nth-child(9) { fill: var(--logo-path-color);  transition: fill 700ms ease-in-out;}
+svg.logo:hover path:nth-child(10) { fill: var(--logo-path-color); transition: fill 750ms ease-in-out; }
+svg.logo:hover path:nth-child(11) { fill: var(--logo-path-color); transition: fill 800ms ease-in-out;}
+svg.logo:hover path:nth-child(12) { fill: var(--logo-path-color); transition: fill 860ms ease-in-out; }
+svg.logo:hover path:nth-child(13) { fill: var(--logo-path-color); transition: fill 880ms ease-in-out; }
+svg.logo:hover path:nth-child(14) { fill: var(--logo-path-color); transition: fill 900ms ease-in-out; }
+svg.logo:hover path:nth-child(15) { fill: var(--logo-path-color); transition: fill 950ms ease-in-out; }
+svg.logo:hover path:nth-child(16) { fill: var(--logo-path-color); transition: fill 1000ms ease-in-out; }
+svg.logo:hover path:nth-child(17) { fill: var(--logo-path-color); transition: fill 1220ms ease-in-out; }
+svg.logo:hover path:nth-child(18) { fill: var(--logo-path-color); transition: fill 1440ms ease-in-out; }
+svg.logo:hover path:nth-child(19) { fill: var(--logo-path-color); transition: fill 1660ms ease-in-out; }
+svg.logo:hover path:nth-child(20) { fill: var(--logo-path-color);  transition: fill 1780ms ease-in-out;}
+svg.logo:hover path:nth-child(21) { fill: var(--logo-path-color);  transition: fill 1800ms ease-in-out;}
+svg.logo:hover path:nth-child(22) { fill: var(--logo-path-color); transition: fill 1920ms ease-in-out;}
+svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fill 1950ms ease-in-out;}
 /* #endregion */
 
 /*
@@ -587,11 +606,11 @@ svg.logo:hover path {
   transition: fill 350ms ease;
   stroke: var(--logo-stroke-color-hover);
 }*/
-/*
-svg.logo path:hover ~ * {
-  fill: rgba(249, 249, 249, 0.935);
-  transition: fill 350ms ease;
-}*/
+
+svg.logo path:hover {
+  fill: rgb(255, 27, 80) !important;
+  transition: fill 50ms ease-in-out;
+}
 
 
 /* #endregion */
@@ -870,9 +889,11 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
   font-size: 1.0rem;
-  background-color: var(--blog-table-bg);
   transition: 300ms all;
   width: 100%;
+  /*
+  background-color: var(--blog-table-bg);
+  */
 }
 
 table tr {
@@ -991,10 +1012,12 @@ table tbody tr:hover {
   background-color: var(--blog-table-searchbox-bg-color);
   color: var(--text);
   width: 300px;
-  padding: 6px;
+  padding: 4px;
 }
 .controls > div.searchbox > input:active {
-  border: 2px solid transparent;
+  /*
+  border: 1px solid transparent;
+  */
 }
 /* #endregion */
 
@@ -1082,6 +1105,32 @@ table tbody tr:hover {
 	border-top: 2px solid var(--blog-post-divider-color);
 }
 
+
+/* Table inside a blog-post */
+.blog-post table {
+  margin: 40px 0;
+}
+.blog-post table th, 
+.blog-post table td {
+  width: 20%;
+}
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(1) { color: rgb(253, 15, 15); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(2) { color: rgb(255, 79, 35); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(3) { color: rgb(226, 90, 45); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(4) { color: rgb(240, 200, 40); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(5) { color: rgb(188, 209, 26); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(6) { color: rgb(24, 188, 65); }
+
+@media screen and (max-width: 670px) {
+  .blog-post table th {
+    font-size: 0.7rem;
+  }
+  .blog-post table td {
+    font-size: 0.6rem;
+  }
+}
+
+
 .blog-post-content p,
 .blog-post-content ul li,
 .blog-post-content ol li {
@@ -1126,6 +1175,26 @@ table tbody tr:hover {
   line-height: 1.55em;
 }
 
+/* Image sizing problems! */
+.blog-post img:not(.dont-resize) {
+  width: 100%;
+}
+.blog-post img {
+  border-radius: 8px;
+  max-height: 100%;
+  height: auto;
+  margin: 2em 0;
+  max-width: 600px;
+}
+.blog-post img, .blog-post picture {
+  display: block;
+}
+
+
+.line {
+  border: 1px solid var(--blog-post-divider-color);
+  border-style: dotted;
+}
 
 svg.invertable-icon {
   filter: invert(var(--svg-icon-invert-percentage));
@@ -1543,22 +1612,6 @@ ul.messiahs-handbook p.quote-person {
   text-align: right;
 }
 
-.blog-post img {
-  border-radius: 8px;
-  height: auto;
-  max-height: 100%;
-}
-
-.blog-post img {
-  margin: 2em 0;
-}
-.blog-post img, .blog-post picture {
-  display: block;
-}
-.line {
-  border: 1px solid var(--blog-post-divider-color);
-  border-style: dotted;
-}
 /* #endregion */
 
 
@@ -1568,10 +1621,10 @@ ul.messiahs-handbook p.quote-person {
 @media screen and (max-width: 900px) { .portfolio h1 { font-size: 50px; } .portfolio h2 { font-size: 40px; } }
 @media screen and (max-width: 900px) { #about, .projects-header { padding: 100px 25px 0px 25px !important;  } }
 @media screen and (max-width: 650px) { .smooth-scroll-btn { text-align: center; } }
-@media screen and (max-width: 600px) { #about, .projects-header { padding: 100px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
+@media screen and (max-width: 600px) { #about, .projects-header { padding: 20px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
 
 /* anything that should be hidden in mobile goes here... */
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 670px) {
   #nav-top.active .website-links {
     display: block !important;
   }
@@ -1596,6 +1649,11 @@ ul.messiahs-handbook p.quote-person {
     display: inline-block !important;
   }
   .hamburger-menu > .inline-svg > svg {
+  }
+
+  /* font size of searchbox */
+  .controls > div.searchbox > input {
+    font-size: 14px;
   }
 }
 
@@ -1623,7 +1681,6 @@ ul.messiahs-handbook p.quote-person {
 @media screen and (max-width: 700px) { .page-title{ font-size: 2.4rem !important; } }
 @media screen and (max-width: 400px) { .page-title{ font-size: 1.8rem !important; } }
 
-@media screen and (max-width: 700px) { .blog-post-title, .blog-post-date, .blog-post-tags { margin-left: 50px; } }
 
 /* remove padding from a blog post as screen gets smaller */
 @media only screen and (max-width: 1500px) { .blog-post { padding-left: 300px; padding-right: 300px; } .blog-post-title { font-size: 3.2rem; } }
@@ -1631,7 +1688,8 @@ ul.messiahs-handbook p.quote-person {
 @media only screen and (max-width: 1100px) { .blog-post { padding-left: 100px; padding-right: 100px; } .blog-post-title { font-size: 2.6rem; } }
 @media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } .blog-post-title { font-size: 2.5rem; } }
 @media only screen and (max-width: 900px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.4rem; } }
-@media only screen and (max-width: 800px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.3rem; } .blog-post-content p { font-size: 0.9rem; } }
+@media only screen and (max-width: 800px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 1.9rem; } .blog-post-content p { font-size: 0.8rem; } }
+
 /* #endregion */
 
 
@@ -1684,11 +1742,8 @@ ul.messiahs-handbook p.quote-person {
 
 
 /* #region ----------------------------------<14: SCROLLBARS>------------------------------------------ */
-/* 
- The custom scrollbar I am using is not available in Firefox, Internet Explorer or Edge, and for those browsers the default scrollbar is used 
- Otherwise, this custom scrollbar will be used.
- Basically if you are using Chrome you get a funky custom scrollbar
-*/
+
+/* Styles for custom scrollbar in Chrome... */
 body::-webkit-scrollbar-track {
   background-color: #dfdfdf;
 }
@@ -1700,6 +1755,13 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: rgb(136, 136, 136);
 }
+
+/* Styles for custom scrollbar in Firefox.... */
+:root {
+  scrollbar-color: var(--scrollbar-clickybit-bg-color) var(--scrolbar-notclickybit-bg-color) !important;
+  scrollbar-width: thin !important;
+}
+
 
 .tags::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb-bg-color-tags) !important;

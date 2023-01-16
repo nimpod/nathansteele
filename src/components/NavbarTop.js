@@ -132,7 +132,7 @@ class NavbarTop extends Component {
                 </div>
                 
                 <div className="nav-right">
-                    <div className="theme-toggle inline-svg-wrapper" onClick={this.switchTheme} aria-label="Click to enable dark mode" title="Click to enable dark mode7">
+                    <div className="theme-toggle inline-svg-wrapper" onClick={this.switchTheme} aria-label="Click to toggle theme" title="Click to toggle theme">
                         <span className="inline-svg dark">
                             <DarkThemeIcon />
                         </span>

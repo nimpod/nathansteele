@@ -17,6 +17,8 @@ import UniversityAssignment from './components/university/UniversityAssignment';
 
 import CasioBasic from './components/notes/CasioBasic';
 
+import Films from './components/films/Films';
+
 // import ParticlesMin from './js/particles.min.js'
 // <script src="js/particles.min.js"></script>
 // <script src='../node_modules/sal.js/dist/sal.js'></script>
@@ -44,6 +46,7 @@ export default class App extends Component {
                       <Route path='/blog' component={Blog} exact />
                       <Route path='/notes' component={Notes} exact />
                       <Route path='/blog/:post_id' component={BlogPost} />
+                      <Route path='/films' component={Films} />
                       <Route path='/university/:assignment_id' component={UniversityAssignment} />
                       <Route path='/notes/casio_basic' component={CasioBasic} />
                   </Switch>

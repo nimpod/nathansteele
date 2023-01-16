@@ -15,16 +15,16 @@ const initState = {
                         </picture>\
                         <p>The lakes of Titan are not comprised of liquid water though, but rather hydrocarbon fluids. The stuff we power our cars with. \"hundreds of times more natural gas and other liquid hydrocarbons than all the known oil and natural gas reserves on Earth\". It has been proven that Titan contains about 300 times the volume of Earth's proven oil reserves.</p>\
                         <p>Calculations indicate wind speeds of less than 1 metre per second. We thought this would create some waves across the lakes, but none were observed.</p>\
-                        <p>It also rains liquid methane... Organic compounds are produced by ultraviolet radiation in the atmosphere, and the rain deposits all these compounds onto the surface forming the lakes. There is no reason why complex organic chemistry that gives rise to bacterial life could not emerge in this atmosphere.</p>\
+                        <p>It also <b>rains liquid methane</b>...! Organic compounds are produced by ultraviolet radiation in the atmosphere, and the rain deposits all these compounds onto the surface forming the lakes. There is no reason why complex organic chemistry that gives rise to bacterial life could not emerge in this atmosphere.</p>\
                         <p>Titan is also home to cryovolcanoes, which also contribute to adding methane to the atmosphere.</p>\
                         <p>On Titan, the little sunlight it gets allows only about one centimeter of evaporation per year (versus one meter of water on Earth), but the atmosphere can hold the equivalent of about 10 meters of liquid before rain forms (versus about 2 cm on Earth). So Titan's weather is expected to feature downpours of several meters causing flash floods, interspersed by decades or centuries of drought (whereas typical weather on Earth includes a little rain most weeks). Cassini has observed equatorial rainstorms only once since 2004. Despite this, a number of long-standing tropical hydrocarbon lakes were unexpectedly discovered in 2012. This may explain the reason for the strange reappearance and disappearance of small islands which Cassini saw happening.</p>\
                         <picture class=\"img\">\
-                            <img width=300 height=400 src=\"https://media.npr.org/assets/img/2017/10/16/titan-41d62a75c7b7376fe8ff872bb1deec3bc24a4a14.jpeg\" />\
+                            <img width=300 height=400 class='dont-resize' src=\"https://media.npr.org/assets/img/2017/10/16/titan-41d62a75c7b7376fe8ff872bb1deec3bc24a4a14.jpeg\" />\
                         </picture>\
                         <p>Titan is thought to be a prebiotic environment rich in complex organic chemistry. It has been suggested that life could exist in the lakes of liquid methane on Titan, just as organisms on Earth live in water. Such organisms would inhale H2 in place of O2, metabolize it with acetylene instead of glucose, and exhale methane instead of carbon dioxide.</p>\
                         <p>When the spacecraft landed, it felt the surface as similar to a slightly more absorbent, sludgy mud texture... This is a photograph Huygens took when it landed!!!!</p>\
                         <picture class=\"img\">\
-                            <img width=200 height=100 src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Huygens_surface_color_sr.jpg/200px-Huygens_surface_color_sr.jpg\" />\
+                            <img width=200 height=100 class='dont-resize' src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Huygens_surface_color_sr.jpg/200px-Huygens_surface_color_sr.jpg\" />\
                         </picture>\
                         <p>Huygens Titan lander remains the most distant landing of any human made spacecraft EVER.</p>\
                         <p>We have even mapped the surface of Titan since then!</p>\
@@ -71,124 +71,94 @@ const initState = {
             tags: ["Astronomy"]
         },
         {
-            id: "2", 
-            date: "29 Mar 2018", 
-            title: "The Representation theory of the additive group scheme", 
-            content: "<p>In this post we’ll describe the representation theory of the additive group scheme \\mathbb{G}_a over a field k. The answer turns out to depend dramatically on whether or not k has characteristic zero.</p><p>Preliminaries over an arbitrary ring</p><p>(All rings and algebras are commutative unless otherwise stated.)</p><p>The additive group scheme \\mathbb{G}_a over a base ring k has functor of points given by the underlying abelian group functor</p><p>This functor is represented by the free k-algebra k[x] together with the Hopf algebra structure given by the comultiplication</p><hr /><p>and antipode S(x) = -x, and so it is an affine group scheme whose underlying scheme is the affine line \\mathbb{A}^1 over k. From a Hopf algebra perspective, this Hopf algebra is special because it is the free Hopf algebra on a primitive element.</p><p>A representation of \\mathbb{G}_a can be described in a few equivalent ways. From the functor of points perspective, we first need to describe the functor of points perspective on a k-module: a k-module V has functor of points</p><p>making it an affine group scheme if V is finitely generated projective (in which case its ring of functions is the symmetric algebra S(V^{\\ast}) on the dual of V) but not in general, for example if k is a field and V is an infinite-dimensional vector space. Note that if V = k we recover \\mathbb{G}_a, and more generally if V = k^n we recover \\mathbb{G}_a^n.</p>",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Mathematics"]
-        },
-        {
-            id: "3",
-            date: "27 Mar 2018", 
-            title: "Singular value decomposition",
-            content: "<p>In the previous post we described a fairly striahgroward argument, using generating functions and the saddle-point bound, for giving an upper bound.</p><p>hi</p>",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Mathematics"]
-        },
-        {
-            id: "4", 
-            date: "30 May 2018", 
-            title: "Gradient Descent",
-            content: "<p class=\"note\">Note: this is a repost of a Facebook status I wrote off the cuff about a year ago, lightly edited. As such it has a different stylef from my other posts, but I still wanted to put somewhere where it'd be easier to find and share than Facebook.</p><p>Gradient descent, in its simpliest where you just subtract the gradient of your loss funcction J, is not dimensionally consistent: if the parameters you're optimising over have units of length, and the loss function is dimensionless, then the diriviatives you're substracting have units of inverse length.</p><p>This observation can be used to reinvent the learning rate, which, for dimensional consistency, must have units of length squared. It also suggests theat the learning rate outght to be set to something like L**2 for some kind of characteristic length scale L , which loosly speaking is the length at which the curvature of J starts to matter.</p>",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Mathematics"]
-        },
-        {
-            id: "5",
-            date: "09 Sep 2020",
-            title: "Working from home as an intern during the COVID-19 pandemic",
-            content: "<div class='intro-container'>It was challening</div><hr />",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Life"]
-        },
-        {
-            id: "6",
+            id: "2",
             date: "08 Sep 2016",
             title: "Why the moon landing was not a hoax",
-            content: "<p>One of my friends at school was convinced that the moon landings were a hoax. He was pretty darn serious about and still bugs me to this day.\
-                        I figured that this has gone on too long, and that for my own wellbeing as well as his, I should splatter my thoughts, frustrations and undeniable truth here in a blog post.</p>\
-                    <h6>Reasons why the moon landing(s) were not faked:</h6> \
-                        <p><strong>The Lunar Laser Ranging Experiment</strong> - \
-                            Reflectors were placed on the moon at just the right angle so that a laser can be fired from earth to the moon, which then bounces off these reflectors and back to the earth at the exact point it left.\
-                            This is done with pin-point accuracy and is still in operation today. Many countries including Russia use the reflectors placed on the moon to conduct their own experiments. \
-                            How did the reflectors get there and into the exact position they need to be in??? Could it be that they were placed there by Apollo astronauts?\
-                            Well I never.\
-                        </p>\
-                        <p><strong>Lunar rocks</strong> - \
-                            We have brought back 350kg lunar rock on the Apollo missions.\
-                            The rocks we've brought back date to about 3,900 million years old.  \
-                            The oldest natural glass on earth that has been found pales in comparison at just 160 million years. This is due to the atmospheric decay of glass on earth.\
-                            The moon has no atmosphere, so glass does not decay the same way. \
-                            These lunar glass balls have been tested throughout the world by numerous scientists.\
-                            It's a pretty hard piece of evidence that they did indeed come from the moon. \
-                            Buzz Aldrin collected 16 Moon rocks and brought them back to Earth to examine. \
-                            Once they were returned, there was still 16 rocks, and they were all legit. \
-                            Many other missions have brought Moon rocks and have all been similar to Apollo 11’s rocks and are all carbon dated and documented to their landing dates.\
-                        </p>\
-                        <p><strong>We can see it</strong> - \
-                            The Apollo landing sites and lunar rover trails from NASA's Lunar Reconnaissance Orbiter (LRO), about 21km above the surface. \
-                        </p>\
-                        <p><strong>Harder to fake it</strong> - \
-                            it would genuinely be more difficult to fake it, rather than to just go there. \
-                            Besides, without going there how would they know what it looks like, feels like, sounds like in order to fake it. \
-                        </p>\
-                        <p><strong>Filmography / filmmaking</strong> - the limitations of cameras and films in 1969 were very different to present day. \
-                            <a href='https://www.youtube.com/watch?v=_loUDS4c3Cs&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=123'>This video</a> explains it pretty well.\
-                        </p>\
-                        <p><strong>Worldwide research and publicity</strong> - \
-                            in order for NASA to fake The Moon Landing, around 400,000 people would of had to keep it a secret, for almost 50 YEARS... really?\
-                            You think 400,000 scientific researchers around the world are gonna create an incredibly elaborate 'movie set' just so they can say they went to The Moon?\
-                        </p>\
-                        <p><strong>Conspiracy theorists are crazy</strong> -\
-                            the person who created this ridiculous conspiracy theory isn’t just some standard guy.\
-                            The person who started all of this was Bill Kaysing.\
-                            He was constantly smoking weed and crack.\
-                            He was always having illucinations about travelling to The moon and being humiliated in front of people in his dreams.\
-                            He then then spread the rumour around to the public.</p>\
-                        </p>\
-                        <h6>Where are the stars?</h6>\
-                        <p>One of the claims made to support the hoax theory is that there were no stars pictured from the surface of the Moon.\
-                            The true reason you can’t see the stars in photos and videos of Moon is not that the stars aren’t there, but rather because of the omnipresent sunlight and the exposure limits of cameras.\
-                            When these photos were taken, it was full daylight on the Moon. Because there is only an extremely thin atmosphere on the Moon,the sky appears black.\
-                            In addition, sunlight at the Moon’s surface was incomparably strong with the starlight; the stars simply faded in comparison with the sun.\
-                            If the astronauts used sufficiently long exposures, stars would, indeed, be visible.\
-                            There are no stars because the cameras couldn’t pick them up. And like I mentioned before, considering that it is 1969, there are a lot of limitations on the ability to carry out documentation in the form of photo/video media.\
-                        </p>\
-                        <h6>But the flag is waving?</h6>\
-                        <p>The flag was actually made from plastic material, similar to the one that tents are usually made of.\
-                            For practical reasons, the flag was originally folded to maximize space and stored in a thin tube.\
-                            After Neil Armstrong planted it to the surface of the Moon, it briefly appeared to move as it was unfolding itself to its final shape.\
-                            I like to imagine the flag as tinfoil, try and make a nice flat piece of tinfoil! \
-                        </p>\
-                        <h6>But they passed through the Van Allen Radiation Belt?!?!??</h6>\
-                        <p>The truth is, during their entire voyage to the Moon and back to Earth, Armstrong, Aldrin and Collins only received amount of radiation equal to about 0.1% of the deadly dose.\
-                            Their total exposure was approximately 11 milisieverts. Lethal levels of radiation is around 8,000 millisieverts.\
-                            The harmful effects of radiation are based both on its strength and the time of exposure to its source.\
-                            Average human would need to spend nearly four months inside the Van Allen belts to accumulate a lethal dose.\
-                            The astronauts managed to pass through them during less than one hour.\
-                            Regarding the time spent out of Earth’s magnetic field, where the astronauts were exposed to solar radiation, an average human could endure a radiation exposure equivalent to one-way trip to Mars and still not receive a dose which exceedslifetime levels set up by NASA.\
-                        </p>\
-                        <h6>Who filmed Armstrong's first steps then??!??!</h6>\
+            content: "<p>This is a quick blog post to vent my frustrations regarding anti-moon landing people.</p>\
+                    <p>There are <b>several pieces of evidence</b> that support the moon landings...</p>\
+                    <ul>\
+                        <li>1.1) The Lunar Laser Ranging Experiment</li>\
+                        <li>1.2) Lunar rocks</li> \
+                        <li>1.3) We can see it</li> \
+                        <li>1.4) Limitations of camreas in the 60's</li> \
+                        <li>1.5) Worldwide research and publicity</li> \
+                        <li>1.6) Conspiracy theorists are crazy</li> \
+                    </ul>\
+                    <p>And some <b>typical arguments</b> that are raised...</p> \
+                    <ul>\
+                        <li>2.1) Where are the stars?</li>\
+                        <li>2.2) But the flag is waving?</li> \
+                        <li>2.3) But they passed through the Van Allen Radiation Belt</li>\
+                        <li>2.4) Who filmed Armstrong's first steps then?</li> \
+                        <li>2.5) But we haven't we been back for 40 years?!</li> \
+                    </ul>\
+                    <h4>1.1) <a href='https://en.wikipedia.org/wiki/Lunar_Laser_Ranging_experiment'>The Lunar Laser Ranging Experiment</a></h4> \
+                        <p>Reflectors were placed on the moon at just the right angle so that a laser can be fired from earth to the moon, which then bounces off these reflectors and back to the earth at the exact point it left.\
+                        <p>This is done with pin-point accuracy and is still in operation today. Many countries including Russia use the reflectors placed on the moon to conduct their own experiments.</p> \
+                        <p>How did the reflectors get there and into the exact position they need to be in??? Could it be that they were placed there by Apollo astronauts?</p> \
+                        <picture class=\"img\">\
+                            <img width=400 height=200 src=\"https://media.springernature.com/lw685/springer-static/image/art%3A10.12942%2Flrr-2010-7/MediaObjects/41114_2016_9126_Fig1.jpg\" alt=\"https://media.springernature.com/lw685/springer-static/image/art%3A10.12942%2Flrr-2010-7/MediaObjects/41114_2016_9126_Fig1.jpg\" />\
+                        </picture>\
+                    <h4>1.2) <a href='https://en.wikipedia.org/wiki/Moon_rock'>Lunar rocks</a></h4> \
+                        <p>Buzz Aldrin collected 16 Moon rocks and brought them back to Earth to examine. Once they were returned, there was still 16 rocks, and they were all legit.</p> \
+                        <p>Many other missions have brought Moon rocks and have all been similar to Apollo 11’s rocks and are all carbon dated and documented to their landing dates.</p> \
+                        <p>We have brought back 350kg lunar rock on the Apollo missions.</p> \
+                        <p>The rocks we've brought back date to about 3,900 million years old.</p> \
+                        <p>The oldest natural glass on earth that has been found pales in comparison at just 160 million years. This is due to the atmospheric decay of glass on earth.</p> \
+                        <p>The moon has no atmosphere, so glass does not decay the same way.</p>  \
+                        <p>These lunar glass balls have been tested throughout the world by numerous scientists.</p> \
+                        <picture class=\"img\">\
+                            <img width=200 height=100 src=\"https://cdn.britannica.com/26/76826-050-D9D81830/samples-breccia-Basalt-astronauts-sample-Moon-Apollo-1971.jpg\" alt=\"https://cdn.britannica.com/26/76826-050-D9D81830/samples-breccia-Basalt-astronauts-sample-Moon-Apollo-1971.jpg\" />\
+                        </picture>\
+                    <h4>1.3) We can see it</h4> \
+                        <p>The Apollo landing sites and lunar rover trails from NASA's Lunar Reconnaissance Orbiter (LRO), about 21km above the surface.</p> \
+                        <picture class=\"img\">\
+                            <img width=200 height=100 src=\"https://www.gannett-cdn.com/presto/2019/06/06/PPHX/1fa11563-b89c-4e14-8f50-9d9c951d2b95-Apollo_17_landing_site_showing_American_flag.png?width=509&height=509&fit=crop&format=pjpg&auto=webp\" alt=\"Photographic evidence of rovers\" />\
+                        </picture>\
+                    <h4>1.4) <a href='https://www.youtube.com/watch?v=_loUDS4c3Cs&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=123'>Limitations of camreas in the 60's</a></h4> \
+                        <p>Cameras and films in 1969 were very different to present day.</p> \
+                    <h4>1.5) Worldwide research and publicity</h4> \
+                        <p>In order for NASA to fake The Moon Landing, around 400,000 people would of had to keep it a secret, for almost 50 YEARS... really? </p>\
+                        <p>You think 400,000 scientific researchers around the world are gonna create an incredibly elaborate 'movie set' just so they can say they went to The Moon?</p>\
+                    <h4>1.6) Conspiracy theorists are crazy</h4> \
+                        <p>The person who created this ridiculous conspiracy theory is this drug addict called Bill Kaysing.</p>\
+                        <p>He was always having illucinations about travelling to The moon and being humiliated in front of people in his dreams.</p>\
+                        <p>He then then spread the rumour around to the public.</p>\
+                    <h4>2.1) Where are the stars?</h4>\
+                        <p>One of the claims made to support the hoax theory is that there were no stars pictured from the surface of the Moon.</p>\
+                        <p>The true reason you can’t see the stars in photos and videos of Moon is not that the stars aren’t there, but rather because of the omnipresent sunlight and the exposure limits of cameras.</p>\
+                        <p>When these photos were taken, it was full daylight on the Moon. Because there is only an extremely thin atmosphere on the Moon,the sky appears black.</p>\
+                        <p>In addition, sunlight at the Moon’s surface was incomparably strong with the starlight; the stars simply faded in comparison with the sun.</p>\
+                        <p>If the astronauts used sufficiently long exposures, stars would, indeed, be visible.</p>\
+                        <p>There are no stars because the cameras couldn’t pick them up. And like I mentioned before, considering that it is 1969, there are a lot of limitations on the ability to carry out documentation in the form of photo/video media.</p>\
+                    <h4>2.2) But the flag is waving?</h4>\
+                        <p>The flag was actually made from plastic material, similar to the one that tents are usually made of.</p>\
+                        <p>For practical reasons, the flag was originally folded to maximize space and stored in a thin tube.</p>\
+                        <p>After Neil Armstrong planted it to the surface of the Moon, it briefly appeared to move as it was unfolding itself to its final shape.</p>\
+                        <p>I like to imagine the flag as tinfoil, try and make a nice flat piece of tinfoil!</p> \
+                    <h4>2.3) But they passed through the Van Allen Radiation Belt?</h4>\
+                        <p>The truth is, during their entire voyage to the Moon and back to Earth, Armstrong, Aldrin and Collins only received amount of radiation equal to about 0.1% of the deadly dose.</p>\
+                        <p>Their total exposure was approximately 11 milisieverts. Lethal levels of radiation is around 8,000 millisieverts.</p>\
+                        <p>The harmful effects of radiation are based both on its strength and the time of exposure to its source.</p>\
+                        <p>Average human would need to spend nearly four months inside the Van Allen belts to accumulate a lethal dose.</p>\
+                        <p>The astronauts managed to pass through them during less than one hour.</p>\
+                        <p>Regarding the time spent out of Earth’s magnetic field, where the astronauts were exposed to solar radiation, an average human could endure a radiation exposure equivalent to one-way trip to Mars and still not receive a dose which exceedslifetime levels set up by NASA.</p>\
+                    <h4>2.4) Who filmed Armstrong's first steps then?</h4>\
                         <p>A video camera was fixed on an extending arm to the side of the lander.</p>\
-                        <h6>But why wasn't the surface that the Lander made contact with disturbed??!?!</h6>\
+                        <p>But why wasn't the surface that the Lander made contact with disturbed??!?!</p>\
                         <p>According to conspiracy theorists the power from the lunar module should have left a large impact crater under the lunar module.\
                             Firstly the lunar module was descending at an angle flying over the lunar landscape, as it is one sixth of the earth’s gravity it requires one sixth less power/trust to fly over the surface.\
                             In addition the lunar module flying in at an angle meant it was not hovering over the same spot for more than a fraction of a second.\
                             Further, just before touch down the lunar module was operating at 25% of its power.\
                             This 25% power was subjected to the landing site for about half a second at most, which was enough to disturb the landing site slightly, as you can see in the photographs, but not as much as conspiracy theorists would have you believe.\
                         </p>\
-                        <h6>We haven't we been back for 40 years??!??!</h6>\
+                    <h4>2.5) But we haven't we been back for 40 years?!</h4>\
                         <p>Some people get suspicious for the fact that we haven’t gone back to The Moon in over 40 years.\
                             NASA announced that they didn’t want to be spending any more money on visiting The Moon as it’s extremely expensive to constantly visit The Moon.\
                             Maybe NASA are running out of astronauts to send over there? Maybe NASA are saving up money for a future Mars landing? (Curiosity).\
                             Another way to put this is by saying 'I used to travel to Kazakhstan every year to ski. Just because I don't go anymore, doesn't mean I never went.'​\
                         </p> \
-                        <h6>Summary</h6>\
+                    <h3>Summary</h3>\
                         <p>As you can see people love a good conspiracy theory, and perhaps some conspiracy theories are true, after all governments across the world have a large history of corruption and deception.\
                             But it's the idea of faking the moon landings is just too big to be a hoax.\
                             Too many people and competing countries are involved, and all the points conspiracy theorists make are easily explained.\
@@ -209,7 +179,7 @@ const initState = {
             tags: ["Astronomy"]
         },
         {
-            id: "7",
+            id: "3",
             date: "23 Aug 2019",
             title: "How to digitize Mini DV tapes",
             content: "\
@@ -279,151 +249,76 @@ const initState = {
             tags: ["Hardware"]
         },
         {
-            id: "8",
-            date: "09 Sep 2016",
-            title: "How to deploy a react app using Github pages",
-            content: "",
+            id: "4",
+            date: "16 Jan 2023",
+            title: "The incomprehensible vastness of space",
+            content: "<p>The nearest solar system to us is <a href='https://en.wikipedia.org/wiki/Alpha_Centauri'>Alpha Centuri</a>, a meager 4.246 lightyears away.</p>\
+                      <p>A <a href='https://exoplanets.nasa.gov/faq/26/what-is-a-light-year/'>lightyear</a> is a measurement of distance, specifically the amount of distance covered if you were travelling at the speed of light. This is 9,460,730,472,580 km (9.46 trillion km)).</p>\
+                      <p>So in astronomical distances, Alpha Centuri is relatively close to us, like I said, just 4.246 lightyears away... Unfortuantly our humans minds would find it difficult to comprehend this vast distance because it's actually equivalent to 40,174,991,951,814 km (40.17 trillion km) away from us.</p> \
+                      <p>For perspective, let's measure how long it would take to travel to Alpha Centuri in various forms of transport, starting with a car...</p>\
+                      <table class='time-to-get-to-alphacenturi-table'> \
+                        <thead> \
+                            <th>Form of transport</th> \
+                            <th>Average speed (mph)</th> \
+                            <th>Average speed (kms)</th> \
+                            <th>Percentage of the speed of light</th> \
+                            <th>Number of years to get to Proxima Centuri</th> \
+                        </thead> \
+                        <tbody> \
+                            <tr> \
+                                <td>Car</td> \
+                                <td>70</td> \
+                                <td>0.03</td> \
+                                <td>0.00000113%</td> \
+                                <td>40,600,000</td>\
+                            </tr> \
+                            <tr> \
+                                <td>Sound</td> \
+                                <td>760</td> \
+                                <td>0.339</td> \
+                                <td>0.00000113%</td> \
+                                <td>4,600,000</td>\
+                            </tr> \
+                            <tr> \
+                                <td>Voyager 1</td> \
+                                <td>38,214</td> \
+                                <td>17.3</td> \
+                                <td>0.00000576%</td> \
+                                <td>6,300</td>\
+                            </tr> \
+                            <tr> \
+                                <td>Parker Solar Probe</td> \
+                                <td>429,988</td> \
+                                <td>692</td> \
+                                <td>0.0023%</td> \
+                                <td>73,000</td>\
+                            </tr> \
+                            <tr> \
+                                <td>Solar sail (theoretical)</td> \
+                                <td>2,236,936</td> \
+                                <td>60,000</td> \
+                                <td>20%</td> \
+                                <td>21.23</td>\
+                            </tr> \
+                            <tr> \
+                                <td>Light speed</td> \
+                                <td>670,616,629</td> \
+                                <td>300,000</td> \
+                                <td>100%</td> \
+                                <td>4.246</td>\
+                            </tr> \
+                        </tbody>\
+                      </table>\
+                      <p>Voyager 1 is currently the longest standing spacecraft, launched in 1977, and has been moving at 17.3km/s for over 45 years... It's covered 23,816,382,064 km (or 23.8 billion km).</p>\
+                      <p>In other words, it's covered 0.00005928% of the distance to Proxima centuri... And it's not even heading in that direction!</p> \
+                      <p>However it is due to pass within 1.6 lightyears (9.3 trillion miles) of an obscure star in the constellation Ursa Minor (aka. the little dipper) called AC+79 3888, in the year 40,272 AD (more than 38,200 years from now)...</p> \
+            ",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "this is the blurb",
-            tags: ["React"]
+            tags: ["Life", "Astronomy"]
         },
         {
-            id: "9",
-            date: "10 Sep 2017",
-            title: "Analysing my IMDB ratings",
-            content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Python"]
-        },
-        {
-            id: "10",
-            date: "11 Sep 2018",
-            title: "How to use the Fitbit API",
-            content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Python"]
-        },
-        {
-            id: "11",
-            date: "05 Apr 2019",
-            title: "Design patterns",
-            content: "<p>I had a Software Engineering lecture today on Design Patterns. Learning about the history behind design patterns and understanding how critical they are to the software engineering lifecycle was interesting, as well as learning about <a href='http://www.blackwasp.co.uk/gofpatterns.aspx'>'The Gang of Four'</a>. I was also interested to discover that design patterns are something all programmers kind of unknowingly use. Becoming consciously aware of which pattern I am using and which patterns I should have been using all along was an exciting discovery for me personally. Exciting enough for me to make a blog post on the Builder design pattern.</p><h6>What is a design pattern?</h6><p>Design patterns basically give your code a controlled idea of reuse. They capture reoccuring patterns and structure code accordingly. They aim to improve maintainenance by giving explicit specification of interactions and intetnt.</p><p>Architect Christopher Alexander eleqountly describes design patterns in his book <a href='https://en.wikipedia.org/wiki/A_Pattern_Language'>'A Pattern Language'</a>:<br><i>'Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over without ever doing it the same way twice'.</i> - Christopher Alexander, 1977<p><p>There are 3 main subsets of design patterns:</p><ul><li><b>Creational</b> - how are objects created?</li><li><b>Structural</b> - how is data structured?</li><li><b>Behavioural</b> - how do we interact with the objects</li></ul><p>There are many different types of design patterns within these 3 subsets such as the Singleton, Decorator, Template, Dependency and <b>Builder</b> design patterns.</p><h6>What is the Builder design pattern?</h6><p>The Builder design pattern lies within the <b>Creational</b> subset of design Patterns. So it is a design pattern concerned with the instantiation of an object.</p><p>Builders basically allow you to create complex objects where the attributes can be set in any order.</p><p>Builders prevents the problem of long constructor calls like these monsters:</p>",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Python"]
-        },
-        {
-            id: "12",
-            date: "07 Oct 2020",
-            title: "Are non-carbon based lifeforms possible?",
-            content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Astronomy", "Biology"]
-        },
-        {
-            id: "13",
-            date: "07 Oct 2020",
-            title: "Gorgonocephalus arcticus",
-            content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Biology"]
-        },
-        {
-            id: "14",
-            date: "09 Oct 2020",
-            title: "A subsurface ocean on Enceladus",
-            content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Astronomy"]
-        },
-        {
-            id: "15",
-            date: "11 Oct 2020",
-            title: "The Beale Ciphers",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Cryptography"]
-        },
-        {
-            id: "16",
-            date: "13 Oct 2020",
-            title: "The Great Pyramid of Cholula",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["History"]
-        },
-        {
-            id: "17",
-            date: "14 Oct 2020",
-            title: "Null Island",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Geography", "Oceanography"]
-        },
-        {
-            id: "18",
-            date: "14 Oct 2020",
-            title: "Hematite Stalactite",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Rocks-and-minerals"]
-        },
-        {
-            id: "19",
-            date: "14 Oct 2020",
-            title: "Leucochloridium",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Entomology"]
-        },
-        {
-            id: "20",
-            date: "30 Sep 2022",
-            title: "What happens to the information that goes inside a black hole?",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Astronomy"]
-        },
-        {
-            id: "21",
-            date: "30 Sep 2022",
-            title: "Coolest moons in the Solar System",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
-            tags: ["Astronomy"]
-        },
-        {
-            id: "22",
-            date: "30 Sep 2022",
-            title: "Running form",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "All the different elements of good running form",
-            tags: ["Running"]
-        },
-        {
-            id: "23",
-            date: "30 Sep 2022",
-            title: "Flagematics",
-            content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "Mathematics + Flags",
-            tags: ["Vexilology", "Mathematics"]
-        },
-        {
-            id: "24",
+            id: "5",
             date: "30 Sep 2022",
             title: "The Messiah's Handbook",
             content: "<ul class=\"messiahs-handbook\">\
@@ -648,6 +543,141 @@ const initState = {
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "A list of my favourite quotes",
             tags: ["Notes"]
+        },
+        {
+            id: "6",
+            date: "09 Sep 2020",
+            title: "Working from home as an intern during the COVID-19 pandemic",
+            content: "<p>It was challening</p>",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Life"]
+        },
+        {
+            id: "7",
+            date: "09 Sep 2016",
+            title: "How to deploy a react app using Github pages",
+            content: "",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["React"]
+        },
+        {
+            id: "9",
+            date: "10 Sep 2017",
+            title: "Analysing my IMDB ratings",
+            content: "",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Python"]
+        },
+        {
+            id: "12",
+            date: "07 Oct 2020",
+            title: "Are non-carbon based lifeforms possible?",
+            content: "",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Astronomy", "Biology"]
+        },
+        {
+            id: "13",
+            date: "07 Oct 2020",
+            title: "Gorgonocephalus arcticus",
+            content: "",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Biology"]
+        },
+        {
+            id: "14",
+            date: "09 Oct 2020",
+            title: "A subsurface ocean on Enceladus",
+            content: "",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Astronomy"]
+        },
+        {
+            id: "15",
+            date: "11 Oct 2020",
+            title: "The Beale Ciphers",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Cryptography"]
+        },
+        {
+            id: "16",
+            date: "13 Oct 2020",
+            title: "The Great Pyramid of Cholula",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["History"]
+        },
+        {
+            id: "17",
+            date: "14 Oct 2020",
+            title: "Null Island",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Geography", "Oceanography"]
+        },
+        {
+            id: "18",
+            date: "14 Oct 2020",
+            title: "Hematite Stalactite",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Rocks-and-minerals"]
+        },
+        {
+            id: "19",
+            date: "14 Oct 2020",
+            title: "Leucochloridium",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Entomology"]
+        },
+        {
+            id: "20",
+            date: "30 Sep 2022",
+            title: "What happens to the information that goes inside a black hole?",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Astronomy"]
+        },
+        {
+            id: "21",
+            date: "30 Sep 2022",
+            title: "Coolest moons in the Solar System",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "this is the blurb",
+            tags: ["Astronomy"]
+        },
+        {
+            id: "22",
+            date: "30 Sep 2022",
+            title: "Running form",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "All the different elements of good running form",
+            tags: ["Running"]
+        },
+        {
+            id: "23",
+            date: "30 Sep 2022",
+            title: "Flagematics",
+            content: "blah",
+            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
+            blurb: "Mathematics + Flags",
+            tags: ["Vexilology", "Mathematics"]
         },
         {
             id: "25",
