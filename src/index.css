@@ -91,8 +91,12 @@
   --blog-table-row-bg-hover: rgb(251, 251, 251);
   --blog-table-tag-bg: rgb(218, 226, 219);
   --blog-table-tag-text: rgb(27, 27, 27);
-  --blog-table-searchbox-bg-color: rgb(230, 230, 230);
-  --blog-table-searchbox-border-color: rgb(226, 226, 226);
+
+  --searchbox-bg-color: rgb(230, 230, 230);
+  --searchbox-active-bg-color: rgb(215, 215, 215);
+  --searchbox-border-color: rgb(226, 226, 226);
+  --searchbox-placeholder-text-color: rgba(64, 64, 63, 0.435);
+  --searchbox-text-color: rgb(37, 127, 253);
 
   --blog-post-title-text: rgb(33, 33, 33);
   --blog-post-subTitle-text-color: rgb(38, 38, 38);
@@ -141,6 +145,9 @@
 
   --scrollbar-thumb-bg-color-tags: rgb(179, 179, 179);
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(218, 217, 217) */
+
+  --caret-color: rgb(35, 32, 32);
+
 }
 
 /** DARK MODE  **/
@@ -150,7 +157,7 @@
   
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
-  --intro-text: rgb(230, 219, 225);
+  --intro-text: rgb(192, 192, 196);
   --text-hyperlink: rgb(29, 199, 251);
   --text-hyperlink-hover: rgb(78, 202, 255);
 
@@ -196,8 +203,12 @@
   --blog-table-row-bg-hover: var(--page-wrapper-bg);
   --blog-table-tag-bg: rgb(46, 45, 45);
   --blog-table-tag-text: rgb(189, 189, 189);
-  --blog-table-searchbox-bg-color: rgb(48, 47, 47);
-  --blog-table-searchbox-border-color: rgb(65, 65, 65);
+
+  --searchbox-bg-color: rgb(48, 47, 47);
+  --searchbox-active-bg-color: rgb(58, 58, 59);
+  --searchbox-border-color: rgb(65, 65, 65);
+  --searchbox-placeholder-text-color: rgba(245, 245, 240, 0.35);
+  --searchbox-text-color: rgb(38, 220, 144);
 
   --blog-post-title-text: rgb(199, 199, 199);
   --blog-post-subTitle-text-color: rgb(209, 209, 209);
@@ -210,7 +221,7 @@
   --university-controls-btn-bg: rgba(82, 79, 79, 0.609);
   --university-controls-btn-svg-fill: rgb(232, 232, 232);
   
-  --university-card-box-shadow: rgba(0, 0, 255, 0.1);
+  --university-card-box-shadow: rgba(0, 0, 0, 0.1);
   --university-card-bg: rgb(43, 47, 51);
   --university-card-border-color: rgb(38, 42, 46);
   --university-card-border-color-hover: rgb(27, 31, 34);
@@ -247,6 +258,8 @@
 
   --scrollbar-thumb-bg-color-tags: rgb(80, 80, 80);
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */
+
+  --caret-color: rgb(237, 237, 237);
 }
 /* #endregion */
 
@@ -287,6 +300,7 @@ a:not(.website-logo):hover {
   background-color: var(--section-inner-bg-color);
   border-radius: 15px;
   padding: 10px;
+  margin-bottom: 40px !important;
   box-shadow: 0 1px 12px 0 var(--university-card-box-shadow);
 }
 
@@ -899,7 +913,7 @@ svg.logo path:hover {
 
 .posts-container {
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 }
 
 table {
@@ -1024,18 +1038,40 @@ table tbody tr:hover {
 }
 
 .controls > div.searchbox > input {
-  border-radius: 10px;
-  border: 2px solid var(--blog-table-searchbox-border-color);
-  background-color: var(--blog-table-searchbox-bg-color);
-  color: var(--text);
-  width: 300px;
-  padding: 4px;
+  border-radius: 2rem;
+  background-color: var(--searchbox-bg-color);
+  color: var(--searchbox-text-color);
+  width: 500px;
+  padding: 0.6rem 1.1rem;
+}
+
+.controls > div.searchbox > input:hover,
+.controls > div.searchbox > input:active,
+.controls > div.searchbox > input.activated {
+  background-color: var(--searchbox-active-bg-color);
+}
+
+.controls > div.searchbox > input::placeholder {
+  color: var(--searchbox-placeholder-text-color);
+}
+.controls > div.searchbox > input {
+  caret-color: var(--caret-color);
+}
+
+/* Dont apply border... */
+.controls > div.searchbox > input {
+  border: 0px transparent;
+}
+
+/* Apply border...
+.controls > div.searchbox > input {
+  border: 2px solid var(--searchbox-border-color);
 }
 .controls > div.searchbox > input:active {
-  /*
   border: 1px solid transparent;
-  */
 }
+*/
+
 /* #endregion */
 
 

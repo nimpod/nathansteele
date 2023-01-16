@@ -8,16 +8,26 @@ import BlogPostList from './BlogPostList';
 
 class Blog extends Component {
 
+    /**
+     * Constructor for the 'Blog' component
+     * @param {Incoming properties} props 
+     */
     constructor(props) {
         super(props);
         this.state = {
             filteredPostsState: null,
             tagCategories: null,
             tagCategoriesSelected: new Set(),
-            searchPost: ''
+            searchPost: '',
+            searchBoxContainsText: false,
+            searchBoxWasClicked: false
         }
     }
-
+    
+    /**
+     * ?????
+     * @param {*} e 
+     */
     toggleTag = (e) => {
         var tagSeleceted = e.target.classList[0];
         console.log('Selected... ' + tagSeleceted);
@@ -33,6 +43,9 @@ class Blog extends Component {
         console.log(newArray);
     }
     
+    /**
+     * This is called after the component is rendered (i.e. only called once at beginning)
+     */
     componentDidMount() {
         const { posts } = this.props;       // json data from redux data store
         const setOfTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
@@ -64,15 +77,13 @@ class Blog extends Component {
                 );
             }) 
         });
-
         console.log(arrayOfTags);
     }
 
-    handleSearchBoxInput = (e) => {
-        // get user input and update state
-        this.setState({searchPost: e.target.value});
-    }
-
+    /**
+     * Handle tags (not working properly atm...)
+     * @param {Event} e 
+     */
     handleTagFilter = (e) => {
         let crossIcon = null;
         let plusIcon = null;
@@ -116,8 +127,88 @@ class Blog extends Component {
             }
         }
     }
+
+    /**
+     * New text handler for the searchbox
+     * @param {Event} e 
+     */
+    handleSearchBoxInput = (e) => {
+        // get user input and update state
+        this.setState({searchPost: e.target.value});
+        
+        // no text is in the searchbox, so set state to false
+        if (e.target.value.length == 0) {
+            this.setState({searchBoxContainsText: false});
+        }
+        // there's some text in the searchbox, so set state to true
+        else if (e.target.value.length > 0) {
+            this.setState({searchBoxContainsText: true});
+        }
+    }
+
+    /**
+     * On click handler for clicking into the searchbox
+     * @param {Event} e 
+     */
+    handleSearchBoxClick = (e) => {
+        console.log('YOU CLICKED SEARCHBOX (BEFORE): this.state.searchBoxContainsText = ' + this.state.searchBoxContainsText + ', this.state.searchBoxWasClicked = ' + this.state.searchBoxWasClicked);
+        let copyOfThis = this;
+
+        // no text is in the searchbox, so set state to false
+        if (this.state.searchBoxContainsText == false) {
+
+            // access .posts-container
+            var postsContainer = document.querySelector('.posts-container');
+            if (postsContainer !== null) {
+
+                // find the inputbox (where the actual text goes in...)
+                let searchbox = postsContainer.getElementsByClassName('searchbox')[0]
+                let inputbox = searchbox.childNodes[0];
+                
+                window.addEventListener('click', function(e) {   
+                    if (inputbox.contains(e.target)) {
+                        // clicked inputbox
+                        console.log('Clicked input box...')
+                        copyOfThis.setState({searchBoxWasClicked: true});
+                    } else {
+                        // otherwise we must of clicked outside the inputbox
+                        console.log('Clicked outside input box...')
+                        copyOfThis.setState({searchBoxWasClicked: false});
+                    }
+                });
+            }
+        }
+        
+        else {
+            
+        }
+    }
+
+    /**
+     * Stuff to do with colour of searchbox...
+     * @param {Event} e 
+     */
+    handleSearchBoxColours = (e) => {
+        // access .posts-container
+        var postsContainer = document.querySelector('.posts-container');
+        if (postsContainer !== null) {
+            // find the inputbox (where the actual text goes in...)
+            let searchbox = postsContainer.getElementsByClassName('searchbox')[0]
+            let inputbox = searchbox.childNodes[0];
+            
+            if (inputbox !== null) {
+                // if it has been clicked...
+                if (this.state.searchBoxWasClicked) {
+                    inputbox.classList.add('activated');
+                } else {
+                    inputbox.classList.remove('activated');
+                }
+            }
+        }
+    }
     
     render() {
+        // this is how the searching function actually works...
         let filteredPosts = this.props.posts.filter((p) => {
             const arrayOfTags = Array.from(this.state.tagCategoriesSelected);
             // console.log('DEBUGGING: ', arrayOfTags, p.tags, p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0);
@@ -128,13 +219,19 @@ class Blog extends Component {
             return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;
         });
 
+        // deal with the colours of searchbox...
+        this.handleSearchBoxColours();
+
         return(
             <div className="page-wrapper blog">
                 <div className="section-inner">
                     <h2 className="page-title">Blog Posts</h2>
                     <div className="posts-container">
-                        <div className="controls">
-                            <SearchBox handleSearchBoxInput={this.handleSearchBoxInput} placeholderText="Search..." />
+                        <div className="controls" onClick={this.handleSearchBoxClick}>
+                            <SearchBox 
+                                handleSearchBoxInput={this.handleSearchBoxInput} 
+                                placeholderText="Search based on blog title..."
+                            />
                         </div>
                         <table>
                             <tbody>
