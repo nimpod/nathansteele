@@ -265,11 +265,12 @@ const initState = {
             id: "4",
             date: "16 Jan 2023",
             title: "The incomprehensible vastness of space",
-            content: "<p>The nearest solar system to us is <a href='https://en.wikipedia.org/wiki/Alpha_Centauri'>Alpha Centuri</a>, a meager 4.246 lightyears away.</p>\
-                      <p>A <a href='https://exoplanets.nasa.gov/faq/26/what-is-a-light-year/'>lightyear</a> is a measurement of distance, specifically the amount of distance covered if you were travelling at the speed of light. This is 9,460,730,472,580 km (9.46 trillion km)).</p>\
-                      <p>So in astronomical distances, Alpha Centuri is relatively close to us, like I said, just 4.246 lightyears away... Unfortuantly our humans minds would find it difficult to comprehend this vast distance because it's actually equivalent to 40,174,991,951,814 km (40.17 trillion km) away from us.</p> \
-                      <p>For perspective, let's measure how long it would take to travel to Alpha Centuri in various forms of transport, starting with a car...</p>\
-                      <table class='time-to-get-to-alphacenturi-table'> \
+            content: "\
+                    <p>The nearest solar system to us is <a href='https://en.wikipedia.org/wiki/Alpha_Centauri'>Alpha Centuri</a>, a meagre <b>4.246 lightyears</b> away.</p>\
+                    <p>A <a href='https://exoplanets.nasa.gov/faq/26/what-is-a-light-year/'>lightyear</a> is a measurement of distance, specifically the amount of distance covered if you were travelling at the speed of light. This is 9,460,730,472,580 km (9.46 trillion km)).</p>\
+                    <p>So in astronomical terms, Alpha Centuri is relatively close to us, just <b>4.246 lightyears</b> away... Unfortuantly our humans minds find it difficult to comprehend this vast distance because it's actually equivalent to <b>40,174,991,951,814 km (40.17 trillion km)</b>...</p> \
+                    <p>To get some perspective, let's measure how long it would take to travel to Alpha Centuri in various forms of transport, starting with a car...</p>\
+                    <table class='time-to-get-to-alphacenturi-table'> \
                         <thead> \
                             <th>Form of transport</th> \
                             <th>Average speed (mph)</th> \
@@ -321,10 +322,13 @@ const initState = {
                                 <td>4.246</td>\
                             </tr> \
                         </tbody>\
-                      </table>\
-                      <p>Voyager 1 is currently the longest standing spacecraft, launched in 1977, and has been moving at 17.3km/s for over 45 years... It's covered 23,816,382,064 km (or 23.8 billion km).</p>\
-                      <p>In other words, it's covered 0.00005928% of the distance to Proxima centuri... And it's not even heading in that direction!</p> \
-                      <p>However it is due to pass within 1.6 lightyears (9.3 trillion miles) of an obscure star in the constellation Ursa Minor (aka. the little dipper) called AC+79 3888, in the year 40,272 AD (more than 38,200 years from now)...</p> \
+                    </table>\
+                    <p>Of all the spacecrafts venturing beyond the solar system, <a href='https://www.space.com/most-distant-spacecraft-voyagers-new-horizons'>Voyager 1 has been going the longest</a> - launched in 1977, and has been moving at 17.3km/s for over 45 years... It's covered <b>23,816,382,064 km (or 23.8 billion km)</b>...</p>\
+                    <p>In other words, it's covered <b>0.00005928% of the distance to Alpha Centuri</b>... And it's not even heading in that direction!</p> \
+                    <p>However it is due to pass within 1.6 lightyears (9.3 trillion miles) of an obscure star in the constellation Ursa Minor (aka. the little dipper) called AC+79 3888, in the year 40,272 AD (more than 38,200 years from now)...</p> \
+                    <picture class=\"img\">\
+                        <img width=400 height=200 src=\"https://cdn.mos.cms.futurecdn.net/38UnvH7oaiQX4VkAHhNqbN-970-80.png\" alt=\"Not to scale illustration of spacecrafts venturing beyond the solar system\" />\
+                    </picture>\
             ",
             thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "this is the blurb",

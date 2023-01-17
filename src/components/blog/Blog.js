@@ -178,10 +178,6 @@ class Blog extends Component {
                 });
             }
         }
-        
-        else {
-            
-        }
     }
 
     /**

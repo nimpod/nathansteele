@@ -44,7 +44,7 @@ class NavbarTop extends Component {
     /**
      * Event handler to switch between themes
      */
-    switchTheme() {
+    switchTheme = (e) => {
         let dataTheme = document.documentElement.getAttribute('data-theme');
         let darkThemeIcon = document.documentElement.getElementsByClassName('inline-svg dark')[0];
         let lightThemeIcon = document.documentElement.getElementsByClassName('inline-svg light')[0];
@@ -70,7 +70,22 @@ class NavbarTop extends Component {
      * Function to allow user to open and close the mobile view of the navigation menu
      */
     toggleMenu() {
+        // toggle the 'active'  class on #nav-top...
         document.getElementById('nav-top').classList.toggle('active');
+
+        // close collapsed menu if user clicks out of it...
+        let toggleThemeButtonContainer = document.getElementsByClassName('hamburger-menu')[0];
+        let copyOfThis = this;
+
+        window.addEventListener('click', function(e) {   
+            if (toggleThemeButtonContainer.contains(e.target)) {
+                // clicked button
+            } else {
+                // otherwise we must of clicked outside the inputbox
+                console.log('Clicked outside input box...')
+                document.getElementById('nav-top').classList.remove('active');
+            }
+        });
     }
 
     /**
