@@ -256,10 +256,10 @@
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
 
-  --searchbox-bg-color: rgb(48, 47, 47);
-  --searchbox-hover-bg-color: rgb(56, 54, 54);
-  --searchbox-active-bg-color: rgb(62, 62, 63);
-  --searchbox-border-color: rgba(53, 57, 56, 0.172);
+  --searchbox-bg-color: rgb(40, 39, 39);
+  --searchbox-hover-bg-color: rgb(43, 42, 42);
+  --searchbox-active-bg-color: rgb(47, 48, 46);
+  --searchbox-border-color: rgba(8, 93, 149, 0.293);
   --searchbox-placeholder-text-color: rgba(245, 245, 240, 0.35);
   --searchbox-text-color: rgb(38, 220, 144);
 
@@ -1109,7 +1109,6 @@ div.tags {
   padding-left: 130px;
 }
 
-
 .controls > div.searchbox input:hover {
   background-color: var(--searchbox-hover-bg-color);
 }
@@ -1119,7 +1118,7 @@ div.tags {
 }
 .controls > div.searchbox input:active,
 .controls > div.searchbox input.activated {
-  border:2px solid var(--searchbox-border-color);
+  border: 2px solid var(--searchbox-border-color);
 }
 .controls > div.searchbox input::placeholder {
   color: var(--searchbox-placeholder-text-color);
@@ -1135,7 +1134,8 @@ div.filter-by-tag-button > button {
   margin-top: 8px;
   border: 0px;
 }
-div.filter-by-tag-button > button:hover {
+div.filter-by-tag-button > button:hover,
+div.filter-by-tag-button > button.active {
   background-color: rgba(118, 117, 117, 0.194);
 }
 div.filter-by-tag-button > button:focus {
@@ -1162,7 +1162,8 @@ div.filter-by-tag-button > button > svg {
 .tag-filter-options-list-container.active {
   display: block;   /* now displayed */
   position: absolute;
-  margin-top: 51px;
+  margin-top: 46px;
+  margin-left: 10px;
   z-index: 1000;
 }
 
@@ -1179,10 +1180,9 @@ div.filter-by-tag-button > button > svg {
 }
 .popover-canvas-with-arrow::after {
 	border-bottom-color: rgb(51, 49, 49);
-	border-width: 8px;
+	border-width: 12px;
 	margin-left: -30px;
 }
-
 
 ul.tag-filter-options-list {
   background-color: rgb(51, 49, 49);
@@ -1200,14 +1200,21 @@ ul.tag-filter-options-list li {
   margin-bottom: 4px;
 }
 ul.tag-filter-options-list li:hover {
-  background-color: rgb(59, 57, 57);
+  background-color: rgb(70, 68, 68);
   cursor: pointer;
 }
 ul.tag-filter-options-list li span {
-  font-size: 12px;
   text-transform: uppercase;
   font-weight: 400;
+  font-size: 14.2px;
+  line-height: 1.5rem;
 }
+
+div.filter-by-tag-button > button > span,
+ul.tag-filter-options-list li span {
+  font-family: PolySans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
 /* Text colours of tags... */
 .tag-filter-for-filter-for-Astronomy span { color: var(--tag-text-color-Hardware); }
 .tag-filter-for-Astronomy span            { color: var(--tag-text-color-Astronomy); }
@@ -1227,12 +1234,22 @@ ul.tag-filter-options-list li span {
 .tag-filter-for-Vexilology span           { color: var(--tag-text-color-Vexilology); }
 .tag-filter-for-Music span                { color: var(--tag-text-color-Music); }
 
+/* The tick icon next to tag category in dropdown menu... */
 ul.tag-filter-options-list svg {
   height: 0.95rem;
   width: 0.95rem;
   margin-bottom: 2px;
   margin-right: 10px;
 }
+
+/* dont show tick for non-selected category... */
+ul.tag-filter-options-list li:not(.selected) svg {
+  opacity: 0;
+}
+ul.tag-filter-options-list li.selected svg {
+  opacity: 1;
+}
+
 
 /* #endregion */
 

@@ -205,10 +205,10 @@ class Blog extends Component {
 
     /**
      * 
-     * @param {*} e 
+     * @param {*} tagSelected 
      * @returns 
      */
-    getListOfTagCategories() {
+    getListOfTagCategories(tagSelected) {
         // get list of tags...
         let allTags = [];
         let allTagsUnique = [];
@@ -217,7 +217,7 @@ class Blog extends Component {
         this.props.posts.filter((p) => {
             
             // add default...
-            allTags.push('All tags');
+            allTags.push(tagSelected);
 
             // add every tag across all blog posts...
             for (let i = 0; i < p.tags.length; i++) {
@@ -249,7 +249,8 @@ class Blog extends Component {
         });
 
         // get list of tags...
-        let listOfUniqueTagCategories = this.getListOfTagCategories();
+        let defaultTag = "All-Tags";
+        let listOfUniqueTagCategories = this.getListOfTagCategories(defaultTag);
 
         // deal with the colours of searchbox...
         this.handleSearchBoxColours();
@@ -261,7 +262,7 @@ class Blog extends Component {
                     <div className="posts-container">
                         <div className="controls" onClick={this.handleSearchBoxClick}>
                             <SearchBox
-                                tagSelected={"All tags"}
+                                tagSelected={defaultTag}
                                 tags={listOfUniqueTagCategories}
                                 handleSearchBoxInput={this.handleSearchBoxInput} 
                                 placeholderText="Search..."

@@ -9,7 +9,11 @@ class SearchBox extends Component {
      * @param {Event} e 
      */
     toggleDropdownList = (e) => {
+        // add/remove .active class to the list...
         document.querySelector('.tag-filter-options-list-container').classList.toggle('active');
+        
+        // add/remove .active class to the button...
+        document.querySelector('.filter-by-tag-button > button').classList.toggle('active');
     }
 
     render() {
@@ -22,7 +26,7 @@ class SearchBox extends Component {
                     </button>
                     <div className='tag-filter-options-list-container popover-canvas-with-arrow'>
                         <ul className='tag-filter-options-list'>
-                            <SearchBoxTagFilterListElement tags={this.props.tags} />
+                            <SearchBoxTagFilterListElement tagSelected={this.props.tagSelected} tags={this.props.tags} />
                         </ul>
                     </div>
                 </div>
