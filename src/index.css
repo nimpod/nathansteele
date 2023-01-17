@@ -37,6 +37,45 @@
   --particle-line-color: rgba(112, 121, 126, 0.515);
 }
 
+/* tag category colours */
+:root {
+  --tag-bg-color-Hardware: rgba(22, 94, 48, 0.3);
+  --tag-bg-color-Astronomy: rgba(192, 86, 29, 0.3);
+  --tag-bg-color-Mathematics: rgba(192, 86, 29, 0.3);
+  --tag-bg-color-Python: rgba(128, 155, 243, 0.3);
+  --tag-bg-color-Life: rgba(0, 0, 0, 0.3);
+  --tag-bg-color-Biology: rgba(79, 139, 20, 0.3);
+  --tag-bg-color-React: rgba(9, 204, 188, 0.3);
+  --tag-bg-color-Cryptography: rgba(21, 87, 81, 0.3);
+  --tag-bg-color-Entomology: rgba(82, 174, 142, 0.3);
+  --tag-bg-color-Oceanography: rgba(56, 85, 148, 0.3);
+  --tag-bg-color-Geography: rgba(166, 211, 143, 0.3);
+  --tag-bg-color-History: rgba(97, 105, 118, 0.3);
+  --tag-bg-color-Rocks-and-minerals: rgba(228, 124, 207, 0.3);
+  --tag-bg-color-Running: rgba(111, 191, 248, 0.3); 
+  --tag-bg-color-Films: rgba(240, 143, 17, 0.3);
+  --tag-bg-color-Vexilology: rgba(107, 17, 176, 0.3); 
+  --tag-bg-color-Music: rgba(246, 234, 13, 0.3);
+
+  --tag-text-color-Hardware: rgba(22, 94, 48);
+  --tag-text-color-Astronomy: rgba(192, 86, 29);
+  --tag-text-color-Mathematics: rgba(192, 86, 29);
+  --tag-text-color-Python: rgba(128, 155, 243);
+  --tag-text-color-Life: rgba(0, 0, 0);
+  --tag-text-color-Biology: rgba(79, 139, 20);
+  --tag-text-color-React: rgba(9, 204, 188);
+  --tag-text-color-Cryptography: rgba(21, 87, 81);
+  --tag-text-color-Entomology: rgba(82, 174, 142);
+  --tag-text-color-Oceanography: rgba(56, 85, 148);
+  --tag-text-color-Geography: rgba(166, 211, 143);
+  --tag-text-color-History: rgba(97, 105, 118);
+  --tag-text-color-Rocks-and-minerals: rgba(228, 124, 207);
+  --tag-text-color-Running: rgba(111, 191, 248); 
+  --tag-text-color-Films: rgba(240, 143, 17);
+  --tag-text-color-Vexilology: rgba(107, 17, 176); 
+  --tag-text-color-Music: rgba(246, 234, 13);
+}
+
 /** LIGHT MODE */
 :root {
   --bg1: rgb(234, 234, 234);  /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
@@ -277,24 +316,6 @@
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */
 
   --caret-color: rgb(237, 237, 237);
-
-  --tag-color-Hardware: rgba(22, 94, 48, 0.3);
-  --tag-color-Astronomy: rgba(192, 86, 29, 0.3);
-  --tag-color-Mathematics: rgba(192, 86, 29, 0.3);
-  --tag-color-Python: rgba(128, 155, 243, 0.3);
-  --tag-color-Life: rgba(0, 0, 0, 0.3);
-  --tag-color-Biology: rgba(79, 139, 20, 0.3);
-  --tag-color-React: rgba(9, 204, 188, 0.3);
-  --tag-color-Cryptography: rgba(21, 87, 81, 0.3);
-  --tag-color-Entomology: rgba(82, 174, 142, 0.3);
-  --tag-color-Oceanography: rgba(56, 85, 148, 0.3);
-  --tag-color-Geography: rgba(166, 211, 143, 0.3);
-  --tag-color-History: rgba(97, 105, 118, 0.3);
-  --tag-color-Rocks-and-minerals: rgba(228, 124, 207, 0.3);
-  --tag-color-Running: rgba(111, 191, 248, 0.3); 
-  --tag-color-Films: rgba(240, 143, 17, 0.3);
-  --tag-color-Vexilology: rgba(107, 17, 176, 0.3); 
-  --tag-color-Music: rgba(246, 234, 13, 0.3);
 }
 /* #endregion */
 
@@ -1039,23 +1060,23 @@ div.tags {
 .tag span.Hardware { color: var(--tags-Hardware-text-color); }  /* apart from .Hardware */
 
 /* Background colours of tags... */
-.tag .Hardware            { background-color: var(--tags-Hardware-text-color); }
-.tag .Astronomy           { background-color: var(--tag-color-Astronomy); }
-.tag .Mathematics         { background-color: var(--tag-color-Mathematics); }
-.tag .Python              { background-color: var(--tag-color-Python); }
-.tag .Life                { background-color: var(--tag-color-Life); }
-.tag .Biology             { background-color: var(--tag-color-Biology); }
-.tag .React               { background-color: var(--tag-color-React); }
-.tag .Cryptography        { background-color: var(--tag-color-Cryptography); }
-.tag .Entomology          { background-color: var(--tag-color-Entomology); }
-.tag .Oceanography        { background-color: var(--tag-color-Oceanography); }
-.tag .Geography           { background-color:  }
-.tag .History             { background-color:  }
-.tag .Rocks-and-minerals  { background-color:  }
-.tag .Running             { background-color:  }
-.tag .Films               { background-color:  }
-.tag .Vexilology          { background-color:  }
-.tag .Music               { background-color:  }
+.tag .Hardware            { background-color: var(--tag-bg-color-Hardware); }
+.tag .Astronomy           { background-color: var(--tag-bg-color-Astronomy); }
+.tag .Mathematics         { background-color: var(--tag-bg-color-Mathematics); }
+.tag .Python              { background-color: var(--tag-bg-color-Python); }
+.tag .Life                { background-color: var(--tag-bg-color-Life); }
+.tag .Biology             { background-color: var(--tag-bg-color-Biology); }
+.tag .React               { background-color: var(--tag-bg-color-React); }
+.tag .Cryptography        { background-color: var(--tag-bg-color-Cryptography); }
+.tag .Entomology          { background-color: var(--tag-bg-color-Entomology); }
+.tag .Oceanography        { background-color: var(--tag-bg-color-Oceanography); }
+.tag .Geography           { background-color: var(--tag-bg-color-Geography); }
+.tag .History             { background-color: var(--tag-bg-color-History); }
+.tag .Rocks-and-minerals  { background-color: var(--tag-bg-color-Rocks-and-minerals); }
+.tag .Running             { background-color: var(--tag-bg-color-Running); }
+.tag .Films               { background-color: var(--tag-bg-color-Films); }
+.tag .Vexilology          { background-color: var(--tag-bg-color-Vexilology); }
+.tag .Music               { background-color: var(--tag-bg-color-Music); }
 
 .tag .inline-svg {
   display: inline-block;
@@ -1187,6 +1208,25 @@ ul.tag-filter-options-list li span {
   text-transform: uppercase;
   font-weight: 400;
 }
+/* Text colours of tags... */
+.tag-filter-for-filter-for-Astronomy span { color: var(--tag-text-color-Hardware); }
+.tag-filter-for-Astronomy span            { color: var(--tag-text-color-Astronomy); }
+.tag-filter-for-Mathematics span          { color: var(--tag-text-color-Mathematics); }
+.tag-filter-for-Python span               { color: var(--tag-text-color-Python); }
+.tag-filter-for-Life span                 { color: var(--tag-text-color-Life); }
+.tag-filter-for-Biology span              { color: var(--tag-text-color-Biology); }
+.tag-filter-for-React span                { color: var(--tag-text-color-React); }
+.tag-filter-for-Cryptography span         { color: var(--tag-text-color-Cryptography); }
+.tag-filter-for-Entomology span           { color: var(--tag-text-color-Entomology); }
+.tag-filter-for-Oceanography span         { color: var(--tag-text-color-Oceanography); }
+.tag-filter-for-Geography span            { color: var(--tag-text-color-Geography); }
+.tag-filter-for-History span              { color: var(--tag-text-color-History); }
+.tag-filter-for-Rocks-and-minerals span   { color: var(--tag-text-color-Rocks-and-minerals); }
+.tag-filter-for-Running span              { color: var(--tag-text-color-Running); }
+.tag-filter-for-Films span                { color: var(--tag-text-color-Films); }
+.tag-filter-for-Vexilology span           { color: var(--tag-text-color-Vexilology); }
+.tag-filter-for-Music span                { color: var(--tag-text-color-Music); }
+
 ul.tag-filter-options-list svg {
   height: 0.95rem;
   width: 0.95rem;
