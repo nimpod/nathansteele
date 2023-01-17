@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
-import { connect}  from 'react-redux'
+import { connect }  from 'react-redux'
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 import SearchBox from './SearchBox';
 import BlogPostList from './BlogPostList';
+import { Helpers } from 'react-scroll';
+import { removeDuplicatesFromArray } from '../../js/helpers';
 
 class Blog extends Component {
 
@@ -162,8 +164,7 @@ class Blog extends Component {
             if (postsContainer !== null) {
 
                 // find the inputbox (where the actual text goes in...)
-                let searchbox = postsContainer.getElementsByClassName('searchbox')[0]
-                let inputbox = searchbox.childNodes[0];
+                let inputbox = postsContainer.querySelector('.posts-container input');
                 
                 window.addEventListener('click', function(e) {   
                     if (inputbox.contains(e.target)) {
@@ -189,9 +190,8 @@ class Blog extends Component {
         var postsContainer = document.querySelector('.posts-container');
         if (postsContainer !== null) {
             // find the inputbox (where the actual text goes in...)
-            let searchbox = postsContainer.getElementsByClassName('searchbox')[0]
-            let inputbox = searchbox.childNodes[0];
-            
+            let inputbox = postsContainer.querySelector('.posts-container input');
+
             if (inputbox !== null) {
                 // if it has been clicked...
                 if (this.state.searchBoxWasClicked) {
@@ -202,7 +202,40 @@ class Blog extends Component {
             }
         }
     }
+
+    /**
+     * 
+     * @param {*} e 
+     * @returns 
+     */
+    getListOfTagCategories() {
+        // get list of tags...
+        let allTags = [];
+        let allTagsUnique = [];
+
+        // iterate over all posts...
+        this.props.posts.filter((p) => {
+            
+            // add default...
+            allTags.push('All tags');
+
+            // add every tag across all blog posts...
+            for (let i = 0; i < p.tags.length; i++) {
+                let tag = p.tags[i];
+                allTags.push(tag);
+            }
+
+            // remove duplicates...
+            allTagsUnique = removeDuplicatesFromArray(allTags);
+        });
+
+        // return list of unique tags...
+        return allTagsUnique;
+    }
     
+    /**
+     * The Render() function, content rendered to screen
+     */
     render() {
         // this is how the searching function actually works...
         let filteredPosts = this.props.posts.filter((p) => {
@@ -215,6 +248,9 @@ class Blog extends Component {
             return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;
         });
 
+        // get list of tags...
+        let listOfUniqueTagCategories = this.getListOfTagCategories();
+
         // deal with the colours of searchbox...
         this.handleSearchBoxColours();
 
@@ -224,9 +260,11 @@ class Blog extends Component {
                     <h2 className="page-title">Blog Posts</h2>
                     <div className="posts-container">
                         <div className="controls" onClick={this.handleSearchBoxClick}>
-                            <SearchBox 
+                            <SearchBox
+                                tagSelected={"All tags"}
+                                tags={listOfUniqueTagCategories}
                                 handleSearchBoxInput={this.handleSearchBoxInput} 
-                                placeholderText="Search based on blog title..."
+                                placeholderText="Search..."
                             />
                         </div>
                         <table>

@@ -9,12 +9,15 @@ import { getRandomRGBA } from '../../js/helpers.js';
 class BlogPost extends Component {
 
     /**
-     * [function: function to handle click event for the button that deletes the post]
+     * Function to handle click event for the button that deletes the post
      */
     handleDeletePost = () => {
         this.props.deletePost(this.props.post_id)
     }
 
+    /**
+     * The CompponentDidMount function...
+     */
     componentDidMount = () => {
         let quotesContainer = document.querySelector('.messiahs-handbook');
 
@@ -27,9 +30,12 @@ class BlogPost extends Component {
         }
     }
 
+    /**
+     * The Render() function, content rendered to screen...
+     */
     render() {
-        console.log(this.props);
-        console.log(this.props.post.tags);
+        // console.log(this.props);
+        // console.log(this.props.post.tags);
         
         return (
             <div className="page-wrapper blog-post">
@@ -67,7 +73,7 @@ class BlogPost extends Component {
 
 
 /**
- * [function: Find the correct blog post from the redux data store]
+ * This function finds the correct blog post from the redux data store]
  * @param {*} state 
  */
 const mapStateToProps = (state, ownProps) => {
@@ -78,7 +84,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 /**
- * [function: called when deleting a post]
+ * This function is called when deleting a post]
  */
 const mapDispatchToProps = (dispatch) => {
     return {

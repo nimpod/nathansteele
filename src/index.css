@@ -60,9 +60,9 @@
   --topnav-button-text-color-hover: rgb(0, 0, 0);
   --topnav-button-text-color-active: rgb(255, 255, 255); 
   --topnav-collapsed-shadow-color: rgba(0, 0, 0, 0.331);
-  --topnav-logo-bg-color: rgb(255, 255, 255);
   --button-border-color-onclick: rgb(206, 206, 206);
 
+  --topnav-logo-bg-color: rgb(233, 233, 234);
   --logo-path-color: rgb(218, 234, 226);
   --logo-path-color-onclick: rgba(5, 120, 72, 0.897);
   --logo-stroke-color: rgb(17, 15, 15);
@@ -96,11 +96,12 @@
   --blog-table-tag-bg: rgb(218, 226, 219);
   --blog-table-tag-text: rgb(27, 27, 27);
   
-  --searchbox-bg-color: rgb(231, 231, 236);
-  --searchbox-active-bg-color: rgb(210, 210, 215);
-  --searchbox-border-color: rgb(226, 226, 226);
+  --searchbox-bg-color: rgb(227, 225, 225);
+  --searchbox-hover-bg-color: rgb(221, 220, 224);
+  --searchbox-active-bg-color: rgb(217, 215, 220);
+  --searchbox-border-color: rgba(174, 181, 192, 0.019);
   --searchbox-placeholder-text-color: rgba(64, 64, 69, 0.531);
-  --searchbox-text-color: rgb(8, 177, 146);
+  --searchbox-text-color: rgb(60, 114, 240);
 
   --blog-post-title-text: rgb(33, 33, 33);
   --blog-post-subTitle-text-color: rgb(38, 38, 38);
@@ -217,8 +218,9 @@
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
 
   --searchbox-bg-color: rgb(48, 47, 47);
-  --searchbox-active-bg-color: rgb(58, 58, 59);
-  --searchbox-border-color: rgb(65, 65, 65);
+  --searchbox-hover-bg-color: rgb(56, 54, 54);
+  --searchbox-active-bg-color: rgb(62, 62, 63);
+  --searchbox-border-color: rgba(53, 57, 56, 0.172);
   --searchbox-placeholder-text-color: rgba(245, 245, 240, 0.35);
   --searchbox-text-color: rgb(38, 220, 144);
 
@@ -275,6 +277,24 @@
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */
 
   --caret-color: rgb(237, 237, 237);
+
+  --tag-color-Hardware: rgba(22, 94, 48, 0.3);
+  --tag-color-Astronomy: rgba(192, 86, 29, 0.3);
+  --tag-color-Mathematics: rgba(192, 86, 29, 0.3);
+  --tag-color-Python: rgba(128, 155, 243, 0.3);
+  --tag-color-Life: rgba(0, 0, 0, 0.3);
+  --tag-color-Biology: rgba(79, 139, 20, 0.3);
+  --tag-color-React: rgba(9, 204, 188, 0.3);
+  --tag-color-Cryptography: rgba(21, 87, 81, 0.3);
+  --tag-color-Entomology: rgba(82, 174, 142, 0.3);
+  --tag-color-Oceanography: rgba(56, 85, 148, 0.3);
+  --tag-color-Geography: rgba(166, 211, 143, 0.3);
+  --tag-color-History: rgba(97, 105, 118, 0.3);
+  --tag-color-Rocks-and-minerals: rgba(228, 124, 207, 0.3);
+  --tag-color-Running: rgba(111, 191, 248, 0.3); 
+  --tag-color-Films: rgba(240, 143, 17, 0.3);
+  --tag-color-Vexilology: rgba(107, 17, 176, 0.3); 
+  --tag-color-Music: rgba(246, 234, 13, 0.3);
 }
 /* #endregion */
 
@@ -1019,23 +1039,23 @@ div.tags {
 .tag span.Hardware { color: var(--tags-Hardware-text-color); }  /* apart from .Hardware */
 
 /* Background colours of tags... */
-.tag .Hardware { background-color: rgba(22, 94, 48, 0.3); }
-.tag .Astronomy { background-color: rgba(123, 77, 230, 0.3); }
-.tag .Mathematics { background-color: rgba(192, 86, 29, 0.3); }
-.tag .Python { background-color: rgba(128, 155, 243, 0.3); }
-.tag .Life { background-color: rgba(0, 0, 0, 0.3); }
-.tag .Biology { background-color: rgba(79, 139, 20, 0.3); }
-.tag .React { background-color:rgba(9, 204, 188, 0.3); }
-.tag .Cryptography { background-color:rgba(21, 87, 81, 0.3); }
-.tag .Entomology { background-color:rgba(82, 174, 142, 0.3); }
-.tag .Oceanography { background-color:rgba(56, 85, 148, 0.3); }
-.tag .Geography { background-color:rgba(166, 211, 143, 0.3); }
-.tag .History { background-color:rgba(97, 105, 118, 0.3);  }
-.tag .Rocks-and-minerals { background-color:rgba(228, 124, 207, 0.3);  }
-.tag .Running { background-color:rgba(111, 191, 248, 0.3);  }
-.tag .Films { background-color:rgba(240, 143, 17, 0.3); }
-.tag .Vexilology { background-color:rgba(107, 17, 176, 0.3);  }
-.tag .Music { background-color:rgba(246, 234, 13, 0.3); }
+.tag .Hardware            { background-color: var(--tags-Hardware-text-color); }
+.tag .Astronomy           { background-color: var(--tag-color-Astronomy); }
+.tag .Mathematics         { background-color: var(--tag-color-Mathematics); }
+.tag .Python              { background-color: var(--tag-color-Python); }
+.tag .Life                { background-color: var(--tag-color-Life); }
+.tag .Biology             { background-color: var(--tag-color-Biology); }
+.tag .React               { background-color: var(--tag-color-React); }
+.tag .Cryptography        { background-color: var(--tag-color-Cryptography); }
+.tag .Entomology          { background-color: var(--tag-color-Entomology); }
+.tag .Oceanography        { background-color: var(--tag-color-Oceanography); }
+.tag .Geography           { background-color:  }
+.tag .History             { background-color:  }
+.tag .Rocks-and-minerals  { background-color:  }
+.tag .Running             { background-color:  }
+.tag .Films               { background-color:  }
+.tag .Vexilology          { background-color:  }
+.tag .Music               { background-color:  }
 
 .tag .inline-svg {
   display: inline-block;
@@ -1052,23 +1072,126 @@ div.tags {
   margin-bottom: 20px;
 }
 
+.controls > div.searchbox {
+  display: flex;
+}
+
 /* the input box within div.searchbox */
-.controls > div.searchbox > input {
-  border-radius: 2rem;
+.controls > div.searchbox input {
   background-color: var(--searchbox-bg-color);
   color: var(--searchbox-text-color);
   width: 500px;
   padding: 0.6rem 1.1rem;
+  border-radius: 1rem;
   caret-color: var(--caret-color);
-  border: 0px transparent;
+  border: 2px solid transparent;
+  padding-left: 130px;
 }
-.controls > div.searchbox > input:hover,
-.controls > div.searchbox > input:active,
-.controls > div.searchbox > input.activated {
+
+
+.controls > div.searchbox input:hover {
+  background-color: var(--searchbox-hover-bg-color);
+}
+.controls > div.searchbox input:active,
+.controls > div.searchbox input.activated {
   background-color: var(--searchbox-active-bg-color);
 }
-.controls > div.searchbox > input::placeholder {
+.controls > div.searchbox input:active,
+.controls > div.searchbox input.activated {
+  border:2px solid var(--searchbox-border-color);
+}
+.controls > div.searchbox input::placeholder {
   color: var(--searchbox-placeholder-text-color);
+}
+
+div.filter-by-tag-button > button {
+  position: absolute;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0.25rem 1rem;
+  margin-left: 10px;
+  margin-top: 8px;
+  border: 0px;
+}
+div.filter-by-tag-button > button:hover {
+  background-color: rgba(118, 117, 117, 0.194);
+}
+div.filter-by-tag-button > button:focus {
+  outline: none;  /* get rid of annoying border on button */
+}
+
+/* Filter currently active */
+div.filter-by-tag-button > button > span {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+/* weird little icon next to active filter */
+div.filter-by-tag-button > button > svg {
+  height: 0.75rem;
+  width: 0.75rem;
+  margin-left: 7px;
+  margin-bottom: 2px;
+}
+
+/* Dropdown list for available tag categories to filter by */
+.tag-filter-options-list-container:not(.active) {
+  display: none;  /* hidden by default */
+}
+.tag-filter-options-list-container.active {
+  display: block;   /* now displayed */
+  position: absolute;
+  margin-top: 51px;
+  z-index: 1000;
+}
+
+.popover-canvas-with-arrow::after,
+.popover-canvas-with-arrow::before {
+  bottom: 98.8%;
+	left: 30%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.popover-canvas-with-arrow::after {
+	border-bottom-color: rgb(51, 49, 49);
+	border-width: 8px;
+	margin-left: -30px;
+}
+
+
+ul.tag-filter-options-list {
+  background-color: rgb(51, 49, 49);
+  border: 1px solid rgb(59, 58, 58);
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.5rem;
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+}
+ul.tag-filter-options-list li {
+  list-style-type: none;
+  border-radius: 0.45rem;
+  min-width: auto;
+  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+  margin-bottom: 4px;
+}
+ul.tag-filter-options-list li:hover {
+  background-color: rgb(59, 57, 57);
+  cursor: pointer;
+}
+ul.tag-filter-options-list li span {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+ul.tag-filter-options-list svg {
+  height: 0.95rem;
+  width: 0.95rem;
+  margin-bottom: 2px;
+  margin-right: 10px;
 }
 
 /* #endregion */

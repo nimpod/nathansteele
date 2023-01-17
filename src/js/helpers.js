@@ -21,3 +21,13 @@ export function getRandomRGBA(opacity) {
     var s = 255;
     return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + (opacity) + ')';
 }
+
+
+/**
+ * [Remove duplicate values from array]
+ * @param {Array to investigate} arr 
+ * @returns New array
+ */
+export function removeDuplicatesFromArray(arr) {
+    return Array.from(new Set(arr));
+}

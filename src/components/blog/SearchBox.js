@@ -1,11 +1,38 @@
 import React, {Component} from 'react';
+import { ReactComponent as OpenDropdownIcon } from "../../icons/openDropdown.svg";
+import SearchBoxTagFilterListElement from './SearchBoxTagFilterListElement';
 
 class SearchBox extends Component {
+
+    /**
+     * ...
+     * @param {Event} e 
+     */
+    toggleDropdownList = (e) => {
+        document.querySelector('.tag-filter-options-list-container').classList.toggle('active');
+    }
 
     render() {
         return(
             <div className="searchbox">
-                <input onChange={this.props.handleSearchBoxInput} placeholder={this.props.placeholderText} type="text" />
+                <div className='filter-by-tag-button'>
+                    <button onClick={this.toggleDropdownList}>
+                        <span>{this.props.tagSelected}</span>
+                        <OpenDropdownIcon className='invertable-icon' />
+                    </button>
+                    <div className='tag-filter-options-list-container popover-canvas-with-arrow'>
+                        <ul className='tag-filter-options-list'>
+                            <SearchBoxTagFilterListElement tags={this.props.tags} />
+                        </ul>
+                    </div>
+                </div>
+                <div className='inputbox-container'>
+                    <input
+                        onChange={this.props.handleSearchBoxInput} 
+                        placeholder={this.props.placeholderText} 
+                        type="text"
+                    />
+                </div>
             </div>
         )
     }
