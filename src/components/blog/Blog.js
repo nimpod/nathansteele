@@ -153,7 +153,7 @@ class Blog extends Component {
      * @param {Event} e 
      */
     handleSearchBoxClick = (e) => {
-        console.log('YOU CLICKED SEARCHBOX (BEFORE): this.state.searchBoxContainsText = ' + this.state.searchBoxContainsText + ', this.state.searchBoxWasClicked = ' + this.state.searchBoxWasClicked);
+        ///console.log('YOU CLICKED SEARCHBOX (BEFORE): this.state.searchBoxContainsText = ' + this.state.searchBoxContainsText + ', this.state.searchBoxWasClicked = ' + this.state.searchBoxWasClicked);
         let copyOfThis = this;
 
         // no text is in the searchbox, so set state to false
@@ -168,12 +168,10 @@ class Blog extends Component {
                 
                 window.addEventListener('click', function(e) {   
                     if (inputbox.contains(e.target)) {
-                        // clicked inputbox
-                        console.log('Clicked input box...')
+                        ///console.log('Clicked input box...')
                         copyOfThis.setState({searchBoxWasClicked: true});
                     } else {
-                        // otherwise we must of clicked outside the inputbox
-                        console.log('Clicked outside input box...')
+                        ///console.log('Clicked outside input box...')
                         copyOfThis.setState({searchBoxWasClicked: false});
                     }
                 });
@@ -229,8 +227,8 @@ class Blog extends Component {
             allTagsUnique = removeDuplicatesFromArray(allTags);
         });
 
-        // return list of unique tags...
-        return allTagsUnique;
+        // return list of unique tags, sorted alphabetically...
+        return allTagsUnique.sort();
     }
     
     /**
@@ -258,7 +256,9 @@ class Blog extends Component {
         return(
             <div className="page-wrapper blog">
                 <div className="section-inner">
+                    {/*}
                     <h2 className="page-title">Blog Posts</h2>
+                    */}
                     <div className="posts-container">
                         <div className="controls" onClick={this.handleSearchBoxClick}>
                             <SearchBox

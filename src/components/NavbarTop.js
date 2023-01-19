@@ -6,6 +6,7 @@ import { ReactComponent as DarkThemeIcon } from "../icons/moon.svg";
 import { ReactComponent as LightThemeIcon } from "../icons/sun.svg";
 import { ReactComponent as ThreeDotsIcon } from "../icons/threeDots.svg";
 import { ReactComponent as HamburgerMenuIcon } from "../icons/hamburgerMenu.svg";
+import { hideItemWhenUserClicksOutsideOfItem } from '../js/helpers';
 
 
 class NavbarTop extends Component {
@@ -74,17 +75,11 @@ class NavbarTop extends Component {
         document.getElementById('nav-top').classList.toggle('active');
 
         // close collapsed menu if user clicks out of it...
-        let toggleThemeButtonContainer = document.getElementsByClassName('hamburger-menu')[0];
-        let copyOfThis = this;
+        let toggleThemeButton = document.getElementsByClassName('hamburger-menu')[0];
+        let itemToHide = document.getElementById('nav-top');
 
-        window.addEventListener('click', function(e) {   
-            if (toggleThemeButtonContainer.contains(e.target)) {
-                // clicked button
-            } else {
-                // otherwise we must of clicked outside the inputbox
-                console.log('Clicked outside input box...')
-                document.getElementById('nav-top').classList.remove('active');
-            }
+        window.addEventListener('click', function(mouseEvent) {
+            hideItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent);
         });
     }
 

@@ -31,3 +31,22 @@ export function getRandomRGBA(opacity) {
 export function removeDuplicatesFromArray(arr) {
     return Array.from(new Set(arr));
 }
+
+
+/**
+ * Hide something when a user clicks outside the item
+ * @param {*} itemToHide 
+ * @param {*} itemClickedBefore 
+ * @param {*} mouseEvent 
+ */
+export function hideItemWhenUserClicksOutsideOfItem(itemToHide, itemClickedBefore, mouseEvent) {
+    window.addEventListener('click', function(mouseEvent) {   
+        if (itemClickedBefore.contains(mouseEvent.target)) {
+            // clicked itemClickedBefore (e.g. button)
+        } else {
+            // otherwise we must of clicked outside the itemToHide
+            console.log('Clicked outside input box...')
+            itemToHide.classList.remove('active');
+        }
+    });
+}

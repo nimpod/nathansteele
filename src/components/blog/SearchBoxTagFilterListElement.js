@@ -4,6 +4,7 @@ import { ReactComponent as TickIcon } from "../../icons/tick.svg";
 class SearchBoxTagFilterListElement extends Component {
 
     checkIfMatching(currentTag) {
+        /*
         let isSelected = false;
         
         // find the selected tag...
@@ -20,6 +21,7 @@ class SearchBoxTagFilterListElement extends Component {
         }
         
         return isSelected;
+        */
     }
 
     render() {

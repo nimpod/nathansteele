@@ -39,46 +39,50 @@
 
 /* tag category colours */
 :root {
-  --tag-bg-color-Hardware: rgba(22, 94, 48, 0.3);
-  --tag-bg-color-Astronomy: rgba(192, 86, 29, 0.3);
-  --tag-bg-color-Mathematics: rgba(192, 86, 29, 0.3);
-  --tag-bg-color-Python: rgba(128, 155, 243, 0.3);
-  --tag-bg-color-Life: rgba(0, 0, 0, 0.3);
+  --tag-bg-color-Astronomy: rgba(164, 65, 239, 0.3);
   --tag-bg-color-Biology: rgba(79, 139, 20, 0.3);
-  --tag-bg-color-React: rgba(9, 204, 188, 0.3);
-  --tag-bg-color-Cryptography: rgba(21, 87, 81, 0.3);
-  --tag-bg-color-Entomology: rgba(82, 174, 142, 0.3);
-  --tag-bg-color-Oceanography: rgba(56, 85, 148, 0.3);
+  --tag-bg-color-Cryptography: rgba(13, 81, 159, 0.3);
+  --tag-bg-color-Entomology: rgba(181, 249, 54, 0.3);
+  --tag-bg-color-Films: rgba(195, 113, 6, 0.3);
   --tag-bg-color-Geography: rgba(166, 211, 143, 0.3);
-  --tag-bg-color-History: rgba(97, 105, 118, 0.3);
-  --tag-bg-color-Rocks-and-minerals: rgba(228, 124, 207, 0.3);
-  --tag-bg-color-Running: rgba(111, 191, 248, 0.3); 
-  --tag-bg-color-Films: rgba(240, 143, 17, 0.3);
-  --tag-bg-color-Vexilology: rgba(107, 17, 176, 0.3); 
+  --tag-bg-color-Hardware: rgba(23, 156, 72, 0.3);
+  --tag-bg-color-History: rgba(244, 158, 247, 0.3);
+  --tag-bg-color-Interesting-people: rgba(143, 130, 238, 0.3);
+  --tag-bg-color-Life: rgba(109, 104, 104, 0.3);
+  --tag-bg-color-Oceanography: rgba(56, 85, 148, 0.3);
   --tag-bg-color-Music: rgba(246, 234, 13, 0.3);
-
-  --tag-text-color-Hardware: rgba(22, 94, 48);
-  --tag-text-color-Astronomy: rgba(192, 86, 29);
-  --tag-text-color-Mathematics: rgba(192, 86, 29);
-  --tag-text-color-Python: rgba(128, 155, 243);
-  --tag-text-color-Life: rgba(0, 0, 0);
-  --tag-text-color-Biology: rgba(79, 139, 20);
-  --tag-text-color-React: rgba(9, 204, 188);
-  --tag-text-color-Cryptography: rgba(21, 87, 81);
-  --tag-text-color-Entomology: rgba(82, 174, 142);
-  --tag-text-color-Oceanography: rgba(56, 85, 148);
-  --tag-text-color-Geography: rgba(166, 211, 143);
-  --tag-text-color-History: rgba(97, 105, 118);
-  --tag-text-color-Rocks-and-minerals: rgba(228, 124, 207);
-  --tag-text-color-Running: rgba(111, 191, 248); 
-  --tag-text-color-Films: rgba(240, 143, 17);
-  --tag-text-color-Vexilology: rgba(107, 17, 176); 
+  --tag-bg-color-Mathematics: rgba(238, 93, 68, 0.3);
+  --tag-bg-color-Notes: rgba(109, 104, 104, 0.3);
+  --tag-bg-color-Python: rgba(128, 155, 243, 0.3);
+  --tag-bg-color-React: rgba(9, 204, 188, 0.3);
+  --tag-bg-color-Rocks-and-minerals: rgba(228, 124, 207, 0.3);
+  --tag-bg-color-Running: rgba(243, 247, 39, 0.3); 
+  --tag-bg-color-Vexilology: rgba(120, 197, 214, 0.3); 
+  
+  --tag-text-color-Astronomy: rgb(164, 65, 239);
+  --tag-text-color-Biology: rgb(79, 139, 20);
+  --tag-text-color-Cryptography: rgb(13, 81, 159);
+  --tag-text-color-Entomology: rgb(161, 179, 59);
+  --tag-text-color-Films: rgb(195, 113, 6);
+  --tag-text-color-Geography: rgb(44, 220, 94);
+  --tag-text-color-Hardware: rgb(22, 94, 48, 0.996);
+  --tag-text-color-History: rgb(244, 158, 247);
+  --tag-text-color-Interesting-people: rgb(75, 117, 142);
+  --tag-text-color-Life: rgb(109, 104, 104);
+  --tag-text-color-Oceanography: rgb(56, 85, 148);
+  --tag-text-color-Mathematics: rgb(238, 93, 68);
   --tag-text-color-Music: rgba(246, 234, 13);
+  --tag-text-color-Notes: rgb(157, 128, 109);
+  --tag-text-color-Python: rgba(128, 155, 243);
+  --tag-text-color-React: rgba(9, 204, 188);
+  --tag-text-color-Rocks-and-minerals: rgba(228, 124, 207);
+  --tag-text-color-Running: rgb(195, 198, 7); 
+  --tag-text-color-Vexilology: rgb(120, 197, 214); 
 }
 
 /** LIGHT MODE */
 :root {
-  --bg1: rgb(234, 234, 234);  /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg1: rgb(225, 231, 238);   /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
   --bg2: var(--bg1);   /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
 
   --text: rgb(128, 128, 128);
@@ -88,12 +92,12 @@
   --text-hyperlink-hover: rgb(9, 194, 250);
 
   --section-inner-bg-color: rgb(243, 243, 243);
-  --page-wrapper-bg: var(--bg1);
+  --page-wrapper-bg: rgb(225, 231, 238);
   --page-text-color: rgba(0, 0, 0, 0.755);
 
   --topnav-bg-color: rgba(253, 252, 251, 0.729);
-  --topnav-button-bg-color: var(--bg1);
-  --topnav-button-bg-color-hover: rgb(216, 213, 213);
+  --topnav-button-bg-color: rgb(225, 231, 238);
+  --topnav-button-bg-color-hover: rgb(204, 205, 213);
   --topnav-button-bg-color-active: rgb(90, 89, 119);
   --topnav-button-text-color: rgb(4, 3, 3);
   --topnav-button-text-color-hover: rgb(0, 0, 0);
@@ -106,8 +110,8 @@
   --logo-path-color-onclick: rgba(5, 120, 72, 0.897);
   --logo-stroke-color: rgb(17, 15, 15);
   --logo-stroke-color-hover: rgb(255, 255, 255);
-  --logo-box-shadow-color: rgba(165, 163, 173, 0.49);
-  --logo-border-color: rgb(216, 215, 215);
+  --logo-box-shadow-color: rgba(111, 109, 121, 0.401);
+  --logo-border-color: rgba(188, 188, 192, 0.934);
   --logo-inversion-number: 1;
 
   --sidenav-bg-color: rgba(253, 252, 251, 0);
@@ -127,7 +131,7 @@
   --project-card-text-color: rgb(0, 0, 0);
 
   --blog-table-bg: var(--page-wrapper-bg);
-  --blog-table-thead-bg: rgb(247, 247, 247);
+  --blog-table-thead-bg: rgb(229, 229, 229);
   --blog-table-border: rgba(0, 0, 0, 0.202);
   --blog-table-text: var(--text);
   --blog-table-text-hover: var(--text);
@@ -135,12 +139,19 @@
   --blog-table-tag-bg: rgb(218, 226, 219);
   --blog-table-tag-text: rgb(27, 27, 27);
   
-  --searchbox-bg-color: rgb(227, 225, 225);
-  --searchbox-hover-bg-color: rgb(221, 220, 224);
-  --searchbox-active-bg-color: rgb(217, 215, 220);
+  --searchbox-bg-color: rgb(228, 230, 234);
+  --searchbox-hover-bg-color: rgb(225, 225, 228);
+  --searchbox-active-bg-color: rgb(255, 255, 255);
   --searchbox-border-color: rgba(174, 181, 192, 0.019);
   --searchbox-placeholder-text-color: rgba(64, 64, 69, 0.531);
   --searchbox-text-color: rgb(60, 114, 240);
+
+  --dropdown-list-container-bg-color: rgb(251, 251, 251);
+  --dropdown-list-container-border-color: rgb(206, 204, 204);
+  --dropdown-list-item-bg-color-hover: rgb(228, 228, 232);
+  
+  --general-box-shadow-color-1: rgba(65, 69, 73, 0.3);
+  --general-box-shadow-color-2: rgba(65, 69, 73, 0.15);
 
   --blog-post-title-text: rgb(33, 33, 33);
   --blog-post-subTitle-text-color: rgb(38, 38, 38);
@@ -153,9 +164,7 @@
   --tags-text-color: rgb(75, 72, 72);
   --tags-Hardware-text-color: rgb(17, 140, 81);
 
-  --university-controls-btn-bg: rgba(224, 222, 222, 0.609);
-  --university-controls-btn-svg-fill: rgb(156, 154, 154);
-  --university-card-box-shadow: rgba(12, 12, 13, 0.1);
+  --university-card-box-shadow: rgba(150, 150, 155, 0.16);
   --university-card-bg: rgb(255, 255, 255);
   --university-card-border-color: rgb(251, 251, 251);
   --university-card-border-color-hover: rgb(222, 222, 226);
@@ -167,7 +176,9 @@
   --university-card-stage-text-color: rgb(126, 126, 126);
   --university-card-percentage-text-color: rgb(255, 255, 255);
   --university-card-percentage-bg-color: rgb(62, 156, 7);
-
+  --university-controls-btn-bg: rgba(224, 222, 222, 0.609);
+  --university-controls-btn-svg-fill: rgb(156, 154, 154);
+  
   --university-assignment-title-text-color: rgb(15, 20, 30);
   --university-assignment-subheading-text-color: rgb(135, 138, 143);
   --university-assignment-subheading-detail-text-color: rgb(15, 20, 30);
@@ -226,7 +237,7 @@
   --logo-path-color-onclick: rgba(236, 255, 230, 0.897);
   --logo-stroke-color: rgb(0, 0, 0);
   --logo-stroke-color-hover: rgb(0, 0, 0);
-  --logo-box-shadow-color: rgba(79, 78, 84, 0.729);
+  --logo-box-shadow-color: rgba(7, 7, 7, 0.971);
   --logo-border-color: rgb(0, 0, 0);
   --logo-inversion-number: 0;
 
@@ -257,11 +268,18 @@
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
 
   --searchbox-bg-color: rgb(40, 39, 39);
-  --searchbox-hover-bg-color: rgb(43, 42, 42);
-  --searchbox-active-bg-color: rgb(47, 48, 46);
+  --searchbox-hover-bg-color: rgb(43, 41, 42);
+  --searchbox-active-bg-color: rgb(46, 47, 46);
   --searchbox-border-color: rgba(8, 93, 149, 0.293);
   --searchbox-placeholder-text-color: rgba(245, 245, 240, 0.35);
   --searchbox-text-color: rgb(38, 220, 144);
+
+  --dropdown-list-container-bg-color: rgb(51, 49, 49);
+  --dropdown-list-container-border-color: rgb(59, 58, 58);
+  --dropdown-list-item-bg-color-hover: rgb(70, 68, 68);
+
+  --general-box-shadow-color-1: rgba(30, 33, 35, 0.3);
+  --general-box-shadow-color-2: rgba(30, 32, 34, 0.15);
 
   --blog-post-title-text: rgb(199, 199, 199);
   --blog-post-subTitle-text-color: rgb(209, 209, 209);
@@ -276,7 +294,7 @@
   --university-controls-btn-bg: rgba(82, 79, 79, 0.609);
   --university-controls-btn-svg-fill: rgb(232, 232, 232);
   
-  --university-card-box-shadow: rgba(0, 0, 0, 0.1);
+  --university-card-box-shadow: rgba(97, 94, 94, 0.1);
   --university-card-bg: rgb(43, 47, 51);
   --university-card-border-color: rgb(38, 42, 46);
   --university-card-border-color-hover: rgb(27, 31, 34);
@@ -321,21 +339,17 @@
 
 
 /* #region ----------------------------------<1: SETUP>---------------------------------- */
-#particles-js canvas{
-  position: fixed;
-  width: 100%;
-  height: 100vh;
+
+/* Font related stuff... */
+body, button, input, select, textarea, a {
+  color: rgb(0, 0, 0);
+  font-family: Helvetica !important;
 }
-/* only put the core elements on top of #particles-js, not the entire page because it removes the interactivity */
-.portfolio p, .portfolio a, .portfolio h2, .portfolio h1, .portfolio h3, .portfolio h4, .portfolio h5, .portfolio h6, .portfolio .project, .my-navbar {
-  z-index: 1;
-  position: relative;
+h1, h2, h3, .website-logo-container a {
+  font-family: 'karla', cursive !important;
 }
 
-.center-me {
-  text-align: center;
-}
-
+/* Style all hyperlinks (apart from website logo!) */
 a:not(.website-logo) {
   border-bottom: 3px solid transparent;
   background-color: transparent;
@@ -352,45 +366,8 @@ a:not(.website-logo):hover {
   opacity: 1.0;
 }
 
-.section-inner {
-  background-color: var(--section-inner-bg-color);
-  border-radius: 15px;
-  padding: 10px;
-  margin-bottom: 40px !important;
-  box-shadow: 0 1px 12px 0 var(--university-card-box-shadow);
-}
 
-@media (max-width: 2000px) {
-  .section-inner {
-    margin: 0 auto;
-  }
-}
-@media (min-width: 800px) {
-  .section-inner {
-    max-width: 1300px;
-  }
-}
-
-/* Accomodate for sidebar... */
-/*
-@media (max-width: 725px) {
-  .section-inner {
-    max-width: 600px;
-    margin: 0 !important;
-    padding-left: calc(3.5rem + 1rem) !important;
-  }
-}*/
-
-
-body, button, input, select, textarea, a {
-  color: rgb(0, 0, 0);
-  font-family: Helvetica !important;
-}
-
-h1, h2, h3, .website-logo-container a {
-  font-family: 'karla', cursive !important;
-}
-
+/* Some SVG stuff... */
 .inline-svg {
   width: 1em;
   display: block;
@@ -400,6 +377,24 @@ h1, h2, h3, .website-logo-container a {
 }
 svg:not(:root) {
   overflow: hidden;
+}
+
+/* When including an SVG, always add the .invertable-icon class so that the icon changes properly in dark/light themes */
+svg.invertable-icon {
+  filter: invert(var(--svg-icon-invert-percentage));
+}
+svg.invertable-icon:hover {
+  fill: rgb(254, 51, 122);
+}
+
+/* Weird things... */
+.center-me {
+  text-align: center;
+}
+#particles-js canvas{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
 }
 /* #endregion */
 
@@ -433,18 +428,53 @@ body > div#root > div.App {
   width: 100%;
   align-items: stretch;
 }
+
+
+/* ---------------< styles for .section-inner >----------------- */
+.section-inner {
+  background-color: var(--section-inner-bg-color);
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 40px !important;
+  box-shadow: 0 1px 12px 0 var(--university-card-box-shadow);
+}
+
+@media (max-width: 2000px) {
+  .section-inner {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 800px) {
+  .section-inner {
+    max-width: 1300px;
+  }
+}
+
+/* Accomodate for sidebar... */
+/*
+@media (max-width: 725px) {
+  .section-inner {
+    max-width: 600px;
+    margin: 0 !important;
+    padding-left: calc(3.5rem + 1rem) !important;
+  }
+}*/
+
 /* #endregion */
 
 
 /* #region ----------------------------------<3: TOP NAVBAR>---------------------------------- */
-/* 
-  #nav-top
-    .nav-wrapper
-      .nav-left
-        .website-logo-container
-        .website-links
-      .nav-right
-        .theme-toggle
+
+/*
+Proposed structure of top navbar
+---------------------------------
+#nav-top
+  .nav-wrapper
+    .nav-left
+      .website-logo-container
+      .website-links
+    .nav-right
+      .theme-toggle
 */
 #nav-top {
   display: flex;
@@ -455,9 +485,7 @@ body > div#root > div.App {
   padding: 0.9em 1em;
   font-size: 1.0rem;
   margin-left: 3.5rem;
-  /*
-  background-color: var(--topnav-bg-color);
-  */
+  /* background-color: var(--topnav-bg-color); */
 }
 
 @media screen and (max-width: 700px) { 
@@ -532,7 +560,6 @@ body > div#root > div.App {
 #nav-top .nav-right { margin-left: 20px; }
 
 
-
 /* dont display hamburger menu... */
 .hamburger-menu {
   display: none !important;
@@ -567,10 +594,13 @@ body > div#root > div.App {
 
 
 /* #region ----------------------------------<4: SIDE NAVBAR>---------------------------------- */
-/* 
-  #nav-side
-    .website-logo-container
-    .sidebar-menu
+
+/*
+Proposed structure of sidebar
+------------------------------
+#nav-side
+  .website-logo-container
+  .sidebar-menu
 */
 #nav-side {
   position: fixed;
@@ -697,13 +727,6 @@ svg.logo path:hover {
   width: 100vw;
   top: 0;
   padding-top: 5rem;
-}
-
-.page-wrapper.university,
-.page-wrapper.universityAssignment,
-.page-wrapper.blog,
-.page-wrapper.blog-post,
-.page-wrapper.notes {
   background-color: var(--page-wrapper-bg) !important;
 }
 
@@ -1039,12 +1062,15 @@ div.tags {
 /* text inside tag */
 .tag span {
   margin-right: 6px;
+  background-color: var(--blog-table-tag-bg);
+  color: var(--blog-table-tag-text);
+}
+.tag span,
+ul.tag-filter-options-list > li span {
   padding: 2px 5px;
   border-radius: 4px;
   font-size: 0.7rem;
   font-weight: bold;
-  background-color: var(--blog-table-tag-bg);
-  color: var(--blog-table-tag-text);
 }
 
 /* lower opacity when hovering over tag */
@@ -1060,23 +1086,46 @@ div.tags {
 .tag span.Hardware { color: var(--tags-Hardware-text-color); }  /* apart from .Hardware */
 
 /* Background colours of tags... */
-.tag .Hardware            { background-color: var(--tag-bg-color-Hardware); }
 .tag .Astronomy           { background-color: var(--tag-bg-color-Astronomy); }
-.tag .Mathematics         { background-color: var(--tag-bg-color-Mathematics); }
-.tag .Python              { background-color: var(--tag-bg-color-Python); }
-.tag .Life                { background-color: var(--tag-bg-color-Life); }
 .tag .Biology             { background-color: var(--tag-bg-color-Biology); }
-.tag .React               { background-color: var(--tag-bg-color-React); }
 .tag .Cryptography        { background-color: var(--tag-bg-color-Cryptography); }
 .tag .Entomology          { background-color: var(--tag-bg-color-Entomology); }
-.tag .Oceanography        { background-color: var(--tag-bg-color-Oceanography); }
+.tag .Films               { background-color: var(--tag-bg-color-Films); }
 .tag .Geography           { background-color: var(--tag-bg-color-Geography); }
+.tag .Hardware            { background-color: var(--tag-bg-color-Hardware); }
 .tag .History             { background-color: var(--tag-bg-color-History); }
+.tag .Interesting-people  { background-color: var(--tag-bg-color-Interesting-people); }
+.tag .Life                { background-color: var(--tag-bg-color-Life); }
+.tag .Music               { background-color: var(--tag-bg-color-Music); }
+.tag .Mathematics         { background-color: var(--tag-bg-color-Mathematics); }
+.tag .Notes               { background-color: var(--tag-bg-color-Notes); }
+.tag .Oceanography        { background-color: var(--tag-bg-color-Oceanography); }
+.tag .Python              { background-color: var(--tag-bg-color-Python); }
+.tag .React               { background-color: var(--tag-bg-color-React); }
 .tag .Rocks-and-minerals  { background-color: var(--tag-bg-color-Rocks-and-minerals); }
 .tag .Running             { background-color: var(--tag-bg-color-Running); }
-.tag .Films               { background-color: var(--tag-bg-color-Films); }
 .tag .Vexilology          { background-color: var(--tag-bg-color-Vexilology); }
-.tag .Music               { background-color: var(--tag-bg-color-Music); }
+
+/* Text colours of tags... */
+.tag-filter-for-Astronomy span            {background-color: var(--tag-bg-color-Astronomy);  }
+.tag-filter-for-Biology span              {background-color: var(--tag-bg-color-Biology); }
+.tag-filter-for-Cryptography span         {background-color: var(--tag-bg-color-Cryptography);  }
+.tag-filter-for-Entomology span           {background-color: var(--tag-bg-color-Entomology);  }
+.tag-filter-for-Films span                {background-color: var(--tag-bg-color-Films);   }
+.tag-filter-for-Geography span            {background-color: var(--tag-bg-color-Geography);   }
+.tag-filter-for-Hardware span             {background-color: var(--tag-bg-color-Hardware);  }
+.tag-filter-for-History span              {background-color: var(--tag-bg-color-History);  }
+.tag-filter-for-Interesting-people span   {background-color: var(--tag-bg-color-Interesting-people);  }
+.tag-filter-for-Life span                 {background-color: var(--tag-bg-color-Life); }
+.tag-filter-for-Mathematics span          {background-color: var(--tag-bg-color-Music);  }
+.tag-filter-for-Music span                {background-color: var(--tag-bg-color-Mathematics);  }
+.tag-filter-for-Notes span                {background-color: var(--tag-bg-color-Notes);  }
+.tag-filter-for-Oceanography span         {background-color: var(--tag-bg-color-Oceanography);  }
+.tag-filter-for-Python span               {background-color: var(--tag-bg-color-Python); }
+.tag-filter-for-React span                {background-color: var(--tag-bg-color-React);   }
+.tag-filter-for-Rocks-and-minerals span   {background-color: var(--tag-bg-color-Rocks-and-minerals); }
+.tag-filter-for-Running span              {background-color: var(--tag-bg-color-Running);   }
+.tag-filter-for-Vexilology span           {background-color: var(--tag-bg-color-Vexilology);  }
 
 .tag .inline-svg {
   display: inline-block;
@@ -1108,6 +1157,9 @@ div.tags {
   border: 2px solid transparent;
   padding-left: 130px;
 }
+.cotnrols > div.searchbox input {
+  transition: all 200ms ease;
+}
 
 .controls > div.searchbox input:hover {
   background-color: var(--searchbox-hover-bg-color);
@@ -1115,10 +1167,8 @@ div.tags {
 .controls > div.searchbox input:active,
 .controls > div.searchbox input.activated {
   background-color: var(--searchbox-active-bg-color);
-}
-.controls > div.searchbox input:active,
-.controls > div.searchbox input.activated {
   border: 2px solid var(--searchbox-border-color);
+  box-shadow: 0 1px 1px 0 var(--general-box-shadow-color-1), 0 1px 3px 1px var(--general-box-shadow-color-2);
 }
 .controls > div.searchbox input::placeholder {
   color: var(--searchbox-placeholder-text-color);
@@ -1155,7 +1205,7 @@ div.filter-by-tag-button > button > svg {
   margin-bottom: 2px;
 }
 
-/* Dropdown list for available tag categories to filter by */
+/* -------------< Dropdown list for available tag categories to filter by >----------------- */
 .tag-filter-options-list-container:not(.active) {
   display: none;  /* hidden by default */
 }
@@ -1179,14 +1229,15 @@ div.filter-by-tag-button > button > svg {
 	pointer-events: none;
 }
 .popover-canvas-with-arrow::after {
-	border-bottom-color: rgb(51, 49, 49);
+	border-bottom-color: var(--dropdown-list-container-bg-color);
 	border-width: 12px;
 	margin-left: -30px;
 }
 
 ul.tag-filter-options-list {
-  background-color: rgb(51, 49, 49);
-  border: 1px solid rgb(59, 58, 58);
+  box-shadow: 0 1px 1px 0 var(--general-box-shadow-color-1), 0 1px 3px 1px var(--general-box-shadow-color-2);
+  background-color: var(--dropdown-list-container-bg-color);
+  border: 1px solid var(--dropdown-list-container-border-color);
   border-radius: 0.75rem;
   padding: 0.6rem 0.5rem;
   margin-top: 0.375rem;
@@ -1200,39 +1251,20 @@ ul.tag-filter-options-list li {
   margin-bottom: 4px;
 }
 ul.tag-filter-options-list li:hover {
-  background-color: rgb(70, 68, 68);
+  background-color: var(--dropdown-list-item-bg-color-hover);
   cursor: pointer;
 }
 ul.tag-filter-options-list li span {
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 14.2px;
+  font-size: 11px;
   line-height: 1.5rem;
 }
 
 div.filter-by-tag-button > button > span,
 ul.tag-filter-options-list li span {
+  font-weight: 700; 
   font-family: PolySans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
-
-/* Text colours of tags... */
-.tag-filter-for-filter-for-Astronomy span { color: var(--tag-text-color-Hardware); }
-.tag-filter-for-Astronomy span            { color: var(--tag-text-color-Astronomy); }
-.tag-filter-for-Mathematics span          { color: var(--tag-text-color-Mathematics); }
-.tag-filter-for-Python span               { color: var(--tag-text-color-Python); }
-.tag-filter-for-Life span                 { color: var(--tag-text-color-Life); }
-.tag-filter-for-Biology span              { color: var(--tag-text-color-Biology); }
-.tag-filter-for-React span                { color: var(--tag-text-color-React); }
-.tag-filter-for-Cryptography span         { color: var(--tag-text-color-Cryptography); }
-.tag-filter-for-Entomology span           { color: var(--tag-text-color-Entomology); }
-.tag-filter-for-Oceanography span         { color: var(--tag-text-color-Oceanography); }
-.tag-filter-for-Geography span            { color: var(--tag-text-color-Geography); }
-.tag-filter-for-History span              { color: var(--tag-text-color-History); }
-.tag-filter-for-Rocks-and-minerals span   { color: var(--tag-text-color-Rocks-and-minerals); }
-.tag-filter-for-Running span              { color: var(--tag-text-color-Running); }
-.tag-filter-for-Films span                { color: var(--tag-text-color-Films); }
-.tag-filter-for-Vexilology span           { color: var(--tag-text-color-Vexilology); }
-.tag-filter-for-Music span                { color: var(--tag-text-color-Music); }
 
 /* The tick icon next to tag category in dropdown menu... */
 ul.tag-filter-options-list svg {
@@ -1255,6 +1287,7 @@ ul.tag-filter-options-list li.selected svg {
 
 
 /* #region ----------------------------------<8: BLOG POST PAGE>---------------------------------- */
+
 .blog-post {
   /* max-width: 80vw; */
   margin-right: auto;
@@ -1266,47 +1299,49 @@ ul.tag-filter-options-list li.selected svg {
   transition: 0.3s all;
 }
 
+/*
+Proposed structure of blog post info:
+--------------------------------
+div.blog-post
+  div.section-inner
+    div.blog-post-info        <========== here
+      a.back-to-previous-page
+      h3.blog-post-title
+      span.blog-post-date
+      div.blog-post-tags
+*/
 .blog-post-info {
   padding-bottom: 0.5em;  
 }
-
-/* title of blog post */
 .blog-post-title {
   color: var(--blog-post-title-text);
   font-size: 2.6rem;
   font-weight: 900;
   display: block;
 }
-
-/* date of blog post */
 .blog-post-date {
   font-size: 0.9rem;
   color: var(--blog-post-date-text);
   display: inline-block;
+  margin-left: 5px;
 }
-
-/* calendar icon next to date */
 .blog-post-date > svg {
+  /* calendar icon next to date */
   width: 17px;
   height: 17px;
   opacity: 0.5;
   margin-right: 7px;
   margin-bottom: 4px;
 }
-
 .blog-post-date, .blog-post-tags {
   margin-right: 15px;
 }
-.blog-post-date {
-  margin-left: 5px;
-}
-
-/* the tags for this blog post */
 .blog-post-tags {
+  /* the tags for a blog post */
   display: inline-block;
 }
-
 .blog-post-info .back-to-previous-page {
+  /* button to go back to list of blogs */
   display: inline-block;
   position: absolute;
   margin-left: -60px;
@@ -1316,6 +1351,7 @@ ul.tag-filter-options-list li.selected svg {
   border-radius: 10px;
 }
 .back-to-previous-page svg.invertable-icon {
+  /* the arrow icon */
   width: 38px;
   height: 38px;
   padding: 10px;
@@ -1331,39 +1367,54 @@ ul.tag-filter-options-list li.selected svg {
   background-color: var(--btn-circular-active-bg-color);
 }
 
-.blog-post-content {
-  padding-top: 1em;
-  /*
-	border-top: 2px solid var(--blog-post-divider-color);
-  */
+/*
+Proposed structure of blog post content:
+--------------------------------
+div.blog-post
+  div.section-inner
+    div.blog-post-info
+      ...
+    div.blog-post-content  <======= here
+      div.intro-text.blog-subsection
+        h3.subgroup-title
+        p
+        p
+        ...
+      div.blog-subsection
+        h3.subgroup-title
+        p
+        p
+        h5.subgroup-title
+        p
+        p
+        ...
+      div.blog-subsection
+        h3.subgroup-title
+        p
+        p.note
+        picture.img
+          img
+        ...
+      div.references-text.blog-subsection
+*/
+
+/* Title of a subgroup title (usually h3 or h5) */
+.blog-post-content .subgroup-title {
+  border-bottom: 2px solid var(--blog-post-subgroup-border-color);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
-
-
-/* Table inside a blog-post */
-.blog-post table {
-  margin: 40px 0;
+.blog-post-content h1,
+.blog-post-content h2, 
+.blog-post-content h3, 
+.blog-post-content h4, 
+.blog-post-content h5, 
+.blog-post-content h6 { 
+  line-height: 1.3em;
+  margin-top: 40px;
+  font-weight: 400;
+  color: var(--blog-post-subTitle-text-color);
 }
-.blog-post table th, 
-.blog-post table td {
-  width: 20%;
-}
-.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(1) { color: rgb(253, 15, 15); }
-.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(2) { color: rgb(255, 79, 35); }
-.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(3) { color: rgb(226, 90, 45); }
-.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(4) { color: rgb(240, 200, 40); }
-.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(5) { color: rgb(188, 209, 26); }
-.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(6) { color: rgb(24, 188, 65); }
-
-@media screen and (max-width: 670px) {
-  .blog-post table th {
-    font-size: 0.7rem;
-  }
-  .blog-post table td {
-    font-size: 0.6rem;
-  }
-}
-
-
 .blog-post-content p,
 .blog-post-content ul li,
 .blog-post-content ol li {
@@ -1371,47 +1422,31 @@ ul.tag-filter-options-list li.selected svg {
   color: var(--blog-post-text);
   margin-left: 5px;
 }
+.blog-post-content p, 
+.blog-post-content ol, 
+.blog-post-content ul { 
+  line-height: 1.55em;
+}
 
+/* Lists inside a blog post */
+.blog-post-content ul li {
+  white-space: pre-wrap;
+}
+.blog-post-content ol,
+.blog-post-content ul {
+  padding: 0 30px;
+}
+
+/* Hyperlinks inside a blog post */
+.blog-post-content a {
+  font-weight: bold;
+}
+
+/* Little note inside a blog post */
 .blog-post-content p.note {
   font-size: 0.9rem;
   color: var(--blog-post-note-text);
   font-style: italic;
-}
-
-.blog-post-content ul li {
-  white-space: pre-wrap;
-}
-
-.blog-post-content ol, .blog-post-content ul {
-  padding: 0 30px;
-}
-
-.blog-post-content hr {
-  border: 1px solid var(--blog-post-hr);
-  border-radius: 10px;
-}
-
-.blog-post-content h1, .blog-post-content h2, .blog-post-content h3, .blog-post-content h4, .blog-post-content h5, .blog-post-content h6 { 
-  line-height: 1.3em;
-  margin-top: 40px;
-  font-weight: 400;
-  color: var(--blog-post-subTitle-text-color);
-}
-
-
-.blog-post-content h5.subgroup-title {
-  border-bottom: 2px solid var(--blog-post-subgroup-border-color);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
-/* remove any margin from the first element in a blog post */
-.blog-post-content div.intro > :nth-child(1) {
-  margin-top: 0px !important;
-}
-
-.blog-post-content p, .blog-post-content ol, .blog-post-content ul { 
-  line-height: 1.55em;
 }
 
 /* Image sizing problems! */
@@ -1425,21 +1460,41 @@ ul.tag-filter-options-list li.selected svg {
   margin: 2em 0;
   max-width: 600px;
 }
-.blog-post img, .blog-post picture {
+.blog-post img, 
+.blog-post picture {
   display: block;
 }
+
+/* Table inside a blog-post */
+.blog-post table {
+  margin: 40px 0;
+}
+.blog-post table th, 
+.blog-post table td {
+  width: 20%;
+}
+
+@media screen and (max-width: 670px) {
+  .blog-post table th {
+    font-size: 0.7rem;
+  }
+  .blog-post table td {
+    font-size: 0.6rem;
+  }
+}
+
+/* applying colours to a particuar table... */
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(1) { color: rgb(253, 15, 15); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(2) { color: rgb(255, 79, 35); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(3) { color: rgb(226, 90, 45); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(4) { color: rgb(240, 200, 40); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(5) { color: rgb(188, 209, 26); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(6) { color: rgb(24, 188, 65); }
 
 
 .line {
   border: 1px solid var(--blog-post-divider-color);
   border-style: dotted;
-}
-
-svg.invertable-icon {
-  filter: invert(var(--svg-icon-invert-percentage));
-}
-svg.invertable-icon:hover {
-  fill: rgb(254, 51, 122);
 }
 /* #endregion */
 
@@ -1894,9 +1949,13 @@ ul.messiahs-handbook p.quote-person {
   }
 
   /* font size of searchbox */
-  .controls > div.searchbox > input {
+  .controls > div.searchbox input {
     font-size: 13px;
     width: 300px;
+    margin-top: 3px;
+  }
+  .controls .filter-by-tag-button span {
+    font-size: 14px;
   }
 
   .blog-post-info .back-to-previous-page {
@@ -1904,12 +1963,16 @@ ul.messiahs-handbook p.quote-person {
     left: 50px;
     top: -5px;
   }
+
+  div.filter-by-tag-button > button > svg {
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (max-width: 725px) {
   /* move content down a bit to make room for button */
   .blog-post-content {
-    margin-top: 40px;
+    margin-top: 0px;
   }
   /* move button */
   .back-to-previous-page {
