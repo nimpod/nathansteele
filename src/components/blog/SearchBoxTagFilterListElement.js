@@ -30,7 +30,7 @@ class SearchBoxTagFilterListElement extends Component {
         return(
             this.props.tags.map((tag => {
                 return(
-                    <li className={`tag-filter-for-${tag}`} data-filterByThisTag={copyOfThis.checkIfMatching(tag)}>
+                    <li key={`key-${tag}`} className={`tag-filter-for-${tag}`} /*{ data-myAttr={copyOfThis.checkIfMatching(tag)} }*/>
                         <div>
                             <TickIcon className='invertable-icon' />
                             <span>{tag}</span>

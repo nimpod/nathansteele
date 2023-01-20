@@ -42,9 +42,8 @@ const initState = {
                         <img width=600 height=400 src=\"https://aasnova.wpenginepowered.com/wp-content/uploads/2018/05/fig1-7.jpg\" alt=\"Map of Titan\" />\
                     </picture>\
                     <h5 class='subgroup-title'>Returning to Titan?</h5> \
-                    <p>There has been a mission proposed to send a submarine-like lander to investigate the oceans of Titan in more detail (aka. <a href='https://en.wikipedia.org/wiki/Titan_Mare_Explorer'>Titan Mare Explorer</a>).</p> \
-                    <p>The ocean of particular interest is the Kraken Mare.</p> \
-                    <p>See <a href='https://www.nasa.gov/content/titan-submarine-exploring-the-depths-of-kraken/'>NASA's page</a> for more info.</p> \
+                    <p>There has been a mission proposed called the <a href='https://www.nasa.gov/content/titan-submarine-exploring-the-depths-of-kraken/'>Titan Mare Explorer</a> to send a submarine-like lander to investigate these mysterious Titanian lakes in more detail.</p> \
+                    <p>The lake of particular interest is the <a href='https://en.wikipedia.org/wiki/Kraken_Mare'>Kraken Mare</a>.</p> \
                     <picture class=\"img\">\
                         <img width=300 height=400 class='dont-resize' src=\"https://imageio.forbes.com/specials-images/imageserve/638a3d6abc51bdee9320296e/0x0.jpg?format=jpg&width=1200\" title='Photo of Titan taken by the James Webb Space Telescope' />\
                     </picture>\
@@ -109,8 +108,6 @@ const initState = {
                         <p><a href='https://www.youtube.com/watch?v=G0g4L6a6Ns4'>A fantastic Cassini news conference (4th April 2017):</a></p>\
                         <p><a href='https://www.youtube.com/watch?v=_9GY6njkMI8&t=0s'>Good video about Cassini's grand finale, including a fun artsy compilation using NASA's Cassini photographs, from a terrible YouTube channel about conspiracy theories and unbelievably dumb ancient alien videos, but he made a good video this time</a></p> \
                     </div>",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "A summary the amazing history and dramatic conclusion to NASA's Cassini spacecraft mission",
             tags: ["Astronomy"]
         },
         {
@@ -232,8 +229,6 @@ const initState = {
                             <p><a href='https://www.smithsonianmag.com/science-nature/interactive-map-shows-all-21-successful-moon-landings-180972687/'>Cool interactive diagram of moon landings</a></p> \
                             <p><a href='https://en.wikipedia.org/wiki/Moon_landing'>Wikipedia, Moon Landing</a></p>\
                         </div>",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Astronomy"]
         },
         {
@@ -302,8 +297,6 @@ const initState = {
                 </ul> \
             </div> \
             ",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Hardware"]
         },
         {
@@ -311,8 +304,10 @@ const initState = {
             date: "16 Jan 2023",
             title: "The incomprehensible vastness of space",
             content: "\
+                <div class='intro-text blog-subsection'> \
+                    <h3 class='subgroup-title'></h3> \
                     <p>The nearest solar system to us is <a href='https://en.wikipedia.org/wiki/Alpha_Centauri'>Alpha Centuri</a>, a meagre <b>4.246 lightyears</b> away.</p>\
-                    <p>A <a href='https://exoplanets.nasa.gov/faq/26/what-is-a-light-year/'>lightyear</a> is a measurement of distance, specifically the amount of distance covered if you were travelling at the speed of light. This is 9,460,730,472,580 km (9.46 trillion km)).</p>\
+                    <p class='note'>A <a href='https://exoplanets.nasa.gov/faq/26/what-is-a-light-year/'>lightyear</a> is a measurement of distance, specifically the amount of distance covered if you were travelling at the speed of light. This is 9,460,730,472,580 km (9.46 trillion km).</p>\
                     <p>So in astronomical terms, Alpha Centuri is relatively close to us, just <b>4.246 lightyears</b> away... Unfortuantly our humans minds find it difficult to comprehend this vast distance because it's actually equivalent to <b>40,174,991,951,814 km (40.17 trillion km)</b>...</p> \
                     <p>To get some perspective, let's measure how long it would take to travel to Alpha Centuri in various forms of transport, starting with a car...</p>\
                     <table class='time-to-get-to-alphacenturi-table'> \
@@ -374,9 +369,8 @@ const initState = {
                     <picture class=\"img\">\
                         <img width=400 height=200 src=\"https://cdn.mos.cms.futurecdn.net/38UnvH7oaiQX4VkAHhNqbN-970-80.png\" alt=\"Not to scale illustration of spacecrafts venturing beyond the solar system\" />\
                     </picture>\
+                </div> \
             ",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Life", "Astronomy"]
         },
         {
@@ -602,8 +596,6 @@ const initState = {
                         </li>\
                     </ul>\
                     ",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "A list of my favourite quotes",
             tags: ["Notes"]
         },
         {
@@ -611,7 +603,6 @@ const initState = {
             date: "09 Sep 2020",
             title: "Working from home as an intern during the COVID-19 pandemic",
             content: "<p>It was challening</p>",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
             blurb: "this is the blurb",
             tags: ["Life"]
         },
@@ -620,8 +611,6 @@ const initState = {
             date: "09 Sep 2016",
             title: "How to deploy a react app using Github pages",
             content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["React"]
         },
         {
@@ -629,8 +618,6 @@ const initState = {
             date: "10 Sep 2017",
             title: "Analysing my IMDB ratings",
             content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Python"]
         },
         {
@@ -638,8 +625,6 @@ const initState = {
             date: "07 Oct 2020",
             title: "Are non-carbon based lifeforms possible?",
             content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Astronomy", "Biology"]
         },
         {
@@ -647,8 +632,6 @@ const initState = {
             date: "07 Oct 2020",
             title: "Gorgonocephalus arcticus",
             content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Biology"]
         },
         {
@@ -656,8 +639,6 @@ const initState = {
             date: "09 Oct 2020",
             title: "A subsurface ocean on Enceladus",
             content: "",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Astronomy"]
         },
         {
@@ -665,8 +646,6 @@ const initState = {
             date: "11 Oct 2020",
             title: "The Beale Ciphers",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Cryptography"]
         },
         {
@@ -674,8 +653,6 @@ const initState = {
             date: "13 Oct 2020",
             title: "The Great Pyramid of Cholula",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["History"]
         },
         {
@@ -683,8 +660,6 @@ const initState = {
             date: "14 Oct 2020",
             title: "Null Island",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Geography", "Oceanography"]
         },
         {
@@ -692,8 +667,6 @@ const initState = {
             date: "14 Oct 2020",
             title: "Hematite Stalactite",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Rocks-and-minerals"]
         },
         {
@@ -701,8 +674,6 @@ const initState = {
             date: "14 Oct 2020",
             title: "Leucochloridium",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Entomology"]
         },
         {
@@ -710,8 +681,6 @@ const initState = {
             date: "30 Sep 2022",
             title: "What happens to the information that goes inside a black hole?",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "this is the blurb",
             tags: ["Astronomy"]
         },
         {
@@ -719,8 +688,6 @@ const initState = {
             date: "30 Sep 2022",
             title: "Running form",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "All the different elements of good running form",
             tags: ["Running"]
         },
         {
@@ -728,8 +695,6 @@ const initState = {
             date: "30 Sep 2022",
             title: "Flagematics",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "Mathematics + Flags",
             tags: ["Vexilology", "Mathematics"]
         },
         {
@@ -737,8 +702,6 @@ const initState = {
             date: "16 Jan 2022",
             title: "Johannes Kepler",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "",
             tags: ["Interesting-people", "Astronomy"]
         },
         {
@@ -746,8 +709,6 @@ const initState = {
             date: "16 Jan 2022",
             title: "Samuel Pepys",
             content: "blah",
-            thumbnail: "<img src='../img/blogpost-thumbnails/1.png'></img>",
-            blurb: "",
             tags: ["Interesting-people"]
         },
     ],

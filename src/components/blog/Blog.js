@@ -1,14 +1,20 @@
-import React, {Component} from 'react'
-import { connect }  from 'react-redux'
+import React, {Component, useState, useEffect} from 'react';
+import { connect }  from 'react-redux';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
+import { ReactComponent as OpenDropdownIcon } from "../../icons/openDropdown.svg";
 import SearchBox from './SearchBox';
 import BlogPostList from './BlogPostList';
 import { Helpers } from 'react-scroll';
 import { removeDuplicatesFromArray } from '../../js/helpers';
+import SearchBoxTagFilterListElement from './SearchBoxTagFilterListElement';
 
-class Blog extends Component {
+//
+require('es6-promise');
+
+
+class Blog extends Component {   
 
     /**
      * Constructor for the 'Blog' component
@@ -19,6 +25,7 @@ class Blog extends Component {
         this.state = {
             filteredPostsState: null,
             tagCategories: null,
+            tagCategoryDefault: "All tags",
             tagCategoriesSelected: new Set(),
             searchPost: '',
             searchBoxContainsText: false,
@@ -48,20 +55,26 @@ class Blog extends Component {
     /**
      * This is called after the component is rendered (i.e. only called once at beginning)
      */
-    componentDidMount() {
+    getListOfTagCategories() {
         const { posts } = this.props;       // json data from redux data store
-        const setOfTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+        const uniqueTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+        
+        // add default tag...
+        uniqueTags.add(this.state.tagCategoryDefault);
 
+        // store each tag category once...
         this.props.posts.map((p => {
             // console.log('DEBUGGING: ', p.tags);
             p.tags.map((t => {
-                setOfTags.add(t);
+                uniqueTags.add(t);
             }));
         }));
 
         // sort the set of tags alphabetically, cause why not.
-        const arrayOfTags = Array.from(setOfTags).sort();
+        const uniqueTagsSorted = Array.from(uniqueTags).sort();
 
+        return uniqueTagsSorted;
+        /*
         this.setState({tagCategories:
             arrayOfTags.map(tag => {
                 return (
@@ -78,8 +91,8 @@ class Blog extends Component {
                     </span>
                 );
             }) 
-        });
-        console.log(arrayOfTags);
+        });*/
+        
     }
 
     /**
@@ -200,37 +213,19 @@ class Blog extends Component {
             }
         }
     }
-
-    /**
-     * 
-     * @param {*} tagSelected 
-     * @returns 
-     */
-    getListOfTagCategories(tagSelected) {
-        // get list of tags...
-        let allTags = [];
-        let allTagsUnique = [];
-
-        // iterate over all posts...
-        this.props.posts.filter((p) => {
-            
-            // add default...
-            allTags.push(tagSelected);
-
-            // add every tag across all blog posts...
-            for (let i = 0; i < p.tags.length; i++) {
-                let tag = p.tags[i];
-                allTags.push(tag);
-            }
-
-            // remove duplicates...
-            allTagsUnique = removeDuplicatesFromArray(allTags);
-        });
-
-        // return list of unique tags, sorted alphabetically...
-        return allTagsUnique.sort();
-    }
     
+    /**
+     * ...
+     * @param {Event} e 
+     */
+    toggleDropdownList = (e) => {
+        // add/remove .active class to the list...
+        document.querySelector('.tag-filter-options-list-container').classList.toggle('active');
+        
+        // add/remove .active class to the button...
+        document.querySelector('.filter-by-tag-button > button').classList.toggle('active');
+    }
+
     /**
      * The Render() function, content rendered to screen
      */
@@ -245,10 +240,10 @@ class Blog extends Component {
 
             return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;
         });
+        console.log(filteredPosts);
 
         // get list of tags...
-        let defaultTag = "All-Tags";
-        let listOfUniqueTagCategories = this.getListOfTagCategories(defaultTag);
+        let uniqueTagCategories = this.getListOfTagCategories();
 
         // deal with the colours of searchbox...
         this.handleSearchBoxColours();
@@ -256,21 +251,22 @@ class Blog extends Component {
         return(
             <div className="page-wrapper blog">
                 <div className="section-inner">
-                    {/*}
-                    <h2 className="page-title">Blog Posts</h2>
-                    */}
                     <div className="posts-container">
                         <div className="controls" onClick={this.handleSearchBoxClick}>
-                            <SearchBox
-                                tagSelected={defaultTag}
-                                tags={listOfUniqueTagCategories}
-                                handleSearchBoxInput={this.handleSearchBoxInput} 
-                                placeholderText="Search..."
+                            <SearchBox 
+                                tagSelected={this.state.tagCategoryDefault}
+                                tags={uniqueTagCategories}
+                                handleSearchBoxInput={this.handleSearchBoxInput}
+                                placeholderText="search..."
                             />
                         </div>
                         <table>
                             <tbody>
-                                <BlogPostList filteredPosts={filteredPosts} handleTagFilter={this.handleTagFilter} />
+                                {/*<DataTable data={filteredPosts} />*/}
+                                <BlogPostList 
+                                    filteredPosts={filteredPosts} 
+                                    handleTagFilter={this.handleTagFilter}
+                                />
                             </tbody>
                         </table>
                     </div>

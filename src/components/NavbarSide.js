@@ -25,7 +25,7 @@ class NavbarSide extends Component {
                         <Logo className="logo" />
                     </NavLink>
                 </div>
-                <div class="sidebar-menu">
+                <div className="sidebar-menu">
 
                 </div>
             </aside>
