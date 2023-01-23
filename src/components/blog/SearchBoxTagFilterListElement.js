@@ -23,14 +23,26 @@ class SearchBoxTagFilterListElement extends Component {
         return isSelected;
         */
     }
-
+    
     render() {
         let copyOfThis = this;
 
         return(
             this.props.tags.map((tag => {
                 return(
-                    <li key={`key-${tag}`} className={`tag-filter-for-${tag}`} /*{ data-myAttr={copyOfThis.checkIfMatching(tag)} }*/>
+                    <li key={`key-${tag}`} className={`tag tag-filter-for-${tag}`} onClick={this.props.handleTagFilter}>
+                        <div>
+                            <span>{tag}</span>
+                        </div>
+                    </li>
+                )
+            }))
+        )
+        /*
+        return(
+            this.props.tags.map((tag => {
+                return(
+                    <li key={`key-${tag}`} className={`tag-filter-for-${tag}`>
                         <div>
                             <TickIcon className='invertable-icon' />
                             <span>{tag}</span>
@@ -38,7 +50,7 @@ class SearchBoxTagFilterListElement extends Component {
                     </li>
                 )
             }))
-        )
+        )*/
     }
 }
 

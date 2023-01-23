@@ -60,7 +60,7 @@ class Blog extends Component {
         const uniqueTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
         
         // add default tag...
-        uniqueTags.add(this.state.tagCategoryDefault);
+        //uniqueTags.add(this.state.tagCategoryDefault);
 
         // store each tag category once...
         this.props.posts.map((p => {
@@ -226,6 +226,45 @@ class Blog extends Component {
         document.querySelector('.filter-by-tag-button > button').classList.toggle('active');
     }
 
+
+    /**
+     * User clicked tag with intention of filtering blog posts for that particular tag...
+     * @param {*} e 
+     */
+    clickedTagFilter = (e) => {
+        // find tag category the user selected...
+        let selectedTag = e.target.parentElement.parentElement;
+        let selectedTagCategory = selectedTag.classList[1].split('-')[3];
+        console.log('You want to filter blog posts by ' + selectedTagCategory);
+
+        // toggle .active class on the tag category selected...
+        selectedTag.classList.contains('selectedThisCategory') ? selectedTag.classList.remove('selectedThisCategory') : selectedTag.classList.add('selectedThisCategory');
+
+        // get list of rows in blog post table... Add the .visible class to all rows...
+        let tablerows = document.querySelector('.posts-container table tbody').childNodes;
+        for (let i = 0; i < this.props.posts.length; i++) {
+            let tablerow = tablerows[i];
+            tablerow.setAttribute('data-filter', 'visible');
+        }
+
+        // Do the filtering (iterate over blog posts via props...)
+        for (let i = 0; i < this.props.posts.length; i++) {
+            let tablerow = tablerows[i];
+            let tagsInPost = this.props.posts[i]['tags'];
+
+            // (iterate over list of tags per blog post...)
+            for (let j = 0; j < tagsInPost.length; j++) {
+                if (tagsInPost[j] == selectedTagCategory) {
+                    // match, make row visible
+                    break;
+                } else {
+                    // no match, make row invisible
+                    selectedTag.classList.contains('selectedThisCategory') ? tablerow.setAttribute('data-filter', 'invisible') : tablerow.setAttribute('data-filter', 'visible');
+                }
+            }
+        }
+    }
+
     /**
      * The Render() function, content rendered to screen
      */
@@ -240,7 +279,7 @@ class Blog extends Component {
 
             return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;
         });
-        console.log(filteredPosts);
+        ///console.log(filteredPosts);
 
         // get list of tags...
         let uniqueTagCategories = this.getListOfTagCategories();
@@ -259,6 +298,13 @@ class Blog extends Component {
                                 handleSearchBoxInput={this.handleSearchBoxInput}
                                 placeholderText="search..."
                             />
+                            <ul className='tag-filter-options-list'>
+                                <SearchBoxTagFilterListElement
+                                    handleTagFilter={this.clickedTagFilter}
+                                    tagSelected={this.state.tagCategoryDefault}
+                                    tags={uniqueTagCategories}
+                                />
+                            </ul>
                         </div>
                         <table>
                             <tbody>

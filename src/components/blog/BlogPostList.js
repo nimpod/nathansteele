@@ -9,7 +9,7 @@ class BlogPostList extends Component {
         return(
             this.props.filteredPosts.map((p => {
                 return (
-                    <tr key={p.id}>
+                    <tr key={p.id} data-filter='active'>
                         <td>{p.date}</td>
                         <td> 
                             <Link to={'/blog/' + p.id}>{p.title}</Link>

@@ -20,15 +20,18 @@ class SearchBox extends Component {
         return(
             <div className="searchbox">
                 <div className='filter-by-tag-button'>
+                    {/*}
                     <button onClick={this.toggleDropdownList}>
                         <span>{this.props.tagSelected}</span>
                         <OpenDropdownIcon className='invertable-icon' />
                     </button>
+                    
                     <div className='tag-filter-options-list-container popover-canvas-with-arrow'>
                         <ul className='tag-filter-options-list'>
                             <SearchBoxTagFilterListElement tagSelected={this.props.tagSelected} tags={this.props.tags} />
                         </ul>
                     </div>
+                    */}
                 </div>
                 <div className='inputbox-container'>
                     <input

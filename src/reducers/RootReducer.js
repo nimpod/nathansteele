@@ -667,7 +667,7 @@ const initState = {
             date: "14 Oct 2020",
             title: "Hematite Stalactite",
             content: "blah",
-            tags: ["Rocks-and-minerals"]
+            tags: ["RocksAndMinerals"]
         },
         {
             id: "19",
@@ -702,14 +702,14 @@ const initState = {
             date: "16 Jan 2022",
             title: "Johannes Kepler",
             content: "blah",
-            tags: ["Interesting-people", "Astronomy"]
+            tags: ["InterestingPeople", "Astronomy"]
         },
         {
             id: "24",
             date: "16 Jan 2022",
             title: "Samuel Pepys",
             content: "blah",
-            tags: ["Interesting-people"]
+            tags: ["InterestingPeople"]
         },
     ],
 

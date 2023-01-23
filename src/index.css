@@ -1008,6 +1008,25 @@ table tbody tr:hover {
   color: var(--blog-table-text-hover);
   background-color: var(--blog-table-row-bg-hover);
 }
+table tbody tr[data-filter='invisible'] {
+  display: none;
+}
+.tag {
+  transition: all .2s ease;
+}
+.tag span::after {
+  content: 'x';
+  visibility: hidden;
+  font-size: 10px;
+  transition: all 0.2s ease;
+  max-width: 0;
+}
+.tag.selectedThisCategory span::after {
+  visibility: visible;
+  margin-left: 0.4rem;
+  opacity: 0.5;
+}
+
 
 @media screen and (max-width: 800px) { 
   table tr a {
@@ -1207,12 +1226,19 @@ div.filter-by-tag-button > button > svg {
   margin-bottom: 2px;
 }
 
+
+
 /* -------------< Dropdown list for available tag categories to filter by >----------------- */
+ul.tag-filter-options-list > li {
+  display: inline-block;
+}
+
+/*
 .tag-filter-options-list-container:not(.active) {
-  display: none;  /* hidden by default */
+  display: none;
 }
 .tag-filter-options-list-container.active {
-  display: block;   /* now displayed */
+  display: block;
   position: absolute;
   margin-top: 46px;
   margin-left: 10px;
@@ -1268,7 +1294,6 @@ ul.tag-filter-options-list li span {
   font-family: PolySans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
 
-/* The tick icon next to tag category in dropdown menu... */
 ul.tag-filter-options-list svg {
   height: 0.95rem;
   width: 0.95rem;
@@ -1276,13 +1301,13 @@ ul.tag-filter-options-list svg {
   margin-right: 10px;
 }
 
-/* dont show tick for non-selected category... */
 ul.tag-filter-options-list li:not(.selected) svg {
   opacity: 0;
 }
 ul.tag-filter-options-list li.selected svg {
   opacity: 1;
 }
+*/
 
 
 /* #endregion */
