@@ -25,7 +25,8 @@ class Blog extends Component {
         this.state = {
             filteredPostsState: null,
             tagCategories: null,
-            tagCategoryDefault: "All tags",
+            tagCategoryDefault: "AllTags",
+            tagCategorySelected: "AllTags",
             tagCategoriesSelected: new Set(),
             searchPost: '',
             searchBoxContainsText: false,
@@ -60,7 +61,7 @@ class Blog extends Component {
         const uniqueTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
         
         // add default tag...
-        //uniqueTags.add(this.state.tagCategoryDefault);
+        uniqueTags.add(this.state.tagCategoryDefault);
 
         // store each tag category once...
         this.props.posts.map((p => {
@@ -196,7 +197,7 @@ class Blog extends Component {
      * Stuff to do with colour of searchbox...
      * @param {Event} e 
      */
-    handleSearchBoxColours = (e) => {
+    handleSearchBoxColours() {
         // access .posts-container
         var postsContainer = document.querySelector('.posts-container');
         if (postsContainer !== null) {
@@ -226,43 +227,162 @@ class Blog extends Component {
         document.querySelector('.filter-by-tag-button > button').classList.toggle('active');
     }
 
+    /**
+     * Helper function: make all table rows visible
+     * @param {*} tableRows 
+     */
+    showAllTableRows(tableRows) {
+        for (let i = 0; i < this.props.posts.length; i++) {
+            let tr = tableRows[i];
+            if (tr !== undefined) {
+                tr.setAttribute('data-filter', 'visible');
+            }
+        }
+    }
 
     /**
-     * User clicked tag with intention of filtering blog posts for that particular tag...
+     * Helper function: toggle the selected tag
+     * @param {*} selectedTag 
+     */
+    toggleSelectedTag(selectedTag) {
+        if (selectedTag.classList.contains('selectedThisCategory')) {
+            selectedTag.classList.remove('selectedThisCategory')
+        } else {
+            selectedTag.classList.add('selectedThisCategory')
+        }
+    }
+
+    /**
+     * Helper function: either make a table row visible or invisible
+     * @param {*} selectedTag 
+     * @param {*} tr 
+     */
+    toggleTableRow(selectedTag, tr) {
+        if (selectedTag.classList.contains('selectedThisCategory')) {
+            tr.setAttribute('data-filter', 'invisible')
+        } else {
+            tr.setAttribute('data-filter', 'visible')
+        }
+    }
+
+    /**
+     * Helper function: make a particular table row visible
+     * @param {*} tr 
+     */
+    showTableRow(tr) {
+        tr.setAttribute('data-filter', 'visible');
+    }
+
+    /**
+     * Helper function: disable all the filter buttons
+     * @param {*} tagCategoryFilterButtons 
+     */
+    disableAllFilterBtns(tagCategoryFilterButtons) {
+        tagCategoryFilterButtons.forEach(function(btn) {
+            btn.classList.remove('selectedThisCategory');
+        })
+    }
+
+    /**
+     * Adjust paddingLeft property on inputbox text length
+     * TODO: make this less shit!
+     * @param {*} selectedTagText 
+     */
+    adjustPaddingOnInputboxText(selectedTagText) {
+        let inputbox = document.querySelector('.posts-container input');
+        let len = selectedTagText.length;
+        console.log(len);
+        let newPadding = 0;
+
+        if (len >= 0 && len <= 3) {
+            newPadding = len * 1.5;
+        } else if (len >= 4 && len <= 5) {
+            newPadding = len * 1.4;
+        } else if (len >= 6 && len <= 8) {
+            newPadding = len * 1.25;
+        } else if (len >= 9 && len <= 11) {
+            newPadding = len * 1.05;
+        } else if (len >= 12 && len <= 15) {
+            newPadding = len * 1.0;
+        } else if (len >= 16 && len <= 18) {
+            newPadding = len * 0.9;
+        } else {
+            newPadding = len * 0.6;
+        }
+        inputbox.style.paddingLeft = newPadding + 'rem';
+    }
+
+
+    /**
+     * OnClick handler for filter button
+     * This function is called when user clicks tag, with the intention of filtering blog posts
      * @param {*} e 
      */
     clickedTagFilter = (e) => {
+        // get list of rows in blog post table
+        let tableRows = document.querySelector('.posts-container table tbody').childNodes;
+        
+        // get list of tag category filter buttons
+        let tagCategoryFilterButtons = document.querySelector('.tag-filter-options-list').childNodes;
+
         // find tag category the user selected...
         let selectedTag = e.target.parentElement.parentElement;
-        let selectedTagCategory = selectedTag.classList[1].split('-')[3];
-        console.log('You want to filter blog posts by ' + selectedTagCategory);
+        let selectedTagText = selectedTag.classList[1].split('-')[3];
+
+        // remove .active class from all tag categories...
+        this.disableAllFilterBtns(tagCategoryFilterButtons);
 
         // toggle .active class on the tag category selected...
-        selectedTag.classList.contains('selectedThisCategory') ? selectedTag.classList.remove('selectedThisCategory') : selectedTag.classList.add('selectedThisCategory');
+        this.toggleSelectedTag(selectedTag);
+        
+        // base case tag category...
+        if (selectedTagText.toUpperCase() == this.state.tagCategoryDefault.toUpperCase()) {
+            // show all tr's because user choose 'AllTags'
+            this.showAllTableRows(tableRows);
+            
+            // update state
+            this.setState({tagCategorySelected: this.state.tagCategoryDefault});
 
-        // get list of rows in blog post table... Add the .visible class to all rows...
-        let tablerows = document.querySelector('.posts-container table tbody').childNodes;
-        for (let i = 0; i < this.props.posts.length; i++) {
-            let tablerow = tablerows[i];
-            tablerow.setAttribute('data-filter', 'visible');
+            // adjust padding on inputbox text
+            this.adjustPaddingOnInputboxText(selectedTagText);
+
+            return;
         }
 
-        // Do the filtering (iterate over blog posts via props...)
+        // update state
+        this.setState({tagCategorySelected: selectedTagText});
+
+        // adjust padding on inputbox text
+        this.adjustPaddingOnInputboxText(selectedTagText);
+
+        // do the filtering (iterate over blog posts via props...)
         for (let i = 0; i < this.props.posts.length; i++) {
-            let tablerow = tablerows[i];
+            let tr = tableRows[i];
             let tagsInPost = this.props.posts[i]['tags'];
 
-            // (iterate over list of tags per blog post...)
-            for (let j = 0; j < tagsInPost.length; j++) {
-                if (tagsInPost[j] == selectedTagCategory) {
-                    // match, make row visible
-                    break;
-                } else {
-                    // no match, make row invisible
-                    selectedTag.classList.contains('selectedThisCategory') ? tablerow.setAttribute('data-filter', 'invisible') : tablerow.setAttribute('data-filter', 'visible');
+            if (tr !== undefined) {
+                // (iterate over list of tags per blog post...)
+                for (let j = 0; j < tagsInPost.length; j++) {
+                    if (tagsInPost[j] == selectedTagText) {
+                        // match, make row visible
+                        this.showTableRow(tr);
+                        break;
+                    } else {
+                        // no match, make row invisible
+                        this.toggleTableRow(selectedTag, tr);
+                    }
                 }
             }
         }
+    }
+
+    /**
+     * ComponentDidMount function...
+     */
+    componentDidMount() {
+        // set the 'AllTags' filter button as default filter...
+        let tagCategoryFilterButtons = document.querySelector('.tag-filter-options-list').childNodes;
+        tagCategoryFilterButtons[0].classList.add('selectedThisCategory');
     }
 
     /**
@@ -293,22 +413,15 @@ class Blog extends Component {
                     <div className="posts-container">
                         <div className="controls" onClick={this.handleSearchBoxClick}>
                             <SearchBox 
-                                tagSelected={this.state.tagCategoryDefault}
+                                tagSelected={this.state.tagCategorySelected}
                                 tags={uniqueTagCategories}
                                 handleSearchBoxInput={this.handleSearchBoxInput}
+                                clickedTagFilter={this.clickedTagFilter}
                                 placeholderText="search..."
                             />
-                            <ul className='tag-filter-options-list'>
-                                <SearchBoxTagFilterListElement
-                                    handleTagFilter={this.clickedTagFilter}
-                                    tagSelected={this.state.tagCategoryDefault}
-                                    tags={uniqueTagCategories}
-                                />
-                            </ul>
                         </div>
                         <table>
                             <tbody>
-                                {/*<DataTable data={filteredPosts} />*/}
                                 <BlogPostList 
                                     filteredPosts={filteredPosts} 
                                     handleTagFilter={this.handleTagFilter}
