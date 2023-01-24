@@ -264,10 +264,10 @@
   
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(45, 51, 58);
-  --blog-table-border: rgba(255, 255, 255, 0.118);
+  --blog-table-border: rgba(178, 175, 175, 0.238);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
-  --blog-table-row-bg-hover: var(--page-wrapper-bg);
+  --blog-table-row-bg-hover: var(--btn-hover-bg-color);
   --blog-table-tag-bg: rgb(46, 45, 45);
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
@@ -996,6 +996,8 @@ table {
   transition: 300ms all;
   width: 100%;
   color: var(--blog-table-text);
+  border-collapse: separate;
+  border-spacing: 1px;
 }
 
 /* Styles for thead... */
@@ -1011,14 +1013,33 @@ table thead tr {
 table tbody tr {
   max-height: 200px;
   line-height: 1.4;
+  border-radius: 10px;
 }
 table tbody tr:hover {
   color: var(--blog-table-text-hover);
   background-color: var(--blog-table-row-bg-hover);
 }
+table tbody tr:hover span.blogs-tr-title {
+  text-decoration: underline;
+}
 table tbody tr[data-filter='invisible'] {
   display: none;
 }
+
+td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+/* */
+table tbody td span.blogs-tr-title,
+table tbody td span.blogs-tr-date {
+  font-size: 0.9rem;
+}
+
+
 .tag {
   transition: all .2s ease;
 }
@@ -1036,18 +1057,30 @@ table tbody tr[data-filter='invisible'] {
 }
 
 
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 800px) {
+  table tr td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
   table tr a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  table tr span.blogs-tr-title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 200px;
+    max-width: 10px;
+  }
+
+  table tr span.blogs-tr-date {
+    
   }
 }
 
 /* Individual table cell... */
 table td {
-  padding: 0.25rem 0.0rem;
+  padding: 0.35rem 0.7rem;
   border-bottom: 1px dashed var(--blog-table-border);
 }
 
@@ -1999,7 +2032,7 @@ ul.messiahs-handbook p.quote-person {
     margin-top: 3px;
   }
   .controls .filter-by-tag-button span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .popover-canvas-with-arrow::after {
     margin-left: -20px;
@@ -2047,9 +2080,10 @@ ul.messiahs-handbook p.quote-person {
 @media only screen and (max-width: 1000px)  { table { font-size: 0.8rem;  } }
 @media only screen and (max-width: 700px) { table tr { line-height: 0.9; } }
 @media only screen and (max-width: 700px) { table tr td { font-size: 0.6rem; } }
-@media only screen and (max-width: 700px) { table .tag span { font-size: 0.50rem; } }
-@media only screen and (max-width: 700px) { table td:nth-child(1) { min-width: 80px; } }
+@media only screen and (max-width: 700px) { table .tag span { font-size: 0.55rem !important; } }
+@media only screen and (max-width: 700px) { table td:nth-child(1) { min-width: 100px; } }
 @media only screen and (max-width: 700px) { table td { padding: 0.5rem 0; } }
+@media only screen and (max-width: 700px) { table tr span { font-size: 0.65rem !important; } }
 
 /* remove padding from the #about section as screen gets smaller */
 @media screen and (max-width: 1125px) { #about{ padding: 50px 170px 0px 170px; } }

@@ -10,22 +10,26 @@ class BlogPostList extends Component {
             this.props.filteredPosts.map((p => {
                 return (
                     <tr key={p.id} data-filter='visible'>
-                        <td>{p.date}</td>
-                        <td> 
-                            <Link to={'/blog/' + p.id}>{p.title}</Link>
-                            <div className="tags">
-                                {p.tags.map(function(tag, index) {
-                                    if (tag) {
-                                        //setOfTags.add(tag.trim()); // I used the .trim() function here to remove whitespace, otherwise the set doesn't detect a duplicate tag
-                                        return <div className="tag" key={index} onClick={copyOfThis.props.handleTagFilter}>
-                                            <span className={tag}>
-                                                { tag }
-                                            </span> 
-                                        </div>
-                                    }
-                                })}
-                            </div>
-                        </td>
+                        <Link to={'/blog/' + p.id}>
+                            <td>
+                                <span className='blogs-tr-date'>{p.date}</span>
+                            </td>
+                            <td> 
+                                <span className='blogs-tr-title'>{p.title}</span>
+                                <div className="tags">
+                                    {p.tags.map(function(tag, index) {
+                                        if (tag) {
+                                            //setOfTags.add(tag.trim()); // I used the .trim() function here to remove whitespace, otherwise the set doesn't detect a duplicate tag
+                                            return <div className="tag" key={index} onClick={copyOfThis.props.handleTagFilter}>
+                                                <span className={tag}>
+                                                    { tag }
+                                                </span> 
+                                            </div>
+                                        }
+                                    })}
+                                </div>
+                            </td>
+                        </Link>
                     </tr>
                 )
             }))
