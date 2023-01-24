@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowLeft } from "../../icons/arrowLeft.svg";
+import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";
 import { ReactComponent as Calendar } from "../../icons/calendar.svg";
 import { getRandomRGBA } from '../../js/helpers.js';
 
@@ -28,6 +29,26 @@ class BlogPost extends Component {
                 items[i].style.backgroundColor =  getRandomRGBA(0.05);
             }
         }
+
+
+        let backToTopBtn = document.getElementsByClassName("back-to-top-of-post")[0];
+        let lastScrollTop = 0;
+        if (backToTopBtn !== null) {
+            window.addEventListener('scroll', function(e) {
+                var st = window.pageYOffset || document.documentElement.scrollTop;
+                // console.log('DEBUGGING: ', st, lastScrollTop);
+                if (st > lastScrollTop) {
+                    backToTopBtn.classList.add('active');
+                    // backToTopBtn.classList.add('slideOutDown');
+                    backToTopBtn.classList.remove('slideInUp');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                    // backToTopBtn.classList.remove('slideOutDown');
+                    backToTopBtn.classList.add('slideInUp');
+                }
+                lastScrollTop = st <= 0 ? 0 : st;
+              })
+        }
     }
 
     /**
@@ -40,7 +61,11 @@ class BlogPost extends Component {
         return (
             <div className="page-wrapper blog-post">
                 <div className="section-inner">
-                    <div className="blog-post-info">
+                    <div className="blog-post-info" id={'BlogPost' + this.props.post.id}>
+                        <Link to={'#BlogPost' + this.props.post.id} className="back-to-top-of-post animated faster slideInUp" title='Click to go back to top of blog post'>
+                            <ArrowUp className='invertable-icon' />
+                            <span>Back to top</span>
+                        </Link>
                         <Link to='/blog' className="back-to-previous-page" title="Back to blog">
                             <ArrowLeft className="invertable-icon" />
                         </Link>

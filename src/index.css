@@ -96,13 +96,17 @@
   --page-text-color: rgba(0, 0, 0, 0.755);
 
   --topnav-bg-color: rgba(253, 252, 251, 0.729);
-  --topnav-button-bg-color: rgb(225, 231, 238);
-  --topnav-button-bg-color-hover: rgb(204, 205, 213);
-  --topnav-button-bg-color-active: rgb(90, 89, 119);
-  --topnav-button-text-color: rgb(4, 3, 3);
-  --topnav-button-text-color-hover: rgb(0, 0, 0);
-  --topnav-button-text-color-active: rgb(255, 255, 255); 
+  --topnav-btn-bg-color: rgb(225, 231, 238);
+  --topnav-btn-bg-color-hover: rgb(204, 205, 213);
+  --topnav-btn-bg-color-active: rgb(90, 89, 119);
+  --topnav-btn-text-color: rgb(4, 3, 3);
+  --topnav-btn-text-color-hover: rgb(0, 0, 0);
+  --topnav-btn-text-color-active: rgb(255, 255, 255); 
   --topnav-collapsed-shadow-color: rgba(0, 0, 0, 0.331);
+  --topnav-collapsed-bg-color: rgb(245, 245, 245);
+  --topnav-collapsed-btn-bg-color: rgb(245, 245, 245);
+  --topnav-collapsed-btn-bg-color-active: rgb(199, 199, 200);
+  --topnav-collapsed-border-color: rgb(245, 245, 245);
   --button-border-color-onclick: rgb(126, 120, 120);
 
   --topnav-logo-bg-color: rgb(233, 233, 234);
@@ -110,8 +114,8 @@
   --logo-path-color-onclick: rgba(5, 120, 72, 0.897);
   --logo-stroke-color: rgb(17, 15, 15);
   --logo-stroke-color-hover: rgb(255, 255, 255);
-  --logo-box-shadow-color: rgba(111, 109, 121, 0.401);
-  --logo-border-color: rgba(188, 188, 192, 0.934);
+  --logo-box-shadow-color: rgba(42, 36, 74, 0.238);
+  --logo-border-color: rgba(231, 231, 236, 0.934);
   --logo-inversion-number: 1;
 
   --sidenav-bg-color: rgba(253, 252, 251, 0);
@@ -152,6 +156,11 @@
   
   --general-box-shadow-color-1: rgba(65, 69, 73, 0.3);
   --general-box-shadow-color-2: rgba(65, 69, 73, 0.15);
+  --general-box-shadow-color-3: rgba(24, 24, 24, 0.886);
+  --general-box-shadow-color-4: rgba(0,0,0,.12);
+
+  --another-btn-bg-color: rgb(214, 214, 214);
+  --another-btn-bg-color-hover: rgb(180, 182, 185);
 
   --blog-post-title-text: rgb(33, 33, 33);
   --blog-post-subTitle-text-color: rgb(38, 38, 38);
@@ -229,14 +238,19 @@
   --page-text-color: rgba(255, 255, 255, 0.878);
 
   --topnav-bg-color: rgba(0, 0, 0, 0);
-  --topnav-button-bg-color: rgb(40, 38, 38);
-  --topnav-button-bg-color-hover: rgb(50, 47, 47);
-  --topnav-button-bg-color-active: rgb(83, 80, 80);
-  --topnav-button-text-color: rgb(163, 163, 163);
-  --topnav-button-text-color-hover: rgb(255, 255, 255);
-  --topnav-button-text-color-active: rgb(0, 255, 208);
-  --button-border-color-onclick: rgb(153, 149, 149);
+  --topnav-btn-bg-color: rgb(40, 38, 38);
+  --topnav-btn-bg-color-hover: rgb(41, 40, 44);
+  --topnav-btn-bg-color-active: rgb(83, 80, 80);
+  --topnav-btn-text-color: rgb(163, 163, 163);
+  --topnav-btn-text-color-hover: rgb(255, 255, 255);
+  --topnav-btn-text-color-active: rgb(0, 255, 208);
   --topnav-logo-bg-color: rgb(37, 37, 39);
+  --topnav-collapsed-bg-color: rgb(12, 12, 12);
+  --topnav-collapsed-btn-bg-color: rgb(12, 12, 12);
+  --topnav-collapsed-btn-bg-color-focus: rgb(54, 54, 56);
+  --topnav-collapsed-btn-bg-color-active: rgb(78, 78, 82);
+  --topnav-collapsed-border-color: rgba(50, 48, 57, 0.941);
+  --button-border-color-onclick: rgb(153, 149, 149);
 
   --logo-path-color: rgb(115, 220, 140);
   --logo-path-color-onclick: rgba(236, 255, 230, 0.897);
@@ -285,6 +299,11 @@
 
   --general-box-shadow-color-1: rgba(0, 0, 0, 0.415);
   --general-box-shadow-color-2: rgba(1, 1, 1, 0.479);
+  --general-box-shadow-color-3: rgba(1, 1, 5, 0.742);
+  --general-box-shadow-color-4: rgba(0,0,0,.12);
+
+  --another-btn-bg-color: rgb(75, 75, 80);
+  --another-btn-bg-color-hover: rgb(96, 98, 101);
 
   --blog-post-title-text: rgb(199, 199, 199);
   --blog-post-subTitle-text-color: rgb(209, 209, 209);
@@ -346,6 +365,7 @@
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */
 }
 /* #endregion */
+
 
 
 /* #region ----------------------------------<1: SETUP>---------------------------------- */
@@ -498,30 +518,12 @@ Proposed structure of top navbar
   /* background-color: var(--topnav-bg-color); */
 }
 
-@media screen and (max-width: 700px) { 
-  .website-links a:hover { cursor: default; }
-  .website-links a span:hover { cursor: pointer; }
-
-  #nav-top > .nav-right {
-    position: absolute;
-    right: 78px;
-    top: 15px;
-  }
-
-  #nav-top .website-links a {
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 340px) { #nav-top { font-size: 0.9rem; }}
-@media screen and (max-width: 290px) { #nav-top { font-size: 0.7rem; }}
-
 /* target every link in the entire #nav */
 #nav-top a {
-  color: var(--topnav-button-text-color) !important;
+  color: var(--topnav-btn-text-color) !important;
   text-decoration: none !important;
   padding: 0.375rem;
-  background-color: var(--topnav-button-bg-color);
+  background-color: var(--topnav-btn-bg-color);
   border-radius: 0.5rem;
   /*
   display: inline-block;
@@ -529,12 +531,12 @@ Proposed structure of top navbar
   */
 }
 #nav-top a:hover {
-  background-color: var(--topnav-button-bg-color-hover);
-  color: var(--topnav-button-text-color-hover) !important;
+  background-color: var(--topnav-btn-bg-color-hover);
+  color: var(--topnav-btn-text-color-hover) !important;
 }
 #nav-top a.active {
-  color: var(--topnav-button-text-color-active) !important;
-  background-color: var(--topnav-button-bg-color-active);
+  color: var(--topnav-btn-text-color-active) !important;
+  background-color: var(--topnav-btn-bg-color-active);
   opacity: 1;
 }
 
@@ -546,6 +548,9 @@ Proposed structure of top navbar
 #nav-top .website-links a {
   margin-left: 0.8em;
   opacity: 1;
+}
+#nav-top .website-links a > span.mobile-view-title {
+  display: none;
 }
 
 /* target the div container .website-logo-container */
@@ -646,11 +651,11 @@ a.website-logo {
   border-radius: 0.75rem;
   background-color: var(--topnav-logo-bg-color);
   border: 2px solid var(--logo-border-color);
-  box-shadow: 0px 4px 8px var(--logo-box-shadow-color);
+  box-shadow: 0px 2px 4px var(--logo-box-shadow-color);
 }
 a.website-logo:hover {
   transition: background-color 350ms ease;
-  background-color: var(--topnav-button-bg-color-hover);
+  background-color: var(--topnav-btn-bg-color-hover);
 }
 
 svg.logo {
@@ -994,7 +999,7 @@ table {
   border-collapse: collapse;
   font-size: 0.85rem;
   transition: 300ms all;
-  width: 100%;
+  width: 93%;
   color: var(--blog-table-text);
   border-collapse: separate;
   border-spacing: 1px;
@@ -1013,7 +1018,6 @@ table thead tr {
 table tbody tr {
   max-height: 200px;
   line-height: 1.4;
-  border-radius: 10px;
 }
 table tbody tr:hover {
   color: var(--blog-table-text-hover);
@@ -1026,17 +1030,11 @@ table tbody tr[data-filter='invisible'] {
   display: none;
 }
 
-td:first-child {
-  border-radius: 10px 0 0 10px;
-}
-td:last-child {
-  border-radius: 0 10px 10px 0;
-}
-
 /* */
 table tbody td span.blogs-tr-title,
 table tbody td span.blogs-tr-date {
   font-size: 0.9rem;
+  color: var(--page-text-color);
 }
 
 
@@ -1071,10 +1069,6 @@ table tbody td span.blogs-tr-date {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 10px;
-  }
-
-  table tr span.blogs-tr-date {
-    
   }
 }
 
@@ -1414,10 +1408,11 @@ div.blog-post
   /* the tags for a blog post */
   display: inline-block;
 }
+
+/* button to go back to list of blogs */
 .blog-post-info .back-to-previous-page {
-  /* button to go back to list of blogs */
   display: inline-block;
-  position: absolute;
+  position: fixed;
   margin-left: -60px;
   margin-top: 7px;
   color: inherit;
@@ -1439,6 +1434,49 @@ div.blog-post
 }
 .back-to-previous-page svg.invertable-icon:active {
   background-color: var(--btn-circular-active-bg-color);
+}
+
+/* Button to back to top of blog post */
+.back-to-top-of-post {
+  position: fixed;
+  top: 20px;
+  margin: 0 40%;
+  background-color: var(--another-btn-bg-color) !important;
+  opacity: 1 !important;
+  padding: 0 0.3rem 0.25rem 0.3rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px -1px var(--general-box-shadow-color-1), 0 5px 8px 0 var(--general-box-shadow-color-2), 0 1px 14px 0 var(--general-box-shadow-color-4);
+  border: 1px solid var(--topnav-collapsed-border-color);
+  animation-name: BackToTopButtonEmergesAsUserScrolls;
+  animation-duration: 5s;
+}
+.back-to-top-of-post:not(.active) {
+  display: none;
+}
+.back-to-top-of-post.active {
+  display: block;
+}
+.back-to-top-of-post:hover {
+  transition: all 0.4s ease;
+  background-color: var(--another-btn-bg-color-hover) !important;
+}
+a:hover span {
+  text-decoration: none !important;
+}
+.back-to-top-of-post > svg.invertable-icon {
+  width: 21px;
+  height: 21px;
+  margin-left: 5px;
+}
+.back-to-top-of-post > span {
+  font-size: 13px;
+  margin: 0 10px;
+  margin-top: 2px;
+  color: var(--page-text-color);
+}
+@keyframes BackToTopButtonEmergesAsUserScrolls {
+  0%   { left: 0px;  top: 0px;}
+  100% { left: 0px;  top: 30px;}
 }
 
 /*
@@ -1918,7 +1956,7 @@ div.card-percent:hover::after {
   color: inherit;
 }
 .notes-page .sidebar ul a.active {
-  color: var(--topnav-button-text-color-active) !important;
+  color: var(--topnav-btn-text-color-active) !important;
 }
 
 .notes-page .subsection {
@@ -1997,8 +2035,25 @@ ul.messiahs-handbook p.quote-person {
 @media screen and (max-width: 650px) { .smooth-scroll-btn { text-align: center; } }
 @media screen and (max-width: 600px) { #about, .projects-header { padding: 20px 25px 0px 25px !important; }  #about p { margin-left: 15px; } }
 
+@media screen and (max-width: 340px) { #nav-top { font-size: 0.9rem; }}
+@media screen and (max-width: 290px) { #nav-top { font-size: 0.7rem; }}
+
 /* anything that should be hidden in mobile goes here... */
 @media screen and (max-width: 670px) {
+  /*
+  .website-links a:hover { cursor: default; }
+  .website-links a span:hover { cursor: pointer; }
+
+  #nav-top > .nav-right {
+    position: absolute;
+    right: 78px;
+    top: 15px;
+  }
+
+  #nav-top .website-links a {
+    margin-left: 0;
+  }
+
   #nav-top.active .website-links {
     display: block !important;
   }
@@ -2021,9 +2076,73 @@ ul.messiahs-handbook p.quote-person {
   }
   .hamburger-menu {
     display: inline-block !important;
+  }*/
+
+  #nav-top {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--topnav-collapsed-bg-color);
+    box-shadow: 0 4px 8px var(--general-box-shadow-color-3);
+    border-radius: 30px;
+    padding: 0.35rem 0.7rem 0.35rem 0rem;
+    border: 2px solid var(--topnav-collapsed-border-color);
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    max-width: 80%;
+    /*
+    width: fit-content;
+    */
+    display: flex;
+    justify-content: center;
+    /*
+    margin: 1rem 0;
+    */
   }
-  .hamburger-menu > .inline-svg > svg {
+  #nav-top > .nav-left {
+
   }
+  #nav-top > .nav-right {
+    margin-left: 0;
+  }
+  #nav-top > .nav-left > .website-links {
+    bottom: 0;
+    margin: 0 auto;
+    padding: 0 0rem;
+  }
+  #nav-top .website-links > a {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--topnav-collapsed-btn-bg-color);
+    font-size: 1.0rem;
+    margin-left: 0.3em;
+  }
+  #nav-top .website-links > a.active {
+    background-color: var(--topnav-collapsed-btn-bg-color-active) !important;
+  }
+  #nav-top .website-links > a:hover {
+    background-color: var(--topnav-btn-bg-color-hover);
+  }
+  #nav-top .website-links > a:focus {
+    background-color: var(--topnav-collapsed-btn-bg-color-focus);
+  }
+  #nav-top .website-links > a > span {
+    display: none;
+  }
+  #nav-top .website-links > a > span.mobile-view-title {
+    display: block;
+  }
+  .website-logo-container {
+    z-index: 1000;
+  }
+  
+  .back-to-top-of-post {
+    z-index: 1000;
+    width: 110px;
+  }
+  .back-to-top-of-post span {
+    font-size: 10px;
+  }
+  
 
   /* font size of searchbox */
   .controls > div.searchbox input {
@@ -2046,6 +2165,10 @@ ul.messiahs-handbook p.quote-person {
 
   div.filter-by-tag-button > button > svg {
     margin-bottom: 0px;
+  }
+
+  .posts-container table {
+    width: 300px;
   }
 }
 

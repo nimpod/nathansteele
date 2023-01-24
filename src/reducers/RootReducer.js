@@ -775,6 +775,7 @@ const initState = {
                 "https://i.pinimg.com/originals/c3/3f/05/c33f051a48f54f51e3d63527e4653665.png"
             ],
             contentKeyWords: ["atmospheric", "mysterious", "majestic", "ambitious", "unusual", "creative", "minimal", "cosmic", "vast"],
+            contentBlurb: "Describe the film in one sentence...",
             contentReview: "\
                 <p>There are so many layers to this wonderful thoughtful piece of art - it's so atmospheric, mysterious, sad, beautiful, ambitious, unusual, creative, minimal, cosmic, vast, and its all centered around such a simple idea but with immaculate execution.</p> \
                 <p>The soundtrack is just beautiful. Quiet and ambient at times, heartbreaking at other times, and explosive with energy other times.</p> \
