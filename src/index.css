@@ -2132,8 +2132,9 @@ ul.messiahs-handbook p.quote-person {
     padding: 0.35rem 0.7rem 0.35rem 0rem;
     border: 2px solid var(--topnav-collapsed-border-color);
     margin-bottom: 1rem;
-    margin-left: 3rem;
-    max-width: 80%;
+    margin-left: 1rem;
+    max-width: 90%;
+    min-width: 400px;
     /*
     width: fit-content;
     */

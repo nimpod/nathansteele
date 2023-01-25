@@ -49,18 +49,19 @@ export default class App extends Component {
                   <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 
                   <Switch>
-                      <Route path='/' exact />
-                      <Route path='/aboutme' component={AboutMe} />
-                      <Route path='/university' component={University} exact />
-                      <Route path='/portfolio' component={Portfolio} exact />
-                      <Route path='/blog' component={Blog} exact />
-                      <Route path='/notes' component={Notes} exact />
+                      <Route path='/' component={AboutMe} exact />
+                      <Route path='/aboutme' component={AboutMe} exact />
+                      <Route path='/university' component={University} />
+                      <Route path='/portfolio' component={Portfolio} />
+                      <Route path='/blog' component={Blog} />
+                      <Route path='/notes' component={Notes} />
                       <Route path='/blog/:post_id' component={BlogPost} />
                       <Route path='/films' component={Films} />
                       <Route path='/music' component={Music} />
                       <Route path='/university/:assignment_id' component={UniversityAssignment} />
                       <Route path='/notes/casio_basic' component={CasioBasic} />
                   </Switch>
+                  
                   <script src="./js/particles.min.js"></script>
                 </div>
             </HashRouter>

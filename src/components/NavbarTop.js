@@ -123,33 +123,33 @@ class NavbarTop extends Component {
             <header id="nav-top" className="animated faster slideInUp">
                 <div className="nav-left">
                     <nav className="website-links">
-                        <NavLink to="/aboutme" title='About Me' className="navlink mytooltip">
+                        <NavLink to="/aboutme" title='About Me' className="navlink">
                             <span>About me</span>
-                            <span className='mobile-view-title'>▘</span>
+                            <span className='mobile-view-title'>About</span>
                         </NavLink>
-                        <NavLink to="/films" title='Films' className="navlink mytooltip">
+                        <NavLink to="/films" title='Films' className="navlink">
                             <span>Films</span>
-                            <span className='mobile-view-title'>▙</span>
+                            <span className='mobile-view-title'>Films</span>
                         </NavLink>
-                        <NavLink to="/music" title='Music' className="navlink mytooltip">
+                        <NavLink to="/music" title='Music' className="navlink">
                             <span>Music</span>
-                            <span className='mobile-view-title'>▚</span>
+                            <span className='mobile-view-title'>Music</span>
                         </NavLink>
-                        <NavLink to="/blog" title='Blog' className="navlink mytooltip">
+                        <NavLink to="/blog" title='Blog' className="navlink">
                             <span>Blog</span>
-                            <span className='mobile-view-title'>▜</span>
+                            <span className='mobile-view-title'>Blog</span>
                         </NavLink>
-                        <NavLink to="/university" title='University' className="navlink mytooltip">
+                        <NavLink to="/university" title='University' className="navlink">
                             <span>University</span>
-                            <span className='mobile-view-title'>▝</span>
+                            <span className='mobile-view-title'>Uni</span>
                         </NavLink>
-                        <NavLink to="/portfolio" title='Portfolio' className="navlink mytooltip">
+                        <NavLink to="/portfolio" title='Portfolio' className="navlink">
                             <span>Portfolio</span>
-                            <span className='mobile-view-title'>▞</span>
+                            <span className='mobile-view-title'>Portfolio</span>
                         </NavLink>
-                        <NavLink to="/notes" title='Notes' className="navlink mytooltip">
+                        <NavLink to="/notes" title='Notes' className="navlink">
                             <span>Notes</span>
-                            <span className='mobile-view-title'>▟</span>
+                            <span className='mobile-view-title'>Notes</span>
                         </NavLink>
                     </nav>
                 </div>
