@@ -108,7 +108,7 @@ class NavbarTop extends Component {
 
         // ...
         let navbarSpanTags = document.getElementsByClassName('mobile-view-title');
-        let icons = ['🏠', '📽️', '🎵', '📚', '🏫', '👨‍💻', '📙'];
+        let icons = ['🏠', '📽️', '🎶', '📚', '🏫', '👨‍💻', '📙'];
         // let icons = ['▘', '▙', '▚', '▛', '▜', '▝', '▞'];
         for (let i = 0; i < navbarSpanTags.length; i++) {
             navbarSpanTags[i].innerHTML = icons[i];

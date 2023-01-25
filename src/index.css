@@ -110,7 +110,7 @@
   --topnav-collapsed-btn-bg-color: rgb(245, 245, 245);
   --topnav-collapsed-btn-bg-color-focus: rgb(192, 192, 197);
   --topnav-collapsed-btn-bg-color-active: rgb(144, 144, 158);
-  --topnav-collapsed-border-color: rgb(247, 247, 247);
+  --topnav-collapsed-border-color: rgba(63, 63, 65, 0.7);
   --button-border-color-onclick: rgb(126, 120, 120);
 
   --topnav-logo-bg-color: rgb(233, 233, 234);
@@ -252,7 +252,7 @@
   --topnav-collapsed-bg-color: rgb(12, 12, 12);
   --topnav-collapsed-btn-bg-color: rgb(12, 12, 12);
   --topnav-collapsed-btn-bg-color-focus: rgb(54, 54, 56);
-  --topnav-collapsed-btn-bg-color-active: rgb(78, 78, 82);
+  --topnav-collapsed-btn-bg-color-active: rgb(69, 69, 72);
   --topnav-collapsed-border-color: rgba(50, 48, 57, 0.941);
   --button-border-color-onclick: rgb(153, 149, 149);
 
@@ -1418,13 +1418,15 @@ div.blog-post
   display: inline-block;
 }
 
-.custom-btn-1 {
+.custom-btn-1.active {
   background-color: var(--another-btn-bg-color) !important;
+  box-shadow: 0 3px 5px -1px var(--general-box-shadow-color-1), 0 5px 8px 0 var(--general-box-shadow-color-4), 0 1px 14px 0 var(--general-box-shadow-color-2);
+  border: 1px solid var(--topnav-collapsed-border-color);
+}
+.custom-btn-1 {
   padding: 0 0.3rem 0.25rem 0.3rem;
   opacity: 1 !important;
   border-radius: 10px;
-  box-shadow: 0 3px 5px -1px var(--general-box-shadow-color-1), 0 5px 8px 0 var(--general-box-shadow-color-2), 0 1px 14px 0 var(--general-box-shadow-color-4);
-  border: 1px solid var(--topnav-collapsed-border-color);
   text-decoration: none;
 }
 .custom-btn-1 > span {
@@ -2156,8 +2158,11 @@ ul.messiahs-handbook p.quote-person {
     display: inline-block;
     text-align: center;
     background-color: var(--topnav-collapsed-btn-bg-color);
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     margin-left: 0.3em;
+  }
+  #nav-top .theme-toggle .inline-svg {
+    width: 26px;
   }
   #nav-top .website-links > a.active {
     background-color: var(--topnav-collapsed-btn-bg-color-active) !important;
