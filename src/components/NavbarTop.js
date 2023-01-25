@@ -87,10 +87,9 @@ class NavbarTop extends Component {
      * Component did mount function
      */
     componentDidMount() {
+        // toggle navbar whilst scrolling in mobile view
         let nav = document.getElementById("nav-top");
         let lastScrollTop = 0;
-
-        // ...
         if (nav !== null) {
             window.addEventListener('scroll', function(e) {
                 var st = window.pageYOffset || document.documentElement.scrollTop;
@@ -106,12 +105,31 @@ class NavbarTop extends Component {
               })
         }
 
-        // ...
+        // set navbar item icons when in mobile view...
         let navbarSpanTags = document.getElementsByClassName('mobile-view-title');
         let icons = ['🏠', '📽️', '🎶', '📚', '🏫', '👨‍💻', '📙'];
-        // let icons = ['▘', '▙', '▚', '▛', '▜', '▝', '▞'];
+        ///let icons = ['▘', '▙', '▚', '▛', '▜', '▝', '▞'];
         for (let i = 0; i < navbarSpanTags.length; i++) {
             navbarSpanTags[i].innerHTML = icons[i];
+        }
+
+        // by default set the 'About me' button to be active...
+        let navlinks = document.getElementsByClassName('navlink');
+        console.log(navlinks);
+        navlinks[1].classList.add('active');
+    }
+
+    
+    /**
+     * Onclick event listener for navbar buttons
+     * @param {*} e 
+     */
+    clickedNavbarItem = (e) => {
+        // cheeky way to make navigation look normal again...
+        // removes the .active from the 'About me' button (if its even there), if we are clicking onto a different button...
+        let navlinks = document.getElementsByClassName('navlink');
+        if (navlinks[1].classList.contains('active')) {
+            navlinks[1].classList.remove('active');
         }
     }
 
@@ -127,27 +145,27 @@ class NavbarTop extends Component {
                             <span>About me</span>
                             <span className='mobile-view-title'>About</span>
                         </NavLink>
-                        <NavLink to="/films" title='Films' className="navlink">
+                        <NavLink to="/films" title='Films' className="navlink" onClick={this.clickedNavbarItem}>
                             <span>Films</span>
                             <span className='mobile-view-title'>Films</span>
                         </NavLink>
-                        <NavLink to="/music" title='Music' className="navlink">
+                        <NavLink to="/music" title='Music' className="navlink" onClick={this.clickedNavbarItem}>
                             <span>Music</span>
                             <span className='mobile-view-title'>Music</span>
                         </NavLink>
-                        <NavLink to="/blog" title='Blog' className="navlink">
+                        <NavLink to="/blog" title='Blog' className="navlink" onClick={this.clickedNavbarItem}>
                             <span>Blog</span>
                             <span className='mobile-view-title'>Blog</span>
                         </NavLink>
-                        <NavLink to="/university" title='University' className="navlink">
+                        <NavLink to="/university" title='University' className="navlink" onClick={this.clickedNavbarItem}>
                             <span>University</span>
                             <span className='mobile-view-title'>Uni</span>
                         </NavLink>
-                        <NavLink to="/portfolio" title='Portfolio' className="navlink">
+                        <NavLink to="/portfolio" title='Portfolio' className="navlink" onClick={this.clickedNavbarItem}>
                             <span>Portfolio</span>
                             <span className='mobile-view-title'>Portfolio</span>
                         </NavLink>
-                        <NavLink to="/notes" title='Notes' className="navlink">
+                        <NavLink to="/notes" title='Notes' className="navlink" onClick={this.clickedNavbarItem}>
                             <span>Notes</span>
                             <span className='mobile-view-title'>Notes</span>
                         </NavLink>

@@ -20,8 +20,8 @@
 
 /* particlejs variables */
 :root {
-  --particle-count: 600;
-  --particle-density: 800;
+  --particle-count: 400;
+  --particle-density: 1200;
   --particle-opacity: 0.6;
   --particle-opacity-min: 0.3;
   --particle-size: 1.2;
@@ -1418,12 +1418,11 @@ div.blog-post
   display: inline-block;
 }
 
-.custom-btn-1.active {
+
+.custom-btn-1 {
   background-color: var(--another-btn-bg-color) !important;
   box-shadow: 0 3px 5px -1px var(--general-box-shadow-color-1), 0 5px 8px 0 var(--general-box-shadow-color-4), 0 1px 14px 0 var(--general-box-shadow-color-2);
   border: 1px solid var(--topnav-collapsed-border-color);
-}
-.custom-btn-1 {
   padding: 0 0.3rem 0.25rem 0.3rem;
   opacity: 1 !important;
   border-radius: 10px;

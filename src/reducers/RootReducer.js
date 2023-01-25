@@ -82,7 +82,7 @@ const initState = {
                             this before, and we got some <a href=\"https://www.youtube.com/watch?v=ROJOnOPHFvo\">incredible photos</a> from this final phase of the mission. NASA have also provided us with \
                             <a href=\"https://saturn.jpl.nasa.gov/galleries/raw-images/\">thousands of raw images</a> from Cassini.\
                         </p>\
-                        <p>Due to the spacecraft being <b>low on rocket fuel</b>, NASA decided Cassini must end its mission soon. They decided to send Cassini into Saturn’s atmosphere, destroying the spacecraft in the process. This method was chosen because...\</p> \
+                        <p>Due to the spacecraft being <b>low on rocket fuel</b>, NASA decided Cassini must end its mission soon. They decided to send Cassini into Saturn’s atmosphere, destroying the spacecraft in the process. This method was chosen because...</p> \
                         <ul>\
                             <li>1) It is imperative to ensure protection and prevent biological contamination to any of the moons of Saturn thought to offer potential habitability.</li> \
                             <li>2) It's a unique opportunity to gather data about Saturn's gravity and magnetic fields.</li> \

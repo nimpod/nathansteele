@@ -45,17 +45,22 @@ export default class App extends Component {
                   <Switch>
                       <Route path='/' component={AboutMe} exact />
                       <Route path='/aboutme' component={AboutMe} exact />
-                      <Route path='/portfolio' component={Portfolio} />
-                      <Route path='/blog' component={Blog} />
-                      <Route path='/blog/:post_id' component={BlogPost} />
-                      <Route path='/films' component={Films} />
+                      <Route path='/portfolio' component={Portfolio} exact />
+
+                      <Route path='/blog' component={Blog} exact />
+                      <Route path='/blog/:post_id' component={BlogPost} exact />
+
+                      <Route path='/films' component={Films} exact />
                       <Route path='/films/:film_id' component={FilmReview} />
-                      <Route path='/music' component={Music} />
-                      <Route path='/music/:music_id' component={MusicReview} />
-                      <Route path='/university' component={University} />
-                      <Route path='/university/:assignment_id' component={UniversityAssignment} />
-                      <Route path='/notes' component={Notes} />
-                      <Route path='/notes/casio_basic' component={CasioBasic} />
+
+                      <Route path='/music' component={Music} exact />
+                      <Route path='/music/:album_id' component={MusicReview} />
+
+                      <Route path='/university' component={University} exact />
+                      <Route path='/university/:assignment_id' component={UniversityAssignment} exact />
+                      
+                      <Route path='/notes' component={Notes} exact />
+                      <Route path='/notes/casio_basic' component={CasioBasic} exact />
                   </Switch>
 
                   <script src="./js/particles.min.js"></script>

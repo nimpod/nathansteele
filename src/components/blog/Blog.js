@@ -10,9 +10,6 @@ import { Helpers } from 'react-scroll';
 import { removeDuplicatesFromArray } from '../../js/helpers';
 import SearchBoxTagFilterListElement from './SearchBoxTagFilterListElement';
 
-//
-require('es6-promise');
-
 
 class Blog extends Component {   
 
