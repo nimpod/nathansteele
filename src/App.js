@@ -29,17 +29,7 @@ import Films from './components/films/Films';
 import Music from './components/music/Music';
 
 
-import {Howl} from 'howler';
-
-
 export default class App extends Component {
-  soundPlay = (src) => {
-    const sound = new Howl({
-      src,
-      html5: true
-    })
-    sound.play();
-  }
   render() {
         return (
             <HashRouter>

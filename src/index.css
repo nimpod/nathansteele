@@ -2228,6 +2228,9 @@ ul.messiahs-handbook p.quote-person {
     padding: 1rem 1rem;
     text-align: center;
   }
+  .aboutme-intro h1, .aboutme-intro h2, .aboutme-intro h3, .aboutme-intro h4, .aboutme-intro h5, .aboutme-intro h6, .aboutme-intro p {
+    padding-bottom: 15px;
+  }
   .aboutme-container .social-medias {
     justify-content: center;
     grid-template-columns: repeat(6, 50px);
