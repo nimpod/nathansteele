@@ -28,16 +28,18 @@ import Films from './components/films/Films';
 // Music page
 import Music from './components/music/Music';
 
-// import ParticlesMin from './js/particles.min.js'
-// <script src="js/particles.min.js"></script>
-// <script src='../node_modules/sal.js/dist/sal.js'></script>
-// <script src='./js/smooth-scrolling.js'></script>
-// <script src="./js/particles.min.js"></script>
-// <script src="./js/app.js"></script>
+
+import {Howl} from 'howler';
 
 
 export default class App extends Component {
-
+  soundPlay = (src) => {
+    const sound = new Howl({
+      src,
+      html5: true
+    })
+    sound.play();
+  }
   render() {
         return (
             <HashRouter>
@@ -61,7 +63,7 @@ export default class App extends Component {
                       <Route path='/university/:assignment_id' component={UniversityAssignment} />
                       <Route path='/notes/casio_basic' component={CasioBasic} />
                   </Switch>
-                  
+
                   <script src="./js/particles.min.js"></script>
                 </div>
             </HashRouter>
