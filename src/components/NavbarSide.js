@@ -21,7 +21,7 @@ class NavbarSide extends Component {
         return (
             <aside id="nav-side">
                 <div className="website-logo-container">                            
-                    <NavLink to="/" className="navlink website-logo">
+                    <NavLink to="/aboutme" className="navlink website-logo">
                         <Logo className="logo" />
                     </NavLink>
                 </div>

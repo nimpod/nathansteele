@@ -20,21 +20,24 @@
 
 /* particlejs variables */
 :root {
-  --particle-count: 88;
-  --particle-density: 700;
-  --particle-opacity: 0.25;
-  --particle-size: 6.2;
-  --particle-speed: 1.95;
+  --particle-count: 600;
+  --particle-density: 800;
+  --particle-opacity: 0.6;
+  --particle-opacity-min: 0.3;
+  --particle-size: 1.2;
+  --particle-speed: 0.5;
   --line-count: 110;
-  --line-opacity: 0.35;
+  --line-opacity: 0.0;
   --line-width: 0.90;
-  --linked-line-opacity: 1.1;
-  --linked-line-radius: 190;
-  --particle-color-1: rgb(170, 115, 255);
-  --particle-color-2: rgb(248, 194, 16);
-  --particle-color-3: rgb(131, 210, 56);
-  --particle-color-4: rgb(247, 79, 57);
+  --linked-line-opacity: 0.5;
+  --linked-line-radius: 50;
+  --particle-color-1: rgb(23, 12, 37);
+  --particle-color-2: rgb(6, 14, 6);
+  --particle-color-3: rgb(254, 252, 243);
+  --particle-color-4: rgb(255, 247, 187);
   --particle-line-color: rgba(112, 121, 126, 0.515);
+  --num-of-particles-to-spawn-on-push: 30;
+  --particle-animation-speed: 5;
 }
 
 /* tag category colours */
@@ -225,8 +228,8 @@
 
 /** DARK MODE  **/
 [data-theme="dark"] {
-  --bg1: rgb(28, 24, 24); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(28, 24, 24); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg1: rgb(6, 6, 6); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: rgb(0, 0, 0); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
@@ -436,6 +439,7 @@ html {
   overflow-x: hidden;
   line-height: 1.6;
   letter-spacing: 0.06em;
+  min-height: 100%;
 }
 
 body {
@@ -447,9 +451,11 @@ body {
       180deg,
       var(--bg1),
       var(--bg2)
-  );
-  background-size: 400%;
-  animation: animation_name 55s ease infinite;    /* lasts 30s, eases in, and is infinite */
+  ) fixed;
+  animation: background_gradient_animation 1s ease infinite;    /* lasts 30s, eases in, and is infinite */
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body > div#root > div.App {
@@ -2026,6 +2032,34 @@ ul.messiahs-handbook p.quote-person {
 /* #endregion */
 
 
+.aboutme-intro {
+  position: absolute;
+  color: var(--page-text-color);
+  padding: 2rem 5rem;
+}
+
+.aboutme-intro p {
+  padding: 4px 0;
+  margin: 0;
+}
+
+.aboutme-intro p.text-v1 { font-size: 1.0rem; }
+.aboutme-intro p.text-v2 { font-size: 0.6rem; }
+.aboutme-intro p.text-v3 { font-size: 0.5rem; }
+.aboutme-intro p.text-v4 { font-size: 0.3rem; }
+.aboutme-intro p.text-v5 { font-size: 0.2rem; }
+.aboutme-intro p.text-v6 { font-size: 0.1rem; }
+.aboutme-intro p.text-v7 { font-size: 0.02rem; }
+
+
+.social-medias {
+  display: grid;
+  grid-template-columns: repeat(6, 50px);
+}
+.social-medias img {
+  width: 50px;
+}
+
 /* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
@@ -2182,6 +2216,19 @@ ul.messiahs-handbook p.quote-person {
   .posts-container table {
     width: 300px;
   }
+
+
+  .aboutme-intro {
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+  .aboutme-container .social-medias {
+    justify-content: center;
+    grid-template-columns: repeat(6, 50px);
+  }
+  .aboutme-container .social-medias img {
+    
+  }
 }
 
 @media screen and (max-width: 725px) {
@@ -2245,7 +2292,7 @@ ul.messiahs-handbook p.quote-person {
 
 
 /* #region ----------------------------------<13: ANIMATIONS>---------------------------------- */
-@keyframes animation_name {
+@keyframes background_gradient_animation {
   /*                          (x,  y) */
   0% { background-position:   0%   0%; }     /* x=top left, y=centre */
   50% { background-position:  100% 50%; }     /* x=bottom left, y=centre */

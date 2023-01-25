@@ -7,6 +7,9 @@ import NavbarTop from './components/NavbarTop';
 import NavbarSide from './components/NavbarSide';
 import Portfolio from './components/Portfolio';
 
+// About page
+import AboutMe from './components/aboutme/AboutMe';
+
 // Notes page
 import Notes from './components/notes/Notes';
 import CasioBasic from './components/notes/CasioBasic';
@@ -47,6 +50,7 @@ export default class App extends Component {
 
                   <Switch>
                       <Route path='/' exact />
+                      <Route path='/aboutme' component={AboutMe} />
                       <Route path='/university' component={University} exact />
                       <Route path='/portfolio' component={Portfolio} exact />
                       <Route path='/blog' component={Blog} exact />
