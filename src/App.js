@@ -7,17 +7,23 @@ import NavbarTop from './components/NavbarTop';
 import NavbarSide from './components/NavbarSide';
 import Portfolio from './components/Portfolio';
 
+// Notes page
 import Notes from './components/notes/Notes';
+import CasioBasic from './components/notes/CasioBasic';
 
+// Blog page
 import Blog from './components/blog/Blog';
 import BlogPost from './components/blog/BlogPost';
 
+// Uni page
 import University from './components/university/University';
 import UniversityAssignment from './components/university/UniversityAssignment';
 
-import CasioBasic from './components/notes/CasioBasic';
-
+// Films page
 import Films from './components/films/Films';
+
+// Music page
+import Music from './components/music/Music';
 
 // import ParticlesMin from './js/particles.min.js'
 // <script src="js/particles.min.js"></script>
@@ -47,6 +53,7 @@ export default class App extends Component {
                       <Route path='/notes' component={Notes} exact />
                       <Route path='/blog/:post_id' component={BlogPost} />
                       <Route path='/films' component={Films} />
+                      <Route path='/music' component={Music} />
                       <Route path='/university/:assignment_id' component={UniversityAssignment} />
                       <Route path='/notes/casio_basic' component={CasioBasic} />
                   </Switch>

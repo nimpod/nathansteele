@@ -62,12 +62,13 @@ class BlogPost extends Component {
             <div className="page-wrapper blog-post">
                 <div className="section-inner">
                     <div className="blog-post-info" id={'BlogPost' + this.props.post.id}>
-                        <Link to={'#BlogPost' + this.props.post.id} className="back-to-top-of-post animated faster slideInUp" title='Click to go back to top of blog post'>
+                        <Link to={'#BlogPost' + this.props.post.id} className="custom-btn-1 back-to-top-of-post animated faster slideInUp" title='Click to go back to top of blog post'>
                             <ArrowUp className='invertable-icon' />
                             <span>Back to top</span>
                         </Link>
-                        <Link to='/blog' className="back-to-previous-page" title="Back to blog">
+                        <Link to='/blog' className="custom-btn-1 back-to-previous-page" title="Back to blog">
                             <ArrowLeft className="invertable-icon" />
+                            <span>Back to blog list</span>
                         </Link>
                         <h3 className="blog-post-title">{this.props.post.title}</h3>
                         <span className="blog-post-date">
