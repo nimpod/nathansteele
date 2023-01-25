@@ -159,7 +159,7 @@
   --general-box-shadow-color-3: rgba(24, 24, 24, 0.886);
   --general-box-shadow-color-4: rgba(0,0,0,.12);
 
-  --another-btn-bg-color: rgb(214, 214, 214);
+  --another-btn-bg-color: rgb(209, 209, 215);
   --another-btn-bg-color-hover: rgb(180, 182, 185);
 
   --blog-post-title-text: rgb(33, 33, 33);
@@ -1449,6 +1449,7 @@ div.blog-post
   border: 1px solid var(--topnav-collapsed-border-color);
   animation-name: BackToTopButtonEmergesAsUserScrolls;
   animation-duration: 5s;
+  text-decoration: none;
 }
 .back-to-top-of-post:not(.active) {
   display: none;
@@ -1460,9 +1461,6 @@ div.blog-post
   transition: all 0.4s ease;
   background-color: var(--another-btn-bg-color-hover) !important;
 }
-a:hover span {
-  text-decoration: none !important;
-}
 .back-to-top-of-post > svg.invertable-icon {
   width: 21px;
   height: 21px;
@@ -1472,6 +1470,9 @@ a:hover span {
   font-size: 13px;
   margin: 0 10px;
   margin-top: 2px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
   color: var(--page-text-color);
 }
 @keyframes BackToTopButtonEmergesAsUserScrolls {
@@ -2102,7 +2103,7 @@ ul.messiahs-handbook p.quote-person {
 
   }
   #nav-top > .nav-right {
-    margin-left: 0;
+    margin-left: 7px;
   }
   #nav-top > .nav-left > .website-links {
     bottom: 0;
@@ -2226,8 +2227,8 @@ ul.messiahs-handbook p.quote-person {
 @media only screen and (max-width: 1200px) { .blog-post { padding-left: 200px; padding-right: 200px; } .blog-post-title { font-size: 2.9rem; } }
 @media only screen and (max-width: 1100px) { .blog-post { padding-left: 100px; padding-right: 100px; } .blog-post-title { font-size: 2.6rem; } }
 @media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } .blog-post-title { font-size: 2.5rem; } }
-@media only screen and (max-width: 900px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 2.4rem; } }
-@media only screen and (max-width: 800px) { .blog-post { padding-left: 10px; padding-right: 10px; } .blog-post-title { font-size: 1.9rem; } .blog-post-content h5.subgroup-title {font-size: 1.4rem;} h3.subgroup-title { font-size: 1.5rem;}.blog-post-content p, .blog-post-content li { font-size: 0.8rem !important; } }
+@media only screen and (max-width: 900px) { .blog-post { padding-left: 0px; padding-right: 0px; } .blog-post-title { font-size: 2.4rem; } }
+@media only screen and (max-width: 800px) { .blog-post { padding-left: 0px; padding-right: 0px; } .blog-post-title { font-size: 1.9rem; } .blog-post-content h5.subgroup-title {font-size: 1.4rem;} h3.subgroup-title { font-size: 1.5rem;}.blog-post-content p, .blog-post-content li { font-size: 0.8rem !important; } }
 
 /* #endregion */
 

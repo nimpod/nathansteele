@@ -90,6 +90,7 @@ class NavbarTop extends Component {
         let nav = document.getElementById("nav-top");
         let lastScrollTop = 0;
 
+        // ...
         if (nav !== null) {
             window.addEventListener('scroll', function(e) {
                 var st = window.pageYOffset || document.documentElement.scrollTop;
@@ -103,6 +104,14 @@ class NavbarTop extends Component {
                 }
                 lastScrollTop = st <= 0 ? 0 : st;
               })
+        }
+
+        // ...
+        let navbarSpanTags = document.getElementsByClassName('mobile-view-title');
+        let icons = ['🏠', '📽️', '🎵', '📚', '🏫', '👨‍💻', '📙'];
+        // let icons = ['▘', '▙', '▚', '▛', '▜', '▝', '▞'];
+        for (let i = 0; i < navbarSpanTags.length; i++) {
+            navbarSpanTags[i].innerHTML = icons[i];
         }
     }
 
@@ -125,10 +134,6 @@ class NavbarTop extends Component {
                         <NavLink to="/music" title='Music' className="navlink mytooltip">
                             <span>Music</span>
                             <span className='mobile-view-title'>▚</span>
-                        </NavLink>
-                        <NavLink to="/art" title='Art' className="navlink mytooltip">
-                            <span>Art</span>
-                            <span className='mobile-view-title'>▛</span>
                         </NavLink>
                         <NavLink to="/blog" title='Blog' className="navlink mytooltip">
                             <span>Blog</span>
