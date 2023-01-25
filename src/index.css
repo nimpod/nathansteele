@@ -2170,9 +2170,6 @@ ul.messiahs-handbook p.quote-person {
   #nav-top .website-links > a:hover {
     background-color: var(--topnav-btn-bg-color-hover);
   }
-  #nav-top .website-links > a:focus {
-    background-color: var(--topnav-collapsed-btn-bg-color-focus);
-  }
   #nav-top .website-links > a > span {
     display: none;
   }
