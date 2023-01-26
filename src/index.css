@@ -1083,6 +1083,9 @@ table td {
   padding: 0.35rem 0.7rem;
   border-bottom: 1px dashed var(--blog-table-border);
 }
+table tr:first-child td {
+  border-top: 1px dashed var(--blog-table-border);
+}
 
 
 table td:nth-child(1) { width: 10%; max-width: 100px; min-width: 120px; }   /* 1st column */
@@ -2254,10 +2257,12 @@ ul.messiahs-handbook p.quote-person {
     width: 75%;
     display: inline-block;
   }
+  /*
   .posts-container table .blogs-tr-date {
     margin-top: -12px;
     position: absolute;
   }
+  */
   .posts-container table .tags {
     display: none;
   }
