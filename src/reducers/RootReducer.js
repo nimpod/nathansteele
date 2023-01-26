@@ -374,6 +374,104 @@ const initState = {
             tags: ["Life", "Astronomy"]
         },
         {
+            id: "9",
+            date: "10 Sep 2017",
+            title: "Analysing my Garmin data",
+            content: "",
+            tags: ["Python", "Running"]
+        },
+        {
+            id: "12",
+            date: "07 Oct 2020",
+            title: "Are non-carbon based lifeforms possible?",
+            content: "",
+            tags: ["Astronomy", "Biology"]
+        },
+        {
+            id: "13",
+            date: "07 Oct 2020",
+            title: "Gorgonocephalus arcticus",
+            content: "",
+            tags: ["Biology"]
+        },
+        {
+            id: "14",
+            date: "09 Oct 2020",
+            title: "A subsurface ocean on Enceladus",
+            content: "",
+            tags: ["Astronomy"]
+        },
+        {
+            id: "15",
+            date: "11 Oct 2020",
+            title: "The Beale Ciphers",
+            content: "blah",
+            tags: ["Cryptography"]
+        },
+        {
+            id: "16",
+            date: "13 Oct 2020",
+            title: "The Great Pyramid of Cholula",
+            content: "blah",
+            tags: ["History"]
+        },
+        {
+            id: "17",
+            date: "14 Oct 2020",
+            title: "Null Island",
+            content: "blah",
+            tags: ["Geography", "Oceanography"]
+        },
+        {
+            id: "18",
+            date: "14 Oct 2020",
+            title: "Hematite Stalactite",
+            content: "blah",
+            tags: ["RocksAndMinerals"]
+        },
+        {
+            id: "19",
+            date: "14 Oct 2020",
+            title: "Leucochloridium",
+            content: "blah",
+            tags: ["Entomology"]
+        },
+        {
+            id: "20",
+            date: "30 Sep 2022",
+            title: "Venera spaceprobes",
+            content: "blah",
+            tags: ["Astronomy"]
+        },
+        {
+            id: "21",
+            date: "30 Sep 2022",
+            title: "Running form",
+            content: "blah",
+            tags: ["Running"]
+        },
+        {
+            id: "22",
+            date: "30 Sep 2022",
+            title: "Flagematics",
+            content: "blah",
+            tags: ["Vexilology", "Mathematics"]
+        },
+        {
+            id: "23",
+            date: "16 Jan 2022",
+            title: "Johannes Kepler",
+            content: "blah",
+            tags: ["InterestingPeople", "Astronomy"]
+        },
+        {
+            id: "24",
+            date: "16 Jan 2022",
+            title: "Samuel Pepys",
+            content: "blah",
+            tags: ["InterestingPeople"]
+        },
+        {
             id: "5",
             date: "30 Sep 2022",
             title: "The Messiah's Handbook",
@@ -597,104 +695,6 @@ const initState = {
                     </ul>\
                     ",
             tags: ["Notes"]
-        },
-        {
-            id: "9",
-            date: "10 Sep 2017",
-            title: "Analysing my Garmin data",
-            content: "",
-            tags: ["Python", "Running"]
-        },
-        {
-            id: "12",
-            date: "07 Oct 2020",
-            title: "Are non-carbon based lifeforms possible?",
-            content: "",
-            tags: ["Astronomy", "Biology"]
-        },
-        {
-            id: "13",
-            date: "07 Oct 2020",
-            title: "Gorgonocephalus arcticus",
-            content: "",
-            tags: ["Biology"]
-        },
-        {
-            id: "14",
-            date: "09 Oct 2020",
-            title: "A subsurface ocean on Enceladus",
-            content: "",
-            tags: ["Astronomy"]
-        },
-        {
-            id: "15",
-            date: "11 Oct 2020",
-            title: "The Beale Ciphers",
-            content: "blah",
-            tags: ["Cryptography"]
-        },
-        {
-            id: "16",
-            date: "13 Oct 2020",
-            title: "The Great Pyramid of Cholula",
-            content: "blah",
-            tags: ["History"]
-        },
-        {
-            id: "17",
-            date: "14 Oct 2020",
-            title: "Null Island",
-            content: "blah",
-            tags: ["Geography", "Oceanography"]
-        },
-        {
-            id: "18",
-            date: "14 Oct 2020",
-            title: "Hematite Stalactite",
-            content: "blah",
-            tags: ["RocksAndMinerals"]
-        },
-        {
-            id: "19",
-            date: "14 Oct 2020",
-            title: "Leucochloridium",
-            content: "blah",
-            tags: ["Entomology"]
-        },
-        {
-            id: "20",
-            date: "30 Sep 2022",
-            title: "Venera spaceprobes",
-            content: "blah",
-            tags: ["Astronomy"]
-        },
-        {
-            id: "21",
-            date: "30 Sep 2022",
-            title: "Running form",
-            content: "blah",
-            tags: ["Running"]
-        },
-        {
-            id: "22",
-            date: "30 Sep 2022",
-            title: "Flagematics",
-            content: "blah",
-            tags: ["Vexilology", "Mathematics"]
-        },
-        {
-            id: "23",
-            date: "16 Jan 2022",
-            title: "Johannes Kepler",
-            content: "blah",
-            tags: ["InterestingPeople", "Astronomy"]
-        },
-        {
-            id: "24",
-            date: "16 Jan 2022",
-            title: "Samuel Pepys",
-            content: "blah",
-            tags: ["InterestingPeople"]
         },
     ],
 

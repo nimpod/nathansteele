@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowLeft } from "../../icons/arrowLeft.svg";
+import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
+
 import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";
 import { ReactComponent as Calendar } from "../../icons/calendar.svg";
 import { getRandomRGBA } from '../../js/helpers.js';
@@ -67,7 +69,7 @@ class BlogPost extends Component {
                             <span>Back to top</span>
                         </Link>
                         <Link to='/blog' className="custom-btn-1 back-to-previous-page" title="Back to blog">
-                            <ArrowLeft className="invertable-icon" />
+                            <ArrowLeftV2 className="invertable-icon" />
                             <span>Back to blog list</span>
                         </Link>
                         <h3 className="blog-post-title">{this.props.post.title}</h3>

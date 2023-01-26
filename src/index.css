@@ -1430,8 +1430,8 @@ div.blog-post
 }
 .back-to-previous-page svg.invertable-icon {
   /* the arrow icon */
-  width: 31px;
-  height: 31px;
+  width: 27px;
+  height: 27px;
   padding: 8px;
   transition: all 100ms ease-in;
 }
@@ -1445,9 +1445,9 @@ div.blog-post
   animation-duration: 5s;
 }
 .back-to-top-of-post > svg.invertable-icon {
-  width: 21px;
-  height: 21px;
-  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  margin-left: 7px;
 }
 @keyframes BackToTopButtonEmergesAsUserScrolls {
   0%   { left: 0px;  top: 0px;}
@@ -2137,10 +2137,14 @@ ul.messiahs-handbook p.quote-person {
   
   .back-to-top-of-post {
     z-index: 1000;
-    width: 115px;
+    width: 140px;
   }
   .back-to-top-of-post span {
-    font-size: 11px;
+    font-size: 14px;
+  }
+  .back-to-top-of-post:hover span {
+    text-decoration: none !important;
+    outline: none !important;
   }
   
 
@@ -2201,10 +2205,14 @@ ul.messiahs-handbook p.quote-person {
 @media screen and (max-width: 1083px) {
   .blog-post-info .back-to-previous-page {
     position: relative;
-    left: 175px;
-    top: -5px;
+    left: 170px;
+    top: -10px;
     background-color: transparent;
     box-shadow: none;
+  }
+  .blog-post-info .back-to-previous-page svg {
+    width: 30px;
+    height: 30px;
   }
   .blog-post-info .back-to-previous-page:hover {
     opacity: 1;
