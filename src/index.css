@@ -20,8 +20,8 @@
 
 /* particlejs variables */
 :root {
-  --particle-count: 400;
-  --particle-density: 1200;
+  --particle-count: 800;
+  --particle-density: 900;
   --particle-opacity: 0.6;
   --particle-opacity-min: 0.3;
   --particle-size: 1.2;
@@ -29,8 +29,8 @@
   --line-count: 110;
   --line-opacity: 0.0;
   --line-width: 0.90;
-  --linked-line-opacity: 0.5;
-  --linked-line-radius: 50;
+  --linked-line-opacity: 0.9;
+  --linked-line-radius: 100;
   --particle-color-1: rgb(23, 12, 37);
   --particle-color-2: rgb(6, 14, 6);
   --particle-color-3: rgb(254, 252, 243);
@@ -212,7 +212,7 @@
 /** DARK MODE  **/
 [data-theme="dark"] {
   --bg1: rgb(9, 9, 9); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(47, 20, 28); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg2: rgb(20, 22, 47); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
@@ -999,7 +999,6 @@ table {
   border-collapse: collapse;
   font-size: 0.85rem;
   transition: 300ms all;
-  width: 93%;
   color: var(--blog-table-text);
   border-collapse: separate;
   border-spacing: 1px;
@@ -2039,6 +2038,7 @@ ul.messiahs-handbook p.quote-person {
 .social-medias {
   display: grid;
   grid-template-columns: repeat(6, 50px);
+  padding-top: 12px;
 }
 .social-medias img {
   width: 50px;
@@ -2166,8 +2166,12 @@ ul.messiahs-handbook p.quote-person {
   }
 
   /* make aboutme page look normal on mobile */
+  .aboutme-container {
+    padding: 0;
+  }
   .aboutme-intro {
-    padding: 5rem 1rem;
+    padding: 0rem 2rem;
+    margin-top: 10rem;
     text-align: center;
   }
   .aboutme-intro h1, .aboutme-intro h2, .aboutme-intro h3, .aboutme-intro h4, .aboutme-intro h5, .aboutme-intro h6, .aboutme-intro p {
@@ -2240,7 +2244,7 @@ ul.messiahs-handbook p.quote-person {
 @media only screen and (max-width: 1000px)  { table { font-size: 0.8rem;  } }
 @media only screen and (max-width: 700px) { table tr { line-height: 0.9; } }
 @media only screen and (max-width: 700px) { table tr td { font-size: 0.6rem; } }
-@media only screen and (max-width: 700px) { table .tag span { font-size: 0.55rem !important; } }
+@media only screen and (max-width: 700px) { table .tag span { font-size: 0.45rem !important; } }
 @media only screen and (max-width: 700px) { table td:nth-child(1) { min-width: 100px; } }
 @media only screen and (max-width: 700px) { table td { padding: 0.5rem 0; } }
 @media only screen and (max-width: 700px) { table tr span { font-size: 0.65rem !important; } }
