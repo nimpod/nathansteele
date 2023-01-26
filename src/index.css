@@ -21,23 +21,23 @@
 /* particlejs variables */
 :root {
   --particle-count: 800;
-  --particle-density: 900;
-  --particle-opacity: 0.6;
-  --particle-opacity-min: 0.3;
+  --particle-density: 1000;
+  --particle-opacity: 0.4;
+  --particle-opacity-min: 0.2;
   --particle-size: 1.2;
   --particle-speed: 0.5;
   --line-count: 110;
   --line-opacity: 0.0;
   --line-width: 0.90;
   --linked-line-opacity: 0.9;
-  --linked-line-radius: 100;
+  --linked-line-radius: 50;
   --particle-color-1: rgb(23, 12, 37);
   --particle-color-2: rgb(6, 14, 6);
   --particle-color-3: rgb(254, 252, 243);
   --particle-color-4: rgb(255, 247, 187);
-  --particle-line-color: rgba(112, 121, 126, 0.515);
+  --particle-line-color: rgba(177, 134, 132, 0.515);
   --num-of-particles-to-spawn-on-push: 30;
-  --particle-animation-speed: 5;
+  --particle-animation-speed: 4;
 }
 
 /* tag category colours */
@@ -211,8 +211,8 @@
 
 /** DARK MODE  **/
 [data-theme="dark"] {
-  --bg1: rgb(9, 9, 9); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(20, 22, 47); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg1: rgb(0, 0, 0); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: rgb(20, 21, 36); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
@@ -235,7 +235,7 @@
   --topnav-collapsed-bg-color: rgb(12, 12, 12);
   --topnav-collapsed-btn-bg-color: rgb(12, 12, 12);
   --topnav-collapsed-btn-bg-color-focus: rgb(54, 54, 56);
-  --topnav-collapsed-btn-bg-color-active: rgb(69, 69, 72);
+  --topnav-collapsed-btn-bg-color-active: rgb(53, 53, 57);
   --topnav-collapsed-border-color: rgba(50, 48, 57, 0.941);
   --button-border-color-onclick: rgb(153, 149, 149);
 
@@ -997,6 +997,7 @@ svg.logo path:hover {
 table {
   border-spacing: 0;
   border-collapse: collapse;
+  width: 100%;
   font-size: 0.85rem;
   transition: 300ms all;
   color: var(--blog-table-text);
@@ -1067,7 +1068,6 @@ li.selectedThisCategory span::after {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 10px;
   }
 }
 
@@ -2065,6 +2065,12 @@ ul.messiahs-handbook p.quote-person {
   }
   .section-inner {
     margin: 0 !important;
+    padding: 15px 0;
+    /*
+    padding: 14px;
+    */
+  }
+  .blog-post > .section-inner {
     padding: 14px;
   }
   .website-logo {
@@ -2158,12 +2164,6 @@ ul.messiahs-handbook p.quote-person {
     margin-bottom: 0px;
   }
 
-  .posts-container table {
-    width: 300px;
-  }
-  .posts-container table tr {
-    width: 300px;
-  }
 
   /* make aboutme page look normal on mobile */
   .aboutme-container {
@@ -2216,6 +2216,23 @@ ul.messiahs-handbook p.quote-person {
   .blog-post-info .back-to-previous-page > span {
     display: none;
   }
+
+  .posts-container table {
+    width: 100%;
+  }
+  .posts-container table tr {
+    width: 300px;
+  }
+  table tr td:nth-child(2) > span {
+    width: 30%;
+    display: inline-block;
+  }
+  table .blogs-tr-date {
+
+  }
+  table .tag span {
+    padding: 0 0 0 4px;
+  }
 }
 
 @media screen and (max-width: 725px) {
@@ -2245,9 +2262,9 @@ ul.messiahs-handbook p.quote-person {
 @media only screen and (max-width: 700px) { table tr { line-height: 0.9; } }
 @media only screen and (max-width: 700px) { table tr td { font-size: 0.6rem; } }
 @media only screen and (max-width: 700px) { table .tag span { font-size: 0.45rem !important; } }
-@media only screen and (max-width: 700px) { table td:nth-child(1) { min-width: 100px; } }
+@media only screen and (max-width: 700px) { table td:nth-child(1) { min-width: 85px; } }
 @media only screen and (max-width: 700px) { table td { padding: 0.5rem 0; } }
-@media only screen and (max-width: 700px) { table tr span { font-size: 0.65rem !important; } }
+@media only screen and (max-width: 700px) { table tr span { font-size: 0.60rem !important; } }
 
 /* remove padding from the #about section as screen gets smaller */
 @media screen and (max-width: 1125px) { #about{ padding: 50px 170px 0px 170px; } }

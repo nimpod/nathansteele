@@ -6,24 +6,26 @@ import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 
 
-function processText() {
-    // setup...
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = process;
-    xhr.open("GET", "https://github.com/nimpod/rainmeter-random-quotes/blob/master/listOfQuotes.txt", true);
-    xhr.send();
-
-    // get data...
-    if (xhr.readyState == 4) {
-        var resp = JSON.parse(xhr.responseText);
-        console.log(resp);
+function readTextFile(file) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                var allText = rawFile.responseText;
+                console.log(allText);
+            }
+        }
     }
+    rawFile.send(null);
 }
+
 
 class MessiahsHandbook extends Component {
     render() {
-        processText();
-        
+        // readTextFile("../../../public/listOfQuotes.txt");
+        // readTextFile("file:///D:\\Programming-Projects\\rainmeter-random-quotes\\listOfQuotes.txt");
+
         return(
             <div className='page-wrapper'>
                 <ul className="messiahs-handbook">
