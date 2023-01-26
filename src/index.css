@@ -2257,12 +2257,10 @@ ul.messiahs-handbook p.quote-person {
     width: 75%;
     display: inline-block;
   }
-  /*
   .posts-container table .blogs-tr-date {
-    margin-top: -12px;
+    margin-top: -20px;
     position: absolute;
   }
-  */
   .posts-container table .tags {
     display: none;
   }
