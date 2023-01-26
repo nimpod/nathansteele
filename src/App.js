@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio';
 
 // About page
 import AboutMe from './components/aboutme/AboutMe';
+import MessiahsHandbook from './components/messiahshandbook/MessiahsHandbook';
 
 // Notes page
 import Notes from './components/notes/Notes';
@@ -61,6 +62,8 @@ export default class App extends Component {
                       
                       <Route path='/notes' component={Notes} exact />
                       <Route path='/notes/casio_basic' component={CasioBasic} exact />
+
+                      <Route path='/messiahshandbook' component={MessiahsHandbook} exact />
                   </Switch>
 
                   <script src="./js/particles.min.js"></script>

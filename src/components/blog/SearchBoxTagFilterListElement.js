@@ -7,9 +7,9 @@ class SearchBoxTagFilterListElement extends Component {
         return(
             this.props.tags.map((tag => {
                 return(
-                    <li key={`key-${tag}`} className={`tag tag-filter-for-${tag}`}>
-                        <div>
-                            <span onClick={this.props.clickedTagFilter}>
+                    <li key={`key-${tag}`} className={`tag-filter-for-${tag}`}>
+                        <div className='tag'>
+                            <span className={`${tag}`} onClick={this.props.clickedTagFilter}>
                                 {tag}
                             </span>
                         </div>

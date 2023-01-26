@@ -116,7 +116,7 @@ class NavbarTop extends Component {
         // by default set the 'About me' button to be active...
         let navlinks = document.getElementsByClassName('navlink');
         console.log(navlinks);
-        navlinks[1].classList.add('active');
+        //navlinks[1].classList.add('active');
     }
 
     
@@ -170,6 +170,11 @@ class NavbarTop extends Component {
                             <span className='mobile-view-title'>Notes</span>
                         </NavLink>
                     </nav>
+                    <div className='secret-buttons'>
+                        <NavLink to="/messiahshandbook" title='Messiahs Handbook' className="navlink" onClick={this.clickedNavbarItem}>
+                            <span>🞾</span>
+                        </NavLink>
+                    </div>
                 </div>
                 
                 <div className="nav-right">

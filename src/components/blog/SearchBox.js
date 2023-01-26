@@ -57,7 +57,7 @@ class SearchBox extends Component {
                         <OpenDropdownIcon className='invertable-icon' />
                     </button>
                     
-                    <div className='tag-filter-options-list-container popover-canvas-with-arrow' onClick={this.blah}>
+                    <div className='tag-filter-options-list-container popover-canvas-with-arrow'>
                         <ul className='tag-filter-options-list'>
                             <SearchBoxTagFilterListElement
                                 clickedTagFilter={this.props.clickedTagFilter}

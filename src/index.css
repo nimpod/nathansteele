@@ -42,45 +42,25 @@
 
 /* tag category colours */
 :root {
-  --tag-bg-color-Astronomy: rgba(164, 65, 239, 0.2);
-  --tag-bg-color-Biology: rgba(79, 139, 20, 0.2);
-  --tag-bg-color-Cryptography: rgba(13, 81, 159, 0.2);
-  --tag-bg-color-Entomology: rgba(181, 249, 54, 0.2);
-  --tag-bg-color-Films: rgba(195, 113, 6, 0.2);
-  --tag-bg-color-Geography: rgba(166, 211, 143, 0.2);
-  --tag-bg-color-Hardware: rgba(23, 156, 72, 0.2);
-  --tag-bg-color-History: rgba(244, 158, 247, 0.2);
-  --tag-bg-color-Interesting-people: rgba(143, 130, 238, 0.2);
-  --tag-bg-color-Life: rgba(109, 104, 104, 0.2);
-  --tag-bg-color-Oceanography: rgba(56, 85, 148, 0.2);
-  --tag-bg-color-Music: rgba(246, 234, 13, 0.2);
-  --tag-bg-color-Mathematics: rgba(238, 93, 68, 0.2);
-  --tag-bg-color-Notes: rgba(109, 104, 104, 0.2);
-  --tag-bg-color-Python: rgba(128, 155, 243, 0.2);
-  --tag-bg-color-React: rgba(9, 204, 188, 0.2);
-  --tag-bg-color-Rocks-and-minerals: rgba(83, 251, 170, 0.2);
-  --tag-bg-color-Running: rgba(243, 247, 39, 0.2); 
-  --tag-bg-color-Vexilology: rgba(120, 197, 214, 0.2); 
-  
-  --tag-text-color-Astronomy: rgb(164, 65, 239);
-  --tag-text-color-Biology: rgb(79, 139, 20);
-  --tag-text-color-Cryptography: rgb(13, 81, 159);
-  --tag-text-color-Entomology: rgb(161, 179, 59);
-  --tag-text-color-Films: rgb(195, 113, 6);
-  --tag-text-color-Geography: rgb(44, 220, 94);
-  --tag-text-color-Hardware: rgb(22, 94, 48, 0.996);
-  --tag-text-color-History: rgb(244, 158, 247);
-  --tag-text-color-Interesting-people: rgb(75, 117, 142);
-  --tag-text-color-Life: rgb(109, 104, 104);
-  --tag-text-color-Oceanography: rgb(56, 85, 148);
-  --tag-text-color-Mathematics: rgb(238, 93, 68);
-  --tag-text-color-Music: rgba(246, 234, 13);
-  --tag-text-color-Notes: rgb(157, 128, 109);
-  --tag-text-color-Python: rgba(128, 155, 243);
-  --tag-text-color-React: rgba(9, 204, 188);
-  --tag-text-color-Rocks-and-minerals: rgba(228, 124, 207);
-  --tag-text-color-Running: rgb(195, 198, 7); 
-  --tag-text-color-Vexilology: rgb(120, 197, 214); 
+  --tag-bg-color-Astronomy: rgba(164, 65, 239, 0.4);
+  --tag-bg-color-Biology: rgba(79, 139, 20, 0.4);
+  --tag-bg-color-Cryptography: rgba(13, 81, 159, 0.4);
+  --tag-bg-color-Entomology: rgba(181, 249, 54, 0.42);
+  --tag-bg-color-Films: rgba(195, 113, 6, 0.4);
+  --tag-bg-color-Geography: rgba(166, 211, 143, 0.4);
+  --tag-bg-color-Hardware: rgba(23, 156, 72, 0.4);
+  --tag-bg-color-History: rgba(244, 158, 247, 0.4);
+  --tag-bg-color-Interesting-people: rgba(211, 159, 104, 0.4);
+  --tag-bg-color-Life: rgba(109, 104, 104, 0.4);
+  --tag-bg-color-Oceanography: rgba(45, 150, 255, 0.4);
+  --tag-bg-color-Music: rgba(246, 234, 13, 0.4);
+  --tag-bg-color-Mathematics: rgba(238, 93, 68, 0.4);
+  --tag-bg-color-Notes: rgba(109, 104, 104, 0.4);
+  --tag-bg-color-Python: rgba(128, 155, 243, 0.4);
+  --tag-bg-color-React: rgba(9, 204, 188, 0.4);
+  --tag-bg-color-Rocks-and-minerals: rgba(83, 251, 170, 0.4);
+  --tag-bg-color-Running: rgba(243, 247, 39, 0.4); 
+  --tag-bg-color-Vexilology: rgba(120, 197, 214, 0.4);
 }
 
 /** LIGHT MODE */
@@ -141,10 +121,9 @@
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(229, 229, 229);
   --blog-table-border: rgba(0, 0, 0, 0.202);
-  --blog-table-text: var(--text);
+  --blog-table-text: rgb(3, 2, 2);
   --blog-table-text-hover: var(--text);
   --blog-table-row-bg-hover: rgb(251, 251, 251);
-  --blog-table-tag-bg: rgb(218, 226, 219);
   --blog-table-tag-text: rgb(27, 27, 27);
   
   --searchbox-bg-color: rgb(228, 230, 234);
@@ -177,8 +156,9 @@
 
   --tags-border-color: rgba(199, 199, 204, 0.627);
   --tags-text-color: rgb(75, 72, 72);
+  --tags-bg-color: rgb(255, 255, 255);
   --tags-Hardware-text-color: rgb(17, 140, 81);
-  --tags-bg-color-selected: rgb(255, 111, 39);
+  --tags-bg-color-selected: rgb(73, 248, 105);
   --tags-text-color-selected: rgb(3, 3, 3);
   --tags-open-dropdown-bg-color: rgba(250, 250, 250, 0.923);
 
@@ -201,6 +181,9 @@
   --university-assignment-subheading-text-color: rgb(135, 138, 143);
   --university-assignment-subheading-detail-text-color: rgb(15, 20, 30);
   --university-assignment-main-text-color: rgb(135, 138, 143);
+
+  --messiahshandbook-grid-border-color: rgba(209, 209, 221, 0.882);
+  --messiahshandbook-grid-border-color-hover: rgb(143, 150, 170);
 
   --sidebar-box-shadow: rgba(0, 0, 0, 0.083);
   --sidebar-item-bg-color-hover: rgb(245, 245, 245);
@@ -286,7 +269,6 @@
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
   --blog-table-row-bg-hover: var(--btn-hover-bg-color);
-  --blog-table-tag-bg: rgb(46, 45, 45);
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
 
@@ -319,8 +301,9 @@
 
   --tags-border-color: rgba(12, 12, 14, 0.627);
   --tags-text-color: rgb(255, 255, 255);
+  --tags-bg-color: rgb(45, 44, 46);
   --tags-Hardware-text-color: rgb(37, 216, 129);
-  --tags-bg-color-selected: rgb(255, 82, 39);
+  --tags-bg-color-selected: rgb(73, 248, 105);
   --tags-text-color-selected: rgb(3, 3, 3);
   --tags-open-dropdown-bg-color: rgba(118, 117, 117, 0.194);
 
@@ -344,6 +327,9 @@
   --university-assignment-subheading-text-color: rgb(161, 164, 168);
   --university-assignment-subheading-detail-text-color: rgb(119, 120, 121);
   --university-assignment-main-text-color: rgb(167, 170, 174);
+
+  --messiahshandbook-grid-border-color: rgba(74, 74, 83, 0.627);
+  --messiahshandbook-grid-border-color-hover: rgb(107, 102, 102);
 
   --sidebar-box-shadow: rgba(0, 0, 0, 0.083);
   --sidebar-item-bg-color-hover: rgb(47, 47, 55);
@@ -1048,7 +1034,7 @@ table tbody tr[data-filter='invisible'] {
 table tbody td span.blogs-tr-title,
 table tbody td span.blogs-tr-date {
   font-size: 0.9rem;
-  color: var(--page-text-color);
+  color: var(--blog-table-text);
 }
 
 
@@ -1062,7 +1048,7 @@ table tbody td span.blogs-tr-date {
   transition: all 0.2s ease;
   max-width: 0;
 }
-.tag.selectedThisCategory span::after {
+li.selectedThisCategory span::after {
   visibility: visible;
   margin-left: 0.4rem;
   opacity: 0.5;
@@ -1121,7 +1107,7 @@ div.tags {
   overflow-y: hidden;
   overflow-x: auto;
   max-width: 120px;
-  margin-left: 15px;
+  margin-left: 40px;
 }
 
 /* an individual tag */
@@ -1132,76 +1118,57 @@ div.tags {
 /* text inside tag */
 .tag span {
   margin-right: 6px;
-  background-color: var(--blog-table-tag-bg);
+  background-color: var(--tags-bg-color);
   color: var(--blog-table-tag-text);
 }
 .tag span,
-ul.tag-filter-options-list > li span {
-  padding: 2px 5px;
-  border-radius: 15px;
-  font-size: 0.7rem;
+ul.tag-filter-options-list li span {
+  padding: 2px 5px 2px 10px;
+  border-radius: 20px;
+  font-size: 0.65rem;
   font-weight: bold;
-  border: 1px solid var(--tags-border-color);
+  border-width: 1px;
+  border-style: solid;
 }
 
 /* lower opacity when hovering over tag */
-.blog-post-tags > .tag > span:hover,
+.blog-post-tags .tag span:hover,
 .tag span:hover {
   opacity: 0.5 !important;
   cursor: pointer;
   transition: all 100ms ease-in;
 }
 
-ul.tag-filter-options-list > li.tag.selectedThisCategory span {
+ul.tag-filter-options-list li.selectedThisCategory span {
   background-color: var(--tags-bg-color-selected);
   color: var(--tags-text-color-selected);
 }
 
 /* Text colours inside tags... */
 .tag span { color: var(--tags-text-color); }  /* most tags will use this font colour */
-.tag span.Hardware, .tag-filter-for-Hardware span { color: var(--tags-Hardware-text-color); }  /* apart from .Hardware */
+.tag span.Hardware { color: var(--tags-Hardware-text-color); }  /* apart from .Hardware */
 
 /* Background colours of tags... */
-.tag .Astronomy           { background-color: var(--tag-bg-color-Astronomy); }
-.tag .Biology             { background-color: var(--tag-bg-color-Biology); }
-.tag .Cryptography        { background-color: var(--tag-bg-color-Cryptography); }
-.tag .Entomology          { background-color: var(--tag-bg-color-Entomology); }
-.tag .Films               { background-color: var(--tag-bg-color-Films); }
-.tag .Geography           { background-color: var(--tag-bg-color-Geography); }
-.tag .Hardware            { background-color: var(--tag-bg-color-Hardware); }
-.tag .History             { background-color: var(--tag-bg-color-History); }
-.tag .InterestingPeople  { background-color: var(--tag-bg-color-Interesting-people); }
-.tag .Life                { background-color: var(--tag-bg-color-Life); }
-.tag .Music               { background-color: var(--tag-bg-color-Music); }
-.tag .Mathematics         { background-color: var(--tag-bg-color-Mathematics); }
-.tag .Notes               { background-color: var(--tag-bg-color-Notes); }
-.tag .Oceanography        { background-color: var(--tag-bg-color-Oceanography); }
-.tag .Python              { background-color: var(--tag-bg-color-Python); }
-.tag .React               { background-color: var(--tag-bg-color-React); }
-.tag .RocksAndMinerals    { background-color: var(--tag-bg-color-Rocks-and-minerals); }
-.tag .Running             { background-color: var(--tag-bg-color-Running); }
-.tag .Vexilology          { background-color: var(--tag-bg-color-Vexilology); }
+.tag .Astronomy           { border-color: var(--tag-bg-color-Astronomy); }
+.tag .Biology             { border-color: var(--tag-bg-color-Biology); }
+.tag .Cryptography        { border-color: var(--tag-bg-color-Cryptography); }
+.tag .Entomology          { border-color: var(--tag-bg-color-Entomology); }
+.tag .Films               { border-color: var(--tag-bg-color-Films); }
+.tag .Geography           { border-color: var(--tag-bg-color-Geography); }
+.tag .Hardware            { border-color: var(--tag-bg-color-Hardware); }
+.tag .History             { border-color: var(--tag-bg-color-History); }
+.tag .InterestingPeople   { border-color: var(--tag-bg-color-Interesting-people); }
+.tag .Life                { border-color: var(--tag-bg-color-Life); }
+.tag .Music               { border-color: var(--tag-bg-color-Music); }
+.tag .Mathematics         { border-color: var(--tag-bg-color-Mathematics); }
+.tag .Notes               { border-color: var(--tag-bg-color-Notes); }
+.tag .Oceanography        { border-color: var(--tag-bg-color-Oceanography); }
+.tag .Python              { border-color: var(--tag-bg-color-Python); }
+.tag .React               { border-color: var(--tag-bg-color-React); }
+.tag .RocksAndMinerals    { border-color: var(--tag-bg-color-Rocks-and-minerals); }
+.tag .Running             { border-color: var(--tag-bg-color-Running); }
+.tag .Vexilology          { border-color: var(--tag-bg-color-Vexilology); }
 
-/* Text colours of tags... */
-.tag-filter-for-Astronomy span            {background-color: var(--tag-bg-color-Astronomy);  }
-.tag-filter-for-Biology span              {background-color: var(--tag-bg-color-Biology); }
-.tag-filter-for-Cryptography span         {background-color: var(--tag-bg-color-Cryptography);  }
-.tag-filter-for-Entomology span           {background-color: var(--tag-bg-color-Entomology);  }
-.tag-filter-for-Films span                {background-color: var(--tag-bg-color-Films);   }
-.tag-filter-for-Geography span            {background-color: var(--tag-bg-color-Geography);   }
-.tag-filter-for-Hardware span             {background-color: var(--tag-bg-color-Hardware);  }
-.tag-filter-for-History span              {background-color: var(--tag-bg-color-History);  }
-.tag-filter-for-InterestingPeople span    {background-color: var(--tag-bg-color-Interesting-people);  }
-.tag-filter-for-Life span                 {background-color: var(--tag-bg-color-Life); }
-.tag-filter-for-Mathematics span          {background-color: var(--tag-bg-color-Mathematics);  }
-.tag-filter-for-Music span                {background-color: var(--tag-bg-color-Music);  }
-.tag-filter-for-Notes span                {background-color: var(--tag-bg-color-Notes);  }
-.tag-filter-for-Oceanography span         {background-color: var(--tag-bg-color-Oceanography);  }
-.tag-filter-for-Python span               {background-color: var(--tag-bg-color-Python); }
-.tag-filter-for-React span                {background-color: var(--tag-bg-color-React);   }
-.tag-filter-for-RocksAndMinerals span     {background-color: var(--tag-bg-color-Rocks-and-minerals); }
-.tag-filter-for-Running span              {background-color: var(--tag-bg-color-Running);   }
-.tag-filter-for-Vexilology span           {background-color: var(--tag-bg-color-Vexilology);  }
 
 .tag .inline-svg {
   display: inline-block;
@@ -1303,8 +1270,8 @@ ul.tag-filter-options-list > li {
 
 .popover-canvas-with-arrow::after,
 .popover-canvas-with-arrow::before {
-  bottom: 96.5%;
-	left: 20%;
+  bottom: 98.7%;
+	left: 50%;
 	border: solid transparent;
 	content: "";
 	height: 0;
@@ -1328,7 +1295,6 @@ ul.tag-filter-options-list {
   margin-bottom: 0.375rem;
 }
 ul.tag-filter-options-list li {
-  display: inline-block;
   list-style-type: none;
   min-width: auto;
 }
@@ -1339,7 +1305,6 @@ ul.tag-filter-options-list li:hover {
   */
 }
 ul.tag-filter-options-list li span {
-  font-size: 11px;
   line-height: 1.5rem;
 }
 
@@ -1996,6 +1961,7 @@ ul.messiahs-handbook {
   list-style-type: none;
   display: grid;
   left: 0;
+  padding-top: 20px;
   position: absolute;
   /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -2006,7 +1972,7 @@ ul.messiahs-handbook li {
   font-family: 'Roboto';
   border-radius: 0px;
   opacity: 0.75;
-  border: 2px solid rgba(141, 128, 128, 0);
+  border: 2px solid var(--messiahshandbook-grid-border-color);
   /*
   border: 2px solid rgba(22, 21, 22, 0.448);
   height: fit-content;
@@ -2016,7 +1982,7 @@ ul.messiahs-handbook li {
 }
 ul.messiahs-handbook li:hover {
   opacity: 1.0;
-  border: 2px dashed var(--contact-btn-border-colour);
+  border: 2px dashed var(--messiahshandbook-grid-border-color-hover);
 }
 ul.messiahs-handbook li > p {
   display: inline;
@@ -2033,6 +1999,17 @@ ul.messiahs-handbook p.quote-person {
   font-weight: bolder;
   display: block;
   text-align: right;
+}
+
+.secret-buttons {
+  position: absolute;
+  right: 110px;
+  top: 20px;
+}
+.secret-buttons > a {
+  padding: .2rem !important;
+  font-size: 0.75rem;
+  border: 1px dashed var(--topnav-btn-bg-color-active);
 }
 
 /* #endregion */
@@ -2199,6 +2176,20 @@ ul.messiahs-handbook p.quote-person {
   .aboutme-container .social-medias {
     justify-content: center;
     grid-template-columns: repeat(6, 50px);
+  }
+
+  /* */
+  ul.messiahs-handbook {
+    padding: 1rem 0;
+    line-height: 0.8rem;
+  }
+  .secret-buttons {
+    right: 0;
+    top: 0;
+    margin-right: -15px;
+  }
+  .secret-buttons a {
+    font-size: 0.4rem;
   }
 }
 

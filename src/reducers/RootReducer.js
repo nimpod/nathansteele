@@ -599,26 +599,11 @@ const initState = {
             tags: ["Notes"]
         },
         {
-            id: "6",
-            date: "09 Sep 2020",
-            title: "Working from home as an intern during the COVID-19 pandemic",
-            content: "<p>It was challening</p>",
-            blurb: "this is the blurb",
-            tags: ["Life"]
-        },
-        {
-            id: "7",
-            date: "09 Sep 2016",
-            title: "How to deploy a react app using Github pages",
-            content: "",
-            tags: ["React"]
-        },
-        {
             id: "9",
             date: "10 Sep 2017",
-            title: "Analysing my IMDB ratings",
+            title: "Analysing my Garmin data",
             content: "",
-            tags: ["Python"]
+            tags: ["Python", "Running"]
         },
         {
             id: "12",
@@ -679,7 +664,7 @@ const initState = {
         {
             id: "20",
             date: "30 Sep 2022",
-            title: "What happens to the information that goes inside a black hole?",
+            title: "Venera spaceprobes",
             content: "blah",
             tags: ["Astronomy"]
         },

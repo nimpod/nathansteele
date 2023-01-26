@@ -10,6 +10,7 @@ import { Helpers } from 'react-scroll';
 import { removeDuplicatesFromArray } from '../../js/helpers';
 import SearchBoxTagFilterListElement from './SearchBoxTagFilterListElement';
 
+let filteredPosts = [];
 
 class Blog extends Component {   
 
@@ -324,7 +325,7 @@ class Blog extends Component {
 
         // find tag category the user selected...
         let selectedTag = e.target.parentElement.parentElement;
-        let selectedTagText = selectedTag.classList[1].split('-')[3];
+        let selectedTagText = selectedTag.classList[0].split('-')[3];
 
         // remove .active class from all tag categories...
         this.disableAllFilterBtns(tagCategoryFilterButtons);
@@ -353,9 +354,9 @@ class Blog extends Component {
         this.adjustPaddingOnInputboxText(selectedTagText);
 
         // do the filtering (iterate over blog posts via props...)
-        for (let i = 0; i < this.props.posts.length; i++) {
+        for (let i = 0; i < filteredPosts.length; i++) {
             let tr = tableRows[i];
-            let tagsInPost = this.props.posts[i]['tags'];
+            let tagsInPost = filteredPosts[i]['tags'];
 
             if (tr !== undefined) {
                 // (iterate over list of tags per blog post...)
@@ -382,12 +383,19 @@ class Blog extends Component {
         tagCategoryFilterButtons[0].classList.add('selectedThisCategory');
     }
 
+
     /**
      * The Render() function, content rendered to screen
      */
     render() {
+        // sort by date...
+        let filteredPostsBySorting = Array.from(this.props.posts).sort((a,b) => {
+            return new Date(a.date).getTime() - new Date(b.date).getTime()
+        }).reverse();
+        filteredPosts = filteredPostsBySorting;
+        
         // this is how the searching function actually works...
-        let filteredPosts = this.props.posts.filter((p) => {
+        let filteredPostsBySearch = filteredPosts.filter((p) => {
             const arrayOfTags = Array.from(this.state.tagCategoriesSelected);
             // console.log('DEBUGGING: ', arrayOfTags, p.tags, p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0);
             let isTitleEqualToSearchbox = p.title.toLowerCase().includes(this.state.searchPost.toLowerCase());
@@ -396,7 +404,7 @@ class Blog extends Component {
 
             return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;
         });
-        ///console.log(filteredPosts);
+        filteredPosts = filteredPostsBySearch;
 
         // get list of tags...
         let uniqueTagCategories = this.getListOfTagCategories();

@@ -161,10 +161,10 @@ class AboutMe extends Component {
                 </div>
                 <div className='aboutme-container'>
                     <div className='aboutme-intro'>
-                        <h1>Greetings, my name is Nozwin Bakewell.</h1>
+                        <h1>Greetings earthling, my name is Nozwin Bakewell.</h1>
                         <h4>You have stumbled upon my personal brain dump headquarters.</h4>
-                        <p className='text-v1'>I am endlessly fascinated by astronomy, the origins of life, vexilology, surrealism, and more...</p>
-                        <p className='text-v2'>Feel free to explore my <Link to='/blog'>blog</Link>, my interest in <Link to='/films'>films</Link>, <Link to='/music'>music</Link>.</p>
+                        <p className='text-v1'>I am endlessly fascinated by astronomy, the origins of life, vexilology, surrealism, and generally anything weird.</p>
+                        <p className='text-v2'>Feel free to explore my <Link to='/blog'>blog</Link>, or my interest in <Link to='/films'>films</Link>, my amateur ramblings about <Link to='/music'>music</Link>, or my adventures <a href='https://www.strava.com/athletes/45999759'>outdoors</a>...</p>
                         <p className='text-v3'>Watch the skies traveller.</p>
                         <p className='text-v4'>"Don't tell me what I can't do" - John Locke</p>
                         <p className='text-v5'>wow you're zooming in pretty far.</p>
