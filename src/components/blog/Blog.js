@@ -425,6 +425,10 @@ class Blog extends Component {
                                 placeholderText="search..."
                             />
                         </div>
+                        <div className='container-intro'>
+                            <h3 className='page-title'>Blog</h3>
+                            <h6 className='page-text-small'>{filteredPosts.length} posts</h6>
+                        </div>
                         <table>
                             <tbody>
                                 <BlogPostList 

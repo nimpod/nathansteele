@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowIcon } from "../../icons/arrowRightTriangle.svg";
+import { ReactComponent as ThreeDotsIcon } from "../../icons/threeDots.svg";
 
 class BlogPostList extends Component {
 
@@ -29,6 +30,11 @@ class BlogPostList extends Component {
                                     })}
                                 </div>
                             </td>
+                            {/*
+                            <td className='show-more-info-td-blogpostlist'>
+                                <ThreeDotsIcon className='invertable-icon' />
+                            </td>
+                            */}
                         </Link>
                     </tr>
                 )

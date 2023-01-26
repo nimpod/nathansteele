@@ -77,6 +77,7 @@
   --section-inner-bg-color: rgb(243, 243, 243);
   --page-wrapper-bg: rgb(225, 231, 238);
   --page-text-color: rgba(0, 0, 0, 0.755);
+  --page-text-color-faded: rgba(77, 76, 76, 0.57);
 
   --topnav-bg-color: rgba(253, 252, 251, 0.729);
   --topnav-btn-bg-color: rgb(225, 231, 238);
@@ -223,6 +224,7 @@
   --section-inner-bg-color: rgb(35, 31, 31);
   --page-wrapper-bg: var(--bg1);
   --page-text-color: rgba(255, 255, 255, 0.878);
+  --page-text-color-faded: rgba(255, 255, 255, 0.57);
 
   --topnav-bg-color: rgba(0, 0, 0, 0);
   --topnav-btn-bg-color: rgb(40, 38, 38);
@@ -747,9 +749,17 @@ svg.logo path:hover {
 
 .page-title {
   color: var(--page-text-color);
-  font-size: 3.0rem !important;
+  font-size: 2.0rem !important;
   font-weight: bold !important;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+}
+.page-text-small {
+  font-size: 0.8rem;
+  color: var(--page-text-color-faded);
+}
+
+.container-intro {
+  padding-bottom: 20px;
 }
 
 *:focus {
@@ -993,6 +1003,7 @@ svg.logo path:hover {
   color: var(--page-text-color);
 }
 
+
 /* Table........ */
 table {
   border-spacing: 0;
@@ -1060,10 +1071,6 @@ li.selectedThisCategory span::after {
     padding-top: 4px;
     padding-bottom: 4px;
   }
-  table tr a {
-    padding-left: 8px;
-    padding-right: 0px;
-  }
   table tr span.blogs-tr-title {
     white-space: nowrap;
     overflow: hidden;
@@ -1120,15 +1127,17 @@ div.tags {
   background-color: var(--tags-bg-color);
   color: var(--blog-table-tag-text);
 }
+
 .tag span,
 ul.tag-filter-options-list li span {
-  padding: 2px 5px 2px 10px;
   border-radius: 20px;
   font-size: 0.65rem;
   font-weight: bold;
   border-width: 1px;
   border-style: solid;
 }
+ul.tag-filter-options-list li span  {  padding: 2px 5px 2px 10px; }
+.tag span                           {  padding: 2px 0px 2px 5px;  }
 
 /* lower opacity when hovering over tag */
 .blog-post-tags .tag span:hover,
@@ -2065,13 +2074,13 @@ ul.messiahs-handbook p.quote-person {
   }
   .section-inner {
     margin: 0 !important;
-    padding: 15px 0;
-    /*
-    padding: 14px;
-    */
+    padding: 15px 8px;
   }
   .blog-post > .section-inner {
     padding: 14px;
+  }
+  .page-text-small {
+    font-size: 0.63rem;
   }
   .website-logo {
     display: none;
@@ -2135,6 +2144,7 @@ ul.messiahs-handbook p.quote-person {
     z-index: 1000;
   }
   
+  /* Button that appears at top to take user back to beginning of post... */
   .back-to-top-of-post {
     z-index: 1000;
     width: 140px;
@@ -2151,7 +2161,7 @@ ul.messiahs-handbook p.quote-person {
   /* font size of searchbox */
   .controls > div.searchbox input {
     font-size: 13px;
-    width: 300px;
+    width: 400px;
     margin-top: 3px;
   }
   .controls .filter-by-tag-button button span {
@@ -2186,7 +2196,7 @@ ul.messiahs-handbook p.quote-person {
     grid-template-columns: repeat(6, 50px);
   }
 
-  /* */
+  /* messiahs handbook on mobile... */
   ul.messiahs-handbook {
     padding: 1rem 0;
     line-height: 0.8rem;
@@ -2200,6 +2210,14 @@ ul.messiahs-handbook p.quote-person {
     font-size: 0.4rem;
   }
 }
+
+@media screen and (max-width: 1183px) {
+  .posts-container table .blogs-tr-date {
+    margin-top: -22px;
+    position: absolute;
+  }
+}
+
 
 /* bigger than mobile but smaller than pc */
 @media screen and (max-width: 1083px) {
@@ -2225,23 +2243,37 @@ ul.messiahs-handbook p.quote-person {
     display: none;
   }
 
+  /* Blog table in mobile view... */
   .posts-container table {
     width: 100%;
   }
   .posts-container table tr {
     width: 300px;
   }
-  table tr td:nth-child(2) > span {
-    width: 30%;
+  .posts-container table tr td:nth-child(2) > span {
+    width: 75%;
     display: inline-block;
   }
-  table .blogs-tr-date {
-
+  .posts-container table .blogs-tr-date {
+    margin-top: -12px;
+    position: absolute;
   }
-  table .tag span {
+  .posts-container table .tags {
+    display: none;
+  }
+  .show-more-info-td-blogpostlist {
+    display: none;
+  }
+  .show-more-info-td-blogpostlist svg {
+    width: 15px;
+    height: 15px;
+  }
+  .posts-container table .tag span {
     padding: 0 0 0 4px;
   }
 }
+
+
 
 @media screen and (max-width: 725px) {
   /* move content down a bit to make room for button */
@@ -2283,8 +2315,7 @@ ul.messiahs-handbook p.quote-person {
 
 @media screen and (max-width: 900px) { .projects-container { padding: 0px 5px; } }
 
-@media screen and (max-width: 700px) { .page-title{ font-size: 2.4rem !important; } }
-@media screen and (max-width: 400px) { .page-title{ font-size: 1.8rem !important; } }
+@media screen and (max-width: 700px) { .page-title{ font-size: 1.65rem !important; } }
 
 
 /* remove padding from a blog post as screen gets smaller */
