@@ -86,7 +86,7 @@
 /** LIGHT MODE */
 :root {
   --bg1: rgb(225, 231, 238);   /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: var(--bg1);   /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg2: rgb(251, 251, 252);   /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
 
   --text: rgb(128, 128, 128);
   --text-darker: rgb(68, 68, 68);
@@ -228,8 +228,8 @@
 
 /** DARK MODE  **/
 [data-theme="dark"] {
-  --bg1: rgb(6, 6, 6); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(0, 0, 0); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg1: rgb(9, 9, 9); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: rgb(47, 20, 28); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
@@ -385,13 +385,15 @@ h1, h2, h3, .website-logo-container a {
 
 /* Style all hyperlinks (apart from website logo!) */
 a:not(.website-logo) {
-  border-bottom: 3px solid transparent;
+  /*
   background-color: transparent;
+  */
+  border-bottom: 3px solid transparent;
   text-decoration: none;
   border: none;
   transition: color 100ms ease-out;
   color: var(--text-hyperlink) !important;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 a:not(.website-logo):hover {
   text-decoration: underline !important;
@@ -439,7 +441,6 @@ html {
   overflow-x: hidden;
   line-height: 1.6;
   letter-spacing: 0.06em;
-  min-height: 100%;
 }
 
 body {
@@ -448,11 +449,11 @@ body {
   padding: 0;
   margin: 0;
   background: linear-gradient(
-      180deg,
-      var(--bg1),
-      var(--bg2)
+    180deg,
+    var(--bg1),
+    var(--bg2)
   ) fixed;
-  animation: background_gradient_animation 1s ease infinite;    /* lasts 30s, eases in, and is infinite */
+  animation: background_gradient_animation 50s ease infinite;    /* lasts 30s, eases in, and is infinite */
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -460,10 +461,12 @@ body {
 
 body > div#root > div.App {
   display: flex;
-  height: 100vh;
-  max-height: 100vh;
   width: 100%;
   align-items: stretch;
+  /*
+  height: 100vh;
+  max-height: 100vh;
+  */
 }
 
 
@@ -751,7 +754,9 @@ svg.logo path:hover {
   width: 100vw;
   top: 0;
   padding-top: 5rem;
+  /*
   background-color: var(--page-wrapper-bg) !important;
+  */
 }
 
 .page-title {
@@ -1070,8 +1075,8 @@ table tbody td span.blogs-tr-date {
     padding-bottom: 4px;
   }
   table tr a {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 0px;
   }
   table tr span.blogs-tr-title {
     white-space: nowrap;
@@ -1420,7 +1425,7 @@ div.blog-post
 
 
 .custom-btn-1 {
-  background-color: var(--another-btn-bg-color) !important;
+  background-color: var(--another-btn-bg-color);
   box-shadow: 0 3px 5px -1px var(--general-box-shadow-color-1), 0 5px 8px 0 var(--general-box-shadow-color-4), 0 1px 14px 0 var(--general-box-shadow-color-2);
   border: 1px solid var(--topnav-collapsed-border-color);
   padding: 0 0.3rem 0.25rem 0.3rem;
@@ -2033,6 +2038,7 @@ ul.messiahs-handbook p.quote-person {
 /* #endregion */
 
 
+/* #region ----------------------------------<12: ABOUT ME PAGAE >----------------------------------------- */
 .aboutme-intro {
   position: absolute;
   color: var(--page-text-color);
@@ -2060,6 +2066,9 @@ ul.messiahs-handbook p.quote-person {
 .social-medias img {
   width: 50px;
 }
+/* #endregion */
+
+
 
 /* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
@@ -2074,49 +2083,12 @@ ul.messiahs-handbook p.quote-person {
 
 /* anything that should be hidden in mobile goes here... */
 @media screen and (max-width: 670px) {
-  /*
-  .website-links a:hover { cursor: default; }
-  .website-links a span:hover { cursor: pointer; }
-
-  #nav-top > .nav-right {
-    position: absolute;
-    right: 78px;
-    top: 15px;
-  }
-
-  #nav-top .website-links a {
-    margin-left: 0;
-  }
-
-  #nav-top.active .website-links {
-    display: block !important;
-  }
-  .website-links {
-    display: none !important;
-    position: absolute;
-    top: 50px;
-    right: 85px;
-    background-color: var(--bg1);
-    box-shadow: -1px 4px 6px var(--topnav-collapsed-shadow-color);
-  }
-  .website-links a {
-    margin: 0rem !important;
-    display: block;
-    border-bottom: 3px solid transparent;
-    border-radius: 0px !important;
-  }
-  .website-links a:hover {
-    cursor: pointer;
-  }
-  .hamburger-menu {
-    display: inline-block !important;
-  }*/
-
   .page-wrapper {
     padding-top: 0em;
   }
   .section-inner {
     margin: 0 !important;
+    padding: 14px;
   }
   .website-logo {
     display: none;
@@ -2182,10 +2154,10 @@ ul.messiahs-handbook p.quote-person {
   
   .back-to-top-of-post {
     z-index: 1000;
-    width: 110px;
+    width: 115px;
   }
   .back-to-top-of-post span {
-    font-size: 10px;
+    font-size: 11px;
   }
   
 
@@ -2205,12 +2177,6 @@ ul.messiahs-handbook p.quote-person {
     margin-left: -20px;
   }
 
-  .blog-post-info .back-to-previous-page {
-    position: relative;
-    left: 180px;
-    top: -5px;
-  }
-
   div.filter-by-tag-button > button > svg {
     margin-bottom: 0px;
   }
@@ -2218,10 +2184,13 @@ ul.messiahs-handbook p.quote-person {
   .posts-container table {
     width: 300px;
   }
+  .posts-container table tr {
+    width: 300px;
+  }
 
-
+  /* make aboutme page look normal on mobile */
   .aboutme-intro {
-    padding: 1rem 1rem;
+    padding: 5rem 1rem;
     text-align: center;
   }
   .aboutme-intro h1, .aboutme-intro h2, .aboutme-intro h3, .aboutme-intro h4, .aboutme-intro h5, .aboutme-intro h6, .aboutme-intro p {
@@ -2231,8 +2200,26 @@ ul.messiahs-handbook p.quote-person {
     justify-content: center;
     grid-template-columns: repeat(6, 50px);
   }
-  .aboutme-container .social-medias img {
-    
+}
+
+/* bigger than mobile but smaller than pc */
+@media screen and (max-width: 1083px) {
+  .blog-post-info .back-to-previous-page {
+    position: relative;
+    left: 175px;
+    top: -5px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .blog-post-info .back-to-previous-page:hover {
+    opacity: 1;
+    background-color: transparent !important;
+  }
+  .blog-post-info .back-to-previous-page:focus {
+    background-color: var(--another-btn-bg-color-hover);
+  }
+  .blog-post-info .back-to-previous-page > span {
+    display: none;
   }
 }
 
@@ -2240,11 +2227,6 @@ ul.messiahs-handbook p.quote-person {
   /* move content down a bit to make room for button */
   .blog-post-content {
     margin-top: 0px;
-  }
-  /* move button */
-  .back-to-previous-page {
-    left: 85px;
-    top: 140px;
   }
   /*
   .back-to-previous-page::after {
