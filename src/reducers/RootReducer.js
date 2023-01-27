@@ -472,13 +472,6 @@ const initState = {
             tags: ["InterestingPeople"]
         },
         {
-            id: "25",
-            date: "4 Oct 2021",
-            title: "The inner mechanisms of my mind are an enigma, Patrick Star",
-            content: "blah",
-            tags: ["InterestingPeople"]
-        },
-        {
             id: "5",
             date: "30 Sep 2022",
             title: "The Messiah's Handbook",

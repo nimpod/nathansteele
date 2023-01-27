@@ -4,7 +4,8 @@ import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 import { ReactComponent as OpenDropdownIcon } from "../../icons/openDropdown.svg";
-import SearchBox from './SearchBox';
+import { ReactComponent as ArrowLeftIcon } from "../../icons/arrowLeft.svg";
+import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
 import BlogPostList from './BlogPostList';
 import { Helpers } from 'react-scroll';
 import { removeDuplicatesFromArray } from '../../js/helpers';
@@ -282,36 +283,6 @@ class Blog extends Component {
     }
 
     /**
-     * Adjust paddingLeft property on inputbox text length
-     * TODO: make this less shit!
-     * @param {*} selectedTagText 
-     */
-    adjustPaddingOnInputboxText(selectedTagText) {
-        let inputbox = document.querySelector('.posts-container input');
-        let len = selectedTagText.length;
-        console.log(len);
-        let newPadding = 0;
-
-        if (len >= 0 && len <= 3) {
-            newPadding = len * 1.5;
-        } else if (len >= 4 && len <= 5) {
-            newPadding = len * 1.4;
-        } else if (len >= 6 && len <= 8) {
-            newPadding = len * 1.25;
-        } else if (len >= 9 && len <= 11) {
-            newPadding = len * 1.05;
-        } else if (len >= 12 && len <= 15) {
-            newPadding = len * 1.0;
-        } else if (len >= 16 && len <= 18) {
-            newPadding = len * 0.9;
-        } else {
-            newPadding = len * 0.6;
-        }
-        inputbox.style.paddingLeft = newPadding + 'rem';
-    }
-
-
-    /**
      * OnClick handler for filter button
      * This function is called when user clicks tag, with the intention of filtering blog posts
      * @param {*} e 
@@ -341,17 +312,11 @@ class Blog extends Component {
             // update state
             this.setState({tagCategorySelected: this.state.tagCategoryDefault});
 
-            // adjust padding on inputbox text
-            this.adjustPaddingOnInputboxText(selectedTagText);
-
             return;
         }
 
         // update state
         this.setState({tagCategorySelected: selectedTagText});
-
-        // adjust padding on inputbox text
-        this.adjustPaddingOnInputboxText(selectedTagText);
 
         // do the filtering (iterate over blog posts via props...)
         for (let i = 0; i < filteredPosts.length; i++) {
@@ -383,6 +348,45 @@ class Blog extends Component {
         tagCategoryFilterButtons[0].classList.add('selectedThisCategory');
     }
 
+
+    /**
+     * Move filters container left or right...
+     * @param {*} e 
+     */
+    moveFiltersContainer(movement) {
+        // find left & right buttons...
+        let btnLeft = document.querySelector('.scroll-through-tag-filters-btn.btn-move-left');
+        let btnRight = document.querySelector('.scroll-through-tag-filters-btn.btn-move-right');
+        
+        // find container of the filter tag buttons...
+        let container = document.querySelector('.tag-filter-options-list-container');
+
+        // actually move the container...
+        container.scrollLeft += movement;
+        
+        // show left button when user starts moving right...
+        if (container.scrollLeft > movement/2) {
+            if (btnLeft !== null && btnRight !== null) {
+                btnLeft.classList.add('active');
+                btnRight.classList.add('active');
+            }
+        }
+
+        // hide left button when user is at beginning...
+        if (container.scrollLeft == 0) {
+            if (btnLeft !== null && btnRight !== null) {
+                btnLeft.classList.remove('active');
+                btnRight.classList.add('active');
+            }
+        }
+        
+        // hide right button when user is at end...
+        if (container.scrollLeft >= container.scrollLeftMax) {
+            if (btnRight !== null) {
+                btnRight.classList.remove('active');
+            }
+        }
+    }
 
     /**
      * The Render() function, content rendered to screen
@@ -417,17 +421,32 @@ class Blog extends Component {
                 <div className="section-inner">
                     <div className="posts-container">
                         <div className="controls" onClick={this.handleSearchBoxClick}>
-                            <SearchBox 
-                                tagSelected={this.state.tagCategorySelected}
-                                tags={uniqueTagCategories}
-                                handleSearchBoxInput={this.handleSearchBoxInput}
-                                clickedTagFilter={this.clickedTagFilter}
-                                placeholderText="search..."
+                        <div className="searchbox">
+                            <input
+                                onChange={this.handleSearchBoxInput} 
+                                placeholder="search..." 
+                                type="text"
                             />
                         </div>
+                        </div>
                         <div className='container-intro'>
-                            <h3 className='page-title'>Blog</h3>
+                            <h3 className='page-title'>My blog</h3>
                             <h6 className='page-text-small'>{filteredPosts.length} posts</h6>
+                        </div>
+                        <div className='tag-filter-options-list-container'>
+                            <div className='btn-move-left scroll-through-tag-filters-btn' onClick={() => this.moveFiltersContainer(-80)}>
+                                <ArrowRightIcon className='invertable-icon' />
+                            </div>
+                            <ul className='tag-filter-options-list'>
+                                <SearchBoxTagFilterListElement
+                                    clickedTagFilter={this.clickedTagFilter}
+                                    tagSelected={this.tagCategorySelected}
+                                    tags={uniqueTagCategories}
+                                />
+                            </ul>
+                            <div className='btn-move-right scroll-through-tag-filters-btn active' onClick={() => this.moveFiltersContainer(80)}>
+                                <ArrowRightIcon className='invertable-icon' />
+                            </div>
                         </div>
                         <table>
                             <tbody>

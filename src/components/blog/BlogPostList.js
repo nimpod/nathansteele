@@ -12,11 +12,19 @@ class BlogPostList extends Component {
                 return (
                     <tr key={p.id} data-filter='visible'>
                         <Link to={'/blog/' + p.id}>
-                            <td>
-                                <span className='blogs-tr-date'>{p.date}</span>
+
+                            {/* table cell for Date */}
+                            <td className='blogs-tr-date'>
+                                <span>{p.date}</span>
                             </td>
-                            <td> 
-                                <span className='blogs-tr-title'>{p.title}</span>
+
+                            <td className='blogs-tr-vertical-line'>
+                                <div></div>
+                            </td>
+
+                            {/* table cell for Title & Tags */}
+                            <td className='blogs-tr-info'> 
+                                <span>{p.title}</span>
                                 <div className="tags">
                                     {p.tags.map(function(tag, index) {
                                         if (tag) {
