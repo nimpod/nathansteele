@@ -12,6 +12,7 @@ import { removeDuplicatesFromArray } from '../../js/helpers';
 import SearchBoxTagFilterListElement from './SearchBoxTagFilterListElement';
 
 let filteredPosts = [];
+let filteredPostsDisplayedLength = 0;
 
 class Blog extends Component {   
 
@@ -409,6 +410,7 @@ class Blog extends Component {
             return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;
         });
         filteredPosts = filteredPostsBySearch;
+        filteredPostsDisplayedLength = filteredPosts.length;
 
         // get list of tags...
         let uniqueTagCategories = this.getListOfTagCategories();
@@ -431,7 +433,7 @@ class Blog extends Component {
                         </div>
                         <div className='container-intro'>
                             <h3 className='page-title'>My blog</h3>
-                            <h6 className='page-text-small'>{filteredPosts.length} posts</h6>
+                            <h6 className='page-text-small'>{filteredPostsDisplayedLength} posts</h6>
                         </div>
                         <div className='tag-filter-options-list-container'>
                             <div className='btn-move-left scroll-through-tag-filters-btn' onClick={() => this.moveFiltersContainer(-80)}>

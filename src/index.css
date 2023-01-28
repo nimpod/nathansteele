@@ -20,8 +20,8 @@
 
 /* particlejs variables */
 :root {
-  --particle-count: 800;
-  --particle-density: 1000;
+  --particle-count: 500;
+  --particle-density: 1300;
   --particle-opacity: 0.4;
   --particle-opacity-min: 0.2;
   --particle-size: 1.2;
@@ -29,7 +29,7 @@
   --line-count: 110;
   --line-opacity: 0.0;
   --line-width: 0.90;
-  --linked-line-opacity: 0.9;
+  --linked-line-opacity: 0.5;
   --linked-line-radius: 50;
   --particle-color-1: rgb(23, 12, 37);
   --particle-color-2: rgb(6, 14, 6);
@@ -122,6 +122,7 @@
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(229, 229, 229);
   --blog-table-border: rgba(0, 0, 0, 0.202);
+  --blog-td-divider-color: rgba(0, 0, 0, 0.4);
   --blog-table-text: rgb(3, 2, 2);
   --blog-table-text-hover: var(--text);
   --blog-table-row-bg-hover: rgb(251, 251, 251);
@@ -271,6 +272,7 @@
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(45, 51, 58);
   --blog-table-border: rgba(131, 131, 138, 0.238);
+  --blog-td-divider-color: rgba(166, 166, 193, 0.183);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
   --blog-table-row-bg-hover: rgb(21, 21, 23);
@@ -382,8 +384,7 @@ a:not(.website-logo) {
   /*
   background-color: transparent;
   */
-  border-bottom: 3px solid transparent;
-  text-decoration: none;
+  text-decoration: none !important;
   border: none;
   transition: color 100ms ease-out;
   color: var(--text-hyperlink) !important;
@@ -395,7 +396,9 @@ a:not(.website-logo):hover {
   cursor: pointer;
   opacity: 1.0;
 }
-
+:focus {
+  outline: none !important;
+}
 
 /* Some SVG stuff... */
 .inline-svg {
@@ -1050,7 +1053,7 @@ table tbody tr[data-filter='invisible'] {
 }
 table tbody td.blogs-tr-info > span,
 table tbody td.blogs-tr-date > span {
-  color: var(--blog-table-text);
+  color: var(--page-text-color);
 }
 
 table tbody td.blogs-tr-date {
@@ -1058,7 +1061,7 @@ table tbody td.blogs-tr-date {
   padding: 0rem 0.9rem;
 }
 table tbody td.blogs-tr-date > span {
-  color:var(--page-text-color) !important;
+  color: var(--page-text-color) !important;
   font-size: 0.75rem;
 }
 
@@ -1101,10 +1104,10 @@ li.selectedThisCategory span::after {
 
 /* Individual table cell... */
 table td.blogs-tr-vertical-line > div {
-  width: 0.09rem;
-  height: 35px;
+  width: 0.095rem;
+  height: 42px;
   display: block;
-  background-color: var(--blog-table-border);
+  background-color: var(--blog-td-divider-color);
 }
 table td.blogs-tr-date > span,
 table td.blogs-tr-vertical-line {
@@ -2090,7 +2093,7 @@ ul.messiahs-handbook p.quote-person {
   }
   .section-inner {
     margin: 0 !important;
-    padding: 15px 8px;
+    padding: 15px 0px;
   }
   .blog-post > .section-inner {
     padding: 14px;
@@ -2101,7 +2104,15 @@ ul.messiahs-handbook p.quote-person {
   .website-logo {
     display: none;
   }
-
+  .posts-container > .controls,
+  .posts-container > .container-intro {
+    padding: 0px 12px;
+  }
+  table tr a:first-child{
+    padding: 0px 8px;
+  }
+  
+  
   #nav-top {
     position: fixed;
     bottom: 0;
@@ -2230,7 +2241,10 @@ ul.messiahs-handbook p.quote-person {
     width: 92%;
   }
   .scroll-through-tag-filters-btn.btn-move-right {
-    right: 0;
+    right: 8px;
+  }
+  .scroll-through-tag-filters-btn.btn-move-left {
+    margin-left: 1px;
   }
 
   /* blog table............... */
@@ -2246,6 +2260,10 @@ ul.messiahs-handbook p.quote-person {
 
   table tbody td.blogs-tr-date > span {
     font-size: 0.7rem;
+  }
+
+  table tbody td.blogs-tr-info > span {
+    font-size: 0.8rem;
   }
  
 }
