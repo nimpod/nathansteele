@@ -3,17 +3,17 @@ import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import '../index.css';
 
-import ProjectImageAssembly from '../img/assembly.png'
-import ProjectImageMosaicsOfVideos from '../img/mosaics-of-videos.png'
-import ProjectImageD3 from '../img/d3.PNG'
-import ProjectImageBobomb from '../img/bobomb.jpg'
-import ProjectImageFlappyBird from '../img/flappy_bird.png'
-import ProjectImageFitbitDataAnalysis from '../img/fitbit-data-analysis.PNG'
-import ProjectImageSpaceInvaders from '../img/spaceinvaders.png'
-import ProjectImageWebDevUniProject from '../img/web-dev-thumbnail.PNG'
-import ProjectImagePong from '../img/pc.jpg'
+import ProjectImageAssembly from '../img/assembly.png';
+import ProjectImageMosaicsOfVideos from '../img/mosaics-of-videos.png';
+import ProjectImageD3 from '../img/d3.PNG';
+import ProjectImageBobomb from '../img/bobomb.jpg';
+import ProjectImageFlappyBird from '../img/flappy_bird.png';
+import ProjectImageFitbitDataAnalysis from '../img/fitbit-data-analysis.PNG';
+import ProjectImageSpaceInvaders from '../img/spaceinvaders.png';
+import ProjectImageWebDevUniProject from '../img/web-dev-thumbnail.PNG';
+import ProjectImagePong from '../img/pc.jpg';
 import Particles from 'react-particles-js';
-import { getValueOfCSSVariable } from '../js/helpers'
+import { getValueOfCSSVariable } from '../js/helpers';
 
 
 /* particlesjs variables (defined in css) */
@@ -168,137 +168,137 @@ const Portfolio = (props) => {
                     <h2>My Projects</h2>
                     <p>A glimpse of the projects I've been working on.</p>
                 </div>
-                <div className="projects-container">
-                    <div className="project mosaics-of-videos">
+                <div className="my-custom-grid-container">
+                    <div className="card mosaics-of-videos">
                         <div className="image">
                             <a href="https://github.com/nimpod/mosaics-of-videos">
                                 <img className="cropped" src={ProjectImageMosaicsOfVideos} alt="project thumbnail" />
                             </a>
                         </div>
-                        <div className="proj-details">
-                            <span className="proj-title">
+                        <div className="card-details">
+                            <span className="card-title">
                                 <a href="https://github.com/nimpod/mosaics-of-videos">Mosaics of videos</a>
                             </span> <br />
-                            <span className="proj-date">2019</span> <br /> <br />
-                            <span className="proj-desc">Made a Python program that converts any image into a mosaic of frames from a movie</span>
+                            <span className="card-date">2019</span> <br /> <br />
+                            <span className="card-desc">Made a Python program that converts any image into a mosaic of frames from a movie</span>
                         </div>
                     </div>
 
-                    <div className="project D3js">
+                    <div className="card D3js">
                         <div className="image">
                             <a href="https://codepen.io/cozminski_katax/pen/ROGKQd">
                                 <img className="cropped" src={ProjectImageD3}  alt="project thumbnail" />
                             </a>
                         </div>
-                        <div className="proj-details">
-                            <span className="proj-title">
+                        <div className="card-details">
+                            <span className="card-title">
                                 <a href="https://codepen.io/cozminski_katax/pen/ROGKQd">Visualise data in D3</a>
                             </span> <br />
-                            <span className="proj-date">2019</span> <br /> <br />
-                            <span className="proj-desc">Data visualisation projects using the D3.js library</span>
+                            <span className="card-date">2019</span> <br /> <br />
+                            <span className="card-desc">Data visualisation projects using the D3.js library</span>
                         </div>
                     </div>
 
-                    <div className="project fire-escape">
+                    <div className="card fire-escape">
                         <div className="image">
                             <a href="https://github.com/nimpod/super-mario-bros-minigame">
                                 <img className="cropped" src={ProjectImageBobomb} alt="project thumbnail"  />
                             </a>
                         </div>
-                        <div className="proj-details">
-                            <span className="proj-title">
+                        <div className="card-details">
+                            <span className="card-title">
                                 <a href="https://github.com/nimpod/super-mario-bros-minigame">Super Mario Bros minigame</a>
                             </span> <br />
-                            <span className="proj-date">2019</span> <br /> <br />
-                            <span className="proj-desc">Recreated the minigame 'Danger Bob-omb!' from Super Mario Bros using Pygame</span>
+                            <span className="card-date">2019</span> <br /> <br />
+                            <span className="card-desc">Recreated the minigame 'Danger Bob-omb!' from Super Mario Bros using Pygame</span>
                         </div>
                     </div>
 
-                    <div className="project flappy-bird-app">
+                    <div className="card flappy-bird-app">
                         <div className="image">
                             <a href="https://github.com/nimpod">
                                 <img className="cropped" src={ProjectImageFlappyBird} alt="project thumbnail"  />
                             </a>
                         </div>
-                        <div className="proj-details">
-                            <span className="proj-title">
+                        <div className="card-details">
+                            <span className="card-title">
                                 <a href="projects/space-invaders.html">Flappy Bird App</a>
                             </span> <br />
-                            <span className="proj-date">2019</span> <br /> <br />
-                            <span className="proj-desc">Recreated Flappy Bird as an Android app using Java.</span>
+                            <span className="card-date">2019</span> <br /> <br />
+                            <span className="card-desc">Recreated Flappy Bird as an Android app using Java.</span>
                         </div>
                     </div>
 
-                    <div className="project fitbit-data-analysis">
+                    <div className="card fitbit-data-analysis">
                         <div className="image">
                             <a href="https://github.com/nimpod/fitbit-data-analysis" target="_blank">
                                 <img className="cropped" src={ProjectImageFitbitDataAnalysis} alt="project thumbnail"  />
                             </a>
                         </div>
-                        <div className="proj-details">
-                            <span className="proj-title">
+                        <div className="card-details">
+                            <span className="card-title">
                                 <a href="https://github.com/nimpod/fitbit-data-analysis" target="_blank">Fitbit Data Analysis</a>
                             </span> <br />
-                            <span className="proj-date">2018</span> <br /> <br />
-                            <span className="proj-desc">Extracted and produced various types of analysis on my Fitbit data. Programmed in Python, using Pandas and Numpy for data analysis.</span>
+                            <span className="card-date">2018</span> <br /> <br />
+                            <span className="card-desc">Extracted and produced various types of analysis on my Fitbit data. Programmed in Python, using Pandas and Numpy for data analysis.</span>
                         </div>
                     </div>
 
-                    <div className="project space-invaders">
+                    <div className="card space-invaders">
                         <div className="image">
                             <a href="https://github.com/nimpod/space-invaders">
                                 <img className="cropped" src={ProjectImageSpaceInvaders} alt="project thumbnail"  />
                             </a>
                         </div>
-                        <div className="proj-details">
-                            <span className="proj-title">
+                        <div className="card-details">
+                            <span className="card-title">
                                 <a href="https://github.com/nimpod/space-invaders">Space Invaders</a>
                             </span> <br />
-                            <span className="proj-date">2018</span> <br /> <br />
-                            <span className="proj-desc">I rebuilt space invaders in Java.</span>
+                            <span className="card-date">2018</span> <br /> <br />
+                            <span className="card-desc">I rebuilt space invaders in Java.</span>
                         </div>
                     </div>
 
-                    <div className="project error-corrector">
+                    <div className="card error-corrector">
                         <div className="image">
                             <a href="https://github.com/nimpod/decorruptor" target="_blank">
                                 <img className="cropped" src={ProjectImageAssembly} alt="project thumbnail" />
                             </a>
                         </div>
-                        <div className="proj-details">
-                            <span className="proj-title">
+                        <div className="card-details">
+                            <span className="card-title">
                                 <a href="https://github.com/nimpod/decorruptor">Error corrector for corrupted binary data</a>
                             </span> <br />
-                            <span className="proj-date">2018</span> <br /> <br />
-                            <span className="proj-desc">Built a series of ARMv8 Assembly programs to manage errors within corrupted binary data</span>
+                            <span className="card-date">2018</span> <br /> <br />
+                            <span className="card-desc">Built a series of ARMv8 Assembly programs to manage errors within corrupted binary data</span>
                         </div>
                     </div>
 
-                    <div className="project html-css-tutorial-site">
+                    <div className="card html-css-tutorial-site">
                         <div className="image">
                             <img className="cropped" src={ProjectImageWebDevUniProject} alt="project thumbnail"  />
                         </div>
-                        <div className="proj-details">
-                            <span className="proj-title">
+                        <div className="card-details">
+                            <span className="card-title">
                                 <a href="projects/space-invaders.html">HTML & CSS tutorial site</a>
                             </span> <br />
-                            <span className="proj-date">2018</span> <br /> <br />
-                            <span className="proj-desc">Over the course of 2 months I built an entire tutorial site for learning HTML, CSS and other web development skills. Ongoing project.</span>
+                            <span className="card-date">2018</span> <br /> <br />
+                            <span className="card-desc">Over the course of 2 months I built an entire tutorial site for learning HTML, CSS and other web development skills. Ongoing project.</span>
                         </div>
                     </div>
 
-                    <div className="project pong">
+                    <div className="card pong">
                         <div className="image">
                             <a href="https://github.com/nimpod/pong" target="_blank">
                                 <img className="cropped" src={ProjectImagePong}  alt="project thumbnail" />
                             </a>
                         </div>
-                        <div className="proj-details">
-                            <span className="proj-title">
+                        <div className="card-details">
+                            <span className="card-title">
                                 <a href="https://github.com/nimpod/pong">Pong</a>
                             </span> <br />
-                            <span className="proj-date">2017</span> <br /> <br />
-                            <span className="proj-desc">Programmed Pong on the Casio FX-9750GII Graphing Calculator using my first programming language - Casio BASIC.</span>
+                            <span className="card-date">2017</span> <br /> <br />
+                            <span className="card-desc">Programmed Pong on the Casio FX-9750GII Graphing Calculator using my first programming language - Casio BASIC.</span>
                         </div>
                     </div>
 

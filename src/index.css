@@ -85,7 +85,7 @@
   --topnav-btn-bg-color-active: rgb(90, 89, 119);
   --topnav-btn-text-color: rgb(4, 3, 3);
   --topnav-btn-text-color-hover: rgb(0, 0, 0);
-  --topnav-btn-text-color-active: rgb(255, 255, 255); 
+  --topnav-btn-text-color-active: rgb(129, 213, 101);
   --topnav-collapsed-shadow-color: rgba(0, 0, 0, 0.331);
   --topnav-collapsed-bg-color: rgb(245, 245, 245);
   --topnav-collapsed-btn-bg-color: rgb(245, 245, 245);
@@ -94,6 +94,10 @@
   --topnav-collapsed-border-color: rgba(63, 63, 65, 0.7);
   --button-border-color-onclick: rgb(126, 120, 120);
 
+  --submenu-btn-bg-color-active: rgb(90, 90, 106);
+  --submenu-btn-bg-color-hover: rgb(135, 135, 140);
+  --submenu-btn-text-color-active: rgb(129, 213, 101);
+  
   --topnav-logo-bg-color: rgb(233, 233, 234);
   --logo-path-color: rgb(218, 234, 226);
   --logo-path-color-onclick: rgba(5, 120, 72, 0.897);
@@ -122,7 +126,7 @@
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(229, 229, 229);
   --blog-table-border: rgba(0, 0, 0, 0.202);
-  --blog-td-divider-color: rgba(0, 0, 0, 0.4);
+  --blog-td-divider-color: rgba(52, 49, 49, 0.192);
   --blog-table-text: rgb(3, 2, 2);
   --blog-table-text-hover: var(--text);
   --blog-table-row-bg-hover: rgb(251, 251, 251);
@@ -157,7 +161,7 @@
   --blog-post-subgroup-border-color: rgb(224, 223, 223);
 
   --tags-border-color: rgba(199, 199, 204, 0.627);
-  --tags-text-color: rgb(75, 72, 72);
+  --tags-text-color: rgb(0, 0, 0);
   --tags-bg-color: rgb(255, 255, 255);
   --tags-Hardware-text-color: rgb(17, 140, 81);
   --tags-bg-color-selected: rgb(12, 12, 13);
@@ -244,6 +248,10 @@
   --topnav-collapsed-btn-bg-color-active: rgb(53, 53, 57);
   --topnav-collapsed-border-color: rgba(50, 48, 57, 0.941);
   --button-border-color-onclick: rgb(153, 149, 149);
+
+  --submenu-btn-text-color-active: rgb(0, 255, 208);
+  --submenu-btn-bg-color-hover: rgb(44, 44, 46);
+  --submenu-btn-bg-color-active: rgb(60, 60, 62);
 
   --logo-path-color: rgb(115, 220, 140);
   --logo-path-color-onclick: rgba(236, 255, 230, 0.897);
@@ -529,6 +537,7 @@ Proposed structure of top navbar
   padding: 0.375rem;
   background-color: var(--topnav-btn-bg-color);
   border-radius: 0.5rem;
+  font-weight: 500;
   /*
   display: inline-block;
   min-width: 70px;
@@ -755,7 +764,7 @@ svg.logo path:hover {
 
 .page-title {
   color: var(--page-text-color);
-  font-size: 3.3rem !important;
+  font-size: 3.0rem !important;
   font-weight: bold !important;
   margin-bottom: 5px;
 }
@@ -905,22 +914,26 @@ svg.logo path:hover {
   padding-top: 0px;
 }
 
-.projects-container {
+/* #endregion */
+
+
+/* #region ---------------------------------< 7: MY CUSTOM GRID>---------------------------------- */
+.my-custom-grid-container {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
   padding: 0 120px;
 }
 
 /* Media queries for the project images */
-@media screen and (min-width: 1910px) { .project img { width: 18.5vw; } }
-@media screen and (max-width: 1900px) { .project img { width: 15.9vw; } }
-@media screen and (max-width: 1879px) { .project img { width: 18.9vw; } }
-@media screen and (max-width: 1595px) { .project img { width: 24.1vw; } }
-@media screen and (max-width: 1282px) { .project img { width: 32.1vw; } }
-@media screen and (max-width: 969px) { .project img { width: 48.1vw; } }
-@media screen and (max-width: 656px) { .project img { width: 97.1vw; } }
+@media screen and (min-width: 1910px) { .card img { width: 18.5vw; } }
+@media screen and (max-width: 1900px) { .card img { width: 15.9vw; } }
+@media screen and (max-width: 1879px) { .card img { width: 18.9vw; } }
+@media screen and (max-width: 1595px) { .card img { width: 24.1vw; } }
+@media screen and (max-width: 1282px) { .card img { width: 32.1vw; } }
+@media screen and (max-width: 969px) { .card img { width: 48.1vw; } }
+@media screen and (max-width: 656px) { .card img { width: 97.1vw; } }
 /* -- I had this before because I wanted two projects to be visible on the same row on a phone...
   ... but overtime I've not been a big fan of it, so I'm commenting it out for now.
 @media screen and (max-width: 500px) {
@@ -933,27 +946,28 @@ svg.logo path:hover {
 }
 */
 
-.project {
+.my-custom-grid-container > .card {
   background-color: var(--project-card-bg) !important;
   border: 1px solid var(--project-card-bg) !important;
   box-shadow: 0 1px 3px 0 var(--project-card-shadow),0 0 0 1px var(--project-card-bg) !important;
   text-align: left;
 }
 
-.project, .image {
+.card, 
+.image {
   border-radius: 10px;
 }
 
-.project a {
+.card a {
   text-decoration: none;
   opacity: 0.9 !important;
 }
 
-.project img {
+.card img {
   height: 29vh;
 }
 
-.project * {
+.card * {
   color: var(--project-card-text-color);
 }
 
@@ -968,31 +982,31 @@ svg.logo path:hover {
   border: 1px solid var(--project-card-bg);
 }
 
-.proj-title {
+.card-title {
   font-size: 1.4rem;
 }
-.proj-title a {
+.card-title a {
   color: var(--project-card-text-color) !important;
   opacity: 1.0;
 }
 
-.proj-date { 
+.card-date { 
   font-size: 0.8rem;
 }
-.proj-details { 
+.card-details { 
   font-size: 0.85rem;
   padding: 3px 5px 10px 5px;
 }
 
 /* Rules for when mouse hovers over a project */
-.project a:hover {
+.card a:hover {
   color: var(--project-card-text-hover);
 }
-.project a:hover {
+.card a:hover {
   transition: opacity 400ms;
   opacity: 0.65 !important;
 }
-.image:hover + .proj-details > .proj-title > a {
+.image:hover + .card-details > .card-title > a {
   color: var(--project-card-text-hover);
 }
 /* #endregion */
@@ -1111,9 +1125,9 @@ table td.blogs-tr-vertical-line {
   vertical-align: middle;
 }
 
-table td:nth-child(1) { width: 1%; max-width: 50px; min-width: 110px; }   /* 1st column */
-table td:nth-child(2) { width: 1%; }
-table td:nth-child(3) { width: 90%; }   /* 2nd column */
+.posts-container table td:nth-child(1) { width: 1%; max-width: 50px; min-width: 110px; }   /* 1st column */
+.posts-container table td:nth-child(2) { width: 1%; }   /* 2nd column */
+.posts-container table td:nth-child(3) { width: 90%; }   /* 3rd column */
 
 /*
 Structure of tags inside a table...
@@ -2072,6 +2086,67 @@ ul.messiahs-handbook p.quote-person {
 
 
 
+/* #region -----------------------------------<13: FILMS PAGE>------------------------------------------ */
+.sidebar-menu > .films-submenu {
+  display: block;
+  text-align: center;
+  padding-bottom: 13px;
+}
+
+.films-submenu > a {
+  padding: 0.7rem 1.0rem;
+  border-radius: 0px;
+  opacity: 1 !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  background-color:  var(--section-inner-bg-color);
+  border-bottom: 4px solid var(--section-inner-bg-color);
+}
+.films-submenu > a:hover {
+  background-color: var(--submenu-btn-bg-color-hover);
+  border-bottom: 4px solid var(--submenu-btn-bg-color-hover);
+}
+.films-submenu > a.active {
+  border-bottom: 4px solid var(--submenu-btn-text-color-active);
+  background-color: var(--submenu-btn-bg-color-active);
+}
+.films-submenu > a.active > span {
+  color: var(--submenu-btn-text-color-active);
+}
+
+.films-submenu > a:nth-child(1) {
+  border-top-left-radius: 15px;
+}
+.films-submenu > a:nth-child(3) {
+  border-top-right-radius: 15px;
+}
+
+.films-submenu > a > span {
+  font-size: 0.8rem;
+}
+.films-submenu > a:not(.active) > span {
+  color: rgb(132, 135, 143);
+}
+.films-submenu > a:not(.active):hover > span {
+  color: rgb(207, 204, 204);
+}
+
+
+/* */
+#table-of-films-watched-per-month {
+  margin-top: 30px;
+}
+#table-of-films-watched-per-month td:nth-child(1) { width: 20%; }   /* 1st column */
+#table-of-films-watched-per-month td:nth-child(2) { width: 20%; }   /* 2nd column */
+#table-of-films-watched-per-month td:nth-child(3) { width: 20%; }   /* 3rd column */
+#table-of-films-watched-per-month td:nth-child(4) { width: 20%; }   /* 4th column */
+#table-of-films-watched-per-month td:nth-child(5) { width: 5%; }
+#table-of-films-watched-per-month td:nth-child(6) { width: 5%; }
+#table-of-films-watched-per-month td:nth-child(7) { width: 5%; }
+#table-of-films-watched-per-month td:nth-child(8) { width: 5%; }
+
+
+
 /* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
@@ -2325,7 +2400,7 @@ ul.messiahs-handbook p.quote-person {
 @media screen and (max-width: 500px) { #about{ padding: 50px 30px 0px 30px; } }
 @media screen and (max-width: 400px) { #about{ padding: 50px 5px 0px 5px; } }
 
-@media screen and (max-width: 900px) { .projects-container { padding: 0px 5px; } }
+@media screen and (max-width: 900px) { .my-custom-grid-container { padding: 0px 5px; } }
 
 @media screen and (max-width: 700px) { .page-title{ font-size: 1.65rem !important; } }
 

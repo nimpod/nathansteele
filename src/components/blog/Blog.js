@@ -423,13 +423,13 @@ class Blog extends Component {
                 <div className="section-inner">
                     <div className="posts-container">
                         <div className="controls" onClick={this.handleSearchBoxClick}>
-                        <div className="searchbox">
-                            <input
-                                onChange={this.handleSearchBoxInput} 
-                                placeholder="search..." 
-                                type="text"
-                            />
-                        </div>
+                            <div className="searchbox">
+                                <input
+                                    onChange={this.handleSearchBoxInput} 
+                                    placeholder="search..." 
+                                    type="text"
+                                />
+                            </div>
                         </div>
                         <div className='container-intro'>
                             <h3 className='page-title'>My blog</h3>

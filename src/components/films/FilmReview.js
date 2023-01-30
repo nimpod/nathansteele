@@ -8,7 +8,7 @@ import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 class FilmReview extends Component {
     render() {
         return(
-            <div className='page-wrapper'>
+            <div className='page-wrapper films'>
                 <div className='section-inner'>
                     <h3 className='page-title'>a review for a particular film...</h3>
                 </div>

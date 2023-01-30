@@ -25,10 +25,12 @@ import UniversityAssignment from './components/university/UniversityAssignment';
 
 // Films page
 import Films from './components/films/Films';
+import PageFavouriteFilmsList from './components/films/PageFavouriteFilmsList';
+import PageFilmLog from './components/films/PageFilmLog';
+import PageFilmStats from './components/films/PageFilmStats';
 import FilmReview from './components/films/FilmReview';
 
 // Music page
-import Music from './components/music/Music';
 import MusicReview from './components/music/MusicReview';
 
 
@@ -52,10 +54,12 @@ export default class App extends Component {
                       <Route path='/blog/:post_id' component={BlogPost} exact />
 
                       <Route path='/films' component={Films} exact />
-                      <Route path='/films/:film_id' component={FilmReview} />
+                      <Route path='/films/favourite_films' component={PageFavouriteFilmsList} exact />
+                      <Route path='/films/favourite_films/:film_id' component={FilmReview} exact />
+                      <Route path='/films/film_log' component={PageFilmLog} exact />
+                      <Route path='/films/film_stats' component={PageFilmStats} exact />
 
-                      <Route path='/music' component={Music} exact />
-                      <Route path='/music/:album_id' component={MusicReview} />
+                      <Route path='/favourite_albums/:album_id' component={MusicReview} />
 
                       <Route path='/university' component={University} exact />
                       <Route path='/university/:assignment_id' component={UniversityAssignment} exact />
