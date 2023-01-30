@@ -9,10 +9,13 @@ import FilmsSubmenu from './FilmsSubmenu';
 class PageFilmStats extends Component {
     render() {
         return(
-            <div className='page-wrapper film-stats'>
+            <div className='page-wrapper filmspage film-stats'>
                 <FilmsSubmenu />
                 <div className='section-inner'>
-                    <h3 className='page-title'>Stats</h3>
+                    <div className='container-intro'>
+                        <h3 className='page-title'>Stats</h3>
+                        <p className='page-text-small'>insert interesting analysis of my ratings...</p>
+                    </div>
                 </div>
             </div>
         )

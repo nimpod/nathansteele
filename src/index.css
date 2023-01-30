@@ -79,7 +79,7 @@
   --page-text-color: rgba(0, 0, 0, 0.755);
   --page-text-color-faded: rgba(77, 76, 76, 0.57);
 
-  --topnav-bg-color: rgba(253, 252, 251, 0.729);
+  --topnav-bg-color: rgba(253, 252, 251, 0);
   --topnav-btn-bg-color: rgb(225, 231, 238);
   --topnav-btn-bg-color-hover: rgb(204, 205, 213);
   --topnav-btn-bg-color-active: rgb(90, 89, 119);
@@ -234,7 +234,7 @@
   --page-text-color: rgba(255, 255, 255, 0.878);
   --page-text-color-faded: rgba(255, 255, 255, 0.57);
 
-  --topnav-bg-color: rgba(0, 0, 0, 0);
+  --topnav-bg-color: rgba(0, 0, 0, 0.676);
   --topnav-btn-bg-color: rgb(40, 38, 38);
   --topnav-btn-bg-color-hover: rgb(41, 40, 44);
   --topnav-btn-bg-color-active: rgb(83, 80, 80);
@@ -526,8 +526,8 @@ Proposed structure of top navbar
   align-items: center;
   padding: 0.9em 1em;
   font-size: 1.0rem;
-  margin-left: 3.5rem;
-  /* background-color: var(--topnav-bg-color); */
+  margin-left: 4.3em;
+  background-color: var(--topnav-bg-color);
 }
 
 /* target every link in the entire #nav */
@@ -1493,6 +1493,11 @@ div.blog-post
   100% { left: 0px;  top: 30px;}
 }
 
+.back-to-previous-page,
+.back-to-top-of-post {
+  z-index: 999999999999999999999;
+}
+
 /*
 Proposed structure of blog post content:
 --------------------------------
@@ -2085,7 +2090,6 @@ ul.messiahs-handbook p.quote-person {
 /* #endregion */
 
 
-
 /* #region -----------------------------------<13: FILMS PAGE>------------------------------------------ */
 .sidebar-menu > .films-submenu {
   display: block;
@@ -2145,6 +2149,15 @@ ul.messiahs-handbook p.quote-person {
 #table-of-films-watched-per-month td:nth-child(7) { width: 5%; }
 #table-of-films-watched-per-month td:nth-child(8) { width: 5%; }
 
+.films-log table thead {
+  height: 50px;
+}
+.films-log table tr {
+  font-size: 0.85rem;
+}
+
+/* #endregion */
+
 
 
 /* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
@@ -2176,8 +2189,8 @@ ul.messiahs-handbook p.quote-person {
   .website-logo {
     display: none;
   }
-  .posts-container > .controls,
-  .posts-container > .container-intro {
+  .section-inner .controls,
+  .section-inner .container-intro {
     padding: 0px 12px;
   }
   table tr a:first-child{
@@ -2320,24 +2333,35 @@ ul.messiahs-handbook p.quote-person {
   }
 
   /* blog table............... */
-  table td:nth-child(1) {
+  .posts-container table td:nth-child(1) {
     width: 1%;
     max-width: 100px;
-    min-width: 80px;
+    min-width: 85px;
   }
-
-  table tbody td.blogs-tr-date {
+  .posts-container table tbody td.blogs-tr-date {
     padding: 0rem;
   }
-
-  table tbody td.blogs-tr-date > span {
+  .posts-container table tbody td.blogs-tr-date > span {
     font-size: 0.7rem;
   }
-
-  table tbody td.blogs-tr-info > span {
+  .posts-container table tbody td.blogs-tr-info > span {
     font-size: 0.8rem;
   }
- 
+
+
+  /*  */
+  .filmspage {
+    margin-top: 11px;
+  }
+  .films-log table th {
+    font-size: 0.7rem;
+  }
+  .films-log table td:nth-child(1) {
+    font-size: 0.5rem;
+  }
+  .films-log table td {
+    font-size: 0.7rem;
+  }
 }
 
 

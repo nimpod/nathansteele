@@ -9,10 +9,13 @@ import FilmsSubmenu from './FilmsSubmenu';
 class PageFavouriteFilmsList extends Component {
     render() {
         return(
-            <div className='page-wrapper favourite-films'>
+            <div className='page-wrapper filmspage favourite-films'>
                 <FilmsSubmenu />
                 <div className='section-inner'>
-                    <h3 className='page-title'>My top 200 films</h3>
+                 <div className='container-intro'>
+                        <h3 className='page-title'>My favourite films</h3>
+                        <p className='page-text-small'>In order of 'best' to 'not-best-but-still-amazing' here is my official top 200 films!</p>
+                    </div>
                 </div>
             </div>
         )

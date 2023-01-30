@@ -10,17 +10,20 @@ import FilmsSubmenu from './FilmsSubmenu';
 class PageFilmLog extends Component {
     render() {
         return(
-            <div className='page-wrapper films-log'>
+            <div className='page-wrapper filmspage films-log'>
                 <FilmsSubmenu />
                 <div className='section-inner'>
-                    <h3 className='page-title'>What I watched each month</h3>
+                    <div className='container-intro'>
+                        <h3 className='page-title'>Film log</h3>
+                        <p className='page-text-small'>A list of the films I have watched every month (June 2021 - present)</p>
+                    </div>
                     <table id='table-of-films-watched-per-month'>
                         <thead>
                             <tr>
                                 <th>Month</th>
-                                <th>My average rating</th>
-                                <th>IMDb average rating</th>
-                                <th>Number of films watched</th>
+                                <th>Avg rating (me)</th>
+                                <th>Avg rating (imdb)</th>
+                                <th>Total watched</th>
                                 <th>7s</th>
                                 <th>8s</th>
                                 <th>9s</th>
