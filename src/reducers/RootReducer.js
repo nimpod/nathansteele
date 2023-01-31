@@ -746,9 +746,9 @@ const initState = {
         {
             month: '2023 January',
             url: "https://letterboxd.com/nbofni/list/2023-january-01-23/",
-            myAverageRating: 5.842105263,
+            myAverageRating: 5.846153846,
             imdbAverageRating: 6.8,
-            numOfFilmsWatched: 38,
+            numOfFilmsWatched: 39,
             numOf7s: 13,
             numOf8s: 5,
             numOf9s: 0,
