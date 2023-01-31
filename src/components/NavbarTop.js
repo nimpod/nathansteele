@@ -141,6 +141,11 @@ class NavbarTop extends Component {
             <header id="nav-top" className="animated faster slideInUp">
                 <div className="nav-left">
                     <nav className="website-links">
+                        <div className="website-logo-container">                            
+                            <NavLink to="/aboutme" className="navlink website-logo">
+                                <Logo className="logo" />
+                            </NavLink>
+                        </div>
                         <NavLink to="/aboutme" title='About Me' className="navlink">
                             <span>About me</span>
                             <span className='mobile-view-title'>About</span>

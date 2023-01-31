@@ -8,16 +8,20 @@ import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 class FilmsSumenu extends Component {
 
     clickedSubmenuItem = (e) => {
-        console.log(e.target);
+        // if(e.target.tagName == "A") {
         let anchorTag = e.target;
         let spanTag = e.target.childNodes[0];
-
+        
         if (e.target.tagName == "SPAN") {
             anchorTag = e.target.parentElement;
             spanTag = e.target;
         }
-        
-        anchorTag.classList.toggle('active');
+
+        // dont toggle if we clicked currently active submenu item, otherwise its fine to toggle...
+        let currentlyActiveSubmenuItem = document.querySelector('.sidebar-submenu > .films-submenu > a.navlink.active');
+        if (!e.target == currentlyActiveSubmenuItem) {
+            anchorTag.classList.toggle('active');
+        }
     }
 
     render() {

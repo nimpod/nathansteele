@@ -6,6 +6,7 @@ import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 import FilmsSubmenu from './FilmsSubmenu';
 
+
 class PageFavouriteFilmsList extends Component {
     render() {
         return(
