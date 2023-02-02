@@ -80,8 +80,8 @@
   --page-text-color-faded: rgba(77, 76, 76, 0.57);
 
   --topnav-bg-color: rgba(253, 252, 251, 0);
-  --topnav-btn-bg-color: rgb(209, 217, 225);
-  --topnav-btn-bg-color-hover: rgb(167, 170, 190);
+  --topnav-btn-bg-color: rgba(253, 252, 251, 0);
+  --topnav-btn-bg-color-hover: rgb(210, 212, 221);
   --topnav-btn-bg-color-active: rgb(90, 89, 119);
   --topnav-btn-text-color: rgb(4, 3, 3);
   --topnav-btn-text-color-hover: rgb(0, 0, 0);
@@ -235,10 +235,10 @@
   --page-text-color-faded: rgba(255, 255, 255, 0.57);
 
   --topnav-bg-color: rgba(0, 0, 0, 0.676);
-  --topnav-btn-bg-color: rgb(40, 38, 38);
+  --topnav-btn-bg-color: rgba(0, 0, 0, 0.711);
   --topnav-btn-bg-color-hover: rgb(41, 40, 44);
   --topnav-btn-bg-color-active: rgb(83, 80, 80);
-  --topnav-btn-text-color: rgb(163, 163, 163);
+  --topnav-btn-text-color: rgb(189, 188, 188);
   --topnav-btn-text-color-hover: rgb(255, 255, 255);
   --topnav-btn-text-color-active: rgb(0, 255, 208);
   --topnav-logo-bg-color: rgb(37, 37, 39);
@@ -525,7 +525,7 @@ Proposed structure of top navbar
   width: 100vw;
   align-items: center;
   padding: 0.1em 1em;
-  font-size: 1.0rem;
+  font-size: 1.05rem;
   background-color: var(--topnav-bg-color);
 }
 
@@ -535,8 +535,8 @@ Proposed structure of top navbar
   text-decoration: none !important;
   padding: 0.5rem 0.7rem;
   background-color: var(--topnav-btn-bg-color);
-  border-radius: 0.9rem;
   font-weight: 500;
+  border-radius: 0.5rem;
   /*
   display: inline-block;
   min-width: 70px;
@@ -548,17 +548,17 @@ Proposed structure of top navbar
 }
 #nav-top > .nav-left > .website-links > a.navlink.active {
   color: var(--topnav-btn-text-color-active) !important;
-  background-color: var(--topnav-btn-bg-color-active);
   opacity: 1;
+  background-color: var(--topnav-btn-bg-color-active);
 }
 
 /* target the div container .website-links */
 #nav-top .website-links {
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 0.83rem;
 }
 #nav-top .website-links a {
-  margin-left: 0.6em;
+  margin-left: 0.9em;
   opacity: 1;
 }
 #nav-top .website-links a > span.mobile-view-title {
@@ -2236,6 +2236,8 @@ ul.messiahs-handbook p.quote-person {
     font-size: 1.3rem;
     margin-left: 0.3em;
     padding: 0.375rem !important;
+    border-radius: 0.9rem;
+    border-width: 0px !important;
   }
   #nav-top .theme-toggle .inline-svg {
     width: 26px;
