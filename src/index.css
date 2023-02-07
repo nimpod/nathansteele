@@ -63,6 +63,10 @@
   --tag-bg-color-Vexilology: rgba(120, 197, 214, 0.4);
 }
 
+:root{
+  --sidebar-width: 4.2rem;
+}
+
 /** LIGHT MODE */
 :root {
   --bg1: rgb(225, 231, 238);   /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
@@ -78,6 +82,17 @@
   --page-wrapper-bg: rgb(225, 231, 238);
   --page-text-color: rgba(0, 0, 0, 0.755);
   --page-text-color-faded: rgba(77, 76, 76, 0.57);
+
+  --sidenav-bg-color: rgb(29, 34, 36); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
+  --sidenav-shadow-color: rgba(0, 0, 0, 0.324);
+  --sidenav-item-border-color-active: rgb(107, 110, 113);
+  --sidenav-item-text-color: rgb(176, 177, 181);
+  --sidenav-item-bg-color: rgb(64, 64, 64);
+  --sidenav-item-bg-color-active: rgb(81, 83, 87);
+  --sidenav-films-bg-color: rgb(249, 72, 72);
+  --sidenav-music-bg-color: rgb(223, 253, 72); 
+  --sidenav-blog-bg-color: rgb(40, 188, 251);
+  --sidenav-art-bg-color: rgb(38, 242, 174);
 
   --topnav-bg-color: rgba(253, 252, 251, 0);
   --topnav-btn-bg-color: rgba(253, 252, 251, 0);
@@ -106,11 +121,6 @@
   --logo-box-shadow-color: rgba(42, 36, 74, 0.238);
   --logo-border-color: rgba(231, 231, 236, 0.934);
   --logo-inversion-number: 1;
-
-  --sidenav-bg-color: rgba(253, 252, 251, 0);
-  --sidenav-shadow-color: rgba(0,0,0,.45);
-  --sidenav-item-text-color: rgb(33, 33, 33);
-  --sidenav-item-border-bottom-hover: rgb(3, 170, 140);
 
   --scrollbar-clickybit-bg-color: rgb(18, 169, 119);
   --scrolbar-notclickybit-bg-color: rgb(19, 18, 18); 
@@ -191,6 +201,8 @@
   --university-assignment-subheading-detail-text-color: rgb(15, 20, 30);
   --university-assignment-main-text-color: rgb(135, 138, 143);
 
+  --notes-sidenav-item-text-color: rgb(33, 33, 33);
+
   --messiahshandbook-grid-border-color: rgba(209, 209, 221, 0.882);
   --messiahshandbook-grid-border-color-hover: rgb(143, 150, 170);
 
@@ -229,10 +241,21 @@
   --text-hyperlink: rgb(29, 199, 251);
   --text-hyperlink-hover: rgb(78, 202, 255);
 
-  --section-inner-bg-color: rgb(35, 31, 31);
-  --page-wrapper-bg: var(--bg1);
+  --section-inner-bg-color: rgb(35, 31, 31);    /* rgb(34, 40, 42); */
+  --page-wrapper-bg: rgb(34, 40, 42);
   --page-text-color: rgba(255, 255, 255, 0.878);
   --page-text-color-faded: rgba(255, 255, 255, 0.57);
+
+  --sidenav-bg-color: rgb(29, 34, 36); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
+  --sidenav-shadow-color: rgba(0, 0, 0, 0.748);
+  --sidenav-item-border-color-active: rgb(107, 110, 113);
+  --sidenav-item-text-color: rgb(176, 177, 181);
+  --sidenav-item-bg-color: rgb(64, 64, 64);
+  --sidenav-item-bg-color-active: rgb(81, 83, 87);
+  --sidenav-films-bg-color: rgb(249, 72, 72);
+  --sidenav-music-bg-color: rgb(223, 253, 72); 
+  --sidenav-blog-bg-color: rgb(40, 188, 251);
+  --sidenav-art-bg-color: rgb(38, 242, 174);
 
   --topnav-bg-color: rgba(0, 0, 0, 0.676);
   --topnav-btn-bg-color: rgba(0, 0, 0, 0.711);
@@ -260,11 +283,6 @@
   --logo-box-shadow-color: rgba(7, 7, 7, 0.971);
   --logo-border-color: rgb(0, 0, 0);
   --logo-inversion-number: 0;
-
-  --sidenav-bg-color: rgba(0, 0, 0, 0); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
-  --sidenav-shadow-color: rgba(0, 0, 0, 0.748);
-  --sidenav-item-border-bottom-hover: rgb(28, 206, 173);
-  --sidenav-item-text-color: rgb(255, 255, 255);
 
   --scrollbar-clickybit-bg-color: rgba(0, 255, 208, 0.26);
   --scrolbar-notclickybit-bg-color: rgb(67, 66, 66); 
@@ -345,6 +363,8 @@
   --university-assignment-subheading-text-color: rgb(161, 164, 168);
   --university-assignment-subheading-detail-text-color: rgb(119, 120, 121);
   --university-assignment-main-text-color: rgb(167, 170, 174);
+
+  --notes-sidenav-item-text-color: rgb(255, 255, 255);
 
   --messiahshandbook-grid-border-color: rgba(74, 74, 83, 0.627);
   --messiahshandbook-grid-border-color-hover: rgb(107, 102, 102);
@@ -631,15 +651,63 @@ Proposed structure of sidebar
 */
 #nav-side {
   position: fixed;
-  display: flex;
-  width: 4.5rem;
+  width: var(--sidebar-width);
   height: 100vh;
-  flex-direction: column;
-  align-items: stretch;
-  border-right-width: 1px;
   background-color: var(--sidenav-bg-color);
+  text-align: center;
+  z-index: 99999999;
+  box-shadow: 10px 11px 13px 0 var(--sidenav-shadow-color);
 }
 
+#nav-side a:not(.website-logo).navlink {
+  display: inline-block;
+  margin-top: 20px;
+  opacity: 0.9;
+  color: var(--sidenav-item-text-color) !important;
+}
+#nav-side a:not(.website-logo).navlink > *:not(.mobile-view-title) {
+  display: block;
+}
+
+/* nav-links in sidebar */
+#nav-side a:not(.website-logo).navlink svg {
+  border-radius: 50px;
+  text-align: center;
+  justify-content: center;
+}
+#nav-side a:not(.website-logo).navlink svg {
+  background-color: var(--sidenav-item-bg-color);
+  border: 2px solid transparent;
+}
+#nav-side a:not(.website-logo).navlink.active svg {
+  border: 2px solid var(--sidenav-item-border-color-active);
+  background-color: var(--sidenav-item-bg-color-active);
+}
+
+#nav-side .website-links a.navlink:nth-child(2) svg { width: 40px; height: 40px; padding: 2px; }
+#nav-side .website-links a.navlink:nth-child(3) svg { width: 39px; height: 39px; padding: 1px 1px 0px 4px; fill: var(--sidenav-films-bg-color); }
+#nav-side .website-links a.navlink:nth-child(4) svg { width: 39px; height: 39px; padding: 0px 3px 0px 0px; fill: var(--sidenav-music-bg-color);  }
+#nav-side .website-links a.navlink:nth-child(5) svg { width: 39px; height: 39px; padding: 4px 0px 7px 0px; fill: var(--sidenav-blog-bg-color);  }
+#nav-side .website-links a.navlink:nth-child(6) svg { width: 39px; height: 39px; padding: 4px 0px 7px 0px; fill: var(--sidenav-art-bg-color);  }
+
+#nav-side .website-links a.navlink.active:nth-child(2) span { color: var(--text) }
+#nav-side .website-links a.navlink.active:nth-child(3) span { color: var(--sidenav-films-bg-color);  }
+#nav-side .website-links a.navlink.active:nth-child(4) span { color: var(--sidenav-music-bg-color);  }
+#nav-side .website-links a.navlink.active:nth-child(5) span { color: var(--sidenav-blog-bg-color);  }
+#nav-side .website-links a.navlink.active:nth-child(6) span { color: var(--sidenav-art-bg-color);  }
+
+#nav-side a.navlink:last-child {
+  margin-bottom: 30px;
+}
+
+#nav-side a.navlink > span {
+  font-size: 0.7rem;
+}
+#nav-side span.mobile-view-title {
+  display: none;
+}
+
+/* website logo container */
 #nav-side > .website-logo-container {
   position: relative;
   display: flex;
@@ -650,14 +718,6 @@ Proposed structure of sidebar
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-
-#nav-side > .sidebar-menu {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 /* styling the svg logo */
 a.website-logo {
   border-radius: 0.75rem;
@@ -667,22 +727,30 @@ a.website-logo {
   box-shadow: 0px 2px 4px var(--logo-box-shadow-color);
   */
 }
-a.website-logo:hover {
+a.website-logo:hover svg path {
   transition: background-color 350ms ease;
-  background-color: var(--topnav-btn-bg-color-hover);
 }
-
 svg.logo {
   width: 57px;
   height: 57px;
   stroke-width: 11.1px;
   z-index: 10;
 }
-
 svg.logo path {
   fill: var(--logo-path-color);
   stroke: var(--logo-stroke-color);
   filter: invert(var(--logo-inversion-number));
+}
+
+/*
+svg.logo:hover path {
+  fill: var(--logo-path-color-hover);
+  transition: fill 350ms ease;
+  stroke: var(--logo-stroke-color-hover);
+}*/
+svg.logo path:hover {
+  fill: rgb(255, 27, 80) !important;
+  transition: fill 50ms ease-in-out;
 }
 
 /* #region -------------< Svg colours >--------------- */
@@ -735,17 +803,6 @@ svg.logo:hover path:nth-child(22) { fill: var(--logo-path-color); transition: fi
 svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fill 1950ms ease-in-out;}
 /* #endregion */
 
-/*
-svg.logo:hover path {
-  fill: var(--logo-path-color-hover);
-  transition: fill 350ms ease;
-  stroke: var(--logo-stroke-color-hover);
-}*/
-
-svg.logo path:hover {
-  fill: rgb(255, 27, 80) !important;
-  transition: fill 50ms ease-in-out;
-}
 
 
 /* #endregion */
@@ -755,7 +812,8 @@ svg.logo path:hover {
 .page-wrapper {
   width: 100vw;
   top: 0;
-  padding-top: 5rem;
+  padding-top: 2rem;
+  margin-left: calc(var(--sidebar-width) + 2rem)
   /*
   background-color: var(--page-wrapper-bg) !important;
   */
@@ -1967,7 +2025,7 @@ div.card-percent:hover::after {
 }
 .notes-page .sidebar ul a {
   text-decoration: none !important;
-  color: var(--sidenav-item-text-color) !important;
+  color: var(--notes-sidenav-item-text-color) !important;
 }
 .notes-page .sidebar ul a li:hover {
   background-color: var(--sidebar-item-bg-color-hover);
@@ -2153,6 +2211,23 @@ ul.messiahs-handbook p.quote-person {
 }
 .films-log table tr {
   font-size: 0.85rem;
+}
+
+
+.favourite-films {
+
+}
+.favourite-films-list {
+
+}
+.film-list-element {
+  background-color: var(--university-card-bg);
+  border-radius: 8px;
+  padding: 1px 5px 5px 10px;
+  color: var(--text);
+  font-size: 0.5rem;
+  margin-bottom: 8px;
+  display: inline-block;
 }
 
 /* #endregion */

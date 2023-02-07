@@ -40,7 +40,8 @@ export default class App extends Component {
             <HashRouter>
                 <div className="App">
                   <ScrollToTop />
-                  <NavbarTop />
+                  {/* <NavbarTop /> */}
+                  <NavbarSide />
 
                   <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 

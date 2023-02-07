@@ -5,14 +5,21 @@ import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 
-class TopFilmsListElement extends Component {
+class TopFilmsList extends Component {
     render() {
+        let copyOfThis = this;
+        console.log(this.props.films);
+        
         return(
-            <div className='film-list-element'>
-                <span className='film-title'>{this.props.film.title}</span>
-            </div>
+            this.props.films.map((f => {
+                return (
+                    <div>
+                        <p>{f.title}</p>
+                    </div>
+                )
+            }))
         )
     }
 }
 
-export default withRouter(TopFilmsListElement)
+export default withRouter(TopFilmsList)
