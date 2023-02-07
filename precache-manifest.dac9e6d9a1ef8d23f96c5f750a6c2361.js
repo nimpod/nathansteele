@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e69e3e2930abad8e13ab9f4878e425c4",
+    "revision": "405ef11be097a150a01eda659abd8643",
     "url": "/nathansteele/index.html"
   },
   {
-    "revision": "97ebbcb95cce0cee54e3",
+    "revision": "631dc108c8031b24bf19",
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "0b9b137d22c4992e22ea",
-    "url": "/nathansteele/static/css/main.ed7fcb5d.chunk.css"
+    "revision": "d7452c76bd6f8eac62cb",
+    "url": "/nathansteele/static/css/main.137cb024.chunk.css"
   },
   {
-    "revision": "97ebbcb95cce0cee54e3",
-    "url": "/nathansteele/static/js/2.836bd2fc.chunk.js"
+    "revision": "631dc108c8031b24bf19",
+    "url": "/nathansteele/static/js/2.ca1c77c9.chunk.js"
   },
   {
     "revision": "c87550333da8df8ab4c80bd1d6e9defb",
-    "url": "/nathansteele/static/js/2.836bd2fc.chunk.js.LICENSE.txt"
+    "url": "/nathansteele/static/js/2.ca1c77c9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0b9b137d22c4992e22ea",
-    "url": "/nathansteele/static/js/main.247800f6.chunk.js"
+    "revision": "d7452c76bd6f8eac62cb",
+    "url": "/nathansteele/static/js/main.403c3f17.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -102,6 +102,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a858265c3ed3f75c360c98b44f90359a",
     "url": "/nathansteele/static/media/mosaics-of-videos.a858265c.png"
+  },
+  {
+    "revision": "ab2da37fce79674d497705fb793f67f7",
+    "url": "/nathansteele/static/media/navIconAboutMe.ab2da37f.svg"
+  },
+  {
+    "revision": "7fdb106891f2a77c307de04f6bd7f519",
+    "url": "/nathansteele/static/media/navIconArt.7fdb1068.svg"
+  },
+  {
+    "revision": "3e6eaf56bbf9b16010e29b0106d43a4a",
+    "url": "/nathansteele/static/media/navIconBlog.3e6eaf56.svg"
+  },
+  {
+    "revision": "5c6b579c91a8f12b3cce825bee290306",
+    "url": "/nathansteele/static/media/navIconFilms.5c6b579c.svg"
+  },
+  {
+    "revision": "33d43e43189cf7dca25e85b5a6bd40b6",
+    "url": "/nathansteele/static/media/navIconMusic.33d43e43.svg"
   },
   {
     "revision": "721653b61952b1c276ee81b905774b4d",
