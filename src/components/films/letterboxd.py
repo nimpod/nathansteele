@@ -185,6 +185,7 @@ if os.path.exists(path_to_extracted_zip):
                 'imdbNumVotes': imdb_num_votes,
                 'urlLetterboxd': letterboxd_url,
                 'urlImdb': imdb_url,
+                'imdbFilmId': imdb_film_id,
                 'genres': genres,
                 'dateReviewed': date_reviewed,
                 'myRating': my_rating,

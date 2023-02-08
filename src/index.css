@@ -63,8 +63,14 @@
   --tag-bg-color-Vexilology: rgba(120, 197, 214, 0.4);
 }
 
+/* stuff that isn't specific to dark or light themes */
 :root{
   --sidebar-width: 4.2rem;
+  --sidenav-about-bg-color: rgb(253, 142, 63);
+  --sidenav-films-bg-color: rgb(44, 240, 175);
+  --sidenav-music-bg-color: rgb(223, 253, 72); 
+  --sidenav-blog-bg-color: rgb(54, 220, 245);
+  --sidenav-art-bg-color: rgb(255, 79, 158);
 }
 
 /** LIGHT MODE */
@@ -89,10 +95,6 @@
   --sidenav-item-text-color: rgb(176, 177, 181);
   --sidenav-item-bg-color: rgb(64, 64, 64);
   --sidenav-item-bg-color-active: rgb(81, 83, 87);
-  --sidenav-films-bg-color: rgb(249, 72, 72);
-  --sidenav-music-bg-color: rgb(223, 253, 72); 
-  --sidenav-blog-bg-color: rgb(40, 188, 251);
-  --sidenav-art-bg-color: rgb(38, 242, 174);
 
   --topnav-bg-color: rgba(253, 252, 251, 0);
   --topnav-btn-bg-color: rgba(253, 252, 251, 0);
@@ -233,7 +235,7 @@
 /** DARK MODE  **/
 [data-theme="dark"] {
   --bg1: rgb(0, 0, 0); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(20, 21, 36); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg2: rgb(10, 28, 47); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
@@ -241,21 +243,17 @@
   --text-hyperlink: rgb(29, 199, 251);
   --text-hyperlink-hover: rgb(78, 202, 255);
 
-  --section-inner-bg-color: rgb(35, 31, 31);    /* rgb(34, 40, 42); */
+  --section-inner-bg-color: rgb(34, 40, 42);    /* rgb(34, 40, 42); */
   --page-wrapper-bg: rgb(34, 40, 42);
   --page-text-color: rgba(255, 255, 255, 0.878);
   --page-text-color-faded: rgba(255, 255, 255, 0.57);
 
   --sidenav-bg-color: rgb(29, 34, 36); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
-  --sidenav-shadow-color: rgba(0, 0, 0, 0.748);
-  --sidenav-item-border-color-active: rgb(107, 110, 113);
-  --sidenav-item-text-color: rgb(176, 177, 181);
+  --sidenav-shadow-color: rgba(0, 0, 0, 0.593);
+  --sidenav-item-text-color: rgb(138, 140, 151);
   --sidenav-item-bg-color: rgb(64, 64, 64);
-  --sidenav-item-bg-color-active: rgb(81, 83, 87);
-  --sidenav-films-bg-color: rgb(249, 72, 72);
-  --sidenav-music-bg-color: rgb(223, 253, 72); 
-  --sidenav-blog-bg-color: rgb(40, 188, 251);
-  --sidenav-art-bg-color: rgb(38, 242, 174);
+  --sidenav-item-bg-color-active: rgb(101, 105, 114);
+  --sidenav-item-border-color-active: rgb(157, 160, 163);
 
   --topnav-bg-color: rgba(0, 0, 0, 0.676);
   --topnav-btn-bg-color: rgba(0, 0, 0, 0.711);
@@ -301,13 +299,13 @@
   --blog-td-divider-color: rgba(166, 166, 193, 0.183);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
-  --blog-table-row-bg-hover: rgb(21, 21, 23);
+  --blog-table-row-bg-hover: rgb(29, 29, 33);
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
 
-  --searchbox-bg-color: rgb(40, 39, 39);
-  --searchbox-hover-bg-color: rgb(43, 41, 42);
-  --searchbox-active-bg-color: rgb(46, 47, 46);
+  --searchbox-bg-color: rgb(27, 27, 29);
+  --searchbox-hover-bg-color: rgb(25, 25, 27);
+  --searchbox-active-bg-color: rgb(49, 51, 49);
   --searchbox-border-color: rgba(8, 93, 149, 0.293);
   --searchbox-placeholder-text-color: rgba(245, 245, 240, 0.35);
   --searchbox-text-color: rgb(38, 220, 144);
@@ -495,22 +493,11 @@ body > div#root > div.App {
 /* ---------------< styles for .section-inner >----------------- */
 .section-inner {
   background-color: var(--section-inner-bg-color);
-  border-radius: 15px;
-  padding: 10px;
-  margin-bottom: 40px !important;
+  padding: 10px 50px;
   box-shadow: 0 1px 12px 0 var(--university-card-box-shadow);
+  min-height: 100vh;
 }
 
-@media (max-width: 2000px) {
-  .section-inner {
-    margin: 0 auto;
-  }
-}
-@media (min-width: 800px) {
-  .section-inner {
-    max-width: 1300px;
-  }
-}
 
 /* Accomodate for sidebar... */
 /*
@@ -656,7 +643,7 @@ Proposed structure of sidebar
   background-color: var(--sidenav-bg-color);
   text-align: center;
   z-index: 99999999;
-  box-shadow: 10px 11px 13px 0 var(--sidenav-shadow-color);
+  box-shadow: 8px 0px 13px 0px var(--sidenav-shadow-color);
 }
 
 #nav-side a:not(.website-logo).navlink {
@@ -680,15 +667,20 @@ Proposed structure of sidebar
   border: 2px solid transparent;
 }
 #nav-side a:not(.website-logo).navlink.active svg {
-  border: 2px solid var(--sidenav-item-border-color-active);
   background-color: var(--sidenav-item-bg-color-active);
 }
 
 #nav-side .website-links a.navlink:nth-child(2) svg { width: 40px; height: 40px; padding: 2px; }
-#nav-side .website-links a.navlink:nth-child(3) svg { width: 39px; height: 39px; padding: 1px 1px 0px 4px; fill: var(--sidenav-films-bg-color); }
+#nav-side .website-links a.navlink:nth-child(3) svg { width: 39px; height: 39px; padding: 1px 1px 1px 6px; fill: var(--sidenav-films-bg-color); }
 #nav-side .website-links a.navlink:nth-child(4) svg { width: 39px; height: 39px; padding: 0px 3px 0px 0px; fill: var(--sidenav-music-bg-color);  }
 #nav-side .website-links a.navlink:nth-child(5) svg { width: 39px; height: 39px; padding: 4px 0px 7px 0px; fill: var(--sidenav-blog-bg-color);  }
 #nav-side .website-links a.navlink:nth-child(6) svg { width: 39px; height: 39px; padding: 4px 0px 7px 0px; fill: var(--sidenav-art-bg-color);  }
+
+#nav-side .website-links a.navlink:nth-child(2).active svg { border: 2px solid var(--sidenav-about-bg-color); }
+#nav-side .website-links a.navlink:nth-child(3).active svg { border: 2px solid var(--sidenav-films-bg-color); }
+#nav-side .website-links a.navlink:nth-child(4).active svg { border: 2px solid var(--sidenav-music-bg-color); }
+#nav-side .website-links a.navlink:nth-child(5).active svg { border: 2px solid var(--sidenav-blog-bg-color); }
+#nav-side .website-links a.navlink:nth-child(6).active svg { border: 2px solid var(--sidenav-art-bg-color); }
 
 #nav-side .website-links a.navlink.active:nth-child(2) span { color: var(--text) }
 #nav-side .website-links a.navlink.active:nth-child(3) span { color: var(--sidenav-films-bg-color);  }
@@ -697,7 +689,7 @@ Proposed structure of sidebar
 #nav-side .website-links a.navlink.active:nth-child(6) span { color: var(--sidenav-art-bg-color);  }
 
 #nav-side a.navlink:last-child {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 #nav-side a.navlink > span {
@@ -812,8 +804,7 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 .page-wrapper {
   width: 100vw;
   top: 0;
-  padding-top: 2rem;
-  margin-left: calc(var(--sidebar-width) + 2rem)
+  margin-left: var(--sidebar-width);
   /*
   background-color: var(--page-wrapper-bg) !important;
   */
@@ -2214,21 +2205,140 @@ ul.messiahs-handbook p.quote-person {
 }
 
 
-.favourite-films {
+/*
+.favourite-films-list-page
+  .section-inner
+    .review-displayed-container
+      .review-displayed
+        .review-header
+        .review-content
+    .top-films-grid
+      ...
+*/
 
+/* display entire page as grid (review on leftside, list on right side) */
+.favourite-films-list-page .section-inner {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
-.favourite-films-list {
 
+/*  */
+.review-displayed-container {
+  margin: 0 auto;
 }
-.film-list-element {
+.review-header {
+  border-radius: 8px;
+  width: 500px;
+  padding: 10px;
+  color: var(--text);
+  background-color: #353333;
+}
+.review-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
+}
+.review-header > .filmPoster > img {
+  border-radius: 10px;
+}
+
+.filmDetails {
+  position: relative;
+}
+
+.filmDetails > div {
+  margin-bottom: 4px;
+}
+.filmDetails > div::before {
+  margin-right: 10px;
+  opacity: 0.6;
+  vertical-align: middle;
+}
+div.filmYear::before { content: '⅄'; }
+div.filmDirectors::before { content: '∉'; }
+div.filmDuration::before { content: '⊑'; }
+div.filmGenres::before { content: '⅁'; }
+div.filmLanguage::before { content: '⅃'; }
+div.filmLinks::before { content: '∝'; }
+
+.filmDetails div.filmTitleContainer {
+  text-align: center;
+}
+span.filmTitle {
+  font-size: 1.15rem;
+  margin-right: 10px;
+  font-weight: bold;
+}
+div.filmYear {
+  font-size: 0.8rem;
+}
+div.filmDirectors {
+  font-size: 0.8rem;
+}
+div.filmDuration {
+  font-size: 0.8rem;
+}
+div.filmGenres > div.genre-tag {
+  font-size: 0.6rem;
+  border-radius: 30px;
+  padding: 0 10px;
+  display: inline-block;
+  margin-right: 5px;
+  border: 1px solid var(--tags-border-color);
+  background-color: var(--tags-bg-color);
+}
+div.filmLanguage {
+  font-size: 0.8rem;
+}
+div.filmLinks a {
+  border-radius: 4px;
+  font-size: 0.7rem;
+  margin-right: 10px;
+}
+
+div.filmMyRating,
+div.filmPosition {
+  position: absolute;
+  padding: 3px 10px;
+  border-radius: 50em;
+  border: 3px solid transparent;
+  font-weight: bolder;
+  color: rgb(222, 207, 207);  
+}
+
+div.filmMyRating {
+  background: linear-gradient(rgb(0, 0, 0), rgb(86, 86, 92)) padding-box,
+              linear-gradient(to right, rgb(255, 247, 23), rgb(255, 124, 10)) border-box;
+  bottom: 0px;
+}
+
+div.filmPosition {
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(86, 86, 92)) padding-box,
+              linear-gradient(to left, rgb(35, 129, 188), rgb(237, 45, 255)) border-box;
+    bottom: 0px;
+    right: 0px;
+}
+
+
+.top-films-grid {
+  overflow-y: scroll;
+  max-height: 98vh;
+  border-left: 3px solid black;
+}
+
+/* top films grid element */
+.top-films-grid .film-grid-element {
   background-color: var(--university-card-bg);
   border-radius: 8px;
   padding: 1px 5px 5px 10px;
   color: var(--text);
-  font-size: 0.5rem;
-  margin-bottom: 8px;
+  font-size: 0.6rem;
+  margin-bottom: 10px;
+  margin-right: 6px;
   display: inline-block;
+  cursor: pointer;
 }
+
 
 /* #endregion */
 

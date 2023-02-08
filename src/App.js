@@ -55,7 +55,7 @@ export default class App extends Component {
 
                       <Route path='/films' component={Films} exact />
                       <Route path='/films/favourite_films' component={PageFavouriteFilmsList} exact />
-                      <Route path='/films/favourite_films/:film_id' component={FilmReview} exact />
+                      <Route path='/films/favourite_films/:film_id' component={PageFavouriteFilmsList} exact />
                       <Route path='/films/film_log' component={PageFilmLog} exact />
                       <Route path='/films/film_stats' component={PageFilmStats} exact />
 
