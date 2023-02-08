@@ -2334,7 +2334,7 @@ div.filmPosition {
   overflow-y: scroll;
   max-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(to top, rgb(6, 54, 50), rgb(62, 6, 7), rgb(7, 16, 50)) padding-box,
+  background: linear-gradient(to top, rgb(6, 54, 50), rgb(8, 38, 63), rgb(7, 16, 50)) padding-box,
               linear-gradient(to right, rgba(30, 23, 16, 0.009), rgb(86, 193, 89)) border-box;
 }
 
@@ -2389,7 +2389,7 @@ div.filmPosition {
   opacity: 0.7;
 }
 .film-grid-element:hover {
-  opacity: 1.0;
+  opacity: 1.5;
   transition: all 300ms ease;
 }
 .film-grid-element.active {
@@ -2403,16 +2403,17 @@ div.filmPosition {
 .film-grid-element > .filmPosTriangle {
   color: rgb(248, 248, 248);
   position: absolute;
-  border-top: 35px solid rgba(75, 75, 82, 0.798);
-  border-right: 35px solid transparent;
+  border-top: 42px solid rgba(16, 16, 97, 0.694);
+  border-right: 42px solid transparent;
   border-top-left-radius: 7px;
 }
 .film-grid-element > .filmPosTriangle > span {
   position: absolute;
-  margin-top: -31px;
-  margin-left: 2px;
-  font-size: 0.6rem;
+  margin-top: -37px;
+  margin-left: 1px;
+  font-size: 0.7rem;
   font-weight: 1000;
+  transform: rotate(-40deg);
 }
 
 
