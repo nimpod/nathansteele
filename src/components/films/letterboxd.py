@@ -156,12 +156,13 @@ if os.path.exists(path_to_extracted_zip):
                     my_review = review['myReview']
                     my_rating = review['myRating']
                     my_tags = review['myTags']
-                    my_poster = review['poster']
                     my_screenshots = review['screenshots']
                     if 'titleDisplayed' in review:
                         title = review['titleDisplayed']
                     if 'dateReviewed' in review:
                         date_reviewed = review['dateReviewed']
+                    if 'poster' in review:
+                        poster_url = review['poster']
             
             # DEBUGGING....
             print(f" > {pos}: {title} {letterboxd_url}")
@@ -172,7 +173,7 @@ if os.path.exists(path_to_extracted_zip):
             #print(f' > Genres = ({genres})')
             #print(f' > IMDB avg rating = ({imdb_avg_rating})')
             #print(f' > IMDB num votes = ({imdb_num_votes})')
-            #print(f' > Poster = ({poster_url})')
+            print(f' > Poster = ({poster_url})')
             #print(f' > Directors = ({directors})')
             #print(f' > Tags = ({my_tags})')
             
@@ -193,7 +194,7 @@ if os.path.exists(path_to_extracted_zip):
                 'dateReviewed': date_reviewed,
                 'myRating': my_rating,
                 'myReview': my_review,
-                'posters': [my_poster, poster_url],
+                'urlPoster': poster_url,
                 'tags': my_tags,
                 'screenshots': my_screenshots,
             })

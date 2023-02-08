@@ -73,14 +73,13 @@ class PageFavouriteFilmsList extends Component {
                     <div className='review-displayed-container'>
                         {this.state.films.map(function(film, index) {
                             if (film.imdbFilmId == copyOfThis.state.displayedReviewImdbId) {
-                                let posterUrl = film.posters[0] == "" ? film.posters[1] : film.posters[0]
                                 return <div className='review-displayed'>
                                     <div className='filmTitle' title='Film title'>
                                         {film.title}
                                     </div>
                                     <div className='review-header'>
                                         <picture className='filmPoster'>
-                                            <img src={posterUrl} />
+                                            <img src={film.urlPoster} />
                                         </picture>
                                         <div className='filmDetails'>
                                             <div className='filmYear' title='Year of release'>
@@ -142,7 +141,7 @@ class PageFavouriteFilmsList extends Component {
                             <div className='filter-container'>
                                 <span>Language</span>
                                 <div className='list-of-languages'>
-                                    
+
                                 </div>
                             </div>
                         </div>
