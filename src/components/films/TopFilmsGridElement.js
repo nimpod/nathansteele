@@ -6,11 +6,13 @@ import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 
 class TopFilmsGridElement extends Component {
+
     render() {
         let imdbUrlSplit = this.props.film.urlImdb.split('/');
         let imdbId = imdbUrlSplit[imdbUrlSplit.length - 2];
+        let activeClass = (this.props.film.position == 1) ? 'film-grid-element active' : 'film-grid-element';
         return(
-            <div className='film-grid-element' id={`grid-element-${imdbId}`} onClick={() => this.props.clickedGridElement(imdbId)}>
+            <div className={activeClass} id={`grid-element-${imdbId}`} onClick={() => this.props.clickedGridElement(imdbId)}>
                 <div className='filmPosTriangle'>
                     <span>{this.props.film.position}</span>
                 </div>

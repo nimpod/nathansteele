@@ -102,8 +102,8 @@ class PageFavouriteFilmsList extends Component {
                                                 })}
                                             </div>
                                             <div className='filmLinks'>
-                                                <a className='filmImdbLink' href={film.urlLetterboxd}>IMDb</a>
-                                                <a className='filmLetterboxdLink' href={film.urlImdb}>Letterboxd</a>
+                                                <a className='filmImdbLink' href={film.urlImdb}>IMDb</a>
+                                                <a className='filmLetterboxdLink' href={film.urlLetterboxd}>Letterboxd</a>
                                             </div>
                                             <div className='filmMyRating' title='My rating'>
                                                 {film.myRating} / 10

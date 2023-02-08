@@ -2280,6 +2280,7 @@ div.filmYear, div.filmDirectors, div.filmDuration, div.filmLanguage { font-size:
 
 div.filmTitle {
   text-align: center;
+  font-size: 1.5rem;
   margin-right: 10px;
   font-weight: bold;
 }
