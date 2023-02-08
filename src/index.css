@@ -282,8 +282,8 @@
   --logo-border-color: rgb(0, 0, 0);
   --logo-inversion-number: 0;
 
-  --scrollbar-clickybit-bg-color: rgba(0, 255, 208, 0.26);
-  --scrolbar-notclickybit-bg-color: rgb(67, 66, 66); 
+  --scrollbar-clickybit-bg-color: rgba(183, 188, 187, 0.92);
+  --scrolbar-notclickybit-bg-color: rgb(43, 40, 40); 
 
   --arrow-smooth-scroll-btn: rgb(141, 141, 141);
   --arrow-smooth-scroll-btn-hover: rgb(88, 88, 88);
@@ -2262,7 +2262,7 @@ ul.messiahs-handbook p.quote-person {
   margin-right: 10px;
   opacity: 0.75;
 }
-div.filmYear::before { content: 'Ϋ'; }
+div.filmYear::before { content: '⍬'; }
 div.filmDirectors::before { content: 'Ð'; }
 div.filmDuration::before { content: '⏲'; }
 div.filmGenres::before { content: '⨊'; }
@@ -2310,14 +2310,14 @@ div.filmPosition {
   position: absolute;
   padding: 3px 10px;
   border-radius: 50em;
-  border: 3px solid transparent;
+  border: .19rem solid transparent;
   font-weight: bolder;
   color: rgb(222, 207, 207);  
 }
 
 div.filmMyRating {
-  background: linear-gradient(rgb(0, 0, 0), rgb(86, 86, 92)) padding-box,
-              linear-gradient(to right, rgb(255, 247, 23), rgb(255, 124, 10)) border-box;
+  background: linear-gradient(rgb(0, 0, 0), rgb(111, 111, 117)) padding-box,
+              linear-gradient(to right, rgb(255, 164, 37), rgb(10, 255, 124)) border-box;
   bottom: 0px;
 }
 
@@ -2410,7 +2410,7 @@ div.filmPosition {
 .film-grid-element > .filmPosTriangle > span {
   position: absolute;
   margin-top: -31px;
-  margin-left: 1px;
+  margin-left: 2px;
   font-size: 0.6rem;
   font-weight: 1000;
 }

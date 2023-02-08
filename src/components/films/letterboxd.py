@@ -173,7 +173,7 @@ if os.path.exists(path_to_extracted_zip):
             #print(f' > Genres = ({genres})')
             #print(f' > IMDB avg rating = ({imdb_avg_rating})')
             #print(f' > IMDB num votes = ({imdb_num_votes})')
-            print(f' > Poster = ({poster_url})')
+            #print(f' > Poster = ({poster_url})')
             #print(f' > Directors = ({directors})')
             #print(f' > Tags = ({my_tags})')
             

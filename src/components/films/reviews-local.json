@@ -12,7 +12,7 @@
 		"myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
 		"myReview": "",
 		"screenshots": [],
-		"poster": "http://cdn.shopify.com/s/files/1/1057/4964/products/The-Secret-World-of-Arrietty-Vintage-Movie-Poster-Original-Japanese-1-Panel-20x29.jpg?v=1663224752"
+		"poster": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/arrietty.jpg"
 	},
 	{
 		"title": "Detachment",
@@ -94,14 +94,16 @@
 		"myRating": "8.4",
 		"myTags": ["Endearing", "Finding happiness", "Growing up", "Discovering independence", "Finding yourself", "Soulmate", "Flying", "Anime", "Great soundtrack", "Utopia", "Girl power"],
 		"myReview": "",
-		"screenshots": []
+		"screenshots": [],
+		"poster": "https://media.posterlounge.com/images/l/1882482.jpg"
 	},
 	{
 		"title": "The Wind Rises",
 		"myRating": "8.1",
 		"myTags": ["Growing up", "Engineering", "War", "Flying", "Great soundtrack", "Soulmate", "Finding yourself", "Anime"],
 		"myReview": "",
-		"screenshots": []
+		"screenshots": [],
+		"poster": "https://i.pinimg.com/originals/f3/62/9f/f3629f2948a6b56a4a7c82d2e4637e4a.jpg"
 	},
 	{
 		"title": "Nausica\u00e4 of the Valley of the Wind",
@@ -455,7 +457,7 @@
 		"myTags": ["Claustrophobic", "Disturbing", "Multiple personality disorder"],
 		"myReview": "",
 		"screenshots": [],
-		"poster": "https://github.com/nimpod/nathansteele/tree/master/src/img/film-posters/split.jpg"
+		"poster": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/split.jpg"
 	},
 	{
 		"title": "1408",
@@ -484,7 +486,7 @@
 		"myTags": ["Atmospheric", "Melancholic", "Aliens", "Soulmate", "Travelling", "Alone in the wilderness", "Virus", "Great soundtrack"],
 		"myReview": "",
 		"screenshots": [],
-		"poster": "https://github.com/nimpod/nathansteele/tree/master/src/img/film-posters/monsters.jpg"
+		"poster": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/monsters.jpg"
 	},
 	{
 		"title": "Pontypool",
@@ -761,7 +763,8 @@
 		"myRating": "8.8",
 		"myTags": ["Disturbing", "Terrifying", "Possession"],
 		"myReview": "",
-		"screenshots": []
+		"screenshots": [],
+		"poster": "https://miro.medium.com/max/500/1*I9zDkUL5PfD7aT0O2Zk8mg.jpeg"
 	},
 	{
 		"title": "Europa Report",
@@ -1186,7 +1189,7 @@
 		"myTags": ["Poverty", "Family", "Emotional"],
 		"myReview": "",
 		"screenshots": [],
-		"poster": "https://github.com/nimpod/nathansteele/tree/master/src/img/film-posters/lion.jpg"
+		"poster": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/lion.jpg"
 	},
 	{
 		"title": "Parasite",
@@ -1202,7 +1205,7 @@
 		"myTags": ["Embrace mother nature", "Humanity and nature coexisting", "War", "Corruption", "Evil people in power", "Anime", "Great soundtrack"],
 		"myReview": "",
 		"screenshots": [],
-		"poster": "https://github.com/nimpod/nathansteele/tree/master/src/img/film-posters/mononoke.jpg"
+		"poster": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/mononoke.png"
 	},
 	{
 		"title": "Room",
@@ -1276,7 +1279,7 @@
 		"myTags": ["Atmospheric", "Water", "Beautiful", "Melancholic", "Great soundtrack", "Minimal dialogue"],
 		"myReview": "",
 		"screenshots": [],
-		"poster": "https://alternativemovieposters.com/wp-content/uploads/2018/03/edgar_water.jpg"
+		"poster": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/shapeofwater.jpeg"
 	},
 	{
 		"title": "Awakenings",
