@@ -53,7 +53,7 @@
         "dateReviewed": "14/11/2021",
         "myRating": "10",
         "myReview": "",
-        "urlPoster": "https://m.media-amazon.com/images/M/MV5BMzcyNTc1ODQzMF5BMl5BanBnXkFtZTgwNTgzMzY4MTI@._V1_SX300.jpg",
+        "urlPoster": "https://i.etsystatic.com/26881902/r/il/0d4e8e/4247656359/il_fullxfull.4247656359_es8d.jpg",
         "tags": [
             "Death",
             "Life",
@@ -89,7 +89,7 @@
         "dateReviewed": "",
         "myRating": "10",
         "myReview": "",
-        "urlPoster": "https://i.ebayimg.com/images/g/Z3wAAOSwImRYm6Uk/s-l1600.jpg",
+        "urlPoster": "https://www.scified.com/media/arrival-movie-poster-7338.jpg",
         "tags": [
             "Grand sci-fi",
             "Linguistics",
@@ -187,7 +187,7 @@
         "dateReviewed": "",
         "myRating": "10",
         "myReview": "",
-        "urlPoster": "https://alternativemovieposters.com/wp-content/uploads/2021/01/KirkMoffat_Matrix.jpg",
+        "urlPoster": "https://alternativemovieposters.com/wp-content/uploads/2022/06/Sergey_Matrix.jpg",
         "tags": [
             "Dystopia"
         ],
@@ -402,7 +402,7 @@
         "dateReviewed": "",
         "myRating": "10",
         "myReview": "",
-        "urlPoster": "https://m.media-amazon.com/images/M/MV5BYTNkMDMxMDMtMDlhNi00MzQxLTk4NTAtODc0YTFmNGVlNDAyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+        "urlPoster": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/tibet.PNG",
         "tags": [
             "Humanity and nature coexisting",
             "Exploring unexplored terrority",
@@ -437,7 +437,7 @@
         "dateReviewed": "",
         "myRating": "10",
         "myReview": "",
-        "urlPoster": "https://m.media-amazon.com/images/M/MV5BMDIzODcyY2EtMmY2MC00ZWVlLTgwMzAtMjQwOWUyNmJjNTYyXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
+        "urlPoster": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/truman.PNG",
         "tags": [
             "Uplifting",
             "Conspiracy",
@@ -767,8 +767,8 @@
         "urlImdb": "http://www.imdb.com/title/tt7589524/maindetails",
         "imdbFilmId": "tt7589524",
         "genres": [
-            "Drama",
-            "Sci-fi"
+            "Sci-fi",
+            "Drama"
         ],
         "dateReviewed": "",
         "myRating": "10",
@@ -968,7 +968,7 @@
         "dateReviewed": "",
         "myRating": "9.5",
         "myReview": "",
-        "urlPoster": "https://alternativemovieposters.com/wp-content/uploads/2022/04/ArgoTurner_SnowPiercer.jpg",
+        "urlPoster": "https://i.pinimg.com/originals/dc/67/d6/dc67d66f3c604ecfd1956a7d9376c50f.jpg",
         "tags": [
             "Total escapism",
             "Dystopia",
@@ -1028,8 +1028,8 @@
         "urlImdb": "http://www.imdb.com/title/tt1083452/maindetails",
         "imdbFilmId": "tt1083452",
         "genres": [
-            "History",
             "Drama",
+            "History",
             "Comedy",
             "Adventure"
         ],
@@ -1699,9 +1699,9 @@
         "urlImdb": "http://www.imdb.com/title/tt1318514/maindetails",
         "imdbFilmId": "tt1318514",
         "genres": [
-            "Drama",
             "Sci-fi",
             "Action",
+            "Drama",
             "Thriller"
         ],
         "dateReviewed": "",
@@ -1862,7 +1862,7 @@
     },
     {
         "position": "59",
-        "title": "WALL-E",
+        "title": "WALL\u00b7E",
         "year": "2008",
         "directors": [
             "Andrew Stanton"
@@ -1882,7 +1882,7 @@
         "dateReviewed": "",
         "myRating": "9.1",
         "myReview": "",
-        "urlPoster": "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg",
+        "urlPoster": "https://www.themoviedb.org/t/p/original/h27XKksE9jwSSHELYIisDxzBvpe.jpg",
         "tags": [
             "Post-apocalypse",
             "Civilisation on spaceship",
@@ -1904,7 +1904,7 @@
         "duration": "110",
         "language": "English",
         "imdbAvgRating": "7.6",
-        "imdbNumVotes": "111,777",
+        "imdbNumVotes": "110,292",
         "urlLetterboxd": "https://boxd.it/i7xm",
         "urlImdb": "http://www.imdb.com/title/tt7979580/maindetails",
         "imdbFilmId": "tt7979580",
@@ -2200,7 +2200,7 @@
         ],
         "dateReviewed": "",
         "myRating": "9.2",
-        "myReview": "",
+        "myReview": "<div class='review-content'><div class='toggle-section-container'><div class='toggle-section-btn'>-</div><span>#context</span></div><div class='review-context'><p>White God is one of those kind of films where loads of things at the beginning piss me off and I'm almost ready to stop watching, and then BOOM everything goes nuts and I'm totally on board with the story and characters. (similar feelings to The Nightingale, The Revenant, Revenge, mother!)</p><p>It's also incredible how the filmmakers were able to portray so much emotion/despair/sadness just by filming dogs.</p><p>Sometimes a picture speaks a thousand words, so why stuff your films with meandering filler conversations when you could be expressing raw emotions and compelling character development!</p><p>J\u00c3\u00b3 napot k\u00c3\u00adv\u00c3\u00a1nok!!!!</p></div><div class='toggle-section-container'><div class='toggle-section-btn'>-</div><span>#synopsis</span></div><div class='review-briefSynopsis'>A cautionary tale between a superior species and its disgraced inferior - Favoring pedigree dogs, a new regulation puts a severe tax on mixed breeds. Owners dump their dogs and shelters become overcrowded. 13-year-old Lili fights desperately to protect her pet Hagen, but her father eventually sets the dog free on the streets.</p></div><div class='toggle-section-container'><div class='toggle-section-btn'>-</div><span>#positives&negatives</span></div><div class='review-positivesAndNegatives'>I never thought a Hungarian schoolgirl playing Franz Liszt's Hungarian Rhapsody on a trumpet to a group of dogs would make me cry, but here we are. Also love how most of the credits are just dogs and dog trainers. It's also incredible how the filmmakers were able to portray so much emotion/despair/sadness just by filming dogs.</div></div>'",
         "urlPoster": "https://m.media-amazon.com/images/M/MV5BNjk4MzkyOTQwNF5BMl5BanBnXkFtZTgwODE5MTk1MzE@._V1_SX300.jpg",
         "tags": [
             "Emotional",
@@ -2667,7 +2667,7 @@
         "dateReviewed": "",
         "myRating": "8.4",
         "myReview": "",
-        "urlPoster": "https://i.etsystatic.com/22453392/r/il/d25b53/3431491841/il_fullxfull.3431491841_s37j.jpg",
+        "urlPoster": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/kiki.PNG",
         "tags": [
             "Endearing",
             "Finding happiness",
@@ -3027,10 +3027,10 @@
         "urlImdb": "http://www.imdb.com/title/tt4273292/maindetails",
         "imdbFilmId": "tt4273292",
         "genres": [
-            "Thriller",
             "War",
             "Horror",
-            "Drama"
+            "Drama",
+            "Thriller"
         ],
         "dateReviewed": "",
         "myRating": "8.6",
@@ -3566,9 +3566,9 @@
         "urlImdb": "http://www.imdb.com/title/tt4439120/maindetails",
         "imdbFilmId": "tt4439120",
         "genres": [
+            "Action",
             "Fantasy",
-            "Horror",
-            "Action"
+            "Horror"
         ],
         "dateReviewed": "",
         "myRating": "8.4",
@@ -3600,10 +3600,10 @@
         "urlImdb": "http://www.imdb.com/title/tt2013293/maindetails",
         "imdbFilmId": "tt2013293",
         "genres": [
-            "Romance",
-            "War",
             "Animation",
-            "Drama"
+            "Drama",
+            "Romance",
+            "War"
         ],
         "dateReviewed": "",
         "myRating": "8.1",
@@ -3694,7 +3694,7 @@
         "duration": "124",
         "language": "French",
         "imdbAvgRating": "7.3",
-        "imdbNumVotes": "34,656",
+        "imdbNumVotes": "33,644",
         "urlLetterboxd": "https://boxd.it/1BPm",
         "urlImdb": "http://www.imdb.com/title/tt0082933/maindetails",
         "imdbFilmId": "tt0082933",
@@ -3886,9 +3886,9 @@
         "urlImdb": "http://www.imdb.com/title/tt0398808/maindetails",
         "imdbFilmId": "tt0398808",
         "genres": [
-            "Family",
             "Drama",
-            "Adventure"
+            "Adventure",
+            "Family"
         ],
         "dateReviewed": "",
         "myRating": "8.7",
@@ -3914,7 +3914,7 @@
         "duration": "99",
         "language": "English",
         "imdbAvgRating": "6.8",
-        "imdbNumVotes": "23,603",
+        "imdbNumVotes": "23,907",
         "urlLetterboxd": "https://boxd.it/p3O8",
         "urlImdb": "http://www.imdb.com/title/tt11080108/maindetails",
         "imdbFilmId": "tt11080108",
@@ -3980,8 +3980,8 @@
         "urlImdb": "http://www.imdb.com/title/tt0407304/maindetails",
         "imdbFilmId": "tt0407304",
         "genres": [
-            "Adventure",
             "Thriller",
+            "Adventure",
             "Sci-fi"
         ],
         "dateReviewed": "",
@@ -4569,7 +4569,7 @@
         "dateReviewed": "",
         "myRating": "8.2",
         "myReview": "",
-        "urlPoster": "https://m.media-amazon.com/images/M/MV5BYzM2OGQ2NzUtNzlmYi00ZDg4LWExODgtMDVmOTU2Yzg2N2U5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+        "urlPoster": "http://www.raymondyeung.com/movieadv/confessions_poster.jpg",
         "tags": [
             "Audio-visual spectacle",
             "Poetic",
@@ -4719,10 +4719,10 @@
         "urlImdb": "http://www.imdb.com/title/tt1307068/maindetails",
         "imdbFilmId": "tt1307068",
         "genres": [
-            "Drama",
             "Comedy",
             "Sci-fi",
-            "Romance"
+            "Romance",
+            "Drama"
         ],
         "dateReviewed": "",
         "myRating": "8.0",
@@ -4981,11 +4981,11 @@
         "urlImdb": "http://www.imdb.com/title/tt4717402/maindetails",
         "imdbFilmId": "tt4717402",
         "genres": [
-            "Sci-fi",
             "Crime",
+            "Animation",
+            "Sci-fi",
             "Action",
-            "Comedy",
-            "Animation"
+            "Comedy"
         ],
         "dateReviewed": "",
         "myRating": "8.0",
@@ -5213,8 +5213,8 @@
         "urlImdb": "http://www.imdb.com/title/tt1226681/maindetails",
         "imdbFilmId": "tt1226681",
         "genres": [
-            "Sci-fi",
             "Mystery",
+            "Sci-fi",
             "Horror"
         ],
         "dateReviewed": "",
@@ -5600,8 +5600,8 @@
         "imdbFilmId": "tt5606664",
         "genres": [
             "Horror",
-            "Fantasy",
-            "Thriller"
+            "Thriller",
+            "Fantasy"
         ],
         "dateReviewed": "",
         "myRating": "7.8",
@@ -5657,8 +5657,8 @@
         "imdbFilmId": "tt0464196",
         "genres": [
             "Horror",
-            "Comedy",
-            "Thriller"
+            "Thriller",
+            "Comedy"
         ],
         "dateReviewed": "",
         "myRating": "7.8",

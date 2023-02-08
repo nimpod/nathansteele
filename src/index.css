@@ -124,8 +124,8 @@
   --logo-border-color: rgba(231, 231, 236, 0.934);
   --logo-inversion-number: 1;
 
-  --scrollbar-clickybit-bg-color: rgb(18, 169, 119);
-  --scrolbar-notclickybit-bg-color: rgb(19, 18, 18); 
+  --scrollbar-clickybit-bg-color: rgb(119, 127, 138);
+  --scrolbar-notclickybit-bg-color: rgb(239, 234, 234); 
 
   --arrow-smooth-scroll-btn: rgb(53, 53, 53);
   --arrow-smooth-scroll-btn-hover:  rgb(88, 88, 88);
@@ -182,7 +182,23 @@
 
   --filters-container-move-btns-bg-color: rgba(161, 161, 169, 0.561);
   --filters-container-move-btns-bg-color-hover: rgba(144, 139, 139, 0.918);
-  
+
+  --film-review-header-bg-color: rgb(255, 255, 255);
+  --film-grid-element-border-color: rgba(4, 12, 26, 0.083);
+  --film-grid-element-border-color-active: rgb(165, 255, 29);
+  --film-grid-element-triangle-color: rgba(16, 16, 97, 0.694);
+  --films-list-bg-color-1: rgb(251, 251, 251);
+  --films-list-bg-color-2: rgb(176, 184, 190);
+  --films-list-bg-color-3: rgb(254, 254, 254);
+  --film-review-btn-bg-color-1: rgb(255, 255, 255);
+  --film-review-btn-bg-color-2: rgb(214, 218, 222);
+  --film-review-btn-text-color: rgb(21, 20, 20);
+  --film-review-section-border-color: rgb(239, 239, 242);
+  --film-review-section-btnToggler-text-color: rgb(146, 249, 111);
+  --film-review-section-btnToggler-border-color: rgb(214, 216, 221);
+  --film-review-section-btnToggler-border-color-active: rgb(118, 129, 131);
+  --film-review-section-title-text-color: rgb(207, 207, 208);
+
   --university-card-box-shadow: rgba(150, 150, 155, 0.16);
   --university-card-bg: rgb(255, 255, 255);
   --university-card-border-color: rgb(251, 251, 251);
@@ -222,8 +238,8 @@
   --btn-circular-hover-bg-color: rgb(245, 245, 245);
   --btn-circular-active-bg-color: rgb(223, 223, 223);
 
-  --svg-color: rgb(94, 86, 90);
-  --svg-color-hover: rgb(0, 0, 0);
+  --svg-color: rgb(170, 151, 161);
+  --svg-color-hover: rgb(227, 229, 231);
   --svg-icon-invert-percentage: 0%;
 
   --scrollbar-thumb-bg-color-tags: rgb(179, 179, 179);
@@ -251,7 +267,7 @@
   --sidenav-bg-color: rgb(29, 34, 36); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
   --sidenav-shadow-color: rgba(0, 0, 0, 0.593);
   --sidenav-item-text-color: rgb(138, 140, 151);
-  --sidenav-item-bg-color: rgb(64, 64, 64);
+  --sidenav-item-bg-color: rgb(48, 45, 45);
   --sidenav-item-bg-color-active: rgb(101, 105, 114);
   --sidenav-item-border-color-active: rgb(157, 160, 163);
 
@@ -342,9 +358,20 @@
   --tags-open-dropdown-bg-color: rgba(118, 117, 117, 0.194);
 
   --film-review-header-bg-color: rgb(52, 50, 50);
-  --film-grid-element-border-color: rgba(79, 83, 90, 0.031);
+  --film-grid-element-border-color: rgba(77, 80, 86, 0.359);
   --film-grid-element-border-color-active: rgba(240, 218, 49, 0.801);
   --film-grid-element-triangle-color: rgba(16, 16, 97, 0.694);
+  --films-list-bg-color-1: rgb(10, 41, 59);
+  --films-list-bg-color-2: rgb(8, 38, 63);
+  --films-list-bg-color-3: rgb(10, 1, 5);
+  --film-review-btn-bg-color-1: rgb(0, 0, 0);
+  --film-review-btn-bg-color-2: rgb(111, 111, 117);
+  --film-review-btn-text-color: rgb(222, 207, 207);
+  --film-review-section-border-color: rgb(40, 40, 44);
+  --film-review-section-btnToggler-text-color: rgb(146, 249, 111);
+  --film-review-section-btnToggler-border-color: rgb(63, 61, 61);
+  --film-review-section-btnToggler-border-color-active: rgb(38, 64, 69);
+  --film-review-section-title-text-color: rgb(63, 61, 61);
 
   --university-controls-btn-bg: rgba(82, 79, 79, 0.609);
   --university-controls-btn-svg-fill: rgb(232, 232, 232);
@@ -2228,6 +2255,7 @@ ul.messiahs-handbook p.quote-person {
 /*  */
 .review-displayed-container {
   margin: 0 auto;
+  width: 60%;
 }
 .review-displayed-container,
 .top-films-grid {
@@ -2239,14 +2267,13 @@ ul.messiahs-handbook p.quote-person {
 .review-header {
   margin-top: 5px;
   border-radius: 8px;
-  min-width: 500px;
+  width: fit-content;
   padding: 10px;
   background-color: var(--film-review-header-bg-color);
-}
-.review-header {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 10px;
+  margin: 0 auto;
 }
 .filmPoster {
   
@@ -2318,21 +2345,65 @@ div.filmPosition {
   border-radius: 50em;
   border: .19rem solid transparent;
   font-weight: bolder;
-  color: rgb(222, 207, 207);  
+  color: var(--film-review-btn-text-color);
 }
 
 div.filmMyRating {
-  background: linear-gradient(rgb(0, 0, 0), rgb(111, 111, 117)) padding-box,
+  background: linear-gradient(var(--film-review-btn-bg-color-1), var(--film-review-btn-bg-color-2)) padding-box,
               linear-gradient(to right, rgb(255, 164, 37), rgb(10, 255, 124)) border-box;
   bottom: 0px;
 }
 
 div.filmPosition {
-  background: linear-gradient(to left, rgb(0, 0, 0), rgb(86, 86, 92)) padding-box,
+  background: linear-gradient(to left, var(--film-review-btn-bg-color-1), var(--film-review-btn-bg-color-2)) padding-box,
               linear-gradient(to left, rgb(35, 129, 188), rgb(237, 45, 255)) border-box;
     bottom: 0px;
     right: 0px;
 }
+
+/* */
+.review-displayed .review-my-tags {
+  text-align: center;
+  margin-top: 20px;
+}
+.review-displayed .review-my-tags > .my-tag {
+  font-size: 0.65rem;
+  border-radius: 50px;
+  padding: 4px 10px;
+  display: inline-block;
+  margin-right: 4px;
+  border: 1px solid var(--tags-border-color);
+  background-color: var(--tags-bg-color);
+  cursor: pointer;
+  color: var(--film-review-btn-text-color);
+}
+.review-content-container {
+  padding-top: 30px;
+}
+.review-content-container .review-content > div {
+  border: 1px solid var(--film-review-section-border-color);
+  margin-bottom: 7px;
+  color: var(--intro-text);
+  font-size: 0.85rem;
+}
+.review-content-container div.toggle-section-container {
+
+}
+.review-content-container div.toggle-section-container > div.toggle-section-btn {
+  margin-left: -30px;
+  border-radius: 6px;
+  border: 2px solid var(--film-review-section-btnToggler-border-color);
+  color: var(--film-review-section-btnToggler-text-color);
+  font-weight: 1000;
+  display: inline;
+  padding: 2px 6px;
+  margin-right: 10px;
+}
+.review-content-container div.toggle-section-container > span {
+  color: var(--film-review-section-title-text-color);
+  font-size: 0.9rem;
+}
+
 
 
 /* ------------< The actual list >----------- */
@@ -2340,8 +2411,7 @@ div.filmPosition {
   overflow-y: scroll;
   max-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(to top, rgb(6, 54, 50), rgb(8, 38, 63), rgb(7, 16, 50)) padding-box,
-              linear-gradient(to right, rgba(30, 23, 16, 0.009), rgb(86, 193, 89)) border-box;
+  background: linear-gradient(to top, var(--films-list-bg-color-3), var(--films-list-bg-color-2), var(--films-list-bg-color-1)) padding-box;
 }
 
 .top-films-grid-controls {
@@ -2392,7 +2462,7 @@ div.filmPosition {
   cursor: pointer;
   border: 3px solid var(--film-grid-element-border-color);
   border-radius: 7px;
-  opacity: 0.7;
+  opacity: 0.55;
 }
 .film-grid-element:hover {
   opacity: 1.5;

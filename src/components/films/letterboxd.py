@@ -18,6 +18,7 @@ dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
 list_name = 'my-favourite-films.csv'
 reviews_local_json_filename = 'reviews-local.json'
 reviews_allData_json_filename = 'reviews-allData.json'
+path_to_rootreducer = f'D:\\Programming-Projects\\nathansteele\\src\\reducers\\RootReducer.js';
 path_to_local_reviews_json = f'D:\\Programming-Projects\\nathansteele\\src\\components\\films\\{reviews_local_json_filename}'
 path_to_allData_reviews_json = f'D:\\Programming-Projects\\nathansteele\\src\\components\\films\\{reviews_allData_json_filename}'
 
@@ -70,6 +71,19 @@ if os.path.exists(path_to_extracted_zip):
         rows_to_skip = 5
         for i in range(0, rows_to_skip):
             next(csv_reader)
+        
+        """
+        with open(path_to_rootreducer) as rootreducer:
+            data = rootreducer.read()
+            #print(data)
+            obj = data[data.find('filmReviews: [') : data.rfind(']')+1]
+            # print(obj)
+            jsonObjStr = obj[14:]
+            print(type(jsonObjStr))
+            print(jsonObjStr)
+            jsonObj = json.loads(jsonObjStr)
+            print(jsonObj)
+        """
         
         # load in my local reviews json file...
         reviews_json = None

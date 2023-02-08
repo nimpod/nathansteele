@@ -58,11 +58,23 @@ class PageFavouriteFilmsList extends Component {
         return genres;
     }
 
+    /**
+     * 
+     */
+    componentDidMount() {
+        let topFilmsGrid = document.querySelector('#top-films-grid');
+        if (topFilmsGrid !== null) {
+            topFilmsGrid.scrollIntoView(false);
+        }
+    }
 
     render() {
         let copyOfThis = this;
         let listOfGenres = Array.from(this.getListOfGenres());
-        console.log(listOfGenres);
+
+        // sort by date...
+        let topFilmsList = Array.from(this.props.films);
+        console.log(topFilmsList);
 
         return(
             <div className='page-wrapper favourite-films-list-page'>
@@ -113,6 +125,14 @@ class PageFavouriteFilmsList extends Component {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className='review-my-tags'>
+                                        {film.tags.map(tag => {
+                                            return <div className='my-tag'>{tag}</div>
+                                        })}
+                                    </div>
+                                    <div className='review-content-container' dangerouslySetInnerHTML={{__html: film.myReview}}>
+                                        
+                                    </div>
                                 </div>
                             }
                         })}
@@ -145,6 +165,7 @@ class PageFavouriteFilmsList extends Component {
                                 </div>
                             </div>
                         </div>
+                        <div id='top-films-grid'>
                         {
                             this.state.films.map((f) => (
                                 <TopFilmsGridElement
@@ -153,6 +174,7 @@ class PageFavouriteFilmsList extends Component {
                                 />
                             ))
                         }
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,4 +183,14 @@ class PageFavouriteFilmsList extends Component {
 }
 
 
-export default PageFavouriteFilmsList
+/**
+ * [function: Connect this React component to the Redux data store]
+ * @param {*} state 
+ */
+const mapStateToProps = (state) => {
+    return {
+        films: state.filmReviews
+    }
+}
+
+export default connect(mapStateToProps)(PageFavouriteFilmsList)
