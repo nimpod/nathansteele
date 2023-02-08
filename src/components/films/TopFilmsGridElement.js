@@ -9,9 +9,15 @@ class TopFilmsGridElement extends Component {
     render() {
         let imdbUrlSplit = this.props.film.urlImdb.split('/');
         let imdbId = imdbUrlSplit[imdbUrlSplit.length - 2];
+        let posterUrl = this.props.film.posters[0] == "" ? this.props.film.posters[1] : this.props.film.posters[0]
         return(
             <div className='film-grid-element' id={`grid-element-${imdbId}`} onClick={() => this.props.clickedGridElement(imdbId)}>
-                {this.props.film.title}
+                <div className='filmPosTriangle'>
+                    <span>{this.props.film.position}</span>
+                </div>
+                <picture className='filmPoster'>
+                    <img height={160} width={110} src={posterUrl} />
+                </picture>
             </div>
         )
     }

@@ -31,11 +31,38 @@ class PageFavouriteFilmsList extends Component {
         this.setState({
             displayedReviewImdbId: imdbIdOfGridElementClicked
         });
+        
+        let gridItems = document.getElementsByClassName('film-grid-element');
+        for (const item of gridItems) {
+            item.classList.remove('active');
+        }
+
+        let gridItemClicked = document.querySelector('div#grid-element-' + imdbIdOfGridElementClicked + '.film-grid-element');
+        gridItemClicked.classList.toggle('active');
+    }
+
+    /**
+     * 
+     */
+    getListOfGenres() {
+        const genres = new Set();
+
+        // store each tag category once...
+        this.state.films.map((f => {
+            // console.log('DEBUGGING: ', p.tags);
+            f.genres.map((f => {
+                genres.add(f);
+            }));
+        }));
+
+        return genres;
     }
 
 
     render() {
         let copyOfThis = this;
+        let listOfGenres = Array.from(this.getListOfGenres());
+        console.log(listOfGenres);
 
         return(
             <div className='page-wrapper favourite-films-list-page'>
@@ -48,19 +75,21 @@ class PageFavouriteFilmsList extends Component {
                             if (film.imdbFilmId == copyOfThis.state.displayedReviewImdbId) {
                                 let posterUrl = film.posters[0] == "" ? film.posters[1] : film.posters[0]
                                 return <div className='review-displayed'>
+                                    <div className='filmTitle' title='Film title'>
+                                        {film.title}
+                                    </div>
                                     <div className='review-header'>
                                         <picture className='filmPoster'>
-                                            <img height='250' src={posterUrl} />
+                                            <img src={posterUrl} />
                                         </picture>
                                         <div className='filmDetails'>
-                                            <div className='filmTitleContainer'>
-                                                <span className='filmTitle' title='Film title'>{film.title}</span>
-                                            </div>
                                             <div className='filmYear' title='Year of release'>
                                                 {film.year}
                                             </div>
                                             <div className='filmDirectors' title='Directors'>
-                                                {film.directors}
+                                                {film.directors.map(director => {
+                                                    return <div className='director-tag'>{director}</div>
+                                                })}
                                             </div>
                                             <div className='filmDuration' title='Duration in minutes'>
                                                 {film.duration} mins
@@ -90,6 +119,33 @@ class PageFavouriteFilmsList extends Component {
                         })}
                     </div>
                     <div className='top-films-grid'>
+                        <div className='top-films-grid-controls'>
+                            <span className='top-films-grid-controls-title'>My favourite films</span>
+                            <div className='filter-container'>
+                                <span>Genres</span>
+                                <div className='list-of-genres'>
+                                {
+                                    listOfGenres.map((g => {
+                                        return <div className="genre">
+                                            <span className={g}>{g}</span>
+                                        </div>
+                                    }))
+                                }
+                                </div>
+                            </div>
+                            <div className='filter-container'>
+                                <span>Year</span>
+                                <div className='list-of-years'>
+
+                                </div>
+                            </div>
+                            <div className='filter-container'>
+                                <span>Language</span>
+                                <div className='list-of-languages'>
+                                    
+                                </div>
+                            </div>
+                        </div>
                         {
                             this.state.films.map((f) => (
                                 <TopFilmsGridElement

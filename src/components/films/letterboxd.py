@@ -104,7 +104,10 @@ if os.path.exists(path_to_extracted_zip):
             div_genres = soup.select_one('#tab-genres')
             for link in div_genres.select('div.text-sluglist a.text-slug[href]'):
                 if 'genre' in link['href']:
-                    genres.append(link.text.capitalize())
+                    genre = link.text.capitalize()
+                    if genre == 'Science-fiction':
+                        genre = 'Sci-fi'
+                    genres.append(genre)
 
             # retrieve duration
             textfooter = soup.select_one('section.col-main > p.text-footer').text

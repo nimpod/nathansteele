@@ -493,7 +493,7 @@ body > div#root > div.App {
 /* ---------------< styles for .section-inner >----------------- */
 .section-inner {
   background-color: var(--section-inner-bg-color);
-  padding: 10px 50px;
+  padding: 0px 0px;
   box-shadow: 0 1px 12px 0 var(--university-card-box-shadow);
   min-height: 100vh;
 }
@@ -1423,8 +1423,6 @@ btn-move-left scroll-through-tag-filters-btn
 
 .blog-post {
   /* max-width: 80vw; */
-  margin-right: auto;
-  margin-left: auto;
   min-height: 100vh;
   border-radius: 0px;
   letter-spacing: 0px;
@@ -2219,18 +2217,25 @@ ul.messiahs-handbook p.quote-person {
 /* display entire page as grid (review on leftside, list on right side) */
 .favourite-films-list-page .section-inner {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 10fr 3.0fr;
 }
 
 /*  */
 .review-displayed-container {
   margin: 0 auto;
 }
-.review-header {
-  border-radius: 8px;
-  width: 500px;
-  padding: 10px;
+.review-displayed-container,
+.top-films-grid {
+  padding-top: 10px;
+}
+.review-displayed {
   color: var(--text);
+}
+.review-header {
+  margin-top: 5px;
+  border-radius: 8px;
+  min-width: 500px;
+  padding: 10px;
   background-color: #353333;
 }
 .review-header {
@@ -2238,8 +2243,12 @@ ul.messiahs-handbook p.quote-person {
   grid-template-columns: 1fr 2fr;
   column-gap: 10px;
 }
+.filmPoster {
+  
+}
 .review-header > .filmPoster > img {
   border-radius: 10px;
+  height: 230px;
 }
 
 .filmDetails {
@@ -2251,44 +2260,44 @@ ul.messiahs-handbook p.quote-person {
 }
 .filmDetails > div::before {
   margin-right: 10px;
-  opacity: 0.6;
-  vertical-align: middle;
+  opacity: 0.75;
 }
-div.filmYear::before { content: '⅄'; }
-div.filmDirectors::before { content: '∉'; }
-div.filmDuration::before { content: '⊑'; }
-div.filmGenres::before { content: '⅁'; }
-div.filmLanguage::before { content: '⅃'; }
-div.filmLinks::before { content: '∝'; }
+div.filmYear::before { content: 'Ϋ'; }
+div.filmDirectors::before { content: 'Ð'; }
+div.filmDuration::before { content: '⏲'; }
+div.filmGenres::before { content: '⨊'; }
+div.filmLanguage::before { content: '⧉'; }
+div.filmLinks::before { content: '⋙'; }
 
-.filmDetails div.filmTitleContainer {
+div.filmTitle { font-size: 1.15rem; }
+div.filmGenres > div.genre-tag { font-size: 0.6rem; }
+div.filmYear, div.filmDirectors, div.filmDuration, div.filmLanguage { font-size: 0.75rem; }
+
+div.filmTitle {
   text-align: center;
-}
-span.filmTitle {
-  font-size: 1.15rem;
   margin-right: 10px;
   font-weight: bold;
 }
-div.filmYear {
-  font-size: 0.8rem;
+div.filmDirectors > div.director-tag  {
+  font-size: 0.7rem;
+  border-radius: 5px;
+  padding: 0 5px;
+  display: inline-block;
+  margin-right: 7px;
+  border: 1px solid var(--tags-border-color);
+  background-color: var(--tags-bg-color);
+  cursor: pointer;
 }
-div.filmDirectors {
-  font-size: 0.8rem;
-}
-div.filmDuration {
-  font-size: 0.8rem;
-}
-div.filmGenres > div.genre-tag {
-  font-size: 0.6rem;
+div.filmGenres > div.genre-tag,
+.top-films-grid-controls .list-of-genres > .genre {
+  font-size: 0.56rem;
   border-radius: 30px;
-  padding: 0 10px;
+  padding: 0 5px;
   display: inline-block;
   margin-right: 5px;
   border: 1px solid var(--tags-border-color);
   background-color: var(--tags-bg-color);
-}
-div.filmLanguage {
-  font-size: 0.8rem;
+  cursor: pointer;
 }
 div.filmLinks a {
   border-radius: 4px;
@@ -2320,23 +2329,90 @@ div.filmPosition {
 }
 
 
+/* ------------< The actual list >----------- */
 .top-films-grid {
   overflow-y: scroll;
-  max-height: 98vh;
-  border-left: 3px solid black;
+  max-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(to top, rgb(6, 54, 50), rgb(62, 6, 7), rgb(7, 16, 50)) padding-box,
+              linear-gradient(to right, rgba(30, 23, 16, 0.009), rgb(86, 193, 89)) border-box;
+}
+
+.top-films-grid-controls {
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+.top-films-grid-controls span.top-films-grid-controls-title {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.top-films-grid-controls .filter-container > span {
+  font-size: 0.75rem;
+  color: var(--text-darker);
+}
+
+.top-films-grid .filter-container {
+  display: block;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 1200px;
+  margin: 0rem 0rem;
+}
+.top-films-grid .filter-container > div {
+  display: inline;
+}
+.top-films-grid .filter-container > span {
+  margin-right: 15px;
+}
+.top-films-grid-controls .list-of-genres {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  color: var(--text);
+  width: 1000px;
+  margin: 0rem 0rem;
+}
+.top-films-grid-controls .list-of-genres > .genre {
+
 }
 
 /* top films grid element */
-.top-films-grid .film-grid-element {
-  background-color: var(--university-card-bg);
-  border-radius: 8px;
-  padding: 1px 5px 5px 10px;
+.film-grid-element {
+  position: relative;
   color: var(--text);
   font-size: 0.6rem;
-  margin-bottom: 10px;
-  margin-right: 6px;
+  margin: 7px;
   display: inline-block;
   cursor: pointer;
+  border: 3px solid rgba(79, 83, 90, 0.031);
+  border-radius: 7px;
+  opacity: 0.7;
+}
+.film-grid-element:hover {
+  opacity: 1.0;
+  transition: all 300ms ease;
+}
+.film-grid-element.active {
+  border: 3px solid rgba(240, 218, 49, 0.801);
+  opacity: 1.0;
+}
+.film-grid-element img {
+  border-radius: 7px;
+}
+
+.film-grid-element > .filmPosTriangle {
+  color: rgb(248, 248, 248);
+  position: absolute;
+  border-top: 35px solid rgba(75, 75, 82, 0.798);
+  border-right: 35px solid transparent;
+  border-top-left-radius: 7px;
+}
+.film-grid-element > .filmPosTriangle > span {
+  position: absolute;
+  margin-top: -31px;
+  margin-left: 1px;
+  font-size: 0.6rem;
+  font-weight: 1000;
 }
 
 
