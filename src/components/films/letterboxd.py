@@ -166,7 +166,7 @@ if os.path.exists(path_to_extracted_zip):
             
             # DEBUGGING....
             print(f" > {pos}: {title} {letterboxd_url}")
-            #print(f' > Title = ({title})')
+            print(f' > Title = ({title})')
             #print(f' > IMDB url = ({imdb_url})')
             #print(f' > Language = ({language})')
             #print(f' > Duration = ({duration})')
