@@ -1,20 +1,150 @@
-import React, {Component} from 'react'
-import { connect}  from 'react-redux'
+import React, {Component, useState, useEffect} from 'react';
+import { connect }  from 'react-redux';
 import { NavLink, withRouter } from 'react-router-dom';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
+import FilmsSubmenu from './FilmsSubmenu';
+import TopFilmsGridElement from './TopFilmsGridElement';
+import FilmsJsonList from './reviews-allData.json';
+import Films from './Films';
+import FilmReviewHeader from './FilmReviewHeader';
+import { filmReviewsSorted } from './Films.js';
+
 
 class FilmReview extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            filmReviews: [],
+            displayedReviewId: ""
+        }
+    }
+
+    /**
+     * Function to collate a list of all genres (no duplicates!)
+     */
+    getListOfGenres(films) {
+        const genresList = new Set();
+
+        // store each tag category once...
+        films.map((f => {
+            // console.log('DEBUGGING: ', p.tags);
+            f.genres.map((f => {
+                genresList.add(f);
+            }));
+        }));
+
+        return Array.from(genresList);
+    }
+
+    
+    /**
+     * Function to collate a list of all years (no duplicates!)
+     */
+    getListOfYears() {
+
+    }
+
+    /**
+     * Function to collate a list of all languages (no duplicates!)
+     * @param {*} films 
+     * @returns 
+     */
+    getListOfLanguages(films) {
+        const languagesList = new Set();
+
+        // store each tag category once...
+        films.map((f => {
+            // console.log('DEBUGGING: ', p.tags);
+            f.genres.map((f => {
+                languagesList.add(f);
+            }));
+        }));
+
+        return Array.from(languagesList);
+    }
+
+    /**
+     * Click handler when grid item clicked
+     * @param {} idOfFilmClicked
+     */
+    clickedGridElement = (idOfFilmClicked) => {
+        let gridItems = document.getElementsByClassName('film-grid-element');
+        for (const item of gridItems) {
+            item.classList.remove('active');
+        }
+        let gridItemClicked = document.querySelector('#grid-element-' + idOfFilmClicked + '.film-grid-element');
+        gridItemClicked.classList.toggle('active');
+    }
+
     render() {
+        // get list of genres...
+        let listOfGenres = this.getListOfGenres(filmReviewsSorted);
+
         return(
-            <div className='page-wrapper films'>
+            <div className='page-wrapper favourite-films-page'>
                 <div className='section-inner'>
-                    <h3 className='page-title'>a review for a particular film...</h3>
+                    <div className='review-displayed-container'>
+                        <FilmReviewHeader 
+                            film={this.props.film}
+                        />
+                    </div>
+                    <div className='top-films-grid-container'>
+                        <div className='top-films-grid-controls'>
+                            <span className='top-films-grid-controls-title'>My favourite films</span>
+                            <div className='filter-container'>
+                                <span>Genres</span>
+                                <div className='list-of-genres'>
+                                {
+                                    listOfGenres.map((g => {
+                                        return <div className="genre">
+                                            <span className={g}>{g}</span>
+                                        </div>
+                                    }))
+                                }
+                                </div>
+                            </div>
+                            <div className='filter-container'>
+                                <span>Year</span>
+                                <div className='list-of-years'>
+
+                                </div>
+                            </div>
+                            <div className='filter-container'>
+                                <span>Language</span>
+                                <div className='list-of-languages'>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id='top-films-list'>
+                            {filmReviewsSorted.map(f => {
+                                return <TopFilmsGridElement 
+                                    film={f}
+                                    filmsList={filmReviewsSorted}
+                                    clickedGridElement={this.clickedGridElement}
+                                />
+                            })}
+                        </div>
+                    </div>
                 </div>
             </div>
         )
     }
 }
 
-export default withRouter(FilmReview)
+/**
+ * This function finds the correct blog post from the redux data store]
+ * @param {*} state 
+ */
+const mapStateToProps = (state, ownProps) => {
+    let id = ownProps.match.params.film_id;     // the id of the post being displayed in the UI
+    return {
+        film: state.filmReviews.find(film => film.letterboxdFilmId === id),  // get the actual post data from the redux data store
+        filmReviews: state.filmReviews  // get films
+    }
+}
+
+
+export default connect(mapStateToProps)(FilmReview)

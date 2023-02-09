@@ -86,7 +86,7 @@ class NavbarSide extends Component {
 
         // by default set the 'About me' button to be active...
         let navlinks = document.getElementsByClassName('navlink');
-        console.log(navlinks);
+        //console.log(navlinks);
         //navlinks[1].classList.add('active');
     }
 

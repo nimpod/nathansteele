@@ -5,7 +5,6 @@ import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 import FilmsSubmenu from './FilmsSubmenu';
-import TopFilmsList from './TopFilmsList';
 import TopFilmsGridElement from './TopFilmsGridElement';
 import FilmsJsonList from './reviews-allData.json';
 import Films from './Films';

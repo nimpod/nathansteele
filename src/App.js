@@ -54,12 +54,9 @@ export default class App extends Component {
                       <Route path='/blog/:post_id' component={BlogPost} exact />
 
                       <Route path='/films' component={Films} exact />
-                      <Route path='/films/favourite_films' component={PageFavouriteFilmsList} exact />
-                      <Route path='/films/favourite_films/:film_id' component={PageFavouriteFilmsList} exact />
-                      <Route path='/films/film_log' component={PageFilmLog} exact />
-                      <Route path='/films/film_stats' component={PageFilmStats} exact />
+                      <Route path='/films/:film_id' component={FilmReview} exact />
 
-                      <Route path='/favourite_albums/:album_id' component={MusicReview} />
+                      <Route path='/music/:album_id' component={MusicReview} />
 
                       <Route path='/university' component={University} exact />
                       <Route path='/university/:assignment_id' component={UniversityAssignment} exact />
