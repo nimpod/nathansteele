@@ -1007,7 +1007,7 @@ const initState = {
                         <p>Sometimes a picture speaks a thousand words, so why stuff your films with meandering filler conversations when you could be expressing raw emotions and compelling character development!</p> \
                         <p>Jó napot kívánok!!!!</p> \
                         <picture class=\"img\">\
-                            <img width=400 src=\"https://journeysindarknessandlight.files.wordpress.com/2015/10/white_god_opening.jpg\" alt=\"White God screenshot\" />\
+                            <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/whiteGod/whiteGod1.png\" alt=\"White God screenshot\" />\
                         </picture>\
                     </div> \
                     <div class='toggle-section-container'> \
@@ -1018,7 +1018,7 @@ const initState = {
                         <p>A cautionary tale between a superior species and its disgraced inferior - Favoring pedigree dogs, a new regulation puts a severe tax on mixed breeds. \
                         Owners dump their dogs and shelters become overcrowded. 13-year-old Lili fights desperately to protect her pet Hagen, but her father eventually sets the dog free on the streets.</p> \
                         <picture class=\"img\">\
-                            <img width=400 src=\"https://images.kinorium.com/movie/shot/699182/h280_969603.jpg\" alt=\"White God screenshot\" />\
+                            <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/whiteGod/whiteGod2.png\" alt=\"White God screenshot\" />\
                         </picture>\
                     </div> \
                     <div class='toggle-section-container'> \
@@ -1030,7 +1030,7 @@ const initState = {
                         <p>Also love how most of the credits are just dogs and dog trainers.</p> \
                         <p>It's incredible how the filmmakers were able to portray so much emotion/despair/sadness just by filming dogs.</p> \
                         <picture class=\"img\">\
-                            <img width=400 src=\"https://popularcultureandtheology.files.wordpress.com/2017/11/white-god-2015.jpg\" alt=\"White God screenshot\" />\
+                            <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/whiteGod/whiteGod3.png\" alt=\"White God screenshot\" />\
                         </picture>\
                     </div> \
                 </div> \
