@@ -1047,9 +1047,9 @@ const initState = {
                                 <span>#context</span> \
                             </div> \
                             <div class='review-context'> \
-                                <p>Contraversial number pick... I know... but hear me out...</p> \
+                                <p>Controversial number pick... I know... but hear me out...</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland1.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland4.png\" alt=\"Flatland screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1060,10 +1060,10 @@ const initState = {
                                 <p>Flatland is a two-dimensional universe occupied by living geometric figures - squares, triangles, circles, etc. A Square, Attorney At Law, finds himself in the middle of two upheavals: the rise of martial law by\
                                  the circular leadership of Flatland, and the arrival of A Sphere, CEO Of Messiah, Incorporated, a creature from a hitherto-unknown third dimensional world.</p> \
                                  <picture class=\"img\">\
-                                    <img width=400 src=\"{{https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland2.png}}\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland2.png\" alt=\"Flatland screenshot\" />\
                                 </picture>\
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland3.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland1.png\" alt=\"Flatland screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1073,7 +1073,7 @@ const initState = {
                             <div class='review-positivesAndNegatives'> \
                                 <p>insert potentially informative discussion here...</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland4.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland3.png\" alt=\"Flatland screenshot\" />\
                                 </picture>\
                             </div> \
                         </div> \
