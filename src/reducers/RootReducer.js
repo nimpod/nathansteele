@@ -995,7 +995,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/81lO",
             "title": "White God",
             "myRating": "9.2",
-            "myTags": ["Emotional", "Friendship", "Forgiveness", "Animal welfare", "Great cinematography", "The universal language of music", "Budapest"],
+            "myTags": ["Emotional", "Friendship", "Forgiveness", "Animal welfare", "Great cinematography", "The universal power of music", "Budapest"],
             "myReview": " \
                 <div class='review-content'> \
                     <div class='toggle-section-container'> \
@@ -1122,7 +1122,7 @@ const initState = {
                             <div class='review-context'> \
                                 <p>..............</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty1.png\" alt=\"Arrietty screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty1.jpg\" alt=\"Arrietty screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1131,7 +1131,7 @@ const initState = {
                             </div> \
                             <div class='review-briefSynopsis'> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty2.png\" alt=\"Arrietty screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty2.jpg\" alt=\"Arrietty screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1140,12 +1140,60 @@ const initState = {
                             </div> \
                             <div class='review-positivesAndNegatives'> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty3.png\" alt=\"Arrietty screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty3.jpg\" alt=\"Arrietty screenshot\" />\
                                 </picture>\
                             </div> \
                         </div> \
             ",
             "customPosterUrl": require('../img/film-posters/arrietty.png')
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/fb0K",
+            "title": "A Ghost Story",
+            "myRating": "10",
+            "myTags": ["Death", "Life", "Vast", "Cosmic", "Beyond existence", "Mysterious", "Creative use of lighting", "Creative use of aspect ratio", "Great soundtrack"],
+            "myReview": "<div class='review-content'> \
+                            <div class='toggle-section-container'> \
+                                <div class='toggle-section-btn'></div> \
+                                <span>#context</span> \
+                            </div> \
+                            <div class='review-context'> \
+                                <p>There are so many layers to this wonderful thoughtful piece of art - it's so atmospheric, mysterious, sad, beautiful, ambitious, unusual, creative, minimal, \
+                                cosmic, vast, and its all centered around such a simple idea but with immaculate execution. </p> \
+                                <p>The soundtrack is just beautiful. Quiet and ambient at times, heartbreaking at other times, and explosive with energy other times. </p> \
+                                <p>And crikey the cinematography and use of light is FANTASTIC!!</p> \
+                                <p>Many questions are posed about life, death, and what happens after. It made me think about what impact my life may have in the far future. How will people remember \
+                                me? Will I be forgotten in amongst billions of others? What unbelievable cosmic events will I miss out on outside of my lifetime? I believe that we should not feel \
+                                small, insignificant, unimportant or pointless. Instead, we should thank our eyes, our brain, our body and our own silent companion throughout our life for allowing \
+                                you consciousness at such an extraordinary time period where we can study the mysteries of the universe and observe things that are incomprehensibly far away. \
+                                We too as human beings are made up of the same stuff as galaxies - we are just a particular arrangment of atoms that somehow results in consciouness and an \
+                                understanding of our place in the universe. Maybe the true meaning of life, while you have it, is to simply give it some meaning.</p> \
+                                <picture class=\"img\"> \
+                                    <img src=\"https://64.media.tumblr.com/fa829abc7638311d5cd690dc54843e23/896a2170aafcb700-dc/s500x750/78befb64bfb233234af96ce5b748e050fe9443f4.jpg\" alt=\"Screenshot\" />\
+                                </picture>\
+                            </div> \
+                            <div class='toggle-section-container'> \
+                                <div class='toggle-section-btn'></div> \
+                                <span>#synopsis</span> \
+                            </div> \
+                            <div class='review-briefSynopsis'> \
+                                <picture class=\"img\">\
+                                    <img src=\"https://film-grab.com/wp-content/uploads/photo-gallery/ghost030.jpg?bwg=1551280217\" alt=\"Screenshot\" />\
+                                </picture>\
+                            </div> \
+                            <div class='toggle-section-container'> \
+                                <div class='toggle-section-btn'></div> \
+                                <span>#postives&negatives</span> \
+                            </div> \
+                            <div class='review-positivesAndNegatives'> \
+                                <picture class=\"img\">\
+                                    <img src=\"https://cdn.vox-cdn.com/thumbor/8ybh9PrRki7rgc9HpL4Y_xHD4JQ=/0x0:2000x1500/1200x800/filters:focal(1218x255:1538x575)/cdn.vox-cdn.com/uploads/chorus_image/image/55607315/ghoststorycover.0.jpg\" alt=\"Screenshot\" />\
+                                </picture>\
+                            </div> \
+                        </div> \
+            ",
+            "customPosterUrl": require('../img/film-posters/aGhostStory.PNG'),
+            "dateReviewed": "14/11/2021"
         },
         {
             "letterboxdUrl": "https://boxd.it/2BiY",
@@ -1229,7 +1277,7 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Endearing", "Finding happiness", "Growing up", "Discovering independence", "Finding yourself", "Soulmate", "Flying", "Anime", "Great soundtrack", "Utopia", "Girl power"],
             "myReview": "",
-            "customPosterUrl": require('../img/film-posters/kiki.PNG'),
+            "customPosterUrl": require('../img/film-posters/kiki.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/4JQS",
@@ -1427,8 +1475,7 @@ const initState = {
             "title": "Martyrs",
             "myRating": "8.3",
             "myTags": ["Challenging to watch at times", "Brutal", "Claustrophobic", "Exploring the dark depths of humanity", "Very long", "Disturbing", "Not one to watch with the family"],
-            "myReview": "",
-            "customPosterUrl": require('../img/film-posters/martyrs.jpg'),
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/uRS",
@@ -1496,15 +1543,6 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Stumbling across the prospect of happiness", "Creature-feature", "Great soundtrack"],
             "myReview": ""
-        },
-        {
-            "letterboxdUrl": "https://boxd.it/fb0K",
-            "title": "A Ghost Story",
-            "myRating": "10",
-            "myTags": ["Death", "Life", "Vast", "Cosmic", "Beyond existence", "Mysterious", "Creative use of lighting", "Creative use of aspect ratio", "Great soundtrack"],
-            "myReview": "",
-            "customPosterUrl": require('../img/film-posters/aGhostStory.PNG'),
-            "dateReviewed": "14/11/2021"
         },
         {
             "letterboxdUrl": "https://boxd.it/azew",
@@ -1995,15 +2033,15 @@ const initState = {
             "title": "Mulholland Drive",
             "myRating": "8.7",
             "myTags": ["Questioning reality", "Atmospheric", "Mysterious", "A story within a story", "Anti-Hollywood"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('../img/film-posters/mulhollandDrive.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1TKk",
             "title": "The Tenant",
             "myRating": "8.5",
             "myTags": ["Surrealist horror", "Xenophobia", "Isolation", "Hostility", "Paranoia", "Loss of identity", "Claustrophobic", "Conspiracy", "Living in flats"],
-            "myReview": "",
-            "customPosterUrl": require('../img/film-posters/theTenant.jpg'),
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/1KnQ",
@@ -2011,7 +2049,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Surrealism", "Quirky", "Aliens", "Future society"],
             "myReview": "",
-            "customPosterUrl": require('../img/film-posters/fantasticPlanet.jpg'),
+            "customPosterUrl": require('../img/film-posters/fantasticPlanet.png'),
         },
         {
             "letterboxdUrl": "https://boxd.it/d1uG",

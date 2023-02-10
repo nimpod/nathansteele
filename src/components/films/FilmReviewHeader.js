@@ -12,8 +12,8 @@ class FilmReviewHeader extends Component {
         let genresList = []
         let tagsList = []
 
-        if (this.props !== undefined) {
-            if (this.props.film !== undefined) {
+        if (this.props !== null) {
+            if (this.props.film !== null) {
                 directorsList = this.props.film.directors;
                 genresList = this.props.film.genres;
                 tagsList = this.props.film.myTags;
@@ -22,7 +22,7 @@ class FilmReviewHeader extends Component {
 
         return(
             <div className='review-displayed'>
-                <div className='filmTitle' title='Film title'>
+                <div className='film-title' title='Film title'>
                     {this.props.film.title}
                 </div>
                 <div className='review-header'>
@@ -53,11 +53,13 @@ class FilmReviewHeader extends Component {
                             <a className='filmImdbLink' href={this.props.film.imdbUrl} target='_blank'>IMDb</a>
                             <a className='filmLetterboxdLink' href={this.props.film.letterboxdUrl} target='_blank'>Letterboxd</a>
                         </div>
-                        <div className='filmMyRating' title='My rating'>
-                            {this.props.film.myRating} / 10
-                        </div>
-                        <div className='filmPosition' title='Position in my list'>
-                            #{this.props.film.position} in my list
+                        <div className='film-my-data-container'>
+                            <div className='filmMyRating' title='My rating'>
+                                {this.props.film.myRating} / 10
+                            </div>
+                            <div className='filmPosition' title='Position in my list'>
+                                #{this.props.film.position} in my list
+                            </div>
                         </div>
                     </div>
                 </div>

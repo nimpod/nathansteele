@@ -13,6 +13,11 @@ import { filmReviewsSorted } from './Films.js';
 
 
 class FilmReview extends Component {
+
+    /**
+     * Constructor
+     * @param {*} props 
+     */
     constructor(props) {
         super(props);
         this.state = {
@@ -70,18 +75,26 @@ class FilmReview extends Component {
      * @param {} idOfFilmClicked
      */
     clickedGridElement = (idOfFilmClicked) => {
-        let gridItems = document.getElementsByClassName('film-grid-element');
+        // ensure no grid elements have .active class
+        let gridItems = document.getElementsByClassName('#top-films-list film-grid-element');
         for (const item of gridItems) {
             item.classList.remove('active');
         }
+
+        // add .active class from currently selected grid element
         let gridItemClicked = document.querySelector('#grid-element-' + idOfFilmClicked + '.film-grid-element');
-        gridItemClicked.classList.toggle('active');
+        if (!gridItemClicked.classList.contains('active')) {
+            gridItemClicked.classList.add('active')
+        }
     }
 
-    componentDidMount() {
+    /**
+     * Based on the film the user selected, move the #top-films-list to the row that particular film is on...
+     */
+    scrollToDisplayedFilm() {
         let topFilmsGrid = document.querySelector('#top-films-list');
         if (topFilmsGrid !== null) {
-            let rowHeight = 180;
+            let rowHeight = 179;
             let numOfFilmsPerRow = 3;
             let pos = this.props.film.position;
             let numOfFilms = this.props.filmReviews.length;
@@ -97,9 +110,18 @@ class FilmReview extends Component {
         }
     }
 
+    /**
+     * 
+     */
+    componentDidMount() {        
+        // scroll to position of currently displayed film...
+        this.scrollToDisplayedFilm();
+    }
+
     render() {
         // get list of genres...
         let listOfGenres = this.getListOfGenres(filmReviewsSorted);
+        console.log(this.props);
 
         return(
             <div className='page-wrapper favourite-films-page'>

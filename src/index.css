@@ -175,6 +175,7 @@
   --tags-border-color: rgba(199, 199, 204, 0.627);
   --tags-text-color: rgb(0, 0, 0);
   --tags-bg-color: rgb(255, 255, 255);
+  --tags-bg-color-hover: rgb(217, 217, 225);
   --tags-Hardware-text-color: rgb(17, 140, 81);
   --tags-bg-color-selected: rgb(12, 12, 13);
   --tags-text-color-selected: rgb(255, 255, 255);
@@ -185,17 +186,17 @@
 
   --film-review-header-bg-color: rgb(255, 255, 255);
   --film-grid-element-border-color: rgba(4, 12, 26, 0.083);
-  --film-grid-element-border-color-active: rgb(165, 255, 29);
+  --film-grid-element-border-color-active: rgb(29, 146, 255);
   --film-grid-element-triangle-color: rgba(16, 16, 97, 0.694);
-  --films-list-bg-color-1: rgb(251, 251, 251);
-  --films-list-bg-color-2: rgb(176, 184, 190);
-  --films-list-bg-color-3: rgb(254, 254, 254);
+  --films-list-bg-color-1: rgb(246, 185, 190);
+  --films-list-bg-color-2: rgb(236, 238, 240);
+  --films-list-bg-color-3: rgb(170, 184, 199);
   --film-review-btn-bg-color-1: rgb(255, 255, 255);
   --film-review-btn-bg-color-2: rgb(214, 218, 222);
   --film-review-btn-text-color: rgb(21, 20, 20);
-  --film-review-section-border-color: rgb(239, 239, 242);
+  --film-review-section-border-color: rgb(242, 242, 243);
   --film-review-section-btnToggler-text-color: rgb(146, 249, 111);
-  --film-review-section-btnToggler-border-color: rgb(214, 216, 221);
+  --film-review-section-btnToggler-border-color: rgb(230, 232, 237);
   --film-review-section-btnToggler-border-color-active: rgb(118, 129, 131);
   --film-review-section-title-text-color: rgb(207, 207, 208);
 
@@ -352,6 +353,7 @@
   --tags-border-color: rgba(12, 12, 14, 0.627);
   --tags-text-color: rgb(255, 255, 255);
   --tags-bg-color: rgb(45, 44, 46);
+  --tags-bg-color-hover: rgb(69, 69, 72);
   --tags-Hardware-text-color: rgb(37, 216, 129);
   --tags-bg-color-selected: rgb(255, 255, 255);
   --tags-text-color-selected: rgb(3, 3, 3);
@@ -369,7 +371,7 @@
   --film-review-btn-text-color: rgb(222, 207, 207);
   --film-review-section-border-color: rgb(40, 40, 44);
   --film-review-section-btnToggler-text-color: rgb(60, 164, 25);
-  --film-review-section-btnToggler-border-color: rgb(45, 45, 49);
+  --film-review-section-btnToggler-border-color: rgb(51, 51, 55);
   --film-review-section-btnToggler-border-color-active: rgb(38, 64, 69);
   --film-review-section-title-text-color: rgb(63, 61, 61);
 
@@ -1104,6 +1106,11 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 .blog p, .blog span {
   font-size: 1.3rem;
   color: var(--page-text-color);
+}
+
+.blog > .section-inner,
+.blog-post > .section-inner {
+  padding: 20px 230px;
 }
 
 
@@ -2169,81 +2176,20 @@ ul.messiahs-handbook p.quote-person {
 
 
 /* #region -----------------------------------<13: FILMS PAGE>------------------------------------------ */
-.sidebar-menu > .films-submenu {
-  display: block;
-  text-align: center;
-  padding-bottom: 13px;
-}
-
-.films-submenu > a {
-  padding: 0.7rem 1.0rem;
-  border-radius: 0px;
-  opacity: 1 !important;
-  text-decoration: none !important;
-  font-weight: bold;
-  background-color:  var(--section-inner-bg-color);
-  border-bottom: 4px solid var(--section-inner-bg-color);
-}
-.films-submenu > a:hover {
-  background-color: var(--submenu-btn-bg-color-hover);
-  border-bottom: 4px solid var(--submenu-btn-bg-color-hover);
-}
-.films-submenu > a.active {
-  border-bottom: 4px solid var(--submenu-btn-text-color-active);
-  background-color: var(--submenu-btn-bg-color-active);
-}
-.films-submenu > a.active > span {
-  color: var(--submenu-btn-text-color-active);
-}
-
-.films-submenu > a:nth-child(1) {
-  border-top-left-radius: 15px;
-}
-.films-submenu > a:nth-child(3) {
-  border-top-right-radius: 15px;
-}
-
-.films-submenu > a > span {
-  font-size: 0.8rem;
-}
-.films-submenu > a:not(.active) > span {
-  color: rgb(132, 135, 143);
-}
-.films-submenu > a:not(.active):hover > span {
-  color: rgb(207, 204, 204);
-}
-
-
-/* */
-#table-of-films-watched-per-month {
-  margin-top: 30px;
-}
-#table-of-films-watched-per-month td:nth-child(1) { width: 20%; }   /* 1st column */
-#table-of-films-watched-per-month td:nth-child(2) { width: 20%; }   /* 2nd column */
-#table-of-films-watched-per-month td:nth-child(3) { width: 20%; }   /* 3rd column */
-#table-of-films-watched-per-month td:nth-child(4) { width: 20%; }   /* 4th column */
-#table-of-films-watched-per-month td:nth-child(5) { width: 5%; }
-#table-of-films-watched-per-month td:nth-child(6) { width: 5%; }
-#table-of-films-watched-per-month td:nth-child(7) { width: 5%; }
-#table-of-films-watched-per-month td:nth-child(8) { width: 5%; }
-
-.films-log table thead {
-  height: 50px;
-}
-.films-log table tr {
-  font-size: 0.85rem;
-}
-
-
 /*
+Proposed structure
+===============================
 .favourite-films-page
   .section-inner
     .review-displayed-container
       .review-displayed
+        .film-title
         .review-header
-        .review-content
-    .top-films-grid
-      ...
+        .review-my-tags
+        .review-content-container
+    .top-films-grid-container
+      .top-films-grid-controls
+      #top-films-list
 */
 
 /* display entire page as grid (review on leftside, list on right side) */
@@ -2251,19 +2197,26 @@ ul.messiahs-handbook p.quote-person {
   display: grid;
   grid-template-columns: 10fr 3.0fr;
 }
+@media screen and (max-width: 670px) {
+  .favourite-films-page .top-films-grid-container {
+    width: 150px;
+  }
+}
 
-/*  */
-.review-displayed-container {
+
+/* #region ----------------< Review displayed >------------------ */
+.review-displayed {
   margin: 0 auto;
   width: 50%;
 }
-.review-displayed-container,
-.top-films-grid {
+.review-displayed-container, .top-films-grid {
   padding-top: 10px;
 }
 .review-displayed {
-  color: var(--text);
+  color: var(--intro-text);
 }
+
+/* Review header */
 .review-header {
   margin-top: 5px;
   border-radius: 8px;
@@ -2275,18 +2228,13 @@ ul.messiahs-handbook p.quote-person {
   column-gap: 10px;
   margin: 0 auto;
 }
-.filmPoster {
-  
-}
 .review-header > .filmPoster > img {
   border-radius: 10px;
-  height: 300px;
+  height: 270px;
 }
-
 .filmDetails {
   position: relative;
 }
-
 .filmDetails > div {
   margin-bottom: 4px;
 }
@@ -2301,13 +2249,14 @@ div.filmGenres::before { content: '⨊'; }
 div.filmLanguage::before { content: '⧉'; }
 div.filmLinks::before { content: '⋙'; }
 
-div.filmTitle { font-size: 1.15rem; }
+div.film-title { font-size: 1.15rem; }
 div.filmGenres > div.genre-tag { font-size: 0.6rem; }
 div.filmYear, div.filmDirectors, div.filmDuration, div.filmLanguage { font-size: 0.75rem; }
 
-div.filmTitle {
+div.film-title {
   text-align: center;
   font-size: 1.5rem;
+  margin-bottom: 10px;
   margin-right: 10px;
   font-weight: bold;
 }
@@ -2338,30 +2287,40 @@ div.filmLinks a {
   margin-right: 10px;
 }
 
+div.film-my-data-container {
+  bottom: 0;
+  position: absolute;
+}
+/*
+div.filmPosition {
+  right: 0;
+  position: absolute;
+}
+div.film-my-data-container {
+  width: 23rem;
+}*/
+div.film-my-data-container > div {
+  margin-right: 10px;
+}
 div.filmMyRating,
 div.filmPosition {
-  position: absolute;
+  display: inline-block;
   padding: 3px 10px;
   border-radius: 50em;
   border: .19rem solid transparent;
   font-weight: bolder;
   color: var(--film-review-btn-text-color);
 }
-
 div.filmMyRating {
   background: linear-gradient(var(--film-review-btn-bg-color-1), var(--film-review-btn-bg-color-2)) padding-box,
               linear-gradient(to right, rgb(255, 164, 37), rgb(10, 255, 124)) border-box;
-  bottom: 0px;
 }
-
 div.filmPosition {
   background: linear-gradient(to left, var(--film-review-btn-bg-color-1), var(--film-review-btn-bg-color-2)) padding-box,
               linear-gradient(to left, rgb(35, 129, 188), rgb(237, 45, 255)) border-box;
-    bottom: 0px;
-    right: 0px;
 }
 
-/* */
+/* My tags */
 .review-displayed .review-my-tags {
   text-align: center;
   padding-top: 20px;
@@ -2378,6 +2337,11 @@ div.filmPosition {
   cursor: pointer;
   color: var(--film-review-btn-text-color);
 }
+.review-displayed .review-my-tags > .my-tag:hover {
+  background-color: var(--tags-bg-color-hover);
+}
+
+/* The actual review content */
 .review-content-container {
   padding-top: 30px;
 }
@@ -2386,9 +2350,6 @@ div.filmPosition {
   margin-bottom: 7px;
   color: var(--intro-text);
   font-size: 0.8rem;
-}
-.review-content-container div.toggle-section-container {
-
 }
 .review-content-container div.toggle-section-container > div.toggle-section-btn {
   margin-left: -30px;
@@ -2419,16 +2380,15 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   max-height: 100%;
   height: auto;
   margin: 2em 0;
-  
 }
 .review-content-container img, 
 .review-content-container picture {
   display: block;
 }
+/* #endregion */
 
 
-
-/* ------------< The actual list >----------- */
+/* #region ----------------< Top films list >-------------- */
 .section-inner > .top-films-grid-container {
   height: 100vh;
   overflow-y: hidden;
@@ -2451,7 +2411,8 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
-}
+  box-shadow: 0px 10px 5px #888, 0px -10px 5px #888;}
+
 .top-films-grid-controls span.top-films-grid-controls-title {
   color: var(--text);
   font-size: 1.1rem;
@@ -2482,9 +2443,13 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   width: 1000px;
   margin: 0rem 0rem;
 }
-.top-films-grid-controls .list-of-genres > .genre {
-
+.top-films-grid-controls .list-of-genres > .genre:hover {
+  background-color: var(--tags-bg-color-hover);
 }
+/* #endregion */
+
+
+/* #region ----------------< Top films list grid element >-------------- */
 
 /* top films grid element */
 .film-grid-element {
@@ -2533,6 +2498,74 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   font-size: 0.55rem;
   font-weight: 1000;
 }
+/* #endregion */
+
+
+/* #region ----------------< Old stuff >-------------- */
+.sidebar-menu > .films-submenu {
+  display: block;
+  text-align: center;
+  padding-bottom: 13px;
+}
+
+.films-submenu > a {
+  padding: 0.7rem 1.0rem;
+  border-radius: 0px;
+  opacity: 1 !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  background-color:  var(--section-inner-bg-color);
+  border-bottom: 4px solid var(--section-inner-bg-color);
+}
+.films-submenu > a:hover {
+  background-color: var(--submenu-btn-bg-color-hover);
+  border-bottom: 4px solid var(--submenu-btn-bg-color-hover);
+}
+.films-submenu > a.active {
+  border-bottom: 4px solid var(--submenu-btn-text-color-active);
+  background-color: var(--submenu-btn-bg-color-active);
+}
+.films-submenu > a.active > span {
+  color: var(--submenu-btn-text-color-active);
+}
+
+.films-submenu > a:nth-child(1) {
+  border-top-left-radius: 15px;
+}
+.films-submenu > a:nth-child(3) {
+  border-top-right-radius: 15px;
+}
+
+.films-submenu > a > span {
+  font-size: 0.8rem;
+}
+.films-submenu > a:not(.active) > span {
+  color: rgb(132, 135, 143);
+}
+.films-submenu > a:not(.active):hover > span {
+  color: rgb(207, 204, 204);
+}
+
+/* */
+#table-of-films-watched-per-month {
+  margin-top: 30px;
+}
+#table-of-films-watched-per-month td:nth-child(1) { width: 20%; }   /* 1st column */
+#table-of-films-watched-per-month td:nth-child(2) { width: 20%; }   /* 2nd column */
+#table-of-films-watched-per-month td:nth-child(3) { width: 20%; }   /* 3rd column */
+#table-of-films-watched-per-month td:nth-child(4) { width: 20%; }   /* 4th column */
+#table-of-films-watched-per-month td:nth-child(5) { width: 5%; }
+#table-of-films-watched-per-month td:nth-child(6) { width: 5%; }
+#table-of-films-watched-per-month td:nth-child(7) { width: 5%; }
+#table-of-films-watched-per-month td:nth-child(8) { width: 5%; }
+
+.films-log table thead {
+  height: 50px;
+}
+.films-log table tr {
+  font-size: 0.85rem;
+}
+/* #endregion */
 
 
 /* #endregion */
@@ -2795,6 +2828,10 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
     border-radius: 0px;
     margin-top: -10px;
   }
+  .blog > .section-inner,
+  .blog-post > .section-inner {
+    padding: 20px 20px;
+  }
 }
 
 /* make font size get smaller on blog table */
@@ -2873,19 +2910,42 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
 /* #region ----------------------------------<14: SCROLLBARS>------------------------------------------ */
 
 /* Styles for custom scrollbar in Chrome... */
-body::-webkit-scrollbar-track {
-  background-color: #dfdfdf;
+body::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #000000;
 }
-body::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  background-color: rgb(44, 62, 80);
+body::-webkit-scrollbar{
+	width: 6px;
+	background-color: #b72323;
 }
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(136, 136, 136);
+body::-webkit-scrollbar-thumb{
+	background-color: #292727;
 }
 
+#top-films-list::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #050202;
+	border-radius: 0px;
+}
+#top-films-list::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+#top-films-list::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#98d80d),
+									   to(#ff9705),
+									   color-stop(.6,#acb10f))
+}
+
+
+
 /* Styles for custom scrollbar in Firefox.... */
+
 :root {
   scrollbar-color: var(--scrollbar-clickybit-bg-color) var(--scrolbar-notclickybit-bg-color) !important;
   scrollbar-width: thin !important;
