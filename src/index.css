@@ -2494,7 +2494,7 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   display: inline-block;
   cursor: pointer;
   border-radius: 10px;
-  opacity: 0.6 !important;
+  opacity: 0.66 !important;
 }
 .film-grid-element:hover {
   opacity: 1.0 !important;

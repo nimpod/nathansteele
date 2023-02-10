@@ -7,6 +7,7 @@ import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 import FilmsSubmenu from './FilmsSubmenu';
 import TopFilmsGridElement from './TopFilmsGridElement';
 import FilmsJsonList from './reviews-allData.json';
+import { camelize } from '../../js/helpers.js';
 
 let filmReviewsSorted = []
 export {filmReviewsSorted};
@@ -52,7 +53,7 @@ class Films extends Component {
                 //console.log('localData BEFORE: ', localData);
 
                 if (reducerData.letterboxdUrl === moreData.letterboxdUrl) {
-                    //console.log('MATCH(', j, '): localData.title = ', localData.title);
+                    console.log('MATCH(', j, '): reducerData.title = ', reducerData);
                     reducerData.year = moreData['year'];
                     reducerData.duration = moreData['duration'];
                     reducerData.position = moreData['position'];
@@ -65,9 +66,15 @@ class Films extends Component {
                     reducerData.imdbFilmId = moreData['imdbFilmId'];
                     reducerData.imdbAvgRating = moreData['imdbAvgRating'];
                     reducerData.imdbNumVotes = moreData['imdbNumVotes'];
+                    reducerData.posterUrl = moreData['posterUrl'];
                     
+                    // console.log(reducerData.customPosterUrl);
                     // use custom poster url if it exists...
-                    if (reducerData.posterUrl == undefined) {    // use custom posterUrl if I specified one...
+                    if (reducerData.customPosterUrl !== undefined) {
+                        console.log(reducerData.customPosterUrl);
+                        reducerData.posterUrl = reducerData.customPosterUrl;
+                    }
+                    if (reducerData.posterUrl == undefined) {    // use default posterUrl if I didnt specify one...
                         reducerData.posterUrl = moreData['posterUrl'];
                     }
                     // use custom title if it exists...

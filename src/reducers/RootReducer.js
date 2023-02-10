@@ -1049,7 +1049,7 @@ const initState = {
                             <div class='review-context'> \
                                 <p>Contraversial number pick... I know... but hear me out...</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland1.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland1.png\" alt=\"Flatland screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1060,10 +1060,10 @@ const initState = {
                                 <p>Flatland is a two-dimensional universe occupied by living geometric figures - squares, triangles, circles, etc. A Square, Attorney At Law, finds himself in the middle of two upheavals: the rise of martial law by\
                                  the circular leadership of Flatland, and the arrival of A Sphere, CEO Of Messiah, Incorporated, a creature from a hitherto-unknown third dimensional world.</p> \
                                  <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland2.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=\"{{https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland2.png}}\" alt=\"Flatland screenshot\" />\
                                 </picture>\
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland3.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland3.png\" alt=\"Flatland screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1073,7 +1073,7 @@ const initState = {
                             <div class='review-positivesAndNegatives'> \
                                 <p>insert potentially informative discussion here...</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland4.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland4.png\" alt=\"Flatland screenshot\" />\
                                 </picture>\
                             </div> \
                         </div> \
@@ -1114,8 +1114,38 @@ const initState = {
             "title": "The Secret World of Arrietty",
             "myRating": "9.1",
             "myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
-            "myReview": "",
-            "customPosterFileName": "arrietty.png"
+            "myReview": "<div class='review-content'> \
+                            <div class='toggle-section-container'> \
+                                <div class='toggle-section-btn'></div> \
+                                <span>#context</span> \
+                            </div> \
+                            <div class='review-context'> \
+                                <p>..............</p> \
+                                <picture class=\"img\">\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty1.png\" alt=\"Arrietty screenshot\" />\
+                                </picture>\
+                            </div> \
+                            <div class='toggle-section-container'> \
+                                <div class='toggle-section-btn'></div> \
+                                <span>#synopsis</span> \
+                            </div> \
+                            <div class='review-briefSynopsis'> \
+                                <picture class=\"img\">\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty2.png\" alt=\"Arrietty screenshot\" />\
+                                </picture>\
+                            </div> \
+                            <div class='toggle-section-container'> \
+                                <div class='toggle-section-btn'></div> \
+                                <span>#postives&negatives</span> \
+                            </div> \
+                            <div class='review-positivesAndNegatives'> \
+                                <picture class=\"img\">\
+                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty3.png\" alt=\"Arrietty screenshot\" />\
+                                </picture>\
+                            </div> \
+                        </div> \
+            ",
+            "customPosterUrl": require('../img/film-posters/arrietty.png')
         },
         {
             "letterboxdUrl": "https://boxd.it/2BiY",
@@ -1123,7 +1153,7 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["School", "Teacher-student dichotomy", "Addiction", "Profound", "Melancholic", "Kindness", "Sad", "Depressing"],
             "myReview": "",
-            "customPosterFileName": "detachment.jpg"
+            "customPosterUrl": require('../img/film-posters/detachment.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/tbEe",
@@ -1153,7 +1183,7 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Fun", "Stochasticity", "Determinism", "Randomness", "Simulation", "Running", "Girl power"],
             "myReview": "",
-            "customPosterFileName": "tag.jpeg"
+            "customPosterUrl": require('../img/film-posters/tag.jpeg')
         },
         {
             "letterboxdUrl": "https://boxd.it/e1Ga",
@@ -1168,7 +1198,7 @@ const initState = {
             "myRating": "9.5",
             "myTags": ["Creative use of colour", "Virtual world", "Celebration of art", "Finding happiness", "Revolution", "Fuck the system"],
             "myReview": "",
-            "customPosterFileName": "pleasantville.jpg"
+            "customPosterUrl": require('../img/film-posters/pleasantville.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/jpmy",
@@ -1183,7 +1213,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Emotional", "Finding happiness", "Turning negatives into positives", "Family", "War"],
             "myReview": "",
-            "customPosterFileName": "lifeIsBeautiful.jpg"
+            "customPosterUrl": require('../img/film-posters/lifeIsBeautiful.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/dgRU",
@@ -1191,7 +1221,7 @@ const initState = {
             "myRating": "9.1",
             "myTags": ["Intense", "Polarising", "One-location", "Challenging to watch at times", "Religion", "Exploring the dark depths of humanity", "Disturbing"],
             "myReview": "",
-            "customPosterFileName": "mother.jpg"
+            "customPosterUrl": require('../img/film-posters/mother.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/1JAY",
@@ -1199,7 +1229,7 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Endearing", "Finding happiness", "Growing up", "Discovering independence", "Finding yourself", "Soulmate", "Flying", "Anime", "Great soundtrack", "Utopia", "Girl power"],
             "myReview": "",
-            "customPosterFileName": "kiki.PNG"
+            "customPosterUrl": require('../img/film-posters/kiki.PNG'),
         },
         {
             "letterboxdUrl": "https://boxd.it/4JQS",
@@ -1207,7 +1237,7 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Growing up", "Engineering", "War", "Flying", "Great soundtrack", "Soulmate", "Finding yourself", "Anime"],
             "myReview": "",
-            "customPosterFileName": "theWindRises.jpg"
+            "customPosterUrl": require('../img/film-posters/theWindRises.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/2bc6",
@@ -1215,7 +1245,7 @@ const initState = {
             "myRating": "9.0",
             "myTags": ["Humanity and nature coexisting", "Embrace mother nature", "End of the world", "Dystopia", "Flying", "Great Soundtrack", "Girl power"],
             "myReview": "",
-            "customPosterFileName": "nausicaa.PNG"
+            "customPosterUrl": require('../img/film-posters/nausicaa.PNG')
         },
         {
             "letterboxdUrl": "https://boxd.it/2b1i",
@@ -1237,7 +1267,7 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["One-take", "Melancholic", "Friendship", "Great soundtrack", "Melancholic", "Nightlife", "BreakingBad-ish", "Accidently getting involved in crimminal activity", "Berlin"],
             "myReview": "",
-            "customPosterFileName": "victoria.jpg"
+            "customPosterUrl": require('../img/film-posters/victoria.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/u7LW",
@@ -1252,7 +1282,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Exploring the dark depths of humanity", "Challenging to watch at times", "Very long", "Great soundtrack", "Poetic", "Profound", "Friendship", "Religion"],
             "myReview": "",
-            "customPosterFileName": "loveExposure.jpg"
+            "customPosterUrl": require('../img/film-posters/loveExposure.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/1ZTM",
@@ -1281,7 +1311,7 @@ const initState = {
             "myRating": "9.5",
             "myTags": ["Total escapism", "Dystopia", "Train", "Snow", "Class", "Poverty", "Humanity condensed into a small location", "Futuristic", "One-location"],
             "myReview": "",
-            "customPosterFileName": "snowpiercer.jpg"
+            "customPosterUrl": require('../img/film-posters/snowpiercer.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/28Uk",
@@ -1289,7 +1319,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Deeply human", "Inspiring", "Fuck the system", "Soulmate", "Sport"],
             "myReview": "",
-            "customPosterFileName": "rocky.png"
+            "customPosterUrl": require('../img/film-posters/rocky.png')
         },
         {
             "letterboxdUrl": "https://boxd.it/1W68",
@@ -1304,7 +1334,7 @@ const initState = {
             "myRating": "9.6",
             "myTags": ["Total escapism", "Intimate story within epic sci-fi plot", "Aliens", "Metamorphosis", "Exploring the dark depths of humanity"],
             "myReview": "",
-            "customPosterFileName": "district9.png"
+            "customPosterUrl": require('../img/film-posters/district9.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/i7Q4",
@@ -1312,7 +1342,7 @@ const initState = {
             "myRating": "9.4",
             "myTags": ["A slice of life", "Metal", "Finding yourself", "Stoicism", "Not giving up despite being in a shitty situation"],
             "myReview": "",
-            "customPosterFileName": "soundOfMetal.jpg"
+            "customPosterUrl": require('../img/film-posters/soundOfMetal.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/28yy",
@@ -1327,7 +1357,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Brutal", "Metamorphosis", "Fun", "Mad concept"],
             "myReview": "",
-            "customPosterFileName": "exteHairExtensions.png"
+            "customPosterUrl": require('../img/film-posters/exteHairExtensions.png')
         },
         {
             "letterboxdUrl": "https://boxd.it/d99c",
@@ -1398,7 +1428,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Challenging to watch at times", "Brutal", "Claustrophobic", "Exploring the dark depths of humanity", "Very long", "Disturbing", "Not one to watch with the family"],
             "myReview": "",
-            "customPosterFileName": "martyrs.jpg"
+            "customPosterUrl": require('../img/film-posters/martyrs.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/uRS",
@@ -1406,7 +1436,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Audio-visual spectacle", "Poetic", "Exploring the dark depths of humanity", "Cognitive dissonance", "Confusing", "Great soundtrack"],
             "myReview": "",
-            "customPosterFileName": "confessions.jpg"
+            "customPosterUrl": require('../img/film-posters/confessions.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/20Xg",
@@ -1414,7 +1444,7 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Fun", "Kids film", "Animal welfare", "Emotional", "Great soundtrack", "Nostalgic"],
             "myReview": "",
-            "customPosterFileName": "chickenRun.jpg"
+            "customPosterUrl": require('../img/film-posters/chickenRun.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/26vi",
@@ -1422,7 +1452,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Lovecraftian horror", "Creature-feature", "Questioning reality", "Hallucinations", "Cults"],
             "myReview": "",
-            "customPosterFileName": "inTheMouthOfMadness.jpg"
+            "customPosterUrl": require('../img/film-posters/inTheMouthOfMadness.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/bdkE",
@@ -1437,7 +1467,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Very long"],
             "myReview": "",
-            "customPosterFileName": "cloudAtlas.jpg"
+            "customPosterUrl": require('../img/film-posters/cloudAtlas.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/9fLy",
@@ -1473,7 +1503,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Death", "Life", "Vast", "Cosmic", "Beyond existence", "Mysterious", "Creative use of lighting", "Creative use of aspect ratio", "Great soundtrack"],
             "myReview": "",
-            "customPosterFileName": "aGhostStory.PNG",
+            "customPosterUrl": require('../img/film-posters/aGhostStory.PNG'),
             "dateReviewed": "14/11/2021"
         },
         {
@@ -1482,7 +1512,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["War", "Finding positives out of negatives", "Not giving up despite being in a shitty situation", "Inspiring", "Brutal"],
             "myReview": "",
-            "customPosterFileName": "hacksawRidge.jpg",
+            "customPosterUrl": require('../img/film-posters/hacksawRidge.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/amAY",
@@ -1490,7 +1520,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Inspiring", "Uplifting", "Proving people wrong", "Being the underdog", "Finding yourself", "Soulmate", "Friendship"],
             "myReview": "",
-            "customPosterFileName": "eddieTheEagle.jpg",
+            "customPosterUrl": require('../img/film-posters/eddieTheEagle.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/dUu2",
@@ -1519,7 +1549,7 @@ const initState = {
             "myRating": "8.6",
             "myTags": ["Intricate animation style", "Animal welfare", "Humanity and nature coexisting", "Fun", "Friendship", "Great soundtrack"],
             "myReview": "",
-            "customPosterFileName": "fantasticMrFox.jpg",
+            "customPosterUrl": require('../img/film-posters/fantasticMrFox.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/dZrW",
@@ -1541,7 +1571,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Atmospheric", "Confusing", "Weird", "Snow", "Intimate", "Lonely", "Creepy"],
             "myReview": "",
-            "customPosterFileName": "imThinkingOfEndingThings.jpg",
+            "customPosterUrl": require('../img/film-posters/imThinkingOfEndingThings.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/iIWS",
@@ -1563,7 +1593,7 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Claustrophobic", "Disturbing", "Multiple personality disorder"],
             "myReview": "",
-            "customPosterFileName": "split.jpg",
+            "customPosterUrl": require('../img/film-posters/split.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/25Vu",
@@ -1592,7 +1622,7 @@ const initState = {
             "myRating": "7.9",
             "myTags": ["Atmospheric", "Melancholic", "Aliens", "Soulmate", "Travelling", "Alone in the wilderness", "Virus", "Great soundtrack"],
             "myReview": "",
-            "customPosterFileName": "monsters.jpg",
+            "customPosterUrl": require('../img/film-posters/monsters.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1yBw",
@@ -1615,7 +1645,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Indian culture", "Great chemistry between characters", "Poverty", "Slavery", "Friendship", "Kindness", "The evil British empire", "Great cinematography", "Fuck the system", "Very long", "Great soundtrack"],
             "myReview": "",
-            "customPosterFileName": "riseRoarRevolt.jpg",
+            "customPosterUrl": require('../img/film-posters/riseRoarRevolt.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/dvXe",
@@ -1630,7 +1660,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Mad concept", "Timey-wimey"],
             "myReview": "",
-            "customPosterFileName": "theAgeOfAdaline.jpg",
+            "customPosterUrl": require('../img/film-posters/theAgeOfAdaline.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1YIe",
@@ -1666,7 +1696,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Alone in the wilderness", "Survival story", "Soulmate", "Finding yourself", "Humanity and nature coexisting", "Quirky", "Lonelyness"],
             "myReview": "",
-            "customPosterFileName": "castawayOnTheMoon.jpg",
+            "customPosterUrl": require('../img/film-posters/castawayOnTheMoon.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/wMAk",
@@ -1674,7 +1704,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Quirky", "Endearing", "Poetic", "Mokumentary", "Fun", "Friendship", "Finding your people", "Great soundtrack"],
             "myReview": "",
-            "customPosterFileName": "marcelTheShellWithShoesOn.jpg",
+            "customPosterUrl": require('../img/film-posters/marcelTheShellWithShoesOn.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/4W9M",
@@ -1682,7 +1712,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Disturbing", "Questioning reality", "Non-linear timeline"],
             "myReview": "",
-            "customPosterFileName": "oculus.jpg",
+            "customPosterUrl": require('../img/film-posters/oculus.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/i5vI",
@@ -1718,7 +1748,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Atmospheric", "Post-apocalypse society", "Conspiracy", "Stuck underground", "Layered", "Mysterious", "Loss of identity", "Cults"],
             "myReview": "",
-            "customPosterFileName": "cadaver.jpg",
+            "customPosterUrl": require('../img/film-posters/cadaver.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1MTO",
@@ -1733,7 +1763,7 @@ const initState = {
             "myRating": "7.7",
             "myTags": ["Atmospheric", "Mysterious", "Murder mystery", "Confusing", "Non-linear timeline", "Story within a story", "Great soundtrack"],
             "myReview": "",
-            "customPosterFileName": "nocturnalAnimals.jpg",
+            "customPosterUrl": require('../img/film-posters/nocturnalAnimals.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/i3a4",
@@ -1762,7 +1792,7 @@ const initState = {
             "myRating": "7.6",
             "myTags": ["Death",  "Alien visitor disguised as human", "Melancholic", "Mysterious", "Quirky", "Forgiveness", "Soulmate", "Aliens", "Not a shit John Carpenter film", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/starman.PNG"
+            "customPosterUrl": require('../img/film-posters/starman.PNG')
         },
         {
             "letterboxdUrl": "https://boxd.it/5ppu",
@@ -1770,7 +1800,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Zombies", "Depressing", "Brutal", "Gory", "Social commentary", "Mini-series but it might as well be a long film"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/original/piGeJMaYQk1fMpRL4kBd2GLiMVS.jpg"
+            "customPosterUrl": require('../img/film-posters/deadSet.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/2aYo",
@@ -1785,7 +1815,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Mysterious", "Grand", "Great cinematography", "Minimal dialogue", "Artificial Intelligence"],
             "myReview": "",
-            "posterUrl": "https://alternativemovieposters.com/wp-content/uploads/2017/04/eng_2001.jpg"
+            "customPosterUrl": require('../img/film-posters/2001SpaceOdyssey.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/SLa",
@@ -1800,7 +1830,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["School setting", "Friendship", "Great chemistry between characters", "A slice of life", "Soulmate"],
             "myReview": "",
-            "posterUrl": "https://musicart.xboxlive.com/7/a9781100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080"
+            "customPosterUrl": require('../img/film-posters/thePerksOfBeingAWallflower.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1Z5C",
@@ -1822,7 +1852,7 @@ const initState = {
             "myRating": "8.6",
             "myTags": ["Time loop", "Friendship", "Soulmate", "Turning negatives into positives", "Not giving up despite being in a shitty situation"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDJiYjhhODItOTY2Yi00NGQ5LTk1MGQtM2Y2YzE3M2FmY2VhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
+            "customPosterUrl": require('../img/film-posters/theMapOfTinyPerfectThings.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/200I",
@@ -1837,7 +1867,7 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Possession", "Disturbing", "Depressing", "Gross", "Challenging to watch at times"],
             "myReview": "",
-            "posterUrl": "https://upload.wikimedia.org/wikipedia/en/2/24/Possession_film_cover.jpg"
+            "customPosterUrl": require('../img/film-posters/possession.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/a5fa",
@@ -1866,7 +1896,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Atmospheric", "Murder mystery", "Mysterious", "Gross", "Conspiracy"],
             "myReview": "",
-            "posterUrl": "https://pm1.narvii.com/7031/5e1f13dd2e207f29a2f1bcde311e1f5fac5113e6r1-960-1440v2_hq.jpg"
+            "customPosterUrl": require('../img/film-posters/theGirlWithTheDragonTattoo.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/H4k",
@@ -1874,7 +1904,7 @@ const initState = {
             "myRating": "8.8",
             "myTags": ["Disturbing", "Terrifying", "Possession"],
             "myReview": "",
-            "posterUrl": "https://miro.medium.com/max/500/1*I9zDkUL5PfD7aT0O2Zk8mg.jpeg"
+            "customPosterUrl": require('../img/film-posters/insidious.jpeg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/5n0s",
@@ -1882,7 +1912,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Contemplative sci-fi", "Profound",  "Amazing CGI", "Found footage", "Mokumentary", "Exploration of untouched places in the solar system that may harbour unique lifeforms"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/original/tbsfaBjiAW5vfrV06R8KCOzVOYy.jpg"
+            "customPosterUrl": require('../img/film-posters/europaReport.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/s2S",
@@ -1897,7 +1927,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Bullying", "Satan", "Possession", "Telekenesis", "School setting"],
             "myReview": "",
-            "posterUrl": "https://cdn.shopify.com/s/files/1/1416/8662/products/carrie_1976_fr_original_film_art_a.jpg?v=1624068725"
+            "customPosterUrl": require('../img/film-posters/carrie.png'),
         },
         {
             "letterboxdUrl": "https://boxd.it/2a70",
@@ -1912,7 +1942,7 @@ const initState = {
             "myRating": "8.9",
             "myTags": ["Total escapism", "Aliens"],
             "myReview": "",
-            "posterUrl": "https://lumiere-a.akamaihd.net/v1/images/aiiens_584x800_ka_4dc69825.jpeg"
+            "customPosterUrl": require('../img/film-posters/aliens.png'),
         },
         {
             "letterboxdUrl": "https://boxd.it/MxG",
@@ -1920,7 +1950,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Melancholic", "Poetic", "Sad", "Depressing", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://i.pinimg.com/originals/b8/7a/b0/b87ab0252fea5c3d725c9f3651b5fcd1.jpg"
+            "customPosterUrl": require('../img/film-posters/blueValentine.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/d9YE",
@@ -1928,7 +1958,7 @@ const initState = {
             "myRating": "8.8",
             "myTags": ["Poetic", "Contemplative", "Based on true events", "Turning negatives into positives", "Not giving up despite being in a shitty situation"],
             "myReview": "",
-            "posterUrl": "https://occ-0-299-300.1.nflxso.net/art/2e169/68e06468f2aa67ab2118982083ff8b2bf1a2e169.jpg"
+            "customPosterUrl": require('../img/film-posters/notesOnBlindness.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/i4a",
@@ -1943,7 +1973,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["A slice of life", "Finding yourself", "Family", "Friendship", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://i.pinimg.com/originals/01/b3/53/01b353882fbf3511d419f5c9fcf20fcb.jpg"
+            "customPosterUrl": require('../img/film-posters/boyhood.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1NhQ",
@@ -1951,7 +1981,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Creepy", "Terrifying", "Intricate animation style", "Colourful"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/coraline.png"
+            "customPosterUrl": require('../img/film-posters/coraline.png'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1ARc",
@@ -1973,7 +2003,7 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Surrealist horror", "Xenophobia", "Isolation", "Hostility", "Paranoia", "Loss of identity", "Claustrophobic", "Conspiracy", "Living in flats"],
             "myReview": "",
-            "posterUrl": "https://i.pinimg.com/originals/18/36/4e/18364e3a4a7a20d7e37df9d1fb960aea.jpg"
+            "customPosterUrl": require('../img/film-posters/theTenant.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1KnQ",
@@ -1981,7 +2011,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Surrealism", "Quirky", "Aliens", "Future society"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/I/81w85eQHmaL._AC_SX342_.jpg"
+            "customPosterUrl": require('../img/film-posters/fantasticPlanet.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/d1uG",
@@ -2003,7 +2033,7 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Arthouse psychological thriller", "Disturbing", "Evil psychotic child"],
             "myReview": "",
-            "posterUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4fac0cc4-4a43-4fda-9d67-b72dfbe401b5/da3m4dc-5c4300c2-eb1b-419f-a5a7-cf661801512f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRmYWMwY2M0LTRhNDMtNGZkYS05ZDY3LWI3MmRmYmU0MDFiNVwvZGEzbTRkYy01YzQzMDBjMi1lYjFiLTQxOWYtYTVhNy1jZjY2MTgwMTUxMmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.cOq3aXvmoPdtXawGaH2oMYddMOJr3DVGe3xxaqmHfkc"
+            "customPosterUrl": require('../img/film-posters/weNeedToTalkAboutKevin.png')
         },
         {
             "letterboxdUrl": "https://boxd.it/2ahu",
@@ -2018,7 +2048,7 @@ const initState = {
             "myRating": "9.0",
             "myTags": ["Embrace mother nature", "Endearing", "Humanity and nature coexisting", "Nature thriving", "Colourful", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/original/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg"
+            "customPosterUrl": require('../img/film-posters/myNeighbourTotoro.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1Z2I",
@@ -2068,7 +2098,7 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Disgusting", "Gross", "Creature-feature", "Zombies", "Fun", "Wild", "Short but effective"],
             "myReview": "",
-            "posterUrl": "https://flxt.tmsimg.com/assets/p159820_p_v8_ad.jpg"
+            "customPosterUrl": require('../img/film-posters/slither.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/29gg",
@@ -2076,7 +2106,7 @@ const initState = {
             "myRating": "8.9",
             "myTags": ["Fun", "Gross", "Creature-feature", "Causing havoc in a fairly normal town"],
             "myReview": "",
-            "posterUrl": "https://static.posters.cz/image/1300/posters/gremlins-originals-i76293.jpg"
+            "customPosterUrl": require('../img/film-posters/gremlins.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/gmVE",
@@ -2091,7 +2121,7 @@ const initState = {
             "myRating": "8.8",
             "myTags": ["Mad concept", "Confusing", "Timey-wimey", "Very small cast"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/w500/sYjpJZEdwELjdHy4OVzazeJVT0z.jpg"
+            "customPosterUrl": require('../img/film-posters/predestination.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/ppHI",
@@ -2106,7 +2136,7 @@ const initState = {
             "myRating": "9.0",
             "myTags": ["Emotional", "Total escapism", "The universal power of music", "Friendship", "Deeper than a kids film", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://i.ebayimg.com/images/g/qD8AAOSwTOtapSLx/s-l1600.jpg"
+            "customPosterUrl": require('../img/film-posters/coco.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/4KHC",
@@ -2187,7 +2217,7 @@ const initState = {
             "myRating": "9.1",
             "myTags": ["Post-apocalypse", "Civilisation on spaceship", "Minimal dialogue", "Very small cast", "Emotional", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/original/h27XKksE9jwSSHELYIisDxzBvpe.jpg"
+            "customPosterUrl": require('../img/film-posters/walle.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1tQG",
@@ -2209,7 +2239,7 @@ const initState = {
             "myRating": "9.0",
             "myTags": ["Terrifying", "Exorcism"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/I/412mtVvKcVL._AC_.jpg"
+            "customPosterUrl": require('../img/film-posters/theExorcist.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/gL9g",
@@ -2217,7 +2247,7 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["Revenge-fantasy thriller", "Challenging to watch at times", "Girl power"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/revenge.jpg"
+            "customPosterUrl": require('../img/film-posters/revenge.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/28xA",
@@ -2232,7 +2262,7 @@ const initState = {
             "myRating": "9.3",
             "myTags": ["Emotional"],
             "myReview": "",
-            "posterUrl": "https://throughthesilverscreenuk.files.wordpress.com/2017/07/rise-of-the-planet-of-the-apes.jpg"
+            "customPosterUrl": require('../img/film-posters/riseOfThePlanetOfTheApes.png')
         },
         {
             "letterboxdUrl": "https://boxd.it/2awa",
@@ -2240,7 +2270,7 @@ const initState = {
             "myRating": "9.3",
             "myTags": ["Disturbing", "Weird", "Conspiracy", "Neogothic", "Neogothic architecture", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://cdn.myportfolio.com/80c306b9eb849266516519837c0d5bc5/f4348699-fdf2-4cf9-b4a8-ff03d082bd11_rw_1200.jpg?h=db842cc07699e6d9a64da579ab393ce2"
+            "customPosterUrl": require('../img/film-posters/batmanReturns.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/iEBG",
@@ -2255,7 +2285,7 @@ const initState = {
             "myRating": "9.4",
             "myTags": ["Space exploration", "Timey-wimey"],
             "myReview": "",
-            "posterUrl": "https://i.ebayimg.com/images/g/T9UAAOSw1m5bBU-5/s-l1600.jpg"
+            "customPosterUrl": require('../img/film-posters/2001SpaceOdyssey.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1Y2i",
@@ -2263,7 +2293,7 @@ const initState = {
             "myRating": "9.4",
             "myTags": ["Contemplative sci-fi", "Post-apocalypse society", "Near future technology"],
             "myReview": "",
-            "posterUrl": "https://filmfisher.com/wp-content/uploads/2014/12/ChildrenOfMen.jpg"
+            "customPosterUrl": require('../img/film-posters/childrenOfMen.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/29OM",
@@ -2278,7 +2308,7 @@ const initState = {
             "myRating": "9.3",
             "myTags": ["Contemplative sci-fi", "Artificial Intelligence", "Revolution"],
             "myReview": "",
-            "posterUrl": "https://i.pinimg.com/originals/d9/0b/ff/d90bffbc2e454c1f8f5edacb962d385a.jpg"
+            "customPosterUrl": require('../img/film-posters/exMachina.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1MLK",
@@ -2293,7 +2323,7 @@ const initState = {
             "myRating": "8.8",
             "myTags": ["Brutal", "Gory", "Wild", "Satan", "Possession"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/original/1gDV0Lm9y8ufIKzyf0h0GBgb9Zj.jpg"
+            "customPosterUrl": require('../img/film-posters/evilDead.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/29Ge",
@@ -2308,7 +2338,7 @@ const initState = {
             "myRating": "9.4",
             "myTags": ["Poverty", "Family", "Emotional"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/lion.jpg"
+            "customPosterUrl": require('../img/film-posters/lion.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/hTha",
@@ -2316,7 +2346,7 @@ const initState = {
             "myRating": "9.3",
             "myTags": ["Claustrophobic", "Psychlogical thriller", "Quirky"],
             "myReview": "",
-            "posterUrl": "https://i.etsystatic.com/23402008/r/il/0e5769/2499687838/il_570xN.2499687838_7a06.jpg"
+            "customPosterUrl": require('../img/film-posters/parasite.png'),
         },
         {
             "letterboxdUrl": "https://boxd.it/2b4w",
@@ -2324,7 +2354,7 @@ const initState = {
             "myRating": "9.5",
             "myTags": ["Embrace mother nature", "Humanity and nature coexisting", "War", "Corruption", "Evil people in power", "Anime", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/mononoke.png"
+            "customPosterUrl": require('../img/film-posters/mononoke.png'),
         },
         {
             "letterboxdUrl": "https://boxd.it/7T0y",
@@ -2346,7 +2376,7 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["One-take", "Inspiring", "Nightlife", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/06/IMG_8193-scaled.jpeg"
+            "customPosterUrl": require('../img/film-posters/birdman.jpeg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/kWlA",
@@ -2354,7 +2384,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Terrifying", "Total escapism", "Invisibility", "Creepy"],
             "myReview": "",
-            "posterUrl": "https://www.alternativebeach.com/wp-content/uploads/2020/12/invisible-man.jpeg"
+            "customPosterUrl": require('../img/film-posters/theInvisibleMan.jpeg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/29Nu",
@@ -2369,7 +2399,7 @@ const initState = {
             "myRating": "9.5",
             "myTags": ["Terrifying", "Gross", "Family", "Betrayl", "Possession"],
             "myReview": "",
-            "posterUrl": "https://i.ebayimg.com/images/g/N2IAAOSw3HZbI~xQ/s-l1600.jpg"
+            "customPosterUrl": require('../img/film-posters/hereditary.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/2a46",
@@ -2377,7 +2407,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Mad concept", "Emotional", "Amazing CGI", "Endearing"],
             "myReview": "",
-            "posterUrl": "https://lumiere-a.akamaihd.net/v1/images/p_monstersinc_19751_55afa07a.jpeg"
+            "customPosterUrl": require('../img/film-posters/monstersInc.png'),
         },
         {
             "letterboxdUrl": "https://boxd.it/8H5e",
@@ -2399,7 +2429,7 @@ const initState = {
             "myRating": "9.7",
             "myTags": ["Atmospheric", "Water", "Beautiful", "Melancholic", "Great soundtrack", "Minimal dialogue"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/shapeofwater.jpeg"
+            "customPosterUrl": require('../img/film-posters/theShapeOfWater.jpeg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1USu",
@@ -2421,7 +2451,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Uplifting", "Conspiracy", "Questioning reality", "Religion", "Faith", "Beyond existence"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/truman.PNG"
+            "customPosterUrl": require('../img/film-posters/theTrumanShow.PNG')
         },
         {
             "letterboxdUrl": "https://boxd.it/29aC",
@@ -2429,7 +2459,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Humanity and nature coexisting", "Exploring unexplored terrority", "Mountaineering", "Tibet", "Dalia Lama", "Poetic", "Profound", "Great cinematography", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/tibet.PNG"
+            "customPosterUrl": require('../img/film-posters/sevenYearsInTibet.PNG')
         },
         {
             "letterboxdUrl": "https://boxd.it/23Fk",
@@ -2444,7 +2474,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Exploring unexplored terrority", "Survival story", "Based on a true story", "Stranded at sea"],
             "myReview": "",
-            "posterUrl": "https://i0.wp.com/www.heyuguys.com/images/2012/08/Life-of-Pi-Poster.jpg?fit=800%2C1185&ssl=1"
+            "customPosterUrl": require('../img/film-posters/lifeOfPi.png'),
         },
         {
             "letterboxdUrl": "https://boxd.it/2a1m",
@@ -2452,7 +2482,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Dystopia"],
             "myReview": "",
-            "posterUrl": "https://alternativemovieposters.com/wp-content/uploads/2022/06/Sergey_Matrix.jpg"
+            "customPosterUrl": require('../img/film-posters/theMatrix.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/eOCm",
@@ -2467,7 +2497,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Lonleiness", "Artificial Intelligence", "Soulmate", "Melancholic", "Emotional", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://alternativemovieposters.com/wp-content/uploads/2021/07/GarbhanGrant_Her.jpg"
+            "customPosterUrl": require('../img/film-posters/her.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/aNGk",
@@ -2475,7 +2505,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Grand sci-fi", "Linguistics", "Non-linear timeline", "Timey-wimey", "Aliens", "Melancholic", "Emotional", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://www.scified.com/media/arrival-movie-poster-7338.jpg"
+            "customPosterUrl": require('../img/film-posters/arrival.png'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1VGY",
@@ -2483,7 +2513,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Terrifying"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTY1OTIwODgzMV5BMl5BanBnXkFtZTgwMzUyMDgzNDM@._V1_.jpg"
+            "customPosterUrl": require('../img/film-posters/theStrangers.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1Wow",
