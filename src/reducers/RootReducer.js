@@ -1115,7 +1115,7 @@ const initState = {
             "myRating": "9.1",
             "myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/arrietty.png"
+            "customPosterFileName": "arrietty.png"
         },
         {
             "letterboxdUrl": "https://boxd.it/2BiY",
@@ -1123,7 +1123,7 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["School", "Teacher-student dichotomy", "Addiction", "Profound", "Melancholic", "Kindness", "Sad", "Depressing"],
             "myReview": "",
-            "posterUrl": "https://upload.wikimedia.org/wikipedia/en/2/20/Detachment_poster.jpg"
+            "customPosterFileName": "detachment.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/tbEe",
@@ -1153,7 +1153,7 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Fun", "Stochasticity", "Determinism", "Randomness", "Simulation", "Running", "Girl power"],
             "myReview": "",
-            "posterUrl": "https://upload.wikimedia.org/wikipedia/en/c/cc/Tag_%28film%29_poster.jpeg"
+            "customPosterFileName": "tag.jpeg"
         },
         {
             "letterboxdUrl": "https://boxd.it/e1Ga",
@@ -1168,7 +1168,7 @@ const initState = {
             "myRating": "9.5",
             "myTags": ["Creative use of colour", "Virtual world", "Celebration of art", "Finding happiness", "Revolution", "Fuck the system"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/I/51GpFbyGE9L._AC_.jpg"
+            "customPosterFileName": "pleasantville.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/jpmy",
@@ -1183,7 +1183,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Emotional", "Finding happiness", "Turning negatives into positives", "Family", "War"],
             "myReview": "",
-            "posterUrl": "https://img.fruugo.com/product/4/37/14601374_max.jpg"
+            "customPosterFileName": "lifeIsBeautiful.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/dgRU",
@@ -1191,7 +1191,7 @@ const initState = {
             "myRating": "9.1",
             "myTags": ["Intense", "Polarising", "One-location", "Challenging to watch at times", "Religion", "Exploring the dark depths of humanity", "Disturbing"],
             "myReview": "",
-            "posterUrl": "https://pbs.twimg.com/media/C_zGyLPUwAA4ugR?format=jpg&name=medium"
+            "customPosterFileName": "mother.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1JAY",
@@ -1199,7 +1199,7 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Endearing", "Finding happiness", "Growing up", "Discovering independence", "Finding yourself", "Soulmate", "Flying", "Anime", "Great soundtrack", "Utopia", "Girl power"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/kiki.PNG"
+            "customPosterFileName": "kiki.PNG"
         },
         {
             "letterboxdUrl": "https://boxd.it/4JQS",
@@ -1207,7 +1207,7 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Growing up", "Engineering", "War", "Flying", "Great soundtrack", "Soulmate", "Finding yourself", "Anime"],
             "myReview": "",
-            "posterUrl": "https://i.pinimg.com/originals/f3/62/9f/f3629f2948a6b56a4a7c82d2e4637e4a.jpg"
+            "customPosterFileName": "theWindRises.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2bc6",
@@ -1215,7 +1215,7 @@ const initState = {
             "myRating": "9.0",
             "myTags": ["Humanity and nature coexisting", "Embrace mother nature", "End of the world", "Dystopia", "Flying", "Great Soundtrack", "Girl power"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/nausicaa.PNG"
+            "customPosterFileName": "nausicaa.PNG"
         },
         {
             "letterboxdUrl": "https://boxd.it/2b1i",
@@ -1237,7 +1237,7 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["One-take", "Melancholic", "Friendship", "Great soundtrack", "Melancholic", "Nightlife", "BreakingBad-ish", "Accidently getting involved in crimminal activity", "Berlin"],
             "myReview": "",
-            "posterUrl": "https://i.pinimg.com/originals/92/29/71/9229714dc6e3599b9ccaaa69d51764ee.jpg"
+            "customPosterFileName": "victoria.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/u7LW",
@@ -1252,7 +1252,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Exploring the dark depths of humanity", "Challenging to watch at times", "Very long", "Great soundtrack", "Poetic", "Profound", "Friendship", "Religion"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjY4Mzc0MzgyOV5BMl5BanBnXkFtZTgwNzMxNjIzMTE@._V1_.jpg"
+            "customPosterFileName": "loveExposure.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1ZTM",
@@ -1281,7 +1281,7 @@ const initState = {
             "myRating": "9.5",
             "myTags": ["Total escapism", "Dystopia", "Train", "Snow", "Class", "Poverty", "Humanity condensed into a small location", "Futuristic", "One-location"],
             "myReview": "",
-            "posterUrl": "https://i.pinimg.com/originals/dc/67/d6/dc67d66f3c604ecfd1956a7d9376c50f.jpg"
+            "customPosterFileName": "snowpiercer.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/28Uk",
@@ -1289,7 +1289,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Deeply human", "Inspiring", "Fuck the system", "Soulmate", "Sport"],
             "myReview": "",
-            "posterUrl": "https://i.etsystatic.com/27089413/r/il/4cd0d6/3681368747/il_570xN.3681368747_bo2m.jpg"
+            "customPosterFileName": "rocky.png"
         },
         {
             "letterboxdUrl": "https://boxd.it/1W68",
@@ -1304,7 +1304,7 @@ const initState = {
             "myRating": "9.6",
             "myTags": ["Total escapism", "Intimate story within epic sci-fi plot", "Aliens", "Metamorphosis", "Exploring the dark depths of humanity"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/district9.jpg"
+            "customPosterFileName": "district9.png"
         },
         {
             "letterboxdUrl": "https://boxd.it/i7Q4",
@@ -1312,7 +1312,7 @@ const initState = {
             "myRating": "9.4",
             "myTags": ["A slice of life", "Metal", "Finding yourself", "Stoicism", "Not giving up despite being in a shitty situation"],
             "myReview": "",
-            "posterUrl": "https://alternativemovieposters.com/wp-content/uploads/2021/03/HaleyTurnbull_SoundOfMetal.jpg"
+            "customPosterFileName": "soundOfMetal.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/28yy",
@@ -1327,7 +1327,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Brutal", "Metamorphosis", "Fun", "Mad concept"],
             "myReview": "",
-            "posterUrl": "https://d3tvwjfge35btc.cloudfront.net/Assets/04/587/L_p0004858704.jpg"
+            "customPosterFileName": "exteHairExtensions.png"
         },
         {
             "letterboxdUrl": "https://boxd.it/d99c",
@@ -1398,7 +1398,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Challenging to watch at times", "Brutal", "Claustrophobic", "Exploring the dark depths of humanity", "Very long", "Disturbing", "Not one to watch with the family"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjYyOTM2MjcyOF5BMl5BanBnXkFtZTgwMzAwMTA1NzE@._V1_.jpg"
+            "customPosterFileName": "martyrs.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/uRS",
@@ -1406,7 +1406,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Audio-visual spectacle", "Poetic", "Exploring the dark depths of humanity", "Cognitive dissonance", "Confusing", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "http://www.raymondyeung.com/movieadv/confessions_poster.jpg"
+            "customPosterFileName": "confessions.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/20Xg",
@@ -1414,7 +1414,7 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Fun", "Kids film", "Animal welfare", "Emotional", "Great soundtrack", "Nostalgic"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/original/sKr9uEqQ0NWQhb29XIJvpT43khk.jpg"
+            "customPosterFileName": "chickenRun.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/26vi",
@@ -1422,7 +1422,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Lovecraftian horror", "Creature-feature", "Questioning reality", "Hallucinations", "Cults"],
             "myReview": "",
-            "posterUrl": "https://i.pinimg.com/originals/49/03/b8/4903b8f44efb6783b676c6262fb9f008.jpg"
+            "customPosterFileName": "inTheMouthOfMadness.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/bdkE",
@@ -1437,7 +1437,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Very long"],
             "myReview": "",
-            "posterUrl": "https://www.reelrecon.com/wp-content/uploads/2012/10/Cloud-Atlas-0081-20121015-96.jpg"
+            "customPosterFileName": "cloudAtlas.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/9fLy",
@@ -1473,7 +1473,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Death", "Life", "Vast", "Cosmic", "Beyond existence", "Mysterious", "Creative use of lighting", "Creative use of aspect ratio", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://i.etsystatic.com/26881902/r/il/0d4e8e/4247656359/il_fullxfull.4247656359_es8d.jpg",
+            "customPosterFileName": "aGhostStory.PNG",
             "dateReviewed": "14/11/2021"
         },
         {
@@ -1482,7 +1482,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["War", "Finding positives out of negatives", "Not giving up despite being in a shitty situation", "Inspiring", "Brutal"],
             "myReview": "",
-            "posterUrl": "https://i.pinimg.com/736x/99/79/8b/99798b704c143f9cbae3f8abfa7988ca--movie-posters.jpg"
+            "customPosterFileName": "hacksawRidge.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/amAY",
@@ -1490,7 +1490,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Inspiring", "Uplifting", "Proving people wrong", "Being the underdog", "Finding yourself", "Soulmate", "Friendship"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/original/80fwjYfHmeDXobIErpNvCFCOAYd.jpg"
+            "customPosterFileName": "eddieTheEagle.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/dUu2",
@@ -1519,7 +1519,7 @@ const initState = {
             "myRating": "8.6",
             "myTags": ["Intricate animation style", "Animal welfare", "Humanity and nature coexisting", "Fun", "Friendship", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/I/71xdMyQVSUL._AC_SL1500_.jpg"
+            "customPosterFileName": "fantasticMrFox.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/dZrW",
@@ -1541,7 +1541,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Atmospheric", "Confusing", "Weird", "Snow", "Intimate", "Lonely", "Creepy"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzZiNDAxN2MtZGNhMC00OGJlLWE4OGUtMWM5YjZiZWUzMjliXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+            "customPosterFileName": "imThinkingOfEndingThings.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/iIWS",
@@ -1563,7 +1563,7 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Claustrophobic", "Disturbing", "Multiple personality disorder"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/split.jpg"
+            "customPosterFileName": "split.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/25Vu",
@@ -1592,7 +1592,7 @@ const initState = {
             "myRating": "7.9",
             "myTags": ["Atmospheric", "Melancholic", "Aliens", "Soulmate", "Travelling", "Alone in the wilderness", "Virus", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-posters/monsters.jpg"
+            "customPosterFileName": "monsters.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/1yBw",
@@ -1615,7 +1615,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Indian culture", "Great chemistry between characters", "Poverty", "Slavery", "Friendship", "Kindness", "The evil British empire", "Great cinematography", "Fuck the system", "Very long", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/original/u0XUBNQWlOvrh0Gd97ARGpIkL0.jpg"
+            "customPosterFileName": "riseRoarRevolt.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/dvXe",
@@ -1630,7 +1630,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Mad concept", "Timey-wimey"],
             "myReview": "",
-            "posterUrl": "https://i0.wp.com/3.bp.blogspot.com/-59gzmvO4Ag8/VQ0W7lNapyI/AAAAAAAAADY/xJl51U89eVI/s1600/The%2BAge%2Bof%2BAdaline.jpg"
+            "customPosterFileName": "theAgeOfAdaline.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/1YIe",
@@ -1666,7 +1666,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Alone in the wilderness", "Survival story", "Soulmate", "Finding yourself", "Humanity and nature coexisting", "Quirky", "Lonelyness"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/original/wVDuDqn4ZPIhfdr7gyS2dKE0XPl.jpg"
+            "customPosterFileName": "castawayOnTheMoon.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/wMAk",
@@ -1674,7 +1674,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Quirky", "Endearing", "Poetic", "Mokumentary", "Fun", "Friendship", "Finding your people", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://www.peckhamplex.london/imgs/posters/large/marcel-the-shell-with-shoes-on.jpg"
+            "customPosterFileName": "marcelTheShellWithShoesOn.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/4W9M",
@@ -1682,7 +1682,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Disturbing", "Questioning reality", "Non-linear timeline"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/I/41yzvh2HKZL._AC_.jpg"
+            "customPosterFileName": "oculus.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/i5vI",
@@ -1718,7 +1718,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Atmospheric", "Post-apocalypse society", "Conspiracy", "Stuck underground", "Layered", "Mysterious", "Loss of identity", "Cults"],
             "myReview": "",
-            "posterUrl": "https://www.themoviedb.org/t/p/w500/bo94ZQ0SlFRHL3fGPHNBYQDlnhl.jpg"
+            "customPosterFileName": "cadaver.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/1MTO",
@@ -1733,7 +1733,7 @@ const initState = {
             "myRating": "7.7",
             "myTags": ["Atmospheric", "Mysterious", "Murder mystery", "Confusing", "Non-linear timeline", "Story within a story", "Great soundtrack"],
             "myReview": "",
-            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTU2MjM5MzUzOV5BMl5BanBnXkFtZTgwNjMxMTc5OTE@._V1_.jpg"
+            "customPosterFileName": "nocturnalAnimals.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/i3a4",
