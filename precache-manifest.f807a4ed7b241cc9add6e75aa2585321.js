@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b89441b31cc2e6d610643b732912896",
+    "revision": "154814c3438dc1eb33715273743dac3d",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "fdd5dce667570e3370b3",
-    "url": "/nathansteele/static/css/main.5dca07a2.chunk.css"
+    "revision": "d07520038284937bea94",
+    "url": "/nathansteele/static/css/main.6ce69514.chunk.css"
   },
   {
     "revision": "faf90881c14014173976",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.4f7b312f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fdd5dce667570e3370b3",
-    "url": "/nathansteele/static/js/main.78b978de.chunk.js"
+    "revision": "d07520038284937bea94",
+    "url": "/nathansteele/static/js/main.eea72d7b.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -180,8 +180,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/fantasticMrFox.2ff94ffd.jpg"
   },
   {
-    "revision": "f9d6faa5f4dee9e84a596b1cc2fd1350",
-    "url": "/nathansteele/static/media/fantasticPlanet.f9d6faa5.jpg"
+    "revision": "1ff5e75d3629f7cd1b0989bb6435717f",
+    "url": "/nathansteele/static/media/fantasticPlanet.1ff5e75d.png"
   },
   {
     "revision": "b03b40be2b3f6af3925e003efd00a2f3",
@@ -228,8 +228,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/insidious.114e13e7.jpeg"
   },
   {
-    "revision": "5cba96305b6a60c730b29e470c3c3d6c",
-    "url": "/nathansteele/static/media/kiki.5cba9630.PNG"
+    "revision": "5711c8c51de0848b20ab48a40e985bcd",
+    "url": "/nathansteele/static/media/kiki.5711c8c5.jpg"
   },
   {
     "revision": "9e9131e161e162f2aafd558de853bf55",
@@ -260,10 +260,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/marcelTheShellWithShoesOn.3156c198.jpg"
   },
   {
-    "revision": "9b33f9ecf343bcf4309a99544281230a",
-    "url": "/nathansteele/static/media/martyrs.9b33f9ec.jpg"
-  },
-  {
     "revision": "4f03736e681a00389be702a0a9a299a6",
     "url": "/nathansteele/static/media/mononoke.4f03736e.png"
   },
@@ -286,6 +282,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bd64444bdb9fb906cd33c15b8ab7f88b",
     "url": "/nathansteele/static/media/mother.bd64444b.jpg"
+  },
+  {
+    "revision": "46ccceac97085ba69c81d1f75b0d244a",
+    "url": "/nathansteele/static/media/mulhollandDrive.46ccceac.jpg"
   },
   {
     "revision": "a758d09d08570c3122ab6af0120da5bd",
@@ -440,10 +440,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/theStrangers.d81f4e0f.jpg"
   },
   {
-    "revision": "5ea7e14cb62ac1308ec7d2f65e4e7754",
-    "url": "/nathansteele/static/media/theTenant.5ea7e14c.jpg"
-  },
-  {
     "revision": "9a8c34b3cd50799dceca91a0749313bb",
     "url": "/nathansteele/static/media/theTrumanShow.9a8c34b3.PNG"
   },
@@ -466,6 +462,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4463ba984ffd4f6d820eb2dd45d75562",
     "url": "/nathansteele/static/media/walle.4463ba98.jpg"
+  },
+  {
+    "revision": "cc14d57b761b6a334a9192ba13835676",
+    "url": "/nathansteele/static/media/waves.cc14d57b.png"
   },
   {
     "revision": "f93460002309c2a859be024365eef866",
