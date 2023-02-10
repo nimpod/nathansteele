@@ -78,6 +78,25 @@ class FilmReview extends Component {
         gridItemClicked.classList.toggle('active');
     }
 
+    componentDidMount() {
+        let topFilmsGrid = document.querySelector('#top-films-list');
+        if (topFilmsGrid !== null) {
+            let rowHeight = 180;
+            let numOfFilmsPerRow = 3;
+            let pos = this.props.film.position;
+            let numOfFilms = this.props.filmReviews.length;
+            let rowNum = Math.floor((numOfFilms - pos) / numOfFilmsPerRow);
+
+            if (pos <= numOfFilms && pos >= numOfFilms-(numOfFilmsPerRow-1)) {
+                // Base case: we are on the first row...
+                rowNum = 0;
+            }
+
+            let amountToMove = (rowHeight * rowNum);
+            topFilmsGrid.scrollTop = amountToMove;
+        }
+    }
+
     render() {
         // get list of genres...
         let listOfGenres = this.getListOfGenres(filmReviewsSorted);
@@ -122,6 +141,7 @@ class FilmReview extends Component {
                             {filmReviewsSorted.map(f => {
                                 return <TopFilmsGridElement 
                                     film={f}
+                                    filmCurrentlyDisplayed={this.props.film}
                                     filmsList={filmReviewsSorted}
                                     clickedGridElement={this.clickedGridElement}
                                 />

@@ -1,4 +1,4 @@
-import React, {Component, useState, useEffect} from 'react';
+import React, { Redirect, Component, useState, useEffect} from 'react';
 import { connect }  from 'react-redux';
 import { NavLink, withRouter } from 'react-router-dom';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
@@ -31,10 +31,11 @@ class Films extends Component {
      * 
      */
     componentDidMount() {
+        /*
         let topFilmsGrid = document.querySelector('#top-films-list');
         if (topFilmsGrid !== null) {
             topFilmsGrid.scrollIntoView(false);
-        }
+        }*/
     }
 
     /**
@@ -85,34 +86,29 @@ class Films extends Component {
         this.mergeData();
         filmReviewsSorted = Array.from(this.props.filmReviews).sort((a,b) => { return a['position'] - b['position'] }).reverse();
         let idOfFilmDisplayed = filmReviewsSorted[filmReviewsSorted.length - 1].letterboxdFilmId;
-
+        let newPath = '/films/' + idOfFilmDisplayed;
+        console.log(newPath);
+        
         return (
-            <div class='page-wrapper favourite-films-list-page'>
-                <div className='section-inner'>
-                    <div className='review-displayed-container'>
+            <div className='top-films-grid-container'>
+                <div className='top-films-grid-controls'>
 
-                    </div>
-                    <div className='top-films-grid-container'>
-                        <div className='top-films-grid-controls'>
-
-                        </div>
-                        <div id='top-films-list'>
-                            {filmReviewsSorted.map(f => {
-                                return <TopFilmsGridElement 
-                                    film={f}
-                                    filmsList={filmReviewsSorted}
-                                    clickedGridElement={this.clickedGridElement}
-                                />
-                            })}
-                        </div>
-                    </div>
+                </div>
+                <div id='top-films-list'>
+                    {filmReviewsSorted.map(f => {
+                        return <TopFilmsGridElement
+                            film={f}
+                            filmsList={filmReviewsSorted}
+                            clickedGridElement={this.clickedGridElement}
+                        />
+                    })}
                 </div>
             </div>
         )
 
         /*
         return(
-            <Redirect to={'/films/' + this.state.displayedFilmId} />
+            <Redirect to={'/films/' + idOfFilmDisplayed} />
         )*/
     }
 }

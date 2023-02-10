@@ -298,7 +298,7 @@
   --logo-border-color: rgb(0, 0, 0);
   --logo-inversion-number: 0;
 
-  --scrollbar-clickybit-bg-color: rgba(183, 188, 187, 0.92);
+  --scrollbar-clickybit-bg-color: rgba(133, 141, 140, 0.92);
   --scrolbar-notclickybit-bg-color: rgb(43, 40, 40); 
 
   --arrow-smooth-scroll-btn: rgb(141, 141, 141);
@@ -2428,16 +2428,26 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
 
 
 /* ------------< The actual list >----------- */
-.top-films-grid-container {
-  overflow-y: scroll;
+.section-inner > .top-films-grid-container {
   height: 100vh;
+  overflow-y: hidden;
   position: fixed;
   max-width: 420px;
   right: 0;
   overflow-x: hidden;
-  background: linear-gradient(to top, var(--films-list-bg-color-3), var(--films-list-bg-color-2), var(--films-list-bg-color-1)) padding-box;
+  background: linear-gradient(to bottom, var(--films-list-bg-color-2), var(--films-list-bg-color-1)) padding-box;
+}
+.section-inner > .top-films-grid-container #top-films-list {
+  padding-bottom: 30px;
+  overflow-y: scroll;
+  height: 85.4vh;
+  background: linear-gradient(to bottom, var(--films-list-bg-color-3), var(--films-list-bg-color-2), var(--films-list-bg-color-1)) padding-box;
+}
+.App > .top-films-grid-container {
+  margin-left: calc(var(--sidebar-width) * 1.6);
 }
 .top-films-grid-controls {
+  padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
 }
@@ -2473,9 +2483,6 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
 }
 .top-films-grid-controls .list-of-genres > .genre {
 
-}
-#top-films-list {
-  padding-bottom: 30px;
 }
 
 /* top films grid element */

@@ -9,9 +9,16 @@ class TopFilmsGridElement extends Component {
 
     render() {
         let filmId = this.props.film.letterboxdFilmId;
-        let activeClass = (this.props.film.position == 1) ? 'film-grid-element active' : 'film-grid-element';
+
+        let gridElemClassList = 'film-grid-element'
+        if (this.props.filmCurrentlyDisplayed !== undefined) {
+            if (this.props.filmCurrentlyDisplayed.letterboxdFilmId === filmId) {
+                gridElemClassList = 'film-grid-element active'
+            }
+        }
+        // let activeClass = (this.props.film.position == 1) ? 'film-grid-element active' : 'film-grid-element';
         return(
-            <Link to={'/films/' + filmId} className={activeClass} id={`grid-element-${filmId}`} onClick={() => this.props.clickedGridElement(filmId)}>
+            <Link to={'/films/' + filmId} className={gridElemClassList} id={`grid-element-${filmId}`} onClick={() => this.props.clickedGridElement(filmId)}>
                 <div className='film-position-box'>
                     <span>{this.props.film.position}</span>
                 </div>
