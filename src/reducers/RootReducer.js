@@ -1007,7 +1007,7 @@ const initState = {
                         <p>Sometimes a picture speaks a thousand words, so why stuff your films with meandering filler conversations when you could be expressing raw emotions and compelling character development!</p> \
                         <p>Jó napot kívánok!!!!</p> \
                         <picture class=\"img\">\
-                            <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/whiteGod/whiteGod1.jpg\" alt=\"White God screenshot\" />\
+                            <img width=400 src=screenshot1 alt=\"White God screenshot\" />\
                         </picture>\
                     </div> \
                     <div class='toggle-section-container'> \
@@ -1018,7 +1018,7 @@ const initState = {
                         <p>A cautionary tale between a superior species and its disgraced inferior - Favoring pedigree dogs, a new regulation puts a severe tax on mixed breeds. \
                         Owners dump their dogs and shelters become overcrowded. 13-year-old Lili fights desperately to protect her pet Hagen, but her father eventually sets the dog free on the streets.</p> \
                         <picture class=\"img\">\
-                            <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/whiteGod/whiteGod2.jpg\" alt=\"White God screenshot\" />\
+                            <img width=400 src=screenshot3 alt=\"White God screenshot\" />\
                         </picture>\
                     </div> \
                     <div class='toggle-section-container'> \
@@ -1030,11 +1030,18 @@ const initState = {
                         <p>Also love how most of the credits are just dogs and dog trainers.</p> \
                         <p>It's incredible how the filmmakers were able to portray so much emotion/despair/sadness just by filming dogs.</p> \
                         <picture class=\"img\">\
-                            <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/whiteGod/whiteGod3.jpg\" alt=\"White God screenshot\" />\
+                            <img width=400 src=screenshot2 alt=\"White God screenshot\" />\
                         </picture>\
                     </div> \
                 </div> \
-            "
+            ".replace(/screenshot1|screenshot2|screenshot3/gi, function(matched) {
+                var mapObj = {
+                    screenshot1: require('../img/film-screenshots/whiteGod/screenshot1.jpg'),
+                    screenshot2: require('../img/film-screenshots/whiteGod/screenshot2.jpg'),
+                    screenshot3: require('../img/film-screenshots/whiteGod/screenshot3.jpg'),
+                };
+                return mapObj[matched];
+            })
         },
         {
             "letterboxdUrl": "https://boxd.it/2sXo",
@@ -1049,7 +1056,7 @@ const initState = {
                             <div class='review-context'> \
                                 <p>Controversial number pick... I know... but hear me out...</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland4.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=screenshot1 alt=\"Flatland screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1060,10 +1067,10 @@ const initState = {
                                 <p>Flatland is a two-dimensional universe occupied by living geometric figures - squares, triangles, circles, etc. A Square, Attorney At Law, finds himself in the middle of two upheavals: the rise of martial law by\
                                  the circular leadership of Flatland, and the arrival of A Sphere, CEO Of Messiah, Incorporated, a creature from a hitherto-unknown third dimensional world.</p> \
                                  <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland2.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=screenshot2 alt=\"Flatland screenshot\" />\
                                 </picture>\
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland1.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=screenshot3 alt=\"Flatland screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1073,11 +1080,19 @@ const initState = {
                             <div class='review-positivesAndNegatives'> \
                                 <p>insert potentially informative discussion here...</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/flatland/flatland3.png\" alt=\"Flatland screenshot\" />\
+                                    <img width=400 src=screenshot4 alt=\"Flatland screenshot\" />\
                                 </picture>\
                             </div> \
                         </div> \
-            "
+            ".replace(/screenshot1|screenshot2|screenshot3|screenshot4/gi, function(matched) {
+                var mapObj = {
+                    screenshot1: require('../img/film-screenshots/flatland/screenshot1.png'),
+                    screenshot2: require('../img/film-screenshots/flatland/screenshot2.png'),
+                    screenshot3: require('../img/film-screenshots/flatland/screenshot3.png'),
+                    screenshot4: require('../img/film-screenshots/flatland/screenshot4.png'),
+                };
+                return mapObj[matched];
+            })
         },
         {
             "letterboxdUrl": "https://boxd.it/1Xag",
@@ -1111,6 +1126,7 @@ const initState = {
         },
         {
             "letterboxdUrl": "https://boxd.it/AF4",
+            "customPosterUrl": require('../img/film-posters/arrietty.png'),
             "title": "The Secret World of Arrietty",
             "myRating": "9.1",
             "myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
@@ -1122,7 +1138,7 @@ const initState = {
                             <div class='review-context'> \
                                 <p>..............</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty1.jpg\" alt=\"Arrietty screenshot\" />\
+                                    <img width=400 src=screenshot1 alt=\"Screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1133,7 +1149,7 @@ const initState = {
                                 <p>The Clock family are four-inch-tall people who live anonymously in another family's residence, borrowing simple items to make their home. \
                                  Life changes for the Clocks when their teenage daughter, Arrietty, is discovered.</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty2.jpg\" alt=\"Arrietty screenshot\" />\
+                                    <img width=400 src=screenshot5 alt=\"Screenshot\" />\
                                 </picture>\
                             </div> \
                             <div class='toggle-section-container'> \
@@ -1155,12 +1171,21 @@ const initState = {
                                 but so tiny and insignificant when seeing it from their perspective. And this is obviously real! Think about how much wildlife exists just in your garden! \
                                 So many interesting stories about nature, and how our existence can either harm them or benefit them.</p> \
                                 <picture class=\"img\">\
-                                    <img width=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/film-screenshots/arrietty/arrietty3.jpg\" alt=\"Arrietty screenshot\" />\
+                                    <img width=400 src=screenshot2 alt=\"Screenshot\" />\
                                 </picture>\
                             </div> \
                         </div> \
-            ",
-            "customPosterUrl": require('../img/film-posters/arrietty.png')
+            ".replace(/screenshot1|screenshot2|screenshot3|screenshot4|screenshot5|screenshot6/gi, function(matched) {
+                var mapObj = {
+                    screenshot1: require('../img/film-screenshots/arrietty/screenshot1.jpg'),
+                    screenshot2: require('../img/film-screenshots/arrietty/screenshot2.jpg'),
+                    screenshot3: require('../img/film-screenshots/arrietty/screenshot3.jpg'),
+                    screenshot4: require('../img/film-screenshots/arrietty/screenshot4.jpg'),
+                    screenshot5: require('../img/film-screenshots/arrietty/screenshot5.jpg'),
+                    screenshot6: require('../img/film-screenshots/arrietty/screenshot6.jpg'),
+                };
+                return mapObj[matched];
+            }),
         },
         {
             "letterboxdUrl": "https://boxd.it/fb0K",
