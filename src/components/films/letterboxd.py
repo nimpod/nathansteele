@@ -1,3 +1,17 @@
+"""
+Python script to do extract a particular csv (i.e. letterboxd list) from letterboxd export, and convert it to JSON file...
+====================================================================
+    1) find letterboxd zip export
+    2) extract zip automatically (if not done already)
+    3) locate csv file of interest
+    4) iterate over each row (i.e. each film) in csv file:
+        4.1) append data about 1st film to a JSON array
+        4.2) append data about 2nd film to a JSON array
+        4.3) append data about 3rd film to a JSON array
+        ...
+    5) store final result in JSON file
+"""
+
 import os
 import zipfile
 import csv
@@ -16,14 +30,12 @@ disable_warnings(InsecureRequestWarning)
 # filepaths...
 dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
 list_name = 'my-favourite-films.csv'
-reviews_local_json_filename = 'reviews-local.json'
-reviews_allData_json_filename = 'reviews-allData.json'
+json_output_filename = 'reviews_web_data.json'
 path_to_rootreducer = f'D:\\Programming-Projects\\nathansteele\\src\\reducers\\RootReducer.js';
-path_to_local_reviews_json = f'D:\\Programming-Projects\\nathansteele\\src\\components\\films\\{reviews_local_json_filename}'
-path_to_allData_reviews_json = f'D:\\Programming-Projects\\nathansteele\\src\\components\\films\\{reviews_allData_json_filename}'
+path_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\films\\{json_output_filename}'
 
 
-# find zip file...
+# 1) find letterboxd zip export...
 prefix = 'letterboxd'
 postfix = 'utc.zip'
 zip_file_name = ""
@@ -38,13 +50,11 @@ for filepath in download_folder:
     else:
         continue
 
-# path to zip file we downlodaded from letterboxd...
-path_to_zip_file = f"{dir_export}\\{zip_file_name}"
+path_to_zip_file = f"{dir_export}\\{zip_file_name}"     # path to zip file we downlodaded from letterboxd...
+path_to_extracted_zip = f"{dir_export}\\{zip_file_name[:-4]}"   # path to extracted zip (which we are about to do)...
 
-# path to extracted zip (which we are about to do)...
-path_to_extracted_zip = f"{dir_export}\\{zip_file_name[:-4]}"
 
-# do the extraction
+# 2) extract zip automatically (if not done already)...
 if os.path.exists(path=path_to_zip_file):
     if not os.path.exists(path=path_to_extracted_zip):
         with zipfile.ZipFile(file=path_to_zip_file , mode='r') as z:
@@ -59,7 +69,7 @@ else:
 # local version of letterboxd data list
 letterboxd_list = []
 
-# locate the csv file...
+# 3) locate the csv file of interest
 if os.path.exists(path_to_extracted_zip):    
     # open csv file...
     path_to_list = f'{path_to_extracted_zip}\\lists\\{list_name}'
@@ -71,30 +81,13 @@ if os.path.exists(path_to_extracted_zip):
         rows_to_skip = 5
         for i in range(0, rows_to_skip):
             next(csv_reader)
-        
-        """
-        with open(path_to_rootreducer) as rootreducer:
-            data = rootreducer.read()
-            #print(data)
-            obj = data[data.find('filmReviews: [') : data.rfind(']')+1]
-            # print(obj)
-            jsonObjStr = obj[14:]
-            print(type(jsonObjStr))
-            print(jsonObjStr)
-            jsonObj = json.loads(jsonObjStr)
-            print(jsonObj)
-        """
-        
-        # load in my local reviews json file...
-        reviews_json = None
-        with open(path_to_local_reviews_json, 'r') as f:
-            reviews_json = json.load(f)
                
-        # iterate letterboxd csv data...
+        # 4) iterate over each row (i.e. each film) in csv file...
         for csv_row in csv_reader:
             pos = csv_row[0]
             year = csv_row[2]
             letterboxd_url = csv_row[3]
+            letterboxd_film_id = letterboxd_url.split('/')[-1]
             genres = []
             directors = []
             duration = 0
@@ -103,12 +96,6 @@ if os.path.exists(path_to_extracted_zip):
             imdb_avg_rating = ""
             imdb_num_votes = ""
             poster_url = ""
-            my_review = ""
-            my_rating = 0
-            my_tags = []
-            my_screenshots = []
-            my_poster = ""
-            date_reviewed = ""
             
             # parse data from letterboxd web page... (this takes ~1.21s)
             page = requests.get(url=letterboxd_url, verify=False, stream=True)
@@ -164,23 +151,9 @@ if os.path.exists(path_to_extracted_zip):
             # retrieve list of directors (because letterboxd parsing is shite!)
             directors = imdb_json['Director'].split(', ')
             
-            # get my local review data...
-            for review in reviews_json:
-                if review['title'].lower() == title.lower():
-                    my_review = review['myReview']
-                    my_rating = review['myRating']
-                    my_tags = review['myTags']
-                    my_screenshots = review['screenshots']
-                    if 'titleDisplayed' in review:
-                        title = review['titleDisplayed']
-                    if 'dateReviewed' in review:
-                        date_reviewed = review['dateReviewed']
-                    if 'poster' in review:
-                        poster_url = review['poster']
-            
             # DEBUGGING....
             print(f" > {pos}: {title} {letterboxd_url}")
-            print(f' > Title = ({title})')
+            #print(f' > Title = ({title})')
             #print(f' > IMDB url = ({imdb_url})')
             #print(f' > Language = ({language})')
             #print(f' > Duration = ({duration})')
@@ -193,31 +166,27 @@ if os.path.exists(path_to_extracted_zip):
             
             # append to list...
             letterboxd_list.append({
+                'letterboxdFilmId': letterboxd_film_id,
+                'imdbFilmId': imdb_film_id,
+                'letterboxdUrl': letterboxd_url,
+                'imdbUrl': imdb_url,
+                'posterUrl': poster_url,
                 'position': pos,
                 'title': title,
                 'year': year,
-                'directors': directors,
                 'duration': duration,
                 'language': language,
                 'imdbAvgRating': imdb_avg_rating,
                 'imdbNumVotes': imdb_num_votes,
-                'urlLetterboxd': letterboxd_url,
-                'urlImdb': imdb_url,
-                'imdbFilmId': imdb_film_id,
+                'directors': directors,
                 'genres': genres,
-                'dateReviewed': date_reviewed,
-                'myRating': my_rating,
-                'myReview': my_review,
-                'urlPoster': poster_url,
-                'tags': my_tags,
-                'screenshots': my_screenshots,
             })
                 
         # clear json file first...
-        open(path_to_allData_reviews_json, 'w').close()
+        open(path_to_json_output, 'w').close()
         
         # write new content...
-        with open(path_to_allData_reviews_json, 'w') as f:
+        with open(path_to_json_output, 'w') as f:
             json.dump(letterboxd_list, f, indent=4)
         
-        print(f'JSON export finished! -> {path_to_allData_reviews_json}')
+        print(f'JSON export finished! -> {path_to_json_output}')

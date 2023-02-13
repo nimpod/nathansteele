@@ -43,7 +43,7 @@ class Films extends Component {
      * 
      */
     mergeData() {
-        let moreJsonData = require('./reviews-moreData.json');
+        let moreJsonData = require('./reviews_web_data.json');
         for (let i = 0; i < moreJsonData.length; i++) {
             let moreData = moreJsonData[i];
             // console.log('moreData: ', moreData);
