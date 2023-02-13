@@ -13,7 +13,7 @@ import ProjectImageSpaceInvaders from '../img/project-card-backgrounds/spaceinva
 import ProjectImageWebDevUniProject from '../img/project-card-backgrounds/web-dev-thumbnail.PNG';
 import ProjectImagePong from '../img/project-card-backgrounds/casiobasic.png';
 import Particles from 'react-particles-js';
-import { getValueOfCSSVariable } from '../js/helpers';
+import { getValueOfCSSVariable } from '../../js/helpers';
 
 
 /* particlesjs variables (defined in css) */
