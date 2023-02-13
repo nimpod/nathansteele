@@ -2587,9 +2587,6 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
 /* #endregion */
 
 
-/* #endregion */
-
-
 
 /* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
