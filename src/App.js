@@ -5,7 +5,9 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import ScrollToTop from './js/ScrollToTop';
 import NavbarTop from './components/NavbarTop';
 import NavbarSide from './components/NavbarSide';
-import Portfolio from './components/Portfolio';
+
+// Portfolio page
+import Portfolio from './components/portfolio/Portfolio';
 
 // About page
 import AboutMe from './components/aboutme/AboutMe';

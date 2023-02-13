@@ -71,6 +71,8 @@
   --sidenav-music-bg-color: rgb(223, 253, 72); 
   --sidenav-blog-bg-color: rgb(54, 220, 245);
   --sidenav-art-bg-color: rgb(255, 79, 158);
+  --film-grid-element-width: 110px;
+  --film-grid-element-height: 160px;
 }
 
 /** LIGHT MODE */
@@ -94,6 +96,7 @@
   --sidenav-item-border-color-active: rgb(107, 110, 113);
   --sidenav-item-text-color: rgb(176, 177, 181);
   --sidenav-item-bg-color: rgb(64, 64, 64);
+  --sidenav-item-bg-color-hover: rgb(72, 74, 80);
   --sidenav-item-bg-color-active: rgb(81, 83, 87);
 
   --topnav-bg-color: rgba(253, 252, 251, 0);
@@ -188,11 +191,11 @@
   --film-grid-element-border-color: rgba(4, 12, 26, 0.083);
   --film-grid-element-border-color-active: rgb(29, 146, 255);
   --film-grid-element-triangle-color: rgba(16, 16, 97, 0.694);
-  --films-list-bg-color-0: rgb(250, 250, 250);
-  --films-list-bg-color-1: rgb(211, 210, 217);
-  --films-list-bg-color-2: rgb(236, 238, 240);
-  --films-list-bg-color-3: rgb(170, 184, 199);
-  --films-list-shadow-color: rgb(103, 92, 92);
+  --films-list-bg-color-0: rgb(255, 255, 255);
+  --films-list-bg-color-1: rgb(196, 196, 236);
+  --films-list-bg-color-2: rgb(224, 224, 230);
+  --films-list-bg-color-3: rgb(233, 214, 214);
+  --films-list-shadow-color: rgb(147, 141, 141);
   --film-review-btn-bg-color-1: rgb(255, 255, 255);
   --film-review-btn-bg-color-2: rgb(214, 218, 222);
   --film-review-btn-text-color: rgb(21, 20, 20);
@@ -271,6 +274,7 @@
   --sidenav-shadow-color: rgba(0, 0, 0, 0.593);
   --sidenav-item-text-color: rgb(138, 140, 151);
   --sidenav-item-bg-color: rgb(48, 45, 45);
+  --sidenav-item-bg-color-hover: rgb(72, 74, 80);
   --sidenav-item-bg-color-active: rgb(101, 105, 114);
   --sidenav-item-border-color-active: rgb(157, 160, 163);
 
@@ -362,14 +366,14 @@
   --tags-open-dropdown-bg-color: rgba(118, 117, 117, 0.194);
 
   --film-review-header-bg-color: rgb(52, 50, 50);
-  --film-grid-element-border-color: rgba(12, 12, 12, 0.909);
+  --film-grid-element-border-color: rgba(49, 48, 48, 0.909);
   --film-grid-element-border-color-active: rgba(240, 218, 49, 0.801);
   --film-grid-element-triangle-color: rgba(6, 4, 4, 0.901);
   --films-list-bg-color-0: rgba(56, 63, 71, 0.597);
   --films-list-bg-color-1: rgb(38, 56, 85);
   --films-list-bg-color-2: rgb(97, 62, 62);
   --films-list-bg-color-3: rgba(62, 100, 90, 0.748);
-  --films-list-shadow-color: rgba(19, 5, 5, 0.687);
+  --films-list-shadow-color: rgba(0, 0, 0, 0.89);
   --film-review-btn-bg-color-1: rgb(0, 0, 0);
   --film-review-btn-bg-color-2: rgb(111, 111, 117);
   --film-review-btn-text-color: rgb(222, 207, 207);
@@ -703,6 +707,10 @@ Proposed structure of sidebar
 #nav-side a:not(.website-logo).navlink svg {
   background-color: var(--sidenav-item-bg-color);
   border: 2px solid transparent;
+}
+#nav-side a:not(.website-logo).navlink:hover svg {
+  background-color: var(--sidenav-item-bg-color-hover);
+  transition: all 200ms ease;
 }
 #nav-side a:not(.website-logo).navlink.active svg {
   background-color: var(--sidenav-item-bg-color-active);
@@ -2407,7 +2415,7 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   overflow-y: scroll;
   height: 85.4vh;
   background: linear-gradient(to bottom, var(--films-list-bg-color-3), var(--films-list-bg-color-2), var(--films-list-bg-color-1)) padding-box;
-  box-shadow: inset 0 30px 25px var(--films-list-shadow-color);
+  box-shadow: inset 0 30px 45px var(--films-list-shadow-color);
 }
 .App > .top-films-grid-container {
   margin-left: calc(var(--sidebar-width) * 1.6);
@@ -2484,6 +2492,12 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
 }
 .film-grid-element img {
   border-radius: 7px;
+}
+
+/* slightly larger images */
+.App > .top-films-grid-container .film-grid-element img {
+  width: calc(var(--film-grid-element-width) * 1.4);
+  height: calc(var(--film-grid-element-height) * 1.4);
 }
 
 .film-grid-element > .film-position-box {

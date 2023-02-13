@@ -4,6 +4,10 @@ import { NavLink, withRouter, Link } from 'react-router-dom';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
+import { getValueOfCSSVariable } from '../../js/helpers';
+
+var filmGridElementWidth = getValueOfCSSVariable('--film-grid-element-width');
+var filmGridElementHeight = getValueOfCSSVariable('--film-grid-element-height');
 
 class TopFilmsGridElement extends Component {
 
@@ -23,7 +27,7 @@ class TopFilmsGridElement extends Component {
                     <span>{this.props.film.position}</span>
                 </div>
                 <picture className='filmPoster'>
-                    <img height={160} width={110} src={this.props.film.posterUrl} />
+                    <img height={filmGridElementHeight} width={filmGridElementWidth} src={this.props.film.posterUrl} />
                 </picture>
             </Link>
         )

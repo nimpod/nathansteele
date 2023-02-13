@@ -1,17 +1,17 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
-import '../index.css';
+import '../../index.css';
 
-import ProjectImageAssembly from '../img/project-card-backgrounds/assembly.png';
-import ProjectImageMosaicsOfVideos from '../img/project-card-backgrounds/mosaics-of-videos.png';
-import ProjectImageD3 from '../img/project-card-backgrounds/d3.PNG';
-import ProjectImageBobomb from '../img/project-card-backgrounds/bobomb.jpg';
-import ProjectImageFlappyBird from '../img/project-card-backgrounds/flappy_bird.png';
-import ProjectImageFitbitDataAnalysis from '../img/project-card-backgrounds/fitbit-data-analysis.PNG';
-import ProjectImageSpaceInvaders from '../img/project-card-backgrounds/spaceinvaders.png';
-import ProjectImageWebDevUniProject from '../img/project-card-backgrounds/web-dev-thumbnail.PNG';
-import ProjectImagePong from '../img/project-card-backgrounds/casiobasic.png';
+import ProjectImageAssembly from '../../img/project-card-backgrounds/assembly.png';
+import ProjectImageMosaicsOfVideos from '../../img/project-card-backgrounds/mosaics-of-videos.png';
+import ProjectImageD3 from '../../img/project-card-backgrounds/d3.PNG';
+import ProjectImageBobomb from '../../img/project-card-backgrounds/bobomb.jpg';
+import ProjectImageFlappyBird from '../../img/project-card-backgrounds/flappy_bird.png';
+import ProjectImageFitbitDataAnalysis from '../../img/project-card-backgrounds/fitbit-data-analysis.PNG';
+import ProjectImageSpaceInvaders from '../../img/project-card-backgrounds/spaceinvaders.png';
+import ProjectImageWebDevUniProject from '../../img/project-card-backgrounds/web-dev-thumbnail.PNG';
+import ProjectImagePong from '../../img/project-card-backgrounds/casiobasic.png';
 import Particles from 'react-particles-js';
 import { getValueOfCSSVariable } from '../../js/helpers';
 

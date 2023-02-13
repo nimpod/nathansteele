@@ -6,7 +6,7 @@ import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 import FilmsSubmenu from './FilmsSubmenu';
 import TopFilmsGridElement from './TopFilmsGridElement';
-import FilmsJsonList from './reviews-allData.json';
+import FilmsJsonList from './reviews_web_data.json';
 import Films from './Films';
 
 let reversedList = FilmsJsonList.reverse()
