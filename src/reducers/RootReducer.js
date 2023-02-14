@@ -1249,7 +1249,8 @@ const initState = {
             "titleDisplayed": "Belle: The Dragon and the Freckled Princess",
             "myRating": "9.2",
             "myTags": ["Virtual world", "Social media", "Bullying", "Friendship", "Sad", "Great soundtrack", "Colourful", "Anime", "Girl power"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('../img/films/belle/custom_poster.png')
         },
         {
             "letterboxdUrl": "https://boxd.it/cOo6",
