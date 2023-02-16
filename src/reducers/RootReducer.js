@@ -2644,6 +2644,14 @@ const initState = {
             "myRating": "8.1",
             "myTags": [""],
             "myReview": ""
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/oPSK",
+            "title": "Infinity Pool",
+            "myRating": "8.4",
+            "myTags": ["Vicious", "Hallucinogenic", "Psychedlic", "Disgusting", "Phantasmagoria", "Insecurity", "Ego", "Atmospheric",  "Endlessly surprising"],
+            "myReview": "",
+            "customPosterUrl": require('../img/films/infinityPool/custom_poster.png'),
         }
     ]
 }
