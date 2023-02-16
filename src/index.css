@@ -2473,7 +2473,7 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   display: inline-block;
   cursor: pointer;
   border-radius: 10px;
-  opacity: 0.66 !important;
+  opacity: 0.75 !important;
 }
 .film-grid-element:hover {
   opacity: 1.0 !important;
@@ -2491,7 +2491,7 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   color: var(--film-grid-element-border-color-active);
 }
 .film-grid-element img {
-  border-radius: 7px;
+  border-radius: 8px;
 }
 
 /* slightly larger images */

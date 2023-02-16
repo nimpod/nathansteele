@@ -1232,7 +1232,6 @@ const initState = {
                             </div> \
                         </div> \
             ",
-            "customPosterUrl": require('../img/films/aGhostStory/custom_poster.PNG'),
             "dateReviewed": "14/11/2021"
         },
         {
@@ -1247,7 +1246,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/tbEe",
             "title": "Belle",
             "titleDisplayed": "Belle: The Dragon and the Freckled Princess",
-            "myRating": "9.2",
+            "myRating": "9.0",
             "myTags": ["Virtual world", "Social media", "Bullying", "Friendship", "Sad", "Great soundtrack", "Colourful", "Anime", "Girl power"],
             "myReview": "",
             "customPosterUrl": require('../img/films/belle/custom_poster.png')
@@ -1262,7 +1261,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/hUMe",
             "title": "Aniara",
-            "myRating": "10",
+            "myRating": "9.3",
             "myTags": ["The incomprehensible vastness of space", "Civilisation on spaceship", "Contemplative sci-fi", "Virtual world", "Mysterious", "Creepy", "Dystopia", "Exploring the dark depths of humanity"],
             "myReview": ""
         },
@@ -1277,7 +1276,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/e1Ga",
             "title": "The Nightingale",
-            "myRating": "8.4",
+            "myRating": "9.4",
             "myTags": ["Revenge-fantasy", "Tasmania", "1825", "Aboriginal people", "The evil British empire", "Seeking closure", "Getting revenge on evil people", "Challenging to watch at times", "Embrace mother nature", "Intense", "Soulmate"],
             "myReview": ""
         },
@@ -1318,8 +1317,7 @@ const initState = {
             "title": "Kiki's Delivery Service",
             "myRating": "8.4",
             "myTags": ["Endearing", "Finding happiness", "Growing up", "Discovering independence", "Finding yourself", "Soulmate", "Flying", "Anime", "Great soundtrack", "Utopia", "Girl power"],
-            "myReview": "",
-            "customPosterUrl": require('../img/films/kikisDeliveryService/custom_poster.jpg'),
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/4JQS",
@@ -1347,7 +1345,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/iKDo",
             "title": "Hatching",
-            "myRating": "8.1",
+            "myRating": "7.9",
             "myTags": ["Brutal", "Doppelganger", "Disturbing", "Metamorphosis", "Creature-feature", "Social media", "Fake celebrity personas"],
             "myReview": ""
         },
@@ -1369,7 +1367,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/1pDe",
             "title": "Love Exposure",
-            "myRating": "8.2",
+            "myRating": "8.1",
             "myTags": ["Exploring the dark depths of humanity", "Challenging to watch at times", "Very long", "Great soundtrack", "Poetic", "Profound", "Friendship", "Religion"],
             "myReview": "",
             "customPosterUrl": require('../img/films/loveExposure/custom_poster.jpg')
@@ -1384,7 +1382,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/1k44",
             "title": "Mr. Nobody",
-            "myRating": "9.5",
+            "myRating": "9.7",
             "myTags": ["Poetic", "Profound", "The many possibilities of life", "Beyond existence", "Immortality", "Confusing", "Randomness", "Emotional", "Utopia", "Futuristic", "Family", "Great soundtrack"],
             "myReview": ""
         },
@@ -1437,7 +1435,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/28yy",
             "title": "Apocalypto",
-            "myRating": "9.4",
+            "myRating": "9.3",
             "myTags": ["Total escapism", "Ancient mayan civilisation", "Architecture", "Amazing set design", "Revenge-fantasy", "Brutal", "Not giving up despite being in a shitty situation"],
             "myReview": ""
         },
@@ -1452,7 +1450,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/d99c",
             "title": "A Silent Voice: The Movie",
-            "myRating": "7.9",
+            "myRating": "8.0",
             "myTags": ["Bullying", "Forgiveness", "Anime", "Great soundtrack"],
             "myReview": ""
         },
@@ -1641,7 +1639,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2bcK",
             "title": "Memento",
-            "myRating": "8.4",
+            "myRating": "8.0",
             "myTags": ["Non-linear timeline", "Confusing"],
             "myReview": ""
         },
@@ -1663,7 +1661,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/210u",
             "title": "Alive",
-            "myRating": "8.3",
+            "myRating": "8.4",
             "myTags": ["Survival story", "Not giving up despite being in a shitty situation", "Brutal", "Snow", "Alone in the wilderness"],
             "myReview": ""
         },
@@ -1687,13 +1685,6 @@ const initState = {
             "title": "The Vast of Night",
             "myRating": "8.1",
             "myTags": ["Atmospheric", "Mysterious", "Melancholic", "Search for Extra Terrestrial Intelligence (SETI)", "Radio station", "One-take"],
-            "myReview": ""
-        },
-        {
-            "letterboxdUrl": "https://boxd.it/1SYq",
-            "title": "The SpongeBob SquarePants Movie",
-            "myRating": "8.0",
-            "myTags": ["Fun", "Nostalgic", "Audio-visual spectacle", "Great soundtrack"],
             "myReview": ""
         },
         {
@@ -1723,14 +1714,14 @@ const initState = {
             "title": "RRR",
             "titleDisplayed": "Rise Roar Revolt",
             "myRating": "8.2",
-            "myTags": ["Indian culture", "Great chemistry between characters", "Poverty", "Slavery", "Friendship", "Kindness", "The evil British empire", "Great cinematography", "Fuck the system", "Very long", "Great soundtrack"],
+            "myTags": ["Indian culture", "Kindness", "The evil British empire", "Poverty", "Friendship", "Great cinematography", "Very long", "Great soundtrack"],
             "myReview": "",
             "customPosterUrl": require('../img/films/riseRoarRevolt/custom_poster.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/dvXe",
             "title": "Okja",
-            "myRating": "7.8",
+            "myRating": "7.7",
             "myTags": ["Animal welfare", "Ends a bit weak but the rest is great", "Conspiracy"],
             "myReview": ""
         },
@@ -1804,14 +1795,14 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/23nq",
             "title": "Severance",
-            "myRating": "7.8",
+            "myRating": "7.7",
             "myTags": ["Fun", "Disturbing", "Claustrophobic", "Alone in the wilderness", "Revenge-fantasy", "British humour"],
             "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/203C",
             "title": "Creep",
-            "myRating": "7.8",
+            "myRating": "7.7",
             "myTags": ["Disturbing", "Claustrophobic", "Stuck underground", "Gross", "London", "Homelessness", "Great soundtrack"],
             "myReview": ""
         },
@@ -1825,7 +1816,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/pSAG",
             "title": "Cadaver",
-            "myRating": "8.0",
+            "myRating": "8.1",
             "myTags": ["Atmospheric", "Post-apocalypse society", "Conspiracy", "Stuck underground", "Layered", "Mysterious", "Loss of identity", "Cults"],
             "myReview": "",
             "customPosterUrl": require('../img/films/cadaver/custom_poster.jpg'),
@@ -1848,7 +1839,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/i3a4",
             "title": "Ut\u00f8ya: July 22",
-            "myRating": "7.8",
+            "myRating": "8.0",
             "myTags": ["One-take", "Based on true events", "Terroism", "Brutal", "Intense", "Survival story", "Norweigan island", "Challenging to watch at times"],
             "myReview": ""
         },
@@ -1885,7 +1876,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2aYo",
             "title": "K-PAX",
-            "myRating": "8.3",
+            "myRating": "8.1",
             "myTags": ["Melancholic", "Mysterious", "Alien visitor disguised as human", "Search for Extraterrestrial Intelligence (SETI)", "Quirky", "Mental hospital"],
             "myReview": ""
         },
@@ -1937,7 +1928,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/200I",
             "title": "The Exorcism of Emily Rose",
-            "myRating": "8.6",
+            "myRating": "8.5",
             "myTags": ["Exorcism", "Disturbing", "Court scenario"],
             "myReview": ""
         },
@@ -1959,21 +1950,21 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/T1C",
             "title": "Another Year",
-            "myRating": "8.5",
+            "myRating": "8.3",
             "myTags": ["A slice of life", "Gardening", "Finding happiness", "The ebb-and-flow of nature", "Forgiveness", "Melancholic", "British humour", "Depressing"],
             "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/fVJQ",
             "title": "A Quiet Place",
-            "myRating": "8.6",
+            "myRating": "8.7",
             "myTags": ["Minimal dialogue", "Atmospheric", "Intense", "Aliens", "Post-apocalypse society"],
             "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/2Pa",
             "title": "The Girl With The Dragon Tattoo",
-            "myRating": "8.7",
+            "myRating": "8.4",
             "myTags": ["Atmospheric", "Murder mystery", "Mysterious", "Gross", "Conspiracy"],
             "myReview": "",
             "customPosterUrl": require('../img/films/theGirlWithTheDragonTattoo/custom_poster.jpg'),
@@ -1981,7 +1972,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/H4k",
             "title": "Insidious",
-            "myRating": "8.8",
+            "myRating": "8.9",
             "myTags": ["Disturbing", "Terrifying", "Possession"],
             "myReview": "",
             "customPosterUrl": require('../img/films/insidious/custom_poster.jpeg'),
@@ -2012,7 +2003,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2a70",
             "title": "The Ring",
-            "myRating": "8.7",
+            "myRating": "8.4",
             "myTags": ["Atmospheric", "Total escapism", "Great cinematography", "Mysterious", "Death", "Gross", "Murder mystery"],
             "myReview": ""
         },
@@ -2073,7 +2064,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/297o",
             "title": "Mulholland Drive",
-            "myRating": "8.7",
+            "myRating": "8.6",
             "myTags": ["Questioning reality", "Atmospheric", "Mysterious", "A story within a story", "Anti-Hollywood"],
             "myReview": "",
             "customPosterUrl": require('../img/films/mulhollandDrive/custom_poster.jpg'),
@@ -2257,7 +2248,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/jkPq",
             "title": "Portrait of a Lady on Fire",
-            "myRating": "8.9",
+            "myRating": "8.8",
             "myTags": ["Great cinematography", "Mysterious", "Melancholic", "France 1800s", "Art"],
             "myReview": ""
         },
@@ -2362,7 +2353,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/4VZ8",
             "title": "Interstellar",
-            "myRating": "9.4",
+            "myRating": "9.2",
             "myTags": ["Space exploration", "Timey-wimey"],
             "myReview": "",
             "customPosterUrl": require('../img/films/interstellar/custom_poster.jpg'),
@@ -2393,7 +2384,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/1MLK",
             "title": "The Sound of Music",
-            "myRating": "9.1",
+            "myRating": "9.3",
             "myTags": ["Uplifting", "Music", "War", "Britian 1960s", "Great soundtrack"],
             "myReview": ""
         },
@@ -2537,7 +2528,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/29aC",
             "title": "Seven Years in Tibet",
             "myRating": "10",
-            "myTags": ["Humanity and nature coexisting", "Exploring unexplored terrority", "Mountaineering", "Tibet", "Dalia Lama", "Poetic", "Profound", "Great cinematography", "Great soundtrack"],
+            "myTags": ["Humanity and nature coexisting", "Exploring new places", "Mountaineering", "Tibet", "Dalia Lama", "Poetic", "Profound", "Great cinematography", "Great soundtrack"],
             "myReview": "",
             "customPosterUrl": require('../img/films/sevenYearsInTibet/custom_poster.PNG')
         },
@@ -2552,7 +2543,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/37pC",
             "title": "Life of Pi",
             "myRating": "10",
-            "myTags": ["Exploring unexplored terrority", "Survival story", "Based on a true story", "Stranded at sea"],
+            "myTags": ["Exploring new places", "Survival story", "Based on a true story", "Stranded at sea"],
             "myReview": "",
             "customPosterUrl": require('../img/films/lifeOfPi/custom_poster.png'),
         },
@@ -2612,7 +2603,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2a8W",
             "title": "Dogville",
-            "myRating": "7.7",
+            "myRating": "7.6",
             "myTags": ["Innovative", "One-location", "Depressing", "Challenging to watch at times"],
             "myReview": "",
             "customPosterUrl": require('../img/films/dogville/custom_poster.jpg'),
@@ -2620,7 +2611,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/48WY",
             "title": "American Mary",
-            "myRating": "7.9",
+            "myRating": "7.8",
             "myTags": ["Disturbing", "Body modification"],
             "myReview": ""
         },
@@ -2632,9 +2623,16 @@ const initState = {
             "myReview": ""
         },
         {
+            "letterboxdUrl": "https://boxd.it/3SWy",
+            "title": "The Secret Life of Walter Mitty",
+            "myRating": "7.6",
+            "myTags": ["Uplifting", "Exploring new places", "Discovering independence", "Soulmate"],
+            "myReview": ""
+        },
+        {
             "letterboxdUrl": "https://boxd.it/dVI",
             "title": "Super 8",
-            "myRating": "8.0",
+            "myRating": "7.7",
             "myTags": [""],
             "myReview": ""
         },
@@ -2648,10 +2646,18 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/oPSK",
             "title": "Infinity Pool",
-            "myRating": "8.4",
-            "myTags": ["Vicious", "Hallucinogenic", "Psychedlic", "Disgusting", "Phantasmagoria", "Insecurity", "Ego", "Atmospheric",  "Endlessly surprising"],
+            "myRating": "8.5",
+            "myTags": ["Rebirth", "Hallucinogenic", "Psychedlic", "Vicious", "Disgusting", "Phantasmagoria", "Insecurity", "Ego", "Atmospheric",  "Endlessly surprising", "Defamiliarization", "Hedonistic", "Libertine"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/infinityPool/custom_poster.png'),
+            "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 8, 8, 8, 9, 9]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/on14",
+            "title": "Poupelle of Chimney Town",
+            "myRating": "8.2",
+            "myTags": ["Heterodox thinker", "Religion", "Friendship", "Intricate animation style", "Textures", "Steampunk", "Colourful", "Exploring new places", "Anti-smoking"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 7, 7, 7, 8, 9, 9]
         }
     ]
 }
