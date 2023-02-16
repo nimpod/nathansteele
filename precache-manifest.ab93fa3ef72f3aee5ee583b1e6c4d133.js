@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7ad4b8c87b5bdfdeb96dcbec405292c7",
+    "revision": "4d7bae1b3443d5fb9bc5dca4ea543cf5",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "8c25facdf3a62f991276",
-    "url": "/nathansteele/static/css/main.efd5a9ac.chunk.css"
+    "revision": "3e783ddc7a10b062dc2f",
+    "url": "/nathansteele/static/css/main.68532cee.chunk.css"
   },
   {
     "revision": "2738cb50f65f5fac74f0",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.147965da.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8c25facdf3a62f991276",
-    "url": "/nathansteele/static/js/main.6ca724bb.chunk.js"
+    "revision": "3e783ddc7a10b062dc2f",
+    "url": "/nathansteele/static/js/main.7d79e4e5.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -188,10 +188,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/custom_poster.4b93a24b.jpg"
   },
   {
-    "revision": "4ecc440cf1b70f26504875710ae9d1cb",
-    "url": "/nathansteele/static/media/custom_poster.4ecc440c.PNG"
-  },
-  {
     "revision": "4f03736e681a00389be702a0a9a299a6",
     "url": "/nathansteele/static/media/custom_poster.4f03736e.png"
   },
@@ -202,10 +198,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "503b8b6dd213d8de69449370259a22a0",
     "url": "/nathansteele/static/media/custom_poster.503b8b6d.jpg"
-  },
-  {
-    "revision": "5711c8c51de0848b20ab48a40e985bcd",
-    "url": "/nathansteele/static/media/custom_poster.5711c8c5.jpg"
   },
   {
     "revision": "5a1e6804cd201095d9534000725d0599",
@@ -258,10 +250,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7847537c097e3eebc20473ef0bd4ddc2",
     "url": "/nathansteele/static/media/custom_poster.7847537c.jpeg"
-  },
-  {
-    "revision": "7afac3d1f4e96ad0bd0872557435e22b",
-    "url": "/nathansteele/static/media/custom_poster.7afac3d1.png"
   },
   {
     "revision": "81848aa67f4d0378e2d29a5a1c123a18",
