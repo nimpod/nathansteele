@@ -2656,8 +2656,62 @@ const initState = {
             "title": "Poupelle of Chimney Town",
             "myRating": "8.2",
             "myTags": ["Heterodox thinker", "Religion", "Friendship", "Intricate animation style", "Textures", "Steampunk", "Colourful", "Exploring new places", "Anti-smoking"],
-            "myReview": "",
-            "gradualInterest": [8, 8, 8, 8, 7, 7, 7, 8, 9, 9]
+            "gradualInterest": [8, 8, 8, 8, 7, 7, 7, 8, 9, 9],
+            "customPosterUrl": require('../img/films/poupelleOfChimmneyTown/custom_poster.jpg'),
+            "myReview": "<div class='review-content'> \
+                            <div class='toggle-section-container'> \
+                                <div class='toggle-section-btn'></div> \
+                                <span>#context</span> \
+                            </div> \
+                            <div class='review-context'> \
+                                <p>..............</p> \
+                                <p>..............</p> \
+                                <p>..............</p> \
+                                <picture class=\"img\">\
+                                    <img width=400 src=screenshot1 alt=\"Screenshot\" />\
+                                </picture>\
+                                <picture class=\"img\">\
+                                    <img width=400 src=screenshot2 alt=\"Screenshot\" />\
+                                </picture>\
+                                <picture class=\"img\">\
+                                    <img width=400 src=screenshot3 alt=\"Screenshot\" />\
+                                </picture>\
+                                <picture class=\"img\">\
+                                    <img width=400 src=screenshot4 alt=\"Screenshot\" />\
+                                </picture>\
+                                <picture class=\"img\">\
+                                    <img width=400 src=screenshot5 alt=\"Screenshot\" />\
+                                </picture>\
+                            </div> \
+                            <div class='toggle-section-container'> \
+                                <div class='toggle-section-btn'></div> \
+                                <span>#synopsis</span> \
+                            </div> \
+                            <div class='review-briefSynopsis'> \
+                                <p>..............</p> \
+                                <p>..............</p> \
+                                <p>..............</p> \
+                            </div> \
+                            <div class='toggle-section-container'> \
+                                <div class='toggle-section-btn'></div> \
+                                <span>#postives&negatives</span> \
+                            </div> \
+                            <div class='review-positivesAndNegatives'> \
+                                <p>..............</p> \
+                                <p>..............</p> \
+                                <p>..............</p> \
+                            </div> \
+                        </div> \
+            ".replace(/screenshot1|screenshot2|screenshot3|screenshot4|screenshot5/gi, function(matched) {
+                var mapObj = {
+                    screenshot1: require('../img/films/poupelleOfChimmneyTown/screenshot1.PNG'),
+                    screenshot2: require('../img/films/poupelleOfChimmneyTown/screenshot2.PNG'),
+                    screenshot3: require('../img/films/poupelleOfChimmneyTown/screenshot3.PNG'),
+                    screenshot4: require('../img/films/poupelleOfChimmneyTown/screenshot4.PNG'),
+                    screenshot5: require('../img/films/poupelleOfChimmneyTown/screenshot5.PNG'),
+                };
+                return mapObj[matched];
+            })
         }
     ]
 }
