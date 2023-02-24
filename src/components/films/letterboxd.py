@@ -128,6 +128,11 @@ if os.path.exists(path_to_extracted_zip):
             for link in footer.select('a.micro-button'):
                 if 'imdb' in link.text.lower():
                     imdb_url = link['href']
+                    break
+                elif 'tmdb' in link.text.lower():
+                    if soup.select_one('#featured-film-header > h1').text == 'xxxHOLiC':
+                        # xxxHolic letterboxd page doesen't have a link to its IMDB page!!! annoying!
+                        imdb_url = 'https://www.imdb.com/title/tt16233104/'
 
             # Use the OMDB API (https://www.omdbapi.com/) to retrieve some additional data from IMDB website...
             omdb_api_key = '4af56bed'   # apparently this expires after 1000 days (today is 07/02/2023, 1000 days from now is 03/11/2025... holy shit!)

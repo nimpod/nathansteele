@@ -2712,6 +2712,15 @@ const initState = {
                 };
                 return mapObj[matched];
             })
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/y3U4",
+            "title": "xxxHOLiC",
+            "myRating": "9.0",
+            "myTags": ["Dimensionality", "Audio-visual spectacle", "Colourful"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 8, 8, 8, 7, 8, 9, 9],
+            "customPosterUrl": require('../img/films/xxxHolic/custom_poster.PNG')
         }
     ]
 }
