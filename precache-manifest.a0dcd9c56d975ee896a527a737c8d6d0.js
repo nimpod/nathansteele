@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "12df0301805358f11377abe4b5c20824",
+    "revision": "37913e31ba035b5b245b0752c8bb0a3b",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "78242b91ce4056972e02",
+    "revision": "6617df234f004e6271a4",
     "url": "/nathansteele/static/css/main.68532cee.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.147965da.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "78242b91ce4056972e02",
-    "url": "/nathansteele/static/js/main.11122cc9.chunk.js"
+    "revision": "6617df234f004e6271a4",
+    "url": "/nathansteele/static/js/main.10e5b491.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -256,6 +256,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/custom_poster.81848aa6.png"
   },
   {
+    "revision": "82b70fe0e1b39bae39bca0e73f940d80",
+    "url": "/nathansteele/static/media/custom_poster.82b70fe0.PNG"
+  },
+  {
     "revision": "96b2857dff357be0b337a4518ef967a0",
     "url": "/nathansteele/static/media/custom_poster.96b2857d.jpg"
   },
@@ -312,6 +316,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/custom_poster.b8174ac0.png"
   },
   {
+    "revision": "bbfeabf4c2a9a99748ee083fd90a5f26",
+    "url": "/nathansteele/static/media/custom_poster.bbfeabf4.jpg"
+  },
+  {
     "revision": "bd64444bdb9fb906cd33c15b8ab7f88b",
     "url": "/nathansteele/static/media/custom_poster.bd64444b.jpg"
   },
@@ -350,10 +358,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d81f4e0f8b58f09ae68f324b40ffd343",
     "url": "/nathansteele/static/media/custom_poster.d81f4e0f.jpg"
-  },
-  {
-    "revision": "d863b2fa2b201512269fc56042396c25",
-    "url": "/nathansteele/static/media/custom_poster.d863b2fa.jpg"
   },
   {
     "revision": "dddea20f740e2a092d3c293fbd17a791",
