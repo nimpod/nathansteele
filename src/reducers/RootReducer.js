@@ -2467,7 +2467,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/hNVe",
             "title": "Hereditary",
-            "myRating": "9.5",
+            "myRating": "8.3",
             "myTags": ["Terrifying", "Gross", "Family", "Betrayl", "Possession"],
             "myReview": "",
             "customPosterUrl": require('../img/films/hereditary/custom_poster.jpg'),
@@ -2721,6 +2721,32 @@ const initState = {
             "myReview": "",
             "gradualInterest": [8, 8, 8, 8, 8, 8, 8, 7, 8, 9, 9],
             "customPosterUrl": require('../img/films/xxxHolic/custom_poster.PNG')
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/25zS",
+            "title": "Battle Royale",
+            "myRating": "8.1",
+            "myTags": ["Social commentary", "Great character depth"],
+            "myReview": "",
+            "gradualInterest": [6, 8, 9, 9, 9, 8, 8, 8, 8, 8, 7]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/h2sY",
+            "title": "In Fabric",
+            "myRating": "8.1",
+            "myTags": ["Atmospheric", "Ghosts", "Creepy", "Melancholic", "British humour", "Horror synth", "Great soundtrack"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 9, 8, 8, 8, 8, 7, 7, 7, 7, 8],
+            "customPosterUrl": require('../img/films/inFabric/custom_poster.jpg')
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/6zhs",
+            "title": "Miss Zombie",
+            "myRating": "8.1",
+            "myTags": ["Social commentary", "Zombies", "Black & white"],
+            "myReview": "",
+            "gradualInterest": [6, 5, 5, 6, 7, 8, 8, 9, 9],
+            "customPosterUrl": require('../img/films/missZombie/custom_poster.jpg')
         }
     ]
 }
