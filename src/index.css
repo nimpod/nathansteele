@@ -1712,6 +1712,10 @@ div.blog-post
   display: block;
 }
 
+.blog-post img.rotate-my-vertical-image {
+  transform: rotate(90deg) translateY(-200px) translateX(-190px);
+}
+
 /* Table inside a blog-post */
 .blog-post table {
   margin: 40px 0;
