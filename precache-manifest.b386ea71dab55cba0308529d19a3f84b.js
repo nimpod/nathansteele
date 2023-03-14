@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "daad98dbe63ce4021802a541a6dc3ac4",
+    "revision": "bb29c6ec4ab22e2124dea81a6e2cb561",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "ee8d286e0764fc7a2dea",
-    "url": "/nathansteele/static/css/main.0591fda4.chunk.css"
+    "revision": "e55f594773e84e7179e1",
+    "url": "/nathansteele/static/css/main.d77d0250.chunk.css"
   },
   {
     "revision": "2738cb50f65f5fac74f0",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.147965da.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ee8d286e0764fc7a2dea",
-    "url": "/nathansteele/static/js/main.fe71151c.chunk.js"
+    "revision": "e55f594773e84e7179e1",
+    "url": "/nathansteele/static/js/main.e2429e8c.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -162,6 +162,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3b5968b6023d16b8c1c847096e969fdd",
     "url": "/nathansteele/static/media/custom_poster.3b5968b6.jpg"
+  },
+  {
+    "revision": "3cf750e94744104dc71d1e82313a20af",
+    "url": "/nathansteele/static/media/custom_poster.3cf750e9.png"
   },
   {
     "revision": "433ab9ae51d3923fdfb2c0524f0af80e",
@@ -558,6 +562,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "760c106c32620fbeea2011bb11e4b298",
     "url": "/nathansteele/static/media/screenshot6.760c106c.jpg"
+  },
+  {
+    "revision": "ebb6bbfab261a724e3d01dd3348dacaf",
+    "url": "/nathansteele/static/media/showGrid.ebb6bbfa.svg"
   },
   {
     "revision": "5d357adf08f3c14bff4b609bf5fb5970",
