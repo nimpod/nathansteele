@@ -97,7 +97,7 @@ class Films extends Component {
         console.log(newPath);
         
         return (
-            <div className='top-films-grid-container'>
+            <div className='page-wrapper top-films-grid-container'>
                 <div className='top-films-grid-controls'>
 
                 </div>

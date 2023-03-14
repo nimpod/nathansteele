@@ -9,6 +9,7 @@ import { ReactComponent as FilmsIcon } from "../icons/navIconFilms.svg";
 import { ReactComponent as MusicIcon } from "../icons/navIconMusic.svg";
 import { ReactComponent as BlogIcon } from "../icons/navIconBlog.svg";
 import { ReactComponent as ArtIcon } from "../icons/navIconArt.svg";
+import { ReactComponent as HamburgerMenuIcon } from "../icons/hamburgerMenu.svg";
 import { hideItemWhenUserClicksOutsideOfItem } from '../js/helpers';
 
 class NavbarSide extends Component {
@@ -42,12 +43,12 @@ class NavbarSide extends Component {
      * Function to allow user to open and close the mobile view of the navigation menu
      */
     toggleMenu() {
-        // toggle the 'active'  class on #nav-top...
-        document.getElementById('nav-top').classList.toggle('active');
+        // toggle the 'active'  class on #nav-side...
+        document.getElementById('nav-side').classList.toggle('active');
 
         // close collapsed menu if user clicks out of it...
         let toggleThemeButton = document.getElementsByClassName('hamburger-menu')[0];
-        let itemToHide = document.getElementById('nav-top');
+        let itemToHide = document.getElementById('nav-side');
 
         window.addEventListener('click', function(mouseEvent) {
             hideItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent);
@@ -103,7 +104,6 @@ class NavbarSide extends Component {
             navlinks[1].classList.remove('active');
         }
     }
-
 
 
     /**

@@ -144,7 +144,7 @@
   --blog-td-divider-color: rgba(52, 49, 49, 0.192);
   --blog-table-text: rgb(3, 2, 2);
   --blog-table-text-hover: var(--text);
-  --blog-table-row-bg-hover: rgb(251, 251, 251);
+  --blog-table-row-bg-hover: rgb(224, 228, 231);
   --blog-table-tag-text: rgb(27, 27, 27);
   
   --searchbox-bg-color: rgb(228, 230, 234);
@@ -174,7 +174,9 @@
   --blog-post-note-beside: rgba(160, 152, 170, 0.308);
   --blog-post-divider-color: rgb(243, 243, 243);
   --blog-post-subgroup-border-color: rgb(224, 223, 223);
-
+  --blog-post-acolade-bg-color: rgba(208, 208, 215, 0.624);
+  --blog-post-acolade-border-color: rgba(80, 90, 85, 0.189);
+  
   --tags-border-color: rgba(199, 199, 204, 0.627);
   --tags-text-color: rgb(0, 0, 0);
   --tags-bg-color: rgb(255, 255, 255);
@@ -352,6 +354,8 @@
   --blog-post-note-text: rgb(99, 105, 124);
   --blog-post-note-beside: rgba(101, 79, 130, 0.308);
   --blog-post-divider-color: rgb(69, 69, 75);
+  --blog-post-acolade-bg-color: rgba(20, 20, 21, 0.624);
+  --blog-post-acolade-border-color: rgba(146, 248, 146, 0.182);
 
   --filters-container-move-btns-bg-color: rgba(13, 13, 18, 0.561);
   --filters-container-move-btns-bg-color-hover: rgba(69, 68, 68, 0.918);
@@ -573,7 +577,6 @@ Proposed structure of top navbar
   z-index: 1000;
   width: 100vw;
   align-items: center;
-  padding: 0.1em 1em;
   font-size: 1.05rem;
   background-color: var(--topnav-bg-color);
 }
@@ -1592,7 +1595,7 @@ div.blog-post
 
 .back-to-previous-page,
 .back-to-top-of-post {
-  z-index: 999999999999999999999;
+  z-index: 999;
 }
 
 /*
@@ -1682,12 +1685,18 @@ div.blog-post
 }
 .blog-post-content p.acolade {
   /* insert 'acolade' within blog post */
-  border: 3px solid rgba(146, 248, 146, 0.182);
-  background-color: rgba(20, 20, 21, 0.624);
+  border: 3px solid var(--blog-post-acolade-border-color);
+  background-color: var(--blog-post-acolade-bg-color);
   display: inline;
   font-size: 0.7rem;
   border-radius: 50px;
   padding: 5px 15px;
+}
+@media screen and (max-width: 725px) {
+  .blog-post-content p.acolade {
+    display: block;
+    width: fit-content;
+  }
 }
 .blog-post-content p.acolade::before {
   content: '+';
@@ -2653,9 +2662,31 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   table tr a:first-child{
     padding: 0px 8px;
   }
+
+  /* Sidebar */
+  #nav-side {
+    display: none;
+    opacity: 0.9;
+  }
+  #nav-side.active {
+    display: block;
+  }
+  .page-wrapper {
+    margin-left: 0px;
+  }
+  .hamburger-menu {
+    display: block !important;
+    position: absolute;
+    right: 0;
+  }
   
-  
+  /* */
   #nav-top {
+    top: 5px;
+    right: 10px;
+  }
+  #nav-top {
+    /*
     position: fixed;
     bottom: 0;
     background-color: var(--topnav-collapsed-bg-color);
@@ -2667,13 +2698,8 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
     margin-left: 1rem;
     max-width: 90%;
     min-width: 400px;
-    /*
-    width: fit-content;
-    */
     display: flex;
     justify-content: center;
-    /*
-    margin: 1rem 0;
     */
   }
   #nav-top > .nav-left {
@@ -2822,6 +2848,15 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   .films-log table td {
     font-size: 0.7rem;
   }
+
+  /* */
+  .App > .top-films-grid-container {
+    margin-left: 0px;
+  }
+  .App > .top-films-grid-container .film-grid-element img {
+    width: calc(var(--film-grid-element-width) * 1.2);
+    height: calc(var(--film-grid-element-height) * 1.2);
+  }
 }
 
 
@@ -2852,6 +2887,15 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   /* Blog table in mobile view... */
   .posts-container table .tag span {
     padding: 0 0 0 4px;
+  }
+
+  /* */
+  .blog-post-content p.acolade {
+    font-size: 0.7rem !important;
+    padding: 3px 7px;
+  }
+  .blog-post-content p.acolade::before {
+    font-size: 0.8rem !important;
   }
 }
 

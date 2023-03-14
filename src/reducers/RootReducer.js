@@ -444,17 +444,19 @@ const initState = {
             title: "The Venera space probes",
             content: "\
                 <div class='intro-text blog-subsection' id='section1'> \
-                    <h3 class='subgroup-title'>Intro</h3> \
+                    <h3 class='subgroup-title'></h3> \
                     <p>The Soviets succesfully landing an autonomous robot on Venus in 1975 and snapping a picture from one of the most inhospitable places in the solar system is probably \
                         the <b>most underrated space achievement of all time</b>.</p> \
-                    <p>The <a href='https://en.wikipedia.org/wiki/Venera'>Venera program</a> <i>(Venera translates to Venus in Russian)</i> was a series of 16 space probes launched between 1961 to 1983. What the Soviet engineers achieved and discovered during the \
-                        project was an <b>unbelievable feat of engineering and science</b>, those who took part showed immense <b>perseverance</b> and <b>passion for astronomy</b>, and remains a powerful example \
-                        of <b>science and teamwork</b> being more beneficial for the progress of civilization than war and politics ever have been.\
+                    <p>The <a href='https://en.wikipedia.org/wiki/Venera'>Venera program</a> <i>(Venera translates to Venus in Russian)</i> was a series of 18 space probes launched between \
+                        1961 to 1983 designed to study the mysterious surface of Venus lurking underneath the planet's thick atmosphere. Given the technology available at the time, and the extremely \
+                        hostile conditions on Venus, the fact that we got any data back, let alone pictures and audio recordings from another planet, is a remarkable <b>feat of engineering \
+                        and science</b>. The Soviet engineers who contributed to the Venera project showed immense <b>perseverance</b> and <b>passion for astronomy</b>, and remains a powerful example \
+                        of <b>science and teamwork</b> being more beneficial for the progress of civilization than war and politics has ever been.\
                     </p>\
                     <p>For a long time <a href='https://solarsystem.nasa.gov/planets/venus/overview/'>Venus</a> was thought to be Earth-like due to being a similar size and composition. No telescope could pierce the thick cloud layers that enveloped the mysterious planet, so \
                         we really had no idea what lurked on Venus without actually going there with scientific instruments to make measurements. The Venera probes gradually revealed to us that Venus is a hellish world full of volcanoes \
                         and sulphuric acid rain and inconceivably high surface temperatures (475°C). Venus is completely inhospitable for life as we know it, and despite the otherworldy challenges that Venus presented to the \
-                        Venera engineers, they still succeeded in landing probes on the hellish planet, snapping pictures, drilling holes, making audio recordings, and gathering a vast set of data that completely changed our understanding \
+                        Venera engineers, they still succeeded in landing probes on the planet, snapping pictures, drilling holes, making audio recordings, and gathering a vast set of data that completely changed our understanding \
                         of the Universe and our insignificant but precious place within it.\
                     </p>\
                     <picture class=\"img\">\
@@ -546,9 +548,12 @@ const initState = {
                 </div>\
                 <div class='blog-subsection' id='section10'> \
                     <h3 class='subgroup-title'>Venera 13 & 14</h3>\
-                    <p>Launched in <b>October 1981</b>, <a href='https://en.wikipedia.org/wiki/Venera_13'>Venera 13</a> sucesfully landed and became the first ever probe to capture a <b>colour photograph from another planet!!!</b></p> \
+                    <p>Launched in <b>October 1981</b>, <a href='https://en.wikipedia.org/wiki/Venera_13'>Venera 13</a> sucesfully landed and became the first ever probe to capture a <b>colour photograph from \another planet!!!</b></p> \
                     <p><b>Venera 13</b> landed just east of the eastern extension of an elevated region known as <a href='https://www.jpl.nasa.gov/images/pia00212-venus-phoebe-regio'>Phobe Regio</a>, \
-                        observations from the photograph show an area <b>composed of bedrock surrounded by dark <a href='https://www.britannica.com/science/regolith'>regolith</a></b>.</p> \
+                        observations from the photograph show an area <b>composed of bedrock surrounded by dark <a href='https://www.britannica.com/science/regolith'>regolith</a></b>. The probe also extended its \
+                        drilling arm into the surface, picked up a bit of Venusian regolith and analysed it in a sealed chamber. \"<i>The results showed that the surface characteristics correspond to \
+                        compacted ash material such as volcanic tuff.</i>\" [<a href='https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1981-106D-08'>NASA</a>]</p> \
+                    <p>Venera 13 lasted an impressive <b>127 minutes</b> in the extremely harsh Venusian weather, the longest of all the Venera probes!</p> \
                     <picture class=\"img\">\
                         <img width=600 height=200 src=\"https://planetary.s3.amazonaws.com/web/assets/pictures/_2400x491_crop_center-center_82_line/venus-surface-venera-13-a.jpg.webp\" title='Venera 13 front camera' />\
                     </picture>\
@@ -558,27 +563,35 @@ const initState = {
                     <picture class=\"img\">\
                         <img width=600 height=200 src=\"https://universemagazine.com/wp-content/uploads/2022/02/erkj8dfxuaesmzh.jpg\" title='Venera 13 front camera' />\
                     </picture>\
-                    <p><a href='https://en.wikipedia.org/wiki/Venera_14'>Venera 14</a> was launched 5 days later, landing 950km southwest of Venera 13, the landing area was <b>far more fractured</b> containing none of the regolith seen in Venera 13's pictures.</p> \
+                    <p><a href='https://en.wikipedia.org/wiki/Venera_14'>Venera 14</a> was launched 5 days later, landing 950km southwest of Venera 13, the landing area was <b>far more fractured</b> containing none \
+                        of the regolith seen in Venera 13's pictures. Venera 14 lasted just 57 minutes, not as long as its predecesoor but long enough to capture some more amazing photographs of the alien world.</p> \
                     <picture class=\"img\">\
                         <img width=600 height=200 src=\"https://planetary.s3.amazonaws.com/web/assets/pictures/_2400x496_crop_center-center_82_line/venus-surface-venera-14-camera-1.jpg.webp\" title='Venera 13 front camera' />\
                     </picture>\
                     <picture class=\"img\">\
                         <img width=600 height=200 src=\"https://planetary.s3.amazonaws.com/web/assets/pictures/_2400x507_crop_center-center_82_line/venus-surface-venera-13-b.jpg.webp\" title='Venera 13 back camera' />\
                     </picture>\
-                    <p>Both landers carried cameras, microphones, drilling equipment, and seismometers to study the surface for earthquakes and volcanic activity (which there is a lot of (but nowhere near \
-                        as much as <a href='https://en.wikipedia.org/wiki/Volcanism_on_Io'>Io</a>!)). Both landers lasted for about <b>127 minutes</b> on the surface, returning a huge amount of new data. This probe also \
-                        recorded the <b>first ever audio recordings from another planet!!!</b> including...</p> \
+                    <p>Venera 14 also became the <b>first ever probe to make an audio recording from another planet!!</b>. We still have access to this glorious \
+                        <a href='https://www.youtube.com/watch?v=P3Ife6iBdsU&t=132'>three minute audio recording</a> which begins as it was still descending through the atmosphere. There were some fascinating things \
+                        captured in the audio...</p> \
                     <ul> \
-                        <li>The sounds of Venusian wind</li> \
-                        <li>The lander hitting the ground</li> \
-                        <li>The lens cap removal hitting the ground</li> \
-                        <li>The drilling apparatus delving into the regolith rocks beneath the lander</li> \
+                        <li><b>[0:00 - 0:24]</b> - The sound of the lander descending through Venus's dense atmosphere</li> \
+                        <li><b>[0:25]</b> - The lander hitting the ground</li> \
+                        <li><b>[0:34]</b> - The lens cap removal hitting the ground</li> \
+                        <li><b>[0:52 - 2:02]</b> - The drilling apparatus delving into the rocks beneath the lander</li> \
+                        <li><b>[2:07]</b> - Soil being injected into chamber for analysis</li> \
+                        <li><b>[2:07 - 3:00]</b> - lonely Venusian wind</li> \
                     </ul> \
+                    <audio controls> \
+                        <source src=veneraAudioRecording type='audio/wav'> \
+                    </audio> \
+                    <div></div> \
                     <p>Take a minute to reflect on this. Billions of years of existence where nothing but the sound of wind, volcanic eruptions, and sulfuric acid rain existed, until one day from above, a machine lands and starts drilling...\
                         And now in today's digital era can listen to the audio from another planet.</p> \
                     <p><a href='https://airandspace.si.edu/exhibitions/exploring-the-planets/online/solar-system/venus/volcanism.cfm'>Volcanic eruptions on Venus</a> are a major force reshaping the landscape, ongoing as we speak. As a result there are differences in the types of erupted magma and the eruption rate \
                         lead to a wide variety of surface features, two of which we observed in the photographs. There are probably other surface types on Venus we don't even know exist.</p> \
-                    <p> As of writing (2023) we have not returned to the surface of Venus since the spectacular success of Venera 14 in 1982.</p> \
+                    <p> As of writing (2023) we have not returned to the surface of Venus since the spectacular success of Venera 14 in 1982. There are currently no plans to return to the surface of Venus. \
+                        It remains conqurered by the Soviet Union.</p> \
                     <p class='acolade'>1st audio recording from another planet</p> \
                     <p class='acolade'>1st colour picture from another planet</p> \
                 </div>\
@@ -630,7 +643,7 @@ const initState = {
                         <img width=600 height=200 src=\"https://universemagazine.com/wp-content/uploads/2020/12/800px-PIA23791-Venus-NewlyProcessedView-20200608.jpg\" title='Aphrodite Terra, a complex terrain' />\
                     </picture>\
                 </div>\
-                <div class='blog-references references-text' id='section14'> \
+                <div class='blog-references references-text ' id='section14'> \
                     <h3 class='subgroup-title'>References</h3> \
                     <ul>\
                         <li><a href='https://medium.com/@hunterscott/what-a-soviet-spacecraft-on-venus-can-teach-you-about-failure-f74f9c970a45'>https://medium.com/@hunterscott/what-a-soviet-spacecraft-on-venus-can-teach-you-about-failure-f74f9c970a45</a></li> \
@@ -640,11 +653,13 @@ const initState = {
                         <li><a href='https://www.youtube.com/watch?v=M5pXx_AjjlM&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=34&t=426s'>https://www.youtube.com/watch?v=M5pXx_AjjlM&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=34&t=426s</a></li> \
                         <li><a href='https://www.youtube.com/watch?v=ztmu__xo-vI&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=24'>https://www.youtube.com/watch?v=ztmu__xo-vI&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=24</a></li> \
                         <li><a href='https://www.youtube.com/watch?v=P3Ife6iBdsU&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=99'>https://www.youtube.com/watch?v=P3Ife6iBdsU&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=99</a></li> \
+                        <li><a href='https://www.space.com/18551-venera-13.html'>https://www.space.com/18551-venera-13.html</a></li> \
                     </ul>\
                 </div>\
-            ".replace(/screenshot1/gi, function(matched) {
+            ".replace(/screenshot1|veneraAudioRecording/gi, function(matched) {
                 var mapObj = {
                     screenshot1: require('../img/blogPosts/venusTopographyMap.PNG'),
+                    veneraAudioRecording: require('../sound/veneraAudioRecording.wav')
                 };
                 return mapObj[matched];
             }),

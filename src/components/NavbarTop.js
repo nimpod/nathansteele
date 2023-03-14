@@ -71,12 +71,12 @@ class NavbarTop extends Component {
      * Function to allow user to open and close the mobile view of the navigation menu
      */
     toggleMenu() {
-        // toggle the 'active'  class on #nav-top...
-        document.getElementById('nav-top').classList.toggle('active');
+        // toggle the 'active'  class on #nav-side...
+        document.getElementById('nav-side').classList.toggle('active');
 
         // close collapsed menu if user clicks out of it...
         let toggleThemeButton = document.getElementsByClassName('hamburger-menu')[0];
-        let itemToHide = document.getElementById('nav-top');
+        let itemToHide = document.getElementById('nav-side');
 
         window.addEventListener('click', function(mouseEvent) {
             hideItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent);
@@ -84,115 +84,12 @@ class NavbarTop extends Component {
     }
 
     /**
-     * Component did mount function
-     */
-    componentDidMount() {
-        // toggle navbar whilst scrolling in mobile view
-        let nav = document.getElementById("nav-top");
-        let lastScrollTop = 0;
-        if (nav !== null) {
-            window.addEventListener('scroll', function(e) {
-                var st = window.pageYOffset || document.documentElement.scrollTop;
-                // console.log('DEBUGGING: ', st, lastScrollTop);
-                if (st > lastScrollTop) {
-                  nav.classList.add('slideOutDown');
-                  nav.classList.remove('slideInUp');
-                } else {
-                  nav.classList.add('slideInUp');
-                  nav.classList.remove('slideOutDown');
-                }
-                lastScrollTop = st <= 0 ? 0 : st;
-              })
-        }
-
-        // set navbar item icons when in mobile view...
-        let navbarSpanTags = document.getElementsByClassName('mobile-view-title');
-        let icons = ['🏠', '📽️', '🎵', '📚', '🏫', '👨‍💻', '📙'];
-        ///let icons = ['▘', '▙', '▚', '▛', '▜', '▝', '▞'];
-        for (let i = 0; i < navbarSpanTags.length; i++) {
-            navbarSpanTags[i].innerHTML = icons[i];
-        }
-
-        // by default set the 'About me' button to be active...
-        let navlinks = document.getElementsByClassName('navlink');
-        console.log(navlinks);
-        //navlinks[1].classList.add('active');
-    }
-
-    
-    /**
-     * Onclick event listener for navbar buttons
-     * @param {*} e 
-     */
-    clickedNavbarItem = (e) => {
-        // cheeky way to make navigation look normal again...
-        // removes the .active from the 'About me' button (if its even there), if we are clicking onto a different button...
-        let navlinks = document.getElementsByClassName('navlink');
-        if (navlinks[1].classList.contains('active')) {
-            navlinks[1].classList.remove('active');
-        }
-    }
-
-    /**
      * content rendered to page
      */
     render() {
         return (
-            <header id="nav-top" className="animated faster slideInUp">
-                <div className="nav-left">
-                    <nav className="website-links">
-                        <div className="website-logo-container">                            
-                            <NavLink to="/aboutme" className="navlink website-logo">
-                                <Logo className="logo" />
-                            </NavLink>
-                        </div>
-                        <NavLink to="/aboutme" title='About Me' className="navlink">
-                            <span>About me</span>
-                            <span className='mobile-view-title'>About</span>
-                        </NavLink>
-                        <NavLink to="/films" title='Films' className="navlink" onClick={this.clickedNavbarItem}>
-                            <span>Films</span>
-                            <span className='mobile-view-title'>Films</span>
-                        </NavLink>
-                        <NavLink to="/music" title='Music' className="navlink" onClick={this.clickedNavbarItem}>
-                            <span>Music</span>
-                            <span className='mobile-view-title'>Music</span>
-                        </NavLink>
-                        <NavLink to="/blog" title='Blog' className="navlink" onClick={this.clickedNavbarItem}>
-                            <span>Blog</span>
-                            <span className='mobile-view-title'>Blog</span>
-                        </NavLink>
-                        <NavLink to="/university" title='University' className="navlink" onClick={this.clickedNavbarItem}>
-                            <span>University</span>
-                            <span className='mobile-view-title'>Uni</span>
-                        </NavLink>
-                        <NavLink to="/portfolio" title='Portfolio' className="navlink" onClick={this.clickedNavbarItem}>
-                            <span>Portfolio</span>
-                            <span className='mobile-view-title'>Portfolio</span>
-                        </NavLink>
-                        <NavLink to="/notes" title='Notes' className="navlink" onClick={this.clickedNavbarItem}>
-                            <span>Notes</span>
-                            <span className='mobile-view-title'>Notes</span>
-                        </NavLink>
-                    </nav>
-                    {/*
-                    <div className='secret-buttons'>
-                        <NavLink to="/messiahshandbook" title='Messiahs Handbook' className="navlink" onClick={this.clickedNavbarItem}>
-                            <span>🞾</span>
-                        </NavLink>
-                    </div>
-                    */}
-                </div>
-                
+            <header id="nav-top">
                 <div className="nav-right">
-                    <div className="theme-toggle inline-svg-wrapper" onClick={this.switchTheme} aria-label="Click to toggle theme" title="Click to toggle theme">
-                        <span className="inline-svg dark">
-                            <DarkThemeIcon />
-                        </span>
-                        <span className="inline-svg light" hidden={true}>
-                            <LightThemeIcon />
-                        </span>
-                    </div>
                     <div className="hamburger-menu inline-svg-wrapper" onClick={this.toggleMenu}>
                         <span className="inline-svg">
                             <HamburgerMenuIcon />
