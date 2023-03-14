@@ -1743,6 +1743,14 @@ div.blog-post
 .blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(6) { color: rgb(24, 188, 65); }
 
 
+/* references section */
+.references-text {
+  font-size: 0.5rem;
+}
+.references-text ul li {
+  padding-bottom: 10px;
+}
+
 .line {
   border: 1px solid var(--blog-post-divider-color);
   border-style: dotted;

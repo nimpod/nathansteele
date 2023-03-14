@@ -101,7 +101,7 @@ const initState = {
                             to contain my ramblings. It will be regarded as one of the most successful space-related missions ever... Thanks for reading 😊 \
                         </p>\
                     </div> \
-                    <div class='blog-subsection blog-references' id='section5'> \
+                    <div class='blog-subsection references-text' id='section5'> \
                         <h3 class='subgroup-title'>References</h3> \
                         <ul>\
                             <li><a href='https://www.youtube.com/watch?v=xrGAQCq9BMU'>https://www.youtube.com/watch?v=xrGAQCq9BMU</a></li> \
@@ -540,7 +540,7 @@ const initState = {
                     <p>They operated for 95 and 110 minutes respectively, gathering lots of data regarding the temperature and atmospheric and soil chemical composition. Evidence of thunder and lightning was also \
                         reported, the discovery of carbon monoxide at low altitudes. But no photos unfortunately :(</p>\
                     <picture class=\"img\">\
-                        <img width=250 height=200 class='dont-resize' src=\"http://mentallandscape.com/V_Venera11.jpg\" title='Venera-11 descent module' />\
+                        <img width=250 height=200 class='dont-resize' src=\"https://nssdc.gsfc.nasa.gov/planetary/image/venera_11_descent.jpg\" title='Venera-11 descent module' />\
                     </picture>\
                     <p class='acolade'>1st evidence of thunder on another planet.</p> \
                 </div>\
@@ -586,7 +586,7 @@ const initState = {
                     <h3 class='subgroup-title'>Venera 15 & 16</h3>\
                     <p>Both launched in <b>June 1983</b>, <a href='https://en.wikipedia.org/wiki/Venera_4V-2'>Venera 15 & 16</a> were orbiter missions designed to map the surface of Venus using radar.</p> \
                     <picture class=\"img\">\
-                        <img width=400 height=200 src=\"http://mentallandscape.com/C_Venera15_New.jpg\" title='Map from Venera-15/16 Altimeter Data' />\
+                        <img width=400 height=200 src=\"https://petermasek.tripod.com/lawas.jpg\" title='Map from Venera-15/16 Altimeter Data' />\
                     </picture>\
                     <p>The discoveries made from these probes have since been superseded by the <a href='https://solarsystem.nasa.gov/missions/magellan/in-depth/'>Magellan mission</a> in 1991, as SAR imaging now provides the highest resolution dataset for mapping the surface of nearby planets.</p> \
                 </div>\
@@ -630,8 +630,8 @@ const initState = {
                         <img width=600 height=200 src=\"https://universemagazine.com/wp-content/uploads/2020/12/800px-PIA23791-Venus-NewlyProcessedView-20200608.jpg\" title='Aphrodite Terra, a complex terrain' />\
                     </picture>\
                 </div>\
-                <div class='blog-references' id='section14'> \
-                        <h3 class='subgroup-title'>References</h3> \
+                <div class='blog-references references-text' id='section14'> \
+                    <h3 class='subgroup-title'>References</h3> \
                     <ul>\
                         <li><a href='https://medium.com/@hunterscott/what-a-soviet-spacecraft-on-venus-can-teach-you-about-failure-f74f9c970a45'>https://medium.com/@hunterscott/what-a-soviet-spacecraft-on-venus-can-teach-you-about-failure-f74f9c970a45</a></li> \
                         <li><a href='https://en.wikipedia.org/wiki/Venera'>https://en.wikipedia.org/wiki/Venera</a></li> \
