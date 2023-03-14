@@ -460,7 +460,7 @@ const initState = {
                         of the Universe and our insignificant but precious place within it.\
                     </p>\
                     <picture class=\"img\">\
-                        <img width=600 height=400 src=screenshot1 title='' />\
+                        <img width=600 height=400 src=\"https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/blogPosts/venusTopographyMap.PNG\" title='' />\
                     </picture>\
                 </div> \
                 <div class='blog-subsection' id='section2'> \
@@ -1348,7 +1348,7 @@ const initState = {
         },
         {
             "letterboxdUrl": "https://boxd.it/AF4",
-            "customPosterUrl": require('../img/films/arrietty/custom_poster.png'),
+            "customPosterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/films/theSecretWorldOfArrietty/custom_poster.png",
             "title": "The Secret World of Arrietty",
             "myRating": "9.1",
             "myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
