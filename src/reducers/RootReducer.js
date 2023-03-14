@@ -1399,12 +1399,12 @@ const initState = {
                         </div> \
             ".replace(/screenshot1|screenshot2|screenshot3|screenshot4|screenshot5|screenshot6/gi, function(matched) {
                 var mapObj = {
-                    screenshot1: require('../img/films/arrietty/screenshot1.jpg'),
-                    screenshot2: require('../img/films/arrietty/screenshot2.jpg'),
-                    screenshot3: require('../img/films/arrietty/screenshot3.jpg'),
-                    screenshot4: require('../img/films/arrietty/screenshot4.jpg'),
-                    screenshot5: require('../img/films/arrietty/screenshot5.jpg'),
-                    screenshot6: require('../img/films/arrietty/screenshot6.jpg'),
+                    screenshot1: require('../img/films/theSecretWorldOfArrietty/screenshot1.jpg'),
+                    screenshot2: require('../img/films/theSecretWorldOfArrietty/screenshot2.jpg'),
+                    screenshot3: require('../img/films/theSecretWorldOfArrietty/screenshot3.jpg'),
+                    screenshot4: require('../img/films/theSecretWorldOfArrietty/screenshot4.jpg'),
+                    screenshot5: require('../img/films/theSecretWorldOfArrietty/screenshot5.jpg'),
+                    screenshot6: require('../img/films/theSecretWorldOfArrietty/screenshot6.jpg'),
                 };
                 return mapObj[matched];
             }),
