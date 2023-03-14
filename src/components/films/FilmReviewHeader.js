@@ -54,14 +54,14 @@ class FilmReviewHeader extends Component {
                             <a className='filmLetterboxdLink' href={this.props.film.letterboxdUrl} target='_blank'>Letterboxd</a>
                         </div>
                         <div className='film-my-data-container'>
-                            <div className='filmMyRating' title='My rating'>
-                                {this.props.film.myRating} / 10
-                            </div>
                             <div className='filmPosition' title='Position in my list'>
                                 #{this.props.film.position} in my list
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className='filmMyRating' title='My rating'>
+                    <p>{this.props.film.myRating}</p>
                 </div>
                 <div className='review-my-tags'>
                     {tagsList.map(tag => {

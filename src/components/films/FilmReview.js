@@ -2,7 +2,7 @@ import React, {Component, useState, useEffect} from 'react';
 import { connect }  from 'react-redux';
 import { NavLink, withRouter } from 'react-router-dom';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
-import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
+import { ReactComponent as ShowGridIcon } from "../../icons/showGrid.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 import FilmsSubmenu from './FilmsSubmenu';
 import TopFilmsGridElement from './TopFilmsGridElement';
@@ -10,6 +10,7 @@ import FilmsJsonList from './reviews_web_data.json';
 import Films from './Films';
 import FilmReviewHeader from './FilmReviewHeader';
 import { filmReviewsSorted } from './Films.js';
+import { hideItemWhenUserClicksOutsideOfItem } from '../../js/helpers'
 
 
 class FilmReview extends Component {
@@ -118,6 +119,14 @@ class FilmReview extends Component {
         this.scrollToDisplayedFilm();
     }
 
+    /**
+     * Function to allow user to open and close the mobile view of the navigation menu
+     */
+    toggleGrid() {
+        // toggle the 'active' class on the grid...
+        document.getElementsByClassName('top-films-grid-container')[0].classList.toggle('active');
+    }
+
     render() {
         // get list of genres...
         let listOfGenres = this.getListOfGenres(filmReviewsSorted);
@@ -126,12 +135,13 @@ class FilmReview extends Component {
         return(
             <div className='page-wrapper favourite-films-page'>
                 <div className='section-inner'>
-                    <div className='review-displayed-container'>
-                        <FilmReviewHeader 
-                            film={this.props.film}
-                        />
+                    <div className='toggle-topFilmsGridContainer-btn' onClick={this.toggleGrid}>
+                        <ShowGridIcon className='invertable-icon' />
                     </div>
-                    <div className='top-films-grid-container'>
+                    <div className='review-displayed-container'>
+                        <FilmReviewHeader film={this.props.film} />
+                    </div>
+                    <div className='top-films-grid-container active'>
                         <div className='top-films-grid-controls'>
                             <span className='top-films-grid-controls-title'>My favourite films</span>
                             <div className='filter-container'>

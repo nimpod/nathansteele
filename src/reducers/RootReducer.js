@@ -598,9 +598,6 @@ const initState = {
                 <div class='blog-subsection' id='section11'> \
                     <h3 class='subgroup-title'>Venera 15 & 16</h3>\
                     <p>Both launched in <b>June 1983</b>, <a href='https://en.wikipedia.org/wiki/Venera_4V-2'>Venera 15 & 16</a> were orbiter missions designed to map the surface of Venus using radar.</p> \
-                    <picture class=\"img\">\
-                        <img width=400 height=200 src=\"https://petermasek.tripod.com/lawas.jpg\" title='Map from Venera-15/16 Altimeter Data' />\
-                    </picture>\
                     <p>The discoveries made from these probes have since been superseded by the <a href='https://solarsystem.nasa.gov/missions/magellan/in-depth/'>Magellan mission</a> in 1991, as SAR imaging now provides the highest resolution dataset for mapping the surface of nearby planets.</p> \
                 </div>\
                 <div class='blog-subsection' id='section12'> \
@@ -964,240 +961,6 @@ const initState = {
         }
     ],
 
-    monthlyData: [
-        {
-            month: '2023 January',
-            url: "https://letterboxd.com/nbofni/list/2023-january-01-23/",
-            myAverageRating: 5.846153846,
-            imdbAverageRating: 6.8,
-            numOfFilmsWatched: 39,
-            numOf7s: 13,
-            numOf8s: 5,
-            numOf9s: 0,
-            numOf10s: 0
-        },
-        {
-            month: '2022 December',
-            url: "https://letterboxd.com/nbofni/list/2022-december-12-22/",
-            myAverageRating: 5.11627907,
-            imdbAverageRating: 6.8,
-            numOfFilmsWatched: 43,
-            numOf7s: 6,
-            numOf8s: 3,
-            numOf9s: 0,
-            numOf10s: 0
-        },
-        {
-            month: '2022 November',
-            url: "https://letterboxd.com/nbofni/list/2022-november-11-22/",
-            myAverageRating: 5.1,
-            imdbAverageRating: 6.9,
-            numOfFilmsWatched: 32,
-            numOf7s: 6,
-            numOf8s: 1,
-            numOf9s: 1,
-            numOf10s: 0
-        },
-        {
-            month: '2022 October',
-            url: "https://letterboxd.com/nbofni/list/2022-october-10-22/",
-            myAverageRating: 5.242424242,
-            imdbAverageRating: 6.7,
-            numOfFilmsWatched: 33,
-            numOf7s: 7,
-            numOf8s: 1,
-            numOf9s: 2,
-            numOf10s: 0
-        },
-        {
-            month: '2022 September',
-            url: "https://letterboxd.com/nbofni/list/2022-september-09-2022/",
-            myAverageRating: 5.346153846,
-            imdbAverageRating: 6.9,
-            numOfFilmsWatched: 25,
-            numOf7s: 3,
-            numOf8s: 3,
-            numOf9s: 2,
-            numOf10s: 0
-        },
-        {
-            month: '2022 August',
-            url: "https://letterboxd.com/nbofni/list/2022-august-08-2022/",
-            myAverageRating: 5.285714286,
-            imdbAverageRating: 7.1,
-            numOfFilmsWatched: 14,
-            numOf7s: 5,
-            numOf8s: 1,
-            numOf9s: 0,
-            numOf10s: 0
-        },
-        {
-            month: '2022 July',
-            url: "https://letterboxd.com/nbofni/list/2022-july-07-2022/",
-            myAverageRating: 5.242424242,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 33,
-            numOf7s: 5,
-            numOf8s: 5,
-            numOf9s: 1,
-            numOf10s: 0
-        },
-        {
-            month: '2022 June',
-            url: "https://letterboxd.com/nbofni/list/2022-june-06-2022/",
-            myAverageRating: 5.176470588,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 17,
-            numOf7s: 2,
-            numOf8s: 0,
-            numOf9s: 0,
-            numOf10s: 0
-        },
-        {
-            month: '2022 May',
-            url: "https://letterboxd.com/nbofni/list/2022-may-05-2022/",
-            myAverageRating: 4.93877551,
-            imdbAverageRating: 7.1,
-            numOfFilmsWatched: 49,
-            numOf7s: 9,
-            numOf8s: 2,
-            numOf9s: 0,
-            numOf10s: 0
-        },
-        {
-            month: '2022 April',
-            url: "https://letterboxd.com/nbofni/list/2022-april-04-2022/",
-            myAverageRating: 5.448275862,
-            imdbAverageRating: 7.2,
-            numOfFilmsWatched: 58,
-            numOf7s: 6,
-            numOf8s: 9,
-            numOf9s: 1,
-            numOf10s: 0
-        },
-        {
-            month: '2022 March',
-            url: "https://letterboxd.com/nbofni/list/2022-march-03-2021/",
-            myAverageRating: 5.461538462,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 65,
-            numOf7s: 15,
-            numOf8s: 5,
-            numOf9s: 3,
-            numOf10s: 0
-        },
-        {
-            month: '2022 Febuary',
-            url: "https://letterboxd.com/nbofni/list/2022-february-02-2022/",
-            myAverageRating: 5.400,
-            imdbAverageRating: 7.1,
-            numOfFilmsWatched: 35,
-            numOf7s: 5,
-            numOf8s: 5,
-            numOf9s: 1,
-            numOf10s: 1
-        },
-        {
-            month: '2022 January',
-            url: "https://letterboxd.com/nbofni/list/2022-january-01-2022/",
-            myAverageRating: 5.800,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 45,
-            numOf7s: 11,
-            numOf8s: 6,
-            numOf9s: 5,
-            numOf10s: 0
-        },
-        {
-            month: '2021 December',
-            url: "https://letterboxd.com/nbofni/list/2021-december-12-2021/",
-            myAverageRating: 5.666666667,
-            imdbAverageRating: 7.1,
-            numOfFilmsWatched: 33,
-            numOf7s: 6,
-            numOf8s: 4,
-            numOf9s: 2,
-            numOf10s: 0
-        },
-        {
-            month: '2021 November',
-            url: "https://letterboxd.com/nbofni/list/2022-august-08-2022/",
-            myAverageRating: 5.529411765,
-            imdbAverageRating: 7.3,
-            numOfFilmsWatched: 34,
-            numOf7s: 7,
-            numOf8s: 3,
-            numOf9s: 1,
-            numOf10s: 1
-        },
-        {
-            month: '2021 November',
-            url: "https://letterboxd.com/nbofni/list/2021-november-11-2021/",
-            myAverageRating: 5.529411765,
-            imdbAverageRating: 7.3,
-            numOfFilmsWatched: 34,
-            numOf7s: 7,
-            numOf8s: 3,
-            numOf9s: 1,
-            numOf10s: 1
-        },
-        {
-            month: '2021 October',
-            url: "https://letterboxd.com/nbofni/list/2021-october-10-2021/",
-            myAverageRating: 5.766666667,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 30,
-            numOf7s: 4,
-            numOf8s: 5,
-            numOf9s: 2,
-            numOf10s: 0
-        },
-        {
-            month: '2021 September',
-            url: "https://letterboxd.com/nbofni/list/2021-september-09-2021/",
-            myAverageRating: 6.043478261,
-            imdbAverageRating: 7.2,
-            numOfFilmsWatched: 23,
-            numOf7s: 4,
-            numOf8s: 4,
-            numOf9s: 3,
-            numOf10s: 0
-        },
-        {
-            month: '2021 August',
-            url: "https://letterboxd.com/nbofni/list/2021-august-08-2021/",
-            myAverageRating: 6.000,
-            imdbAverageRating: 7.4,
-            numOfFilmsWatched: 36,
-            numOf7s: 3,
-            numOf8s: 4,
-            numOf9s: 7,
-            numOf10s: 1
-        },
-        {
-            month: '2021 July',
-            url: "https://letterboxd.com/nbofni/list/2021-july-07-2021/",
-            myAverageRating: 5.392857143,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 28,
-            numOf7s: 3,
-            numOf8s: 3,
-            numOf9s: 2,
-            numOf10s: 1
-        },
-        {
-            month: '2021 June',
-            url: "https://letterboxd.com/nbofni/list/2021-june-06-2021/",
-            myAverageRating: 5.576923077,
-            imdbAverageRating: 7.2,
-            numOfFilmsWatched: 26,
-            numOf7s: 4,
-            numOf8s: 3,
-            numOf9s: 3,
-            numOf10s: 0
-        },
-    ],
-
     albumReviews: [
         {
             title: "",
@@ -1348,7 +1111,7 @@ const initState = {
         },
         {
             "letterboxdUrl": "https://boxd.it/AF4",
-            "customPosterUrl": "https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/films/theSecretWorldOfArrietty/custom_poster.png",
+            "customPosterUrl": require('../img/films/theSecretWorldOfArrietty/custom_poster.png'),
             "title": "The Secret World of Arrietty",
             "myRating": "9.1",
             "myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
@@ -2995,6 +2758,240 @@ const initState = {
             "myReview": "",
             "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8]
         }
+    ],
+
+    monthlyData: [
+        {
+            month: '2023 January',
+            url: "https://letterboxd.com/nbofni/list/2023-january-01-23/",
+            myAverageRating: 5.846153846,
+            imdbAverageRating: 6.8,
+            numOfFilmsWatched: 39,
+            numOf7s: 13,
+            numOf8s: 5,
+            numOf9s: 0,
+            numOf10s: 0
+        },
+        {
+            month: '2022 December',
+            url: "https://letterboxd.com/nbofni/list/2022-december-12-22/",
+            myAverageRating: 5.11627907,
+            imdbAverageRating: 6.8,
+            numOfFilmsWatched: 43,
+            numOf7s: 6,
+            numOf8s: 3,
+            numOf9s: 0,
+            numOf10s: 0
+        },
+        {
+            month: '2022 November',
+            url: "https://letterboxd.com/nbofni/list/2022-november-11-22/",
+            myAverageRating: 5.1,
+            imdbAverageRating: 6.9,
+            numOfFilmsWatched: 32,
+            numOf7s: 6,
+            numOf8s: 1,
+            numOf9s: 1,
+            numOf10s: 0
+        },
+        {
+            month: '2022 October',
+            url: "https://letterboxd.com/nbofni/list/2022-october-10-22/",
+            myAverageRating: 5.242424242,
+            imdbAverageRating: 6.7,
+            numOfFilmsWatched: 33,
+            numOf7s: 7,
+            numOf8s: 1,
+            numOf9s: 2,
+            numOf10s: 0
+        },
+        {
+            month: '2022 September',
+            url: "https://letterboxd.com/nbofni/list/2022-september-09-2022/",
+            myAverageRating: 5.346153846,
+            imdbAverageRating: 6.9,
+            numOfFilmsWatched: 25,
+            numOf7s: 3,
+            numOf8s: 3,
+            numOf9s: 2,
+            numOf10s: 0
+        },
+        {
+            month: '2022 August',
+            url: "https://letterboxd.com/nbofni/list/2022-august-08-2022/",
+            myAverageRating: 5.285714286,
+            imdbAverageRating: 7.1,
+            numOfFilmsWatched: 14,
+            numOf7s: 5,
+            numOf8s: 1,
+            numOf9s: 0,
+            numOf10s: 0
+        },
+        {
+            month: '2022 July',
+            url: "https://letterboxd.com/nbofni/list/2022-july-07-2022/",
+            myAverageRating: 5.242424242,
+            imdbAverageRating: 7.0,
+            numOfFilmsWatched: 33,
+            numOf7s: 5,
+            numOf8s: 5,
+            numOf9s: 1,
+            numOf10s: 0
+        },
+        {
+            month: '2022 June',
+            url: "https://letterboxd.com/nbofni/list/2022-june-06-2022/",
+            myAverageRating: 5.176470588,
+            imdbAverageRating: 7.0,
+            numOfFilmsWatched: 17,
+            numOf7s: 2,
+            numOf8s: 0,
+            numOf9s: 0,
+            numOf10s: 0
+        },
+        {
+            month: '2022 May',
+            url: "https://letterboxd.com/nbofni/list/2022-may-05-2022/",
+            myAverageRating: 4.93877551,
+            imdbAverageRating: 7.1,
+            numOfFilmsWatched: 49,
+            numOf7s: 9,
+            numOf8s: 2,
+            numOf9s: 0,
+            numOf10s: 0
+        },
+        {
+            month: '2022 April',
+            url: "https://letterboxd.com/nbofni/list/2022-april-04-2022/",
+            myAverageRating: 5.448275862,
+            imdbAverageRating: 7.2,
+            numOfFilmsWatched: 58,
+            numOf7s: 6,
+            numOf8s: 9,
+            numOf9s: 1,
+            numOf10s: 0
+        },
+        {
+            month: '2022 March',
+            url: "https://letterboxd.com/nbofni/list/2022-march-03-2021/",
+            myAverageRating: 5.461538462,
+            imdbAverageRating: 7.0,
+            numOfFilmsWatched: 65,
+            numOf7s: 15,
+            numOf8s: 5,
+            numOf9s: 3,
+            numOf10s: 0
+        },
+        {
+            month: '2022 Febuary',
+            url: "https://letterboxd.com/nbofni/list/2022-february-02-2022/",
+            myAverageRating: 5.400,
+            imdbAverageRating: 7.1,
+            numOfFilmsWatched: 35,
+            numOf7s: 5,
+            numOf8s: 5,
+            numOf9s: 1,
+            numOf10s: 1
+        },
+        {
+            month: '2022 January',
+            url: "https://letterboxd.com/nbofni/list/2022-january-01-2022/",
+            myAverageRating: 5.800,
+            imdbAverageRating: 7.0,
+            numOfFilmsWatched: 45,
+            numOf7s: 11,
+            numOf8s: 6,
+            numOf9s: 5,
+            numOf10s: 0
+        },
+        {
+            month: '2021 December',
+            url: "https://letterboxd.com/nbofni/list/2021-december-12-2021/",
+            myAverageRating: 5.666666667,
+            imdbAverageRating: 7.1,
+            numOfFilmsWatched: 33,
+            numOf7s: 6,
+            numOf8s: 4,
+            numOf9s: 2,
+            numOf10s: 0
+        },
+        {
+            month: '2021 November',
+            url: "https://letterboxd.com/nbofni/list/2022-august-08-2022/",
+            myAverageRating: 5.529411765,
+            imdbAverageRating: 7.3,
+            numOfFilmsWatched: 34,
+            numOf7s: 7,
+            numOf8s: 3,
+            numOf9s: 1,
+            numOf10s: 1
+        },
+        {
+            month: '2021 November',
+            url: "https://letterboxd.com/nbofni/list/2021-november-11-2021/",
+            myAverageRating: 5.529411765,
+            imdbAverageRating: 7.3,
+            numOfFilmsWatched: 34,
+            numOf7s: 7,
+            numOf8s: 3,
+            numOf9s: 1,
+            numOf10s: 1
+        },
+        {
+            month: '2021 October',
+            url: "https://letterboxd.com/nbofni/list/2021-october-10-2021/",
+            myAverageRating: 5.766666667,
+            imdbAverageRating: 7.0,
+            numOfFilmsWatched: 30,
+            numOf7s: 4,
+            numOf8s: 5,
+            numOf9s: 2,
+            numOf10s: 0
+        },
+        {
+            month: '2021 September',
+            url: "https://letterboxd.com/nbofni/list/2021-september-09-2021/",
+            myAverageRating: 6.043478261,
+            imdbAverageRating: 7.2,
+            numOfFilmsWatched: 23,
+            numOf7s: 4,
+            numOf8s: 4,
+            numOf9s: 3,
+            numOf10s: 0
+        },
+        {
+            month: '2021 August',
+            url: "https://letterboxd.com/nbofni/list/2021-august-08-2021/",
+            myAverageRating: 6.000,
+            imdbAverageRating: 7.4,
+            numOfFilmsWatched: 36,
+            numOf7s: 3,
+            numOf8s: 4,
+            numOf9s: 7,
+            numOf10s: 1
+        },
+        {
+            month: '2021 July',
+            url: "https://letterboxd.com/nbofni/list/2021-july-07-2021/",
+            myAverageRating: 5.392857143,
+            imdbAverageRating: 7.0,
+            numOfFilmsWatched: 28,
+            numOf7s: 3,
+            numOf8s: 3,
+            numOf9s: 2,
+            numOf10s: 1
+        },
+        {
+            month: '2021 June',
+            url: "https://letterboxd.com/nbofni/list/2021-june-06-2021/",
+            myAverageRating: 5.576923077,
+            imdbAverageRating: 7.2,
+            numOfFilmsWatched: 26,
+            numOf7s: 4,
+            numOf8s: 3,
+            numOf9s: 3,
+            numOf10s: 0
+        },
     ]
 }
 

@@ -201,6 +201,7 @@
   --film-review-btn-bg-color-1: rgb(255, 255, 255);
   --film-review-btn-bg-color-2: rgb(214, 218, 222);
   --film-review-btn-text-color: rgb(21, 20, 20);
+  --film-review-rating-border-color: rgb(240, 240, 240);
   --film-review-section-border-color: rgb(242, 242, 243);
   --film-review-section-btnToggler-text-color: rgb(29, 146, 255);
   --film-review-section-btnToggler-border-color: rgb(230, 232, 237);
@@ -380,7 +381,8 @@
   --films-list-shadow-color: rgba(0, 0, 0, 0.89);
   --film-review-btn-bg-color-1: rgb(0, 0, 0);
   --film-review-btn-bg-color-2: rgb(111, 111, 117);
-  --film-review-btn-text-color: rgb(222, 207, 207);
+  --film-review-btn-text-color: rgb(221, 224, 227);
+  --film-review-rating-border-color: rgb(204, 205, 211);
   --film-review-section-border-color: rgb(40, 40, 44);
   --film-review-section-btnToggler-text-color: rgb(60, 164, 25);
   --film-review-section-btnToggler-border-color: rgb(51, 51, 55);
@@ -2354,19 +2356,41 @@ div.film-my-data-container > div {
 div.filmMyRating,
 div.filmPosition {
   display: inline-block;
-  padding: 3px 10px;
-  border-radius: 50em;
+  /* padding: 3px 10px; */
   border: .19rem solid transparent;
   font-weight: bolder;
   color: var(--film-review-btn-text-color);
 }
 div.filmMyRating {
+  padding: 15px 0px;
+  font-size: 45px;
+  width: 134px;
+  height: 134px;
+  text-align: center;
+  border-radius: 50%;
+  border: 5px solid var(--film-review-rating-border-color);
+  /*
   background: linear-gradient(var(--film-review-btn-bg-color-1), var(--film-review-btn-bg-color-2)) padding-box,
               linear-gradient(to right, rgb(255, 164, 37), rgb(10, 255, 124)) border-box;
+  */
+}
+div.filmMyRating p {
+    display: block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 48.5px;
+    font-weight: 600;
+    padding: 8px;
 }
 div.filmPosition {
+  padding: 3px 10px;
+  border-radius: 2rem;
   background: linear-gradient(to left, var(--film-review-btn-bg-color-1), var(--film-review-btn-bg-color-2)) padding-box,
               linear-gradient(to left, rgb(35, 129, 188), rgb(237, 45, 255)) border-box;
+}
+
+/* */
+.toggle-topFilmsGridContainer-btn {
+  display: none;
 }
 
 /* My tags */
@@ -2438,6 +2462,9 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
 
 
 /* #region ----------------< Top films list >-------------- */
+.section-inner > .top-films-grid-container:not(.active) {
+  display: none;
+}
 .section-inner > .top-films-grid-container {
   height: 100vh;
   overflow-y: hidden;
@@ -2510,7 +2537,7 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   display: inline-block;
   cursor: pointer;
   border-radius: 10px;
-  opacity: 0.75 !important;
+  opacity: 0.82 !important;
 }
 .film-grid-element:hover {
   opacity: 1.0 !important;
@@ -2854,8 +2881,50 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
     margin-left: 0px;
   }
   .App > .top-films-grid-container .film-grid-element img {
-    width: calc(var(--film-grid-element-width) * 1.2);
-    height: calc(var(--film-grid-element-height) * 1.2);
+    width: calc(var(--film-grid-element-width) * 1.08);
+    height: calc(var(--film-grid-element-height) * 1.08);
+  }
+  #top-films-list {
+    text-align: center;
+  }
+
+  /* */
+  .favourite-films-page .review-displayed {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .favourite-films-page .top-films-grid-container {
+    display: none;
+  }
+  .favourite-films-page .top-films-grid-container.active {
+    display: block;
+  }
+
+  /* */
+  .filmPosition {
+    font-size: 0.8rem;
+    font-weight: 500 !important;
+  }
+
+  .favourite-films-page .section-inner {
+    grid-template-columns: .1fr 100fr;
+  }
+  .toggle-topFilmsGridContainer-btn {
+    display: block;
+    width: 33px;
+    height: 33px;
+    padding: 5px;
+    position: relative;
+    /* padding-left: 20px; */
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .toggle-topFilmsGridContainer-btn:hover {
+    background-color: #000;
+  }
+  .toggle-topFilmsGridContainer-btn > svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -2919,7 +2988,11 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   }
   .blog > .section-inner,
   .blog-post > .section-inner {
-    padding: 20px 20px;
+    padding: 15px;
+  }
+
+  .blog-post img {
+    border-radius: 2px;
   }
 }
 
