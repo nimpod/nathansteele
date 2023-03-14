@@ -1646,7 +1646,7 @@ div.blog-post
 .blog-post-content p,
 .blog-post-content ul li,
 .blog-post-content ol li {
-  font-size: 15px;
+  font-size: 0.9rem;
   color: var(--blog-post-text);
   margin-left: 5px;
 }
@@ -1670,14 +1670,30 @@ div.blog-post
   font-weight: bold;
 }
 
-/* Little note inside a blog post */
+/* special p's in a blog post */
 .blog-post-content p.note {
+  /* insert a note within blog post */
   font-size: 0.9rem;
   color: var(--blog-post-note-text);
   font-style: italic;
   border-left: 3px solid var(--blog-post-note-beside);
   padding-left: 12px;
   margin-left: 25px;
+}
+.blog-post-content p.acolade {
+  /* insert 'acolade' within blog post */
+  border: 3px solid rgba(146, 248, 146, 0.182);
+  background-color: rgba(20, 20, 21, 0.624);
+  display: inline;
+  font-size: 0.7rem;
+  border-radius: 50px;
+  padding: 5px 15px;
+}
+.blog-post-content p.acolade::before {
+  content: '+';
+  font-weight: bold;
+  padding-right: 7px;
+  font-size: 1.1rem;
 }
 
 /* Image sizing problems! */
@@ -2586,6 +2602,7 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
 }
 /* #endregion */
 
+/* #endregion */
 
 
 /* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */

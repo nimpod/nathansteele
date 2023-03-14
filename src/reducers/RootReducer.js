@@ -440,7 +440,131 @@ const initState = {
             id: "20",
             date: "30 Sep 2022",
             title: "Venera spaceprobes",
-            content: "blah",
+            content: "\
+                <div class='intro-text blog-subsection' id='section1'> \
+                    <h3 class='subgroup-title'>Intro</h3> \
+                    <p>The Soviets succesfully landing an autonomous robot on Venus in 1975 and snapping a picture from one of the most inhospitable places in the solar system is probably \
+                        the <b>most underrated space achievement of all time</b>.</p> \
+                    <p>The <a href='https://en.wikipedia.org/wiki/Venera'>Venera program</a> <i>(Venera translates to Venus in Russian)</i> was a series of 16 space probes launched between 1961 to 1983. What the Soviet engineers achieved and discovered during the \
+                        project was an <b>unbelievable feat of engineering and science</b>, those who took part showed immense <b>perseverance</b> and <b>passion for astronomy</b>, and remains a powerful example \
+                        of <b>science and teamwork</b> being more important for the progress of civilization than war and politics.\
+                    </p>\
+                    <p>For a long time Venus was thought to be Earth-like due to being a similar size and composition. No telescope could pierce the thick cloud layers that enveloped the mysterious planet, so \
+                        we really had no idea what lurked on Venus without actually going there with scientific instruments to make measurements. We never could have imagined the hellish world that lurked \
+                        beneath the foreboding atmosphere. Turns out it's completely inhospitable for life as we know it, and despite the challenges the Venera engineers faced during the project they still \
+                        succeeded in gathering data that completely changed our understanding of the Universe and our insignificant but precious place within it.\
+                    </p>\
+                    <picture class=\"img\">\
+                        <img width=600 height=400 src=\"https://upload.wikimedia.org/wikipedia/commons/d/d9/Mapa_de_sondas_sobre_Venus.png\" title='' />\
+                    </picture>\
+                </div> \
+                <div class='blog-subsection' id='section2'> \
+                    <h3 class='subgroup-title'>Venera 1 & 2</h3>\
+                    <p>Launched in <b>Febuary 1961</b> (that's just 4 years post-Sputnik, and 7 years pre-Apollo11) and <b>November 1965</b> respectively.</p> \
+                    <p>Venera 1 & 2 were both intended to fly past Venus without entering orbit.</p> \
+                    <p>Venera 1 was launched on the 12th of Feburary 1961, and approached Venus for a flyby on the 19th of May 1961. Unfortunately we lost radio contact with the probe, returning no data...</p> \
+                    <p>Venera 2 was launched on the 12th of November 1965, but also suffered from similar problems after leaving Earth orbit.</p> \
+                    <p class='acolade'>1st ever interplanetary probe</p>\
+                    <p class='acolade'>1st ever flyby past another planet</p>\
+                    <p class='acolade'>1st ever probe to make course corrections in deep space</p>\
+                </div>\
+                <div class='blog-subsection' id='section3'> \
+                    <h3 class='subgroup-title'>Venera 3</h3>\
+                    <p>Launched in <b>March 1966</b>, the third Venera probe made a <b>partially succesfull landing on the surface of Venus</b>!!</p> \
+                    <p>The probe was optimized for atmospheric measurements. Unfortunately its scientific instruments failed during atmospheric insertion. It returned no valuable data, but it did land!</p>\
+                    <p class='acolade'>1st ever hard landing on another planet</p>\
+                </div>\
+                <div class='blog-subsection' id='section4'> \
+                    <h3 class='subgroup-title'>Venera 4</h3>\
+                    <p>Launched in <b>June 1967</b>, Venera 4 provided our first insight into the Venusian atmosphere. Turns out the planet has <b>extremely intense air pressure</b>, about <b>90x greater than on Earth! Initial chemical analysis of the atmopshere showed it was composed mostly of carbon dioxide and was far denser than expected.</b> \
+                    <p>Unfortunately the probe was crushed due to the intense pressure during its descent. The probe also recorded evidence of zonal winds with speeds of up to 225mph.</p> \
+                    <p class='acolade'>1st measurements of another planets atmosphere</p>\
+                    <p class='acolade'>1st measurements of wind in another planet.</p>\
+                </div>\
+                <div class='blog-subsection' id='section5'> \
+                    <h3 class='subgroup-title'>Venera 5 & 6</h3>\
+                    <p>Both launched in <b>January 1969</b> just 5 days apart from eachother, these probes lasted just under 1 hour in the Venusian atmosphere, but didn't come close to reaching the surface (about 26km and 11km respectively).\
+                    <p>These probes carried more scientific instruments, including a thermometer recording a temperature of 320 degrees Celsius (but it gets hotter!).</p>\
+                    <p class='acolade'>1st temperature readings from another planet.</p> \
+                </div>\
+                <div class='blog-subsection' id='section6'> \
+                    <h3 class='subgroup-title'>Venera 7 & 8</h3>\
+                    <p><b>Venera 7</b> was launched in <b>August 1970</b>, and made the first ever soft landing on Venus! Several adjustments were made to the \
+                        spacecraft design allowing it survive inside the intense Venusian atmosphere. The probes parachute opened at 60m above the surface, but 6 minutes later the parachute melted sending \
+                        the probe into a dramatic uncontrolled freefall, striking the surface at about 60km/h. The probe survived <b>23 minutes</b> on the surface before its batteries expired. The probe recorded \
+                        an insane surface temperature of <b>475 degrees Celsius</b>!!</p> \
+                    <p><b></b> was launched in <b>March 1972</b>, verifying the temperature readings and atmospheric data Venera 7 recorded was valid. Venera 8 also lasted an astounding <b>53 minutes</b>!</p> \
+                    <p class='acolade'>1st soft landing on another planet.</p> \
+                </div>\
+                <div class='blog-subsection' id='section7'> \
+                    <h3 class='subgroup-title'>Venera 9</h3>\
+                    <p>Launched in <b>June 1975</b>, Venera 9 successfully landed and became the first human-made probe to take <b>a picture from another planet!!!!</b> The engineers made many adjustments to the spacecraft design,\
+                     most notably a camera, also liquid cooling to help withstand the extreme surface temperatures, and also removing the parachutes favoring a hard landing instead of a soft landing. The probe \
+                     lasted for 53 minutes before succumbing to the extreme surface temperatures. This was a huge improvement and allowed much more time to collect data and obviously take a photograph! \
+                     The lander measured a light level of 14,000 lux, similar to that of Earth in full daylight but no direct sunshine.</p>\
+                    <p>The image revealed a <b>rocky uneven surface with weathered rocks</b>, and our <b>first glimpse of the hazy Venusian sky</b>.</p>\
+                    <picture class=\"img\">\
+                        <img width=600 height=400 src=\"https://upload.wikimedia.org/wikipedia/commons/f/ff/Foto_de_Venera_9.png\" title='' />\
+                    </picture>\
+                    <p class='acolade'>1st picture from another planet.</p> \
+                </div>\
+                <div class='blog-subsection' id='section8'> \
+                    <h3 class='subgroup-title'>Venera 10</h3>\
+                    <p>Launched in <b>June 1975</b>, <a href='https://en.wikipedia.org/wiki/Venera_10'>Venera 10</a> took an unbelievable photo whilst descending through the Venusian atmosphere, revealing huge lava rocks and a vast array of spooky unexplored terrain. \
+                        It's a miracle that these cameras worked and transmitted these tiny 64kp images back to us - such otherworldly discoveries within an photograph containing 750x less data than a \
+                        photograph on your average modern-day smartphone. A perfect example of quality over quantity.</p> \
+                    <picture class=\"img\">\
+                        <img width=600 height=200 class='dont-resize' src=\"https://upload.wikimedia.org/wikipedia/commons/b/bd/USSR_Venera_10_Venus_ground_1975_colorized_by_Don_P._Mitchell.png\" title='' />\
+                    </picture>\
+                </div>\
+                <div class='blog-subsection' id='section9'> \
+                    <h3 class='subgroup-title'>Venera 11 & 12</h3>\
+                    <p>Venera 11 & 12 (both launched in September 1978) successfully landed, but the <b>lens cap didn't get released...</b> <b>\\(._. )/</b></p> \
+                    <p>It operated for 95 and 110 minutes respectively, gathering lots of data regarding the temperature and atmospheric and soil chemical composition. Evidence of thunder and lightning was also \
+                        reported, the discovery of carbon monoxide at low altitudes. But no photos unfortunately :(</p>\
+                    <p class='acolade'>1st evidence of thunder on another planet.</p> \
+                </div>\
+                <div class='blog-subsection' id='section10'> \
+                    <h3 class='subgroup-title'>Venera 13 & 14</h3>\
+                    <p>Venera 13 & 14 (launched in 1981, landed in 1982) successfully landed and returned THE FIRST EVER COLOUR PHOTOGRAPH OF ANOTHER PLANET! The lander carried cameras, microphones, \
+                        drilling equipment, and seismometers to study the surface for earthquakes and volcanic activity (which there is a lot of (but nowhere near as much as Io!)). The lander lasted for \
+                        127 minutes on the surface, returning a huge amount of new data. This probe recorded the first ever audio recordings from another planet, including the sounds of Venusian wind, the \
+                        lander hitting the ground, the lens cap removal hitting the ground, and the drilling apparatus delving into the regolith rocks beneath the lander. Take a minute to reflect on this; \
+                        billions of years of existence where only the sound of wind, volcanic eruptions, and sulfuric acid rain lived, until one day from above, a machine lands and starts drilling...</p>\
+                    <p>Venera 13's photographs taken on landing show the landing area was composed of bedrock surrounded by dark regolith.</p> \
+                    <p>Venera 14's photographs show the landing area was far more fractured containing none of the regolith seen in Venera 13's photograph.</p> \
+                    <p>Volcanic eruptions on Venus are a major force reshaping the landscape, ongoing as we speak. As a result there are differences in the types of erupted magma and the eruption rate \
+                        lead to a wide variety of surface features, two of which we observed in the photographs. There are probably other surface types on Venus we don't even know exist. As of \
+                        writing (2023) we haven't returned to the surface of Venus since the spectacular success of Venera 14 in 1982.</p> \
+                    <picture class=\"img\">\
+                        <img width=600 height=200 class='dont-resize' src=\"https://www.google.com/url?sa=i&url=https%3A%2F%2Funiversemagazine.com%2Fen%2Fthe-last-photos-from-the-surface-of-venus-are-forty-years-old%2F&psig=AOvVaw2VIWd6ETvj7Vy_I9hPyfkx&ust=1678839744426000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJib7MaT2v0CFQAAAAAdAAAAABAd\" title='' />\
+                    </picture>\
+                    <p class='acolade'>1st audio recording from another planet</p> \
+                    <p class='acolade'>1st colour picture from another planet</p> \
+                </div>\
+                <div class='blog-subsection' id='section11'> \
+                    <h3 class='subgroup-title'>Venera 15 & 16</h3>\
+                    <p>Venera 15 & 16 (launched in 1983) were orbiters designed to map the surface of Venus using radar. The discoveries made from these probes have since been superseded by the Magellan \
+                        mission in 1991, as SAR imaging now provides the highest resolution dataset for mapping the surface of nearby planets.</p> \
+                </div>\
+                <div class='blog-subsection' id='section12'> \
+                    <h3 class='subgroup-title'>Further mapping of Venus</h3>\
+                    <p>There are some unfucking believable maps of the surface of Venus thanks to the Magellan mission and SAR imaging technology.</p> \
+                </div>\
+                <div class='blog-subsection' id='section13'> \
+                    <h3 class='subgroup-title'>Conclusion</h3>\
+                    <p>Amongst all of the achievements made by space agencies from the 60s, 70s, 80s, 90s, 00s, 10s, and the current 20s, I am of the opinion that the exploration of Venus by the Soviet Union \
+                        in the 70s and 80s is one of humanity's greatest scientific achievements.</p>\
+                    <p>The Venera project is a real testament to perseverance, dedication, experimentation, teamwork, collaboration, science, and an incredible use of primitive technology given this happened \
+                        in the 60s-80s. It gathered data from the hottest planet in the entire solar system (475 degrees celsius), a lonely world that once only knew the sound of wind and rain and volcanoes \
+                        until one day a strange machine landed and started taking pictures and drilling holes. It's not science-fiction, it's real, and it's about time we give the Russians some credit for \
+                        their engineering and discoveries. This precious data remains one of the most profound realizations of extreme environments on other planets - one of only 6 worlds we have successfully \
+                        placed landers on (Venus (1966), our Moon (1969), Mars (1976), Titan (2004), P67 comet (2015)).</p> \
+                    <p>Whilst it's entirely speculative, Venus may once have been Earth-like. Perhaps 300 million years ago Venus could have had similar conditions to current Earth. Perhaps the fate of future \
+                        Earth is similar to that of Venus's scorching hellscape - covered in volcanos, inconceivably high surface temperatures, and an almost impenetrable atmosphere polluted with \
+                        carbon dioxide - in other words, climate change.</p> \
+                </div>\
+            ",
             tags: ["Astronomy"]
         },
         {
@@ -2747,6 +2871,31 @@ const initState = {
             "myReview": "",
             "gradualInterest": [6, 5, 5, 6, 7, 8, 8, 9, 9],
             "customPosterUrl": require('../img/films/missZombie/custom_poster.jpg')
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/23De",
+            "title": "Howl’s Moving Castle",
+            "myRating": "8.2",
+            "myTags": ["War", "Magic", "Studio Ghibli"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 9, 9, 8, 8, 8, 8, 8, 8],
+            "customPosterUrl": require('../img/films/howlsMovingCastle/custom_poster.jpg')
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/A3E",
+            "title": "Citadel",
+            "myRating": "7.6",
+            "myTags": ["Ireland", "Zombies", "Agoraphobia", "Disturbing", "Dark"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/uWPK",
+            "title": "All My Friends Hate Me",
+            "myRating": "7.6",
+            "myTags": ["Social anxiety", "Cotswolds", "British humour"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8]
         }
     ]
 }
