@@ -1301,14 +1301,14 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/1JAY",
             "title": "Kiki's Delivery Service",
             "myRating": "8.4",
-            "myTags": ["Endearing", "Finding happiness", "Growing up", "Discovering independence", "Finding yourself", "Soulmate", "Flying", "Anime", "Great soundtrack", "Utopia", "Girl power"],
+            "myTags": ["Endearing", "Happiness", "Growing up", "Discovering independence", "Finding yourself", "Soulmate", "Flying", "Positive reflection on witches", "Utopia", "Anime", "Great soundtrack"],
             "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/4JQS",
             "title": "The Wind Rises",
-            "myRating": "8.1",
-            "myTags": ["Growing up", "Engineering", "War", "Flying", "Great soundtrack", "Soulmate", "Finding yourself", "Anime"],
+            "myRating": "9.6",
+            "myTags": ["Growing up", "Engineering", "War", "Flying", "Soulmate", "Finding yourself", "Anime", "Great soundtrack"],
             "myReview": "",
             "customPosterUrl": require('../img/films/theWindRises/custom_poster.jpg')
         },
@@ -2407,7 +2407,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2b4w",
             "title": "Princess Mononoke",
-            "myRating": "9.5",
+            "myRating": "8.2",
             "myTags": ["Embrace mother nature", "Humanity and nature coexisting", "War", "Corruption", "Evil people in power", "Anime", "Great soundtrack"],
             "myReview": "",
             "customPosterUrl": require('../img/films/mononoke/custom_poster.png'),
@@ -2702,7 +2702,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/y3U4",
             "title": "xxxHOLiC",
             "myRating": "9.0",
-            "myTags": ["Dimensionality", "Audio-visual spectacle", "Colourful"],
+            "myTags": ["Dimensionality", "Audio-visual spectacle", "Positive reflection on witches", "Colourful"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 8, 8, 8, 8, 7, 8, 9, 9],
             "customPosterUrl": require('../img/films/xxxHolic/custom_poster.PNG')
@@ -2719,7 +2719,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/h2sY",
             "title": "In Fabric",
             "myRating": "8.1",
-            "myTags": ["Atmospheric", "Ghosts", "Creepy", "Melancholic", "British humour", "Horror synth", "Great soundtrack"],
+            "myTags": ["Atmospheric", "Ghosts", "Creepy", "Melancholic", "British humour", "Synthwave", "Great soundtrack"],
             "myReview": "",
             "gradualInterest": [8, 8, 9, 8, 8, 8, 8, 7, 7, 7, 7, 8],
             "customPosterUrl": require('../img/films/inFabric/custom_poster.jpg')
@@ -2757,6 +2757,22 @@ const initState = {
             "myTags": ["Social anxiety", "Cotswolds", "British humour"],
             "myReview": "",
             "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1Qfo",
+            "title": "Re-cycle",
+            "myRating": "8.3",
+            "myTags": ["Surreal", "Ghosts", "Abortion"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 8, 8, 9, 9, 9, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1VhE",
+            "title": "Them",
+            "myRating": "7.5",
+            "myTags": ["Claustrophobic", "Intense", "Home invasion"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8]
         }
     ],
 
