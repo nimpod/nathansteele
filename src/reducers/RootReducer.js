@@ -664,27 +664,87 @@ const initState = {
         },
         {
             id: "21",
+            date: "21 Mar 2023",
+            title: "Neptune's amazing moon Triton",
+            content: "\
+                <div class='intro-text blog-subsection' id='section1'> \
+                    <h3 class='subgroup-title'></h3> \
+                    <p><b>Triton</b> is the largest moon of Neptune, the 7th largest moon in the Solar System.</p> \
+                    <p>The mysterious moon contains a <b>geothermally heated sub-surface ocean</b> beneath a thick layer of water ice, <b>geysers</b> spewing out water vapor 8km above the surface, the moon is \
+                        geologically active meaning the surface is constantly reshaping, cryovolcanoes exist contributing to this geological activity generating icy lava, and frosty nitrogen snow covers the moons icy surface.</p>\
+                    <picture class=\"img\">\
+                        <img width=600 height=400 src=\"https://www.thefactsite.com/wp-content/uploads/2019/10/triton-facts.jpg\" title='' />\
+                    </picture>\
+                </div> \
+                <div class='blog-subsection' id='section2'> \
+                    <p>The surface is believed to be about 50% nitrogen snow, 33% water ice, the rest being frozen carbon dioxide (suspiciously similar to Pluto's surface... we'll get back to this later...).</p>\
+                    <p>Up in Triton's thin atmosphere, clouds of nitrogen exist beneath a highly charged ionosphere. We have observed the formation of nitrogen clouds 3km above the surface of Triton, they are likely the result of the cryovolcanism going on inside the moon.</p> \
+                    <p>Being so far from the Sun, seasons on Triton get quite insane. <b>A single Tritonian season lasts 40 Earth years</b>. When Voyager 1 flew past Triton in 1989, it was spring in the Northen hemisphere. 24 years later in the year 2023, it's now summer in the Northen hemisphere.</p>\
+                    <p>In the depths of Tritonian winter, temperatures plunge to a rather <b>chilly temperature of -240°C</b></p> \
+                    <p>The surface itself is covered in nitrogen frost, and is exposed to 900x less sunlight than Earth gets. There are no obvious signs of impact craters, but smooth plains of shiny nitrogen snow, vast landscapes of frozen cryovolcanoes, ridges formed by outpouring of icy lava. All these observations have lead us to believe the moon is remarkably young (by the standards of our solar system - possibly a meagre 10 million years old!) which would indicate that the surface is being endlessly reshaped by geological activity.</p>\
+                    <p>But the secrets behind Triton's mysterious geological activity may lie in its unusual orbit...</p> \
+                    <picture class=\"img\">\
+                        <img width=600 height=400 src=\"https://static01.nyt.com/images/2014/11/04/multimedia/out-there-ice-moon/out-there-ice-moon-superJumbo.jpg\" title='' />\
+                    </picture>\
+                </div> \
+                <div class='blog-subsection' id='section3'> \
+                    <p>Remember I mentioned that Triton's surface is very similar to Pluto's? Well this may be no coincidence, as it's very likely Triton began as a dwarf planet billions of years ago in the Kuiper Belt just like Pluto currently is. Neptune one day decided to capture Triton with its strong gravitational pull.</p> \
+                    <p>The most compelling evidence we have of this is Triton's unusual orbit. Neptune turns counter-clockwise, which means all of its moons should orbit in the same direction - we have hundreds of pieces of evidence showing us this how most normal moons behave. Triton breaks this rule, orbiting in the opposite direction to its planet. This is what we call a 'Retrograde orbit'.</p>\
+                    <picture class=\"img\">\
+                        <img width=600 height=400 src=\"https://solarsystem.nasa.gov/internal_resources/4529\" title='' />\
+                    </picture>\
+                </div> \
+                <div class='blog-subsection' id='section13'> \
+                    <h3 class='subgroup-title'>Conclusion</h3>\
+                    <picture class=\"img\">\
+                        <img width=600 height=200 src=\"https://www.nasa.gov/sites/default/files/thumbnails/image/pia23874-1041.jpg\" title='Aphrodite Terra, a complex terrain' />\
+                    </picture>\
+                </div>\
+                <div class='blog-references references-text ' id='section14'> \
+                    <h3 class='subgroup-title'>References</h3> \
+                    <ul>\
+                        <li><a href='https://medium.com/@hunterscott/what-a-soviet-spacecraft-on-venus-can-teach-you-about-failure-f74f9c970a45'>https://medium.com/@hunterscott/what-a-soviet-spacecraft-on-venus-can-teach-you-about-failure-f74f9c970a45</a></li> \
+                        <li><a href='https://en.wikipedia.org/wiki/Venera'>https://en.wikipedia.org/wiki/Venera</a></li> \
+                        <li><a href='https://nssdc.gsfc.nasa.gov/planetary/venera.html'>https://nssdc.gsfc.nasa.gov/planetary/venera.html</a></li> \
+                        <li><a href='https://www.youtube.com/watch?v=-Ecm4N0NLYI&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=4'>https://www.youtube.com/watch?v=-Ecm4N0NLYI&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=4</a></li> \
+                        <li><a href='https://www.youtube.com/watch?v=M5pXx_AjjlM&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=34&t=426s'>https://www.youtube.com/watch?v=M5pXx_AjjlM&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=34&t=426s</a></li> \
+                        <li><a href='https://www.youtube.com/watch?v=ztmu__xo-vI&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=24'>https://www.youtube.com/watch?v=ztmu__xo-vI&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=24</a></li> \
+                        <li><a href='https://www.youtube.com/watch?v=P3Ife6iBdsU&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=99'>https://www.youtube.com/watch?v=P3Ife6iBdsU&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=99</a></li> \
+                        <li><a href='https://www.space.com/18551-venera-13.html'>https://www.space.com/18551-venera-13.html</a></li> \
+                    </ul>\
+                </div>\
+            ".replace(/screenshot1|veneraAudioRecording/gi, function(matched) {
+                var mapObj = {
+                    screenshot1: require('../img/blogPosts/venusTopographyMap.PNG'),
+                    veneraAudioRecording: require('../sound/veneraAudioRecording.wav')
+                };
+                return mapObj[matched];
+            }),
+            tags: ["Astronomy"]
+        },
+        {
+            id: "22",
             date: "30 Sep 2022",
             title: "Running form",
             content: "blah",
             tags: ["Running"]
         },
         {
-            id: "22",
+            id: "23",
             date: "30 Sep 2022",
             title: "Flagematics",
             content: "blah",
             tags: ["Vexilology", "Mathematics"]
         },
         {
-            id: "23",
+            id: "24",
             date: "16 Jan 2022",
             title: "Johannes Kepler",
             content: "blah",
             tags: ["InterestingPeople", "Astronomy"]
         },
         {
-            id: "24",
+            id: "25",
             date: "16 Jan 2022",
             title: "Samuel Pepys",
             content: "blah",
