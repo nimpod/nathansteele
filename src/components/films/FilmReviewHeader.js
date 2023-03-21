@@ -30,6 +30,9 @@ class FilmReviewHeader extends Component {
                         <img src={this.props.film.posterUrl} />
                     </picture>
                     <div className='filmDetails'>
+                        <div className='filmMyRating generic-hover' title='My rating'>
+                            <p>{this.props.film.myRating}</p>
+                        </div>
                         <div className='filmYear' title='Year of release'>
                             {this.props.film.year}
                         </div>
@@ -53,15 +56,10 @@ class FilmReviewHeader extends Component {
                             <a className='filmImdbLink' href={this.props.film.imdbUrl} target='_blank'>IMDb</a>
                             <a className='filmLetterboxdLink' href={this.props.film.letterboxdUrl} target='_blank'>Letterboxd</a>
                         </div>
-                        <div className='film-my-data-container'>
-                            <div className='filmPosition' title='Position in my list'>
-                                #{this.props.film.position} in my list
-                            </div>
+                        <div className='filmPosition generic-hover' title='Position in my list'>
+                            #{this.props.film.position} in my list
                         </div>
                     </div>
-                </div>
-                <div className='filmMyRating' title='My rating'>
-                    <p>{this.props.film.myRating}</p>
                 </div>
                 <div className='review-my-tags'>
                     {tagsList.map(tag => {

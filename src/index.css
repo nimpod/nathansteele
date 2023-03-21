@@ -779,6 +779,9 @@ svg.logo {
   stroke-width: 11.1px;
   z-index: 10;
 }
+svg.logo > g {
+  border-radius: 50%;
+}
 svg.logo path {
   fill: var(--logo-path-color);
   stroke: var(--logo-stroke-color);
@@ -2338,10 +2341,6 @@ div.filmLinks a {
   margin-right: 10px;
 }
 
-div.film-my-data-container {
-  bottom: 0;
-  position: absolute;
-}
 /*
 div.filmPosition {
   right: 0;
@@ -2369,6 +2368,8 @@ div.filmMyRating {
   text-align: center;
   border-radius: 50%;
   border: 5px solid var(--film-review-rating-border-color);
+  position: absolute;
+  right: 0;
   /*
   background: linear-gradient(var(--film-review-btn-bg-color-1), var(--film-review-btn-bg-color-2)) padding-box,
               linear-gradient(to right, rgb(255, 164, 37), rgb(10, 255, 124)) border-box;
@@ -2382,10 +2383,31 @@ div.filmMyRating p {
     padding: 8px;
 }
 div.filmPosition {
-  padding: 3px 10px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  padding: 0px 15px;
   border-radius: 2rem;
+  border: 3px solid rgb(116, 162, 22);
+  background-color: rgb(81, 115, 9);
+  /*
   background: linear-gradient(to left, var(--film-review-btn-bg-color-1), var(--film-review-btn-bg-color-2)) padding-box,
               linear-gradient(to left, rgb(35, 129, 188), rgb(237, 45, 255)) border-box;
+  */
+}
+div.filmMyRating:hover {
+  background-color: var(--searchbox-hover-bg-color);
+}
+div.filmPosition:hover {
+  background-color: rgb(119, 165, 18);
+}
+div.filmMyRating:hover,
+div.filmPosition:hover,
+div.my-tag:hover,
+div.genre-tag:hover,
+div.genre:hover {
+  cursor: pointer;
+  transition: 150ms background-color ease;
 }
 
 /* */
@@ -2424,6 +2446,8 @@ div.filmPosition {
   color: var(--intro-text);
   font-size: 0.8rem;
 }
+
+/*
 .review-content-container div.toggle-section-container > div.toggle-section-btn {
   margin-left: -30px;
   border-radius: 6px;
@@ -2438,7 +2462,7 @@ div.toggle-section-container:nth-child(1) > .toggle-section-btn::before { conten
 div.toggle-section-container:nth-child(3) > .toggle-section-btn::before { content: '⪩'; }
 div.toggle-section-container:nth-child(5) > .toggle-section-btn::before { content: '⪾'; }
 div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { content: '⫺'; }
-
+*/
 .review-content-container div.toggle-section-container > span {
   color: var(--film-review-section-title-text-color);
   font-size: 0.8rem;
@@ -2705,6 +2729,8 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
     display: block !important;
     position: absolute;
     right: 0;
+    top: 10px;
+    z-index: 99999999999999999999999999999999;
   }
   
   /* */
@@ -2898,6 +2924,12 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   }
   .favourite-films-page .top-films-grid-container.active {
     display: block;
+    width: 80%;
+    max-width: fit-content;
+    top: 0;
+  }
+  .favourite-films-page .section-inner {
+    display: block;
   }
 
   /* */
@@ -2988,11 +3020,57 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   }
   .blog > .section-inner,
   .blog-post > .section-inner {
-    padding: 15px;
+    padding: 15px 4px;
+  }
+  .blog-post-info {
+    padding: 5px 15px;
+  }
+  .blog-post-info.notAtTop {
+    position: fixed;
+    animation: blogPostHeaderAnimation 1s ease;    /* lasts 30s, eases in, and is infinite */
+    transition: all 500ms ease;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 3px 1px 0 var(--general-box-shadow-color-1);
+  }
+  .blog-post-info.notAtTop,
+  .nav-right {
+    background-color: var(--sidenav-bg-color);
+  }
+  .blog-post-info.notAtTop > .back-to-previous-page {
+    margin-top: 20px;
+    margin-right: 180px;
+  }
+  .blog-post-info.notAtTop > h3.blog-post-title {
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .blog-post-info.notAtTop > span.blog-post-date,
+  .blog-post-info.notAtTop > span.blog-post-tags {
+    font-size: 0.8rem;
+    padding-top: 30px;
+  }
+  .blog-post-info.notAtTop > span.blog-post-date {
+    padding-left: 6px;
+  }
+  .blog-post-info.notAtTop .blog-post-date svg {
+    width: 15px;
+    height: 15px;
+  }
+  .blog-post-info.notAtTop > * {
+    display: inline-block;
   }
 
   .blog-post img {
     border-radius: 2px;
+  }
+
+  .blog-post-info.notAtTop > .back-to-top-of-post {
+    top: 60px !important;
   }
 }
 
@@ -3027,6 +3105,21 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   0% { background-position:   0%   0%; }     /* x=top left, y=centre */
   50% { background-position:  100% 50%; }     /* x=bottom left, y=centre */
   100% { background-position: 0%   100%; }     /* x=top left, y=centre */
+}
+
+@keyframes blogPostHeaderAnimation {
+  
+}
+
+@keyframes toggleTopFilmsGridContainer {
+  0% {
+    right: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 100px; 
+    top: 0px;
+  }
 }
 
 @keyframes slideInUp {
