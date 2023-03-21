@@ -340,14 +340,21 @@ const initState = {
                                 <td>38,214</td> \
                                 <td>17.3</td> \
                                 <td>0.00000576%</td> \
-                                <td>6,300</td>\
+                                <td>73,000</td> \
                             </tr> \
                             <tr> \
                                 <td><a href='https://www.nasa.gov/content/goddard/parker-solar-probe/'>Parker Solar Probe</a></td> \
                                 <td>429,988</td> \
                                 <td>692</td> \
                                 <td>0.0023%</td> \
-                                <td>73,000</td>\
+                                <td>6,300</td> \
+                            </tr> \
+                            <tr> \
+                                <td><a href='https://www.youtube.com/watch?v=SkGRVvA23qI&list=PL_m58L0UBc3Vk3-_HNEHtt64cn1-aNpnJ&index=8&t=126s'>Riding solar wind (theoretical)</a></td> \
+                                <td>1,000,000</td> \
+                                <td>40,000</td> \
+                                <td>20%</td> \
+                                <td>40.50</td> \
                             </tr> \
                             <tr> \
                                 <td><a href='https://www.planetary.org/articles/what-is-solar-sailing'>Solar sail (theoretical)</a></td> \
@@ -1023,15 +1030,9 @@ const initState = {
 
     albumReviews: [
         {
-            title: "",
-            artist: "",
-            yearOfRelease: "",
-            duration: "",
-            genres: [],
-            rymLink: "",
-            albumCover: "",
-            myRating: "",
-            contentReview: "",
+            rymLink: "https://rateyourmusic.com/release/album/yes/fly-from-here/",
+            myRating: "10",
+            myReview: "",
         }
     ],
 

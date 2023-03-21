@@ -1752,9 +1752,10 @@ div.blog-post
 .blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(1) { color: rgb(253, 15, 15); }
 .blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(2) { color: rgb(255, 79, 35); }
 .blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(3) { color: rgb(226, 90, 45); }
-.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(4) { color: rgb(240, 200, 40); }
-.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(5) { color: rgb(188, 209, 26); }
-.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(6) { color: rgb(24, 188, 65); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(4) { color: rgb(241, 180, 82); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(5) { color: rgb(202, 221, 59); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(6) { color: rgb(160, 231, 37); }
+.blog-post table.time-to-get-to-alphacenturi-table tbody tr:nth-child(7) { color: rgb(25, 255, 41); }
 
 
 /* references section */
@@ -2368,8 +2369,10 @@ div.filmMyRating {
   text-align: center;
   border-radius: 50%;
   border: 5px solid var(--film-review-rating-border-color);
+  background-color: var(--film-review-header-bg-color);
   position: absolute;
-  right: 0;
+  right: -40px;
+  top: -40px;
   /*
   background: linear-gradient(var(--film-review-btn-bg-color-1), var(--film-review-btn-bg-color-2)) padding-box,
               linear-gradient(to right, rgb(255, 164, 37), rgb(10, 255, 124)) border-box;
@@ -2561,10 +2564,10 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   display: inline-block;
   cursor: pointer;
   border-radius: 10px;
-  opacity: 0.82 !important;
+  opacity: 0.8 !important;
 }
 .film-grid-element:hover {
-  opacity: 1.0 !important;
+  opacity: 0.4 !important;
   transition: all 300ms ease;
 }
 .film-grid-element:not(.active) {

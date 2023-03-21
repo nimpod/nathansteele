@@ -5,8 +5,8 @@ import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
 
-class FilmsSumenu extends Component {
 
+class FilmsSubmenu extends Component {
     clickedSubmenuItem = (e) => {
         // if(e.target.tagName == "A") {
         let anchorTag = e.target;
@@ -45,4 +45,4 @@ class FilmsSumenu extends Component {
     }
 }
 
-export default withRouter(FilmsSumenu)
+export default withRouter(FilmsSubmenu)

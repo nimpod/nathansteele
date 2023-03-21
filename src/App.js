@@ -33,7 +33,7 @@ import PageFilmStats from './components/films/PageFilmStats';
 import FilmReview from './components/films/FilmReview';
 
 // Music page
-import MusicReview from './components/music/MusicReview';
+import Music from './components/music/Music';
 
 
 export default class App extends Component {
@@ -58,7 +58,7 @@ export default class App extends Component {
                       <Route path='/films' component={Films} exact />
                       <Route path='/films/:film_id' component={FilmReview} exact />
 
-                      <Route path='/music/:album_id' component={MusicReview} />
+                      <Route path='/music' component={Music} exact />
 
                       <Route path='/university' component={University} exact />
                       <Route path='/university/:assignment_id' component={UniversityAssignment} exact />

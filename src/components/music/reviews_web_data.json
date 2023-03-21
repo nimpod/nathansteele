@@ -1,0 +1,4362 @@
+[
+    {
+        "position": 1,
+        "artistName": "Boards of Canada",
+        "albumName": "Music Has The Right To Children",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 2,
+        "artistName": "XTC",
+        "albumName": "Mummer",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 3,
+        "artistName": "Orbital",
+        "albumName": "In Sides",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 4,
+        "artistName": "Radiohead",
+        "albumName": "A Moon Shaped Pool",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 5,
+        "artistName": "Yes",
+        "albumName": "Fly From Here",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 6,
+        "artistName": "Ichiko Aoba",
+        "albumName": "Windswept Adan",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 7,
+        "artistName": "System Of A Down",
+        "albumName": "Hypnotize",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 8,
+        "artistName": "Daft Punk",
+        "albumName": "Discovery",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 9,
+        "artistName": "Radiohead",
+        "albumName": "In Rainbows",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 10,
+        "artistName": "Linkin Park",
+        "albumName": "Hybrid Theory",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 11,
+        "artistName": "Dukes Of Stratosphere",
+        "albumName": "Chips From The Chocolate Fireball",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 12,
+        "artistName": "Alt J",
+        "albumName": "An Awesome Wave",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 13,
+        "artistName": "Asia",
+        "albumName": "Gravitas",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 14,
+        "artistName": "Poppy",
+        "albumName": "EAT",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 15,
+        "artistName": "Bring Me The Horizon",
+        "albumName": "POST HUMAN SURVIVAL HORROR",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 16,
+        "artistName": "Boards of Canada",
+        "albumName": "Random 35 Tracks Tape",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 17,
+        "artistName": "Enter Shikari",
+        "albumName": "The Mindsweep",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 18,
+        "artistName": "Yes",
+        "albumName": "Close to the Edge",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 19,
+        "artistName": "XTC",
+        "albumName": "Skylarking",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 20,
+        "artistName": "XTC",
+        "albumName": "Oranges And Lemons",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 21,
+        "artistName": "Poppy",
+        "albumName": "I Disagree",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 22,
+        "artistName": "Linkin Park",
+        "albumName": "A Thousand Suns",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 23,
+        "artistName": "Boards of Canada",
+        "albumName": "A Few Old Tunes",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 24,
+        "artistName": "Nine Inch Nails",
+        "albumName": "The Downward Spiral (Deluxe Edition)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 25,
+        "artistName": "PVRIS",
+        "albumName": "White Noise",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 26,
+        "artistName": "Sufjan Stevens",
+        "albumName": "Carrie and Lowell",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 27,
+        "artistName": "Fiona Apple",
+        "albumName": "The Idler Wheel Is Wiser Than the Driver of the Screw and Whipping Cords Will Serve You More Than Ropes Will Ever Do",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 28,
+        "artistName": "Chisato Yamada",
+        "albumName": "Suite Nihonkai \u7d44\u66f2\u300c\u65e5\u672c\u6d77\u300d\u6d25\u8efd\u3058\u3087\u3093\u304b\u3089\u6d41\u308c\u7bc0",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 29,
+        "artistName": "Elliott Smith",
+        "albumName": "Figure 8",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 30,
+        "artistName": "System Of A Down",
+        "albumName": "System Of A Down",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 31,
+        "artistName": "Marika Hackman",
+        "albumName": "We Slept At Last",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 32,
+        "artistName": "Nine Inch Nails",
+        "albumName": "The Fragile",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 33,
+        "artistName": "Marika Hackman",
+        "albumName": "That Iron Taste",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 34,
+        "artistName": "Igorrr",
+        "albumName": "Savage Sinusoid",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 35,
+        "artistName": "Sing Street",
+        "albumName": "Sing Street (Original Motion Picture Soundtrack)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 36,
+        "artistName": "Thom Yorke",
+        "albumName": "Suspiria",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 37,
+        "artistName": "Aphex Twin",
+        "albumName": "Selected Ambient Works, Volume II",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 38,
+        "artistName": "Joe Hisaishi",
+        "albumName": "Kiki's Delivery Service Soundtrack",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 39,
+        "artistName": "Brand New",
+        "albumName": "Science Fiction",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 40,
+        "artistName": "System Of A Down",
+        "albumName": "Mezmerize",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 41,
+        "artistName": "Beach House",
+        "albumName": "Once Twice Melody",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 42,
+        "artistName": "Fleet Foxes",
+        "albumName": "Fleet Foxes",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 43,
+        "artistName": "Nas",
+        "albumName": "Illmatic",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 44,
+        "artistName": "Boards of Canada",
+        "albumName": "Geogaddi",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 45,
+        "artistName": "Moron Police",
+        "albumName": "A Boat on the Sea",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 46,
+        "artistName": "Kendrick Lamar",
+        "albumName": "To Pimp a Butterfly",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 47,
+        "artistName": "Kendrick Lamar",
+        "albumName": "Section.80",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 48,
+        "artistName": "Yuu Miyake",
+        "albumName": "Katamari Damacy OST",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 49,
+        "artistName": "Bjork",
+        "albumName": "Post",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 50,
+        "artistName": "Yellow Magic Orchestra",
+        "albumName": "Solid State Survivor",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 51,
+        "artistName": "Anna Meridith",
+        "albumName": "Varmints",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 52,
+        "artistName": "Massive Attack",
+        "albumName": "Mezzanine",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 53,
+        "artistName": "Milt Jackson, John Coltrane",
+        "albumName": "Bags & Trane",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 54,
+        "artistName": "Alexandre Desplat",
+        "albumName": "The Shape of Water (Original Motion Picture Soundtrack)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 55,
+        "artistName": "A Tribe Called Quest",
+        "albumName": "The Anthology",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 56,
+        "artistName": "Logic",
+        "albumName": "Young Sinatra",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 57,
+        "artistName": "Logic",
+        "albumName": "Under Pressure",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 58,
+        "artistName": "BADBADNOTGOOD",
+        "albumName": "BBNG2",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 59,
+        "artistName": "twenty one pilots",
+        "albumName": "Vessel (Bonus Tracks Version)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 60,
+        "artistName": "Nothing but Thieves",
+        "albumName": "Nothing But Thieves (Deluxe)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 61,
+        "artistName": "Jon Hopkins",
+        "albumName": "Contact Note",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 62,
+        "artistName": "Oskar Schuster",
+        "albumName": "Sneeuwland",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 63,
+        "artistName": "C418",
+        "albumName": "Minecraft Volume Alpha",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 64,
+        "artistName": "\u690e\u540d\u6797\u6a8e (Sheena Ringo)",
+        "albumName": "\u52dd\u8a34\u30b9\u30c8\u30ea\u30c3\u30d7 (Sh\u014dso Strip)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 65,
+        "artistName": "System Of A Down",
+        "albumName": "Steal This Album!",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 66,
+        "artistName": "System Of A Down",
+        "albumName": "Toxicity",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 67,
+        "artistName": "Air",
+        "albumName": "Talkie Walkie",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 68,
+        "artistName": "NANORAY",
+        "albumName": "DIGIMAIDEN",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 69,
+        "artistName": "Nothing But Thieves",
+        "albumName": "Broken Machine",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 70,
+        "artistName": "Enter Shikari",
+        "albumName": "Take To The Skies",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 71,
+        "artistName": "Pierre Van Dormael",
+        "albumName": "Mr Nobody OST",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 72,
+        "artistName": "Jon Brion",
+        "albumName": "Synecdoche, New York",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 73,
+        "artistName": "Beach House",
+        "albumName": "Teen Dream",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 74,
+        "artistName": "Crumb",
+        "albumName": "Locket",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 75,
+        "artistName": "The Strokes",
+        "albumName": "Comedown Machine",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 76,
+        "artistName": "BROCKHAMPTON",
+        "albumName": "SATURATION III",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 77,
+        "artistName": "Dead Can Dance",
+        "albumName": "Within The Realm Of A Dying Sun",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 78,
+        "artistName": "BadBadNotGood",
+        "albumName": "IV",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 79,
+        "artistName": "Boards Of Canada",
+        "albumName": "A Few Old Tunes Vol.2",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 80,
+        "artistName": "Kendrick Lamar",
+        "albumName": "Good Kid M.A.A.D City",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 81,
+        "artistName": "XTC",
+        "albumName": "Nonsuch",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 82,
+        "artistName": "Enter Shikari",
+        "albumName": "A Flash Flood Of Colour",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 83,
+        "artistName": "King Gizzard & The Lizard Wizard",
+        "albumName": "Nonagon Infinity",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 84,
+        "artistName": "scntfc",
+        "albumName": "Oxenfree",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 85,
+        "artistName": "Machine Girl",
+        "albumName": "Wlfgrl",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 86,
+        "artistName": "Kero Kero Bonito",
+        "albumName": "Time 'n' Place",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 87,
+        "artistName": "Midori",
+        "albumName": "\u3042\u3089\u305f\u3081\u307e\u3057\u3066\u3001\u306f\u3058\u3081\u307e\u3057\u3066\u3001\u30df\u30c9\u30ea\u3067\u3059\u3002",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 88,
+        "artistName": "Midori",
+        "albumName": "shinsekai",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 89,
+        "artistName": "Bring Me The Horizon",
+        "albumName": "That's The Spirit",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 90,
+        "artistName": "Charli XCX",
+        "albumName": "How I'm Feeling Now",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 91,
+        "artistName": "Lily Allen",
+        "albumName": "It's Not Me, It's You",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 92,
+        "artistName": "Lily Allen",
+        "albumName": "Alright, Still",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 93,
+        "artistName": "Daniel Hart",
+        "albumName": "A Ghost Story",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 94,
+        "artistName": "Orbital",
+        "albumName": "The Middle Of Nowhere",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 95,
+        "artistName": "Iglooghost",
+        "albumName": "Neo Wax Bloom",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 96,
+        "artistName": "Katzenjammer",
+        "albumName": "Le Pop",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 97,
+        "artistName": "Lucrecia Dalt",
+        "albumName": "Syzygy",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 98,
+        "artistName": "Tyler, The Creator",
+        "albumName": "Flower Boy",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 99,
+        "artistName": "Dominique Guiot",
+        "albumName": "L'Univers De La Mer",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 100,
+        "artistName": "Iglooghost",
+        "albumName": "Steel Mogu",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 101,
+        "artistName": "Nick Drake",
+        "albumName": "Bryter Layter",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 102,
+        "artistName": "Dirty Projectors & Bjork",
+        "albumName": "Mount Wittenberg Orca",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 103,
+        "artistName": "Linkin Park",
+        "albumName": "Meteora",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 104,
+        "artistName": "The Drums",
+        "albumName": "The Drums",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 105,
+        "artistName": "The Bug",
+        "albumName": "London Zoo",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 106,
+        "artistName": "Orbital",
+        "albumName": "Snivilization",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 107,
+        "artistName": "Ratatat",
+        "albumName": "Ratatat Classics",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 108,
+        "artistName": "Rumpistol",
+        "albumName": "Isola",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 109,
+        "artistName": "MF DOOM",
+        "albumName": "MM..FOOD",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 110,
+        "artistName": "XTC",
+        "albumName": "Apple Venus",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 111,
+        "artistName": "Ichiko Aoba",
+        "albumName": "0",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 112,
+        "artistName": "Lone",
+        "albumName": "Galaxy Garden",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 113,
+        "artistName": "Radiohead",
+        "albumName": "Ok Computer",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 114,
+        "artistName": "Clown Core",
+        "albumName": "Van",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 115,
+        "artistName": "Sigur Ros",
+        "albumName": "Agaetis Byrjun",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 116,
+        "artistName": "Ween",
+        "albumName": "The Mollusk",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 117,
+        "artistName": "Misun",
+        "albumName": "Superstitions [Explicit]",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 118,
+        "artistName": "Klute",
+        "albumName": "No One's Listening Anymore",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 119,
+        "artistName": "Laurent Perez Del Mar",
+        "albumName": "The Red Turtle (Original Motion Picture Soundtrack)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 120,
+        "artistName": "Fleet Foxes",
+        "albumName": "Helplessness Blues",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 121,
+        "artistName": "Nick Drake",
+        "albumName": "Pink Moon",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 122,
+        "artistName": "Frank Ocean",
+        "albumName": "Blonde",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 123,
+        "artistName": "Open Mike Eagle",
+        "albumName": "Brick Body Kids Still Daydream",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 124,
+        "artistName": "Pendulum",
+        "albumName": "In Silico",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 125,
+        "artistName": "Stereolab",
+        "albumName": "Dots And Loops",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 126,
+        "artistName": "Kate Bush",
+        "albumName": "Never For Ever",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 127,
+        "artistName": "\u82b8\u80fd\u5c71\u57ce\u7d44 (Geinoh Yamashirogumi)",
+        "albumName": "AKIRA",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 128,
+        "artistName": "King Gizzard & The Lizard Wizard",
+        "albumName": "Paper M\u00e2ch\u00e9 Dream Balloon",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 129,
+        "artistName": "The Caretaker",
+        "albumName": "Everywhere At The End Of Time",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 130,
+        "artistName": "Jme",
+        "albumName": "Integrity",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 131,
+        "artistName": "Alt J",
+        "albumName": "This Is All Yours",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 132,
+        "artistName": "Nintendo",
+        "albumName": "Kirby Super Star OST",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 133,
+        "artistName": "A Tribe Called Quest",
+        "albumName": "A Low End Theory",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 134,
+        "artistName": "Daft Punk",
+        "albumName": "Random Access Memories",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 135,
+        "artistName": "All Time Low",
+        "albumName": "Future Hearts",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 136,
+        "artistName": "Sufjan Stevens",
+        "albumName": "Illinois",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 137,
+        "artistName": "Vangelis",
+        "albumName": "China",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 138,
+        "artistName": "\u9577\u8c37\u5ddd\u767d\u7d19 (Hakushi Hasegawa)",
+        "albumName": "\u8349\u6728\u840c\u52d5 (S\u014dmoku h\u014dd\u014d)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 139,
+        "artistName": "Portishead",
+        "albumName": "Dummy",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 140,
+        "artistName": "Regina Spektor",
+        "albumName": "Remember Us to Life",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 141,
+        "artistName": "Daniel Caesar",
+        "albumName": "Freudian",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 142,
+        "artistName": "Mort Garson",
+        "albumName": "Plantasia",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 143,
+        "artistName": "Boards Of Canada",
+        "albumName": "The Campfire Headphase",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 144,
+        "artistName": "Sleepwave",
+        "albumName": "Broken Compass",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 145,
+        "artistName": "Crumb",
+        "albumName": "Jinx",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 146,
+        "artistName": "Plus Crier",
+        "albumName": "At The Mall",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 147,
+        "artistName": "Marika Hackman",
+        "albumName": "Sugar Blind EP",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 148,
+        "artistName": "Thelonious Monk Septet",
+        "albumName": "Monk's Music",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 149,
+        "artistName": "Run The Jewels",
+        "albumName": "RTJ4",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 150,
+        "artistName": "A Tribe Called Quest",
+        "albumName": "We got it from Here... Thank You 4 Your service [320]",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 151,
+        "artistName": "Enter Shikari",
+        "albumName": "Common Dreads",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 152,
+        "artistName": "Fightstar",
+        "albumName": "One Day Son, This Will All Be Yours",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 153,
+        "artistName": "Oskar Schuster",
+        "albumName": "Matilda",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 154,
+        "artistName": "Joyce Moreno",
+        "albumName": "Natureza",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 155,
+        "artistName": "Andreas Vollenweider",
+        "albumName": "Down To The Moon",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 156,
+        "artistName": "Iglooghost",
+        "albumName": "Clear Tamei",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 157,
+        "artistName": "Erik Satie",
+        "albumName": "3 Gymnopedies & other piano works",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 158,
+        "artistName": "Pendulum",
+        "albumName": "Hold Your Colour",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 159,
+        "artistName": "Brand New",
+        "albumName": "Deja Entendu",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 160,
+        "artistName": "Scott Walker",
+        "albumName": "Scott 3",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 161,
+        "artistName": "Joe Hisaishi",
+        "albumName": "Nausicaa of the Valley of the Wind",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 162,
+        "artistName": "Joe Hisaishi",
+        "albumName": "Princess Mononoke Soundtrack",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 163,
+        "artistName": "Digable Planets",
+        "albumName": "Reachin\u2019 (A New Refutation of Time and Space)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 164,
+        "artistName": "Boards of Canada",
+        "albumName": "In A Beautiful Place Out In The Country",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 165,
+        "artistName": "Revocation",
+        "albumName": "Scion Av Presents Revocation Tetragensis",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 166,
+        "artistName": "Tkay Maidza",
+        "albumName": "Last Year Was Weird, Vol. 2",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 167,
+        "artistName": "Daft Punk",
+        "albumName": "Human After All",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 168,
+        "artistName": "Ichiko Aoba",
+        "albumName": "qp",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 169,
+        "artistName": "Air",
+        "albumName": "10,000 Hz Legend",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 170,
+        "artistName": "Air",
+        "albumName": "Moon Safari",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 171,
+        "artistName": "Slipknot",
+        "albumName": "Slipknot",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 172,
+        "artistName": "Queens of the Stone Age",
+        "albumName": "Songs For The Deaf",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 173,
+        "artistName": "Vampire Weekend",
+        "albumName": "Vampire Weekend",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 174,
+        "artistName": "Grimes",
+        "albumName": "Art Angels",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 175,
+        "artistName": "Bring Me the Horizon",
+        "albumName": "amo",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 176,
+        "artistName": "Bring Me The Horizon",
+        "albumName": "Sempiternal",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 177,
+        "artistName": "SOPHIE",
+        "albumName": "OIL OF EVERY PEARL'S UN",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 178,
+        "artistName": "Matmos",
+        "albumName": "Plastic Anniversary (2019)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 179,
+        "artistName": "King Gizzard & The Lizard Wizard",
+        "albumName": "Sketches Of Brunswick East",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 180,
+        "artistName": "Opposite Day",
+        "albumName": "What Is Is",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 181,
+        "artistName": "The Hoosiers",
+        "albumName": "The Trick To Life",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 182,
+        "artistName": "Arca",
+        "albumName": "KICK ii",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 183,
+        "artistName": "Casualties of Cool",
+        "albumName": "Casualties of Cool",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 184,
+        "artistName": "Kendrick Lamar",
+        "albumName": "Untitled Unmastered",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 185,
+        "artistName": "Portico Quartet",
+        "albumName": "Portico Quartet",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 186,
+        "artistName": "Beach House",
+        "albumName": "Bloom",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 187,
+        "artistName": "Emily Scott Robinson",
+        "albumName": "Traveling Mercies",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 188,
+        "artistName": "The Millennium",
+        "albumName": "Begin",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 189,
+        "artistName": "Aphex Twin",
+        "albumName": "Selected Ambient Works 85",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 190,
+        "artistName": "Aphex Twin",
+        "albumName": "Selected Soundcloud Works",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 191,
+        "artistName": "Issues",
+        "albumName": "Black Diamonds",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 192,
+        "artistName": "Issues",
+        "albumName": "Issues",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 193,
+        "artistName": "Kraftwerk",
+        "albumName": "The Man",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 194,
+        "artistName": "The Drums",
+        "albumName": "Encylopedia",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 195,
+        "artistName": "The Drums",
+        "albumName": "Portomento",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 196,
+        "artistName": "twenty one pilots",
+        "albumName": "Blurryface",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 197,
+        "artistName": "Twenty One Pilots",
+        "albumName": "Trench",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 198,
+        "artistName": "Herbie Hancock",
+        "albumName": "Head Hunters",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 199,
+        "artistName": "Rahsaan Roland Kirk",
+        "albumName": "Simmer, Reduce, Garnish, & Serve",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 200,
+        "artistName": "Klaus Schulze",
+        "albumName": "Deus Arrakis",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 201,
+        "artistName": "Richard Dawson & Circle",
+        "albumName": "Henki",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 202,
+        "artistName": "Richard Dawson",
+        "albumName": "The Ruby Cord",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 203,
+        "artistName": "Linkin Park",
+        "albumName": "Reanimation",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 204,
+        "artistName": "The Cure",
+        "albumName": "Three Imaginary Boys",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 205,
+        "artistName": "Bon Iver",
+        "albumName": "For Emma, Forever Ago",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 206,
+        "artistName": "Spiritbox",
+        "albumName": "Eternal Blue",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 207,
+        "artistName": "Spellling",
+        "albumName": "The Turning Wheel",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 208,
+        "artistName": "Four Tet",
+        "albumName": "New Energy",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 209,
+        "artistName": "The Strokes",
+        "albumName": "Angles",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 210,
+        "artistName": "The Strokes",
+        "albumName": "Room On Fire",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 211,
+        "artistName": "The Strokes",
+        "albumName": "The New Abnormal",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 212,
+        "artistName": "Marika Hackman",
+        "albumName": "Deaf Heat EP",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 213,
+        "artistName": "Logic",
+        "albumName": "Young Sinatra",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 214,
+        "artistName": "Logic",
+        "albumName": "Young Sinatra",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 215,
+        "artistName": "Chick Corea",
+        "albumName": "Light As A Feather",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 216,
+        "artistName": "Magdalena Bay",
+        "albumName": "Mercurial World",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 217,
+        "artistName": "Ichiko Aoba",
+        "albumName": "Utabiko (\u3046\u305f\u3073\u3053)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 218,
+        "artistName": "The Strokes",
+        "albumName": "First Impressions Of Earth",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 219,
+        "artistName": "Agnes Obel",
+        "albumName": "Citizen Of Glass",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 220,
+        "artistName": "Danny Brown",
+        "albumName": "Atrocity Exhibition",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 221,
+        "artistName": "The Dave Brubeck Quartet",
+        "albumName": "Time Out",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 222,
+        "artistName": "Janelle Monae",
+        "albumName": "The ArchAndroid",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 223,
+        "artistName": "Green Day",
+        "albumName": "American Idiot",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 224,
+        "artistName": "Harold Budd",
+        "albumName": "Agua",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 225,
+        "artistName": "Namy& friends",
+        "albumName": "Namy colorful",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 226,
+        "artistName": "Orbital",
+        "albumName": "Octane Original Soundtrack",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 227,
+        "artistName": "M.I.A",
+        "albumName": "Matangi",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 228,
+        "artistName": "Jon Brion",
+        "albumName": "Eternal Sunshine Of The Spotless Mind",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 229,
+        "artistName": "Jessie Ware",
+        "albumName": "What's Your Pleasure",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 230,
+        "artistName": "Jon Hopkins",
+        "albumName": "Immunity",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 231,
+        "artistName": "Lealani",
+        "albumName": "Fantastic Planet",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 232,
+        "artistName": "Nick Drake",
+        "albumName": "Five Leaves Left",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 233,
+        "artistName": "Ichiko Aoba",
+        "albumName": "\u30de\u30db\u30ed\u30dc\u30b7\u30e4",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 234,
+        "artistName": "Radiohead",
+        "albumName": "Amnesiac",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 235,
+        "artistName": "Radiohead",
+        "albumName": "Hail To The Thief",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 236,
+        "artistName": "ELECTROCUTICA",
+        "albumName": "Piece of Cipher+",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 237,
+        "artistName": "Nitin Sawhney",
+        "albumName": "Beyond Skin",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 238,
+        "artistName": "Megadeth",
+        "albumName": "Rust in Peace",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 239,
+        "artistName": "Meridian Brothers",
+        "albumName": "Meridian Brothers & El Grupo Renacimiento",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 240,
+        "artistName": "Phoenix",
+        "albumName": "Ti Amo",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 241,
+        "artistName": "Thelonious Monk",
+        "albumName": "Underground",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 242,
+        "artistName": "Vangelis",
+        "albumName": "L'Apocalypse des Animaux",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 243,
+        "artistName": "Dead Can Dance",
+        "albumName": "Dionysus",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 244,
+        "artistName": "Jamie Cullum",
+        "albumName": "Twentysomething",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 245,
+        "artistName": "Museo Rosenbach",
+        "albumName": "Zarathustra",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 246,
+        "artistName": "Nirvana",
+        "albumName": "Nevermind",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 247,
+        "artistName": "Phoenix",
+        "albumName": "Alphabetical",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 248,
+        "artistName": "Psychedelic Porn Crumpets",
+        "albumName": "High Visceral, Pt.1",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 249,
+        "artistName": "Nina Simone",
+        "albumName": "Wild Is the Wind",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 250,
+        "artistName": "Rhapsody",
+        "albumName": "Symphony of Enchanted Lands",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 251,
+        "artistName": "Ratatat",
+        "albumName": "LP4",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 252,
+        "artistName": "David Parsons",
+        "albumName": "Tibetan Plateau + Sounds Of The Mothership",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 253,
+        "artistName": "Plaid",
+        "albumName": "Not For Threes",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 254,
+        "artistName": "Battles",
+        "albumName": "Mirrored",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 255,
+        "artistName": "Rina Sawayama",
+        "albumName": "Sawayama",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 256,
+        "artistName": "Kyary Pamyu Pamyu",
+        "albumName": "\u306a\u3093\u3060\u3053\u308c\u304f\u3057\u3087\u3093",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 257,
+        "artistName": "The Strokes",
+        "albumName": "Is This It",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 258,
+        "artistName": "Ulrich Schnauss",
+        "albumName": "A Strangely Isolated Place",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 259,
+        "artistName": "XTC",
+        "albumName": "Black Sea",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 260,
+        "artistName": "XTC",
+        "albumName": "Go 2",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 261,
+        "artistName": "Yellow Magic Orchestra",
+        "albumName": "YMO",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 262,
+        "artistName": "808 State",
+        "albumName": "ExEl",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 263,
+        "artistName": "808 State",
+        "albumName": "Ninety",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 264,
+        "artistName": "Akira Yamaoka",
+        "albumName": "Silent Hill 2",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 265,
+        "artistName": "Jon Hopkins",
+        "albumName": "Diamond Mine",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 266,
+        "artistName": "Deaths Dynamic Shroud",
+        "albumName": "Faith In Persona",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 267,
+        "artistName": "Frank Ocean",
+        "albumName": "Endless (Redux)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 268,
+        "artistName": "Grant Kirkhope",
+        "albumName": "Banjo",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 269,
+        "artistName": "Igorrr",
+        "albumName": "Spirituality And Distortion",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 270,
+        "artistName": "Joe Hisaishi",
+        "albumName": "Castle in the Sky (\u5929\u7a7a\u306e\u57ce\u30e9\u30d4\u30e5\u30bf)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 271,
+        "artistName": "JPEGMAFIA",
+        "albumName": "Veteran",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 272,
+        "artistName": "Kaytranada",
+        "albumName": "99.9%",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 273,
+        "artistName": "Kaytranada",
+        "albumName": "Kaytra Todo",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 274,
+        "artistName": "Silverstein",
+        "albumName": "Arrivals And Departures",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 275,
+        "artistName": "Sonia Rosa & Yuji Ohno",
+        "albumName": "Spiced with Brazil",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 276,
+        "artistName": "All Time Low",
+        "albumName": "Don't Panic",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 277,
+        "artistName": "All Time Low",
+        "albumName": "Nothing Personal",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 278,
+        "artistName": "Diamond D",
+        "albumName": "The Diam Piece",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 279,
+        "artistName": "Antonio Carlos Jobim",
+        "albumName": "Wave",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 280,
+        "artistName": "Arctic Monkeys",
+        "albumName": "Favourite Worst Nightmare",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 281,
+        "artistName": "BadBadNotGood",
+        "albumName": "Sour Soul",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 282,
+        "artistName": "Brian Eno",
+        "albumName": "Small Craft On A Milk Sea",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 283,
+        "artistName": "Broadcast",
+        "albumName": "Work and Non Work",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 284,
+        "artistName": "BROCKHAMPTON",
+        "albumName": "SATURATION II",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 285,
+        "artistName": "Burial",
+        "albumName": "Untrue",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 286,
+        "artistName": "The Caretaker",
+        "albumName": "An Empty Bliss Beyond this World",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 287,
+        "artistName": "Ceephax Acid Crew",
+        "albumName": "Box Steady",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 288,
+        "artistName": "Charli XCX",
+        "albumName": "Vroom Vroom EP",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 289,
+        "artistName": "Daniel Powter",
+        "albumName": "Daniel Powter",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 290,
+        "artistName": "Danny Elfman",
+        "albumName": "The Nightmare Before Christmas",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 291,
+        "artistName": "Denzel Curry",
+        "albumName": "Melt My Eyez See Your Future",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 292,
+        "artistName": "Death Grips",
+        "albumName": "The Money Store",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 293,
+        "artistName": "Boards of Canada",
+        "albumName": "Tomorrow's Harvest",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 294,
+        "artistName": "Denzel Curry",
+        "albumName": "TA1300",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 295,
+        "artistName": "Denzel Curry",
+        "albumName": "UNLOCKED",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 296,
+        "artistName": "Brand New",
+        "albumName": "The Devil And God Are Raging Inside Of Me",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 297,
+        "artistName": "Digable Planets",
+        "albumName": "Blowout Comb",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 298,
+        "artistName": "Crywolf",
+        "albumName": "Ghosts EP",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 299,
+        "artistName": "DOMi & JD BECK",
+        "albumName": "NOT TIGHT",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 300,
+        "artistName": "Elliott Smith",
+        "albumName": "XO",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 301,
+        "artistName": "Enter Shikari",
+        "albumName": "Nothing Is True & Everything Is Possible",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 302,
+        "artistName": "XTC",
+        "albumName": "English Settlement",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 303,
+        "artistName": "XTC",
+        "albumName": "Drums And Wires",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 304,
+        "artistName": "Enter Shikari",
+        "albumName": "The Zone",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 305,
+        "artistName": "Fleece",
+        "albumName": "Voyager",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 306,
+        "artistName": "Fleet Foxes",
+        "albumName": "Crack",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 307,
+        "artistName": "Fleet Foxes",
+        "albumName": "Sun Giant",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 308,
+        "artistName": "Floating Points, Pharoah Sanders & The London Symphony Orchestra",
+        "albumName": "Promises",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 309,
+        "artistName": "The Future Sound of London",
+        "albumName": "Lifeforms",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 310,
+        "artistName": "G Jones",
+        "albumName": "Acid Disk 2",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 311,
+        "artistName": "G Jones",
+        "albumName": "Illusory Tracks",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 312,
+        "artistName": "\u82b8\u80fd\u5c71\u57ce\u7d44 (Geinoh Yamashirogumi)",
+        "albumName": "Ecophony Rinne",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 313,
+        "artistName": "Gorillaz",
+        "albumName": "Demon Days",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 314,
+        "artistName": "Gorillaz",
+        "albumName": "Gorillaz",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 315,
+        "artistName": "Grizzly Bear",
+        "albumName": "Yellow House",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 316,
+        "artistName": "GZA",
+        "albumName": "Liquid Swords",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 317,
+        "artistName": "Halestorm",
+        "albumName": "The Strange Case Of",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 318,
+        "artistName": "Harold Budd",
+        "albumName": "Luxa",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 319,
+        "artistName": "Heartist",
+        "albumName": "Feeding Fiction",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 320,
+        "artistName": "Heaven 17",
+        "albumName": "Penthouse And Pavement",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 321,
+        "artistName": "Hiroki Tamaki",
+        "albumName": "Time Paradox",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 322,
+        "artistName": "Hoodie Allen",
+        "albumName": "Happy Camper",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 323,
+        "artistName": "Hybrid",
+        "albumName": "Black Halo",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 324,
+        "artistName": "I DONT KNOW HOW BUT THEY FOUND ME",
+        "albumName": "1981 Extended Play",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 325,
+        "artistName": "Jean",
+        "albumName": "Jacques Perrey",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 326,
+        "artistName": "Jean",
+        "albumName": "Jacques Perrey",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 327,
+        "artistName": "Jeff Wayne",
+        "albumName": "War Of The Worlds",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 328,
+        "artistName": "Joanna Newsom",
+        "albumName": "Divers",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 329,
+        "artistName": "Jockstrap",
+        "albumName": "I Love You Jennifer B",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 330,
+        "artistName": "Jockstrap",
+        "albumName": "Wicked City",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 331,
+        "artistName": "Johnny Manchild and the Poor Bastards",
+        "albumName": "We Did Not Ask For This Room",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 332,
+        "artistName": "Dua Lipa",
+        "albumName": "Future Nostalgia",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 333,
+        "artistName": "Jon Hopkins",
+        "albumName": "Monsters",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 334,
+        "artistName": "Jon Kennedy",
+        "albumName": "Corporeal",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 335,
+        "artistName": "Jon Kennedy",
+        "albumName": "HA!",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 336,
+        "artistName": "Julia Holter",
+        "albumName": "Aviary",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 337,
+        "artistName": "Julian Casablancas",
+        "albumName": "Phrazes For The Young",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 338,
+        "artistName": "Julian Nott",
+        "albumName": "Wallace & Gromit",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 339,
+        "artistName": "Jun Fukamachi",
+        "albumName": "Jun Fukamachi At Steinway",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 340,
+        "artistName": "Jun Fukamachi",
+        "albumName": "The Sea of Dirac",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 341,
+        "artistName": "Kalandra",
+        "albumName": "The Line",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 342,
+        "artistName": "Kashiwa Daisuke (\u67cf\u5927\u8f14)",
+        "albumName": "program music II",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 343,
+        "artistName": "Kate Bush",
+        "albumName": "The Kick Inside",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 344,
+        "artistName": "Kendrick Lamar",
+        "albumName": "DAMN",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 345,
+        "artistName": "Kendrick Lamar",
+        "albumName": "Mr. Morale & The Big Steppers",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 346,
+        "artistName": "Ken",
+        "albumName": "Ichiro Isoda",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 347,
+        "artistName": "Kero Kero Bonito",
+        "albumName": "Bonito Generation [2016]",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 348,
+        "artistName": "Kero Kero Bonito",
+        "albumName": "Intro Bonito",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 349,
+        "artistName": "Klaatu",
+        "albumName": "Hope",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 350,
+        "artistName": "The Knife",
+        "albumName": "Shaking the Habitual",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 351,
+        "artistName": "Koei Tecmo",
+        "albumName": "Dynasty Warriors 4 OST",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 352,
+        "artistName": "Koreless",
+        "albumName": "Agor",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 353,
+        "artistName": "Lily Allen",
+        "albumName": "Sheezus",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 354,
+        "artistName": "Linkin Park",
+        "albumName": "Living Things",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 355,
+        "artistName": "Linkin Park",
+        "albumName": "Minutes To Midnight",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 356,
+        "artistName": "little simz",
+        "albumName": "grey area",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 357,
+        "artistName": "Logic",
+        "albumName": "The Incredible True Story",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 358,
+        "artistName": "Logic",
+        "albumName": "No Pressure",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 359,
+        "artistName": "Logic",
+        "albumName": "Young, Broke & Infamous",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 360,
+        "artistName": "Lone",
+        "albumName": "Natural Aerials",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 361,
+        "artistName": "Max Richter",
+        "albumName": "Sleep",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 362,
+        "artistName": "MGMT",
+        "albumName": "Little Dark Age",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 363,
+        "artistName": "Michael Jackson",
+        "albumName": "Bad",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 364,
+        "artistName": "Michael Nyman",
+        "albumName": "Decay Music",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 365,
+        "artistName": "arbol.",
+        "albumName": "Mild Sorrow Integrated",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 366,
+        "artistName": "Miracle Music",
+        "albumName": "Hawaii Part II",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 367,
+        "artistName": "Kiyoshi Yamaya & Kifu Mitsuhashi",
+        "albumName": "Komuso World In Shakuhachi",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 368,
+        "artistName": "Mona San",
+        "albumName": "Brain Child",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 369,
+        "artistName": "Monasteries",
+        "albumName": "The Empty Black",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 370,
+        "artistName": "Mos Def",
+        "albumName": "Black on Both Sides",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 371,
+        "artistName": "Nas",
+        "albumName": "Kings Disease III",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 372,
+        "artistName": "Nintendo",
+        "albumName": "Nintendo Land OST",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 373,
+        "artistName": "Oasis",
+        "albumName": "(What's The Story) Morning Glory_",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 374,
+        "artistName": "Opposite Day",
+        "albumName": "Fictional Biology",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 375,
+        "artistName": "Palisades",
+        "albumName": "Outcasts",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 376,
+        "artistName": "Paramore",
+        "albumName": "After Laughter",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 377,
+        "artistName": "Paramore",
+        "albumName": "Paramore",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 378,
+        "artistName": "Pedro Iturralde",
+        "albumName": "Jazz Flamenco Vols 1 Y 2 (Remasterizado 2015)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 379,
+        "artistName": "Pendulum",
+        "albumName": "Elemental",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 380,
+        "artistName": "Pendulum",
+        "albumName": "Immersion",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 381,
+        "artistName": "Pharcyde",
+        "albumName": "Bizarre Ride II the Pharcyde",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 382,
+        "artistName": "Phoenix",
+        "albumName": "Bankrupt!",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 383,
+        "artistName": "Phoenix",
+        "albumName": "United",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 384,
+        "artistName": "The Police",
+        "albumName": "Outlandos D'Amour",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 385,
+        "artistName": "The Police",
+        "albumName": "Zenyatta Mondatta",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 386,
+        "artistName": "Porter Robinson",
+        "albumName": "Nurture",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 387,
+        "artistName": "The Prodigy",
+        "albumName": "The Fat Of The Land",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 388,
+        "artistName": "The Prodigy",
+        "albumName": "Invaders Must Die",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 389,
+        "artistName": "Public Enemy",
+        "albumName": "It Takes a Nation of Millions to Hold Us Back",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 390,
+        "artistName": "Quincy Jones",
+        "albumName": "The Dude",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 391,
+        "artistName": "Radiohead",
+        "albumName": "Kid A",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 392,
+        "artistName": "Radiohead",
+        "albumName": "OK Computer OKNOTOK 1997 2017",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 393,
+        "artistName": "Ratatat",
+        "albumName": "LP3",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 394,
+        "artistName": "The Red Jumpsuit Apparatus",
+        "albumName": "Don't You Fake It",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 395,
+        "artistName": "Revocation",
+        "albumName": "Chaos of Forms",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 396,
+        "artistName": "Richard Dawson",
+        "albumName": "2020",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 397,
+        "artistName": "Saosin",
+        "albumName": "Saosin",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 398,
+        "artistName": "ScHoolboy Q",
+        "albumName": "Blank Face LP",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 399,
+        "artistName": "Silk Sonic",
+        "albumName": "An Evening With Silk Sonic",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 400,
+        "artistName": "Silverstein",
+        "albumName": "I Am Alive In Everything I Touch",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 401,
+        "artistName": "Silverstein",
+        "albumName": "When Broken Is Easily Fixed",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 402,
+        "artistName": "Silversun Pickups",
+        "albumName": "Better Nature",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 403,
+        "artistName": "Silversun Pickups",
+        "albumName": "Carnavas",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 404,
+        "artistName": "Skepta",
+        "albumName": "Konnichiwa",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 405,
+        "artistName": "Skream",
+        "albumName": "Skream!",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 406,
+        "artistName": "Squarepusher",
+        "albumName": "Be Up A Hello",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 407,
+        "artistName": "The Stranglers",
+        "albumName": "Black and White",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 408,
+        "artistName": "The Comet is Coming",
+        "albumName": "Hyper",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 409,
+        "artistName": "Cults",
+        "albumName": "Cults",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 410,
+        "artistName": "Cults",
+        "albumName": "Static",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 411,
+        "artistName": "The Tallest Man On Earth",
+        "albumName": "The Wild Hunt",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 412,
+        "artistName": "Thom Yorke",
+        "albumName": "Eraser",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 413,
+        "artistName": "Deaths Dynamic Shroud",
+        "albumName": "Reality 2 Archive of Fading Mist (Part II)",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 414,
+        "artistName": "Tom Misch",
+        "albumName": "Geography",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 415,
+        "artistName": "Tricky",
+        "albumName": "Maxinquaye",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 416,
+        "artistName": "Turnstile",
+        "albumName": "Glow On",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 417,
+        "artistName": "Two Door Cinema Club",
+        "albumName": "Gameshow",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 418,
+        "artistName": "Tyler, The Creator",
+        "albumName": "IGOR",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 419,
+        "artistName": "Ultraworld",
+        "albumName": "DRIFT Series 1",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 420,
+        "artistName": "The Used",
+        "albumName": "Imaginary Enemy",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 421,
+        "artistName": "Vampire Weekend",
+        "albumName": "Contra",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 422,
+        "artistName": "vangoffey",
+        "albumName": "Take Your Jacket Off & Get Into It",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 423,
+        "artistName": "VA",
+        "albumName": "Artificial Intelligence",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 424,
+        "artistName": "VOWWS",
+        "albumName": "Under the World",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 425,
+        "artistName": "WaqWaq Kingdom",
+        "albumName": "Essaka Hoisa",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 426,
+        "artistName": "Ween",
+        "albumName": "Shinola",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 427,
+        "artistName": "William Basinski",
+        "albumName": "Melancholia",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 428,
+        "artistName": "XTC",
+        "albumName": "The Big Express",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 429,
+        "artistName": "XTC",
+        "albumName": "Wasp Star",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 430,
+        "artistName": "XTC",
+        "albumName": "White Music",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 431,
+        "artistName": "Yellow Magic Orchestra",
+        "albumName": "Yellow Magic Orchestra USA",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 432,
+        "artistName": "Yes",
+        "albumName": "Fragile",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 433,
+        "artistName": "Yes",
+        "albumName": "The Yes Album",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 434,
+        "artistName": "The Field",
+        "albumName": "Looping State Of Mind",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 435,
+        "artistName": "Hiromi",
+        "albumName": "Silver Lining Suite",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    },
+    {
+        "position": 436,
+        "artistName": "BROCKHAMPTON",
+        "albumName": "SATURATION",
+        "genres": [],
+        "yearOfRelease": "",
+        "duration": "",
+        "albumCover": "",
+        "rymLink": ""
+    }
+]
