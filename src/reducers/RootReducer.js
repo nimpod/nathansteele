@@ -1379,7 +1379,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2b1i",
             "title": "Akira",
-            "myRating": "8.5",
+            "myRating": "8.6",
             "myTags": ["End of the world", "Profound", "Conspiracy", "War", "Colourful", "Great soundtrack", "Anime", "Confusing"],
             "myReview": ""
         },
@@ -2135,7 +2135,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/9JNE",
             "title": "The Frame",
-            "myRating": "8.5",
+            "myRating": "8.6",
             "myTags": ["Contemplative sci-fi", "Mysterious", "Profound", "Questioning reality", "Simulation", "Creative use of framing"],
             "myReview": ""
         },
@@ -2829,6 +2829,14 @@ const initState = {
             "myTags": ["Claustrophobic", "Intense", "Home invasion"],
             "myReview": "",
             "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/lvxQ",
+            "title": "Last Sunrise",
+            "myRating": "8.7",
+            "myTags": ["Astronomy", "Night skies", "End of the world", "Contemplative sci-fi", "Not giving up despite being in a shitty situation"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 8, 8, 8, 7, 8, 9, 9, 9]
         }
     ],
 
