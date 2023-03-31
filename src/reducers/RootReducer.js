@@ -3020,6 +3020,22 @@ const initState = {
             "myTags": ["Astronomy", "Night skies", "End of the world", "Contemplative sci-fi", "Not giving up despite being in a shitty situation"],
             "myReview": "",
             "gradualInterest": [7, 7, 8, 8, 8, 7, 8, 9, 9, 9]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/NGk",
+            "title": "The Tunnel",
+            "myRating": "7.8",
+            "myTags": ["Found footage", "Stuck underground", "Claustrophobic", "Frightening", "Creepy"],
+            "myReview": "",
+            "gradualInterest": [6, 6, 7, 7, 8, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/qyhw",
+            "title": "Parasite in Love",
+            "myRating": "8.2",
+            "myTags": ["Another life-form trying to take control of a human mind", "Soulmate", "Social anxiety", "Scopophobia", "Study of unorthodox people who are outcasts from societal norms"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 8, 8, 8, 8, 7, 8, 8]
         }
     ],
 
