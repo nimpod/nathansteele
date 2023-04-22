@@ -27,23 +27,6 @@ class FilmReview extends Component {
         }
     }
 
-    /**
-     * Function to collate a list of all genres (no duplicates!)
-     */
-    getListOfGenres(films) {
-        const genresList = new Set();
-
-        // store each tag category once...
-        films.map((f => {
-            // console.log('DEBUGGING: ', p.tags);
-            f.genres.map((f => {
-                genresList.add(f);
-            }));
-        }));
-
-        return Array.from(genresList);
-    }
-
     
     /**
      * Function to collate a list of all years (no duplicates!)
@@ -128,10 +111,6 @@ class FilmReview extends Component {
     }
 
     render() {
-        // get list of genres...
-        let listOfGenres = this.getListOfGenres(filmReviewsSorted);
-        console.log(this.props);
-
         return(
             <div className='page-wrapper favourite-films-page'>
                 <div className='section-inner'>
@@ -147,13 +126,7 @@ class FilmReview extends Component {
                             <div className='filter-container'>
                                 <span>Genres</span>
                                 <div className='list-of-genres'>
-                                {
-                                    listOfGenres.map((g => {
-                                        return <div className="genre">
-                                            <span className={g}>{g}</span>
-                                        </div>
-                                    }))
-                                }
+                                
                                 </div>
                             </div>
                             <div className='filter-container'>

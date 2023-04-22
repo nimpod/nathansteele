@@ -2960,8 +2960,7 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Atmospheric", "Ghosts", "Creepy", "Melancholic", "British humour", "Synthwave", "Great soundtrack"],
             "myReview": "",
-            "gradualInterest": [8, 8, 9, 8, 8, 8, 8, 7, 7, 7, 7, 8],
-            "customPosterUrl": require('../img/films/inFabric/custom_poster.jpg')
+            "gradualInterest": [8, 8, 9, 8, 8, 8, 8, 7, 7, 7, 7, 8]
         },
         {
             "letterboxdUrl": "https://boxd.it/6zhs",
@@ -3036,7 +3035,79 @@ const initState = {
             "myTags": ["Another life-form trying to take control of a human mind", "Soulmate", "Social anxiety", "Scopophobia", "Study of unorthodox people who are outcasts from societal norms"],
             "myReview": "",
             "gradualInterest": [7, 7, 7, 8, 8, 8, 8, 7, 8, 8]
-        }
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/gkFu",
+            "title": "Guns Akimbo",
+            "myRating": "8.1",
+            "myTags": ["Intense"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/lpUk",
+            "title": "Tokyo Vampire Hotel",
+            "myRating": "9.0",
+            "myTags": [""],
+            "myReview": "",
+            "gradualInterest": [8, 9, 9, 9, 8, 8, 8, 9, 9, 9, 9, 8, 9, 9]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/14z6",
+            "title": "Ritual",
+            "myRating": "8.1",
+            "myTags": ["Melancholic", "Loneliness"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/3Ipk",
+            "title": "Wolf Children",
+            "myRating": "7.9",
+            "myTags": ["Nature"],
+            "myReview": "",
+            "gradualInterest": [6, 6, 7, 7, 8, 8, 8, 9, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/h5Uw",
+            "title": "Incident in a Ghostland",
+            "myRating": "8.4",
+            "myTags": ["Disturbing"],
+            "myReview": "",
+            "gradualInterest": [7, 8, 8, 8, 8, 8, 9, 9, 9]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1oDC",
+            "title": "Summer Wars",
+            "myRating": "7.8",
+            "myTags": ["Nature"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 8, 8, 7, 7, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/2b4m",
+            "title": "Spirited Away",
+            "myRating": "8.2",
+            "myTags": ["Nature"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 7, 8, 8, 8, 8, 8, 9, 9, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/2V5K",
+            "title": "Wrong",
+            "myRating": "8.0",
+            "myTags": ["Nature"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 8, 7, 8, 7, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/vOri",
+            "title": "Meet Cute",
+            "myRating": "8.2",
+            "myTags": ["Time travel"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 9, 8, 8, 8, 8, 8]
+        } 
     ],
 
     monthlyData: [
