@@ -2562,13 +2562,13 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
 /* top films grid element */
 .film-grid-element {
   position: relative;
+  display: block;
+  width: 600px;
   color: var(--text);
   font-size: 0.6rem;
   margin: 7px;
-  display: inline-block;
   cursor: pointer;
   border-radius: 10px;
-  opacity: 0.8 !important;
 }
 .film-grid-element:hover {
   opacity: 0.5 !important;
@@ -2581,20 +2581,20 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   border: 3px solid var(--film-grid-element-border-color-active);
   opacity: 1.0 !important;
 }
-.film-grid-element.active .film-position-box {
-  border: 1px solid var(--film-grid-element-border-color-active);
-  color: var(--film-grid-element-border-color-active);
-}
 .film-grid-element img {
   border-radius: 8px;
 }
 
 /* slightly larger images */
 .App > .top-films-grid-container .film-grid-element img {
-  width: calc(var(--film-grid-element-width) * 1.4);
-  height: calc(var(--film-grid-element-height) * 1.4);
+  width: calc(var(--film-grid-element-width) * 2.0);
+  height: calc(var(--film-grid-element-height) * 2.0);
 }
 
+.film-grid-element.active .film-position-box {
+  border: 1px solid var(--film-grid-element-border-color-active);
+  color: var(--film-grid-element-border-color-active);
+}
 .film-grid-element > .film-position-box {
   color: rgb(195, 189, 189);
   position: absolute;
@@ -2613,6 +2613,45 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
   font-weight: 1000;
 }
 /* #endregion */
+
+
+
+/*
+#top-films-list
+  .films-toplist-item
+
+*/
+
+:root {
+  --poster-border-radius: 8px
+}
+
+.films-toplist-item {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  width: 600px;
+  border: 2px solid rgba(32, 32, 35, 0.638) !important;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  border-radius: var(--poster-border-radius);
+  opacity: 0.9 !important;
+}
+.films-toplist-item img {
+  width: calc(var(--film-grid-element-width) * 2.0);
+  height: calc(var(--film-grid-element-height) * 2.0);
+  border-radius: var(--poster-border-radius);
+}
+
+.films-toplist-item:hover {
+  background-color: #19191c;
+}
+.films-toplist-item:active {
+  border: 2px solid black;
+}
+
+.films-toplist-item-details {
+  padding-left: 15px;
+}
 
 
 /* #region ----------------< Old stuff >-------------- */
@@ -2679,7 +2718,6 @@ div.toggle-section-container:nth-child(6) > .toggle-section-btn::before { conten
 .films-log table tr {
   font-size: 0.85rem;
 }
-/* #endregion */
 
 /* #endregion */
 

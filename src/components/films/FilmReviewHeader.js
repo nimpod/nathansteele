@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component, useState, useEffect} from 'react';
+import { connect }  from 'react-redux';
 import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowIcon } from "../../icons/arrowRightTriangle.svg";
 import { ReactComponent as ThreeDotsIcon } from "../../icons/threeDots.svg";
@@ -74,4 +75,4 @@ class FilmReviewHeader extends Component {
     }
 }
 
-export default FilmReviewHeader;
+export default FilmReviewHeader

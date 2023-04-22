@@ -35,6 +35,10 @@ import FilmReview from './components/films/FilmReview';
 // Music page
 import Music from './components/music/Music';
 
+// Movies page
+import Movies from './components/movies/Movies';
+import MoviesReview from './components/movies/MoviesReview';
+
 
 export default class App extends Component {
   render() {
@@ -55,8 +59,13 @@ export default class App extends Component {
                       <Route path='/blog' component={Blog} exact />
                       <Route path='/blog/:post_id' component={BlogPost} exact />
 
+                      {/*}
                       <Route path='/films' component={Films} exact />
                       <Route path='/films/:film_id' component={FilmReview} exact />
+                      */}
+
+                      <Route path='/movies' component={Movies} exact />
+                      <Route path='/movies/:movie_id' component={MoviesReview} exact />
 
                       <Route path='/music' component={Music} exact />
 

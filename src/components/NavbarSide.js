@@ -123,7 +123,7 @@ class NavbarSide extends Component {
                         <span>About</span>
                         <span className='mobile-view-title'>About</span>
                     </NavLink>
-                    <NavLink to="/films" title='Films' className="navlink" onClick={this.clickedNavbarItem}>
+                    <NavLink to="/movies" title='Films' className="navlink" onClick={this.clickedNavbarItem}>
                         <FilmsIcon />
                         <span>Films</span>
                         <span className='mobile-view-title'>Films</span>

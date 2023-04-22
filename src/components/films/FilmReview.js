@@ -1,15 +1,9 @@
 import React, {Component, useState, useEffect} from 'react';
 import { connect }  from 'react-redux';
-import { NavLink, withRouter } from 'react-router-dom';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as ShowGridIcon } from "../../icons/showGrid.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
-import FilmsSubmenu from './FilmsSubmenu';
-import TopFilmsGridElement from './TopFilmsGridElement';
-import FilmsJsonList from './reviews_web_data.json';
-import Films from './Films';
 import FilmReviewHeader from './FilmReviewHeader';
-import { filmReviewsSorted } from './Films.js';
 import { hideItemWhenUserClicksOutsideOfItem } from '../../js/helpers'
 
 
@@ -22,7 +16,6 @@ class FilmReview extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            filmReviews: [],
             displayedReviewId: ""
         }
     }
@@ -99,7 +92,7 @@ class FilmReview extends Component {
      */
     componentDidMount() {        
         // scroll to position of currently displayed film...
-        this.scrollToDisplayedFilm();
+        // this.scrollToDisplayedFilm();
     }
 
     /**
@@ -111,6 +104,8 @@ class FilmReview extends Component {
     }
 
     render() {
+        console.log(this.props);
+        
         return(
             <div className='page-wrapper favourite-films-page'>
                 <div className='section-inner'>
@@ -120,6 +115,8 @@ class FilmReview extends Component {
                     <div className='review-displayed-container'>
                         <FilmReviewHeader film={this.props.film} />
                     </div>
+                    
+                    {/*}
                     <div className='top-films-grid-container active'>
                         <div className='top-films-grid-controls'>
                             <span className='top-films-grid-controls-title'>My favourite films</span>
@@ -153,6 +150,7 @@ class FilmReview extends Component {
                             })}
                         </div>
                     </div>
+                    */}
                 </div>
             </div>
         )
@@ -167,7 +165,6 @@ const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.film_id;     // the id of the post being displayed in the UI
     return {
         film: state.filmReviews.find(film => film.letterboxdFilmId === id),  // get the actual post data from the redux data store
-        filmReviews: state.filmReviews  // get films
     }
 }
 
