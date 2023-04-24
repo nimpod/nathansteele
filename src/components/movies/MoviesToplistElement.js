@@ -12,33 +12,48 @@ var filmGridElementHeight = getValueOfCSSVariable('--film-grid-element-height');
 class MoviesToplistElement extends Component {
     render() {
         let copyOfThis = this;
-        let filmId = this.props.film.title + '-' + this.props.film.letterboxdFilmId
+        let filmId = this.props.film.reviewId
+        // let filmId = this.props.film.letterboxdFilmId
+        console.log(this.props.film)
 
         return(
-            <Link to={'/movies/' + filmId} class='films-toplist-item' id={`toplist-element-${filmId}`}>
-                <picture className='filmPoster'>
-                    <img height={filmGridElementHeight} width={filmGridElementWidth} src={this.props.film.posterUrl} />
-                </picture>
-                <div class='films-toplist-item-details'>
-                    <div>{this.props.film.position}</div>
-                    <div>{this.props.film.myRating}</div>
-                    <div>{this.props.film.letterboxdUrl}</div>
-                    <div>{this.props.film.title}</div>
-                    <div>{this.props.film.duration}</div>
-                    <div>{this.props.film.language}</div>
-                    <div>{this.props.film.year}</div>
-                    <div>
-                        {this.props.film.directors.map(director => {
-                            return <div className='director-tag'>{director}</div>
-                        })}
+            <div className='films-toplist-item'>
+                <Link to={'/movies/' + filmId} id={`toplist-element-${filmId}`}>
+                    <picture className='filmPoster'>
+                        <img height={filmGridElementHeight} width={filmGridElementWidth} src={this.props.film.posterUrl} />
+                    </picture>
+                    <div class='films-toplist-item-details'>
+                        <div className='filmTitle' title='Title'>
+                            {this.props.film.title}
+                        </div>
+                        <div className='filmPosition' title='Position'>
+                            #{this.props.film.position} in my toplist
+                        </div>
+                        <div className='filmMyRating generic-hover' title='My rating'>
+                            <p>{this.props.film.myRating}</p>
+                        </div>
+                        <div className='filmDuration' title='Duration in minutes'>
+                            {this.props.film.duration} mins
+                        </div>
+                        <div className='filmLanguage' title='Original language'>
+                            {this.props.film.language}
+                        </div>
+                        <div className='filmYear' title='Year of release'>
+                            {this.props.film.year}
+                        </div>
+                        <div className='filmDirectors' title='Directors'>
+                            {this.props.film.directors.map(director => {
+                                return <div className='director-tag'>{director}</div>
+                            })}
+                        </div>
+                        <div className='filmGenres' title='Genres'>
+                            {this.props.film.genres.map(genre => {
+                                return <div className='genre-tag'>{genre}</div>
+                            })}
+                        </div>
                     </div>
-                    <div>
-                        {this.props.film.genres.map(g => {
-                            return <div className='genre-tag'>{g}</div>
-                        })}
-                    </div>
-                </div>
-            </Link>
+                </Link>
+            </div>
         )
     }
 }

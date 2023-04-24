@@ -1697,21 +1697,24 @@ const initState = {
             "title": "Seeking A Friend For The End Of The World",
             "myRating": "8.0",
             "myTags": ["End of the world", "Death", "Soulmate", "Uplifting", "Great character chemistry", "Stoicism", "Turning negatives into positives"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('../img/films/seekingAFriendForTheEndOfTheWorld/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/iwYi",
             "title": "Crawl",
             "myRating": "7.6",
             "myTags": ["Total escapism", "Creature-feature", "One-location", "Claustrophobic", "Hurricane setting", "Brutal", "Not giving up despite being in a shitty situation"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('../img/films/crawl/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/dCpo",
             "title": "Jungle",
             "myRating": "7.8",
             "myTags": ["Embrace mother nature", "Alone in the wilderness", "South American culture", "Jungle setting", "Not giving up despite being in a shitty situation", "Brutal", "Hallucinations"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('../img/films/jungle/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/2pQ0",
@@ -2815,7 +2818,8 @@ const initState = {
             "title": "Helter Skelter",
             "myRating": "8.0",
             "myTags": ["Challenging to watch at times", "Audio-visual spectacle", "Addiction", "Isolation", "Fake celebrity personas", "Terrifying"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('../img/films/helterSkelter/custom_poster.jpg'),
         },
         {
             "letterboxdUrl": "https://boxd.it/7t3Q",
@@ -2851,7 +2855,8 @@ const initState = {
             "title": "The Secret Life of Walter Mitty",
             "myRating": "7.6",
             "myTags": ["Uplifting", "Exploring new places", "Discovering independence", "Soulmate"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('../img/films/theSecretLifeOfWalterMitty/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/dVI",
@@ -2960,7 +2965,8 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Atmospheric", "Ghosts", "Creepy", "Melancholic", "British humour", "Synthwave", "Great soundtrack"],
             "myReview": "",
-            "gradualInterest": [8, 8, 9, 8, 8, 8, 8, 7, 7, 7, 7, 8]
+            "gradualInterest": [8, 8, 9, 8, 8, 8, 8, 7, 7, 7, 7, 8],
+            "customPosterUrl": require('../img/films/inFabric/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/6zhs",
@@ -2986,7 +2992,8 @@ const initState = {
             "myRating": "7.6",
             "myTags": ["Ireland", "Zombies", "Agoraphobia", "Disturbing", "Dark"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8]
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8],
+            "customPosterUrl": require('../img/films/citadel/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/uWPK",
@@ -2994,7 +3001,8 @@ const initState = {
             "myRating": "7.6",
             "myTags": ["Social anxiety", "Cotswolds", "British humour"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8]
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8],
+            "customPosterUrl": require('../img/films/allMyFriendsHateMe/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/1Qfo",
@@ -3002,7 +3010,8 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Surreal", "Ghosts", "Abortion"],
             "myReview": "",
-            "gradualInterest": [7, 7, 8, 8, 9, 9, 9, 8, 8, 8, 8]
+            "gradualInterest": [7, 7, 8, 8, 9, 9, 9, 8, 8, 8, 8],
+            "customPosterUrl": require('../img/films/recycle/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/1VhE",
@@ -3010,7 +3019,8 @@ const initState = {
             "myRating": "7.5",
             "myTags": ["Claustrophobic", "Intense", "Home invasion"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8]
+            "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8],
+            "customPosterUrl": require('../img/films/them/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/lvxQ",
@@ -3018,7 +3028,8 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Astronomy", "Night skies", "End of the world", "Contemplative sci-fi", "Not giving up despite being in a shitty situation"],
             "myReview": "",
-            "gradualInterest": [7, 7, 8, 8, 8, 7, 8, 9, 9, 9]
+            "gradualInterest": [7, 7, 8, 8, 8, 7, 8, 9, 9, 9],
+            "customPosterUrl": require('../img/films/lastSunrise/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/NGk",
@@ -3034,7 +3045,8 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Another life-form trying to take control of a human mind", "Soulmate", "Social anxiety", "Scopophobia", "Study of unorthodox people who are outcasts from societal norms"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 8, 8, 8, 8, 7, 8, 8]
+            "gradualInterest": [7, 7, 7, 8, 8, 8, 8, 7, 8, 8],
+            "customPosterUrl": require('../img/films/parasiteInLove/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/gkFu",
@@ -3058,7 +3070,8 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Melancholic", "Loneliness"],
             "myReview": "",
-            "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8]
+            "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8],
+            "customPosterUrl": require('../img/films/ritual/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/3Ipk",
@@ -3066,7 +3079,8 @@ const initState = {
             "myRating": "7.9",
             "myTags": ["Nature"],
             "myReview": "",
-            "gradualInterest": [6, 6, 7, 7, 8, 8, 8, 9, 8, 8, 8, 8]
+            "gradualInterest": [6, 6, 7, 7, 8, 8, 8, 9, 8, 8, 8, 8],
+            "customPosterUrl": require('../img/films/wolfChildren/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/h5Uw",
@@ -3074,7 +3088,8 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Disturbing"],
             "myReview": "",
-            "gradualInterest": [7, 8, 8, 8, 8, 8, 9, 9, 9]
+            "gradualInterest": [7, 8, 8, 8, 8, 8, 9, 9, 9],
+            "customPosterUrl": require('../img/films/incidentInAGhostland/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/1oDC",
@@ -3082,7 +3097,8 @@ const initState = {
             "myRating": "7.8",
             "myTags": ["Nature"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 8, 8, 7, 7, 8, 8, 8, 8]
+            "gradualInterest": [7, 7, 7, 7, 8, 8, 7, 7, 8, 8, 8, 8],
+            "customPosterUrl": require('../img/films/summerWars/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/2b4m",
@@ -3095,10 +3111,11 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2V5K",
             "title": "Wrong",
-            "myRating": "8.0",
+            "myRating": "7.7",
             "myTags": ["Nature"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 8, 7, 8, 7, 8]
+            "gradualInterest": [7, 7, 7, 7, 8, 7, 8, 7, 8],
+            "customPosterUrl": require('../img/films/wrong/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/vOri",

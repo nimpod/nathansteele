@@ -38,6 +38,7 @@ class Movies extends Component {
                     reducerData.imdbAvgRating = moreData['imdbAvgRating'];
                     reducerData.imdbNumVotes = moreData['imdbNumVotes'];
                     reducerData.posterUrl = moreData['posterUrl'];
+                    reducerData.reviewId = moreData['reviewId'];
                     
                     /// console.log(reducerData.customPosterUrl);
                     // use custom poster url if it exists...
@@ -63,6 +64,7 @@ class Movies extends Component {
     render() {
         this.mergeData();
         filmReviewsSorted = Array.from(this.props.filmReviews).sort((a,b) => { return a['position'] - b['position'] }).reverse();
+        console.log(filmReviewsSorted);
         // let idOfFilmDisplayed = filmReviewsSorted[filmReviewsSorted.length - 1].letterboxdFilmId;
         // let newPath = '/movies/' + idOfFilmDisplayed;
         // console.log(newPath);
@@ -70,11 +72,12 @@ class Movies extends Component {
         return (
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
-                    <div id="top-films-list">
+                    <div className='films-controls'>
+
+                    </div>
+                    <div className="films-toplist">
                         {filmReviewsSorted.map(f => {
-                            return <MovieListItem
-                                film={f}
-                            />
+                            return <MovieListItem film={f} />
                         })}
                     </div>
                 </div>

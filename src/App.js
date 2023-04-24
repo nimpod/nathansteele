@@ -59,13 +59,13 @@ export default class App extends Component {
                       <Route path='/blog' component={Blog} exact />
                       <Route path='/blog/:post_id' component={BlogPost} exact />
 
+                      <Route path='/movies' component={Movies} exact />
+                      <Route path='/movies/:movie_id' component={MoviesReview} exact />
+
                       {/*}
                       <Route path='/films' component={Films} exact />
                       <Route path='/films/:film_id' component={FilmReview} exact />
                       */}
-
-                      <Route path='/movies' component={Movies} exact />
-                      <Route path='/movies/:movie_id' component={MoviesReview} exact />
 
                       <Route path='/music' component={Music} exact />
 

@@ -156,8 +156,12 @@ if os.path.exists(path_to_extracted_zip):
             # retrieve list of directors (because letterboxd parsing is shite!)
             directors = imdb_json['Director'].split(', ')
             
+            # id of my review!
+            titlev2 = title.replace(" ", "").replace(".", "").replace("/", "").replace("(", "").replace(")", "").replace("'", "").replace("\"", "").replace(":", "").replace(";", "").replace("-", "").replace(",", "").replace("·", "")
+            review_id = f"{titlev2}-{year}-review"
+            
             # DEBUGGING....
-            print(f" > {pos}: {title} {letterboxd_url}")
+            print(f" > {pos}: {title} {letterboxd_url} {review_id}")
             #print(f' > Title = ({title})')
             #print(f' > IMDB url = ({imdb_url})')
             #print(f' > Language = ({language})')
@@ -185,6 +189,7 @@ if os.path.exists(path_to_extracted_zip):
                 'imdbNumVotes': imdb_num_votes,
                 'directors': directors,
                 'genres': genres,
+                'reviewId': review_id
             })
                 
         # clear json file first...
