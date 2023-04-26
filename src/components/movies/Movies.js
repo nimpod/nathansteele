@@ -1,7 +1,8 @@
 import React, {Component, useState, useEffect} from 'react';
 import { connect }  from 'react-redux';
-import MovieListItem from './MoviesToplistElement.js';
+import MovieToplistItem from './MoviesToplistElement.js';
 import FilmsJsonList from './reviews_web_data.json';
+import { mergeWebAndLocalData } from './merge_webdata_with_localdata.js';
 
 
 let filmReviewsSorted = []
@@ -40,13 +41,12 @@ class Movies extends Component {
                     reducerData.posterUrl = moreData['posterUrl'];
                     reducerData.reviewId = moreData['reviewId'];
                     
-                    /// console.log(reducerData.customPosterUrl);
                     // use custom poster url if it exists...
                     if (reducerData.customPosterUrl !== undefined) {
-                        /// console.log(reducerData.customPosterUrl);
                         reducerData.posterUrl = reducerData.customPosterUrl;
                     }
-                    if (reducerData.posterUrl == undefined) {    // use default posterUrl if I didnt specify one...
+                    // use default posterUrl if I didnt specify one...
+                    if (reducerData.posterUrl == undefined) {
                         reducerData.posterUrl = moreData['posterUrl'];
                     }
                     // use custom title if it exists...
@@ -62,6 +62,9 @@ class Movies extends Component {
     }
 
     render() {
+        let webdata = require('./reviews_web_data.json');
+        mergeWebAndLocalData(webdata, this.props.filmReviews);
+
         this.mergeData();
         filmReviewsSorted = Array.from(this.props.filmReviews).sort((a,b) => { return a['position'] - b['position'] }).reverse();
         console.log(filmReviewsSorted);
@@ -76,8 +79,8 @@ class Movies extends Component {
 
                     </div>
                     <div className="films-toplist">
-                        {filmReviewsSorted.map(f => {
-                            return <MovieListItem film={f} />
+                        {filmReviewsSorted.map((film, i) => {
+                            return <MovieToplistItem film={film} key={i}/>;
                         })}
                     </div>
                 </div>

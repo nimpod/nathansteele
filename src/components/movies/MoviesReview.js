@@ -20,7 +20,7 @@ class MoviesReview extends Component {
 
                         {/* Title */}
                         <div className='film-title' title='Film title'>
-                            {this.props.film.title}
+                            {/*}  {this.props.film.title} */}
                         </div>
 
                         <Link to='/movies' className="custom-btn-1 back-to-previous-page" title="Back to toplist">
@@ -92,18 +92,12 @@ class MoviesReview extends Component {
  */
 const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.movie_id;     // the id of the movie being displayed
+    console.log(id);
+    console.log(state.filmReviews);
     return {
-        film: state.filmReviews.find(film => (film.reviewId) === id)      // get the actual post data from the redux data store
+        film: state.filmReviews.find(film => film.reviewId === id)      // get the actual post data from the redux data store
     }
 }
 
-/**
- * This function is called when deleting a post]
- */
-const mapDispatchToProps = (dispatch) => {
-    return {
-        deleteMovie: (idOfPostToBeDeleted) => { dispatch({type: 'DELETE_POST', id: idOfPostToBeDeleted}) }      // dispatch an action whenever the deletePost() function is called
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(MoviesReview)
+export default connect(mapStateToProps)(MoviesReview)

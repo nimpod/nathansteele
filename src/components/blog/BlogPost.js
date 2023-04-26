@@ -71,7 +71,7 @@ class BlogPost extends Component {
      * The Render() function, content rendered to screen...
      */
     render() {
-        // console.log(this.props);
+        console.log(this.props);
         // console.log(this.props.post.tags);
         
         return (

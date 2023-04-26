@@ -1518,7 +1518,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Death", "Creative use of colour", "Unconvential aspect ratios", "Emotional", "Family", "Forgiveness", "Kindness", "Great soundtrack", "Colourful", "Finding happiness"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/waves/custom_poster.png')
+            "customPosterUrl": "https://m.media-amazon.com/images/M/MV5BN2RhOWY0MzAtN2Y3OS00OGJjLTlkNTctZGNlMzVkNGVjZTQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/29Wm",
@@ -1697,8 +1697,7 @@ const initState = {
             "title": "Seeking A Friend For The End Of The World",
             "myRating": "8.0",
             "myTags": ["End of the world", "Death", "Soulmate", "Uplifting", "Great character chemistry", "Stoicism", "Turning negatives into positives"],
-            "myReview": "",
-            "customPosterUrl": require('../img/films/seekingAFriendForTheEndOfTheWorld/custom_poster.jpg')
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/iwYi",
@@ -1713,8 +1712,7 @@ const initState = {
             "title": "Jungle",
             "myRating": "7.8",
             "myTags": ["Embrace mother nature", "Alone in the wilderness", "South American culture", "Jungle setting", "Not giving up despite being in a shitty situation", "Brutal", "Hallucinations"],
-            "myReview": "",
-            "customPosterUrl": require('../img/films/jungle/custom_poster.jpg')
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/2pQ0",
@@ -1766,7 +1764,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Lovecraftian horror", "Creature-feature", "Questioning reality", "Hallucinations", "Cults"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/inTheMouthOfMadness/custom_poster.jpg'),
+            "customPosterUrl": "https://pbs.twimg.com/media/FOVvks5UYAIF3aT.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/bdkE",
@@ -1861,7 +1859,8 @@ const initState = {
             "title": "Isle of Dogs",
             "myRating": "8.7",
             "myTags": ["Intricate animation style", "Great cinematography", "Animal welfare", "Humanity and nature coexisting", "Fun", "Friendship", "Great soundtrack"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://m.media-amazon.com/images/I/81klqQqN89L._AC_SY679_.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2bcK",
@@ -2010,7 +2009,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Disturbing", "Questioning reality", "Non-linear timeline"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/oculus/custom_poster.jpg'),
+            "customPosterUrl": "https://m.media-amazon.com/images/M/MV5BMTk4ODA4NzA0M15BMl5BanBnXkFtZTgwMjIwMTkxMTE@._V1_FMjpg_UX1000_.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/i5vI",
@@ -2545,7 +2544,7 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["Revenge-fantasy thriller", "Challenging to watch at times", "Girl power"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/revenge/custom_poster.jpg'),
+            "customPosterUrl": "https://xl.movieposterdb.com/20_12/2017/6738136/xl_6738136_d48586bd.jpg?v=2022-01-04%2014:49:57"
         },
         {
             "letterboxdUrl": "https://boxd.it/28xA",
@@ -2741,15 +2740,15 @@ const initState = {
             "title": "Back to the Future",
             "myRating": "10",
             "myTags": ["Uplifting", "Timey-wimey"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://alternativemovieposters.com/wp-content/uploads/2019/11/watts_bttf.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/18U8",
             "title": "The Truman Show",
             "myRating": "10",
             "myTags": ["Uplifting", "Conspiracy", "Questioning reality", "Religion", "Faith", "Beyond existence"],
-            "myReview": "",
-            "customPosterUrl": require('../img/films/theTrumanShow/custom_poster.PNG')
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/29aC",
@@ -2764,7 +2763,8 @@ const initState = {
             "title": "The Curious Case of Benjamin Button",
             "myRating": "10",
             "myTags": ["A slice of life", "Death", "Humanity", "Friendship", "Profound"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://posterspy.com/wp-content/uploads/2017/03/BenjaminButton_reduced-1.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/37pC",
@@ -2772,7 +2772,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Exploring new places", "Survival story", "Based on a true story", "Stranded at sea"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/lifeOfPi/custom_poster.png'),
+            "customPosterUrl": "https://alternativemovieposters.com/wp-content/uploads/2014/06/lifeofpi2bg.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2a1m",
@@ -2855,8 +2855,7 @@ const initState = {
             "title": "The Secret Life of Walter Mitty",
             "myRating": "7.6",
             "myTags": ["Uplifting", "Exploring new places", "Discovering independence", "Soulmate"],
-            "myReview": "",
-            "customPosterUrl": require('../img/films/theSecretLifeOfWalterMitty/custom_poster.jpg')
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/dVI",
@@ -2965,8 +2964,7 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Atmospheric", "Ghosts", "Creepy", "Melancholic", "British humour", "Synthwave", "Great soundtrack"],
             "myReview": "",
-            "gradualInterest": [8, 8, 9, 8, 8, 8, 8, 7, 7, 7, 7, 8],
-            "customPosterUrl": require('../img/films/inFabric/custom_poster.jpg')
+            "gradualInterest": [8, 8, 9, 8, 8, 8, 8, 7, 7, 7, 7, 8]
         },
         {
             "letterboxdUrl": "https://boxd.it/6zhs",
@@ -2984,7 +2982,7 @@ const initState = {
             "myTags": ["War", "Magic", "Studio Ghibli"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 8, 9, 9, 8, 8, 8, 8, 8, 8],
-            "customPosterUrl": require('../img/films/howlsMovingCastle/custom_poster.jpg')
+            "customPosterUrl": "https://cdn.shopify.com/s/files/1/0037/8008/3782/products/IMG_1321_1024x1024@2x.jpg?v=1677517607"
         },
         {
             "letterboxdUrl": "https://boxd.it/A3E",
@@ -2992,8 +2990,7 @@ const initState = {
             "myRating": "7.6",
             "myTags": ["Ireland", "Zombies", "Agoraphobia", "Disturbing", "Dark"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8],
-            "customPosterUrl": require('../img/films/citadel/custom_poster.jpg')
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8]
         },
         {
             "letterboxdUrl": "https://boxd.it/uWPK",
@@ -3001,8 +2998,7 @@ const initState = {
             "myRating": "7.6",
             "myTags": ["Social anxiety", "Cotswolds", "British humour"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8],
-            "customPosterUrl": require('../img/films/allMyFriendsHateMe/custom_poster.jpg')
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8]
         },
         {
             "letterboxdUrl": "https://boxd.it/1Qfo",
@@ -3010,8 +3006,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Surreal", "Ghosts", "Abortion"],
             "myReview": "",
-            "gradualInterest": [7, 7, 8, 8, 9, 9, 9, 8, 8, 8, 8],
-            "customPosterUrl": require('../img/films/recycle/custom_poster.jpg')
+            "gradualInterest": [7, 7, 8, 8, 9, 9, 9, 8, 8, 8, 8]
         },
         {
             "letterboxdUrl": "https://boxd.it/1VhE",
@@ -3045,8 +3040,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Another life-form trying to take control of a human mind", "Soulmate", "Social anxiety", "Scopophobia", "Study of unorthodox people who are outcasts from societal norms"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 8, 8, 8, 8, 7, 8, 8],
-            "customPosterUrl": require('../img/films/parasiteInLove/custom_poster.jpg')
+            "gradualInterest": [7, 7, 7, 8, 8, 8, 8, 7, 8, 8]
         },
         {
             "letterboxdUrl": "https://boxd.it/gkFu",
@@ -3070,8 +3064,7 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Melancholic", "Loneliness"],
             "myReview": "",
-            "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8],
-            "customPosterUrl": require('../img/films/ritual/custom_poster.jpg')
+            "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8]
         },
         {
             "letterboxdUrl": "https://boxd.it/3Ipk",
@@ -3079,8 +3072,7 @@ const initState = {
             "myRating": "7.9",
             "myTags": ["Nature"],
             "myReview": "",
-            "gradualInterest": [6, 6, 7, 7, 8, 8, 8, 9, 8, 8, 8, 8],
-            "customPosterUrl": require('../img/films/wolfChildren/custom_poster.jpg')
+            "gradualInterest": [6, 6, 7, 7, 8, 8, 8, 9, 8, 8, 8, 8]
         },
         {
             "letterboxdUrl": "https://boxd.it/h5Uw",
@@ -3088,8 +3080,7 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Disturbing"],
             "myReview": "",
-            "gradualInterest": [7, 8, 8, 8, 8, 8, 9, 9, 9],
-            "customPosterUrl": require('../img/films/incidentInAGhostland/custom_poster.jpg')
+            "gradualInterest": [7, 8, 8, 8, 8, 8, 9, 9, 9]
         },
         {
             "letterboxdUrl": "https://boxd.it/1oDC",
@@ -3097,8 +3088,7 @@ const initState = {
             "myRating": "7.8",
             "myTags": ["Nature"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 8, 8, 7, 7, 8, 8, 8, 8],
-            "customPosterUrl": require('../img/films/summerWars/custom_poster.jpg')
+            "gradualInterest": [7, 7, 7, 7, 8, 8, 7, 7, 8, 8, 8, 8]
         },
         {
             "letterboxdUrl": "https://boxd.it/2b4m",
@@ -3106,7 +3096,8 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Nature"],
             "myReview": "",
-            "gradualInterest": [8, 8, 8, 7, 8, 8, 8, 8, 8, 9, 9, 8]
+            "gradualInterest": [8, 8, 8, 7, 8, 8, 8, 8, 8, 9, 9, 8],
+            "customPosterUrl": "https://www.vintagemovieposters.co.uk/wp-content/uploads/2022/12/IMG_0101-scaled.jpeg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2V5K",
@@ -3124,241 +3115,24 @@ const initState = {
             "myTags": ["Time travel"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 9, 8, 8, 8, 8, 8]
-        } 
-    ],
-
-    monthlyData: [
-        {
-            month: '2023 January',
-            url: "https://letterboxd.com/nbofni/list/2023-january-01-23/",
-            myAverageRating: 5.846153846,
-            imdbAverageRating: 6.8,
-            numOfFilmsWatched: 39,
-            numOf7s: 13,
-            numOf8s: 5,
-            numOf9s: 0,
-            numOf10s: 0
         },
         {
-            month: '2022 December',
-            url: "https://letterboxd.com/nbofni/list/2022-december-12-22/",
-            myAverageRating: 5.11627907,
-            imdbAverageRating: 6.8,
-            numOfFilmsWatched: 43,
-            numOf7s: 6,
-            numOf8s: 3,
-            numOf9s: 0,
-            numOf10s: 0
+            "letterboxdUrl": "https://boxd.it/6fWg",
+            "title": "The Land of Cards",
+            "myRating": "7.6",
+            "myTags": ["Freedom", "Crazy editing"],
+            "myReview": "",
+            "gradualInterest": [6, 6, 5, 6, 6, 7, 9, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.moviemeter.nl/images/cover/92000/92025.jpg"
         },
         {
-            month: '2022 November',
-            url: "https://letterboxd.com/nbofni/list/2022-november-11-22/",
-            myAverageRating: 5.1,
-            imdbAverageRating: 6.9,
-            numOfFilmsWatched: 32,
-            numOf7s: 6,
-            numOf8s: 1,
-            numOf9s: 1,
-            numOf10s: 0
-        },
-        {
-            month: '2022 October',
-            url: "https://letterboxd.com/nbofni/list/2022-october-10-22/",
-            myAverageRating: 5.242424242,
-            imdbAverageRating: 6.7,
-            numOfFilmsWatched: 33,
-            numOf7s: 7,
-            numOf8s: 1,
-            numOf9s: 2,
-            numOf10s: 0
-        },
-        {
-            month: '2022 September',
-            url: "https://letterboxd.com/nbofni/list/2022-september-09-2022/",
-            myAverageRating: 5.346153846,
-            imdbAverageRating: 6.9,
-            numOfFilmsWatched: 25,
-            numOf7s: 3,
-            numOf8s: 3,
-            numOf9s: 2,
-            numOf10s: 0
-        },
-        {
-            month: '2022 August',
-            url: "https://letterboxd.com/nbofni/list/2022-august-08-2022/",
-            myAverageRating: 5.285714286,
-            imdbAverageRating: 7.1,
-            numOfFilmsWatched: 14,
-            numOf7s: 5,
-            numOf8s: 1,
-            numOf9s: 0,
-            numOf10s: 0
-        },
-        {
-            month: '2022 July',
-            url: "https://letterboxd.com/nbofni/list/2022-july-07-2022/",
-            myAverageRating: 5.242424242,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 33,
-            numOf7s: 5,
-            numOf8s: 5,
-            numOf9s: 1,
-            numOf10s: 0
-        },
-        {
-            month: '2022 June',
-            url: "https://letterboxd.com/nbofni/list/2022-june-06-2022/",
-            myAverageRating: 5.176470588,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 17,
-            numOf7s: 2,
-            numOf8s: 0,
-            numOf9s: 0,
-            numOf10s: 0
-        },
-        {
-            month: '2022 May',
-            url: "https://letterboxd.com/nbofni/list/2022-may-05-2022/",
-            myAverageRating: 4.93877551,
-            imdbAverageRating: 7.1,
-            numOfFilmsWatched: 49,
-            numOf7s: 9,
-            numOf8s: 2,
-            numOf9s: 0,
-            numOf10s: 0
-        },
-        {
-            month: '2022 April',
-            url: "https://letterboxd.com/nbofni/list/2022-april-04-2022/",
-            myAverageRating: 5.448275862,
-            imdbAverageRating: 7.2,
-            numOfFilmsWatched: 58,
-            numOf7s: 6,
-            numOf8s: 9,
-            numOf9s: 1,
-            numOf10s: 0
-        },
-        {
-            month: '2022 March',
-            url: "https://letterboxd.com/nbofni/list/2022-march-03-2021/",
-            myAverageRating: 5.461538462,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 65,
-            numOf7s: 15,
-            numOf8s: 5,
-            numOf9s: 3,
-            numOf10s: 0
-        },
-        {
-            month: '2022 Febuary',
-            url: "https://letterboxd.com/nbofni/list/2022-february-02-2022/",
-            myAverageRating: 5.400,
-            imdbAverageRating: 7.1,
-            numOfFilmsWatched: 35,
-            numOf7s: 5,
-            numOf8s: 5,
-            numOf9s: 1,
-            numOf10s: 1
-        },
-        {
-            month: '2022 January',
-            url: "https://letterboxd.com/nbofni/list/2022-january-01-2022/",
-            myAverageRating: 5.800,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 45,
-            numOf7s: 11,
-            numOf8s: 6,
-            numOf9s: 5,
-            numOf10s: 0
-        },
-        {
-            month: '2021 December',
-            url: "https://letterboxd.com/nbofni/list/2021-december-12-2021/",
-            myAverageRating: 5.666666667,
-            imdbAverageRating: 7.1,
-            numOfFilmsWatched: 33,
-            numOf7s: 6,
-            numOf8s: 4,
-            numOf9s: 2,
-            numOf10s: 0
-        },
-        {
-            month: '2021 November',
-            url: "https://letterboxd.com/nbofni/list/2022-august-08-2022/",
-            myAverageRating: 5.529411765,
-            imdbAverageRating: 7.3,
-            numOfFilmsWatched: 34,
-            numOf7s: 7,
-            numOf8s: 3,
-            numOf9s: 1,
-            numOf10s: 1
-        },
-        {
-            month: '2021 November',
-            url: "https://letterboxd.com/nbofni/list/2021-november-11-2021/",
-            myAverageRating: 5.529411765,
-            imdbAverageRating: 7.3,
-            numOfFilmsWatched: 34,
-            numOf7s: 7,
-            numOf8s: 3,
-            numOf9s: 1,
-            numOf10s: 1
-        },
-        {
-            month: '2021 October',
-            url: "https://letterboxd.com/nbofni/list/2021-october-10-2021/",
-            myAverageRating: 5.766666667,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 30,
-            numOf7s: 4,
-            numOf8s: 5,
-            numOf9s: 2,
-            numOf10s: 0
-        },
-        {
-            month: '2021 September',
-            url: "https://letterboxd.com/nbofni/list/2021-september-09-2021/",
-            myAverageRating: 6.043478261,
-            imdbAverageRating: 7.2,
-            numOfFilmsWatched: 23,
-            numOf7s: 4,
-            numOf8s: 4,
-            numOf9s: 3,
-            numOf10s: 0
-        },
-        {
-            month: '2021 August',
-            url: "https://letterboxd.com/nbofni/list/2021-august-08-2021/",
-            myAverageRating: 6.000,
-            imdbAverageRating: 7.4,
-            numOfFilmsWatched: 36,
-            numOf7s: 3,
-            numOf8s: 4,
-            numOf9s: 7,
-            numOf10s: 1
-        },
-        {
-            month: '2021 July',
-            url: "https://letterboxd.com/nbofni/list/2021-july-07-2021/",
-            myAverageRating: 5.392857143,
-            imdbAverageRating: 7.0,
-            numOfFilmsWatched: 28,
-            numOf7s: 3,
-            numOf8s: 3,
-            numOf9s: 2,
-            numOf10s: 1
-        },
-        {
-            month: '2021 June',
-            url: "https://letterboxd.com/nbofni/list/2021-june-06-2021/",
-            myAverageRating: 5.576923077,
-            imdbAverageRating: 7.2,
-            numOfFilmsWatched: 26,
-            numOf7s: 4,
-            numOf8s: 3,
-            numOf9s: 3,
-            numOf10s: 0
-        },
+            "letterboxdUrl": "https://boxd.it/Bf6G",
+            "title": "Fall",
+            "myRating": "8.0",
+            "myTags": ["Intense", "Fear of heights", "Survival story", "Not giving up despite being in a shitty situation"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8]
+        }
     ]
 }
 

@@ -27,17 +27,14 @@ import UniversityAssignment from './components/university/UniversityAssignment';
 
 // Films page
 import Films from './components/films/Films';
-import PageFavouriteFilmsList from './components/films/PageFavouriteFilmsList';
-import PageFilmLog from './components/films/PageFilmLog';
-import PageFilmStats from './components/films/PageFilmStats';
-import FilmReview from './components/films/FilmReview';
+import FilmsReview from './components/films/FilmsReview';
 
 // Music page
 import Music from './components/music/Music';
 
 // Movies page
-import Movies from './components/movies/Movies';
-import MoviesReview from './components/movies/MoviesReview';
+// import Movies from './components/movies/Movies';
+// import MoviesReview from './components/movies/MoviesReview';
 
 
 export default class App extends Component {
@@ -59,12 +56,12 @@ export default class App extends Component {
                       <Route path='/blog' component={Blog} exact />
                       <Route path='/blog/:post_id' component={BlogPost} exact />
 
-                      <Route path='/movies' component={Movies} exact />
-                      <Route path='/movies/:movie_id' component={MoviesReview} exact />
+                      <Route path='/films' component={Films} exact />
+                      <Route path='/films/:film_id' component={FilmsReview} exact />
 
                       {/*}
-                      <Route path='/films' component={Films} exact />
-                      <Route path='/films/:film_id' component={FilmReview} exact />
+                      <Route path='/movies' component={Movies} exact />
+                      <Route path='/movies/:movie_id' component={MoviesReview} exact />
                       */}
 
                       <Route path='/music' component={Music} exact />

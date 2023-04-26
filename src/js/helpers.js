@@ -10,6 +10,39 @@ export function getValueOfCSSVariable(variable_name) {
 }
 
 
+export function getReviewId(title, letterboxdUrl) {
+    var str = "this's kelly"
+    var newstr = str.replaceAll(/'/g, '');
+    console.log(str)
+    console.log(newstr)
+
+    // format title...
+    let newTitle = title.replaceAll('.', '')
+        .replaceAll(' ', '')
+        .replaceAll("\\", "")
+        .replaceAll("\"", '')
+        .replaceAll(':', '')
+        .replaceAll("\'", '')
+        .replaceAll('(', '')
+        .replaceAll(')', '')
+        .replaceAll(/-/g, "")
+        .replaceAll(',', '')
+        .replaceAll('.', '')
+        .replaceAll('’', '')
+        .replaceAll(/'/g, '')
+        .replaceAll(/[/]/g, '')
+        .toLowerCase();
+
+    // get id from URL
+    let letterboxdId = letterboxdUrl.split('/').pop()
+    
+    let reviewId = newTitle + '-' + letterboxdId + '-' + 'review';
+    console.log(reviewId);
+
+    return reviewId;
+}
+
+
 /**
  * [Get a random RGBA value]
  * @param {[float]} opacity [specify an opacity/transparency for the colour (0.0=invisible, 1.0=opaque, 0.5=somewhere in between)]

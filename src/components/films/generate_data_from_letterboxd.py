@@ -149,6 +149,8 @@ if os.path.exists(path_to_extracted_zip):
             
             # retrieve poster from IMDB
             poster_url = imdb_json['Poster']
+            if 'SX300' in poster_url:
+                poster_url = poster_url.split('SX300')[0]
             
             # retrieve title from IMDB (because letterboxd parsing is shite!)
             title = imdb_json['Title']
@@ -158,7 +160,7 @@ if os.path.exists(path_to_extracted_zip):
             
             # id of my review!
             titlev2 = title.replace(" ", "").replace(".", "").replace("/", "").replace("(", "").replace(")", "").replace("'", "").replace("\"", "").replace(":", "").replace(";", "").replace("-", "").replace(",", "").replace("·", "")
-            review_id = f"{titlev2}-{year}-review"
+            review_id = f"{titlev2.lower()}-{letterboxd_film_id}-review"
             
             # DEBUGGING....
             print(f" > {pos}: {title} {letterboxd_url} {review_id}")
