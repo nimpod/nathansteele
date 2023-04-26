@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom';
 import { ReactComponent as ArrowLeft } from "../../icons/arrowLeft.svg";
 import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
 
@@ -10,15 +10,6 @@ import { getRandomRGBA, getReviewId } from '../../js/helpers.js';
 
 
 class FilmsReview extends Component {
-    constructor(props){
-        super(props);
-        this.goBack = this.goBack.bind(this);
-    }
-
-    goBack() {
-        this.props.history.goBack();
-    }
-    
     /**
      * The Render() function, content rendered to screen...
      */
@@ -54,7 +45,7 @@ class FilmsReview extends Component {
                             {title}
                         </div>
 
-                        <div onClick={this.goBack} className="custom-btn-1 back-to-previous-page" title="Back to toplist">
+                        <div onClick={() => this.props.history.goBack()} className="custom-btn-1 back-to-previous-page" title="Back to toplist">
                             <ArrowLeftV2 className="invertable-icon" />
                             <span>Back to toplist</span>
                         </div>
