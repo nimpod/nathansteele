@@ -3282,6 +3282,37 @@ const initState = {
             "myTags": ["Claustrophobic"],
             "myReview": "",
             "gradualInterest": [7, 7, 7, 7, 8, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/fMfM",
+            "title": "Leave No Trace",
+            "myRating": "7.7",
+            "myTags": ["Nature", "Discovering indepdence"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8],
+            "customPosterUrl": require('../img/films/leavenotrace/custom_poster.jpg')
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/27qS",
+            "title": "Solaris",
+            "myRating": "7.6",
+            "myTags": ["Astronomy", "Psychedelic", "Confusing", "Trippy"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/zZ8",
+            "title": "Tetsuo: The Bullet Man",
+            "myRating": "8.4",
+            "screenshots": [
+                require('../img/films/tetsuothebulletman/screenshot1.PNG'),
+                require('../img/films/tetsuothebulletman/screenshot2.PNG'),
+                require('../img/films/tetsuothebulletman/screenshot3.PNG'),
+            ],
+            "myTags": ["Disturbing", "Cyberpunk", "Biopunk", "Stylish", "Metal", "Chaotic", "Claustrophobic", "Challenging to watch at times", "Great soundtrack"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8],
+            "customPosterUrl": require('../img/films/tetsuothebulletman/custom_poster.jpg')
         }
     ]
 }

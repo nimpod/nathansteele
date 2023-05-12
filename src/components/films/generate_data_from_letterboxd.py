@@ -115,7 +115,7 @@ if os.path.exists(path_to_extracted_zip):
             # parse data from letterboxd web page... (this takes ~1.21s)
             page = requests.get(url=letterboxd_url, verify=False, stream=True)
             soup = BeautifulSoup(page.content, 'html.parser')
-            print(soup)
+            # print(soup)
             
             # retrieve list of genres...
             div_genres = soup.select_one('#tab-genres')
