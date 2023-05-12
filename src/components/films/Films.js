@@ -1,3 +1,7 @@
+/**
+ * This is a react component that renders my 'Films' homepage
+ */
+
 import React, {Component, useState, useEffect} from 'react';
 import { connect }  from 'react-redux';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";

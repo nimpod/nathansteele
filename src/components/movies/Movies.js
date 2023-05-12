@@ -1,7 +1,6 @@
 import React, {Component, useState, useEffect} from 'react';
 import { connect }  from 'react-redux';
 import MovieToplistItem from './MoviesToplistElement.js';
-import FilmsJsonList from './reviews_web_data.json';
 import { mergeWebAndLocalData } from './merge_webdata_with_localdata.js';
 
 
@@ -15,7 +14,7 @@ class Movies extends Component {
      * 
      */
     mergeData() {
-        let moreJsonData = require('./reviews_web_data.json');
+        let moreJsonData = require('./reviews_automated_data.json');
         for (let i = 0; i < moreJsonData.length; i++) {
             let moreData = moreJsonData[i];
             /// console.log('moreData: ', moreData);

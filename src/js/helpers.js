@@ -11,11 +11,6 @@ export function getValueOfCSSVariable(variable_name) {
 
 
 export function getReviewId(title, letterboxdUrl) {
-    var str = "this's kelly"
-    var newstr = str.replaceAll(/'/g, '');
-    console.log(str)
-    console.log(newstr)
-
     // format title...
     let newTitle = title.replaceAll('.', '')
         .replaceAll(' ', '')

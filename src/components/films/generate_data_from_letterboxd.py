@@ -18,6 +18,7 @@ import csv
 import json
 import glob
 import requests
+from pathlib import Path
 from bs4 import BeautifulSoup
 from urllib3.exceptions import InsecurePlatformWarning, InsecureRequestWarning
 from urllib3 import disable_warnings
@@ -33,6 +34,20 @@ list_name = 'my-favourite-films.csv'
 json_output_filename = 'reviews_web_data.json'
 path_to_rootreducer = f'D:\\Programming-Projects\\nathansteele\\src\\reducers\\RootReducer.js';
 path_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\films\\{json_output_filename}'
+
+
+# used later...
+def simplify_movie_title(title: str):
+    """
+    Examples:
+        Tag = tag
+        A Ghost Story = aghoststory
+        2001 Space Odyssey = 2001spaceodyssey
+        Face/Off = faceoff
+        K-PAX = kpax
+        Exte: Hair Extensions = extehairextensions
+    """
+    return title.replace(" ", "").replace(".", "").replace("/", "").replace("(", "").replace(")", "").replace("'", "").replace("\"", "").replace(":", "").replace(";", "").replace("-", "").replace(",", "").replace("·", "").lower()
 
 
 # 1) find letterboxd zip export...
@@ -100,6 +115,7 @@ if os.path.exists(path_to_extracted_zip):
             # parse data from letterboxd web page... (this takes ~1.21s)
             page = requests.get(url=letterboxd_url, verify=False, stream=True)
             soup = BeautifulSoup(page.content, 'html.parser')
+            print(soup)
             
             # retrieve list of genres...
             div_genres = soup.select_one('#tab-genres')
@@ -159,11 +175,31 @@ if os.path.exists(path_to_extracted_zip):
             directors = imdb_json['Director'].split(', ')
             
             # id of my review!
-            titlev2 = title.replace(" ", "").replace(".", "").replace("/", "").replace("(", "").replace(")", "").replace("'", "").replace("\"", "").replace(":", "").replace(";", "").replace("-", "").replace(",", "").replace("·", "")
-            review_id = f"{titlev2.lower()}-{letterboxd_film_id}-review"
+            titlev2 = simplify_movie_title(title=title)
+            review_id = f"{titlev2}-{letterboxd_film_id}-review"
+            
+            """
+            # iterate over \\img\\films\\
+            screenshots = []
+            directory_in_str = f'D:\\Programming-Projects\\nathansteele\\src\\img\\films';
+            for subdir, dirs, files in os.walk(directory_in_str):
+                for file in files:
+                    # find the right directory...
+                    title_from_directory_storing_screenshots = subdir.split('\\')[-1]
+                    titlev3 = simplify_movie_title(title=title_from_directory_storing_screenshots)
+                    if titlev3 == titlev2:
+                        # get my screenshots...
+                        if 'screenshot' in file:
+                            screenshot = os.path.join(subdir, file)
+                            screenshots.append(screenshot)
+                        
+                        # use my custom poster if I put one there...
+                        if 'custom_poster' in file:
+                            poster_url = os.path.join(subdir, file)
+            """
             
             # DEBUGGING....
-            print(f" > {pos}: {title} {letterboxd_url} {review_id}")
+            print(f" > {pos}: {title} {letterboxd_url}")
             #print(f' > Title = ({title})')
             #print(f' > IMDB url = ({imdb_url})')
             #print(f' > Language = ({language})')
