@@ -3313,6 +3313,20 @@ const initState = {
             "myReview": "",
             "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8],
             "customPosterUrl": require('../img/films/tetsuothebulletman/custom_poster.jpg')
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/8bfm",
+            "title": "Big Fish and Begonia",
+            "myRating": "9.0",
+            "screenshots": [
+                require('../img/films/bigfishandbegonia/screenshot1.PNG'),
+                require('../img/films/bigfishandbegonia/screenshot5.PNG'),
+                require('../img/films/bigfishandbegonia/screenshot19.PNG'),
+            ],
+            "myTags": ["Life", "Death", "Magic", "The afterlife", "Oceans", "Sealife", "Amazing cinematography", "Great soundtrack"],
+            "myReview": "",
+            "gradualInterest": [8, 9, 9, 9, 8, 7, 8, 8, 9, 9],
+            "customPosterUrl": require('../img/films/bigfishandbegonia/custom_poster2.jpg')
         }
     ]
 }
