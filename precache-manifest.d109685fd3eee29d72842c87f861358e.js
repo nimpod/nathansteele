@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1bf7e152ee009c30be4e0369ac2f786d",
+    "revision": "db80250046c82b1ace8ed2b89dde275b",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "3be76fb4ac79c41297da",
+    "revision": "28d4d666eec086195b60",
     "url": "/nathansteele/static/css/main.9dfe8b6a.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.34024e14.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3be76fb4ac79c41297da",
-    "url": "/nathansteele/static/js/main.35ee9978.chunk.js"
+    "revision": "28d4d666eec086195b60",
+    "url": "/nathansteele/static/js/main.ac275263.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -464,6 +464,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/custom_poster.fff9d3ec.png"
   },
   {
+    "revision": "13ed4b789cc361b1d18af8713cb57def",
+    "url": "/nathansteele/static/media/custom_poster2.13ed4b78.jpg"
+  },
+  {
     "revision": "6f9afe9dcfb0584e595a0b4b062c4c6d",
     "url": "/nathansteele/static/media/d3.6f9afe9d.PNG"
   },
@@ -532,6 +536,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/plus.683f6378.svg"
   },
   {
+    "revision": "04de6d4e244534600ec272773d8763d7",
+    "url": "/nathansteele/static/media/screenshot1.04de6d4e.PNG"
+  },
+  {
     "revision": "2541f826df060a256bd4cd14b5fa6802",
     "url": "/nathansteele/static/media/screenshot1.2541f826.jpg"
   },
@@ -558,6 +566,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cc4e2702ff19b51cd31aa7c9cdfdcd72",
     "url": "/nathansteele/static/media/screenshot1.cc4e2702.jpg"
+  },
+  {
+    "revision": "6e7c12de7a664c2cc20f8d153fb6e238",
+    "url": "/nathansteele/static/media/screenshot19.6e7c12de.PNG"
   },
   {
     "revision": "693450f35ec27fabe840b664af7d4c62",
@@ -634,6 +646,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8b56f209b5335031085341b3c50e84a4",
     "url": "/nathansteele/static/media/screenshot5.8b56f209.jpg"
+  },
+  {
+    "revision": "f8ec9fbcecef1b117e8083dd29345211",
+    "url": "/nathansteele/static/media/screenshot5.f8ec9fbc.PNG"
   },
   {
     "revision": "3a4237723a859561a93b9e79eb7d32b5",
