@@ -1382,7 +1382,7 @@ const initState = {
         },
         {
             "letterboxdUrl": "https://boxd.it/AF4",
-            "customPosterUrl": "https://m.media-amazon.com/images/M/MV5BZDY3ZGI0ZDAtMThlNy00MzAxLTg4YjAtNjkwYTkxNmQ4MjdlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/nk7DMzFeQ1Ggp12tBY60ReJOtFl.jpg",
             "title": "The Secret World of Arrietty",
             "myRating": "9.1",
             "screenshots": [
@@ -1448,6 +1448,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/fb0K",
             "title": "A Ghost Story",
             "myRating": "10",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/sD94aixD7fMAc2e9ugbv4KQprBL.jpg",
             "screenshots": [
                 require('../img/films/aghoststory/screenshot1.jpg'),
                 require('../img/films/aghoststory/screenshot2.jpg'),
@@ -1513,7 +1514,7 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["School", "Teacher-student dichotomy", "Addiction", "Profound", "Melancholic", "Kindness", "Sad", "Depressing"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/detachment/custom_poster.jpg')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/lw1wlekuMMKxmYg7v01vB7Snkq6.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/tbEe",
@@ -1522,7 +1523,7 @@ const initState = {
             "myRating": "9.0",
             "myTags": ["Virtual world", "Social media", "Bullying", "Friendship", "Sad", "Great soundtrack", "Colourful", "Anime", "Girl power"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/belle/custom_poster.png')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/sp0LOwp7dVeF2c2fn9l422O5cdb.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/cOo6",
@@ -1544,7 +1545,7 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Fun", "Stochasticity", "Determinism", "Randomness", "Simulation", "Running", "Girl power"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/tag/custom_poster.jpeg')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/eYqjakKlMOG7VvmyLqdckYJM8h8.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/e1Ga",
@@ -1567,7 +1568,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Death", "Creative use of colour", "Unconvential aspect ratios", "Emotional", "Family", "Forgiveness", "Kindness", "Great soundtrack", "Colourful", "Finding happiness"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/waves/custom_poster.jpg')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/iDYOOa2Fii2ynvOlTdGGr75TuPx.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/29Wm",
@@ -1613,14 +1614,16 @@ const initState = {
             "title": "Akira",
             "myRating": "8.6",
             "myTags": ["End of the world", "Profound", "Conspiracy", "War", "Colourful", "Great soundtrack", "Anime", "Confusing"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/b6icR6m7WlKhZfEumeNQ181yDDg.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/iKDo",
             "title": "Hatching",
             "myRating": "7.9",
             "myTags": ["Brutal", "Doppelganger", "Disturbing", "Metamorphosis", "Creature-feature", "Social media", "Fake celebrity personas"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/aJBeIOneNaNP779rYQ3uPJCIOLA.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/amSe",
@@ -1628,14 +1631,15 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["One-take", "Melancholic", "Friendship", "Great soundtrack", "Melancholic", "Nightlife", "BreakingBad-ish", "Accidently getting involved in crimminal activity", "Berlin"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/victoria/custom_poster.jpg')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/1koMqkomlAFORjooFJtQEVVgiSG.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/u7LW",
             "title": "Kimi",
             "myRating": "7.9",
-            "myTags": ["Covid setting", "Conspiracy", "Mysterious", "Great soundtrack"],
-            "myReview": ""
+            "myTags": ["Covid setting", "Conspiracy", "Mysterious", "Isolation", "Great soundtrack"],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/im91Ho4WkhVroehZJiIUoOF6UIl.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1pDe",
@@ -1650,7 +1654,8 @@ const initState = {
             "title": "The Thin Red Line",
             "myRating": "9.5",
             "myTags": ["Melancholic", "Contemplative", "War", "Poetic", "Profound", "Great cinematography", "Exploring the dark depths of humanity", "Very long"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/seMydAaoxQP6F0xbE1jOcTmn5Jr.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1k44",
@@ -1680,7 +1685,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Deeply human", "Inspiring", "Being the underdog", "Soulmate", "Sport"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/rocky/custom_poster.png')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/hEjK9A9BkNXejFW4tfacVAEHtkn.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1W68",
@@ -1695,7 +1700,7 @@ const initState = {
             "myRating": "9.6",
             "myTags": ["Total escapism", "Intimate story within epic sci-fi plot", "Aliens", "Metamorphosis", "Exploring the dark depths of humanity"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/district9/custom_poster.jpg')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/tuGlQkqLxnodDSk6mp5c2wvxUEd.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/i7Q4",
@@ -1718,35 +1723,40 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Brutal", "Metamorphosis", "Fun", "Mad concept"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/extehairextensions/custom_poster.png')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/qyHtXQchUu7DpeUNabDFIVnBRtq.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/d99c",
             "title": "A Silent Voice: The Movie",
+            "titleDisplayed": "A Silent Voice",
             "myRating": "8.0",
             "myTags": ["Bullying", "Forgiveness", "Anime", "Great soundtrack"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/rgKWgY1pJ0bolXu2YhYPN4frkpd.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/29I0",
             "title": "Face/Off",
             "myRating": "8.1",
             "myTags": ["Total escapism", "Fun", "Mad concept", "Not giving up despite being in a shitty situation"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/69Xzn8UdPbVnmqSChKz2RTpoNfB.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1En6",
             "title": "Zombieland",
             "myRating": "7.9",
             "myTags": ["Zombies", "Fun", "Short but effective", "Great character chemistry", "Nostalgic"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/dUkAmAyPVqubSBNRjRqCgHggZcK.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/376g",
             "title": "Seeking A Friend For The End Of The World",
             "myRating": "8.0",
             "myTags": ["End of the world", "Death", "Soulmate", "Uplifting", "Great character chemistry", "Stoicism", "Turning negatives into positives"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/rBbCwFLyt7Q25yaw2bEOQh7RMG1.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/iwYi",
@@ -1761,14 +1771,16 @@ const initState = {
             "title": "Jungle",
             "myRating": "7.8",
             "myTags": ["Embrace mother nature", "Alone in the wilderness", "South American culture", "Jungle setting", "Not giving up despite being in a shitty situation", "Brutal", "Hallucinations"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/tDgxknTVwrScxpCYyGUjXSn5NRk.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2pQ0",
             "title": "Redline",
             "myRating": "8.1",
             "myTags": ["Intricate animation style", "Intepretation of an intergalactic lifestyle", "Fictional racing event", "Audio-visual spectacle", "Intense", "Great soundtrack", "Anime"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/tuIO78Emr8katcv9sk4HONeLdNT.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/gvme",
@@ -1789,7 +1801,8 @@ const initState = {
             "title": "Martyrs",
             "myRating": "8.3",
             "myTags": ["Challenging to watch at times", "Brutal", "Claustrophobic", "Exploring the dark depths of humanity", "Very long", "Disturbing", "Not one to watch with the family"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/2PmVlnPVG8tGXqC85YiHzL0jX40.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/uRS",
@@ -1805,7 +1818,7 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Fun", "Kids film", "Animal welfare", "Emotional", "Great soundtrack", "Nostalgic"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/chickenrun/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/eyAux0xsqSaCthc1wY6mQjZjS4A.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/26vi",
@@ -1813,7 +1826,7 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Lovecraftian horror", "Creature-feature", "Questioning reality", "Hallucinations", "Cults"],
             "myReview": "",
-            "customPosterUrl": "https://pbs.twimg.com/media/FOVvks5UYAIF3aT.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/bNh5iySaJ15tvLjGrYsw1JNhx8l.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/bdkE",
@@ -1835,7 +1848,8 @@ const initState = {
             "title": "The Wailing",
             "myRating": "8.4",
             "myTags": ["Possessed", "Paranormal", "Exorcism", "Brutal", "Tribal", "Mysterious"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/lWE9ih9qgjx8HatYboP7fG0nri.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/72i",
@@ -1856,7 +1870,8 @@ const initState = {
             "title": "The Nightmare Before Christmas",
             "myRating": "8.4",
             "myTags": ["Stumbling across the prospect of happiness", "Creature-feature", "Great soundtrack"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/oQffRNjK8e19rF7xVYEN8ew0j7b.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/azew",
@@ -1879,14 +1894,16 @@ const initState = {
             "title": "The Autopsy of Jane Doe",
             "myRating": "8.3",
             "myTags": ["Creepy", "Disturbing"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/6K0wjP8kPCiPYy9PtXBGuypyt5I.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/FKS",
             "title": "The Man Who Planted Trees",
             "myRating": "8.5",
             "myTags": ["Alone in the wilderness", "Embrace mother nature", "Poetic", "Profound", "Humanity and nature coexisting", "Nature thriving", "The ebb-and-flow of nature"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/un0NjREDaLEWWOTr7tE52MjQY6O.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/28YG",
@@ -1909,7 +1926,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Intricate animation style", "Great cinematography", "Animal welfare", "Humanity and nature coexisting", "Fun", "Friendship", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/isleofdogs/custom_poster.jpg')
+            "customPosterUrl":  "https://www.themoviedb.org/t/p/original/rSluCePdXXtNiQeE6Na5yRGamhL.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2bcK",
@@ -1924,21 +1941,23 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Atmospheric", "Confusing", "Weird", "Snow", "Intimate", "Lonely", "Creepy"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/imthinkingofendingthings/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/iCEeZ9Lkzx5Pw72BoSpbystzTpV.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/iIWS",
             "title": "The Empty Man",
             "myRating": "8.3",
             "myTags": ["Atmospheric", "Confusing", "Snow", "Weird", "Disturbing", "Creepy"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/hsueWFGkuXFOnKAxzoYUMUDA9T3.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/210u",
             "title": "Alive",
             "myRating": "8.4",
             "myTags": ["Survival story", "Not giving up despite being in a shitty situation", "Brutal", "Snow", "Alone in the wilderness"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/uQACcCZqd7WCTRin9xRIW5gr1bd.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/dgSy",
@@ -1946,21 +1965,23 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Claustrophobic", "Disturbing", "Multiple personality disorder"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/split/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/kBvO58pt13dgYImjZNjq6QiOT8n.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/25Vu",
             "title": "1408",
             "myRating": "8.5",
             "myTags": ["Claustrophobic", "Disturbing", "One-location", "Atmospheric"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/zEaMTpG71O0NN7XlQwYyaWVpTyX.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/kJyc",
             "title": "The Vast of Night",
             "myRating": "8.1",
             "myTags": ["Atmospheric", "Mysterious", "Melancholic", "Search for Extra Terrestrial Intelligence (SETI)", "Radio station", "One-take"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/q2P9lYkctl5Ory71HEBMaFxbVlD.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/Tdy",
@@ -1968,7 +1989,7 @@ const initState = {
             "myRating": "7.9",
             "myTags": ["Atmospheric", "Melancholic", "Aliens", "Soulmate", "Travelling", "Alone in the wilderness", "Virus", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/monsters/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/lH6oWfGjwnM81Nzu8vipx9OfPmv.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1yBw",
@@ -1983,6 +2004,7 @@ const initState = {
             "myRating": "8.4",
             "myTags": ["Nostalgic", "Great soundtrack"],
             "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/ljDs",
@@ -1991,7 +2013,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Indian culture", "Kindness", "The evil British empire", "Poverty", "Friendship", "Great cinematography", "Very long", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/riseroarrevolt/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ljHw5eIMnki3HekwkKwCCHsRSbH.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/dvXe",
@@ -2013,7 +2035,8 @@ const initState = {
             "title": "The Fly",
             "myRating": "7.9",
             "myTags": ["Mad concept", "Metamorphosis", "Creature-feature", "Disturbing"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/z1XdsalC4fZlzCa5Vu06QLBUhyW.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2Y3M",
@@ -2027,14 +2050,16 @@ const initState = {
             "title": "After Hours",
             "myRating": "8.0",
             "myTags": ["Claustrophobic", "Conspiracy", "Nightlife", "Disturbing", "Quirky", "Accidently getting involved in crimminal activity"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/9NyT0qHwVDsazubfSwLxt6fR7Ym.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/gc1Q",
             "title": "Arctic",
             "myRating": "7.8",
             "myTags": ["Alone in the wilderness", "Dialogueless", "Just 2 actors", "Snow", "Survival story"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/w9GVlRteCgY103DN8CdFik3HUhO.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1GXU",
@@ -2042,7 +2067,7 @@ const initState = {
             "myRating": "8.2",
             "myTags": ["Alone in the wilderness", "Survival story", "Soulmate", "Finding yourself", "Humanity and nature coexisting", "Quirky", "Lonelyness"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/castawayonthemoon/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/cHwspwAQwZNCTOhcquvXoGop0SQ.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/wMAk",
@@ -2050,7 +2075,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Quirky", "Endearing", "Poetic", "Mokumentary", "Fun", "Friendship", "Finding your people", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/marceltheshellwithshoeson/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/jaYmP4Ct8YLnxWAW2oYkUjeXtzm.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/4W9M",
@@ -2065,14 +2090,16 @@ const initState = {
             "title": "Doctor Sleep",
             "myRating": "7.8",
             "myTags": ["Disturbing", "Atmospheric"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/p69QzIBbN06aTYqRRiCOY1emNBh.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/23nq",
             "title": "Severance",
             "myRating": "7.7",
             "myTags": ["Fun", "Disturbing", "Claustrophobic", "Alone in the wilderness", "Revenge-fantasy", "British humour"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/yg1XRTyH5knwh3Tnij2sUV0ZZ5w.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/203C",
@@ -2101,7 +2128,8 @@ const initState = {
             "title": "Speak",
             "myRating": "7.8",
             "myTags": ["Sad", "Art", "School setting", "Friendship", "Teacher-student dichotomy"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/kxQ9lRgC3tMVNPzLMFsiOK8H8fn.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/bkFu",
@@ -2109,14 +2137,15 @@ const initState = {
             "myRating": "7.7",
             "myTags": ["Atmospheric", "Mysterious", "Murder mystery", "Confusing", "Non-linear timeline", "Story within a story", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/nocturnalanimals/custom_poster.jpg')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/6zTRty2REwxljziiWyrRbgOwAo7.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/i3a4",
             "title": "Ut\u00f8ya: July 22",
             "myRating": "8.0",
             "myTags": ["One-take", "Based on true events", "Terroism", "Brutal", "Intense", "Survival story", "Norweigan island", "Challenging to watch at times"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/vRTNX2KhxwSXynzxWQrJMW5kLFi.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/oIv0",
@@ -2146,14 +2175,15 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Zombies", "Depressing", "Brutal", "Gory", "Social commentary", "Mini-series but it might as well be a long film"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/deadset/custom_poster.jpg')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/j6Ja8AyVxbeUgGAD3nGr1jV1nwX.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2aYo",
             "title": "K-PAX",
             "myRating": "8.1",
             "myTags": ["Melancholic", "Mysterious", "Alien visitor disguised as human", "Search for Extraterrestrial Intelligence (SETI)", "Quirky", "Mental hospital"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/vJqhlC6QNXFxFhJ02kg1CFtcaa.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2bf0",
@@ -2161,14 +2191,15 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Mysterious", "Grand", "Great cinematography", "Minimal dialogue", "Artificial Intelligence"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/2001spaceodyssey/custom_poster.png')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/zmmYdPa8Lxx999Af9vnVP4XQ1V6.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/SLa",
             "title": "127 Hours",
             "myRating": "8.6",
             "myTags": ["Alone in the wilderness", "Survival story", "Based on true events", "Hallucinations", "Questioning reality", "Minimal dialogue", "One-location"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/zHOZLYsfykHWhYAsC4MN09xKP9F.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2ZA8",
@@ -2183,14 +2214,16 @@ const initState = {
             "title": "The Faculty",
             "myRating": "8.2",
             "myTags": ["Creature-feature", "School setting", "Metamorphosis", "Fun", "Mysterious"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/5XetJwmAiDC0EtH23NIXaqFn3Wl.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2bde",
             "title": "War of the Worlds",
             "myRating": "8.4",
             "myTags": ["Aliens", "End of the world", "War", "Total escapism", "Intense"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/pwppVd91qtkxEV0TKxGe3J6k4SU.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/p3O8",
@@ -2198,7 +2231,7 @@ const initState = {
             "myRating": "8.6",
             "myTags": ["Time loop", "Friendship", "Soulmate", "Turning negatives into positives", "Not giving up despite being in a shitty situation"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/themapoftinyperfectthings/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/6y3ev0rJFbHA1hU22UPmmfzBjrG.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/200I",
@@ -2213,7 +2246,7 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Possession", "Disturbing", "Depressing", "Gross", "Challenging to watch at times"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/possession/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/sz6IXLRJu58EBRpUuRFKxo4d6lf.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/a5fa",
@@ -2227,7 +2260,8 @@ const initState = {
             "title": "Another Year",
             "myRating": "8.3",
             "myTags": ["A slice of life", "Gardening", "Finding happiness", "The ebb-and-flow of nature", "Forgiveness", "Melancholic", "British humour", "Depressing"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/zrkQcAatfBox5x9KZjaYGnKoqu6.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/fVJQ",
@@ -2250,7 +2284,7 @@ const initState = {
             "myRating": "8.9",
             "myTags": ["Disturbing", "Terrifying", "Possession"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/insidious/custom_poster.jpeg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/tmlDFIUpGRKiuWm9Ixc6CYDk4y0.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/5n0s",
@@ -2273,7 +2307,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Bullying", "Satan", "Possession", "Telekenesis", "School setting"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/carrie/custom_poster.png'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/8tT1rqlsTguyfUBMrbHR9cv1rxM.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2a70",
@@ -2296,7 +2330,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Melancholic", "Poetic", "Sad", "Depressing", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/bluevalentine/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/dc8BdKnDY5Iy28KzUGtHIXuqqFK.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/d9YE",
@@ -2327,7 +2361,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Creepy", "Terrifying", "Intricate animation style", "Colourful"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/coraline/custom_poster.png'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/4jeFXQYytChdZYE9JYO7Un87IlW.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1ARc",
@@ -2342,14 +2376,15 @@ const initState = {
             "myRating": "8.6",
             "myTags": ["Questioning reality", "Atmospheric", "Mysterious", "A story within a story", "Anti-Hollywood"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/mulhollanddrive/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/aO5xuvfujX3cFg9evUVZuJlroEW.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1TKk",
             "title": "The Tenant",
             "myRating": "8.5",
             "myTags": ["Surrealist horror", "Xenophobia", "Isolation", "Hostility", "Paranoia", "Loss of identity", "Claustrophobic", "Conspiracy", "Living in flats"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/4Qhzb1ICFMqE3isWoln497qSH7n.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1KnQ",
@@ -2357,7 +2392,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Surrealism", "Quirky", "Aliens", "Future society"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/fantasticplanet/custom_poster.png'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/fjmtNwzQ5k1eFE0VgHPEHND5HyA.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/d1uG",
@@ -2379,14 +2414,15 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Arthouse psychological thriller", "Disturbing", "Evil psychotic child"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/weneedtotalkaboutkevin/custom_poster.png')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/auAmiRmbBQ5QIYGpWgcGBoBQY3b.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2ahu",
             "title": "Being John Malkovich",
             "myRating": "8.9",
             "myTags": ["Surrealist fantasy comedy", "Questioning reality", "Funny", "Quirky"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/xVSvIwRNzwXSs0CLefiiG6A96m4.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/20eA",
@@ -2394,14 +2430,15 @@ const initState = {
             "myRating": "9.0",
             "myTags": ["Embrace mother nature", "Endearing", "Humanity and nature coexisting", "Nature thriving", "Colourful", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/myneighbourtotoro/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ykeaF3Ldz1Kf6sfnOJJH4dW56F4.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1Z2I",
             "title": "Phenomenon",
             "myRating": "8.8",
             "myTags": ["Uplifting", "Mysterious", "Awakanening-ish", "Soulmate"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/5eK1HNf0Kl2vDPOeqf1kX4SKxrw.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/mViE",
@@ -2415,28 +2452,32 @@ const initState = {
             "title": "Moonrise Kingdom",
             "myRating": "8.9",
             "myTags": ["Quirky", "Great cinematography", "Friendship", "Great chemistry between characters"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/xrziXRHRQ7c7YLIehgSJY8GQBsx.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/aZiu",
             "title": "10 Cloverfield Lane",
             "myRating": "8.8",
             "myTags": ["Mysterious", "Claustrophobic", "One-location", "Creepy"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl":  "https://www.themoviedb.org/t/p/original/84Dhwz93vCin6T1PX6ctSvWEuNE.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2192",
             "title": "Cloverfield",
             "myRating": "8.8",
             "myTags": ["Found-footage", "Terrifying", "Wild", "Intense", "Aliens", "End of the world"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/qIegUGJqyMMCRjkKV1s7A9MqdJ8.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2ahY",
             "title": "Good Will Hunting",
             "myRating": "9.0",
             "myTags": ["Student teacher dichotomy", "Poetic", "Contemplative", "Learning"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/yK7xOCXGsrk0B26wCMNitRYzyDg.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1Zks",
@@ -2474,7 +2515,8 @@ const initState = {
             "title": "Devs",
             "myRating": "8.6",
             "myTags": ["Contemplative sci-fi", "Conspiracy", "Quantum computing", "Religion", "Faith", "Randomness", "Determinism", "Harnessing the power of computers to do amazing things", "Great soundtrack", "Mini series but might as well be a long film"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/uv63iNWOh69bSJYJQZjiX6n8B3m.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/bYJQ",
@@ -2489,14 +2531,16 @@ const initState = {
             "title": "Inside Out",
             "myRating": "9.1",
             "myTags": ["Emotional", "Friendship", "Anger", "Clever analogy for real life feelinsg", "Layered", "Deeper than a kids film", "Great soundtrack"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2aqc",
             "title": "The Pianist",
             "myRating": "9.0",
             "myTags": ["War", "Minimal", "Very small cast", "The universal power of music"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/enFfoFd3TYs6ttTxrBIfmecQPnz.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/jj4y",
@@ -2518,7 +2562,8 @@ const initState = {
             "titleDisplayed": "[REC]",
             "myRating": "9.0",
             "myTags": ["Zombies", "Found-footage", "Brutal", "One-location", "Claustrophobic", "Satanic"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/kJ5hqacHVb9GLChkCZe8Bq4DmTI.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/jkPq",
@@ -2533,7 +2578,8 @@ const initState = {
             "titleDisplayed": "My Life as a Courgette",
             "myRating": "9.0",
             "myTags": ["Stop motion animation", "Uplifting", "Finding happiness", "Friendship", "Emotional", "Endearing", "Soulmate", "Bad parenting"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/g91phMUr77Vw6uRmpIjH1hvZpov.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1EmM",
@@ -2585,7 +2631,7 @@ const initState = {
             "myRating": "9.0",
             "myTags": ["Terrifying", "Exorcism"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/theexorcist/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/4ucLGcXVVSVnsfkGtbLY4XAius8.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/gL9g",
@@ -2623,7 +2669,8 @@ const initState = {
             "title": "Jojo Rabbit",
             "myRating": "9.4",
             "myTags": ["War", "Emotional", "Great soundtrack"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/yfT4bdrKKUZAjWD9Zii45nEN668.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/4VZ8",
@@ -2631,7 +2678,7 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["Space exploration", "Timey-wimey"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/interstellar/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/fX44bgxKQsS4P4ewb2iotHveEkn.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1Y2i",
@@ -2646,7 +2693,8 @@ const initState = {
             "title": "Contact",
             "myRating": "9.0",
             "myTags": ["Contemplative sci-fi", "Exploration beyond the solar system", "Alien technology", "Search for Extraterrestrial Intelligence (SETI)"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/wAhkO5iaVIkKBdpR9kvToHaNyKD.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/7T2k",
@@ -2661,7 +2709,8 @@ const initState = {
             "title": "The Sound of Music",
             "myRating": "9.3",
             "myTags": ["Uplifting", "Music", "War", "Britian 1960s", "Great soundtrack"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/c6CrUZypAsBCaRWX0M3RVRDbhNS.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/3GPq",
@@ -2692,7 +2741,7 @@ const initState = {
             "myRating": "9.3",
             "myTags": ["Claustrophobic", "Psychlogical thriller", "Quirky"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/parasite/custom_poster.png'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2b4w",
@@ -2760,14 +2809,16 @@ const initState = {
             "title": "The Revenant",
             "myRating": "9.5",
             "myTags": ["Alone in the wilderness", "Survival story", "Mississipi 1800s", "Based on a true story", "Brutal", "Betrayl", "Finding positives from negatives", "Not giving up despite being in a shitty situation", "Great soundtrack"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/o6wunVSN9WI1obidUq3clGq65ZP.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2a3C",
             "title": "Silent Hill",
             "myRating": "9.6",
             "myTags": ["Atmospheric", "Disgusting", "Gross", "Creature-feature", "Cults", "Religion", "Satanic worshipers", "Foggy town", "Mysterious", "Video game adapatation", "Great soundtrack"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ljAIu5OJWS8AYy5c5zmtwHPdHd1.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/dZ5m",
@@ -2775,14 +2826,15 @@ const initState = {
             "myRating": "9.7",
             "myTags": ["Atmospheric", "Water", "Beautiful", "Melancholic", "Great soundtrack", "Minimal dialogue"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/theshapeofwater/custom_poster.jpeg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/r0bgHi3MwGHTKPWyJdORsb4ukY8.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1USu",
             "title": "Awakenings",
             "myRating": "10",
             "myTags": ["Sad", "Mental hosptital", "Depressing", "Awakanening-ish"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/9gztZXuHLG6AJ0fgqGd7Q43cWRI.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2b8e",
@@ -2790,7 +2842,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Uplifting", "Timey-wimey"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/backtothefuture/custom_poster.jpg')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ntLDP6LYTkxcUDVR0ud3aI0X4QH.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/18U8",
@@ -2805,7 +2857,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Humanity and nature coexisting", "Exploring new places", "Mountaineering", "Tibet", "Dalia Lama", "Poetic", "Profound", "Great cinematography", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/sevenyearsintibet/custom_poster.PNG')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/6fOnpPpobaisTHo1MChGCh76qV8.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/23Fk",
@@ -2829,7 +2881,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Dystopia"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/thematrix/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/eOCm",
@@ -2860,7 +2912,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Terrifying"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/thestrangers/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/eei83VHNaHFopOyxeFj5XI6LjLJ.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/3ybW",
@@ -2875,7 +2927,8 @@ const initState = {
             "title": "Starry Eyes",
             "myRating": "8.2",
             "myTags": ["Fake celebrity personas", "Terrifying", "Metamorphosis", "Challenging to watch at times", "Cults"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/t1sIumVCl91XThMoJqUjpERYeAM.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2a8W",
@@ -2890,14 +2943,16 @@ const initState = {
             "title": "American Mary",
             "myRating": "7.8",
             "myTags": ["Disturbing", "Body modification"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/wAJ69oBFsJ4ocOrnANixIx52A0x.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/293w",
             "title": "The Prestige",
             "myRating": "8.0",
-            "myTags": [""],
-            "myReview": ""
+            "myTags": ["Magician"],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/bdN3gXuIZYaJP7ftKK2sU0nPtEA.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/3SWy",
@@ -2911,14 +2966,16 @@ const initState = {
             "title": "Super 8",
             "myRating": "7.7",
             "myTags": [""],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/gUFHzEiJFgzGfwYvZv5opXHUJfo.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/77xu",
             "title": "The Babadook",
             "myRating": "8.1",
             "myTags": [""],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ArPWMf2leE6H9IIJ3tHVt6uewLR.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/oPSK",
@@ -2926,20 +2983,21 @@ const initState = {
             "myRating": "8.5",
             "myTags": ["Rebirth", "Hallucinogenic", "Psychedlic", "Vicious", "Disgusting", "Phantasmagoria", "Insecurity", "Ego", "Atmospheric", "Constantly surprising", "Defamiliarization", "Hedonistic", "Libertine"],
             "myReview": "",
-            "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 8, 8, 8, 9, 9]
+            "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 8, 8, 8, 9, 9],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/5DNRr2juXdwtvktwXxwuk9Usk8O.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/on14",
             "title": "Poupelle of Chimney Town",
             "myRating": "8.2",
             "myTags": ["Heterodox thinker", "Religion", "Friendship", "Intricate animation style", "Textures", "Steampunk", "Colourful", "Exploring new places", "Anti-smoking"],
+            "customPosterUrl": require('../img/films/poupelleofchimmneytown/custom_poster.jpg'),
             "gradualInterest": [8, 8, 8, 8, 7, 7, 7, 8, 9, 9],
             "screenshots": [
                 require('../img/films/poupelleofchimmneytown/screenshot1.PNG'),
                 require('../img/films/poupelleofchimmneytown/screenshot2.PNG'),
                 require('../img/films/poupelleofchimmneytown/screenshot3.PNG')
             ],
-            "customPosterUrl": require('../img/films/poupelleofchimmneytown/custom_poster.jpg'),
             "myReview": "<div class='review-content'> \
                             <div class='toggle-section-container'> \
                                 <div class='toggle-section-btn'></div> \
@@ -3010,7 +3068,8 @@ const initState = {
             "myRating": "8.3",
             "myTags": ["Atmospheric", "Ghosts", "Creepy", "Melancholic", "British humour", "Synthwave", "Great soundtrack"],
             "myReview": "",
-            "gradualInterest": [8, 8, 9, 9, 8, 8, 8, 7, 7, 7, 7, 8]
+            "gradualInterest": [8, 8, 9, 9, 8, 8, 8, 7, 7, 7, 7, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/y9QjwDLV5SAtRxYF5h1gRsDFaLd.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/6zhs",
@@ -3044,7 +3103,8 @@ const initState = {
             "myRating": "7.6",
             "myTags": ["Social anxiety", "Cotswolds", "British humour"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8]
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/czBrEzJ7fzO4H8GzPerxJ6bP3kE.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1Qfo",
@@ -3110,7 +3170,8 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Melancholic", "Loneliness", "Amazing soundtrack"],
             "myReview": "",
-            "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8]
+            "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/h88yVKhgPAaPNEllDqsuhpQOJeL.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/3Ipk",
@@ -3139,7 +3200,8 @@ const initState = {
             "myRating": "7.8",
             "myTags": ["End of the world", "Nature", "Summer", "Family", "Togetherness"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 8, 8, 7, 7, 8, 8, 8, 8]
+            "gradualInterest": [7, 7, 7, 7, 8, 8, 7, 7, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/wuytCABUQRuJAmaGS5TOes7HSYx.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2b4m",
@@ -3208,7 +3270,8 @@ const initState = {
             "myRating": "7.7",
             "myTags": ["Absurd", "Absurdist comedy", "Breaking the fourth wall"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 8, 8, 8, 8, 7, 7]
+            "gradualInterest": [7, 7, 7, 7, 8, 8, 8, 8, 7, 7],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/3CtcLwXVvnMdKBAhzejPaNtTDym.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/kOf0",
@@ -3224,7 +3287,8 @@ const initState = {
             "myRating": "7.6",
             "myTags": ["Confusing", "Suspensful", "Atmospheric", "Murky", "Doppelganger", "Trauma", "Mental illness", "Unknown entities disguised as humans"],
             "myReview": "",
-            "gradualInterest": [6, 7, 7, 7, 8, 8, 7, 8, 8]
+            "gradualInterest": [6, 7, 7, 7, 8, 8, 7, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/c7WsgY4jPAvN0L90iUTuByElnJc.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1Dnu",
@@ -3232,7 +3296,8 @@ const initState = {
             "myRating": "7.9",
             "myTags": ["Faith", "Religon", "Exploring unknown territory", "Post-apocalyptic world", "Humanity", "Growth", "Death", "Stylistic", "Atmospheric", "People that are blind"],
             "myReview": "",
-            "gradualInterest": [6, 6, 6, 7, 7, 6, 7, 7, 8, 8, 8, 8]
+            "gradualInterest": [6, 6, 6, 7, 7, 6, 7, 7, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/1H1y9ZiqNFaLgQiRDDZLA55PviW.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2bcU",
@@ -3240,7 +3305,8 @@ const initState = {
             "myRating": "9.1",
             "myTags": ["Soulmate"],
             "myReview": "",
-            "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 9, 9, 9]
+            "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 9, 9, 9],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/aZ2Vkrc4RqIjewYbmfy74oDgZfX.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/kKi0",
@@ -3281,7 +3347,8 @@ const initState = {
             "myRating": "7.8",
             "myTags": ["Claustrophobic"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 8, 8, 8, 8, 8]
+            "gradualInterest": [7, 7, 7, 7, 8, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/splPNB0vAoNlb8l5WYxz2E3FK2G.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/fMfM",
@@ -3298,7 +3365,8 @@ const initState = {
             "myRating": "7.6",
             "myTags": ["Astronomy", "Psychedelic", "Confusing", "Trippy"],
             "myReview": "",
-            "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8]
+            "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8],
+            "customPosterUrl": require('../img/films/solaris/custom_poster.jpg')
         },
         {
             "letterboxdUrl": "https://boxd.it/zZ8",
@@ -3327,6 +3395,27 @@ const initState = {
             "myReview": "",
             "gradualInterest": [8, 9, 9, 9, 8, 7, 8, 8, 9, 9],
             "customPosterUrl": require('../img/films/bigfishandbegonia/custom_poster2.jpg')
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/d27e",
+            "title": "The Tag-Along",
+            "myRating": "8.2",
+            "screenshots": [
+                require('../img/films/thetagalong/screenshot1.PNG'),
+                require('../img/films/thetagalong/screenshot2.PNG'),
+                require('../img/films/thetagalong/screenshot3.PNG'),
+            ],
+            "myTags": ["Possession", "Insects", "Questioning reality", "Nature", "Confusing"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 9, 9]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/4aYW",
+            "title": "The Seasoning House",
+            "myRating": "7.7",
+            "myTags": ["Disturbing"],
+            "myReview": "",
+            "gradualInterest": [7, 6, 6, 7, 8, 8, 8, 8, 8]
         }
     ]
 }

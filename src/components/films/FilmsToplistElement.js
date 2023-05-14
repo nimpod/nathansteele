@@ -68,7 +68,35 @@ class FilmsToplistElement extends Component {
         }
 
         return(
-            <div className='films-toplist-item' id={`toplist-element-${reviewId}`}>
+            <div className='films-toplist-item'>
+                <div className='filmDetails'>
+                    <div className='filmGeneralData'>
+                        <span className='filmDetailsItem filmTitle' title='Title'>{title}</span>
+                        <span className='filmDetailsItem filmYear' title='Year of release'>{this.props.filmWebdata.year}</span>
+                        <span className='filmDetailsItem filmLanguage' title='Language'>{this.props.filmWebdata.language}</span>
+                        <span className='filmDetailsItem filmDuration' title='Title'>{this.props.filmWebdata.duration} mins</span>
+                        <div className='filmDetailsItem filmGenres' title='Genres'>
+                            {this.props.filmWebdata.genres.map(genre => {
+                                return <span className='genre-tag'>{genre}</span>
+                            })}
+                        </div>
+                        <div className='filmDetailsItem filmDirectors' title='Directors'>
+                            {this.props.filmWebdata.directors.map(director => {
+                                return <span className='director-tag'>{director}</span>
+                            })}
+                        </div>
+                        <div className='filmDetailsItem filmUrls'>
+                            <a href={this.props.filmWebdata.imdbUrl}>IMDB</a>
+                            <a href={this.props.filmWebdata.letterboxdUrl}>Letterboxd</a>
+                        </div>
+                    </div>
+                    <div className='filmMyData'>
+                        <span className='filmMyPos' title='Title'>#{this.props.filmWebdata.position}</span>
+                        <span className='filmMyRating' title='Title'>{this.props.filmLocaldata.myRating} / 10</span>
+                        <span className={`filmImdbDifferenceScore ${diffScoreClassname}`} title='Title'>{diffScoreStr}</span>
+                    </div>
+                </div>
+                <Link to={'/films/' + reviewId} id={`toplist-element-${reviewId}`}>
                     <picture className='filmPoster'>
                         <img src={posterUrl} />
                     </picture>
@@ -77,6 +105,7 @@ class FilmsToplistElement extends Component {
                         <img src={screenshot2} />
                         <img src={screenshot3} />
                     </div>
+                    {/*}
                     <div className='films-toplist-item-details'>
                         <div className='ratingsData'>
                             <div className='filmPosition' title='Position'>
@@ -90,18 +119,11 @@ class FilmsToplistElement extends Component {
                             <div className='filmImdbDifferenceScore' title='My rating - IMDB avg rating'>
                                 <p className={`diff-score ${diffScoreClassname}`}>{diffScoreStr}</p>
                                 <p className='diff-desc'>IMDb difference score</p>
-                                {/*}
-                                <a href={this.props.filmWebdata.imdbUrl} target='_blank'>
-                                    <img width={30} src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png' />
-                                </a>
-                                */}
                             </div>
                         </div>
                         <div className='filmDetails'>
                             <div>
-                                <div className='filmTitle' title='Title'>
-                                    {title}
-                                </div>
+                                <div className='filmTitle' title='Title'>{title}</div>
                             </div>
                             <div className='filmYear' title='Year of release'>
                                 {this.props.filmWebdata.year}
@@ -127,10 +149,9 @@ class FilmsToplistElement extends Component {
                                 })}
                             </div>
                         </div>
-                        <div className='filmReviewLink'>
-                            <Link to={'/films/' + reviewId}>My Review</Link>
-                        </div>
                     </div>
+                    */}
+                </Link>
             </div>
         )
     }
