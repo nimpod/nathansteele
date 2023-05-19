@@ -1511,7 +1511,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2BiY",
             "title": "Detachment",
-            "myRating": "9.2",
+            "myRating": "9.1",
             "myTags": ["School", "Teacher-student dichotomy", "Addiction", "Profound", "Melancholic", "Kindness", "Sad", "Depressing"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/lw1wlekuMMKxmYg7v01vB7Snkq6.jpg"
@@ -1535,7 +1535,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/hUMe",
             "title": "Aniara",
-            "myRating": "9.3",
+            "myRating": "9.5",
             "myTags": ["The incomprehensible vastness of space", "Civilisation on spaceship", "Contemplative sci-fi", "Virtual world", "Mysterious", "Creepy", "Dystopia", "Exploring the dark depths of humanity"],
             "myReview": ""
         },
@@ -1589,14 +1589,14 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/1JAY",
             "title": "Kiki's Delivery Service",
-            "myRating": "8.4",
+            "myRating": "8.7",
             "myTags": ["Endearing", "Happiness", "Growing up", "Discovering independence", "Finding yourself", "Soulmate", "Flying", "Positive reflection on witches", "Utopia", "Anime", "Great soundtrack"],
             "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/4JQS",
             "title": "The Wind Rises",
-            "myRating": "9.6",
+            "myRating": "10",
             "myTags": ["Growing up", "Engineering", "War", "Flying", "Soulmate", "Finding yourself", "Anime", "Great soundtrack"],
             "myReview": "",
             "customPosterUrl": require('../img/films/thewindrises/custom_poster.jpg')
@@ -1604,7 +1604,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2bc6",
             "title": "Nausica\u00e4 of the Valley of the Wind",
-            "myRating": "9.0",
+            "myRating": "9.2",
             "myTags": ["Humanity and nature coexisting", "Embrace mother nature", "End of the world", "Dystopia", "Flying", "Great Soundtrack", "Girl power"],
             "myReview": "",
             "customPosterUrl": require('../img/films/nausicaa/custom_poster.PNG')
@@ -1720,7 +1720,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/1Bn8",
             "title": "Exte: Hair Extensions",
-            "myRating": "8.2",
+            "myRating": "8.3",
             "myTags": ["Brutal", "Metamorphosis", "Fun", "Mad concept"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/qyHtXQchUu7DpeUNabDFIVnBRtq.jpg"
@@ -1777,7 +1777,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2pQ0",
             "title": "Redline",
-            "myRating": "8.1",
+            "myRating": "8.2",
             "myTags": ["Intricate animation style", "Intepretation of an intergalactic lifestyle", "Fictional racing event", "Audio-visual spectacle", "Intense", "Great soundtrack", "Anime"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/tuIO78Emr8katcv9sk4HONeLdNT.jpg"
@@ -1923,7 +1923,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/dZrW",
             "title": "Isle of Dogs",
-            "myRating": "8.7",
+            "myRating": "8.9",
             "myTags": ["Intricate animation style", "Great cinematography", "Animal welfare", "Humanity and nature coexisting", "Fun", "Friendship", "Great soundtrack"],
             "myReview": "",
             "customPosterUrl":  "https://www.themoviedb.org/t/p/original/rSluCePdXXtNiQeE6Na5yRGamhL.jpg"
@@ -2188,7 +2188,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2bf0",
             "title": "2001: A Space Odyssey",
-            "myRating": "8.3",
+            "myRating": "8.2",
             "myTags": ["Mysterious", "Grand", "Great cinematography", "Minimal dialogue", "Artificial Intelligence"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/zmmYdPa8Lxx999Af9vnVP4XQ1V6.jpg"
@@ -2404,7 +2404,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/9JNE",
             "title": "The Frame",
-            "myRating": "8.6",
+            "myRating": "8.7",
             "myTags": ["Contemplative sci-fi", "Mysterious", "Profound", "Questioning reality", "Simulation", "Creative use of framing"],
             "myReview": ""
         },
@@ -2474,7 +2474,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2ahY",
             "title": "Good Will Hunting",
-            "myRating": "9.0",
+            "myRating": "8.7",
             "myTags": ["Student teacher dichotomy", "Poetic", "Contemplative", "Learning"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/yK7xOCXGsrk0B26wCMNitRYzyDg.jpg"
@@ -2529,7 +2529,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/4KHC",
             "title": "Inside Out",
-            "myRating": "9.1",
+            "myRating": "8.8",
             "myTags": ["Emotional", "Friendship", "Anger", "Clever analogy for real life feelinsg", "Layered", "Deeper than a kids film", "Great soundtrack"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg"
@@ -2539,8 +2539,7 @@ const initState = {
             "title": "The Pianist",
             "myRating": "9.0",
             "myTags": ["War", "Minimal", "Very small cast", "The universal power of music"],
-            "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/enFfoFd3TYs6ttTxrBIfmecQPnz.jpg"
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/jj4y",
@@ -2576,7 +2575,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/dL2y",
             "title": "My Life as a Zucchini",
             "titleDisplayed": "My Life as a Courgette",
-            "myRating": "9.0",
+            "myRating": "8.9",
             "myTags": ["Stop motion animation", "Uplifting", "Finding happiness", "Friendship", "Emotional", "Endearing", "Soulmate", "Bad parenting"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/g91phMUr77Vw6uRmpIjH1hvZpov.jpg"
@@ -2585,7 +2584,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/1EmM",
             "title": "500 Days of Summer",
             "titleDisplayed": "(500) Days of Summer",
-            "myRating": "9.3",
+            "myRating": "9.2",
             "myTags": ["Soulmate", "Non-linear timeline", "Emotional"],
             "myReview": ""
         },
@@ -2599,7 +2598,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/i7xm",
             "title": "The Mitchells vs the Machines",
-            "myRating": "9.3",
+            "myRating": "9.1",
             "myTags": ["Intricate animation style", "End of the world", "Uplifting", "Family", "Social commentary"],
             "myReview": ""
         },
@@ -2791,7 +2790,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/hNVe",
             "title": "Hereditary",
-            "myRating": "8.3",
+            "myRating": "8.2",
             "myTags": ["Terrifying", "Gross", "Family", "Betrayl", "Possession"],
             "myReview": "",
             "customPosterUrl": require('../img/films/hereditary/custom_poster.jpg'),
@@ -2815,7 +2814,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2a3C",
             "title": "Silent Hill",
-            "myRating": "9.6",
+            "myRating": "9.7",
             "myTags": ["Atmospheric", "Disgusting", "Gross", "Creature-feature", "Cults", "Religion", "Satanic worshipers", "Foggy town", "Mysterious", "Video game adapatation", "Great soundtrack"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/ljAIu5OJWS8AYy5c5zmtwHPdHd1.jpg"
@@ -3159,7 +3158,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/lpUk",
             "title": "Tokyo Vampire Hotel",
-            "myRating": "9.0",
+            "myRating": "9.2",
             "myTags": ["Intense", "The audience is thrown into a bizzare situation and forced to experience it", "Colourful", "Amazing soundtrack"],
             "myReview": "",
             "gradualInterest": [8, 9, 9, 9, 8, 8, 8, 9, 9, 9, 9, 8, 9, 9]
@@ -3167,7 +3166,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/14z6",
             "title": "Ritual",
-            "myRating": "8.1",
+            "myRating": "8.2",
             "myTags": ["Melancholic", "Loneliness", "Amazing soundtrack"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8],
@@ -3302,7 +3301,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2bcU",
             "title": "Before Sunrise",
-            "myRating": "9.1",
+            "myRating": "9.0",
             "myTags": ["Soulmate"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 9, 9, 9],
@@ -3385,7 +3384,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/8bfm",
             "title": "Big Fish and Begonia",
-            "myRating": "9.0",
+            "myRating": "9.1",
             "screenshots": [
                 require('../img/films/bigfishandbegonia/screenshot1.PNG'),
                 require('../img/films/bigfishandbegonia/screenshot5.PNG'),
