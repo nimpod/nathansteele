@@ -3415,6 +3415,22 @@ const initState = {
             "myTags": ["Disturbing"],
             "myReview": "",
             "gradualInterest": [7, 6, 6, 7, 8, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1S0A",
+            "title": "Ponyo",
+            "myRating": "8.9",
+            "myTags": ["Feverdreamy", "Majestic", "Viewing the world through the mind of a child", "Sealife merging with humanity", "Great soundtrack"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 9, 9, 10]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/mQbe",
+            "title": "The Last Duel",
+            "myRating": "7.8",
+            "myTags": ["Medieval lifestyle", "Historical", "Perspective"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8, 7, 7, 8, 8, 8, 7]
         }
     ]
 }

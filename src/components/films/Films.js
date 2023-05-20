@@ -12,6 +12,7 @@ import { ReactComponent as ArrowLeftIcon } from "../../icons/arrowLeft.svg";
 import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
 import { Helpers } from 'react-scroll';
 import FilmsToplistElement from './FilmsToplistElement.js';
+import $ from 'jquery';
 
 let filmReviewsSorted = [];
 
@@ -28,18 +29,20 @@ class Films extends Component {
         return(
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
-                    <div className='films-controls'>
-
-                    </div>
-                    <div className="films-toplist">
-                        {filmReviewsSorted.map((film, i) => {
-                            for (let j = 0; j < this.props.filmReviewsLocaldata.length; j++) {
-                                let local = Array.from(this.props.filmReviewsLocaldata)[j];
-                                if (local.letterboxdUrl == film.letterboxdUrl) {
-                                    return <FilmsToplistElement filmWebdata={film} filmLocaldata={local} key={i} />;
+                    <div className='films-container'>
+                        <div className='films-controls'>
+                        
+                        </div>
+                        <div className="films-toplist">
+                            {filmReviewsSorted.map((film, i) => {
+                                for (let j = 0; j < this.props.filmReviewsLocaldata.length; j++) {
+                                    let local = Array.from(this.props.filmReviewsLocaldata)[j];
+                                    if (local.letterboxdUrl == film.letterboxdUrl) {
+                                        return <FilmsToplistElement filmWebdata={film} filmLocaldata={local} key={i} />;
+                                    }
                                 }
-                            }
-                        })}
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -32,7 +32,7 @@ export function getReviewId(title, letterboxdUrl) {
     let letterboxdId = letterboxdUrl.split('/').pop()
     
     let reviewId = newTitle + '-' + letterboxdId + '-' + 'review';
-    console.log(reviewId);
+    /// console.log(reviewId);
 
     return reviewId;
 }

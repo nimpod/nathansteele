@@ -75,7 +75,7 @@ class Movies extends Component {
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
                     <div className='films-controls'>
-
+                    
                     </div>
                     <div className="films-toplist">
                         {filmReviewsSorted.map((film, i) => {

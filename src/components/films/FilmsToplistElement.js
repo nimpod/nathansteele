@@ -38,7 +38,7 @@ class FilmsToplistElement extends Component {
             diffScoreStr = diffScore;
             diffScoreClassname = "equal-diff";
         }
-        console.log(diffScore);
+        // console.log(diffScore);
 
         // use custom poster url if it exists...
         let posterUrl = ""
@@ -69,29 +69,29 @@ class FilmsToplistElement extends Component {
 
         return(
             <div className='films-toplist-item'>
-                <div className='filmDetails'>
-                    <span className='filmTitle' title='Title'>{title}</span>
-                    <div className='filmMyData'>
-                        <span className='filmMyPos' title='Position in my toplist'>#{this.props.filmWebdata.position}</span>
-                        <span className='filmMyRating' title='My rating'>{this.props.filmLocaldata.myRating}</span>
-                        <span className={`filmImdbDifferenceScore ${diffScoreClassname}`} title='Difference between my rating and IMDb avg rating'>{diffScoreStr}</span>
+                <div className='film-details'>
+                    <span className='film-title' title='Title'>{title}</span>
+                    <div className='film-myData'>
+                        <span className='film-myPos' title='Position in my toplist'>#{this.props.filmWebdata.position}</span>
+                        <span className='film-myRating' title='My rating'>{this.props.filmLocaldata.myRating}</span>
+                        <span className={`film-imdbDiffScore ${diffScoreClassname}`} title='Difference between my rating and IMDb avg rating'>
+                            <a href={`${this.props.filmWebdata.imdbUrl}`} target='_blank'>{diffScoreStr}</a>
+                        </span>
                     </div>
-                    <span className='filmDuration' title='Duration in mins'>{this.props.filmWebdata.duration} mins</span>
-                    <span className='filmYear' title='Year of release'>{this.props.filmWebdata.year}</span>
-                    <span className='filmLanguage' title='Language'>{this.props.filmWebdata.language}</span>
-                    <div className='filmGenres' title='Genres'>
+                    <span className='film-duration' title='Duration in mins'>{this.props.filmWebdata.duration} mins</span>
+                    <span className='film-year' title='Year of release'>{this.props.filmWebdata.year}</span>
+                    <span className='film-language' title='Language'>{this.props.filmWebdata.language}</span>
+                    <div className='film-genres' title='Genres'>
                         {this.props.filmWebdata.genres.map(genre => {
                             return <span className='genre-tag'>{genre}</span>
                         })}
                     </div>
-                    {/*}
-                    <div className='filmUrls'>
-                        <a href={this.props.filmWebdata.imdbUrl}>IMDB</a>
+                    <div className='film-urls'>
+                        <a href={this.props.filmWebdata.tmdbUrl}>TMDb</a>
                         <a href={this.props.filmWebdata.letterboxdUrl}>Letterboxd</a>
                     </div>
-                    */}
                     {/*}
-                    <div className='filmDirectors' title='Directors'>
+                    <div className='film-directors' title='Directors'>
                         {this.props.filmWebdata.directors.map(director => {
                             return <span className='director-tag'>{director}</span>
                         })}
@@ -99,10 +99,10 @@ class FilmsToplistElement extends Component {
                     */}
                 </div>
                 <Link to={'/films/' + reviewId} id={`toplist-element-${reviewId}`}>
-                    <picture className='filmPoster'>
+                    <picture className='film-poster'>
                         <img src={posterUrl} />
                     </picture>
-                    <div className='filmScreenshots'>
+                    <div className='film-screenshots'>
                         <img src={screenshot1} />
                         <img src={screenshot2} />
                         <img src={screenshot3} />
