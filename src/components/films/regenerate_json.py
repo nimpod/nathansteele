@@ -1,3 +1,9 @@
+"""
+This python script allows us to do 2 things:
+1) Automatically download my letterboxd data without having to manually find and click the button.
+2) Automatically regnerate the json file that stores data about each film retrieved from online sources (letterboxd film page, tmdb api).
+"""
+
 import time
 import os
 import zipfile
@@ -41,9 +47,9 @@ class Helpers:
 
 
 
-def export_letterboxd_data():
+def download_letterboxd_data():
     """
-    Function to automatically export letterboxd data (uses selenium python library)
+    Function to automatically download letterboxd data (uses selenium python library)
     """
     
     # setup selenium...
@@ -84,9 +90,9 @@ def export_letterboxd_data():
     driver.close()
 
 
-def regenerate_json_data_from_letterboxd_export():
+def regenerate_json_file():
     """
-    Function to re-generate json data based on letterboxd data
+    Function to re-generate json file based on most recently downloaded letterboxd data
     """
     
     # filepaths used in generating json data...
@@ -292,5 +298,5 @@ def regenerate_json_data_from_letterboxd_export():
 
 
 # call my functions........
-export_letterboxd_data()
-regenerate_json_data_from_letterboxd_export()
+download_letterboxd_data()
+regenerate_json_file()
