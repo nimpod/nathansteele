@@ -2281,7 +2281,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/H4k",
             "title": "Insidious",
-            "myRating": "8.9",
+            "myRating": "9.3",
             "myTags": ["Disturbing", "Terrifying", "Possession"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/tmlDFIUpGRKiuWm9Ixc6CYDk4y0.jpg"
@@ -3384,7 +3384,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/8bfm",
             "title": "Big Fish and Begonia",
-            "myRating": "9.1",
+            "myRating": "9.3",
             "screenshots": [
                 require('../img/films/bigfishandbegonia/screenshot1.PNG'),
                 require('../img/films/bigfishandbegonia/screenshot5.PNG'),
@@ -3422,7 +3422,8 @@ const initState = {
             "myRating": "8.9",
             "myTags": ["Feverdreamy", "Majestic", "Viewing the world through the mind of a child", "Sealife merging with humanity", "Great soundtrack"],
             "myReview": "",
-            "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 9, 9, 10]
+            "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 9, 9, 10],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/kP27eFa63Y8bdUTd5YGwqxYUXCU.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/mQbe",
@@ -3431,6 +3432,23 @@ const initState = {
             "myTags": ["Medieval lifestyle", "Historical", "Perspective"],
             "myReview": "",
             "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8, 7, 7, 8, 8, 8, 7]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/6YA",
+            "title": "Primer",
+            "myRating": "7.8",
+            "myTags": ["Timey-wimey"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/lwe6",
+            "title": "Children of the Sea",
+            "myRating": "9.6",
+            "myTags": ["The origins of life", "Astronomy", "Cosmology", "Spirituality", "The mysteries of the ocean world", "Sealife", "Exploring new perspectives", "Visual trip", "Audio-visual spectacle"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/i91YrURnZPCKhpNyIxkAAzBb4t9.jpg"
         }
     ]
 }

@@ -292,5 +292,5 @@ def regenerate_json_data_from_letterboxd_export():
 
 
 # call my functions........
-# export_letterboxd_data()
+export_letterboxd_data()
 regenerate_json_data_from_letterboxd_export()
