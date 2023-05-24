@@ -2289,7 +2289,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/5n0s",
             "title": "Europa Report",
-            "myRating": "8.7",
+            "myRating": "8.5",
             "myTags": ["Contemplative sci-fi", "Profound",  "Amazing CGI", "Found footage", "Mokumentary", "Exploration of untouched places in the solar system that may harbour unique lifeforms"],
             "myReview": "",
             "customPosterUrl": require('../img/films/europareport/custom_poster.jpg'),
@@ -2435,7 +2435,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/1Z2I",
             "title": "Phenomenon",
-            "myRating": "8.8",
+            "myRating": "8.7",
             "myTags": ["Uplifting", "Mysterious", "Awakanening-ish", "Soulmate"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/5eK1HNf0Kl2vDPOeqf1kX4SKxrw.jpg"
@@ -3170,7 +3170,7 @@ const initState = {
             "myTags": ["Melancholic", "Loneliness", "Amazing soundtrack"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8],
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/h88yVKhgPAaPNEllDqsuhpQOJeL.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/mezq9K3DLOOEwiQujZDbfUvk5h4.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/3Ipk",
@@ -3383,7 +3383,8 @@ const initState = {
         },
         {
             "letterboxdUrl": "https://boxd.it/8bfm",
-            "title": "Big Fish and Begonia",
+            "title": "Big Fish & Begonia",
+            "titleDisplayed": "Big Fish and Begonia",
             "myRating": "9.3",
             "screenshots": [
                 require('../img/films/bigfishandbegonia/screenshot1.PNG'),

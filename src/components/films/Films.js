@@ -24,7 +24,10 @@ class Films extends Component {
      */
     render() {
         // this.mergeData();
-        filmReviewsSorted = Array.from(this.props.filmReviewsWebdata).sort((a,b) => { return a['position'] - b['position'] }).reverse();
+        const webdata = Array.from(this.props.filmReviewsWebdata).sort((a,b) => { return a['position'] - b['position'] }).reverse();
+        const localdata = Array.from(this.props.filmReviewsLocaldata)
+        console.log("Webdata length: " + webdata.length);
+        console.log("Localdata length: " + localdata.length);
 
         return(
             <div className="page-wrapper film-reviews-homepage">
@@ -34,11 +37,13 @@ class Films extends Component {
                         
                         </div>
                         <div className="films-toplist">
-                            {filmReviewsSorted.map((film, i) => {
+                            {webdata.map((filmWeb, i) => {
                                 for (let j = 0; j < this.props.filmReviewsLocaldata.length; j++) {
-                                    let local = Array.from(this.props.filmReviewsLocaldata)[j];
-                                    if (local.letterboxdUrl == film.letterboxdUrl) {
-                                        return <FilmsToplistElement filmWebdata={film} filmLocaldata={local} key={i} />;
+                                    let filmLocal = localdata[j];
+                                    if (filmLocal.letterboxdUrl == filmWeb.letterboxdUrl) {
+                                        // console.log(filmLocal.title + " " + filmLocal.letterboxdUrl + " " + filmWeb.letterboxdUrl)
+                                        console.log(filmWeb);
+                                        return <FilmsToplistElement filmWebdata={filmWeb} filmLocaldata={filmLocal} key={i} />;
                                     }
                                 }
                             })}

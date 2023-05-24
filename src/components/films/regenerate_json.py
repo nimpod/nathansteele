@@ -42,8 +42,22 @@ class Helpers:
             Face/Off = faceoff
             K-PAX = kpax
             Exte: Hair Extensions = extehairextensions
+            Big Fish & Begonia = bigfishandbegonia
         """
-        return title.replace(" ", "").replace(".", "").replace("/", "").replace("(", "").replace(")", "").replace("'", "").replace("\"", "").replace(":", "").replace(";", "").replace("-", "").replace(",", "").replace("·", "").lower()
+        return title.replace(" ", "")\
+                    .replace(".", "")\
+                    .replace("/", "")\
+                    .replace("(", "")\
+                    .replace(")", "")\
+                    .replace("'", "")\
+                    .replace("\"", "")\
+                    .replace(":", "")\
+                    .replace(";", "")\
+                    .replace("-", "")\
+                    .replace(",", "")\
+                    .replace("·", "")\
+                    .replace("&", "and")\
+                    .lower()
 
 
 
@@ -151,6 +165,7 @@ def regenerate_json_file():
             # 4) iterate over each row (i.e. each film) in csv file...
             for csv_row in csv_reader:
                 pos = csv_row[0]
+                title = csv_row[1]
                 year = csv_row[2]
                 letterboxd_url = csv_row[3]
                 letterboxd_film_id = letterboxd_url.split('/')[-1]
@@ -225,7 +240,7 @@ def regenerate_json_file():
                     poster_url = poster_url.split('SX300')[0]
                 
                 # retrieve title from IMDB (because letterboxd parsing is shite!)
-                title = imdb_json['Title']
+                # title = imdb_json['Title']
                 
                 # retrieve list of directors (because letterboxd parsing is shite!)
                 directors = imdb_json['Director'].split(', ')
@@ -255,7 +270,7 @@ def regenerate_json_file():
                 """
                 
                 # DEBUGGING....
-                print(f" > {pos}: {title} {imdb_url} {tmdb_url}")
+                print(f" > {pos}: {title} {review_id}")
                 #print(f' > Title = ({title})')
                 #print(f' > IMDB url = ({imdb_url})')
                 #print(f' > Language = ({language})')

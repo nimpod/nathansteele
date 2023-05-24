@@ -2472,7 +2472,7 @@ div.genre:hover {
 /* Stuff containing poster & screenshots */
 .films-toplist-item > a {
   display: grid;
-  grid-template-columns: 3.5fr 7.2fr;
+  grid-template-columns: 3.8fr 7.2fr;
   opacity: 1.0 !important;
   border-radius: var(--film-poster-border-radius);
   border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color);
