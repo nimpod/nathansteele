@@ -2333,7 +2333,7 @@ ul.messiahs-handbook p.quote-person {
 
 /* div container around entire list */
 .films-toplist {
-  margin-left: 40px;
+  padding-bottom: 50px;
 }
 
 /* Film details above poster */
@@ -2531,6 +2531,34 @@ div.genre:hover {
 }
 .film-screenshots img:nth-child(3) {
   border-bottom-right-radius: calc(var(--film-poster-border-radius) - 2px);
+}
+
+/* #endregion */
+
+
+/* #region Pagination */
+
+.pagination-btns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.pagination-btns li a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid rgb(39, 42, 47);
+  background-color: rgb(75, 72, 72);
+  color: var(--text) !important;
+  cursor: pointer;
+}
+.pagination-btns li a:hover,
+.pagination-btns li.pagination-active a {
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(51, 164, 149);
+  opacity: 1;
 }
 
 /* #endregion */
