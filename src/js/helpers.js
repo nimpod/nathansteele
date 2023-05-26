@@ -26,15 +26,31 @@ export function getReviewId(title, letterboxdUrl) {
         .replaceAll('’', '')
         .replaceAll(/'/g, '')
         .replaceAll(/[/]/g, '')
+        .replaceAll('¤', 'a')
         .toLowerCase();
 
     // get id from URL
     let letterboxdId = letterboxdUrl.split('/').pop()
     
+    // define structure of the review ID
+    // ideally would be {title}-{year}-review
+    // (e.g. thelegomovie-2017-review)
     let reviewId = newTitle + '-' + letterboxdId + '-' + 'review';
-    /// console.log(reviewId);
-
     return reviewId;
+}
+
+/**
+ * Iterate two lists simultanesouly
+ * @param {*} arrays 
+ * @returns 
+ */
+export function* zip(arrays) {
+    let iterators = arrays.map(a => a[Symbol.iterator]());
+    while (true) {
+        let results = iterators.map(it => it.next());
+        if (results.some(r => r.done)) return;
+        yield results.map(r => r.value);
+    }
 }
 
 

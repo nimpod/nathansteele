@@ -1607,7 +1607,7 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["Humanity and nature coexisting", "Embrace mother nature", "End of the world", "Dystopia", "Flying", "Great Soundtrack", "Girl power"],
             "myReview": "",
-            "customPosterUrl": require('../img/films/nausicaa/custom_poster.PNG')
+            "customPosterUrl": require('../img/films/nausicaaOfTheValleyOfTheWind/custom_poster.PNG')
         },
         {
             "letterboxdUrl": "https://boxd.it/2b1i",
@@ -3432,7 +3432,8 @@ const initState = {
             "myRating": "7.8",
             "myTags": ["Medieval lifestyle", "Historical", "Perspective"],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8, 7, 7, 8, 8, 8, 7]
+            "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8, 7, 7, 8, 8, 8, 7],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/3TxPIZ8nlSzB6WTOtoBz0YrxT8M.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/6YA",
@@ -3450,6 +3451,83 @@ const initState = {
             "myReview": "",
             "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/i91YrURnZPCKhpNyIxkAAzBb4t9.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1Eo4",
+            "title": "Pandorum",
+            "myRating": "7.7",
+            "myTags": ["Cosmic horror"],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/71Y",
+            "title": "American Beauty",
+            "myRating": "7.6",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/6MNwC101wSEsDyxTJBGXsgIMlmh.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1xdy",
+            "title": "The Eye 2",
+            "myRating": "7.6",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/2l8GsWmmJItS4TAhp3ff5xQxcSn.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/fof4",
+            "title": "Dave Made A Maze",
+            "myRating": "7.5",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/7Z5sEOC8Y7bdrg7FmIfNGkNniyX.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/kOde",
+            "title": "Diner",
+            "myRating": "7.5",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1ZvA",
+            "title": "Steamboy",
+            "myRating": "7.5",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/eLuk",
+            "title": "It Comes At Night",
+            "myRating": "7.5",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/aYDB5kf08ZCcAWXYas4koGmiIIT.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/3V4Y",
+            "title": "Sightseers",
+            "myRating": "7.5",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/3L7zuJ6TdbB7Cizd1eZNNbAr9YG.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/9ssO",
+            "title": "The Visit",
+            "myRating": "7.5",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8]
         }
     ]
 }

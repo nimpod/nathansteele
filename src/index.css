@@ -20,24 +20,24 @@
 
 /* particlejs variables */
 :root {
-  --particle-count: 500;
-  --particle-density: 1300;
-  --particle-opacity: 0.4;
+  --particle-count: 600;
+  --particle-density: 1200;
+  --particle-opacity: 0.6;
   --particle-opacity-min: 0.2;
-  --particle-size: 1.2;
-  --particle-speed: 0.5;
-  --line-count: 110;
-  --line-opacity: 0.0;
+  --particle-size: 1.7;
+  --particle-speed: 0.9;
+  --line-count: 60;
+  --line-opacity: 0.3;
   --line-width: 0.90;
-  --linked-line-opacity: 0.5;
-  --linked-line-radius: 50;
-  --particle-color-1: rgb(23, 12, 37);
-  --particle-color-2: rgb(6, 14, 6);
-  --particle-color-3: rgb(254, 252, 243);
-  --particle-color-4: rgb(255, 247, 187);
-  --particle-line-color: rgba(177, 134, 132, 0.515);
-  --num-of-particles-to-spawn-on-push: 30;
-  --particle-animation-speed: 4;
+  --linked-line-opacity: 1.0;
+  --linked-line-radius: 100;
+  --particle-color-1: rgb(244, 239, 86);
+  --particle-color-2: rgb(137, 255, 137);
+  --particle-color-3: rgb(94, 15, 15);
+  --particle-color-4: rgb(12, 63, 69);
+  --particle-line-color: rgba(0, 0, 0, 0.983);
+  --num-of-particles-to-spawn-on-push: 10;
+  --particle-animation-speed: 6;
 }
 
 /* tag category colours */
@@ -78,7 +78,10 @@
 /** LIGHT MODE */
 :root {
   --bg1: rgb(225, 231, 238);   /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(251, 251, 252);   /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg2: rgb(156, 189, 183);   /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg3: rgb(252, 242, 155);
+  --bg4: rgb(249, 195, 125);
+  --bg5: rgb(254, 172, 255);
 
   --text: rgb(128, 128, 128);
   --text-darker: rgb(68, 68, 68);
@@ -258,9 +261,12 @@
 
 /** DARK MODE  **/
 [data-theme="dark"] {
-  --bg1: rgb(0, 0, 0); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(10, 28, 47); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
-  
+  --bg1: rgb(149, 143, 91); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg2: rgb(127, 66, 66); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg3: rgb(61, 101, 100);
+  --bg4: rgb(71, 90, 70);
+  --bg5: rgb(51, 47, 59);
+
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
   --intro-text: rgb(192, 192, 196);
@@ -515,15 +521,28 @@ body {
   padding: 0;
   margin: 0;
   background: linear-gradient(
-    180deg,
+    -170deg,
     var(--bg1),
-    var(--bg2)
+    var(--bg2),
+    var(--bg3),
+    var(--bg4),
+    var(--bg5)
   ) fixed;
-  animation: background_gradient_animation 50s ease infinite;    /* lasts 30s, eases in, and is infinite */
+  animation: background_gradient_animation 11s ease infinite;    /* lasts 30s, eases in, and is infinite */
   height: 100%;
+  background-size: 800% 800%;
+  /*
   background-repeat: no-repeat;
   background-attachment: fixed;
+  */
 }
+@keyframes background_gradient_animation {
+  /*                          (x,  y) */
+  0%    {background-position: 36% 0%    }
+  50%   {background-position: 65% 100%  }
+  100%  {background-position: 36% 0%    }  
+}
+
 
 body > div#root > div.App {
   display: flex;
@@ -688,7 +707,9 @@ Proposed structure of sidebar
   background-color: var(--sidenav-bg-color);
   text-align: center;
   z-index: 99999999;
+  /*
   box-shadow: 8px 0px 13px 0px var(--sidenav-shadow-color);
+  */
 }
 
 #nav-side a:not(.website-logo).navlink {
@@ -2304,36 +2325,22 @@ ul.messiahs-handbook p.quote-person {
 }
 
 
-/* #region Film controls */
-
-.films-controls {
-  height: 40px;
-  text-align: center;
-}
-.films-controls > button.update-films-toplist-btn {
-  border-radius: 20px;
-  background-color: rgb(79, 77, 77);
-  color: var(--text);
-  border: none;
-  outline: none;
-  font-size: 1.3rem;
-  padding: 2px 7px;
-}
-.films-controls > button.update-films-toplist-btn:hover {
-  background-color: rgb(65, 67, 71);
-}
-.films-controls > button.update-films-toplist-btn:active {
-  background-color: rgb(29, 29, 35);
+.films-container {
+  display: grid;
+  grid-template-columns: 50px 1fr;
 }
 
-/* #endregion */
+/*
+.films-container > div {
+  border: 1px solid red;
+}*/
 
 
 /* #region Toplist element */
 
 /* div container around entire list */
 .films-toplist {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 /* Film details above poster */
@@ -2538,30 +2545,142 @@ div.genre:hover {
 
 /* #region Pagination */
 
+:root {
+  /* Border colour of paginaton button */
+  --films-pagination-btn-border-color: rgb(85, 81, 81);
+  --films-pagination-btn-border-color-hover: rgb(120, 117, 117);
+  --films-pagination-btn-border-color-active: rgb(123, 245, 200);
+
+  /* Background colour of pagination button in normal/hover/active state */
+  --films-pagination-btn-bg-color: rgb(75, 72, 72);
+  --films-pagination-btn-bg-color-hover: rgb(120, 117, 117);
+  --films-pagination-btn-bg-color-selected: rgb(69, 182, 141);
+  --films-pagination-btn-bg-color-active: rgb(123, 245, 200);
+
+  /* Text colour of pagination button in hover/active state */
+  --films-pagination-btn-text-color-hover: var(--text);
+  --films-pagination-btn-text-color-active: rgb(75, 71, 71);
+
+  /* Background colour of next and previous buttons */
+  --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
+}
+
 .pagination-btns {
-  width: 80%;
-  height: 40px;
   list-style: none;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  position: fixed;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+  margin-top: 50px;
 }
 .pagination-btns li a {
+  display: flex;
   padding: 10px;
-  margin: 8px;
-  border-radius: 5px;
-  border: 1px solid rgb(39, 42, 47);
-  background-color: rgb(75, 72, 72);
+  margin-right: 10px;
+  width: 120px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 2px solid var(--films-pagination-btn-border-color);
   color: var(--text) !important;
   cursor: pointer;
+  display: inline-block;
 }
-.pagination-btns li a:hover,
+.pagination-btns li:not(.pagination-disabled) a {
+  background-color: var(--films-pagination-btn-bg-color);
+}
+.pagination-btns li:not(.previous-btn):not(.next-btn) {
+  margin-bottom: 5px;
+}
+/*
+.pagination-btns li.previous-btn,
+.pagination-btns li.next-btn {
+  display: none;
+}*/
+/* Move these buttons to bottom of page.... Horrendous */
+.pagination-btns li.previous-btn {
+  position: fixed;
+  bottom: 20px;
+  margin-left: 250px;
+}
+.pagination-btns li.next-btn {
+  position: fixed;
+  bottom: 20px;
+  margin-left: calc(470px + var(--film-toplist-item-fixed-width));
+}
+
+
+.pagination-btns li a:hover {
+  background-color: var(--films-pagination-btn-bg-color-hover);
+  color: var(--films-pagination-btn-text-color-hover) !important;
+  border: 2px solid var(--films-pagination-btn-border-color-hover);
+  opacity: 1;
+}
 .pagination-btns li.pagination-active a {
-  color: rgb(255, 255, 255) !important;
-  background-color: rgb(51, 164, 149);
+  background-color: var(--films-pagination-btn-bg-color-active);
+  color: var(--films-pagination-btn-text-color-active) !important;
+  border: 2px solid var(--films-pagination-btn-border-color-active);
   opacity: 1;
 }
 
+.pagination-btns li:not(.pagination-disabled).previous-btn a:hover,
+.pagination-btns li:not(.pagination-disabled).next-btn a:hover,
+.pagination-btns li.previous-btn.pagination-active a,
+.pagination-btns li.next-btn.pagination-active a {
+  color: var(--text) !important;
+  background-color: var(--films-pagination-nextandprevious-btns-bg-color);
+}
+
+/* Modify styles of a disabled button (applies only to .previous-btn, and next-btn) */
+.pagination-btns li.pagination-disabled a,
+.pagination-btns li.pagination-disabled:hover a {
+  background-color: var(--page-wrapper-bg);
+  color: var(--text-darker) !important;
+  cursor: not-allowed;
+}
+
 /* #endregion */
+
+
+/* #region Film controls */
+
+.films-controls {
+  height: 40px;
+  text-align: center;
+}
+.films-controls > button.update-films-toplist-btn {
+  border-radius: 20px;
+  background-color: rgb(79, 77, 77);
+  color: var(--text);
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 2px 7px;
+}
+.films-controls > button.update-films-toplist-btn:hover {
+  background-color: rgb(65, 67, 71);
+}
+.films-controls > button.update-films-toplist-btn:active {
+  background-color: rgb(29, 29, 35);
+}
+
+.films-controls > button {
+  outline: none !important;
+  border: none !important;
+  border-radius: 20px;
+  background-color: var(--another-btn-bg-color);
+  color: var(--text);
+  padding: 4px 10px;
+}
+.films-controls > button:hover {
+  background-color: rgb(92, 89, 89);
+}
+.films-controls > button.active {
+  color: rgb(0, 0, 0) !important;
+  background-color: rgb(126, 238, 206);
+}
+/* #endregion */
+
+
 
 /* #endregion */
 
@@ -2707,6 +2826,7 @@ div.genre:hover {
   font-size: 0.85rem;
 }
 /* #endregion */
+
 
 /* #endregion */
 
@@ -3135,13 +3255,6 @@ div.genre:hover {
 
 
 /* #region ----------------------------------<13: ANIMATIONS>---------------------------------- */
-@keyframes background_gradient_animation {
-  /*                          (x,  y) */
-  0% { background-position:   0%   0%; }     /* x=top left, y=centre */
-  50% { background-position:  100% 50%; }     /* x=bottom left, y=centre */
-  100% { background-position: 0%   100%; }     /* x=top left, y=centre */
-}
-
 @keyframes blogPostHeaderAnimation {
   
 }

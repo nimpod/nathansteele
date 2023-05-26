@@ -2,7 +2,7 @@
  * This is a react component that renders my 'Films' homepage
  */
 
-import React, {Component, useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { connect }  from 'react-redux';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
@@ -11,61 +11,150 @@ import { ReactComponent as OpenDropdownIcon } from "../../icons/openDropdown.svg
 import { ReactComponent as ArrowLeftIcon } from "../../icons/arrowLeft.svg";
 import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
 import { Helpers } from 'react-scroll';
+import { getValueOfCSSVariable, zip } from '../../js/helpers.js';
 import FilmsToplistElement from './FilmsToplistElement.js';
 import ReactPaginate from 'react-paginate';
 
 let STARTING_PAGE_NUM = 0;
+let MAX_FILMS_PER_PAGE = 25;
+
+const enumValue = (name) => Object.freeze({toString: () => name});
+const SortableTypes = Object.freeze({
+    IMDB_AVG: enumValue("imdbAvgRating"),
+    IMDB_VOTES: enumValue("imdbNumVotes"),
+    MY_POS: enumValue("position")
+});
+const SortableOrders = Object.freeze({
+    ASC: enumValue("ascending"),
+    DESC: enumValue("descending"),
+})
 
 
-class Films extends Component {
+class Films extends React.Component {
+    
+    state = {
+        // state representation of webdata (directors, year, genres, etc...)
+        // the default order is lowest rating to highest rating (i.e. ascending)
+        __webdata: Array.from(this.props.filmReviewsWebdata)
+            .sort((a,b) => { return a['position'] - b['position'] })
+            .reverse(),
+        
+        // state representation of localdata (my review, my rating, my tags, etc...)
+        __localdata: Array.from(this.props.filmReviewsLocaldata),
 
-    constructor(props) {
-        super(props);
+        // state representation of number of pages
+        __totalNumOfPages: Math.ceil(this.props.filmReviewsWebdata.length / MAX_FILMS_PER_PAGE),
 
-        //const __webdata = Array.from(this.props.filmReviewsWebdata).sort((a,b) => { return a['position'] - b['position'] }).reverse()
-        //const __localdata = Array.from(this.props.filmReviewsLocaldata);
-        //console.log("Webdata length: " + __webdata.length);
-        //console.log("Localdata length: " + __localdata.length);
+        // state representation of page number the user is currently on
+        __currentPageNum: STARTING_PAGE_NUM,
 
-        this.state = {
-            // state representation of webdata
-            //webdata: __webdata,
-
-            // state representation of localdata 
-            //localdata: __localdata,
-
-            // state representing which page the user is currently in. This is constantly updated as the user navigates through the list
-            pageNum: STARTING_PAGE_NUM
-        };
-    }
-
-    changePage(selected) {
-        this.setState({pageNum: selected})
+        // state representation of list sorting
+        __sort_type: SortableTypes.MY_POS,
+        __sort_order: SortableOrders.ASC
     }
 
     /**
-     * The Render() function, content rendered to screen
+     * Called when user wants to see another page...
+     * @param {*} obj 
+     */
+    changePage = (obj) => {
+        let firstIndexOfNewPage = obj.selected;
+        this.setState(prevState => {
+            return {
+                __currentPageNum: firstIndexOfNewPage
+            }
+        })
+    }
+
+    /**
+     * Sort my list in ascending order (i.e Lowest to highest)
+     * 
+     * For example...   (lowest IMDB avg rating ----> highest IMDB avg rating) (i.e. least critically acclaimed to most critically acclaimed according to IMDB avg rating)
+     *                  (lowest IMDB num votes -----> highest IMDB num votes) (i.e. least popular to most popular according to number of votes on IMDB)
+     *                  (lowest IMDB diff score ----> highest IMDB diff score) (i.e. most underrated according to the difference between my rating and IMDB avg rating)
+     * @param {*} type 
+     */
+    sortListAscendingOrder = (type) => {
+        this.setState(prevState => {
+            return {
+                __sort_type: type,
+                __sort_order: SortableOrders.ASC,
+                __webdata: Array.from(this.props.filmReviewsWebdata)
+                    .sort((a,b) => { return a[type] - b[type] })
+                    .reverse(),
+            }
+        })
+    }
+
+    /**
+     * Sort my list in descending order (i.e. lowest to highest)
+     * I do this by simply using the .reverse() function in javascript
+     * 
+     * @param {*} type 
+     */
+    sortListDescendingOrder = (type) => {
+        this.setState(prevState => {
+            return {
+                __sort_type: type,
+                __sort_order: SortableOrders.DESC,
+                __webdata: Array.from(this.props.filmReviewsWebdata)
+                    .sort((a,b) => { return a[type] - b[type] })
+            }
+        })
+    }
+
+    /**
+     * 
+     * @param {*} firstIndexOfCurrentPage 
+     * @param {*} lastIndexOfCurrentPage 
+     * @returns 
+     */
+    setPageIndexTitle = (firstIndexOfCurrentPage, lastIndexOfCurrentPage) => {
+        return firstIndexOfCurrentPage + " - " + lastIndexOfCurrentPage;
+    }
+
+    
+    /**
+     * 
+     */
+    componentDidMount() {
+        // Manually modify text content of pagination items
+        // I couldn't figure out how to use the 'pageLabelBuilder' attribute the way I wanted to use it.
+        let paginationBtns = document.querySelector('.films-container ul.pagination-btns');
+        let paginationBtnsList = paginationBtns.childNodes;
+        // if (paginationBtnsList[1].childNodes[0].textContent == "1") {
+        for (let i = 0; i < paginationBtnsList.length; i++) {
+            console.log('i = ' + i);
+            let btn = paginationBtnsList[i];
+            if (btn.classList.contains('previous-btn') == true || btn.classList.contains('next-btn') == true) {
+                // ignore the 'previous' and 'next' buttons...
+            } else {
+                let anchorTag = btn.childNodes[0];
+                for (let j = 0; j < this.state.__totalNumOfPages; j++) {
+                    let upperBound = (this.state.__webdata.length - ((i-1)*MAX_FILMS_PER_PAGE));
+                    let lowerBound = upperBound - MAX_FILMS_PER_PAGE + 1;
+                    // let textContent = (upperBound + " - " + lowerBound);
+                    let textContent = "Top " + upperBound;
+                    anchorTag.textContent = textContent;
+                    break;
+                }
+            }
+        }
+        // }
+    }
+
+    /**
+     * Content rendered to screen
      */
     render() {
-        // convert the webdata json into an iterable array...
-        const webdata = Array.from(this.props.filmReviewsWebdata)
-            .sort((a,b) => { return a['position'] - b['position'] })
-            .reverse()
-            .slice(0, this.props.filmReviewsWebdata.length);
-    
-        let MAX_FILMS_PER_PAGE = webdata.length;
-
         // convert the localdata json into an iterable array...
         const localdata = Array.from(this.props.filmReviewsLocaldata);
 
         // index of LAST item in current page
-        const lastIndex = this.state.pageNum * MAX_FILMS_PER_PAGE;
-
-        // calculate total number of pages...
-        const totalNumOfPages = Math.ceil(webdata.length / MAX_FILMS_PER_PAGE);
+        const lastIndex = this.state.__currentPageNum * MAX_FILMS_PER_PAGE;
 
         // get items for current page...
-        const filmsDisplayed = webdata
+        const filmsDisplayed = this.state.__webdata
             .slice(lastIndex, lastIndex + MAX_FILMS_PER_PAGE)
             .map(filmWeb => {
                 // iterate over localdata, and find the matching item in webdata...
@@ -76,26 +165,43 @@ class Films extends Component {
                     }
                 }
             })
+        console.log("lastIndex = " + lastIndex);
+        console.log("totalNumOfPages = " + this.state.__totalNumOfPages);
+        console.log(filmsDisplayed);
         
         return(
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
                     <div className='films-container'>
                         <div className='films-controls'>
-                        
-                        </div>
-                        <div className="films-toplist">
+                            {/*}
+                            <button className='active' onClick={() => this.sortListAscendingOrder(SortableTypes.MY_POS)}>
+                                My order
+                            </button>
+                            <button onClick={() => this.sortListAscendingOrder(SortableTypes.IMDB_AVG)}>
+                                Sort by highest IMDB avg score
+                            </button>
+                            <button onClick={() => this.sortListDescendingOrder(SortableTypes.IMDB_AVG)}>
+                                Sort by lowest IMDB avg score
+                            </button>
+                            */}
                             <ReactPaginate
                                 previousLabel={"< previous"}
                                 nextLabel={"> next"}
-                                pageCount={totalNumOfPages}
-                                onPageChange={() => this.changePage()}
+                                pageCount={this.state.__totalNumOfPages}
+                                onPageChange={this.changePage}
+                                pageRangeDisplayed={100}
                                 containerClassName={"pagination-btns"}
-                                previousLinkClassName={"previous-btn"}
-                                nextLinkClassName={"next-btn"}
+                                previousClassName={"previous-btn"}
+                                nextClassName={"next-btn"}
                                 disabledClassName={"pagination-disabled"}
                                 activeClassName={"pagination-active"}
+                                /*
+                                pageLabelBuilder={() => this.setPageIndexTitle(topIndex, (topIndex - MAX_FILMS_PER_PAGE + 1))}
+                                */
                             />
+                        </div>
+                        <div className="films-toplist">
                             {filmsDisplayed}
                         </div>
                     </div>
