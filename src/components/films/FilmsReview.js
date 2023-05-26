@@ -84,6 +84,7 @@ class FilmsReview extends Component {
                                 </div>
                                 <div className='filmLinks'>
                                     <a className='filmImdbLink' href={this.props.filmWebdata.imdbUrl} target='_blank'>IMDb</a>
+                                    <a className='filmTmdbLink' href={this.props.filmWebdata.tmdbUrl} target='_blank'>TMDb</a>
                                     <a className='filmLetterboxdLink' href={this.props.filmLocaldata.letterboxdUrl} target='_blank'>Letterboxd</a>
                                 </div>
                                 <div className='filmPosition generic-hover' title='Position in my list'>

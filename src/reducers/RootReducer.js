@@ -2392,7 +2392,7 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Surrealism", "Quirky", "Aliens", "Future society"],
             "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/fjmtNwzQ5k1eFE0VgHPEHND5HyA.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/prq0j1S0K07UjwLZLF6oMGflRUI.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/d1uG",
@@ -2557,8 +2557,7 @@ const initState = {
         },
         {
             "letterboxdUrl": "https://boxd.it/20ma",
-            "title": "REC",
-            "titleDisplayed": "[REC]",
+            "title": "[REC]",
             "myRating": "9.0",
             "myTags": ["Zombies", "Found-footage", "Brutal", "One-location", "Claustrophobic", "Satanic"],
             "myReview": "",
