@@ -58,6 +58,10 @@ class Films extends React.Component {
      * @param {*} obj 
      */
     changePage = (obj) => {
+        // move scroll position to top of page...
+        window.scrollTo(0, 0);
+
+        // change page number properly...
         let firstIndexOfNewPage = obj.selected;
         this.setState(prevState => {
             return {

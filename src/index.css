@@ -2401,7 +2401,7 @@ div.film-dataContainer.myData {
 div.film-dataContainer.myData > span {
   padding: 3px 8px;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: rgb(0, 0, 0);
   border: 2px solid var(--page-wrapper-bg);
   cursor: pointer;
@@ -2448,7 +2448,7 @@ div.film-dataContainer.additionalData {
   vertical-align: top;
 }
 div.film-dataContainer.additionalData > * {
-  margin-top: 7px;
+  margin-top: 2px;
 }
 div.film-details div.film-genres,
 .film-details div.film-directors {
@@ -2522,15 +2522,14 @@ div.films-toplist-item > .film-images:active {
   width: var(--film-toplist-item-fixed-width);
   margin: 0 auto; /* Center every item in the list */
   display: block;
-  border-bottom-right-radius: var(--film-poster-border-radius);
-  border-bottom-left-radius: var(--film-poster-border-radius);
+  border-radius: var(--film-poster-border-radius);
   border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color);
   opacity: 0.9;
   background-color: var(--film-toplist-item-bg-color);
 }
 .films-toplist-item > a:hover {
   background-color: var(--film-toplist-item-bg-color-hover);
-  transition: opacity ease-in-out 0.3s;
+  transition: all ease-in-out 0.15s;
   opacity: 1.0 !important;
 }
 

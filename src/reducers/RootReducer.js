@@ -3419,7 +3419,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/1S0A",
             "title": "Ponyo",
-            "myRating": "8.9",
+            "myRating": "9.1",
             "myTags": ["Feverdreamy", "Majestic", "Viewing the world through the mind of a child", "Sealife merging with humanity", "Great soundtrack"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 9, 9, 10],
@@ -3445,7 +3445,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/lwe6",
             "title": "Children of the Sea",
-            "myRating": "9.6",
+            "myRating": "10",
             "myTags": ["The origins of life", "Astronomy", "Cosmology", "Spirituality", "The mysteries of the ocean world", "Sealife", "Exploring new perspectives", "Visual trip", "Audio-visual spectacle"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10],
@@ -3487,22 +3487,6 @@ const initState = {
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/7Z5sEOC8Y7bdrg7FmIfNGkNniyX.jpg"
         },
         {
-            "letterboxdUrl": "https://boxd.it/kOde",
-            "title": "Diner",
-            "myRating": "7.5",
-            "myTags": [],
-            "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8]
-        },
-        {
-            "letterboxdUrl": "https://boxd.it/1ZvA",
-            "title": "Steamboy",
-            "myRating": "7.5",
-            "myTags": [],
-            "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8]
-        },
-        {
             "letterboxdUrl": "https://boxd.it/eLuk",
             "title": "It Comes At Night",
             "myRating": "7.5",
@@ -3512,13 +3496,13 @@ const initState = {
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/aYDB5kf08ZCcAWXYas4koGmiIIT.jpg"
         },
         {
-            "letterboxdUrl": "https://boxd.it/3V4Y",
-            "title": "Sightseers",
-            "myRating": "7.5",
+            "letterboxdUrl": "https://boxd.it/1ba8",
+            "title": "Turtles Are Surprisingly Fast Swimmers",
+            "myRating": "8.2",
             "myTags": [],
             "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8],
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/3L7zuJ6TdbB7Cizd1eZNNbAr9YG.jpg"
+            "gradualInterest": [9, 9, 9, 8, 8, 8, 7, 7, 7],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/nThjwGHNHKXI7Y1oGdrWzcoAF7P.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/9ssO",
