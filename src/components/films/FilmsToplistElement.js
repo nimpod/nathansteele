@@ -67,19 +67,33 @@ class FilmsToplistElement extends Component {
             screenshot3 = this.props.filmLocaldata.screenshots[2];
         }
 
+        return (
+            <div className='films-toplist-item'>
+                <Link to={'/films/' + reviewId}>
+                    <picture className='film-poster'>
+                        <img src={posterUrl} />
+                    </picture>
+                    <div className='film-details'>
+                        <p>{title}</p>
+                        <div className='film-dataContainer myData'>
+                            <span className='film-myPos' title='Position in my toplist'>#{this.props.filmWebdata.position}</span>
+                            <span className='film-myRating' title='My rating (decimal rating out of 10.0)'>{this.props.filmLocaldata.myRating}</span>
+                            <span className={`film-imdbDiffScore ${diffScoreClassname}`} title='Difference between my rating and IMDb avg rating'>
+                                {diffScoreStr}
+                            </span>
+                        </div>
+                    </div>
+                </Link>
+            </div>
+        )
+        
+        {/*
         return(
             <div className='films-toplist-item'>
                 <Link to={'/films/' + reviewId}>
                     <div className='film-details'>
                         <span className='film-title' title='Title'>
                             {title}
-                            {/*}
-                            <div className='film-urls'>
-                                <a href={this.props.filmWebdata.letterboxdUrl}>Letterboxd</a>
-                                <a href={this.props.filmWebdata.imdbUrl}>IMDB</a>
-                                <a href={this.props.filmWebdata.tmdbUrl}>TMDB</a>
-                            </div>
-                            */}
                         </span>
                         <div className='film-data'>
                             <div className='film-dataContainer myData'>
@@ -87,9 +101,6 @@ class FilmsToplistElement extends Component {
                                 <span className='film-myRating' title='My rating (decimal rating out of 10.0)'>{this.props.filmLocaldata.myRating}</span>
                                 <span className={`film-imdbDiffScore ${diffScoreClassname}`} title='Difference between my rating and IMDb avg rating'>
                                     {diffScoreStr}
-                                    {/*}
-                                    <a href={`${this.props.filmWebdata.imdbUrl}`} target='_blank'>{diffScoreStr}</a>
-                                    */}
                                 </span>
                             </div>
                             <div className='film-dataContainer additionalData'>
@@ -103,19 +114,6 @@ class FilmsToplistElement extends Component {
                                 </div>
                             </div>
                         </div>
-                        {/*}
-                        <div className='film-urls'>
-                            <a href={this.props.filmWebdata.tmdbUrl}>TMDb</a>
-                            <a href={this.props.filmWebdata.letterboxdUrl}>Letterboxd</a>
-                        </div>
-                        */}
-                        {/*}
-                        <div className='film-directors' title='Directors'>
-                            {this.props.filmWebdata.directors.map(director => {
-                                return <span className='director-tag'>{director}</span>
-                            })}
-                        </div>
-                        */}
                     </div>
                     <div className="film-images">
                         <picture className='film-poster'>
@@ -129,7 +127,7 @@ class FilmsToplistElement extends Component {
                     </div>
                 </Link>
             </div>
-        )
+        )*/}
     }
 }
 

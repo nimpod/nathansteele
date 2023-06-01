@@ -137,8 +137,8 @@ class Films extends React.Component {
                 for (let j = 0; j < this.state.__totalNumOfPages; j++) {
                     let upperBound = (this.state.__webdata.length - ((i-1)*MAX_FILMS_PER_PAGE));
                     let lowerBound = upperBound - MAX_FILMS_PER_PAGE + 1;
-                    // let textContent = (upperBound + " - " + lowerBound);
-                    let textContent = "Top " + upperBound;
+                    let textContent = (upperBound + " - " + lowerBound);
+                    // let textContent = "Top " + upperBound;
                     anchorTag.textContent = textContent;
                     break;
                 }
@@ -189,21 +189,27 @@ class Films extends React.Component {
                                 Sort by lowest IMDB avg score
                             </button>
                             */}
-                            <ReactPaginate
-                                previousLabel={"< previous"}
-                                nextLabel={"> next"}
-                                pageCount={this.state.__totalNumOfPages}
-                                onPageChange={this.changePage}
-                                pageRangeDisplayed={100}
-                                containerClassName={"pagination-btns"}
-                                previousClassName={"previous-btn"}
-                                nextClassName={"next-btn"}
-                                disabledClassName={"pagination-disabled"}
-                                activeClassName={"pagination-active"}
-                                /*
-                                pageLabelBuilder={() => this.setPageIndexTitle(topIndex, (topIndex - MAX_FILMS_PER_PAGE + 1))}
-                                */
-                            />
+                            <div className='films-controls-container filters-container'>
+                                <span>Filters</span>
+                            </div>
+                            <div className='films-controls-container pagination-container'>
+                                <span>Pages</span>
+                                <ReactPaginate
+                                    previousLabel={"< previous"}
+                                    nextLabel={"> next"}
+                                    pageCount={this.state.__totalNumOfPages}
+                                    onPageChange={this.changePage}
+                                    pageRangeDisplayed={100}
+                                    containerClassName={"pagination-btns"}
+                                    previousClassName={"previous-btn"}
+                                    nextClassName={"next-btn"}
+                                    disabledClassName={"pagination-disabled"}
+                                    activeClassName={"pagination-active"}
+                                    /*
+                                    pageLabelBuilder={() => this.setPageIndexTitle(topIndex, (topIndex - MAX_FILMS_PER_PAGE + 1))}
+                                    */
+                                />
+                            </div>
                         </div>
                         <div className="films-toplist">
                             {filmsDisplayed}

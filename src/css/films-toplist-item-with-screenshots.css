@@ -1,0 +1,456 @@
+
+/* #region ----------------< 13.1 Films toplist >---------------- */
+
+/*
+.films-toplist
+  .films-toplist-item
+    .film-details
+      span.filmTitle
+      div.filmMyData
+        span.filmMyPos
+        span.filmMyRating
+        span.filmImdbDifferenceScore
+      span.filmYear
+      span.filmLanguage
+      span.filmDuration
+      div.genres
+        span.genre-tag
+        span.genre-tag
+        span.genre-tag
+        ...
+    a#toplist-item-{title}-{letterboxdId}-review
+      picture.filmPoster
+      div.filmScreenshots
+  ...
+*/
+
+:root {
+    /* Fixed variables relataed to film-toplist-item */
+    --film-toplist-item-poster-fixed-height: 450px;
+    --film-toplist-item-fixed-width: 900px;
+  
+    --film-toplist-item-border-outer-width: 3px;
+    --film-toplist-item-border-inner-width: 2px;
+    --film-mydata-container-border-radius: 9px;
+    --film-poster-border-radius: 13px;
+    --vertical-gap-between-filmtoplistitems: 60px;
+  }
+  
+  :root {
+  /* Toplist item colours */
+  --film-toplist-item-bg-color: var(var(--page-wrapper-bg));
+  --film-toplist-item-bg-color-hover: rgb(68, 69, 73);
+  --film-toplist-item-border-inner-color: rgb(62, 56, 56);
+  --film-toplist-item-border-outer-color: rgb(50, 49, 49);
+  
+  /* Background colours of pos/rating/diffscore */
+  --film-mydata-pos-bg-color: rgb(246, 223, 133);
+  --film-mydata-rating-bg-color: rgb(62, 215, 115);
+  --film-mydata-imdbdiffscore-bg-color: rgb(92, 87, 114);
+  
+  /* Colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
+  --film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
+  --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
+  --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
+  
+  /* Tag colours (e.g. genre-tag, director-tag, year-tag, language-tag, etc...) */
+  --tags-border-color: rgb(69, 69, 79);
+  --tags-bg-color-hover: rgb(55, 56, 58);
+  }
+  
+  
+  .films-container {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+  
+  
+  /* #region Toplist element */
+  
+  /*
+  Proposed structure
+  -----------------------------------------
+  div.flms-toplist-item
+    a
+      div.film-details
+        span.film-title
+        div.film-dataContainer.myData
+        div.film-dataConntainer.additionalData
+      div.film-images
+        picture.film-poster
+          img
+        div.film-screenshots
+          img
+          img
+          img
+  -----------------------------------------
+  */
+  
+  /* div container around entire list */
+  .films-toplist {
+    padding-top: 40px;
+  }
+  
+  /* Layer above anchor tag */
+  div.films-toplist-item {
+    padding-bottom: var(--vertical-gap-between-filmtoplistitems);
+  }
+  
+  /* Film details above poster */
+  div.films-toplist-item > a > div.film-details {
+    color: var(--text);
+    padding: 5px 10px 15px 10px;
+  }
+  
+  /* Display the little circle after these elements... */
+  div.film-dataContainer.additionalData > span::before,
+  div.film-dataContainer.additionalData > div.film-genres::before,
+  div.film-dataContainer.additionalData > *:last-child::after {
+    content: "●";
+    color: #53545b;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-size: 0.6rem;
+  }
+  
+  /* Film title */
+  div.film-details span.film-title {
+    font-size: 1.3rem;
+    display: block;   /* Put title on own row */
+    margin-bottom: 10px;  /* Space below title */
+  }
+  
+  div.film-details > div.film-data {
+  
+  }
+  
+  /* Data container... */
+  div.film-dataContainer {
+    display: inline;
+  }
+  
+  /* --------------------------< My Data >-------------------------- */
+  div.film-dataContainer.myData {
+    
+  }
+  div.film-dataContainer.myData > span {
+    padding: 3px 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    border: 2px solid var(--page-wrapper-bg);
+    cursor: pointer;
+  }
+  div.film-dataContainer > span:hover {
+    opacity: 0.65;
+  }
+  span.film-myPos {
+    border-top-left-radius: var(--film-mydata-container-border-radius);
+    border-bottom-left-radius: var(--film-mydata-container-border-radius);
+    background-color: var(--film-mydata-pos-bg-color);
+  }
+  span.film-myRating {
+    background-color: var(--film-mydata-rating-bg-color);
+  }
+  span.film-imdbDiffScore {
+    background-color: var(--film-mydata-imdbdiffscore-bg-color);
+  }
+  span.film-imdbDiffScore.positive-diff { color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important; }
+  span.film-imdbDiffScore.negative-diff { color: var(--film-mydata-imdbdiffscore-negativediff-text-color) !important; }
+  span.film-imdbDiffScore.equal-diff    { color: var(--film-mydata-imdbdiffscore-equaldiff-text-color) !important; }
+  
+  span.film-imdbDiffScore {
+    padding: 3px 0 !important;
+  }
+  span.film-imdbDiffScore > a,
+  span.film-imdbDiffScore {
+    padding: 3px 8px !important;
+  }
+  span.film-imdbDiffScore:active {
+    border: 2px solid rgba(255, 255, 255, 0.282);
+  }
+  
+  div.film-myPos:hover,
+  div.my-tag:hover,
+  div.genre-tag:hover,
+  div.genre:hover {
+    cursor: pointer;
+    transition: 150ms background-color ease;
+  }
+  
+  /* --------------------------< Additional Data >-------------------------- */
+  div.film-dataContainer.additionalData {
+    vertical-align: top;
+  }
+  div.film-dataContainer.additionalData > * {
+    margin-top: 2px;
+  }
+  div.film-details div.film-genres,
+  .film-details div.film-directors {
+    /* Display the items within the divs horizontally */
+    display: inline-block;
+  }
+  div.film-details span.film-year,
+  div.film-details span.film-language,
+  div.film-details span.film-duration {
+    font-size: 0.8rem;
+  }
+  div.film-details span.genre-tag,
+  div.film-details span.director-tag,
+  div.film-details div.film-urls {
+    display: inline-block;
+  }
+  div.film-details span.genre-tag,
+  div.film-details span.director-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    border-radius: 50px;
+    padding: 2px 10px;
+    margin-right: 4px;
+    background-color: var(--tags-bg-color);
+    border: 2px solid var(--tags-border-color);
+  }
+  span.genre-tag:hover,
+  span.director-tag:hover {
+    background-color: var(--tags-bg-color-hover);
+    cursor: pointer;
+  }
+  /* links (might move somewhere else, outside of main anchor tag) */
+  div.film-urls a {
+    border-radius: 4px;
+    padding: 2px 5px;
+    background-color: rgb(79, 80, 84);
+    border: 2px solid rgb(29, 28, 28);
+    color: var(--text) !important;
+    font-size: 0.55rem;
+    margin-right: 5px;
+  }
+  .film-details span.film-title > div.film-urls {
+    position: absolute;
+    margin-top: -2px;
+    padding-left: 10px;
+  }
+  
+  /* #endregion */
+  
+  
+  /* #region Poster & screenshots */
+  
+  /* Stuff containing poster & screenshots */
+  div.films-toplist-item .film-images {
+    display: grid;
+    grid-template-columns: 3.8fr 7.2fr;
+    opacity: 1.0 !important;
+    background-color: var(--film-toplist-item-bg-color);
+    /*
+    box-shadow: 11px 13px 13px 0 var(--general-box-shadow-color-1);
+    */
+  }
+  div.films-toplist-item > .film-images:active {
+    /*
+    border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color-click);
+    */
+  }
+  
+  /* item within toplist */
+  .films-toplist-item > a {
+    width: var(--film-toplist-item-fixed-width);
+    margin: 0 auto; /* Center every item in the list */
+    display: block;
+    border-radius: var(--film-poster-border-radius);
+    border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color);
+    opacity: 0.9;
+    background-color: var(--film-toplist-item-bg-color);
+  }
+  .films-toplist-item > a:hover {
+    background-color: var(--film-toplist-item-bg-color-hover);
+    transition: all ease-in-out 0.15s;
+    opacity: 1.0 !important;
+  }
+  
+  /* Poster section */
+  .films-toplist-item .film-poster img {
+    /*
+    width: calc(var(--film-grid-element-width) * 2.3);
+    height: calc(var(--film-grid-element-height) * 2.3);
+    */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-inner-color);
+  }
+  .films-toplist-item .film-poster img,
+  .film-images {
+    border-bottom-left-radius: calc(var(--film-poster-border-radius) - 3px);
+  }
+  .film-poster {
+    height: var(--film-toplist-item-poster-fixed-height);
+  }
+  
+  /* Screenshots section */
+  .film-screenshots {
+    width: 100%;
+    height: calc(var(--film-toplist-item-poster-fixed-height) / 3);
+  }
+  .film-screenshots img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*
+    border-left: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-border-inner-color);
+    border-right: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-border-inner-color);
+    */
+  }
+  .film-screenshots img:nth-child(1) {
+    border-bottom: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-border-inner-color);
+  }
+  .film-screenshots img:nth-child(2) {
+    border-bottom: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-border-inner-color);
+  }
+  .film-screenshots img:nth-child(3) {
+    border-bottom-right-radius: calc(var(--film-poster-border-radius) - 2px);
+  }
+  
+  /* #endregion */
+  
+  
+  /* #region Pagination */
+  
+  :root {
+    /* Border colour of paginaton button */
+    --films-pagination-btn-border-color: rgb(85, 81, 81);
+    --films-pagination-btn-border-color-hover: rgb(120, 117, 117);
+    --films-pagination-btn-border-color-active: rgb(123, 245, 200);
+  
+    /* Background colour of pagination button in normal/hover/active state */
+    --films-pagination-btn-bg-color: rgb(75, 72, 72);
+    --films-pagination-btn-bg-color-hover: rgb(120, 117, 117);
+    --films-pagination-btn-bg-color-selected: rgb(69, 182, 141);
+    --films-pagination-btn-bg-color-active: rgb(123, 245, 200);
+  
+    /* Text colour of pagination button in hover/active state */
+    --films-pagination-btn-text-color-hover: var(--text);
+    --films-pagination-btn-text-color-active: rgb(75, 71, 71);
+  
+    /* Background colour of next and previous buttons */
+    --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
+  }
+  
+  .pagination-btns {
+    list-style: none;
+    display: grid;
+    position: fixed;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    margin-top: 50px;
+  }
+  .pagination-btns li a {
+    display: flex;
+    padding: 10px;
+    margin-right: 10px;
+    width: 120px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid var(--films-pagination-btn-border-color);
+    color: var(--text) !important;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .pagination-btns li:not(.pagination-disabled) a {
+    background-color: var(--films-pagination-btn-bg-color);
+  }
+  .pagination-btns li:not(.previous-btn):not(.next-btn) {
+    margin-bottom: 5px;
+  }
+  /*
+  .pagination-btns li.previous-btn,
+  .pagination-btns li.next-btn {
+    display: none;
+  }*/
+  /* Move these buttons to bottom of page.... Horrendous */
+  .pagination-btns li.previous-btn {
+    position: fixed;
+    bottom: 20px;
+    margin-left: 250px;
+  }
+  .pagination-btns li.next-btn {
+    position: fixed;
+    bottom: 20px;
+    margin-left: calc(470px + var(--film-toplist-item-fixed-width));
+  }
+  
+  .pagination-btns li a:hover {
+    background-color: var(--films-pagination-btn-bg-color-hover);
+    color: var(--films-pagination-btn-text-color-hover) !important;
+    border: 2px solid var(--films-pagination-btn-border-color-hover);
+    opacity: 1;
+  }
+  .pagination-btns li.pagination-active a {
+    background-color: var(--films-pagination-btn-bg-color-active);
+    color: var(--films-pagination-btn-text-color-active) !important;
+    border: 2px solid var(--films-pagination-btn-border-color-active);
+    opacity: 1;
+  }
+  
+  .pagination-btns li:not(.pagination-disabled).previous-btn a:hover,
+  .pagination-btns li:not(.pagination-disabled).next-btn a:hover,
+  .pagination-btns li.previous-btn.pagination-active a,
+  .pagination-btns li.next-btn.pagination-active a {
+    color: var(--text) !important;
+    background-color: var(--films-pagination-nextandprevious-btns-bg-color);
+  }
+  
+  /* Modify styles of a disabled button (applies only to .previous-btn, and next-btn) */
+  .pagination-btns li.pagination-disabled a,
+  .pagination-btns li.pagination-disabled:hover a {
+    background-color: var(--page-wrapper-bg);
+    color: var(--text-darker) !important;
+    cursor: not-allowed;
+  }
+  
+  /* #endregion */
+  
+  
+  /* #region Film controls */
+  
+  .films-controls {
+    height: 40px;
+    text-align: center;
+  }
+  .films-controls > button.update-films-toplist-btn {
+    border-radius: 20px;
+    background-color: rgb(79, 77, 77);
+    color: var(--text);
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    padding: 2px 7px;
+  }
+  .films-controls > button.update-films-toplist-btn:hover {
+    background-color: rgb(65, 67, 71);
+  }
+  .films-controls > button.update-films-toplist-btn:active {
+    background-color: rgb(29, 29, 35);
+  }
+  
+  .films-controls > button {
+    outline: none !important;
+    border: none !important;
+    border-radius: 20px;
+    background-color: var(--another-btn-bg-color);
+    color: var(--text);
+    padding: 4px 10px;
+  }
+  .films-controls > button:hover {
+    background-color: rgb(92, 89, 89);
+  }
+  .films-controls > button.active {
+    color: rgb(0, 0, 0) !important;
+    background-color: rgb(126, 238, 206);
+  }
+  /* #endregion */
+  
+  
+  
+  /* #endregion */
+  

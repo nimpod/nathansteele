@@ -1,3 +1,11 @@
+import { review as ArriettyReview } from './websiteContent/films/the_secret_world_of_arrietty/review';
+import { review as AGhostStoryReview } from './websiteContent/films/a_ghost_story/review';
+import { review as ChildrenOfTheSeaReview } from './websiteContent/films/children_of_the_sea/review';
+import { review as PoupelleOfChimmneyTownReview } from './websiteContent/films/poupelle_of_chimmney_town/review';
+import { review as WhiteGod } from './websiteContent/films/white_god/review';
+
+
+import ReactDomServer from 'react-dom/server';
 
 
 const initState = {
@@ -1221,57 +1229,16 @@ const initState = {
             "title": "White God",
             "myRating": "9.2",
             "screenshots": [
-                require('../img/films/whitegod/screenshot1.jpg'),
-                require('../img/films/whitegod/screenshot2.jpg'),
-                require('../img/films/whitegod/screenshot3.jpg'),
+                require('./websiteContent/films/white_god/screenshot1.jpg'),
+                require('./websiteContent/films/white_god/screenshot2.jpg'),
+                require('./websiteContent/films/white_god/screenshot3.jpg'),
             ],
             "myTags": ["Emotional", "Friendship", "Forgiveness", "Animal welfare", "Great cinematography", "The universal power of music", "Budapest"],
-            "myReview": " \
-                <div class='review-content'> \
-                    <div class='toggle-section-container'> \
-                        <div class='toggle-section-btn'></div> \
-                        <span>#context</span> \
-                    </div> \
-                    <div class='review-context'> \
-                        <p>White God is one of those kind of films where loads of things at the beginning piss me off and I'm almost ready to stop watching, and then BOOM everything goes nuts and I'm totally on board with the story and characters. (similar feelings to The Nightingale, The Revenant, Revenge, mother!)</p> \
-                        <p>Sometimes a picture speaks a thousand words, so why stuff your films with meandering filler conversations when you could be expressing raw emotions and compelling character development!</p> \
-                        <p>Jó napot kívánok!!!!</p> \
-                        <picture class=\"img\">\
-                            <img width=400 src=screenshot1 alt=\"White God screenshot\" />\
-                        </picture>\
-                    </div> \
-                    <div class='toggle-section-container'> \
-                        <div class='toggle-section-btn'></div> \
-                        <span>#synopsis</span> \
-                    </div> \
-                    <div class='review-briefSynopsis'> \
-                        <p>A cautionary tale between a superior species and its disgraced inferior - Favoring pedigree dogs, a new regulation puts a severe tax on mixed breeds. \
-                        Owners dump their dogs and shelters become overcrowded. 13-year-old Lili fights desperately to protect her pet Hagen, but her father eventually sets the dog free on the streets.</p> \
-                        <picture class=\"img\">\
-                            <img width=400 src=screenshot3 alt=\"White God screenshot\" />\
-                        </picture>\
-                    </div> \
-                    <div class='toggle-section-container'> \
-                        <div class='toggle-section-btn'></div> \
-                        <span>#postives&negatives</span> \
-                    </div> \
-                    <div class='review-positivesAndNegatives'> \
-                        <p>I never thought a Hungarian schoolgirl playing Franz Liszt's Hungarian Rhapsody on a trumpet to a group of dogs would make me cry, but here we are.</p> \
-                        <p>Also love how most of the credits are just dogs and dog trainers.</p> \
-                        <p>It's incredible how the filmmakers were able to portray so much emotion/despair/sadness just by filming dogs.</p> \
-                        <picture class=\"img\">\
-                            <img width=400 src=screenshot2 alt=\"White God screenshot\" />\
-                        </picture>\
-                    </div> \
-                </div> \
-            ".replace(/screenshot1|screenshot2|screenshot3/gi, function(matched) {
-                var mapObj = {
-                    screenshot1: require('../img/films/whitegod/screenshot1.jpg'),
-                    screenshot2: require('../img/films/whitegod/screenshot2.jpg'),
-                    screenshot3: require('../img/films/whitegod/screenshot3.jpg'),
-                };
-                return mapObj[matched];
-            })
+            "myReview": ReactDomServer.renderToString(WhiteGod([
+                require('./websiteContent/films/white_god/screenshot1.jpg'),
+                require('./websiteContent/films/white_god/screenshot2.jpg'),
+                require('./websiteContent/films/white_god/screenshot3.jpg'),
+            ])),
         },
         {
             "letterboxdUrl": "https://boxd.it/2sXo",
@@ -1283,51 +1250,7 @@ const initState = {
                 require('../img/films/flatland/screenshot3.png'),
             ],
             "myTags": ["Dimensionality", "Questioning reality", "Perspective", "Mathematics", "War", "Corruption", "Emotional"],
-            "myReview": "<div class='review-content'> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#context</span> \
-                            </div> \
-                            <div class='review-context'> \
-                                <p>Controversial number pick... I know... but hear me out...</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot1 alt=\"Flatland screenshot\" />\
-                                </picture>\
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#synopsis</span> \
-                            </div> \
-                            <div class='review-briefSynopsis'> \
-                                <p>Flatland is a two-dimensional universe occupied by living geometric figures - squares, triangles, circles, etc. A Square, Attorney At Law, finds himself in the middle of two upheavals: the rise of martial law by\
-                                 the circular leadership of Flatland, and the arrival of A Sphere, CEO Of Messiah, Incorporated, a creature from a hitherto-unknown third dimensional world.</p> \
-                                 <picture class=\"img\">\
-                                    <img width=400 src=screenshot2 alt=\"Flatland screenshot\" />\
-                                </picture>\
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot3 alt=\"Flatland screenshot\" />\
-                                </picture>\
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#postives&negatives</span> \
-                            </div> \
-                            <div class='review-positivesAndNegatives'> \
-                                <p>insert potentially informative discussion here...</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot4 alt=\"Flatland screenshot\" />\
-                                </picture>\
-                            </div> \
-                        </div> \
-            ".replace(/screenshot1|screenshot2|screenshot3|screenshot4/gi, function(matched) {
-                var mapObj = {
-                    screenshot1: require('../img/films/flatland/screenshot1.png'),
-                    screenshot2: require('../img/films/flatland/screenshot2.png'),
-                    screenshot3: require('../img/films/flatland/screenshot3.png'),
-                    screenshot4: require('../img/films/flatland/screenshot4.png'),
-                };
-                return mapObj[matched];
-            })
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/1Xag",
@@ -1339,46 +1262,7 @@ const initState = {
                 require('../img/films/feast/screenshot3.PNG')
             ],
             "myTags": ["Creature-feature", "One-location", "Survival", "Fun", "Cool practical effects"],
-            "myReview": "<div class='review-content'> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#context</span> \
-                            </div> \
-                            <div class='review-context'> \
-                                <p>I went into this film with 0 expectations, expecting nothing more than a simple fun creature-feature film... Somehow it was that and a lot more!</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot1 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#synopsis</span> \
-                            </div> \
-                            <div class='review-briefSynopsis'> \
-                                <p>A bunch of strangers are locked in a bar for the night as monsters try and get in. There really isn't much more to it and that is where the beauty of this film lies.</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot2 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#postives&negatives</span> \
-                            </div> \
-                            <div class='review-positivesAndNegatives'> \
-                                <p>+ unusual characters</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot3 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                        </div> \
-                        ".replace(/screenshot1|screenshot2|screenshot3/gi, function(matched) {
-                            var mapObj = {
-                                screenshot1: require('../img/films/feast/screenshot1.PNG'),
-                                screenshot2: require('../img/films/feast/screenshot2.PNG'),
-                                screenshot3: require('../img/films/feast/screenshot3.PNG'),
-                            };
-                            return mapObj[matched];
-                        })
+            "myReview": ""
         },
         {
             "letterboxdUrl": "https://boxd.it/AF4",
@@ -1386,63 +1270,16 @@ const initState = {
             "title": "The Secret World of Arrietty",
             "myRating": "9.1",
             "screenshots": [
-                require('../img/films/thesecretworldofarrietty/screenshot1.jpg'),
-                require('../img/films/thesecretworldofarrietty/screenshot2.jpg'),
-                require('../img/films/thesecretworldofarrietty/screenshot3.jpg')
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot1.jpg'),
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot2.jpg'),
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot3.jpg'),
             ],
             "myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
-            "myReview": "<div class='review-content'> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#context</span> \
-                            </div> \
-                            <div class='review-context'> \
-                                <p>Arrietty is a film about growing up and beginning your own exploration of the world, but is also a film about discovering new ways of living, \
-                                integrating humanity with nature, finding positives out of negatives, and generally about the ever-changing perspectives of life and how that evolves as you \
-                                gather more life experience.</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot1 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#synopsis</span> \
-                            </div> \
-                            <div class='review-briefSynopsis'> \
-                                <p>A family of tiny people live anonymously in another family's residence, borrowing simple items to make their home. \
-                                 Life changes for the tiny people when Arrietty, is discovered.</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot2 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#postives&negatives</span> \
-                            </div> \
-                            <div class='review-positivesAndNegatives'> \
-                                <p>Instantly one of my new favourites.</p> \
-                                <p>It never resorted to petty narrative cliches despite so many opportunities to do so (like many U-rated animation films these days).</p> \
-                                <p>Explores similar themes to Kikis Delivery Service (a young mind venturing out into a big scary world), except with Arrietty the world is literally massive, and the characters are tiny!</p> \
-                                <p>Ontop of all the thematic depth and character development, the whole experience of the film is like a beutiful moving painting, every frame looks amazing. It doesn't look like it was \
-                                generated by an AI but clearly has a lot of attention to detail and rich in colour. Even the cinematography was amazing, really emphasing the difference in size and perspectives.</p> \
-                                <p>Asks questions about how humanity can become more integrated with nature, instead of fighting it for our own selfish needs. It did this without seeming preachy, \
-                                but rather compassionate and thought-provoking (similar thoughts to Nausicaa).</p> \
-                                <p>The idea of loads of little human creatures creating their own tiny habitats inside the walls of a house, a world that looks so magical when you're inside it, \
-                                but so tiny and insignificant when seeing it from their perspective. And this is obviously real! Think about how much wildlife exists just in your garden! \
-                                So many interesting stories about nature, and how our existence can either harm them or benefit them.</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot3 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                        </div> \
-            ".replace(/screenshot1|screenshot2|screenshot3/gi, function(matched) {
-                var mapObj = {
-                    screenshot1: require('../img/films/thesecretworldofarrietty/screenshot1.jpg'),
-                    screenshot2: require('../img/films/thesecretworldofarrietty/screenshot2.jpg'),
-                    screenshot3: require('../img/films/thesecretworldofarrietty/screenshot3.jpg'),
-                };
-                return mapObj[matched];
-            }),
+            "myReview": ReactDomServer.renderToString(ArriettyReview([
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot1.jpg'),
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot2.jpg'),
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot3.jpg'),
+            ])),
         },
         {
             "letterboxdUrl": "https://boxd.it/fb0K",
@@ -1450,63 +1287,16 @@ const initState = {
             "myRating": "10",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/sD94aixD7fMAc2e9ugbv4KQprBL.jpg",
             "screenshots": [
-                require('../img/films/aghoststory/screenshot1.jpg'),
-                require('../img/films/aghoststory/screenshot2.jpg'),
-                require('../img/films/aghoststory/screenshot3.jpg'),
-                require('../img/films/aghoststory/screenshot4.jpg'),
-                require('../img/films/aghoststory/screenshot5.jpg')
+                require('./websiteContent/films/a_ghost_story/screenshot1.jpg'),
+                require('./websiteContent/films/a_ghost_story/screenshot2.jpg'),
+                require('./websiteContent/films/a_ghost_story/screenshot3.jpg'),
             ],
             "myTags": ["Death", "Life", "Vast", "Cosmic", "Beyond existence", "Mysterious", "Creative use of lighting", "Creative use of aspect ratio", "Great soundtrack"],
-            "myReview": "<div class='review-content'> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#context</span> \
-                            </div> \
-                            <div class='review-context'> \
-                                <p>There are so many layers to this wonderful thoughtful piece of art - it's so atmospheric, mysterious, sad, beautiful, ambitious, unusual, creative, minimal, \
-                                cosmic, vast, and its all centered around such a simple idea but with immaculate execution. </p> \
-                                <p>The soundtrack is just beautiful. Quiet and ambient at times, heartbreaking at other times, and explosive with energy other times. </p> \
-                                <p>And crikey the cinematography and use of light is FANTASTIC!!</p> \
-                                <p>Many questions are posed about life, death, and what happens after. It made me think about what impact my life may have in the far future. How will people remember \
-                                me? Will I be forgotten in amongst billions of others? What unbelievable cosmic events will I miss out on outside of my lifetime? I believe that we should not feel \
-                                small, insignificant, unimportant or pointless. Instead, we should thank our eyes, our brain, our body and our own silent companion throughout our life for allowing \
-                                you consciousness at such an extraordinary time period where we can study the mysteries of the universe and observe things that are incomprehensibly far away. \
-                                We too as human beings are made up of the same stuff as galaxies - we are just a particular arrangment of atoms that somehow results in consciouness and an \
-                                understanding of our place in the universe. Maybe the true meaning of life, while you have it, is to simply give it some meaning.</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot1 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#synopsis</span> \
-                            </div> \
-                            <div class='review-briefSynopsis'> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot2 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#postives&negatives</span> \
-                            </div> \
-                            <div class='review-positivesAndNegatives'> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot3 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                        </div> \
-            ".replace(/screenshot1|screenshot2|screenshot3|screenshot4|screenshot5/gi, function(matched) {
-                var mapObj = {
-                    screenshot1: require('../img/films/aghoststory/screenshot1.jpg'),
-                    screenshot2: require('../img/films/aghoststory/screenshot2.jpg'),
-                    screenshot3: require('../img/films/aghoststory/screenshot3.jpg'),
-                    screenshot4: require('../img/films/aghoststory/screenshot4.jpg'),
-                    screenshot5: require('../img/films/aghoststory/screenshot5.jpg'),
-                };
-                return mapObj[matched];
-            }),
-            "dateReviewed": "14/11/2021"
+            "myReview": ReactDomServer.renderToString(AGhostStoryReview([
+                require('./websiteContent/films/a_ghost_story/screenshot1.jpg'),
+                require('./websiteContent/films/a_ghost_story/screenshot2.jpg'),
+                require('./websiteContent/films/a_ghost_story/screenshot3.jpg'),
+            ])),
         },
         {
             "letterboxdUrl": "https://boxd.it/2BiY",
@@ -2113,7 +1903,8 @@ const initState = {
             "title": "Se7en",
             "myRating": "7.7",
             "myTags": ["Crime", "Murder mystery", "Mysterious", "Atmospheric"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/GQP6noTBKsYiAYyn8PYXFcsSgH.jpg",
         },
         {
             "letterboxdUrl": "https://boxd.it/pSAG",
@@ -2989,59 +2780,18 @@ const initState = {
             "title": "Poupelle of Chimney Town",
             "myRating": "8.2",
             "myTags": ["Heterodox thinker", "Religion", "Friendship", "Intricate animation style", "Textures", "Steampunk", "Colourful", "Exploring new places", "Anti-smoking"],
-            "customPosterUrl": require('../img/films/poupelleofchimmneytown/custom_poster.jpg'),
+            "customPosterUrl": require('./websiteContent/films/poupelle_of_chimmney_town/custom_poster.jpg'),
             "gradualInterest": [8, 8, 8, 8, 7, 7, 7, 8, 9, 9],
             "screenshots": [
-                require('../img/films/poupelleofchimmneytown/screenshot1.PNG'),
-                require('../img/films/poupelleofchimmneytown/screenshot2.PNG'),
-                require('../img/films/poupelleofchimmneytown/screenshot3.PNG')
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot1.PNG'),
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot2.PNG'),
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot3.PNG'),
             ],
-            "myReview": "<div class='review-content'> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#context</span> \
-                            </div> \
-                            <div class='review-context'> \
-                                <p>..............</p> \
-                                <p>..............</p> \
-                                <p>..............</p> \
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot1 alt=\"Screenshot\" />\
-                                </picture>\
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot2 alt=\"Screenshot\" />\
-                                </picture>\
-                                <picture class=\"img\">\
-                                    <img width=400 src=screenshot3 alt=\"Screenshot\" />\
-                                </picture>\
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#synopsis</span> \
-                            </div> \
-                            <div class='review-briefSynopsis'> \
-                                <p>..............</p> \
-                                <p>..............</p> \
-                                <p>..............</p> \
-                            </div> \
-                            <div class='toggle-section-container'> \
-                                <div class='toggle-section-btn'></div> \
-                                <span>#postives&negatives</span> \
-                            </div> \
-                            <div class='review-positivesAndNegatives'> \
-                                <p>..............</p> \
-                                <p>..............</p> \
-                                <p>..............</p> \
-                            </div> \
-                        </div> \
-            ".replace(/screenshot1|screenshot2|screenshot3/gi, function(matched) {
-                var mapObj = {
-                    screenshot1: require('../img/films/poupelleofchimmneytown/screenshot1.PNG'),
-                    screenshot2: require('../img/films/poupelleofchimmneytown/screenshot2.PNG'),
-                    screenshot3: require('../img/films/poupelleofchimmneytown/screenshot3.PNG'),
-                };
-                return mapObj[matched];
-            })
+            "myReview": ReactDomServer.renderToString(PoupelleOfChimmneyTownReview([
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot1.PNG'),
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot2.PNG'),
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot3.PNG'),
+            ])),
         },
         {
             "letterboxdUrl": "https://boxd.it/y3U4",
@@ -3169,7 +2919,7 @@ const initState = {
             "myTags": ["Melancholic", "Loneliness", "Amazing soundtrack"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8],
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/mezq9K3DLOOEwiQujZDbfUvk5h4.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/3WDKfLdU2FP8gjVcXTpNvV9fWdA.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/3Ipk",
@@ -3364,7 +3114,7 @@ const initState = {
             "myTags": ["Astronomy", "Psychedelic", "Confusing", "Trippy"],
             "myReview": "",
             "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8],
-            "customPosterUrl": require('../img/films/solaris/custom_poster.jpg')
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/o839RFIxPrpgOMKQ21SOQl4908t.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/zZ8",
@@ -3419,7 +3169,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/1S0A",
             "title": "Ponyo",
-            "myRating": "9.1",
+            "myRating": "9.2",
             "myTags": ["Feverdreamy", "Majestic", "Viewing the world through the mind of a child", "Sealife merging with humanity", "Great soundtrack"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 9, 9, 10],
@@ -3447,7 +3197,11 @@ const initState = {
             "title": "Children of the Sea",
             "myRating": "10",
             "myTags": ["The origins of life", "Astronomy", "Cosmology", "Spirituality", "The mysteries of the ocean world", "Sealife", "Exploring new perspectives", "Visual trip", "Audio-visual spectacle"],
-            "myReview": "",
+            "myReview": ReactDomServer.renderToString(ChildrenOfTheSeaReview([
+                "https://wwwflickeringmythc3c8f7.zapwp.com/q:i/r:1/wp:1/w:371/u:https://cdn.flickeringmyth.com/wp-content/uploads/2020/02/CHILDREN-OF-THE-SEA-Official-US-Trailer-APRIL-20-22-0-6-screenshot-600x288.png",
+                "https://cdn-japantimes.com/wp-content/uploads/2019/06/p12-schley-childrenofthesearev-a-20190606.jpg",
+                "https://static01.nyt.com/images/2020/09/04/arts/02childrenofthesea/merlin_176249766_9b097c36-8860-43c6-aff0-c30a719ced5a-superJumbo.jpg",
+            ])),
             "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/i91YrURnZPCKhpNyIxkAAzBb4t9.jpg"
         },
@@ -3467,15 +3221,6 @@ const initState = {
             "myReview": "",
             "gradualInterest": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/6MNwC101wSEsDyxTJBGXsgIMlmh.jpg"
-        },
-        {
-            "letterboxdUrl": "https://boxd.it/1xdy",
-            "title": "The Eye 2",
-            "myRating": "7.6",
-            "myTags": [],
-            "myReview": "",
-            "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8],
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/2l8GsWmmJItS4TAhp3ff5xQxcSn.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/fof4",
@@ -3511,9 +3256,23 @@ const initState = {
             "myTags": [],
             "myReview": "",
             "gradualInterest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1LeA",
+            "title": "Angel's Egg",
+            "myRating": "9.2",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [9, 9, 9, 9, 8, 9, 9],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/dcEUGvckbePFzPKhGXnS9T3kZMG.jpg"
         }
     ]
 }
+
+function prettifyReview(uglyReview) {
+    console.log(uglyReview);
+}
+
 
 const RootReducer = (state=initState, action) => {
     return state;

@@ -49,6 +49,8 @@ class Helpers:
                     .replace("/", "")\
                     .replace("(", "")\
                     .replace(")", "")\
+                    .replace("[", "")\
+                    .replace("]", "")\
                     .replace("'", "")\
                     .replace("\"", "")\
                     .replace(":", "")\
@@ -57,6 +59,12 @@ class Helpers:
                     .replace(",", "")\
                     .replace("·", "")\
                     .replace("&", "and")\
+                    .replace("Ã¸", "o")\
+                    .replace("Ã", "a")\
+                    .replace("Â", "")\
+                    .replace("¤", "")\
+                    .replace("ã", "a")\
+                    .replace("¸", "")\
                     .lower()
 
 
@@ -313,5 +321,5 @@ def regenerate_json_file():
 
 
 # call my functions........
-download_letterboxd_data()
+# download_letterboxd_data()
 regenerate_json_file()

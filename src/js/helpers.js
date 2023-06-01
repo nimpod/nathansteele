@@ -1,5 +1,4 @@
 
-
 /**
  * [Get value of a specified CSS variable]
  * @param  {[str]} variable_name [Name of the CSS variable]
@@ -53,6 +52,16 @@ export function* zip(arrays) {
     }
 }
 
+
+export function getFileAsStr(filepath) {
+    console.log(filepath);
+
+    fetch(filepath)
+        .then((r) => r.text())
+        .then(text  => {
+            console.log(text);
+        });
+};
 
 /**
  * [Get a random RGBA value]

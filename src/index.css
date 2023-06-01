@@ -2264,146 +2264,90 @@ ul.messiahs-handbook p.quote-person {
   }
 }
 
-/* #region ----------------< 13.1 Films toplist >---------------- */
-
-/*
-.films-toplist
-  .films-toplist-item
-    .film-details
-      span.filmTitle
-      div.filmMyData
-        span.filmMyPos
-        span.filmMyRating
-        span.filmImdbDifferenceScore
-      span.filmYear
-      span.filmLanguage
-      span.filmDuration
-      div.genres
-        span.genre-tag
-        span.genre-tag
-        span.genre-tag
-        ...
-    a#toplist-item-{title}-{letterboxdId}-review
-      picture.filmPoster
-      div.filmScreenshots
-  ...
-*/
 
 :root {
-  /* Fixed variables relataed to film-toplist-item */
-  --film-toplist-item-poster-fixed-height: 450px;
-  --film-toplist-item-fixed-width: 900px;
+  --films-toplist-item-fixed-width: 170px;
+  --films-toplist-item-fixed-height: 250px;
 
-  --film-toplist-item-border-outer-width: 3px;
-  --film-toplist-item-border-inner-width: 2px;
-  --film-mydata-container-border-radius: 9px;
-  --film-poster-border-radius: 13px;
-  --vertical-gap-between-filmtoplistitems: 60px;
+  --films-toplist-item-bg-color: rgb(66, 66, 71);
+  --films-toplist-item-bg-color-hover: rgb(66, 66, 71);
+
+  --films-toplist-item-databox-bg-color: rgb(84, 88, 103);
+
+  /* Colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
+  --film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
+  --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
+  --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
 }
-
-:root {
-/* Toplist item colours */
---film-toplist-item-bg-color: var(var(--page-wrapper-bg));
---film-toplist-item-bg-color-hover: rgb(68, 69, 73);
---film-toplist-item-border-inner-color: rgb(62, 56, 56);
---film-toplist-item-border-outer-color: rgb(50, 49, 49);
-
-/* Background colours of pos/rating/diffscore */
---film-mydata-pos-bg-color: rgb(246, 223, 133);
---film-mydata-rating-bg-color: rgb(62, 215, 115);
---film-mydata-imdbdiffscore-bg-color: rgb(92, 87, 114);
-
-/* Colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
---film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
---film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
---film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
-
-/* Tag colours (e.g. genre-tag, director-tag, year-tag, language-tag, etc...) */
---tags-border-color: rgb(69, 69, 79);
---tags-bg-color-hover: rgb(55, 56, 58);
-}
-
 
 .films-container {
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 1fr 4fr;
+}
+
+.films-container > .films-toplist {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-left: 400px;
+  grid-gap: 70px 15px;
+  margin-top: 50px;
+  padding-bottom: 150px;
+}
+
+.films-container > .films-toplist > .films-toplist-item {
+  width: var(--films-toplist-item-fixed-width);
+  height: var(--films-toplist-item-fixed-height);
+}
+
+.films-container > .films-toplist > .films-toplist-item > a {
+  opacity: 1.0 !important;
+}
+.films-container > .films-toplist > .films-toplist-item > a:hover {
+  opacity: 0.68 !important;
+  transition: all 300ms ease;
+}
+.films-container > .films-toplist > .films-toplist-item > a:hover .film-details {
+  background-color: var(--films-toplist-item-bg-color-hover);
+  transition: all 300ms ease;
 }
 
 
-/* #region Toplist element */
-
-/*
-Proposed structure
------------------------------------------
-div.flms-toplist-item
-  a
-    div.film-details
-      span.film-title
-      div.film-dataContainer.myData
-      div.film-dataConntainer.additionalData
-    div.film-images
-      picture.film-poster
-        img
-      div.film-screenshots
-        img
-        img
-        img
------------------------------------------
-*/
-
-/* div container around entire list */
-.films-toplist {
-  padding-top: 40px;
+.films-container > .films-toplist .film-poster > img {
+  width: var(--films-toplist-item-fixed-width);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Layer above anchor tag */
-div.films-toplist-item {
-  padding-bottom: var(--vertical-gap-between-filmtoplistitems);
+.films-container > .films-toplist .film-details {
+  background-color: var(--films-toplist-item-bg-color);
+  padding: 3px 5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: center;
 }
 
-/* Film details above poster */
-div.films-toplist-item > a > div.film-details {
+.films-container > .films-toplist .film-details > p {
+  max-width: 300px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.81rem;
   color: var(--text);
-  padding: 5px 10px 15px 10px;
 }
 
-/* Display the little circle after these elements... */
-div.film-dataContainer.additionalData > span::before,
-div.film-dataContainer.additionalData > div.film-genres::before,
-div.film-dataContainer.additionalData > *:last-child::after {
-  content: "●";
-  color: #53545b;
-  margin-left: 7px;
-  margin-right: 7px;
-  font-size: 0.6rem;
-}
 
-/* Film title */
-div.film-details span.film-title {
-  font-size: 1.3rem;
-  display: block;   /* Put title on own row */
-  margin-bottom: 10px;  /* Space below title */
-}
-
-div.film-details > div.film-data {
-
-}
-
-/* Data container... */
-div.film-dataContainer {
-  display: inline;
-}
-
-/* --------------------------< My Data >-------------------------- */
-div.film-dataContainer.myData {
-  
-}
 div.film-dataContainer.myData > span {
-  padding: 3px 8px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: rgb(0, 0, 0);
-  border: 2px solid var(--page-wrapper-bg);
+  padding: 2px 5px;
+  font-weight: 400;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  background-color: var(--films-toplist-item-databox-bg-color);
+  margin-right: 8px;
   cursor: pointer;
 }
 div.film-dataContainer > span:hover {
@@ -2413,9 +2357,11 @@ span.film-myPos {
   border-top-left-radius: var(--film-mydata-container-border-radius);
   border-bottom-left-radius: var(--film-mydata-container-border-radius);
   background-color: var(--film-mydata-pos-bg-color);
+  color: rgb(233, 231, 131);
 }
 span.film-myRating {
   background-color: var(--film-mydata-rating-bg-color);
+  color: rgb(39, 235, 216);
 }
 span.film-imdbDiffScore {
   background-color: var(--film-mydata-imdbdiffscore-bg-color);
@@ -2424,163 +2370,12 @@ span.film-imdbDiffScore.positive-diff { color: var(--film-mydata-imdbdiffscore-p
 span.film-imdbDiffScore.negative-diff { color: var(--film-mydata-imdbdiffscore-negativediff-text-color) !important; }
 span.film-imdbDiffScore.equal-diff    { color: var(--film-mydata-imdbdiffscore-equaldiff-text-color) !important; }
 
-span.film-imdbDiffScore {
-  padding: 3px 0 !important;
-}
-span.film-imdbDiffScore > a,
-span.film-imdbDiffScore {
-  padding: 3px 8px !important;
-}
 span.film-imdbDiffScore:active {
   border: 2px solid rgba(255, 255, 255, 0.282);
 }
 
-div.film-myPos:hover,
-div.my-tag:hover,
-div.genre-tag:hover,
-div.genre:hover {
-  cursor: pointer;
-  transition: 150ms background-color ease;
-}
-
-/* --------------------------< Additional Data >-------------------------- */
-div.film-dataContainer.additionalData {
-  vertical-align: top;
-}
-div.film-dataContainer.additionalData > * {
-  margin-top: 2px;
-}
-div.film-details div.film-genres,
-.film-details div.film-directors {
-  /* Display the items within the divs horizontally */
-  display: inline-block;
-}
-div.film-details span.film-year,
-div.film-details span.film-language,
-div.film-details span.film-duration {
-  font-size: 0.8rem;
-}
-div.film-details span.genre-tag,
-div.film-details span.director-tag,
-div.film-details div.film-urls {
-  display: inline-block;
-}
-div.film-details span.genre-tag,
-div.film-details span.director-tag {
-  display: inline-block;
-  font-size: 0.65rem;
-  border-radius: 50px;
-  padding: 2px 10px;
-  margin-right: 4px;
-  background-color: var(--tags-bg-color);
-  border: 2px solid var(--tags-border-color);
-}
-span.genre-tag:hover,
-span.director-tag:hover {
-  background-color: var(--tags-bg-color-hover);
-  cursor: pointer;
-}
-/* links (might move somewhere else, outside of main anchor tag) */
-div.film-urls a {
-  border-radius: 4px;
-  padding: 2px 5px;
-  background-color: rgb(79, 80, 84);
-  border: 2px solid rgb(29, 28, 28);
-  color: var(--text) !important;
-  font-size: 0.55rem;
-  margin-right: 5px;
-}
-.film-details span.film-title > div.film-urls {
-  position: absolute;
-  margin-top: -2px;
-  padding-left: 10px;
-}
-
-/* #endregion */
-
-
-/* #region Poster & screenshots */
-
-/* Stuff containing poster & screenshots */
-div.films-toplist-item .film-images {
-  display: grid;
-  grid-template-columns: 3.8fr 7.2fr;
-  opacity: 1.0 !important;
-  background-color: var(--film-toplist-item-bg-color);
-  /*
-  box-shadow: 11px 13px 13px 0 var(--general-box-shadow-color-1);
-  */
-}
-div.films-toplist-item > .film-images:active {
-  /*
-  border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color-click);
-  */
-}
-
-/* item within toplist */
-.films-toplist-item > a {
-  width: var(--film-toplist-item-fixed-width);
-  margin: 0 auto; /* Center every item in the list */
-  display: block;
-  border-radius: var(--film-poster-border-radius);
-  border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color);
-  opacity: 0.9;
-  background-color: var(--film-toplist-item-bg-color);
-}
-.films-toplist-item > a:hover {
-  background-color: var(--film-toplist-item-bg-color-hover);
-  transition: all ease-in-out 0.15s;
-  opacity: 1.0 !important;
-}
-
-/* Poster section */
-.films-toplist-item .film-poster img {
-  /*
-  width: calc(var(--film-grid-element-width) * 2.3);
-  height: calc(var(--film-grid-element-height) * 2.3);
-  */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-inner-color);
-}
-.films-toplist-item .film-poster img,
-.film-images {
-  border-bottom-left-radius: calc(var(--film-poster-border-radius) - 3px);
-}
-.film-poster {
-  height: var(--film-toplist-item-poster-fixed-height);
-}
-
-/* Screenshots section */
-.film-screenshots {
-  width: 100%;
-  height: calc(var(--film-toplist-item-poster-fixed-height) / 3);
-}
-.film-screenshots img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /*
-  border-left: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-border-inner-color);
-  border-right: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-border-inner-color);
-  */
-}
-.film-screenshots img:nth-child(1) {
-  border-bottom: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-border-inner-color);
-}
-.film-screenshots img:nth-child(2) {
-  border-bottom: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-border-inner-color);
-}
-.film-screenshots img:nth-child(3) {
-  border-bottom-right-radius: calc(var(--film-poster-border-radius) - 2px);
-}
-
-/* #endregion */
-
-
-/* #region Pagination */
-
+/* #region  ----------------< 13.1 Pagination >------------------ */
+  
 :root {
   /* Border colour of paginaton button */
   --films-pagination-btn-border-color: rgb(85, 81, 81);
@@ -2607,15 +2402,15 @@ div.films-toplist-item > .film-images:active {
   position: fixed;
   grid-template-columns: repeat(2, 1fr);
   list-style-type: none;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .pagination-btns li a {
   display: flex;
-  padding: 10px;
+  padding: 5px;
   margin-right: 10px;
   width: 120px;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 2px solid var(--films-pagination-btn-border-color);
   color: var(--text) !important;
   cursor: pointer;
@@ -2635,15 +2430,14 @@ div.films-toplist-item > .film-images:active {
 /* Move these buttons to bottom of page.... Horrendous */
 .pagination-btns li.previous-btn {
   position: fixed;
-  bottom: 20px;
-  margin-left: 250px;
+  bottom: 150px;
+  margin-left: -30px;
 }
 .pagination-btns li.next-btn {
   position: fixed;
-  bottom: 20px;
-  margin-left: calc(470px + var(--film-toplist-item-fixed-width));
+  bottom: 150px;
+  margin-left: 150px;
 }
-
 
 .pagination-btns li a:hover {
   background-color: var(--films-pagination-btn-bg-color-hover);
@@ -2670,18 +2464,32 @@ div.films-toplist-item > .film-images:active {
 .pagination-btns li.pagination-disabled a,
 .pagination-btns li.pagination-disabled:hover a {
   background-color: var(--page-wrapper-bg);
-  color: var(--text-darker) !important;
+  border: 2px solid rgba(169, 162, 162, 0.185);
+  color: rgb(101, 105, 116) !important;
   cursor: not-allowed;
 }
 
 /* #endregion */
 
+/* #region ----------------< 13.1 Film controls >------------------ */
 
-/* #region Film controls */
+.films-controls-container {
+  border-top: 1px dashed rgb(82, 84, 88);
+  border-radius: 10px;
+}
+.films-controls-container > span {
+  color: var(--text);
+}
 
 .films-controls {
-  height: 40px;
+  position: fixed;
+  margin-top: 50px;
+  margin-left: 20px;
+  height: calc(80vh);
+  width: 320px;
+  background-color: #323335;
   text-align: center;
+  border-radius: 10px;
 }
 .films-controls > button.update-films-toplist-btn {
   border-radius: 20px;
@@ -2715,11 +2523,6 @@ div.films-toplist-item > .film-images:active {
   background-color: rgb(126, 238, 206);
 }
 /* #endregion */
-
-
-
-/* #endregion */
-
 
 /* #region ----------------< 13.2 Film review being displayed >------------------ */
 .review-displayed {
