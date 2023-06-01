@@ -3,14 +3,9 @@
  */
 
 import React, {useState, useEffect} from 'react';
-import { connect }  from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
-import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
-import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
-import { ReactComponent as OpenDropdownIcon } from "../../icons/openDropdown.svg";
-import { ReactComponent as ArrowLeftIcon } from "../../icons/arrowLeft.svg";
-import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
-import { Helpers } from 'react-scroll';
+import { connect }  from 'react-redux';
 import { getValueOfCSSVariable, zip } from '../../js/helpers.js';
 import FilmsToplistElement from './FilmsToplistElement.js';
 import ReactPaginate from 'react-paginate';
@@ -19,12 +14,21 @@ let STARTING_PAGE_NUM = 0;
 let MAX_FILMS_PER_PAGE = 25;
 
 const enumValue = (name) => Object.freeze({toString: () => name});
-const SortableTypes = Object.freeze({
+const SortableType = Object.freeze({
     IMDB_AVG: enumValue("imdbAvgRating"),
     IMDB_VOTES: enumValue("imdbNumVotes"),
-    MY_POS: enumValue("position")
+    IMDB_DIFF: enumValue("imdbDiffScore"),
+    MY_POS: enumValue("position"),
+    DURATION: enumValue("duration")
 });
-const SortableOrders = Object.freeze({
+const SortableTypeStr = Object.freeze({
+    IMDB_AVG: "IMDB avg rating",
+    IMDB_VOTES: "IMDB popularity",
+    IMDB_DIFF: "My rating - IMDB avg rating",
+    MY_POS: "My order",
+    DURATION: "Duration"
+})
+const SortableDirection = Object.freeze({
     ASC: enumValue("ascending"),
     DESC: enumValue("descending"),
 })
@@ -49,8 +53,27 @@ class Films extends React.Component {
         __currentPageNum: STARTING_PAGE_NUM,
 
         // state representation of list sorting
-        __sort_type: SortableTypes.MY_POS,
-        __sort_order: SortableOrders.ASC
+        __sort_type: SortableType.MY_POS,
+        __sort_type_str: SortableTypeStr.MY_POS,
+        __sort_order: SortableDirection.ASC,
+    }
+
+    /**
+     * Update current page number (in state, and in local storage)
+     * @param {*} newPageNum 
+     */
+    goToPage = (newPageNum) => {
+        // update it in localstorage...
+        localStorage.setItem('currentPageNum_films', newPageNum);
+
+        // set it in state...
+        this.setState(prevState => {
+            return {
+                __currentPageNum: newPageNum
+            }
+        })
+
+        // console.log('Changed page to ' + newPageNum);
     }
 
     /**
@@ -58,77 +81,127 @@ class Films extends React.Component {
      * @param {*} obj 
      */
     changePage = (obj) => {
-        // move scroll position to top of page...
+        // the user expects to be at the top of the next page...
         window.scrollTo(0, 0);
 
-        // change page number properly...
-        let firstIndexOfNewPage = obj.selected;
-        this.setState(prevState => {
-            return {
-                __currentPageNum: firstIndexOfNewPage
-            }
-        })
+        // update current page number...
+        this.goToPage(obj.selected);
     }
 
     /**
-     * Sort my list in ascending order (i.e Lowest to highest)
      * 
-     * For example...   (lowest IMDB avg rating ----> highest IMDB avg rating) (i.e. least critically acclaimed to most critically acclaimed according to IMDB avg rating)
-     *                  (lowest IMDB num votes -----> highest IMDB num votes) (i.e. least popular to most popular according to number of votes on IMDB)
-     *                  (lowest IMDB diff score ----> highest IMDB diff score) (i.e. most underrated according to the difference between my rating and IMDB avg rating)
+     * @param {*} previousPageNum 
+     */
+    retainPreviousPage() {
+        // go to previous page
+        let prevPageNum = localStorage.getItem('currentPageNum_films')
+        this.goToPage(prevPageNum);
+    }
+
+    /**
+     * Sort my list by a particular type
      * @param {*} type 
      */
-    sortListAscendingOrder = (type) => {
+    sortList = (type) => {
+        if (this.state.__sort_order == SortableDirection.ASC) {
+            this.setState(prevState => {
+                return {
+                    __sort_type: type,
+                    __sort_type_str: type,
+                    __webdata: Array.from(this.props.filmReviewsWebdata)
+                        .sort((a,b) => { return a[type] - b[type] })
+                        .reverse()
+                }
+            })
+        }
+
+        else if (this.state.__sort_order == SortableDirection.DESC) {
+            this.setState(prevState => {
+                return {
+                    __sort_type: type,
+                    __sort_type_str: type,
+                    __webdata: Array.from(this.props.filmReviewsWebdata)
+                        .sort((a,b) => { return a[type] - b[type] })
+                }
+            })
+        }
+    }
+
+    /**
+     * Change order of list
+     * @param {*} order 
+     */
+    changeOrder = (order) => {
+        console.log(order);
+        console.log(this.state.__sort_type);
+
+        if (order == SortableDirection.ASC) {
+            this.setState(prevState => {
+                return {
+                    __sort_type: this.state.__sort_type,
+                    __sort_type_str: this.state.__sort_type,
+                    __sort_order: order,
+                    __webdata: Array.from(this.props.filmReviewsWebdata)
+                        .sort((a,b) => { return a[this.state.__sort_type] - b[this.state.__sort_type] })
+                        .reverse(),
+                }
+            })
+        }
+
+        else if (order == SortableDirection.DESC) {
+            this.setState(prevState => {
+                return {
+                    __sort_type: this.state.__sort_type,
+                    __sort_type_str: this.state.__sort_type,
+                    __sort_order: order,
+                    __webdata: Array.from(this.props.filmReviewsWebdata)
+                        .sort((a,b) => { return a[this.state.__sort_type] - b[this.state.__sort_type] })
+                }
+            })
+        }
+    }
+
+    /**
+     * 
+     */
+    sortListImdbDiffScore() {
+        let type = 'IMDB diff score';
+
         this.setState(prevState => {
             return {
                 __sort_type: type,
-                __sort_order: SortableOrders.ASC,
+                __sort_type_str: type,
+                __sort_order: SortableDirection.DESC,
                 __webdata: Array.from(this.props.filmReviewsWebdata)
-                    .sort((a,b) => { return a[type] - b[type] })
-                    .reverse(),
+                    .sort((a,b) => {
+                        Array.from(this.props.filmReviewsLocaldata)
+                            .sort((c,d) => {
+                                if (a['letterboxdFilmId'] == c['letterboxdFilmId']) {
+                                    return (a['myRating'] - c['imdbAvgRating']) - (b['myRating'] - d['imdbAvgRating'])
+                                }
+                            })
+                    })
             }
         })
     }
 
     /**
-     * Sort my list in descending order (i.e. lowest to highest)
-     * I do this by simply using the .reverse() function in javascript
-     * 
-     * @param {*} type 
-     */
-    sortListDescendingOrder = (type) => {
-        this.setState(prevState => {
-            return {
-                __sort_type: type,
-                __sort_order: SortableOrders.DESC,
-                __webdata: Array.from(this.props.filmReviewsWebdata)
-                    .sort((a,b) => { return a[type] - b[type] })
-            }
-        })
-    }
-
-    /**
-     * 
-     * @param {*} firstIndexOfCurrentPage 
-     * @param {*} lastIndexOfCurrentPage 
-     * @returns 
+     * Was going to use this with the 'pageLabelBuilder' thing but wasn't the way I wanted it to work :(
      */
     setPageIndexTitle = (firstIndexOfCurrentPage, lastIndexOfCurrentPage) => {
         return firstIndexOfCurrentPage + " - " + lastIndexOfCurrentPage;
     }
 
-    
     /**
-     * 
+     * Manually modify text content of pagination items
+     * I couldn't figure out how to use the 'pageLabelBuilder' attribute the way I wanted to use it.
      */
-    componentDidMount() {
-        // Manually modify text content of pagination items
-        // I couldn't figure out how to use the 'pageLabelBuilder' attribute the way I wanted to use it.
+    manuallyChangeTextOfPaginationButtons() {
         let paginationBtns = document.querySelector('.films-container ul.pagination-btns');
         let paginationBtnsList = paginationBtns.childNodes;
         // if (paginationBtnsList[1].childNodes[0].textContent == "1") {
         for (let i = 0; i < paginationBtnsList.length; i++) {
-            console.log('i = ' + i);
+            // console.log('i = ' + i);
             let btn = paginationBtnsList[i];
             if (btn.classList.contains('previous-btn') == true || btn.classList.contains('next-btn') == true) {
                 // ignore the 'previous' and 'next' buttons...
@@ -145,6 +218,54 @@ class Films extends React.Component {
             }
         }
         // }
+    }
+    
+    /**
+     * Component did mount function
+     */
+    componentDidMount() {
+        // retain previous page based on localstorage value...
+        // this.retainPreviousPage();
+
+        // update pagination buttons...
+        this.manuallyChangeTextOfPaginationButtons()
+    }
+
+    /**
+     * 
+     */
+    sortingBtnClicked = (e) => {
+        var byTypeClassname = "films-sort-by-type-btn";
+        var byOrderClassname = "films-sort-by-direction-btn";
+
+        if (e.target.classList.contains(byTypeClassname)) {
+            var activeBtns = document.getElementsByClassName(byTypeClassname + ' active');
+            while (activeBtns.length > 0) {
+                activeBtns[0].classList.remove('active');
+            }
+            e.target.classList.add('active');
+        }
+
+        else if (e.target.classList.contains(byOrderClassname)) {
+            var activeBtns = document.getElementsByClassName(byOrderClassname + ' active');
+            while (activeBtns.length > 0) {
+                activeBtns[0].classList.remove('active');
+            }
+            e.target.classList.add('active');
+        }
+    }
+
+    toggleDropdownSortTypesList() {
+        const dropdownList = document.getElementsByClassName('dropdown-list')[0];
+        const dropdownListBtn = document.getElementsByClassName('dropdown-list-btn')[0];
+
+        if (dropdownList.classList.contains('visible')) {
+            dropdownList.classList.remove('visible');
+            dropdownListBtn.classList.remove('list-is-visible');
+        } else {
+            dropdownList.classList.add('visible');
+            dropdownListBtn.classList.add('list-is-visible');
+        }
     }
 
     /**
@@ -169,31 +290,55 @@ class Films extends React.Component {
                     }
                 }
             })
-        console.log("lastIndex = " + lastIndex);
-        console.log("totalNumOfPages = " + this.state.__totalNumOfPages);
-        console.log(filmsDisplayed);
+        // console.log("lastIndex = " + lastIndex);
+        // console.log("totalNumOfPages = " + this.state.__totalNumOfPages);
+        // console.log(filmsDisplayed);
+        
+        let currentSortTypeStr = "";
+        if (this.state.__sort_type == SortableType.MY_POS) {
+            currentSortTypeStr = SortableTypeStr.MY_POS;
+        } else if (this.state.__sort_type == SortableType.IMDB_AVG) {
+            currentSortTypeStr = SortableTypeStr.IMDB_AVG;
+        } else if (this.state.__sort_type == SortableType.IMDB_VOTES) {
+            currentSortTypeStr = SortableTypeStr.IMDB_VOTES;
+        } else if (this.state.__sort_type == SortableType.DURATION) {
+            currentSortTypeStr = SortableTypeStr.DURATION;
+        }
         
         return(
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
                     <div className='films-container'>
                         <div className='films-controls'>
-                            {/*}
-                            <button className='active' onClick={() => this.sortListAscendingOrder(SortableTypes.MY_POS)}>
-                                My order
-                            </button>
-                            <button onClick={() => this.sortListAscendingOrder(SortableTypes.IMDB_AVG)}>
-                                Sort by highest IMDB avg score
-                            </button>
-                            <button onClick={() => this.sortListDescendingOrder(SortableTypes.IMDB_AVG)}>
-                                Sort by lowest IMDB avg score
-                            </button>
-                            */}
-                            <div className='films-controls-container filters-container'>
-                                <span>Filters</span>
+                            <div className='films-controls-subgroup sorting-container'>
+                                <div className='sort-type-btns'>
+                                    <span className='subgroup-title'>Sort by</span>
+                                    <div className='dropdown-list-btn' onClick={this.toggleDropdownSortTypesList}>
+                                        <span>{currentSortTypeStr}</span>
+                                        <ArrowDownIcon className='invertable-icon' />
+                                    </div>
+                                    <div className='dropdown-list hidden'>
+                                        <div className="btn films-sort-by-type-btn active" onClick={(e) => { this.sortList(SortableType.MY_POS); this.sortingBtnClicked(e);} }>
+                                            {SortableTypeStr.MY_POS}
+                                        </div>
+                                        <div className="btn films-sort-by-type-btn" onClick={(e) => { this.sortList(SortableType.IMDB_AVG); this.sortingBtnClicked(e);} }>
+                                            {SortableTypeStr.IMDB_AVG}
+                                        </div>
+                                        <div className="btn films-sort-by-type-btn" onClick={(e) => { this.sortList(SortableType.IMDB_VOTES); this.sortingBtnClicked(e);} }>
+                                            {SortableTypeStr.IMDB_VOTES}
+                                        </div>
+                                        <div className="btn films-sort-by-type-btn" onClick={(e) => { this.sortList(SortableType.DURATION); this.sortingBtnClicked(e);} }>
+                                            {SortableTypeStr.DURATION}
+                                        </div>
+                                    </div>
+                                    <div className='sort-direction-btns'>
+                                        <div className="btn films-sort-by-direction-btn active" onClick={(e) => { this.changeOrder(SortableDirection.ASC); this.sortingBtnClicked(e);} } title="Ascending order">🡣</div>
+                                        <div className="btn films-sort-by-direction-btn" onClick={(e) => { this.changeOrder(SortableDirection.DESC); this.sortingBtnClicked(e);} } title="Descending order">🡡</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className='films-controls-container pagination-container'>
-                                <span>Pages</span>
+                            <div className='films-controls-subgroup pagination-container'>
+                                <span className='subgroup-title'>Pages</span>
                                 <ReactPaginate
                                     previousLabel={"< previous"}
                                     nextLabel={"> next"}

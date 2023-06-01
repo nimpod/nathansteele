@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import { Link, withRouter } from 'react-router-dom';
 import { ReactComponent as ArrowLeft } from "../../icons/arrowLeft.svg";
 import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
@@ -18,7 +18,7 @@ class FilmsReview extends Component {
      * The Render() function, content rendered to screen...
      */
     render() {
-        console.log(this.props);
+        // console.log(this.props);
 
         let posterUrl = ""
         let title = ""
@@ -118,7 +118,7 @@ class FilmsReview extends Component {
  */
 const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.film_id;     // the id of the review being displayed in the UI
-    console.log(id);
+    // console.log(id);
     let webdata = require('./reviews_web_data.json');
 
     return {
@@ -128,4 +128,5 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 
-export default connect(mapStateToProps)(FilmsReview)
+// we added the 'withRouter' higher order function, so that we can retain scroll position when user goes back a page...
+export default withRouter(connect(mapStateToProps)(FilmsReview))

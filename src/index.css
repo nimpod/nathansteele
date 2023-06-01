@@ -2265,24 +2265,26 @@ ul.messiahs-handbook p.quote-person {
 }
 
 
+.films-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+
+/* #region ------------------------< 13.1 Toplist >------------------------ */
 :root {
+  /* Item in toplist grid */
   --films-toplist-item-fixed-width: 170px;
   --films-toplist-item-fixed-height: 250px;
-
   --films-toplist-item-bg-color: rgb(66, 66, 71);
   --films-toplist-item-bg-color-hover: rgb(66, 66, 71);
-
   --films-toplist-item-databox-bg-color: rgb(84, 88, 103);
+  --films-toplist-item-poster-border-color: rgba(143, 153, 196, 0.244);
 
   /* Colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
   --film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
   --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
   --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
-}
-
-.films-container {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
 }
 
 .films-container > .films-toplist {
@@ -2294,23 +2296,51 @@ ul.messiahs-handbook p.quote-person {
   padding-bottom: 150px;
 }
 
+.films-container > .films-toplist > .films-toplist-item,
+.films-container > .films-toplist .film-details {
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+.films-container > .films-toplist > .films-toplist-item,
+.films-container > .films-toplist > .films-toplist-item a,
+.films-container .film-poster,
+.films-container .film-poster img {
+  border-bottom: 0px solid transparent;
+}
+.films-container > .films-toplist .film-details {
+  border-top: 0px solid transparent !important;
+}
+.films-container > .films-toplist .film-details:active {
+  border-bottom: 2px solid var(--films-toplist-item-poster-border-color);
+}
+.films-container > .films-toplist > .films-toplist-item:active,
+.films-container > .films-toplist .film-details:active,
+.films-container > .films-toplist > .films-toplist-item:active .film-details  {
+  border-top: 2px solid var(--films-toplist-item-poster-border-color);
+  border-left: 2px solid var(--films-toplist-item-poster-border-color);
+  border-right: 2px solid var(--films-toplist-item-poster-border-color);
+}
+
+
 .films-container > .films-toplist > .films-toplist-item {
   width: var(--films-toplist-item-fixed-width);
   height: var(--films-toplist-item-fixed-height);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .films-container > .films-toplist > .films-toplist-item > a {
   opacity: 1.0 !important;
 }
 .films-container > .films-toplist > .films-toplist-item > a:hover {
-  opacity: 0.68 !important;
+  opacity: 0.65 !important;
   transition: all 300ms ease;
 }
 .films-container > .films-toplist > .films-toplist-item > a:hover .film-details {
   background-color: var(--films-toplist-item-bg-color-hover);
   transition: all 300ms ease;
 }
-
 
 .films-container > .films-toplist .film-poster > img {
   width: var(--films-toplist-item-fixed-width);
@@ -2326,7 +2356,8 @@ ul.messiahs-handbook p.quote-person {
   padding: 3px 5px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  text-align: center;
+  width: 101%;
+  margin-left: -2px;
 }
 
 .films-container > .films-toplist .film-details > p {
@@ -2336,19 +2367,20 @@ ul.messiahs-handbook p.quote-person {
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 0.81rem;
+  font-size: 0.80rem;
   color: var(--text);
 }
 
-
 div.film-dataContainer.myData > span {
   padding: 2px 5px;
-  font-weight: 400;
-  font-size: 0.75rem;
+  font-weight: bold;
+  font-size: 0.70rem;
   border-radius: 6px;
-  background-color: var(--films-toplist-item-databox-bg-color);
   margin-right: 8px;
   cursor: pointer;
+  color: rgb(0, 0, 0);
+  user-select: none;
+  /* background-color: var(--films-toplist-item-databox-bg-color); */
 }
 div.film-dataContainer > span:hover {
   opacity: 0.65;
@@ -2356,46 +2388,205 @@ div.film-dataContainer > span:hover {
 span.film-myPos {
   border-top-left-radius: var(--film-mydata-container-border-radius);
   border-bottom-left-radius: var(--film-mydata-container-border-radius);
-  background-color: var(--film-mydata-pos-bg-color);
-  color: rgb(233, 231, 131);
+  /* color: rgb(233, 231, 131); */
+  background-color: rgb(176, 227, 175);
 }
 span.film-myRating {
-  background-color: var(--film-mydata-rating-bg-color);
-  color: rgb(39, 235, 216);
+  /* color: rgb(39, 235, 216); */
+  background-color: rgb(227, 181, 205);
 }
 span.film-imdbDiffScore {
-  background-color: var(--film-mydata-imdbdiffscore-bg-color);
+  /* background-color: var(--film-mydata-imdbdiffscore-bg-color); */
+  background-color: #5d6a71;
 }
-span.film-imdbDiffScore.positive-diff { color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important; }
-span.film-imdbDiffScore.negative-diff { color: var(--film-mydata-imdbdiffscore-negativediff-text-color) !important; }
-span.film-imdbDiffScore.equal-diff    { color: var(--film-mydata-imdbdiffscore-equaldiff-text-color) !important; }
+span.film-imdbDiffScore.positive-diff { 
+  color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important;
+}
+span.film-imdbDiffScore.negative-diff { 
+  color: var(--film-mydata-imdbdiffscore-negativediff-text-color) !important;
+}
+span.film-imdbDiffScore.equal-diff    { 
+  color: var(--film-mydata-imdbdiffscore-equaldiff-text-color) !important;
+}
 
 span.film-imdbDiffScore:active {
   border: 2px solid rgba(255, 255, 255, 0.282);
 }
+/* #endregion */
 
-/* #region  ----------------< 13.1 Pagination >------------------ */
-  
+
+/* #region ----------------< 13.2 Film controls >------------------ */
 :root {
+  /* Film controls container */
+  --films-controls-container-bg-color: rgb(50, 51, 53);
+  --films-controls-btn-bg-color: rgb(74, 75, 79);
+  --films-controls-btn-text-color-active: var(--text);
+  --films-controls-dropdown-list-bg-color: rgba(74, 75, 79, 0.922);
+  --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
+
   /* Border colour of paginaton button */
   --films-pagination-btn-border-color: rgb(85, 81, 81);
   --films-pagination-btn-border-color-hover: rgb(120, 117, 117);
-  --films-pagination-btn-border-color-active: rgb(123, 245, 200);
+  --films-pagination-btn-border-color-active: rgb(42, 156, 114);
 
   /* Background colour of pagination button in normal/hover/active state */
   --films-pagination-btn-bg-color: rgb(75, 72, 72);
   --films-pagination-btn-bg-color-hover: rgb(120, 117, 117);
   --films-pagination-btn-bg-color-selected: rgb(69, 182, 141);
-  --films-pagination-btn-bg-color-active: rgb(123, 245, 200);
+  --films-pagination-btn-bg-color-active: rgb(31, 161, 104);
 
   /* Text colour of pagination button in hover/active state */
   --films-pagination-btn-text-color-hover: var(--text);
-  --films-pagination-btn-text-color-active: rgb(75, 71, 71);
+  --films-pagination-btn-text-color-active: var(--text);
 
   /* Background colour of next and previous buttons */
   --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
 }
 
+
+/* ----------------------< Film controls >---------------------- */
+/* The entire container... */
+.films-controls {
+  position: fixed;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 20px;
+  height: calc(80vh);
+  width: 320px;
+  background-color: var(--films-controls-container-bg-color);
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* A subgroup inside .film-controls */
+.films-controls-subgroup {
+  border-top: 1px dashed rgb(73, 76, 82);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Title of subgroup */
+.films-controls-subgroup span.subgroup-title {
+  display: block;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.films-controls-subgroup > span {
+  font-size: 1.0rem;
+}
+.films-controls-subgroup > div > span {
+  font-size: 0.85rem;
+}
+
+/* Sorting buttons */
+.films-controls div.btn {
+  outline: none !important;
+  transition: all 200ms ease-in-out;
+  color: var(--text);
+}
+.films-controls div.btn:hover {
+  background-color: rgb(92, 89, 89);
+}
+.films-controls div.btn.active {
+  color: var(--films-controls-btn-text-color-active) !important;
+  background-color: var(--films-pagination-btn-border-color-active);
+}
+
+/* Sort by type buttons */
+.dropdown-list:not(.visible) {
+  display: none;
+}
+.dropdown-list.visible {
+  position: absolute;
+  z-index: 9999999999;
+  background-color: var(--films-controls-dropdown-list-bg-color);
+  width: 180px;
+  border-radius: 5px;
+  padding: 6px 0;
+}
+.dropdown-list-btn {
+  border-radius: 5px;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+  background-color: var(--films-controls-dropdown-list-bg-color);
+  width: 180px;
+  margin-right: 45px;
+  padding: 5px;
+  margin-bottom: 4px;
+  text-align: left;
+}
+.dropdown-list-btn:hover {
+  cursor: pointer;
+  background-color: rgba(134, 135, 139, 0.603);
+}
+.dropdown-list-btn:active {
+  border: 2px solid rgba(147, 153, 176, 0.689);
+}
+.dropdown-list-btn.list-is-visible {
+  background-color: rgba(134, 135, 139, 0.603);
+}
+.dropdown-list-btn > span {
+  margin-left: 10px;
+  color: var(--text);
+  user-select: none;
+}
+.dropdown-list-btn > svg {
+  float: right;
+  margin-right: 5px;
+  margin-top: 8px;
+  width: 11px;
+}
+
+.dropdown-list div.films-sort-by-type-btn {
+  width: 170px;
+  background-color: var(--films-controls-dropdown-list-btn-bg-color);
+  padding: 5px 10px;
+  margin-bottom: 7px;
+  margin-right: 2px;
+  margin-left: 5px;
+  border-radius: 5px;
+  display: block;
+  font-size: 0.85rem;
+}
+.dropdown-list div.btn.active {
+  
+}
+
+
+.sort-type-btns > div:not(.dropdown-list) {
+  display: inline-block;
+}
+/* Sort by direction buttons */
+.sort-direction-btns div.btn {
+  padding: 0 9px;
+  border: 2px solid transparent;
+}
+.sort-direction-btns div.btn.active {
+  background-color: var(--films-pagination-btn-bg-color-active);
+}
+.sort-direction-btns div.btn:not(.active):active {
+  border: 2px solid rgba(147, 153, 176, 0.689);
+}
+.sort-direction-btns div.btn:not(.active) {
+  background-color: var(--films-controls-btn-bg-color);
+}
+.sort-direction-btns div.btn:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.sort-direction-btns div.btn:last-child {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+
+/* ----------------< Pagination >------------------ */
 .pagination-btns {
   list-style: none;
   display: grid;
@@ -2403,6 +2594,7 @@ span.film-imdbDiffScore:active {
   grid-template-columns: repeat(2, 1fr);
   list-style-type: none;
   margin-top: 10px;
+  margin-left: -17px;
 }
 .pagination-btns li a {
   display: flex;
@@ -2471,58 +2663,7 @@ span.film-imdbDiffScore:active {
 
 /* #endregion */
 
-/* #region ----------------< 13.1 Film controls >------------------ */
 
-.films-controls-container {
-  border-top: 1px dashed rgb(82, 84, 88);
-  border-radius: 10px;
-}
-.films-controls-container > span {
-  color: var(--text);
-}
-
-.films-controls {
-  position: fixed;
-  margin-top: 50px;
-  margin-left: 20px;
-  height: calc(80vh);
-  width: 320px;
-  background-color: #323335;
-  text-align: center;
-  border-radius: 10px;
-}
-.films-controls > button.update-films-toplist-btn {
-  border-radius: 20px;
-  background-color: rgb(79, 77, 77);
-  color: var(--text);
-  border: none;
-  outline: none;
-  font-size: 1.3rem;
-  padding: 2px 7px;
-}
-.films-controls > button.update-films-toplist-btn:hover {
-  background-color: rgb(65, 67, 71);
-}
-.films-controls > button.update-films-toplist-btn:active {
-  background-color: rgb(29, 29, 35);
-}
-
-.films-controls > button {
-  outline: none !important;
-  border: none !important;
-  border-radius: 20px;
-  background-color: var(--another-btn-bg-color);
-  color: var(--text);
-  padding: 4px 10px;
-}
-.films-controls > button:hover {
-  background-color: rgb(92, 89, 89);
-}
-.films-controls > button.active {
-  color: rgb(0, 0, 0) !important;
-  background-color: rgb(126, 238, 206);
-}
-/* #endregion */
 
 /* #region ----------------< 13.2 Film review being displayed >------------------ */
 .review-displayed {

@@ -239,8 +239,8 @@ def regenerate_json_file():
                 # retrieve avg IMD rating
                 imdb_avg_rating = imdb_json['imdbRating']
                 
-                # retrieve number of votes on IMDB
-                imdb_num_votes = imdb_json['imdbVotes']
+                # retrieve number of votes on IMDB (we remove the comma, because react is fucking stupid and cant sort numbers when they contain commas)
+                imdb_num_votes = imdb_json['imdbVotes'].replace(',', '')
                 
                 # retrieve poster from IMDB
                 poster_url = imdb_json['Poster']
