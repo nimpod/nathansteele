@@ -41,6 +41,7 @@ class Helpers:
             2001 Space Odyssey = 2001spaceodyssey
             Face/Off = faceoff
             K-PAX = kpax
+            Mother! = mother
             Exte: Hair Extensions = extehairextensions
             Big Fish & Begonia = bigfishandbegonia
         """
@@ -51,6 +52,8 @@ class Helpers:
                     .replace(")", "")\
                     .replace("[", "")\
                     .replace("]", "")\
+                    .replace("!", "")\
+                    .replace("?", "")\
                     .replace("'", "")\
                     .replace("\"", "")\
                     .replace(":", "")\
@@ -321,5 +324,5 @@ def regenerate_json_file():
 
 
 # call my functions........
-# download_letterboxd_data()
+download_letterboxd_data()
 regenerate_json_file()

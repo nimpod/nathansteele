@@ -6,7 +6,7 @@ import React, {useState, useEffect} from 'react';
 import { withRouter } from 'react-router-dom';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { connect }  from 'react-redux';
-import { getValueOfCSSVariable, zip } from '../../js/helpers.js';
+import { getValueOfCSSVariable, zip, removeGenreDuplicates, removeLanguageDuplicates, hideItemWhenUserClicksOutsideOfItem } from '../../js/helpers.js';
 import FilmsToplistElement from './FilmsToplistElement.js';
 import ReactPaginate from 'react-paginate';
 import { act } from 'react-dom/test-utils';
@@ -40,12 +40,17 @@ const SortableDirection = Object.freeze({
 class Films extends React.Component {
     
     state = {
+        // state representation of data that is displayed/filtered/sorted
+        __fulldata: Array.from(this.props.filmReviewsWebdata)
+            .sort((a,b) => { return a['position'] - b['position'] })
+            .reverse(),
+
         // state representation of webdata (directors, year, genres, etc...)
         // the default order is lowest rating to highest rating (i.e. ascending)
         __webdata: Array.from(this.props.filmReviewsWebdata)
             .sort((a,b) => { return a['position'] - b['position'] })
             .reverse(),
-        
+                
         // state representation of localdata (my review, my rating, my tags, etc...)
         __localdata: Array.from(this.props.filmReviewsLocaldata),
 
@@ -62,7 +67,12 @@ class Films extends React.Component {
 
         // filters...
         __current_genre_filter: "",
-        __current_language_filter: ""
+        __current_language_filter: "",
+
+        // search stuff...
+        __search_box_contains_text: false,
+        __search_box_was_clicked: false,
+        __search_post: ""
     }
 
     /**
@@ -115,7 +125,7 @@ class Films extends React.Component {
                 return {
                     __sort_type: type,
                     __sort_type_str: type,
-                    __webdata: Array.from(this.props.filmReviewsWebdata)
+                    __fulldata: Array.from(this.props.filmReviewsWebdata)
                         .sort((a,b) => { return a[type] - b[type] })
                         .reverse()
                 }
@@ -127,7 +137,7 @@ class Films extends React.Component {
                 return {
                     __sort_type: type,
                     __sort_type_str: type,
-                    __webdata: Array.from(this.props.filmReviewsWebdata)
+                    __fulldata: Array.from(this.props.filmReviewsWebdata)
                         .sort((a,b) => { return a[type] - b[type] })
                 }
             })
@@ -148,7 +158,7 @@ class Films extends React.Component {
                     __sort_type: this.state.__sort_type,
                     __sort_type_str: this.state.__sort_type,
                     __sort_order: order,
-                    __webdata: Array.from(this.props.filmReviewsWebdata)
+                    __fulldata: Array.from(this.props.filmReviewsWebdata)
                         .sort((a,b) => { return a[this.state.__sort_type] - b[this.state.__sort_type] })
                         .reverse(),
                 }
@@ -161,7 +171,7 @@ class Films extends React.Component {
                     __sort_type: this.state.__sort_type,
                     __sort_type_str: this.state.__sort_type,
                     __sort_order: order,
-                    __webdata: Array.from(this.props.filmReviewsWebdata)
+                    __fulldata: Array.from(this.props.filmReviewsWebdata)
                         .sort((a,b) => { return a[this.state.__sort_type] - b[this.state.__sort_type] })
                 }
             })
@@ -179,7 +189,7 @@ class Films extends React.Component {
                 __sort_type: type,
                 __sort_type_str: type,
                 __sort_order: SortableDirection.DESC,
-                __webdata: Array.from(this.props.filmReviewsWebdata)
+                __fulldata: Array.from(this.props.filmReviewsWebdata)
                     .sort((a,b) => {
                         Array.from(this.props.filmReviewsLocaldata)
                             .sort((c,d) => {
@@ -215,7 +225,7 @@ class Films extends React.Component {
             } else {
                 let anchorTag = btn.childNodes[0];
                 for (let j = 0; j < this.state.__totalNumOfPages; j++) {
-                    let upperBound = (this.state.__webdata.length - ((i-1)*MAX_FILMS_PER_PAGE));
+                    let upperBound = (this.state.__fulldata.length - ((i-1)*MAX_FILMS_PER_PAGE));
                     let lowerBound = upperBound - MAX_FILMS_PER_PAGE + 1;
                     let textContent = (upperBound + " - " + lowerBound);
                     // let textContent = "Top " + upperBound;
@@ -238,8 +248,10 @@ class Films extends React.Component {
         this.manuallyChangeTextOfPaginationButtons()
     }
 
+    
     /**
      * 
+     * @param {*} e 
      */
     sortingBtnClicked = (e) => {
         var byTypeClassname = "films-sort-by-type-btn";
@@ -262,8 +274,10 @@ class Films extends React.Component {
         }
     }
 
+
     /**
      * 
+     * @param {*} classNameOfList 
      */
     toggleDropdownList = (classNameOfList) => {
         var dropdownList = document.getElementsByClassName(classNameOfList + "")[0];
@@ -276,44 +290,45 @@ class Films extends React.Component {
             dropdownList.classList.add('visible');
             dropdownListBtn.classList.add('list-is-visible');
         }
+
+        // close collapsed menu if user clicks out of it...
+        let itemToHide = dropdownList;
+        window.addEventListener('click', function(mouseEvent) {
+            hideItemWhenUserClicksOutsideOfItem(itemToHide, dropdownListBtn, mouseEvent, 'visible');
+            dropdownListBtn.classList.remove('list-is-visible');
+        });
     }
 
+    
     /**
-     * Get set of genres (set meaning there should be no duplicates)
-     * @returns 
+     * 
+     * @param {*} target 
+     * @param {*} classnameOfButtonsInThisDropdownList 
+     * @returns Button the user clicked on
      */
-    getListOfGenres() {
-        const { filmReviewsWebdata } = this.props;       // json data from redux data store
-        const uniqueGenres = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+    handleFilterButtonTogglingStuff(target, classnameOfButtonsInThisDropdownList) {
+        // make sure we actually find the button...
+        let actualButton = NaN;
+        if (target.tagName == "SPAN") {
+            // user clicked on text, bit fucking annoying
+            actualButton = target.parentElement;
+        } else {
+            // user clicked on button, well done
+            actualButton = target;
+        }
 
-        // store each genre once...
-        this.props.filmReviewsWebdata.map((film => {
-            film.genres.map((g => {
-                uniqueGenres.add(g);
-            }));
-        }));
+        // remove .active from everything first... 
+        // This ensures only one filter is highlighted at a time...
+        // Dont do this if the actual button is inactive (i.e. nothing has been filtered yet)
+        if (!actualButton.classList.contains('active')) {
+            let dropdownBtns = document.querySelectorAll(classnameOfButtonsInThisDropdownList);
+            for (let i = 0; i < dropdownBtns.length; i++) {
+                dropdownBtns[i].classList.remove('active');
+            }
+        }
 
-        // sort the set alphabetically, cause why not.
-        const uniqueGenresSorted = Array.from(uniqueGenres).sort();
-        return uniqueGenresSorted;
-    }
-
-    /**
-     * Get set of languages (set meaning there should be no duplicates)
-     * @returns 
-     */
-    getListOfLanguages() {
-        const { filmReviewsWebdata } = this.props;       // json data from redux data store
-        const uniqueLanguages = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
-
-        // store each language once...
-        this.props.filmReviewsWebdata.map((film => {
-            uniqueLanguages.add(film.language);
-        }));
-
-        // sort the set alphabetically, cause why not.
-        const uniqueLanguagesSorted = Array.from(uniqueLanguages).sort();
-        return uniqueLanguagesSorted;
+        // return the button in the dropdown list that the user originally clicked
+        return actualButton;
     }
 
 
@@ -324,43 +339,55 @@ class Films extends React.Component {
      */
     filterByGenre = (e, genre) => {
         // update the 'current_genre_filter' state...
-        this.setState(prevState => {
-            return {
-                __current_genre_filter: genre
-            }
-        })
+        this.setState({__current_genre_filter: genre})
 
         // filter the list...
         this.setState(prevState => {
             return {
-                __webdata: Array.from(this.props.filmReviewsWebdata).filter((f) => {
+                __fulldata: Array.from(this.props.filmReviewsWebdata).filter((f) => {
                     let arrayOfGenres = Array.from(f.genres);
                     let containsRequestedGenre = arrayOfGenres.includes(genre);
                     return containsRequestedGenre;
-                })
+                }).reverse()
             }
         })
 
-        // make sure we actually find the button...
-        let actualButton = NaN;
-        if (e.target.tagName == "SPAN") {
-            // user clicked on text, bit fucking annoying
-            actualButton = e.target.parentElement;
-        } else {
-            // user clicked on button, well done
-            actualButton = e.target;
-        }
-
-        // remove .active from everything first... 
-        // This ensures only one filter is highlighted at a time...
-        // Dont do this if the actual button is inactive (i.e. nothing has been filtered yet)
-        if (!actualButton.classList.contains('active')) {
-            let dropdownBtns = document.querySelectorAll('.films-filter-by-genre-btn');
-            for (let i = 0; i < dropdownBtns.length; i++) {
-                dropdownBtns[i].classList.remove('active');
-            }
-        }
+        // deal with button stuff...
+        let actualButton = this.handleFilterButtonTogglingStuff(e.target, '.films-filter-by-genre-btn');
         
+        // toggle the .active class
+        if (!actualButton.classList.contains('active')) {
+            // enable filter...
+            actualButton.classList.add('active');
+        } else {
+            // disable filter...
+            actualButton.classList.remove('active');
+            this.setState({__current_genre_filter: ""})
+            this.setState({__fulldata: Array.from(this.props.filmReviewsWebdata).reverse()})
+        }
+    }
+
+
+    /**
+     * Filter list by language
+     * @param {*} e 
+     * @param {*} language 
+     */
+    filterByLanguage = (e, language) => {
+        // update the 'current_genre_filter' state...
+        this.setState({__current_language_filter: language})
+
+        // filter the list...
+        this.setState(prevState => {
+            return {
+                __fulldata: Array.from(this.props.filmReviewsWebdata)
+                    .filter((f) => { return f.language == language; })
+                    .reverse()
+            }
+        })
+
+        // deal with button stuff...
+        let actualButton = this.handleFilterButtonTogglingStuff(e.target, '.films-filter-by-language-btn');
 
         // toggle the .active class
         if (!actualButton.classList.contains('active')) {
@@ -369,32 +396,30 @@ class Films extends React.Component {
         } else {
             // disable filter...
             actualButton.classList.remove('active');
-            
-            // reset the 'current_genre_filter'
-            this.setState(prevState => {
-                return {
-                    __current_genre_filter: ""
-                }
-            })
-
-            // reset list
-            this.setState(prevState => {
-                return {
-                    __webdata: Array.from(this.props.filmReviewsWebdata)
-                        .reverse()
-                }
-            })
+            this.setState({__current_language_filter: ""})
+            this.setState({__fulldata: Array.from(this.props.filmReviewsWebdata).reverse()})
         }
     }
 
+
     /**
-     * Filter list by language
-     * @param {*} e 
-     * @param {*} language 
+     * New text handler for the searchbox
+     * @param {Event} e 
      */
-    filterByLanguage = (e, language) => {
-        console.log(language);
+    handleSearchBoxInput = (e) => {
+        // get user input and update state
+        this.setState({__search_post: e.target.value});
+        
+        // no text is in the searchbox, so set state to false
+        if (e.target.value.length == 0) {
+            this.setState({__search_box_contains_text: false});
+        }
+        // there's some text in the searchbox, so set state to true
+        else if (e.target.value.length > 0) {
+            this.setState({__search_box_contains_text: true});
+        }
     }
+
 
     /**
      * Content rendered to screen
@@ -402,12 +427,17 @@ class Films extends React.Component {
     render() {
         // convert the localdata json into an iterable array...
         const localdata = Array.from(this.props.filmReviewsLocaldata);
+        // MAX_FILMS_PER_PAGE = localdata.length;
 
         // index of LAST item in current page
         const lastIndex = this.state.__currentPageNum * MAX_FILMS_PER_PAGE;
 
         // get items for current page...
-        const filmsDisplayed = this.state.__webdata
+        const filmsDisplayed = this.state.__fulldata
+            .filter((f) => {
+                let isTitleEqualToSearchbox = f.title.toLowerCase().includes(this.state.__search_post.toLowerCase());
+                return isTitleEqualToSearchbox;
+            })
             .slice(lastIndex, lastIndex + MAX_FILMS_PER_PAGE)
             .map(filmWeb => {
                 // iterate over localdata, and find the matching item in webdata...
@@ -418,10 +448,8 @@ class Films extends React.Component {
                     }
                 }
             })
-        // console.log("lastIndex = " + lastIndex);
-        // console.log("totalNumOfPages = " + this.state.__totalNumOfPages);
-        // console.log(filmsDisplayed);
         
+        // get string representations...
         let currentSortTypeStr = "";
         if (this.state.__sort_type == SortableType.MY_POS) {
             currentSortTypeStr = SortableTypeStr.MY_POS;
@@ -435,31 +463,44 @@ class Films extends React.Component {
             currentSortTypeStr = SortableTypeStr.YEAR;
         }
 
-        // get list of genres (no duplicates)...
-        let genres = this.getListOfGenres();
-        console.log(genres);
-
-        // get list of languages (no duplicates)...
-        let languages = this.getListOfLanguages();
-        console.log(languages);
+        // get no duplicate lists...
+        let genres = removeGenreDuplicates(this.props.filmReviewsWebdata);
+        let languages = removeLanguageDuplicates(this.props.filmReviewsWebdata);
 
         return(
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
                     <div className='films-container'>
                         <div className='films-controls'>
+                            <div className='films-controls-subgroup searching-container'>
+                                <span className='subgroup-title'>Search</span>
+                                <div className="searchbox">
+                                    <input
+                                        onChange={this.handleSearchBoxInput} 
+                                        placeholder="search by film name..." 
+                                        type="text"
+                                    />
+                                </div>
+                            </div>
                             <div className='films-controls-subgroup filtering-container'>
-                                <span className='subgroup-title'>Filter by...</span>
+                                <span className='subgroup-title'>Filter by</span>
                                 <div className='filter-by-genre-btns'>
                                     <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={() => this.toggleDropdownList('dropdown-list-genres')}>
                                         <span>{this.state.__current_genre_filter}</span>
                                         <ArrowDownIcon className='invertable-icon' />
                                     </div>
-                                    <div className='dropdown-list-genres dropdown-list hidden'>
+                                    <div className='dropdown-list-genres dropdown-list'>
                                         {
                                             genres.map((g => {
                                                 return <div className="btn films-filter-by-genre-btn" onClick={(e) => this.filterByGenre(e, g)}>
-                                                    <span className={g}>{g}</span>
+                                                    <span className='genre-text'>
+                                                        {g}
+                                                    </span>
+                                                    <span className='genre-count'>
+                                                        {this.state.__webdata.filter((f) => {
+                                                            return Array.from(f.genres).includes(g);
+                                                        }).length}
+                                                    </span>
                                                 </div>
                                             }))
                                         }
@@ -473,11 +514,18 @@ class Films extends React.Component {
                                         <span>{this.state.__current_language_filter}</span>
                                         <ArrowDownIcon className='invertable-icon' />
                                     </div>
-                                    <div className='dropdown-list-languages dropdown-list hidden'>
+                                    <div className='dropdown-list-languages dropdown-list'>
                                         {
                                             languages.map((l => {
-                                                return <div className="btn films-filter-by-genre-btn" onClick={(e) => this.filterByLanguage(e, l)}>
-                                                    <span className={l}>{l}</span>
+                                                return <div className="btn films-filter-by-language-btn" onClick={(e) => this.filterByLanguage(e, l)}>
+                                                    <span className='language-text'>
+                                                        {l}
+                                                    </span>
+                                                    <span className='language-count'>
+                                                        {this.state.__webdata.filter((f) => {
+                                                            return f.language.includes(l);
+                                                        }).length}
+                                                    </span>
                                                 </div>
                                             }))
                                         }
@@ -489,12 +537,12 @@ class Films extends React.Component {
                             </div>
                             <div className='films-controls-subgroup sorting-container'>
                                 <div className='sort-type-btns'>
-                                    <span className='subgroup-title'>Sort by...</span>
+                                    <span className='subgroup-title'>Sort by</span>
                                     <div className='dropdown-list-sorting-btn dropdown-list-btn' onClick={() => this.toggleDropdownList('dropdown-list-sorting')}>
                                         <span>{currentSortTypeStr}</span>
                                         <ArrowDownIcon className='invertable-icon' />
                                     </div>
-                                    <div className='dropdown-list-sorting dropdown-list hidden'>
+                                    <div className='dropdown-list-sorting dropdown-list'>
                                         <div className="btn films-sort-by-type-btn active" onClick={(e) => { this.sortList(SortableType.MY_POS); this.sortingBtnClicked(e);} }>
                                             {SortableTypeStr.MY_POS}
                                         </div>
@@ -512,8 +560,8 @@ class Films extends React.Component {
                                         </div>
                                     </div>
                                     <div className='beside-dropdown-btn sort-direction-btns'>
-                                        <div className="btn films-sort-by-direction-btn active" onClick={(e) => { this.changeOrder(SortableDirection.ASC); this.sortingBtnClicked(e);} } title="Ascending order">🡣</div>
-                                        <div className="btn films-sort-by-direction-btn" onClick={(e) => { this.changeOrder(SortableDirection.DESC); this.sortingBtnClicked(e);} } title="Descending order">🡡</div>
+                                        <div className="btn films-sort-by-direction-btn active" onClick={(e) => { this.changeOrder(SortableDirection.ASC); this.sortingBtnClicked(e);} } title="Ascending order">🠋</div>
+                                        <div className="btn films-sort-by-direction-btn" onClick={(e) => { this.changeOrder(SortableDirection.DESC); this.sortingBtnClicked(e);} } title="Descending order">🠉</div>
                                     </div>
                                 </div>
                             </div>

@@ -6,7 +6,7 @@ import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
 
 import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";
 import { ReactComponent as Calendar } from "../../icons/calendar.svg";
-import { getRandomRGBA } from '../../js/helpers.js';
+import { getRandomRGBA, getBlogPostId } from '../../js/helpers.js';
 
 
 class BlogPost extends Component {
@@ -120,8 +120,11 @@ class BlogPost extends Component {
  */
 const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.post_id;     // the id of the post being displayed in the UI
+    console.log(id);
+    
     return {
-        post: state.posts.find(post => post.id === id)      // get the actual post data from the redux data store
+        // post: state.posts.find(post => post.id === id)      // get the actual post data from the redux data store
+        post: state.posts.find(post => getBlogPostId(post.title) === id )
     }
 }
 

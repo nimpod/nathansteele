@@ -49,9 +49,10 @@ class NavbarSide extends Component {
         // close collapsed menu if user clicks out of it...
         let toggleThemeButton = document.getElementsByClassName('hamburger-menu')[0];
         let itemToHide = document.getElementById('nav-side');
+        let classNameToToggle = 'active';
 
         window.addEventListener('click', function(mouseEvent) {
-            hideItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent);
+            hideItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent, classNameToToggle);
         });
     }
 

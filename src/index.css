@@ -334,9 +334,9 @@
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
 
-  --searchbox-bg-color: rgb(27, 27, 29);
-  --searchbox-hover-bg-color: rgb(25, 25, 27);
-  --searchbox-active-bg-color: rgb(49, 51, 49);
+  --searchbox-bg-color: rgb(55, 55, 58);
+  --searchbox-hover-bg-color: rgb(72, 72, 76);
+  --searchbox-active-bg-color: rgb(79, 80, 82);
   --searchbox-border-color: rgba(8, 93, 149, 0.293);
   --searchbox-placeholder-text-color: rgba(245, 245, 240, 0.35);
   --searchbox-text-color: rgb(38, 220, 144);
@@ -1362,12 +1362,12 @@ ul.tag-filter-options-list li.selectedThisCategory span {
   margin-bottom: 10px;
 }
 
-.controls > div.searchbox {
+div.searchbox {
   display: flex;
 }
 
 /* the input box within div.searchbox */
-.controls > div.searchbox input {
+div.searchbox input {
   background-color: var(--searchbox-bg-color);
   color: var(--searchbox-text-color);
   width: 600px;
@@ -1376,21 +1376,21 @@ ul.tag-filter-options-list li.selectedThisCategory span {
   caret-color: var(--caret-color);
   border: 2px solid transparent;
 }
-.cotnrols > div.searchbox input {
+div.searchbox input {
   transition: all 200ms ease;
 }
 
-.controls > div.searchbox input:hover {
+div.searchbox input:hover {
   background-color: var(--searchbox-hover-bg-color);
 }
-.controls > div.searchbox input:active,
-.controls > div.searchbox input.activated {
+div.searchbox input:active,
+div.searchbox input.activated {
   box-shadow: 0 1px 1px 0 var(--general-box-shadow-color-1), 0 1px 3px 1px var(--general-box-shadow-color-2);
   background-color: var(--searchbox-active-bg-color);
   border: 2px solid transparent;
   /* border: 2px solid var(--searchbox-border-color); */
 }
-.controls > div.searchbox input::placeholder {
+div.searchbox input::placeholder {
   color: var(--searchbox-placeholder-text-color);
 }
 
@@ -2274,6 +2274,7 @@ ul.messiahs-handbook p.quote-person {
 /* #region ------------------------< 13.1 Toplist >------------------------ */
 :root {
   /* Item in toplist grid */
+  --films-toplist-grid-items-per-row: 7;
   --films-toplist-item-fixed-width: 170px;
   --films-toplist-item-fixed-height: 250px;
   --films-toplist-item-bg-color: rgb(66, 66, 71);
@@ -2285,18 +2286,20 @@ ul.messiahs-handbook p.quote-person {
   --film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
   --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
   --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
+
+  --film-mydata-imdbdiffscore-positivediff-bg-color: rgb(138, 45, 79);
+  --film-mydata-imdbdiffscore-negativediff-bg-color: rgb(57, 154, 128);
+  --film-mydata-imdbdiffscore-equaldiff-bg-color: rgb(72, 39, 74);
 }
 
 .films-container > .films-toplist {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 1fr);
   margin-left: 400px;
   grid-gap: 70px 15px;
   margin-top: 50px;
   padding-bottom: 150px;
 }
-
-
 
 .films-container > .films-toplist > .films-toplist-item {
   width: var(--films-toplist-item-fixed-width);
@@ -2346,14 +2349,21 @@ ul.messiahs-handbook p.quote-person {
   color: var(--text);
 }
 
+div.film-dataContainer.myData > span:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+div.film-dataContainer.myData > span:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
 div.film-dataContainer.myData > span {
   padding: 2px 5px;
   font-weight: bold;
   font-size: 0.70rem;
-  border-radius: 6px;
-  margin-right: 8px;
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: rgb(232, 229, 229);
   user-select: none;
   /* background-color: var(--films-toplist-item-databox-bg-color); */
 }
@@ -2364,15 +2374,15 @@ span.film-myPos {
   border-top-left-radius: var(--film-mydata-container-border-radius);
   border-bottom-left-radius: var(--film-mydata-container-border-radius);
   /* color: rgb(233, 231, 131); */
-  background-color: rgb(176, 227, 175);
+  background-color: var(--film-mydata-imdbdiffscore-positivediff-bg-color) !important;
 }
 span.film-myRating {
   /* color: rgb(39, 235, 216); */
-  background-color: rgb(227, 181, 205);
+  background-color: var(--film-mydata-imdbdiffscore-negativediff-bg-color) !important;
 }
 span.film-imdbDiffScore {
   /* background-color: var(--film-mydata-imdbdiffscore-bg-color); */
-  background-color: #5d6a71;
+  background-color: var(--film-mydata-imdbdiffscore-equaldiff-bg-color);
 }
 span.film-imdbDiffScore.positive-diff { 
   color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important;
@@ -2393,11 +2403,12 @@ span.film-imdbDiffScore:active {
 /* #region ----------------< 13.2 Film controls >------------------ */
 :root {
   /* Film controls container */
-  --films-controls-container-bg-color: rgb(50, 51, 53);
+  --films-controls-container-bg-color: rgb(46, 48, 52);
   --films-controls-btn-bg-color: rgb(74, 75, 79);
   --films-controls-btn-text-color-active: var(--text);
-  --films-controls-dropdown-list-bg-color: rgba(74, 75, 79, 0.922);
+  --films-controls-dropdown-list-bg-color: rgba(80, 81, 88, 0.94);
   --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
+  --films-controls-dropdown-list-item-bg-color-hover: rgba(122, 124, 133, 0.87);
 
   /* Border colour of paginaton button */
   --films-pagination-btn-border-color: rgb(85, 81, 81);
@@ -2444,12 +2455,13 @@ span.film-imdbDiffScore:active {
 .films-controls-subgroup span.subgroup-title {
   display: block;
   text-transform: uppercase;
+  font-weight: 500;
   color: var(--text);
   margin-bottom: 10px;
   margin-top: 10px;
 }
 .films-controls-subgroup span.subgroup-title {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 /* Sorting buttons */
@@ -2459,7 +2471,7 @@ span.film-imdbDiffScore:active {
   color: var(--text);
 }
 .films-controls div.btn:hover {
-  background-color: rgb(92, 89, 89);
+  background-color: var(--films-controls-dropdown-list-item-bg-color-hover);
 }
 .films-controls div.btn.active {
   color: var(--films-controls-btn-text-color-active) !important;
@@ -2485,7 +2497,6 @@ span.film-imdbDiffScore:active {
   border: 2px solid transparent;
   background-color: var(--films-controls-dropdown-list-bg-color);
   width: 180px;
-  margin-right: 45px;
   padding: 5px;
   margin-bottom: 4px;
   text-align: left;
@@ -2516,9 +2527,9 @@ span.film-imdbDiffScore:active {
 .dropdown-list div.btn {
   width: 170px;
   background-color: var(--films-controls-dropdown-list-btn-bg-color);
-  padding: 5px 10px;
-  margin-bottom: 7px;
-  margin-right: 2px;
+  padding: 3px 10px;
+  margin-bottom: 3px;
+  margin-right: 1px;
   margin-left: 5px;
   border-radius: 5px;
   display: block;
@@ -2530,11 +2541,24 @@ span.film-imdbDiffScore:active {
 
 .beside-dropdown-btn {
   vertical-align: middle;
-  margin-top: 11px;
   font-size: 0.9rem;
 }
 .beside-dropdown-btn > span {
   color: var(--text);
+}
+
+.sort-type-btns .beside-dropdown-btn {
+  margin-top: 4px;
+}
+.filter-by-genre-btns .beside-dropdown-btn {
+  margin-top: 8px;
+}
+.filter-by-language-btns .beside-dropdown-btn {
+  margin-top: 16px;
+}
+
+.filter-by-language-btns .dropdown-list {
+  margin-top: 51px;
 }
 
 
@@ -2544,7 +2568,7 @@ span.film-imdbDiffScore:active {
 }
 /* Sort by direction buttons */
 .sort-direction-btns div.btn {
-  padding: 0 9px;
+  padding: 0 7px;
   border: 2px solid transparent;
 }
 .sort-direction-btns div.btn.active {
@@ -2569,6 +2593,15 @@ span.film-imdbDiffScore:active {
   border-bottom-right-radius: 6px;
 }
 
+/* Put count on right, and text on left */
+.dropdown-list > div.btn {
+  text-align: left;
+}
+.dropdown-list > div.btn > span.genre-count,
+.dropdown-list > div.btn > span.language-count {
+  float: right;
+}
+
 
 /* ----------------< Pagination >------------------ */
 .pagination-btns {
@@ -2591,6 +2624,7 @@ span.film-imdbDiffScore:active {
   color: var(--text) !important;
   cursor: pointer;
   display: inline-block;
+  user-select: none;
 }
 .pagination-btns li:not(.pagination-disabled) a {
   background-color: var(--films-pagination-btn-bg-color);
@@ -2933,7 +2967,7 @@ span.film-imdbDiffScore:active {
   }
 
   /* font size of searchbox */
-  .controls > div.searchbox input {
+  div.searchbox input {
     font-size: 13px;
     width: 400px;
     margin-top: 3px;

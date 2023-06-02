@@ -8,30 +8,29 @@ import { ReactComponent as ArrowLeftIcon } from "../../icons/arrowLeft.svg";
 import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
 import BlogPostList from './BlogPostList';
 import { Helpers } from 'react-scroll';
-import { removeDuplicatesFromArray } from '../../js/helpers';
+import { removeDuplicatesFromArray, getListOfTagCategories } from '../../js/helpers';
 import SearchBoxTagFilterListElement from './SearchBoxTagFilterListElement';
 
-let filteredPosts = [];
-let filteredPostsDisplayedLength = 0;
 
 class Blog extends Component {   
 
-    /**
-     * Constructor for the 'Blog' component
-     * @param {Incoming properties} props 
-     */
-    constructor(props) {
-        super(props);
-        this.state = {
-            filteredPostsState: null,
-            tagCategories: null,
-            tagCategoryDefault: "AllTags",
-            tagCategorySelected: "AllTags",
-            tagCategoriesSelected: new Set(),
-            searchPost: '',
-            searchBoxContainsText: false,
-            searchBoxWasClicked: false
-        }
+    state = {
+        // array of posts (ordered by newest dates first, oldest dates last)
+        __filtered_posts: Array.from(this.props.posts)
+            .sort((a,b) => { return new Date(a.date).getTime() - new Date(b.date).getTime() })
+            .reverse(),
+
+        __filtered_posts_len: Array.from(this.props.posts).length,
+
+        // tag category stuff...
+        __tag_category_default: "AllTags",
+        __tag_category_selected: "AllTags",
+        __tag_categories_selected: new Set(),
+
+        // search stuff...
+        __search_box_contains_text: false,
+        __search_box_was_clicked: false,
+        __search_post: ""
     }
     
     /**
@@ -51,49 +50,6 @@ class Blog extends Component {
         });
 
         console.log(newArray);
-    }
-    
-    /**
-     * This is called after the component is rendered (i.e. only called once at beginning)
-     */
-    getListOfTagCategories() {
-        const { posts } = this.props;       // json data from redux data store
-        const uniqueTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
-        
-        // add default tag...
-        uniqueTags.add(this.state.tagCategoryDefault);
-
-        // store each tag category once...
-        this.props.posts.map((p => {
-            // console.log('DEBUGGING: ', p.tags);
-            p.tags.map((t => {
-                uniqueTags.add(t);
-            }));
-        }));
-
-        // sort the set of tags alphabetically, cause why not.
-        const uniqueTagsSorted = Array.from(uniqueTags).sort();
-
-        return uniqueTagsSorted;
-        /*
-        this.setState({tagCategories:
-            arrayOfTags.map(tag => {
-                return (
-                    <span className="filter-tag-btn tag" key={tag} onClick={this.handleTagFilter}>
-                        <span className={tag}>
-                            { tag }
-                            <div className="inline-svg plus">
-                                <PlusIcon />
-                            </div>
-                            <div className="inline-svg cross" hidden={true}>
-                                <CrossIcon />
-                            </div>
-                        </span>
-                    </span>
-                );
-            }) 
-        });*/
-        
     }
 
     /**
@@ -124,20 +80,17 @@ class Blog extends Component {
         // clicked tag with intention of 'removing it'
         if (crossIcon !== undefined) {
             if (crossIcon.hidden === true) {
-                console.log('HEEEEEEEEEEEEEEEEEEEEERE 1');
-                this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.delete(tagSelected)});
-                
+                //console.log('HEEEEEEEEEEEEEEEEEEEEERE 1');
+                this.setState({__tag_categories_selected: this.state.__tag_categories_selected.delete(tagSelected)});
                 crossIcon.removeAttribute('hidden');
                 plusIcon.setAttribute('hidden', true);
             }
             
             // clicked tag with intention of 'adding it'
             else {
-                console.log('HEEEEEEEEEEEEEEEEEEEEERE 2');
-    
-                console.log(this.state.tagCategoriesSelected, tagSelected);
-                this.setState({tagCategoriesSelected: this.state.tagCategoriesSelected.add(tagSelected)});
-    
+                //console.log('HEEEEEEEEEEEEEEEEEEEEERE 2');
+                //console.log(this.state.__tag_categories_selected, tagSelected);
+                this.setState({__tag_categories_selected: this.state.__tag_categories_selected.add(tagSelected)});
                 crossIcon.setAttribute('hidden', true);
                 plusIcon.removeAttribute('hidden');
             }
@@ -150,15 +103,15 @@ class Blog extends Component {
      */
     handleSearchBoxInput = (e) => {
         // get user input and update state
-        this.setState({searchPost: e.target.value});
+        this.setState({__search_post: e.target.value});
         
         // no text is in the searchbox, so set state to false
         if (e.target.value.length == 0) {
-            this.setState({searchBoxContainsText: false});
+            this.setState({__search_box_contains_text: false});
         }
         // there's some text in the searchbox, so set state to true
         else if (e.target.value.length > 0) {
-            this.setState({searchBoxContainsText: true});
+            this.setState({__search_box_contains_text: true});
         }
     }
 
@@ -171,7 +124,7 @@ class Blog extends Component {
         let copyOfThis = this;
 
         // no text is in the searchbox, so set state to false
-        if (this.state.searchBoxContainsText == false) {
+        if (this.state.__search_box_contains_text == false) {
 
             // access .posts-container
             var postsContainer = document.querySelector('.posts-container');
@@ -206,7 +159,7 @@ class Blog extends Component {
 
             if (inputbox !== null) {
                 // if it has been clicked...
-                if (this.state.searchBoxWasClicked) {
+                if (this.state.__search_box_was_clicked) {
                     inputbox.classList.add('activated');
                 } else {
                     inputbox.classList.remove('activated');
@@ -306,13 +259,17 @@ class Blog extends Component {
         this.toggleSelectedTag(selectedTag);
         
         // base case tag category...
-        if (selectedTagText.toUpperCase() == this.state.tagCategoryDefault.toUpperCase()) {
+        if (selectedTagText.toUpperCase() == this.state.__tag_category_default.toUpperCase()) {
             // show all tr's because user choose 'AllTags'
             this.showAllTableRows(tableRows);
             
-            // update state
-            this.setState({tagCategorySelected: this.state.tagCategoryDefault});
+            // update tag category selected state...
+            this.setState({tagCategorySelected: this.state.__tag_category_default});
 
+            // update posts length displayed state...
+            this.setState({ __filtered_posts_len: this.state.__filtered_posts.length })
+            
+            // exit function
             return;
         }
 
@@ -320,9 +277,10 @@ class Blog extends Component {
         this.setState({tagCategorySelected: selectedTagText});
 
         // do the filtering (iterate over blog posts via props...)
-        for (let i = 0; i < filteredPosts.length; i++) {
+        let count = 0;
+        for (let i = 0; i < this.state.__filtered_posts.length; i++) {
             let tr = tableRows[i];
-            let tagsInPost = filteredPosts[i]['tags'];
+            let tagsInPost = this.state.__filtered_posts[i]['tags'];
 
             if (tr !== undefined) {
                 // (iterate over list of tags per blog post...)
@@ -330,6 +288,7 @@ class Blog extends Component {
                     if (tagsInPost[j] == selectedTagText) {
                         // match, make row visible
                         this.showTableRow(tr);
+                        count += 1;
                         break;
                     } else {
                         // no match, make row invisible
@@ -338,6 +297,9 @@ class Blog extends Component {
                 }
             }
         }
+
+        // update len for UI
+        this.setState(prevState => { return {  __filtered_posts_len: count }})
     }
 
     /**
@@ -389,31 +351,23 @@ class Blog extends Component {
         }
     }
 
+
     /**
      * The Render() function, content rendered to screen
      */
     render() {
-        // sort by date...
-        let filteredPostsBySorting = Array.from(this.props.posts).sort((a,b) => {
-            return new Date(a.date).getTime() - new Date(b.date).getTime()
-        }).reverse();
-        filteredPosts = filteredPostsBySorting;
-        
         // this is how the searching function actually works...
-        let filteredPostsBySearch = filteredPosts.filter((p) => {
-            const arrayOfTags = Array.from(this.state.tagCategoriesSelected);
+        let filteredPostsBySearch = this.state.__filtered_posts.filter((p) => {
+            const arrayOfTags = Array.from(this.state.__tag_categories_selected);
             // console.log('DEBUGGING: ', arrayOfTags, p.tags, p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0);
-            let isTitleEqualToSearchbox = p.title.toLowerCase().includes(this.state.searchPost.toLowerCase());
+            let isTitleEqualToSearchbox = p.title.toLowerCase().includes(this.state.__search_post.toLowerCase());
             let isSelectedTagMatching = p.tags.filter(e => arrayOfTags.indexOf(e) !== -1).length > 0;
             // console.log('DEBUGGING: ', isTitleEqualToSearchbox, isSelectedTagMatching);
-
             return (isTitleEqualToSearchbox && arrayOfTags.length === 0) || isSelectedTagMatching;
         });
-        filteredPosts = filteredPostsBySearch;
-        filteredPostsDisplayedLength = filteredPosts.length;
 
-        // get list of tags...
-        let uniqueTagCategories = this.getListOfTagCategories();
+        // get list of unique tags (i.e. no duplicates)...
+        let uniqueTagCategories = getListOfTagCategories(this.props.posts, this.state.__tag_category_default);
 
         // deal with the colours of searchbox...
         this.handleSearchBoxColours();
@@ -433,7 +387,7 @@ class Blog extends Component {
                         </div>
                         <div className='container-intro'>
                             <h3 className='page-title'>My blog</h3>
-                            <h6 className='page-text-small'>{filteredPostsDisplayedLength} posts</h6>
+                            <h6 className='page-text-small'>{this.state.__filtered_posts_len} posts</h6>
                         </div>
                         <div className='tag-filter-options-list-container'>
                             <div className='btn-move-left scroll-through-tag-filters-btn' onClick={() => this.moveFiltersContainer(-80)}>
@@ -453,7 +407,7 @@ class Blog extends Component {
                         <table>
                             <tbody>
                                 <BlogPostList 
-                                    filteredPosts={filteredPosts} 
+                                    filteredPosts={filteredPostsBySearch} 
                                     handleTagFilter={this.handleTagFilter}
                                 />
                             </tbody>

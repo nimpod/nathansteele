@@ -2,16 +2,20 @@ import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowIcon } from "../../icons/arrowRightTriangle.svg";
 import { ReactComponent as ThreeDotsIcon } from "../../icons/threeDots.svg";
+import { getBlogPostId } from '../../js/helpers.js';
 
 class BlogPostList extends Component {
 
     render() {
         let copyOfThis = this;
+        
         return(
             this.props.filteredPosts.map((p => {
+                // reconstruct review id from title
+                let postId = getBlogPostId(p.title)
                 return (
                     <tr key={p.id} data-filter='visible'>
-                        <Link to={'/blog/' + p.id}>
+                        <Link to={'/blog/' + postId}>
 
                             {/* table cell for Date */}
                             <td className='blogs-tr-date'>

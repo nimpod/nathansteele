@@ -118,7 +118,7 @@ class FilmsReview extends Component {
  */
 const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.film_id;     // the id of the review being displayed in the UI
-    // console.log(id);
+    console.log(id);
     let webdata = require('./reviews_web_data.json');
 
     return {

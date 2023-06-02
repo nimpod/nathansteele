@@ -9,6 +9,12 @@ export function getValueOfCSSVariable(variable_name) {
 }
 
 
+/**
+ * Construct film review ID
+ * @param {*} title 
+ * @param {*} letterboxdUrl 
+ * @returns 
+ */
 export function getReviewId(title, letterboxdUrl) {
     // format title...
     let newTitle = title.replaceAll('.', '')
@@ -19,6 +25,8 @@ export function getReviewId(title, letterboxdUrl) {
         .replaceAll("\'", '')
         .replaceAll('(', '')
         .replaceAll(')', '')
+        .replaceAll('?', '')
+        .replaceAll('!', '')
         .replaceAll(/-/g, "")
         .replaceAll(',', '')
         .replaceAll('.', '')
@@ -39,6 +47,35 @@ export function getReviewId(title, letterboxdUrl) {
 }
 
 /**
+ * Construct blog post ID
+ * @param {*} title 
+ * @returns 
+ */
+export function getBlogPostId(title) {
+    // format the title...
+    let newTitle = title.replaceAll(' ', '_')
+        .replaceAll("\'", '')
+        .replaceAll('-', '_')
+        .replaceAll('?', '')
+        .replaceAll('!', '')
+        .toLowerCase();
+    
+    // simples!
+    return newTitle;
+}
+
+/**
+ * 
+ * @param {*} str 
+ * @returns 
+ */
+export function camelize(str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+      return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    }).replace(/\s+/g, '');
+}
+
+/**
  * Iterate two lists simultanesouly
  * @param {*} arrays 
  * @returns 
@@ -52,16 +89,92 @@ export function* zip(arrays) {
     }
 }
 
+// #region ------------------< Remove dupliactes from a list functions >------------------
 
-export function getFileAsStr(filepath) {
-    console.log(filepath);
+/**
+ * [Remove duplicate values from array]
+ * @param {Array to investigate} arr 
+ * @returns New array
+ */
+export function removeDuplicatesFromArray(arr) {
+    return Array.from(new Set(arr));
+}
 
-    fetch(filepath)
-        .then((r) => r.text())
-        .then(text  => {
-            console.log(text);
-        });
-};
+/**
+ * Get set of genres (set meaning there should be no duplicates)
+ * @returns 
+ */
+export function removeGenreDuplicates(filmsList) {
+    const uniqueGenres = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+
+    // store each genre once...
+    filmsList.map((film => {
+        film.genres.map((g => {
+            uniqueGenres.add(g);
+        }));
+    }));
+
+    // sort the set alphabetically, cause why not.
+    const uniqueGenresSorted = Array.from(uniqueGenres).sort();
+    return uniqueGenresSorted;
+}
+
+/**
+ * Get set of languages (set meaning there should be no duplicates)
+ * @returns 
+ */
+export function removeLanguageDuplicates(filmsList) {
+    const uniqueLanguages = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+
+    // store each language once...
+    filmsList.map((film => {
+        uniqueLanguages.add(film.language);
+    }));
+
+    // sort the set alphabetically, cause why not.
+    const uniqueLanguagesSorted = Array.from(uniqueLanguages).sort();
+    return uniqueLanguagesSorted;
+}
+
+export function getListOfTagCategories(postsList, defaultTag) {
+    const uniqueTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+    
+    // add default tag...
+    uniqueTags.add(defaultTag);
+
+    // store each tag category once...
+    postsList.map((p => {
+        // console.log('DEBUGGING: ', p.tags);
+        p.tags.map((t => {
+            uniqueTags.add(t);
+        }));
+    }));
+
+    // sort the set of tags alphabetically, cause why not.
+    const uniqueTagsSorted = Array.from(uniqueTags).sort();
+    return uniqueTagsSorted;
+    /*
+    this.setState({tagCategories:
+        arrayOfTags.map(tag => {
+            return (
+                <span className="filter-tag-btn tag" key={tag} onClick={this.handleTagFilter}>
+                    <span className={tag}>
+                        { tag }
+                        <div className="inline-svg plus">
+                            <PlusIcon />
+                        </div>
+                        <div className="inline-svg cross" hidden={true}>
+                            <CrossIcon />
+                        </div>
+                    </span>
+                </span>
+            );
+        }) 
+    });*/
+}
+
+// #endregion
+
 
 /**
  * [Get a random RGBA value]
@@ -77,41 +190,22 @@ export function getRandomRGBA(opacity) {
 
 
 /**
- * [Remove duplicate values from array]
- * @param {Array to investigate} arr 
- * @returns New array
- */
-export function removeDuplicatesFromArray(arr) {
-    return Array.from(new Set(arr));
-}
-
-
-/**
  * Hide something when a user clicks outside the item
  * @param {*} itemToHide 
  * @param {*} itemClickedBefore 
  * @param {*} mouseEvent 
+ * @param {*} classNameToToggle
  */
-export function hideItemWhenUserClicksOutsideOfItem(itemToHide, itemClickedBefore, mouseEvent) {
+export function hideItemWhenUserClicksOutsideOfItem(itemToHide, itemClickedBefore, mouseEvent, classNameToToggle) {
     window.addEventListener('click', function(mouseEvent) {   
         if (itemClickedBefore.contains(mouseEvent.target)) {
             // clicked itemClickedBefore (e.g. button)
         } else {
             // otherwise we must of clicked outside the itemToHide
             console.log('Clicked outside input box...')
-            itemToHide.classList.remove('active');
+            itemToHide.classList.remove(classNameToToggle);
         }
     });
 }
 
-/**
- * 
- * @param {*} str 
- * @returns 
- */
-export function camelize(str) {
-    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
-      return index === 0 ? word.toLowerCase() : word.toUpperCase();
-    }).replace(/\s+/g, '');
-}
   
