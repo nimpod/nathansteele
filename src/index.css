@@ -20,24 +20,24 @@
 
 /* particlejs variables */
 :root {
-  --particle-count: 600;
-  --particle-density: 1200;
-  --particle-opacity: 0.6;
-  --particle-opacity-min: 0.2;
+  --particle-count: 1000;
+  --particle-density: 1000;
+  --particle-opacity: 0.5;
+  --particle-opacity-min: 0.0;
   --particle-size: 1.7;
   --particle-speed: 0.9;
   --line-count: 60;
-  --line-opacity: 0.3;
-  --line-width: 0.90;
-  --linked-line-opacity: 1.0;
+  --line-opacity: 0.0;
+  --line-width: 1.50;
+  --linked-line-opacity: 0.2;
   --linked-line-radius: 100;
-  --particle-color-1: rgb(244, 239, 86);
-  --particle-color-2: rgb(137, 255, 137);
-  --particle-color-3: rgb(94, 15, 15);
-  --particle-color-4: rgb(12, 63, 69);
-  --particle-line-color: rgba(0, 0, 0, 0.983);
+  --particle-color-1: rgba(86, 244, 173, 0.613);
+  --particle-color-2: rgba(137, 255, 137, 0.604);
+  --particle-color-3: rgba(94, 15, 15, 0.816);
+  --particle-color-4: rgba(15, 61, 109, 0.79);
+  --particle-line-color: rgba(0, 0, 0, 0.419);
   --num-of-particles-to-spawn-on-push: 10;
-  --particle-animation-speed: 6;
+  --particle-animation-speed: 1;
 }
 
 /* tag category colours */
@@ -261,11 +261,11 @@
 
 /** DARK MODE  **/
 [data-theme="dark"] {
-  --bg1: rgb(149, 143, 91); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
+  --bg1: rgb(153, 145, 70); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
   --bg2: rgb(127, 66, 66); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
   --bg3: rgb(61, 101, 100);
   --bg4: rgb(71, 90, 70);
-  --bg5: rgb(51, 47, 59);
+  --bg5: rgb(31, 27, 38);
 
   --text: rgb(240, 240, 240);
   --text-darker: rgb(169, 169, 169);
@@ -2296,31 +2296,6 @@ ul.messiahs-handbook p.quote-person {
   padding-bottom: 150px;
 }
 
-.films-container > .films-toplist > .films-toplist-item,
-.films-container > .films-toplist .film-details {
-  border-top: 2px solid transparent;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-}
-.films-container > .films-toplist > .films-toplist-item,
-.films-container > .films-toplist > .films-toplist-item a,
-.films-container .film-poster,
-.films-container .film-poster img {
-  border-bottom: 0px solid transparent;
-}
-.films-container > .films-toplist .film-details {
-  border-top: 0px solid transparent !important;
-}
-.films-container > .films-toplist .film-details:active {
-  border-bottom: 2px solid var(--films-toplist-item-poster-border-color);
-}
-.films-container > .films-toplist > .films-toplist-item:active,
-.films-container > .films-toplist .film-details:active,
-.films-container > .films-toplist > .films-toplist-item:active .film-details  {
-  border-top: 2px solid var(--films-toplist-item-poster-border-color);
-  border-left: 2px solid var(--films-toplist-item-poster-border-color);
-  border-right: 2px solid var(--films-toplist-item-poster-border-color);
-}
 
 
 .films-container > .films-toplist > .films-toplist-item {
@@ -2334,7 +2309,7 @@ ul.messiahs-handbook p.quote-person {
   opacity: 1.0 !important;
 }
 .films-container > .films-toplist > .films-toplist-item > a:hover {
-  opacity: 0.65 !important;
+  opacity: 0.60 !important;
   transition: all 300ms ease;
 }
 .films-container > .films-toplist > .films-toplist-item > a:hover .film-details {
@@ -2462,7 +2437,7 @@ span.film-imdbDiffScore:active {
 .films-controls-subgroup {
   border-top: 1px dashed rgb(73, 76, 82);
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 /* Title of subgroup */
@@ -2473,11 +2448,8 @@ span.film-imdbDiffScore:active {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.films-controls-subgroup > span {
-  font-size: 1.0rem;
-}
-.films-controls-subgroup > div > span {
-  font-size: 0.85rem;
+.films-controls-subgroup span.subgroup-title {
+  font-size: 0.9rem;
 }
 
 /* Sorting buttons */
@@ -2505,6 +2477,7 @@ span.film-imdbDiffScore:active {
   width: 180px;
   border-radius: 5px;
   padding: 6px 0;
+  margin-top: 42px;
 }
 .dropdown-list-btn {
   border-radius: 5px;
@@ -2516,6 +2489,7 @@ span.film-imdbDiffScore:active {
   padding: 5px;
   margin-bottom: 4px;
   text-align: left;
+  float: left;
 }
 .dropdown-list-btn:hover {
   cursor: pointer;
@@ -2535,11 +2509,11 @@ span.film-imdbDiffScore:active {
 .dropdown-list-btn > svg {
   float: right;
   margin-right: 5px;
-  margin-top: 8px;
+  margin-top: 6px;
   width: 11px;
 }
 
-.dropdown-list div.films-sort-by-type-btn {
+.dropdown-list div.btn {
   width: 170px;
   background-color: var(--films-controls-dropdown-list-btn-bg-color);
   padding: 5px 10px;
@@ -2548,14 +2522,24 @@ span.film-imdbDiffScore:active {
   margin-left: 5px;
   border-radius: 5px;
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.80rem;
 }
 .dropdown-list div.btn.active {
   
 }
 
+.beside-dropdown-btn {
+  vertical-align: middle;
+  margin-top: 11px;
+  font-size: 0.9rem;
+}
+.beside-dropdown-btn > span {
+  color: var(--text);
+}
 
-.sort-type-btns > div:not(.dropdown-list) {
+
+.dropdown-list-btn,
+.beside-dropdown-btn {
   display: inline-block;
 }
 /* Sort by direction buttons */
@@ -2622,13 +2606,13 @@ span.film-imdbDiffScore:active {
 /* Move these buttons to bottom of page.... Horrendous */
 .pagination-btns li.previous-btn {
   position: fixed;
-  bottom: 150px;
-  margin-left: -30px;
+  bottom: 155px;
+  margin-left: -20px;
 }
 .pagination-btns li.next-btn {
   position: fixed;
-  bottom: 150px;
-  margin-left: 150px;
+  bottom: 155px;
+  margin-left: 155px;
 }
 
 .pagination-btns li a:hover {

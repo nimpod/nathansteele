@@ -9,6 +9,7 @@ import { connect }  from 'react-redux';
 import { getValueOfCSSVariable, zip } from '../../js/helpers.js';
 import FilmsToplistElement from './FilmsToplistElement.js';
 import ReactPaginate from 'react-paginate';
+import { act } from 'react-dom/test-utils';
 
 let STARTING_PAGE_NUM = 0;
 let MAX_FILMS_PER_PAGE = 25;
@@ -19,14 +20,16 @@ const SortableType = Object.freeze({
     IMDB_VOTES: enumValue("imdbNumVotes"),
     IMDB_DIFF: enumValue("imdbDiffScore"),
     MY_POS: enumValue("position"),
-    DURATION: enumValue("duration")
+    DURATION: enumValue("duration"),
+    YEAR: enumValue("year")
 });
 const SortableTypeStr = Object.freeze({
     IMDB_AVG: "IMDB avg rating",
     IMDB_VOTES: "IMDB popularity",
     IMDB_DIFF: "My rating - IMDB avg rating",
     MY_POS: "My order",
-    DURATION: "Duration"
+    DURATION: "Duration",
+    YEAR: "Year of release"
 })
 const SortableDirection = Object.freeze({
     ASC: enumValue("ascending"),
@@ -56,6 +59,10 @@ class Films extends React.Component {
         __sort_type: SortableType.MY_POS,
         __sort_type_str: SortableTypeStr.MY_POS,
         __sort_order: SortableDirection.ASC,
+
+        // filters...
+        __current_genre_filter: "",
+        __current_language_filter: ""
     }
 
     /**
@@ -255,9 +262,12 @@ class Films extends React.Component {
         }
     }
 
-    toggleDropdownSortTypesList() {
-        const dropdownList = document.getElementsByClassName('dropdown-list')[0];
-        const dropdownListBtn = document.getElementsByClassName('dropdown-list-btn')[0];
+    /**
+     * 
+     */
+    toggleDropdownList = (classNameOfList) => {
+        var dropdownList = document.getElementsByClassName(classNameOfList + "")[0];
+        var dropdownListBtn = document.getElementsByClassName(classNameOfList + "-btn")[0];
 
         if (dropdownList.classList.contains('visible')) {
             dropdownList.classList.remove('visible');
@@ -266,6 +276,124 @@ class Films extends React.Component {
             dropdownList.classList.add('visible');
             dropdownListBtn.classList.add('list-is-visible');
         }
+    }
+
+    /**
+     * Get set of genres (set meaning there should be no duplicates)
+     * @returns 
+     */
+    getListOfGenres() {
+        const { filmReviewsWebdata } = this.props;       // json data from redux data store
+        const uniqueGenres = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+
+        // store each genre once...
+        this.props.filmReviewsWebdata.map((film => {
+            film.genres.map((g => {
+                uniqueGenres.add(g);
+            }));
+        }));
+
+        // sort the set alphabetically, cause why not.
+        const uniqueGenresSorted = Array.from(uniqueGenres).sort();
+        return uniqueGenresSorted;
+    }
+
+    /**
+     * Get set of languages (set meaning there should be no duplicates)
+     * @returns 
+     */
+    getListOfLanguages() {
+        const { filmReviewsWebdata } = this.props;       // json data from redux data store
+        const uniqueLanguages = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+
+        // store each language once...
+        this.props.filmReviewsWebdata.map((film => {
+            uniqueLanguages.add(film.language);
+        }));
+
+        // sort the set alphabetically, cause why not.
+        const uniqueLanguagesSorted = Array.from(uniqueLanguages).sort();
+        return uniqueLanguagesSorted;
+    }
+
+
+    /**
+     * Filter list by specified genre
+     * @param {*} e 
+     * @param {*} genre 
+     */
+    filterByGenre = (e, genre) => {
+        // update the 'current_genre_filter' state...
+        this.setState(prevState => {
+            return {
+                __current_genre_filter: genre
+            }
+        })
+
+        // filter the list...
+        this.setState(prevState => {
+            return {
+                __webdata: Array.from(this.props.filmReviewsWebdata).filter((f) => {
+                    let arrayOfGenres = Array.from(f.genres);
+                    let containsRequestedGenre = arrayOfGenres.includes(genre);
+                    return containsRequestedGenre;
+                })
+            }
+        })
+
+        // make sure we actually find the button...
+        let actualButton = NaN;
+        if (e.target.tagName == "SPAN") {
+            // user clicked on text, bit fucking annoying
+            actualButton = e.target.parentElement;
+        } else {
+            // user clicked on button, well done
+            actualButton = e.target;
+        }
+
+        // remove .active from everything first... 
+        // This ensures only one filter is highlighted at a time...
+        // Dont do this if the actual button is inactive (i.e. nothing has been filtered yet)
+        if (!actualButton.classList.contains('active')) {
+            let dropdownBtns = document.querySelectorAll('.films-filter-by-genre-btn');
+            for (let i = 0; i < dropdownBtns.length; i++) {
+                dropdownBtns[i].classList.remove('active');
+            }
+        }
+        
+
+        // toggle the .active class
+        if (!actualButton.classList.contains('active')) {
+            // enable filter...
+            actualButton.classList.add('active');
+        } else {
+            // disable filter...
+            actualButton.classList.remove('active');
+            
+            // reset the 'current_genre_filter'
+            this.setState(prevState => {
+                return {
+                    __current_genre_filter: ""
+                }
+            })
+
+            // reset list
+            this.setState(prevState => {
+                return {
+                    __webdata: Array.from(this.props.filmReviewsWebdata)
+                        .reverse()
+                }
+            })
+        }
+    }
+
+    /**
+     * Filter list by language
+     * @param {*} e 
+     * @param {*} language 
+     */
+    filterByLanguage = (e, language) => {
+        console.log(language);
     }
 
     /**
@@ -303,21 +431,70 @@ class Films extends React.Component {
             currentSortTypeStr = SortableTypeStr.IMDB_VOTES;
         } else if (this.state.__sort_type == SortableType.DURATION) {
             currentSortTypeStr = SortableTypeStr.DURATION;
+        } else if (this.state.__sort_type == SortableType.YEAR) {
+            currentSortTypeStr = SortableTypeStr.YEAR;
         }
-        
+
+        // get list of genres (no duplicates)...
+        let genres = this.getListOfGenres();
+        console.log(genres);
+
+        // get list of languages (no duplicates)...
+        let languages = this.getListOfLanguages();
+        console.log(languages);
+
         return(
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
                     <div className='films-container'>
                         <div className='films-controls'>
+                            <div className='films-controls-subgroup filtering-container'>
+                                <span className='subgroup-title'>Filter by...</span>
+                                <div className='filter-by-genre-btns'>
+                                    <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={() => this.toggleDropdownList('dropdown-list-genres')}>
+                                        <span>{this.state.__current_genre_filter}</span>
+                                        <ArrowDownIcon className='invertable-icon' />
+                                    </div>
+                                    <div className='dropdown-list-genres dropdown-list hidden'>
+                                        {
+                                            genres.map((g => {
+                                                return <div className="btn films-filter-by-genre-btn" onClick={(e) => this.filterByGenre(e, g)}>
+                                                    <span className={g}>{g}</span>
+                                                </div>
+                                            }))
+                                        }
+                                    </div>
+                                    <div className='beside-dropdown-btn'>
+                                        <span>Genre</span>
+                                    </div>
+                                </div>
+                                <div className='filter-by-language-btns'>
+                                    <div className='dropdown-list-languages-btn dropdown-list-btn' onClick={() => this.toggleDropdownList('dropdown-list-languages')}>
+                                        <span>{this.state.__current_language_filter}</span>
+                                        <ArrowDownIcon className='invertable-icon' />
+                                    </div>
+                                    <div className='dropdown-list-languages dropdown-list hidden'>
+                                        {
+                                            languages.map((l => {
+                                                return <div className="btn films-filter-by-genre-btn" onClick={(e) => this.filterByLanguage(e, l)}>
+                                                    <span className={l}>{l}</span>
+                                                </div>
+                                            }))
+                                        }
+                                    </div>
+                                    <div className='beside-dropdown-btn'>
+                                        <span>Language</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div className='films-controls-subgroup sorting-container'>
                                 <div className='sort-type-btns'>
-                                    <span className='subgroup-title'>Sort by</span>
-                                    <div className='dropdown-list-btn' onClick={this.toggleDropdownSortTypesList}>
+                                    <span className='subgroup-title'>Sort by...</span>
+                                    <div className='dropdown-list-sorting-btn dropdown-list-btn' onClick={() => this.toggleDropdownList('dropdown-list-sorting')}>
                                         <span>{currentSortTypeStr}</span>
                                         <ArrowDownIcon className='invertable-icon' />
                                     </div>
-                                    <div className='dropdown-list hidden'>
+                                    <div className='dropdown-list-sorting dropdown-list hidden'>
                                         <div className="btn films-sort-by-type-btn active" onClick={(e) => { this.sortList(SortableType.MY_POS); this.sortingBtnClicked(e);} }>
                                             {SortableTypeStr.MY_POS}
                                         </div>
@@ -330,8 +507,11 @@ class Films extends React.Component {
                                         <div className="btn films-sort-by-type-btn" onClick={(e) => { this.sortList(SortableType.DURATION); this.sortingBtnClicked(e);} }>
                                             {SortableTypeStr.DURATION}
                                         </div>
+                                        <div className="btn films-sort-by-type-btn" onClick={(e) => { this.sortList(SortableType.YEAR); this.sortingBtnClicked(e);} }>
+                                            {SortableTypeStr.YEAR}
+                                        </div>
                                     </div>
-                                    <div className='sort-direction-btns'>
+                                    <div className='beside-dropdown-btn sort-direction-btns'>
                                         <div className="btn films-sort-by-direction-btn active" onClick={(e) => { this.changeOrder(SortableDirection.ASC); this.sortingBtnClicked(e);} } title="Ascending order">🡣</div>
                                         <div className="btn films-sort-by-direction-btn" onClick={(e) => { this.changeOrder(SortableDirection.DESC); this.sortingBtnClicked(e);} } title="Descending order">🡡</div>
                                     </div>
