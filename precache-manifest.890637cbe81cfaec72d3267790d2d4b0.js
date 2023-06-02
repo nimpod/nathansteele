@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c10f51a00e930010685c23cb1e35fc05",
+    "revision": "1b88e0662822e22579c0f80ba5c3fa18",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "5e329193adee202bb1a5",
-    "url": "/nathansteele/static/css/main.058427de.chunk.css"
+    "revision": "6023a8924fb1294e2a56",
+    "url": "/nathansteele/static/css/main.23a21462.chunk.css"
   },
   {
     "revision": "320f6a3cfaf06d7bad52",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.b15d8f37.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5e329193adee202bb1a5",
-    "url": "/nathansteele/static/js/main.1c6d85ed.chunk.js"
+    "revision": "6023a8924fb1294e2a56",
+    "url": "/nathansteele/static/js/main.d9b9aa9e.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -101,7 +101,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "2889aa2a9ddb66ede311be9ae572edd1",
-    "url": "/nathansteele/static/media/custom_poster.2889aa2a.PNG"
+    "url": "/nathansteele/static/media/custom_poster.2889aa2a.png"
   },
   {
     "revision": "2b5686d32fedbaa247639f87a5a65b2f",
@@ -181,7 +181,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "6affc0144be492769814bc6413ec180c",
-    "url": "/nathansteele/static/media/custom_poster.6affc014.PNG"
+    "url": "/nathansteele/static/media/custom_poster.6affc014.png"
   },
   {
     "revision": "73e8fe0d97cd65de7f4bca32c5303c8c",
@@ -201,7 +201,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "82b70fe0e1b39bae39bca0e73f940d80",
-    "url": "/nathansteele/static/media/custom_poster.82b70fe0.PNG"
+    "url": "/nathansteele/static/media/custom_poster.82b70fe0.png"
   },
   {
     "revision": "9ab5dd2bf92f3dd36ab192ac16c5b92e",

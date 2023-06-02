@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/nathansteele/static/css/main.058427de.chunk.css",
-    "main.js": "/nathansteele/static/js/main.1c6d85ed.chunk.js",
-    "main.js.map": "/nathansteele/static/js/main.1c6d85ed.chunk.js.map",
+    "main.css": "/nathansteele/static/css/main.23a21462.chunk.css",
+    "main.js": "/nathansteele/static/js/main.d9b9aa9e.chunk.js",
+    "main.js.map": "/nathansteele/static/js/main.d9b9aa9e.chunk.js.map",
     "runtime-main.js": "/nathansteele/static/js/runtime-main.a2f3e498.js",
     "runtime-main.js.map": "/nathansteele/static/js/runtime-main.a2f3e498.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/nathansteele/static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.b15d8f37.chunk.js": "/nathansteele/static/js/2.b15d8f37.chunk.js",
     "static/js/2.b15d8f37.chunk.js.map": "/nathansteele/static/js/2.b15d8f37.chunk.js.map",
     "index.html": "/nathansteele/index.html",
-    "precache-manifest.15a02893905e7600c47329034dab5f10.js": "/nathansteele/precache-manifest.15a02893905e7600c47329034dab5f10.js",
+    "precache-manifest.890637cbe81cfaec72d3267790d2d4b0.js": "/nathansteele/precache-manifest.890637cbe81cfaec72d3267790d2d4b0.js",
     "service-worker.js": "/nathansteele/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/nathansteele/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.058427de.chunk.css.map": "/nathansteele/static/css/main.058427de.chunk.css.map",
+    "static/css/main.23a21462.chunk.css.map": "/nathansteele/static/css/main.23a21462.chunk.css.map",
     "static/js/2.b15d8f37.chunk.js.LICENSE.txt": "/nathansteele/static/js/2.b15d8f37.chunk.js.LICENSE.txt",
     "static/media/arrowDown.99634c62.svg": "/nathansteele/static/media/arrowDown.99634c62.svg",
     "static/media/arrowLeft.dcf9277b.svg": "/nathansteele/static/media/arrowLeft.dcf9277b.svg",
@@ -28,7 +28,6 @@
     "static/media/custom_poster.jpeg": "/nathansteele/static/media/custom_poster.9b15ad30.jpeg",
     "static/media/custom_poster.jpg": "/nathansteele/static/media/custom_poster.fa9886a0.jpg",
     "static/media/custom_poster.png": "/nathansteele/static/media/custom_poster.fff9d3ec.png",
-    "static/media/custom_poster.PNG": "/nathansteele/static/media/custom_poster.82b70fe0.PNG",
     "static/media/custom_poster2.jpg": "/nathansteele/static/media/custom_poster2.13ed4b78.jpg",
     "static/media/d3.PNG": "/nathansteele/static/media/d3.6f9afe9d.PNG",
     "static/media/fitbit-data-analysis.PNG": "/nathansteele/static/media/fitbit-data-analysis.b03b40be.PNG",
@@ -62,7 +61,7 @@
     "static/js/runtime-main.a2f3e498.js",
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.b15d8f37.chunk.js",
-    "static/css/main.058427de.chunk.css",
-    "static/js/main.1c6d85ed.chunk.js"
+    "static/css/main.23a21462.chunk.css",
+    "static/js/main.d9b9aa9e.chunk.js"
   ]
 }
