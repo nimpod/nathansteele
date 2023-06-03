@@ -37,7 +37,7 @@
   --particle-color-4: rgba(15, 61, 109, 0.79);
   --particle-line-color: rgba(0, 0, 0, 0.419);
   --num-of-particles-to-spawn-on-push: 10;
-  --particle-animation-speed: 1;
+  --particle-animation-speed: 3;
 }
 
 /* tag category colours */

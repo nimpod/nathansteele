@@ -1,17 +1,17 @@
-import React, { Component }  from 'react';
+import React from 'react';
 
 export const post = (screenshots) => (
     <div>
-        <div class='intro-text blog-subsection'>
-            <h3 class='subgroup-title'>What is a Mini DV Tape?</h3>
+        <div className='intro-text blog-subsection'>
+            <h3 className='subgroup-title'>What is a Mini DV Tape?</h3>
             <p>A Mini DV tape is a type of cassette tape used in most <a href='https://en.wikipedia.org/wiki/Camcorder'>digital camcorders</a> until the early 2000's.</p>
             <p><a href='https://en.wikipedia.org/wiki/DV'>Digital Video (DV)</a> is a format for storing digital videos, created by Sony, JVC, Panasonic and other video camera manufacturers in 1995.</p>
-            <picture class="img">
-                <img width="200" class='dont-resize' src="https://img.fruugo.com/product/2/52/138446522_max.jpg" alt="Picture of DV tape" />
+            <picture className="img">
+                <img width="200" className='dont-resize' src="https://img.fruugo.com/product/2/52/138446522_max.jpg" />
             </picture>
-            <h3 class='subgroup-title'>Why do we need to digitize Mini DV tapes?</h3>
+            <h3 className='subgroup-title'>Why do we need to digitize Mini DV tapes?</h3>
             <p>In 2003, DV was joined by a successor format <a href='https://en.wikipedia.org/wiki/HDV'>HDV</a>, which used the same tape format with a different video codec. Some cameras at the time had the ability to switch between DV and HDV recording modes. Some, however, do not have that ability, meaning the only way to watch videos back is through the device itself. Such is the case with the Sony DCR-TRV900E Camcorder.</p>
-            <h3 class='subgroup-title'>How do you digitize Mini DV tapes?</h3>
+            <h3 className='subgroup-title'>How do you digitize Mini DV tapes?</h3>
             <p>Mini DV tapes store data digitally, the footage can be exported directly to a computer using a Firewire (IEEE 1394) cable. </p>
             <p>
                 The basic idea is that we will replay the footage of a tape, capturing the footage on a PC by using <a href='https://etc.usf.edu/techease/mac/hardware/what-is-firewire/'>firewire connection</a>.
@@ -20,8 +20,8 @@ export const post = (screenshots) => (
                 This seems to be the cheapest, most simple (and definitely most time-consuming) method out there for converting those old fashioned Mini DV tapes to mp4 files.
             </p>
         </div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Checklist</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Checklist</h3>
             <ul>
                 <li>Firewire adapter <a href='https://www.amazon.co.uk/gp/product/B00MMKJJY4/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1'>SEDNA - PCIe (PCI EXpress) 3+1 Ports 1394A (Firewire) Adapter card</a></li>
                 <li>Firewire cable <a href='https://www.amazon.co.uk/gp/product/B008UT7C6I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1'>Neet Firewire Cable 6-4 pin 2M </a></li>
@@ -30,13 +30,13 @@ export const post = (screenshots) => (
                 <li>A spare PCIe port in your computer</li>
                 <li>Windows movie maker</li>
             </ul>
-            <p class="note">Firewire cables come in different shapes and sizes. For the camera I was using, I needed the 6-4 pin 2M firewire cable. Check what your camera supports.</p>
-            <h3 class='subgroup-title'>Step 1 - installing firewire adapter</h3>
+            <p className="note">Firewire cables come in different shapes and sizes. For the camera I was using, I needed the 6-4 pin 2M firewire cable. Check what your camera supports.</p>
+            <h3 className='subgroup-title'>Step 1 - installing firewire adapter</h3>
             <ul>
                 <li>Insert adapter into PCIe slot. The metal bracket should rest on the outer part of your PC case. Depending on the size of your PC, you will have to decide whether to use the small or large metal bracket. In my case, I used the large bracket.</li> \
                 <li>Screw the metal bracket into the case using the screws provided with your own PC.</li>
             </ul>
-            <h3 class='subgroup-title'>Step 2 - connect firewire cable</h3>
+            <h3 className='subgroup-title'>Step 2 - connect firewire cable</h3>
             <ul>
                 <li>A firewire cable has 2 different parts - the part that connects to your camcorder, and the part that connects to your computer.</li>
                 <li>In my case, the part that connects to your camcorder was the 4-pin end.</li>
@@ -44,14 +44,14 @@ export const post = (screenshots) => (
                 <li>Find the correct port on your camcorder for the 4-pin end.</li>
                 <li>Take the other end of the firewire cable and plug it into the correct port on your firewire adapter.</li>
             </ul>
-            <h3 class='subgroup-title'>Step 3 - prepare tape</h3>
+            <h3 className='subgroup-title'>Step 3 - prepare tape</h3>
             <ul>
                 <li>This step is very specific for the camcorder I was using. Basically we are just preparing the tape to be played.</li>
                 <li>Press '' button to open tape holder.</li>
                 <li>Insert tape into tape holder.</li>
                 <li>Hold rewind button until the camera stops making a loud noise. That means you have returned to the beginning of the tape.</li>
             </ul>
-            <h3 class='subgroup-title'>Step 4 - recapture video footage</h3>
+            <h3 className='subgroup-title'>Step 4 - recapture video footage</h3>
             <ul>
                 <li>Open Windows Movie Maker.</li>
                 <li>Click 'File' in the top right.</li>

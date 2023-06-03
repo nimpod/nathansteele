@@ -1,9 +1,9 @@
-import React, { Component }  from 'react';
+import React from 'react';
 
 export const post = (screenshots) => (
     <div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Film reviewers</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Film reviewers</h3>
             <ul>
                 <li><a href='https://letterboxd.com/onderhond/'>Niels Matthijs</a></li>
                 <li><a href='https://letterboxd.com/luis_989/'>Luis_989</a></li>
@@ -13,8 +13,8 @@ export const post = (screenshots) => (
                 <li><a href='https://www.youtube.com/@HarrysMovingMedia'>Harrys Moving Castle</a></li>
             </ul>
         </div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Music reviewers</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Music reviewers</h3>
             <ul>
                 <li><a href='https://www.youtube.com/@TheWonkyAngle'>The Wonky Angle</a></li>
                 <li><a href='https://www.youtube.com/@theneedledrop'>The Needle Drop</a></li>
@@ -26,8 +26,8 @@ export const post = (screenshots) => (
                 <li><a href='https://www.youtube.com/@ShawnCee'>Shawn Cee</a></li>
             </ul>
         </div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Astronomy</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Astronomy</h3>
             <ul>
                 <li><a href='https://www.youtube.com/@geographics1340'>Geographics</a></li>
                 <li><a href='https://youtube.com/@whatdamath'>Anton Petrov</a></li>
@@ -62,8 +62,8 @@ export const post = (screenshots) => (
                 <li><a href='https://youtube.com/@V101SPACE'>V101 Space</a></li>
             </ul>
         </div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Music discovery</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Music discovery</h3>
             <ul>
                 <li><a href='https://www.youtube.com/@TerminalPassage'>Terminal Passage</a></li>
                 <li><a href='https://www.youtube.com/@SaturnArchives'>Terminal Passage</a></li>
@@ -76,8 +76,8 @@ export const post = (screenshots) => (
                 <li><a href='https://www.youtube.com/@yumyam'>yum yam</a></li>
             </ul>
         </div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Miscellaneous youtubers</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Miscellaneous youtubers</h3>
             <ul>
                 <li><a href='https://youtube.com/@CrackingTheNutshell'>Cracking the Nutshell</a></li>
                 <li><a href='https://www.youtube.com/@Vsauce'>Vsauce</a></li>
@@ -101,8 +101,8 @@ export const post = (screenshots) => (
                 <li><a href='https://www.youtube.com/@Vihart'>Vihart</a></li>
             </ul>
         </div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Running</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Running</h3>
             <ul>
                 <li><a href='https://www.randomforestrunner.com/'>John Kelly</a></li>
                 <li><a href='https://www.youtube.com/@BenParkes'>Ben Parkes</a></li>
@@ -120,8 +120,8 @@ export const post = (screenshots) => (
                 <li><a href='https://www.youtube.com/@yogawithadriene'>Yoga With Adriene</a></li>
             </ul>
         </div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Outdoors</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Outdoors</h3>
             <ul>
                 <li><a href='https://www.youtube.com/@jkynaston'>John Kynaston</a></li>
                 <li><a href='https://www.youtube.com/@MediocreAmateur'>Mediocre Amateur</a></li>
@@ -129,8 +129,8 @@ export const post = (screenshots) => (
                 <li><a href='https://www.youtube.com/@TheUnlazyWay'>The Unlazy Way</a></li>
             </ul>
         </div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Cycling</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Cycling</h3>
             <ul>
                 <li><a href='https://www.youtube.com/@Cade_Media'>Cade Media</a></li>
                 <li><a href='https://www.youtube.com/@Cameron_Jeffers'>Cameron Jeffers</a></li>
@@ -138,8 +138,8 @@ export const post = (screenshots) => (
                 <li><a href='https://www.youtube.com/@BikeTripping'>Bike Tripping</a></li>
             </ul>
         </div>
-        <div class='blog-subsection'>
-            <h3 class='subgroup-title'>Artists</h3>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Artists</h3>
             <ul>
                 <li><a href='https://www.joemacgown.com/'>Joe Macgown</a></li>
                 <li><a href='https://www.google.com/search?q=ojimbo&client=firefox-b-d&sxsrf=AJOqlzW2Cq-tlvV2ev7p3YGKkAScYbr7sQ:1679670949703&source=lnms&tbm=isch&sa=X&ved=2ahUKEwigrK_y7fT9AhWBWMAKHV_qBpsQ_AUoAXoECAEQAw&biw=1857&bih=967&dpr=1'>ojimbo</a></li>

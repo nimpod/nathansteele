@@ -487,6 +487,8 @@ class Films extends React.Component {
     render() {
         // convert the localdata json into an iterable array...
         const localdata = Array.from(this.props.filmReviewsLocaldata);
+        console.log(localdata);
+        console.log(Array.from(this.props.filmReviewsWebdata));
         // MAX_FILMS_PER_PAGE = localdata.length;
 
         // index of LAST item in current page
@@ -504,6 +506,7 @@ class Films extends React.Component {
                 for (let j = 0; j < localdata.length; j++) {
                     let filmLocal = localdata[j];
                     if (filmLocal.letterboxdUrl == filmWeb.letterboxdUrl) {
+                        console.log(filmLocal, filmWeb);
                         return <FilmsToplistElement filmWebdata={filmWeb} filmLocaldata={filmLocal} key={j} />;
                     }
                 }
@@ -552,7 +555,7 @@ class Films extends React.Component {
                                     <div className='dropdown-list-genres dropdown-list'>
                                         {
                                             genres.map((g => {
-                                                return <div className="btn films-filter-by-genre-btn" onClick={(e) => this.filterByGenre(e, g)}>
+                                                return <div className="btn films-filter-by-genre-btn" key={g} onClick={(e) => this.filterByGenre(e, g)}>
                                                     <span className='genre-text'>
                                                         {g}
                                                     </span>
@@ -577,7 +580,7 @@ class Films extends React.Component {
                                     <div className='dropdown-list-languages dropdown-list'>
                                         {
                                             languages.map((l => {
-                                                return <div className="btn films-filter-by-language-btn" onClick={(e) => this.filterByLanguage(e, l)}>
+                                                return <div className="btn films-filter-by-language-btn" key={l} onClick={(e) => this.filterByLanguage(e, l)}>
                                                     <span className='language-text'>
                                                         {l}
                                                     </span>

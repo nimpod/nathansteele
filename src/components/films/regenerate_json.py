@@ -20,6 +20,9 @@ disable_warnings(InsecureRequestWarning)
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+# https://devpress.csdn.net/python/630454e3c67703293080b48b.html
+session = requests.Session()
+
 
 class Helpers:
     """ Useful functions """
@@ -159,7 +162,7 @@ def regenerate_json_file():
 
     # local version of letterboxd data list
     letterboxd_list = []
-
+    
     # 3) locate the csv file of interest
     if os.path.exists(path_to_extracted_zip):    
         # open csv file...
@@ -191,9 +194,9 @@ def regenerate_json_file():
                 poster_url = ""
                 
                 # parse data from letterboxd web page... (this takes ~1.21s)
-                page = requests.get(url=letterboxd_url, verify=False, stream=True)
+                headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36' }
+                page = session.get(url=letterboxd_url, verify=False, stream=True, headers=headers)
                 soup = BeautifulSoup(page.content, 'html.parser')
-                # print(soup)
                 
                 # retrieve list of genres...
                 div_genres = soup.select_one('#tab-genres')
@@ -231,6 +234,10 @@ def regenerate_json_file():
                         # if there's only 1 url_button, it's usually the IMDB link that's missing...
                         if soup.select_one('#featured-film-header > h1').text == 'xxxHOLiC':
                             imdb_url = 'https://www.imdb.com/title/tt16233104/'
+
+                # retrieve avg rating on letterboxd
+                # page_content_str = page.content.decode('utf-8')
+                # letterboxd_avg_rating = soup.select_one('.average-rating')
 
                 # Use the OMDB API (https://www.omdbapi.com/) to retrieve some additional data from IMDB website...
                 omdb_api_key = '4af56bed'   # apparently this expires after 1000 days (today is 07/02/2023, 1000 days from now is 03/11/2025... holy shit!)

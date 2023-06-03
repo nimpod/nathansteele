@@ -1,13 +1,13 @@
-import React, { Component }  from 'react';
+import React from 'react';
 
 export const review = (screenshots) => (
-    <div class='review-content'>
-        <div class="review-meRambling">
-            <img src={screenshots[0]} />
-            <img src={screenshots[1]} />
-            <img src={screenshots[2]} />
+    <div className='review-content'>
+        <div className="review-meRambling">
+            <img src={screenshots[0]} alt="Screenshot from film" />
+            <img src={screenshots[1]} alt="Screenshot from film" />
+            <img src={screenshots[2]} alt="Screenshot from film" />
         </div>
-        <div class="review-synopsis">
+        <div className="review-synopsis">
 
         </div>
     </div>

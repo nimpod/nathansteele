@@ -2297,6 +2297,14 @@ const initState = {
             "myReview": "",
             "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/7Hh2w1ei26DTJ3JWmW8qcGQUI1n.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/ikvo",
+            "title": "Climax",
+            "myRating": "8.1",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 7, 7, 6, 8, 9, 9]
         }
     ]
 }
