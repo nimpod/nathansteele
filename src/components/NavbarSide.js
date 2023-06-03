@@ -10,7 +10,7 @@ import { ReactComponent as MusicIcon } from "../icons/navIconMusic.svg";
 import { ReactComponent as BlogIcon } from "../icons/navIconBlog.svg";
 import { ReactComponent as ArtIcon } from "../icons/navIconArt.svg";
 import { ReactComponent as HamburgerMenuIcon } from "../icons/hamburgerMenu.svg";
-import { hideItemWhenUserClicksOutsideOfItem } from '../js/helpers';
+import { removeClassFromItemWhenUserClicksOutsideOfItem } from '../js/helpers';
 
 class NavbarSide extends Component {
 
@@ -49,10 +49,9 @@ class NavbarSide extends Component {
         // close collapsed menu if user clicks out of it...
         let toggleThemeButton = document.getElementsByClassName('hamburger-menu')[0];
         let itemToHide = document.getElementById('nav-side');
-        let classNameToToggle = 'active';
 
         window.addEventListener('click', function(mouseEvent) {
-            hideItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent, classNameToToggle);
+            removeClassFromItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent, 'active');
         });
     }
 

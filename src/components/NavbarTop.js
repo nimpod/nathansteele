@@ -6,7 +6,7 @@ import { ReactComponent as DarkThemeIcon } from "../icons/moon.svg";
 import { ReactComponent as LightThemeIcon } from "../icons/sun.svg";
 import { ReactComponent as ThreeDotsIcon } from "../icons/threeDots.svg";
 import { ReactComponent as HamburgerMenuIcon } from "../icons/hamburgerMenu.svg";
-import { hideItemWhenUserClicksOutsideOfItem } from '../js/helpers';
+import { removeClassFromItemWhenUserClicksOutsideOfItem } from '../js/helpers';
 
 
 class NavbarTop extends Component {
@@ -79,7 +79,7 @@ class NavbarTop extends Component {
         let itemToHide = document.getElementById('nav-side');
 
         window.addEventListener('click', function(mouseEvent) {
-            hideItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent);
+            removeClassFromItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent, 'active');
         });
     }
 

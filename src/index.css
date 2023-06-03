@@ -84,6 +84,7 @@
   --bg5: rgb(254, 172, 255);
 
   --text: rgb(128, 128, 128);
+  --text-slightly-darker: rgb(185, 196, 208);
   --text-darker: rgb(68, 68, 68);
   --intro-text: rgb(33, 37, 41);
   --text-hyperlink: rgb(0, 123, 255);
@@ -268,6 +269,7 @@
   --bg5: rgb(31, 27, 38);
 
   --text: rgb(240, 240, 240);
+  --text-slightly-darker: rgb(206, 211, 218);
   --text-darker: rgb(169, 169, 169);
   --intro-text: rgb(192, 192, 196);
   --text-hyperlink: rgb(29, 199, 251);
@@ -2448,7 +2450,10 @@ span.film-imdbDiffScore:active {
 .films-controls-subgroup {
   border-top: 1px dashed rgb(73, 76, 82);
   border-radius: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+}
+.films-controls-subgroup.filtering-container {
+  margin-bottom: 110px;
 }
 
 /* Title of subgroup */
@@ -2538,6 +2543,18 @@ span.film-imdbDiffScore:active {
 .dropdown-list div.btn.active {
   
 }
+.dropdown-list-btn > svg {
+  transition: all 300ms ease-in-out;
+}
+.dropdown-list-btn > svg.dropdown-list-is-visible {
+  /* Makes arrow point down */
+  transform: rotate(0deg);
+}
+.dropdown-list-btn > svg:not(.dropdown-list-is-visible) {
+  /* Makes arrow point right */
+  transform: rotate(-90deg);
+}
+
 
 .beside-dropdown-btn {
   vertical-align: middle;
@@ -2548,17 +2565,22 @@ span.film-imdbDiffScore:active {
 }
 
 .sort-type-btns .beside-dropdown-btn {
-  margin-top: 4px;
+  margin-top: 2px;
 }
-.filter-by-genre-btns .beside-dropdown-btn {
-  margin-top: 8px;
-}
-.filter-by-language-btns .beside-dropdown-btn {
-  margin-top: 16px;
+.filter-by-language-btns .dropdown-list {
+  margin-top: 41px;
 }
 
-.filter-by-language-btns .dropdown-list {
-  margin-top: 51px;
+.filter-by-something-container > span {
+  display: block;
+  color: var(--text-slightly-darker);
+  font-size: 0.9rem;
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+.filter-by-genre-btns {
+  margin-bottom: 50px;
 }
 
 
@@ -2568,7 +2590,7 @@ span.film-imdbDiffScore:active {
 }
 /* Sort by direction buttons */
 .sort-direction-btns div.btn {
-  padding: 0 7px;
+  padding: 0 3px;
   border: 2px solid transparent;
 }
 .sort-direction-btns div.btn.active {
@@ -2591,6 +2613,10 @@ span.film-imdbDiffScore:active {
   border-bottom-left-radius: 0px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
+}
+.sort-direction-btns div.btn > svg {
+  width: 26px;
+  height: 26px;
 }
 
 /* Put count on right, and text on left */
@@ -2640,12 +2666,12 @@ span.film-imdbDiffScore:active {
 /* Move these buttons to bottom of page.... Horrendous */
 .pagination-btns li.previous-btn {
   position: fixed;
-  bottom: 155px;
+  margin-top: 279px;
   margin-left: -20px;
 }
 .pagination-btns li.next-btn {
   position: fixed;
-  bottom: 155px;
+  margin-top: 279px;
   margin-left: 155px;
 }
 

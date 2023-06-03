@@ -104,7 +104,7 @@ export function removeDuplicatesFromArray(arr) {
  * Get set of genres (set meaning there should be no duplicates)
  * @returns 
  */
-export function removeGenreDuplicates(filmsList) {
+export function removeGenreDuplicates(filmsList, defaultGenre) {
     const uniqueGenres = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
 
     // store each genre once...
@@ -116,6 +116,10 @@ export function removeGenreDuplicates(filmsList) {
 
     // sort the set alphabetically, cause why not.
     const uniqueGenresSorted = Array.from(uniqueGenres).sort();
+
+    // add default...
+    uniqueGenresSorted.unshift(defaultGenre);
+
     return uniqueGenresSorted;
 }
 
@@ -123,7 +127,7 @@ export function removeGenreDuplicates(filmsList) {
  * Get set of languages (set meaning there should be no duplicates)
  * @returns 
  */
-export function removeLanguageDuplicates(filmsList) {
+export function removeLanguageDuplicates(filmsList, defaultLanguage) {
     const uniqueLanguages = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
 
     // store each language once...
@@ -133,6 +137,10 @@ export function removeLanguageDuplicates(filmsList) {
 
     // sort the set alphabetically, cause why not.
     const uniqueLanguagesSorted = Array.from(uniqueLanguages).sort();
+
+    // add default...
+    uniqueLanguagesSorted.unshift(defaultLanguage);
+    
     return uniqueLanguagesSorted;
 }
 
@@ -191,21 +199,22 @@ export function getRandomRGBA(opacity) {
 
 /**
  * Hide something when a user clicks outside the item
- * @param {*} itemToHide 
+ * @param {*} itemToRemoveClassFrom 
  * @param {*} itemClickedBefore 
  * @param {*} mouseEvent 
- * @param {*} classNameToToggle
+ * @param {*} classNameToRemove
  */
-export function hideItemWhenUserClicksOutsideOfItem(itemToHide, itemClickedBefore, mouseEvent, classNameToToggle) {
+export function removeClassFromItemWhenUserClicksOutsideOfItem(itemToRemoveClassFrom, itemClickedBefore, mouseEvent, classNameToRemove) {
     window.addEventListener('click', function(mouseEvent) {   
         if (itemClickedBefore.contains(mouseEvent.target)) {
             // clicked itemClickedBefore (e.g. button)
         } else {
-            // otherwise we must of clicked outside the itemToHide
+            // otherwise we must of clicked outside the itemToRemoveClassFrom
             console.log('Clicked outside input box...')
-            itemToHide.classList.remove(classNameToToggle);
+            itemToRemoveClassFrom.classList.remove(classNameToRemove);
         }
     });
 }
+
 
   
