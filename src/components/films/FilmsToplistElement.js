@@ -18,14 +18,14 @@ let localMerge = {}
 class FilmsToplistElement extends Component {
 
     render() {
-        /// console.log(this.props.filmLocaldata);
+        // console.log(this.props.film);
 
         // reconstruct review id from title and url
-        let reviewId = getReviewId(this.props.filmLocaldata.title, this.props.filmLocaldata.letterboxdUrl)
+        let reviewId = getReviewId(this.props.film.title, this.props.film.letterboxdUrl)
 
         // calculate IMDb difference score
         let diffScoreClassname = "";
-        let diffScore = (this.props.filmLocaldata.myRating - this.props.filmWebdata.imdbAvgRating).toFixed(1);
+        let diffScore = (this.props.film.myRating - this.props.film.imdbAvgRating).toFixed(1);
         let diffScoreStr = "";
         
         if (diffScore > 0) {
@@ -42,29 +42,29 @@ class FilmsToplistElement extends Component {
 
         // use custom poster url if it exists...
         let posterUrl = ""
-        if (this.props.filmLocaldata.customPosterUrl !== undefined) {
-            posterUrl = this.props.filmLocaldata.customPosterUrl;
+        if (this.props.film.customPosterUrl !== undefined) {
+            posterUrl = this.props.film.customPosterUrl;
         }
         // use default posterUrl if I didnt specify one...
-        if (this.props.filmLocaldata.customPosterUrl == undefined) {
-            posterUrl = this.props.filmWebdata.posterUrl;
+        if (this.props.film.customPosterUrl == undefined) {
+            posterUrl = this.props.film.posterUrl;
         }
 
         // use custom title if it exists...
         let title = ""
-        if (this.props.filmLocaldata.titleDisplayed !== undefined) {
-            title = this.props.filmLocaldata.titleDisplayed;
+        if (this.props.film.titleDisplayed !== undefined) {
+            title = this.props.film.titleDisplayed;
         } else {
-            title = this.props.filmLocaldata.title;
+            title = this.props.film.title;
         }
         
         let screenshot1 = "https://m.media-amazon.com/images/M/MV5BNjUxYTkxYzgtYzU5OC00NDVmLWExYTAtYmY0NDBiZWRhY2E0XkEyXkFqcGdeQXVyNzEzMzA1MTQ@._V1_QL75_UY281_CR130,0,190,281_.jpg"
         let screenshot2 = "https://m.media-amazon.com/images/M/MV5BNjUxYTkxYzgtYzU5OC00NDVmLWExYTAtYmY0NDBiZWRhY2E0XkEyXkFqcGdeQXVyNzEzMzA1MTQ@._V1_QL75_UY281_CR130,0,190,281_.jpg"
         let screenshot3 = "https://m.media-amazon.com/images/M/MV5BNjUxYTkxYzgtYzU5OC00NDVmLWExYTAtYmY0NDBiZWRhY2E0XkEyXkFqcGdeQXVyNzEzMzA1MTQ@._V1_QL75_UY281_CR130,0,190,281_.jpg"
-        if (this.props.filmLocaldata.screenshots !== undefined) {
-            screenshot1 = this.props.filmLocaldata.screenshots[0];
-            screenshot2 = this.props.filmLocaldata.screenshots[1];
-            screenshot3 = this.props.filmLocaldata.screenshots[2];
+        if (this.props.film.screenshots !== undefined) {
+            screenshot1 = this.props.film.screenshots[0];
+            screenshot2 = this.props.film.screenshots[1];
+            screenshot3 = this.props.film.screenshots[2];
         }
 
         return (
@@ -76,8 +76,8 @@ class FilmsToplistElement extends Component {
                     <div className='film-details'>
                         <p>{title}</p>
                         <div className='film-dataContainer myData'>
-                            <span className='film-myPos' title='Position in my toplist'>#{this.props.filmWebdata.position}</span>
-                            <span className='film-myRating' title='My rating (decimal rating out of 10.0)'>{this.props.filmLocaldata.myRating}</span>
+                            <span className='film-myPos' title='Position in my toplist'>#{this.props.film.position}</span>
+                            <span className='film-myRating' title='My rating (decimal rating out of 10.0)'>{this.props.film.myRating}</span>
                             <span className={`film-imdbDiffScore ${diffScoreClassname}`} title='Difference between my rating and IMDb avg rating'>
                                 {diffScoreStr}
                             </span>

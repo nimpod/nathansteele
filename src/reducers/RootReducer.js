@@ -3,6 +3,8 @@ import { review as ChildrenOfTheSeaReview } from './websiteContent/films/childre
 import { review as ArriettyReview } from './websiteContent/films/the_secret_world_of_arrietty/review';
 import { review as PoupelleOfChimmneyTownReview } from './websiteContent/films/poupelle_of_chimmney_town/review';
 import { review as WhiteGodReview } from './websiteContent/films/white_god/review';
+import { review as TetsuoTheBulletManReview } from './websiteContent/films/tetsuo_the_bullet_man/review';
+import { review as FlatlandReview } from './websiteContent/films/flatland/review';
 
 import { post as CassiniHuygensPost } from './websiteContent/blog/cassini_huygens/post';
 import { post as WhyTheMoonLandingWasNotAHoaxPost } from './websiteContent/blog/why_the_moon_landing_was_not_a_hoax/post';
@@ -42,7 +44,6 @@ import { review as ExteHairExtensionsReview } from './websiteContent/films/exte_
 import { review as FantasticMrFoxReview } from './websiteContent/films/fantastic_mr_fox/review';
 import { review as FantasticPlanetReview } from './websiteContent/films/fantastic_planet/review';
 import { review as FeastReview } from './websiteContent/films/feast/review';
-import { review as FlatlandReview } from './websiteContent/films/flatland/review';
 import { review as GremlinsReview } from './websiteContent/films/gremlins/review';
 import { review as HacksawRidgeReview } from './websiteContent/films/hacksaw_ridge/review';
 import { review as HellbenderReview } from './websiteContent/films/hellbender/review';
@@ -88,7 +89,6 @@ import { review as SpiritedAwayReview } from './websiteContent/films/spirited_aw
 import { review as SplitReview } from './websiteContent/films/split/review';
 import { review as StarmanReview } from './websiteContent/films/starman/review';
 import { review as TagReview } from './websiteContent/films/tag/review';
-import { review as TetsuoTheBulletManReview } from './websiteContent/films/tetsuo_the_bullet_man/review';
 import { review as TheAgeOfAdalineReview } from './websiteContent/films/the_age_of_adaline/review';
 import { review as TheCuriousCaseOfBenjaminButtonReview } from './websiteContent/films/the_curious_case_of_benjamin_button/review';
 import { review as TheGirlWithTheDragonTattooReview } from './websiteContent/films/the_girl_with_the_dragon_tattoo/review';
@@ -302,10 +302,11 @@ const initState = {
             "title": "White God",
             "myRating": "9.2",
             "myTags": ["Emotional", "Friendship", "Forgiveness", "Animal welfare", "Great cinematography", "The universal power of music", "Budapest"],
+            "customPosterUrl": require('./websiteContent/films/white_god/custom_poster.webp'),
             "myReview": ReactDomServer.renderToString(WhiteGodReview([
-                require('./websiteContent/films/white_god/screenshot1.jpg'),
-                require('./websiteContent/films/white_god/screenshot2.jpg'),
-                require('./websiteContent/films/white_god/screenshot3.jpg'),
+                require('./websiteContent/films/white_god/screenshot1.webp'),
+                require('./websiteContent/films/white_god/screenshot2.webp'),
+                require('./websiteContent/films/white_god/screenshot3.webp'),
             ])),
         },
         {
@@ -313,37 +314,42 @@ const initState = {
             "title": "Flatland: The Film",
             "myRating": "10",
             "myTags": ["Dimensionality", "Questioning reality", "Perspective", "Mathematics", "War", "Corruption", "Emotional"],
-            "myReview": ""
+            "myReview": ReactDomServer.renderToString(FlatlandReview([
+                require('./websiteContent/films/flatland/screenshot1.webp'),
+                require('./websiteContent/films/flatland/screenshot2.webp'),
+                require('./websiteContent/films/flatland/screenshot3.webp'),
+            ])),
         },
         {
             "letterboxdUrl": "https://boxd.it/1Xag",
             "title": "Feast",
             "myRating": "7.6",
             "myTags": ["Creature-feature", "One-location", "Survival", "Fun", "Cool practical effects"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('./websiteContent/films/feast/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/AF4",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/nk7DMzFeQ1Ggp12tBY60ReJOtFl.jpg",
+            "customPosterUrl": require('./websiteContent/films/the_secret_world_of_arrietty/custom_poster.webp'),
             "title": "The Secret World of Arrietty",
             "myRating": "9.1",
             "myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
             "myReview": ReactDomServer.renderToString(ArriettyReview([
-                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot1.jpg'),
-                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot2.jpg'),
-                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot3.jpg'),
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot1.webp'),
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot2.webp'),
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot3.webp'),
             ])),
         },
         {
             "letterboxdUrl": "https://boxd.it/fb0K",
             "title": "A Ghost Story",
             "myRating": "10",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/sD94aixD7fMAc2e9ugbv4KQprBL.jpg",
+            "customPosterUrl": require('./websiteContent/films/a_ghost_story/custom_poster.webp'),
             "myTags": ["Death", "Life", "Vast", "Cosmic", "Beyond existence", "Mysterious", "Creative use of lighting", "Creative use of aspect ratio", "Great soundtrack"],
             "myReview": ReactDomServer.renderToString(AGhostStoryReview([
-                require('./websiteContent/films/a_ghost_story/screenshot1.jpg'),
-                require('./websiteContent/films/a_ghost_story/screenshot2.jpg'),
-                require('./websiteContent/films/a_ghost_story/screenshot3.jpg'),
+                require('./websiteContent/films/a_ghost_story/screenshot1.webp'),
+                require('./websiteContent/films/a_ghost_story/screenshot2.webp'),
+                require('./websiteContent/films/a_ghost_story/screenshot3.webp'),
             ])),
         },
         {
@@ -375,7 +381,8 @@ const initState = {
             "title": "Aniara",
             "myRating": "9.5",
             "myTags": ["The incomprehensible vastness of space", "Civilisation on spaceship", "Contemplative sci-fi", "Virtual world", "Mysterious", "Creepy", "Dystopia", "Exploring the dark depths of humanity"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('./websiteContent/films/aniara/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/bjvI",
@@ -507,7 +514,8 @@ const initState = {
             "title": "The Brand New Testament",
             "myRating": "10",
             "myTags": ["Religion", "Fun"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('./websiteContent/films/the_brand_new_testament/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/3Icg",
@@ -960,7 +968,7 @@ const initState = {
             "myRating": "8.1",
             "myTags": ["Atmospheric", "Post-apocalypse society", "Conspiracy", "Stuck underground", "Layered", "Mysterious", "Loss of identity", "Cults"],
             "myReview": "",
-            "customPosterUrl": require('./websiteContent/films/cadaver/custom_poster.jpg'),
+            "customPosterUrl": require('./websiteContent/films/cadaver/custom_poster.webp'),
         },
         {
             "letterboxdUrl": "https://boxd.it/1MTO",
@@ -1284,7 +1292,8 @@ const initState = {
             "title": "Malignant",
             "myRating": "9.0",
             "myTags": ["Wild", "Great cinematography", "Murder mystery", "Amazing finale"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('./websiteContent/films/malignant/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/2Wng",
@@ -1339,7 +1348,8 @@ const initState = {
             "title": "Vivarium",
             "myRating": "8.9",
             "myTags": ["Claustrophobic", "Terrifying", "Stuck somewhere"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": require('./websiteContent/films/vivarium/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/6bJM",
@@ -1616,7 +1626,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Terrifying", "Total escapism", "Invisibility", "Creepy"],
             "myReview": "",
-            "customPosterUrl": require('./websiteContent/films/the_invisible_man/custom_poster.jpeg'),
+            "customPosterUrl": require('./websiteContent/films/the_invisible_man/custom_poster.webp'),
         },
         {
             "letterboxdUrl": "https://boxd.it/29Nu",
@@ -1655,7 +1665,7 @@ const initState = {
             "myRating": "9.7",
             "myTags": ["Atmospheric", "Disgusting", "Gross", "Creature-feature", "Cults", "Religion", "Satanic worshipers", "Foggy town", "Mysterious", "Video game adapatation", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ljAIu5OJWS8AYy5c5zmtwHPdHd1.jpg"
+            "customPosterUrl": require('./websiteContent/films/silent_hill/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/dZ5m",
@@ -1694,7 +1704,7 @@ const initState = {
             "myRating": "10",
             "myTags": ["Humanity and nature coexisting", "Exploring new places", "Mountaineering", "Tibet", "Dalia Lama", "Poetic", "Profound", "Great cinematography", "Great soundtrack"],
             "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/6fOnpPpobaisTHo1MChGCh76qV8.jpg"
+            "customPosterUrl": require('./websiteContent/films/seven_years_in_tibet/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/23Fk",
@@ -1768,6 +1778,14 @@ const initState = {
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/t1sIumVCl91XThMoJqUjpERYeAM.jpg"
         },
         {
+            "letterboxdUrl": "https://boxd.it/fLeo",
+            "title": "Don't Worry, He Won't Get Far On Foot",
+            "myRating": "8.0",
+            "myTags": ["Death", "Stoicism"],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/iP9Fiq7O1v3CZ3ds0fZozFqESTk.jpg"
+        },
+        {
             "letterboxdUrl": "https://boxd.it/2a8W",
             "title": "Dogville",
             "myRating": "7.6",
@@ -1828,12 +1846,12 @@ const initState = {
             "title": "Poupelle of Chimney Town",
             "myRating": "8.2",
             "myTags": ["Heterodox thinker", "Religion", "Friendship", "Intricate animation style", "Textures", "Steampunk", "Colourful", "Exploring new places", "Anti-smoking"],
-            "customPosterUrl": require('./websiteContent/films/poupelle_of_chimmney_town/custom_poster.jpg'),
+            "customPosterUrl": require('./websiteContent/films/poupelle_of_chimmney_town/custom_poster.webp'),
             "gradualInterest": [8, 8, 8, 8, 7, 7, 7, 8, 9, 9],
             "myReview": ReactDomServer.renderToString(PoupelleOfChimmneyTownReview([
-                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot1.png'),
-                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot2.png'),
-                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot3.png'),
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot1.webp'),
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot2.webp'),
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot3.webp'),
             ])),
         },
         {
@@ -1843,7 +1861,7 @@ const initState = {
             "myTags": ["Dimensionality", "Audio-visual spectacle", "Positive reflection on witches", "Colourful", "Time loop"],
             "myReview": "",
             "gradualInterest": [9, 8, 8, 8, 8, 8, 8, 7, 8, 9, 9],
-            "customPosterUrl": require('./websiteContent/films/xxxholic/custom_poster.png')
+            "customPosterUrl": require('./websiteContent/films/xxxholic/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/25zS",
@@ -1953,7 +1971,8 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["Intense", "The audience is thrown into a bizzare situation and forced to experience it", "Colourful", "Amazing soundtrack"],
             "myReview": "",
-            "gradualInterest": [8, 9, 9, 9, 8, 8, 8, 9, 9, 9, 9, 8, 9, 9]
+            "gradualInterest": [8, 9, 9, 9, 8, 8, 8, 9, 9, 9, 9, 8, 9, 9],
+            "customPosterUrl": require('./websiteContent/films/tokyo_vampire_hotel/custom_poster.webp') 
         },
         {
             "letterboxdUrl": "https://boxd.it/14z6",
@@ -2159,9 +2178,13 @@ const initState = {
             "title": "Tetsuo: The Bullet Man",
             "myRating": "8.4",
             "myTags": ["Disturbing", "Cyberpunk", "Biopunk", "Stylish", "Metal", "Chaotic", "Claustrophobic", "Challenging to watch at times", "Great soundtrack"],
-            "myReview": "",
+            "myReview": ReactDomServer.renderToString(TetsuoTheBulletManReview([
+                require('./websiteContent/films/tetsuo_the_bullet_man/screenshot1.webp'),
+                require('./websiteContent/films/tetsuo_the_bullet_man/screenshot2.webp'),
+                require('./websiteContent/films/tetsuo_the_bullet_man/screenshot3.webp')
+            ])),
             "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8],
-            "customPosterUrl": require('./websiteContent/films/tetsuo_the_bullet_man/custom_poster.jpg')
+            "customPosterUrl": require('./websiteContent/films/tetsuo_the_bullet_man/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/8bfm",
@@ -2171,7 +2194,7 @@ const initState = {
             "myTags": ["Life", "Death", "Magic", "The afterlife", "Oceans", "Sealife", "Amazing cinematography", "Great soundtrack"],
             "myReview": "",
             "gradualInterest": [8, 9, 9, 9, 8, 7, 8, 8, 9, 9],
-            "customPosterUrl": require('./websiteContent/films/big_fish_and_begonia/custom_poster2.jpg')
+            "customPosterUrl": require('./websiteContent/films/big_fish_and_begonia/custom_poster.webp')
         },
         {
             "letterboxdUrl": "https://boxd.it/d27e",
@@ -2219,11 +2242,12 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/lwe6",
             "title": "Children of the Sea",
             "myRating": "10",
+            "customPosterUrl": require('./websiteContent/films/children_of_the_sea/custom_poster.webp'),
             "myTags": ["The origins of life", "Astronomy", "Cosmology", "Spirituality", "The mysteries of the ocean world", "Sealife", "Exploring new perspectives", "Visual trip", "Audio-visual spectacle"],
             "myReview": ReactDomServer.renderToString(ChildrenOfTheSeaReview([
-                "https://wwwflickeringmythc3c8f7.zapwp.com/q:i/r:1/wp:1/w:371/u:https://cdn.flickeringmyth.com/wp-content/uploads/2020/02/CHILDREN-OF-THE-SEA-Official-US-Trailer-APRIL-20-22-0-6-screenshot-600x288.png",
-                "https://cdn-japantimes.com/wp-content/uploads/2019/06/p12-schley-childrenofthesearev-a-20190606.jpg",
-                "https://static01.nyt.com/images/2020/09/04/arts/02childrenofthesea/merlin_176249766_9b097c36-8860-43c6-aff0-c30a719ced5a-superJumbo.jpg",
+                require('./websiteContent/films/children_of_the_sea/screenshot1.webp'),
+                require('./websiteContent/films/children_of_the_sea/screenshot2.webp'),
+                require('./websiteContent/films/children_of_the_sea/screenshot3.webp')
             ])),
             "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/i91YrURnZPCKhpNyIxkAAzBb4t9.jpg"
@@ -2311,6 +2335,22 @@ const initState = {
 
 
 const RootReducer = (state=initState, action) => {
+    // retrieve local film data...
+    const mappedById = (initState.filmReviews.reduce((acc, film) => {
+        acc[film.letterboxdUrl] = film;
+        return acc;
+    }, {}));
+
+    // retrieve web film data...
+    let webdata = require('../components/films/reviews_web_data.json');
+
+    // merge local & web film data...
+    const mergedData = webdata.map(film => ({...film, ...mappedById[film.letterboxdUrl]}))
+    
+    // modify state...
+    state.filmReviews = mergedData;
+
+    // return state!
     return state;
 }
 

@@ -31,7 +31,7 @@ const SortableType = Object.freeze({
 const SortableTypeStr = Object.freeze({
     IMDB_AVG: "IMDB avg rating",
     IMDB_VOTES: "IMDB popularity",
-    IMDB_DIFF: "My rating - IMDB avg rating",
+    IMDB_DIFF: "IMDB diff score",
     MY_POS: "My order",
     DURATION: "Duration",
     YEAR: "Year of release"
@@ -46,21 +46,18 @@ class Films extends React.Component {
     
     state = {
         // state representation of data that is displayed/filtered/sorted
-        __filtered_data: Array.from(this.props.filmReviewsWebdata)
+        __filtered_data: Array.from(this.props.filmReviewsData)
             .sort((a,b) => { return a['position'] - b['position'] })
             .reverse(),
 
         // state representation of webdata (directors, year, genres, etc...)
         // the default order is lowest rating to highest rating (i.e. ascending)
-        __web_data: Array.from(this.props.filmReviewsWebdata)
+        __web_data: Array.from(this.props.filmReviewsData)
             .sort((a,b) => { return a['position'] - b['position'] })
             .reverse(),
-                
-        // state representation of localdata (my review, my rating, my tags, etc...)
-        __local_data: Array.from(this.props.filmReviewsLocaldata),
 
         // state representation of number of pages
-        __totalNumOfPages: Math.ceil(this.props.filmReviewsWebdata.length / MAX_FILMS_PER_PAGE),
+        __totalNumOfPages: Math.ceil(this.props.filmReviewsData.length / MAX_FILMS_PER_PAGE),
 
         // state representation of page number the user is currently on
         __currentPageNum: STARTING_PAGE_NUM,
@@ -132,8 +129,13 @@ class Films extends React.Component {
                 return {
                     __sort_type: type,
                     __sort_type_str: type,
-                    __filtered_data: Array.from(this.props.filmReviewsWebdata)
-                        .sort((a,b) => { return a[type] - b[type] })
+                    __filtered_data: Array.from(this.props.filmReviewsData)
+                        .sort((a,b) => {
+                            if (type == SortableType.IMDB_DIFF) {
+                                return (a["myRating"] - a["imdbAvgRating"]) - (b["myRating"] - b["imdbAvgRating"])
+                            }
+                            return a[type] - b[type] 
+                        })
                         .reverse()
                 }
             })
@@ -144,8 +146,13 @@ class Films extends React.Component {
                 return {
                     __sort_type: type,
                     __sort_type_str: type,
-                    __filtered_data: Array.from(this.props.filmReviewsWebdata)
-                        .sort((a,b) => { return a[type] - b[type] })
+                    __filtered_data: Array.from(this.props.filmReviewsData)
+                        .sort((a,b) => {
+                            if (type == SortableType.IMDB_DIFF) {
+                                return (a["myRating"] - a["imdbAvgRating"]) - (b["myRating"] - b["imdbAvgRating"])
+                            }
+                            return a[type] - b[type] 
+                        })
                 }
             })
         }
@@ -166,7 +173,12 @@ class Films extends React.Component {
                     __sort_type_str: this.state.__sort_type,
                     __sort_order: order,
                     __filtered_data: this.state.__filtered_data
-                        .sort((a,b) => { return a[this.state.__sort_type] - b[this.state.__sort_type] })
+                        .sort((a,b) => {
+                            if (this.state.__sort_type == SortableType.IMDB_DIFF) {
+                                return (a["myRating"] - a["imdbAvgRating"]) - (b["myRating"] - b["imdbAvgRating"])
+                            }
+                            return a[this.state.__sort_type] - b[this.state.__sort_type] 
+                        })
                         .reverse(),
                 }
             })
@@ -179,34 +191,15 @@ class Films extends React.Component {
                     __sort_type_str: this.state.__sort_type,
                     __sort_order: order,
                     __filtered_data: this.state.__filtered_data
-                        .sort((a,b) => { return a[this.state.__sort_type] - b[this.state.__sort_type] })
+                        .sort((a,b) => {
+                            if (this.state.__sort_type == SortableType.IMDB_DIFF) {
+                                return (a["myRating"] - a["imdbAvgRating"]) - (b["myRating"] - b["imdbAvgRating"])
+                            }
+                            return a[this.state.__sort_type] - b[this.state.__sort_type] 
+                        })
                 }
             })
         }
-    }
-
-    /**
-     * 
-     */
-    sortListImdbDiffScore() {
-        let type = 'IMDB diff score';
-
-        this.setState(prevState => {
-            return {
-                __sort_type: type,
-                __sort_type_str: type,
-                __sort_order: SortableDirection.DESC,
-                __filtered_data: Array.from(this.props.filmReviewsWebdata)
-                    .sort((a,b) => {
-                        Array.from(this.props.filmReviewsLocaldata)
-                            .sort((c,d) => {
-                                if (a['letterboxdFilmId'] == c['letterboxdFilmId']) {
-                                    return (a['myRating'] - c['imdbAvgRating']) - (b['myRating'] - d['imdbAvgRating'])
-                                }
-                            })
-                    })
-            }
-        })
     }
 
     /**
@@ -391,7 +384,7 @@ class Films extends React.Component {
 
             this.setState(prevState => {
                 return {
-                    __filtered_data: Array.from(this.props.filmReviewsWebdata)
+                    __filtered_data: Array.from(this.props.filmReviewsData)
                         .filter((f) => {
                             if (genreSelected == this.state.__default_genre_filter) {
                                 return true;
@@ -414,7 +407,7 @@ class Films extends React.Component {
                 // disable filter...
                 actualButton.classList.remove('active');
                 this.setState({__current_genre_filter: ""})
-                this.setState({__filtered_data: Array.from(this.props.filmReviewsWebdata).reverse()})
+               // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
             }
         }
     }
@@ -431,15 +424,19 @@ class Films extends React.Component {
             // update the 'current_genre_filter' state...
             this.setState({__current_language_filter: languageSelected})
 
-            // filter the list...
             this.setState(prevState => {
                 return {
-                    __filtered_data: Array.from(this.props.filmReviewsWebdata)
+                    __filtered_data: Array.from(this.props.filmReviewsData)
                         .filter((f) => {
                             if (languageSelected == this.state.__default_language_filter) {
                                 return true;
                             }
                             return f.language == languageSelected;
+                        })
+                        .sort((a,b) => {
+                            if (this.state.__sort_type == SortableType.IMDB_DIFF) {
+                                return (a["myRating"] - a["imdbAvgRating"]) - (b["myRating"] - b["imdbAvgRating"])
+                            }
                         })
                         .reverse()
                 }
@@ -456,7 +453,7 @@ class Films extends React.Component {
                 // disable filter...
                 actualButton.classList.remove('active');
                 this.setState({__current_language_filter: ""})
-                this.setState({__filtered_data: Array.from(this.props.filmReviewsWebdata).reverse()})
+                // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
             }
         }
     }
@@ -485,10 +482,6 @@ class Films extends React.Component {
      * Content rendered to screen
      */
     render() {
-        // convert the localdata json into an iterable array...
-        const localdata = Array.from(this.props.filmReviewsLocaldata);
-        console.log(localdata);
-        console.log(Array.from(this.props.filmReviewsWebdata));
         // MAX_FILMS_PER_PAGE = localdata.length;
 
         // index of LAST item in current page
@@ -501,15 +494,8 @@ class Films extends React.Component {
                 return isTitleEqualToSearchbox;
             })
             .slice(lastIndex, lastIndex + MAX_FILMS_PER_PAGE)
-            .map(filmWeb => {
-                // iterate over localdata, and find the matching item in webdata...
-                for (let j = 0; j < localdata.length; j++) {
-                    let filmLocal = localdata[j];
-                    if (filmLocal.letterboxdUrl == filmWeb.letterboxdUrl) {
-                        console.log(filmLocal, filmWeb);
-                        return <FilmsToplistElement filmWebdata={filmWeb} filmLocaldata={filmLocal} key={j} />;
-                    }
-                }
+            .map((film, i) => {
+                return <FilmsToplistElement film={film} key={i} />;
             })
         
         // get string representations...
@@ -520,6 +506,8 @@ class Films extends React.Component {
             currentSortTypeStr = SortableTypeStr.IMDB_AVG;
         } else if (this.state.__sort_type == SortableType.IMDB_VOTES) {
             currentSortTypeStr = SortableTypeStr.IMDB_VOTES;
+        } else if (this.state.__sort_type == SortableType.IMDB_DIFF) {
+            currentSortTypeStr = SortableTypeStr.IMDB_DIFF;
         } else if (this.state.__sort_type == SortableType.DURATION) {
             currentSortTypeStr = SortableTypeStr.DURATION;
         } else if (this.state.__sort_type == SortableType.YEAR) {
@@ -527,14 +515,15 @@ class Films extends React.Component {
         }
 
         // get no duplicate lists...
-        let genres = removeGenreDuplicates(this.props.filmReviewsWebdata, this.state.__default_genre_filter);
-        let languages = removeLanguageDuplicates(this.props.filmReviewsWebdata, this.state.__default_language_filter);
+        let genres = removeGenreDuplicates(this.props.filmReviewsData, this.state.__default_genre_filter);
+        let languages = removeLanguageDuplicates(this.props.filmReviewsData, this.state.__default_language_filter);
 
         return(
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
                     <div className='films-container'>
                         <div className='films-controls'>
+                            {/*{this.state.__sort_order.toString()} {this.state.__sort_type_str.toString()} {this.state.__current_genre_filter.toString()} {this.state.__current_language_filter.toString()}*/}
                             <div className='films-controls-subgroup searching-container'>
                                 <span className='subgroup-title'>Search</span>
                                 <div className="searchbox">
@@ -609,6 +598,9 @@ class Films extends React.Component {
                                         <div className="btn films-sort-by-type-btn active" onClick={(e) => { this.sortList(SortableType.MY_POS); this.sortingBtnClicked(e);} }>
                                             {SortableTypeStr.MY_POS}
                                         </div>
+                                        <div className="btn films-sort-by-type-btn" onClick={(e) => { this.sortList(SortableType.IMDB_DIFF); this.sortingBtnClicked(e);} }>
+                                            {SortableTypeStr.IMDB_DIFF}
+                                        </div>
                                         <div className="btn films-sort-by-type-btn" onClick={(e) => { this.sortList(SortableType.IMDB_AVG); this.sortingBtnClicked(e);} }>
                                             {SortableTypeStr.IMDB_AVG}
                                         </div>
@@ -671,11 +663,8 @@ class Films extends React.Component {
  * @param {*} state 
  */
 const mapStateToProps = (state) => {
-    let webdata = require('./reviews_web_data.json');
-
     return {
-        filmReviewsLocaldata: state.filmReviews,
-        filmReviewsWebdata: webdata
+        filmReviewsData: state.filmReviews,
     }
 }
 
