@@ -695,6 +695,13 @@ class Films extends React.Component {
                                     </div>
                                 </div>
                             </div>
+                            <div className='films-controls-subgroup resetFilters-container'>
+                                <div className="btn films-reset-filters-btn" 
+                                    onClick={(e) => this.resetFilters(e)}
+                                    title="Reset filters">
+                                    <ResetFiltersIcon className='invertable-icon' />
+                                </div>
+                            </div>
                             <div className='films-controls-subgroup changeViewOfToplist-container'>
                                 <div className='changeViewOfToplist-btns'>
                                     <div className="btn films-change-view-btn" 
@@ -707,13 +714,6 @@ class Films extends React.Component {
                                         title="View as grid">
                                         <ViewAsGridIcon className='invertable-icon' />
                                     </div>
-                                </div>
-                            </div>
-                            <div className='films-controls-subgroup resetFilters-container'>
-                                <div className="btn films-reset-filters-btn" 
-                                    onClick={(e) => this.resetFilters(e)}
-                                    title="Reset filters">
-                                    <ResetFiltersIcon className='invertable-icon' />
                                 </div>
                             </div>
                             <div className='films-controls-subgroup pagination-container'>

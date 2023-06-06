@@ -2254,59 +2254,6 @@ ul.messiahs-handbook p.quote-person {
 
 
 /* #region -----------------------------------<13: FILMS PAGE>------------------------------------------ */
-:root {
-  --films-list-margin-left: 250px;
-
-  /* Fixed variables relataed to film-toplist-item */
-  --film-toplist-item-poster-fixed-height: 500px;
-  --film-toplist-item-fixed-width: 900px;
-
-  --film-toplist-item-border-outer-width: 3px;
-  --film-toplist-item-border-inner-width: 2px;
-  --film-mydata-container-border-radius: 9px;
-  --film-poster-border-radius: 13px;
-  --vertical-gap-between-filmtoplistitems: 60px;
-}
-:root {
-  /* Item in toplist grid */
-  --films-toplist-grid-items-per-row: 7;
-  --films-toplist-item-fixed-width: 170px;
-  --films-toplist-item-fixed-height: 250px;
-  --films-toplist-item-bg-color: rgb(55, 64, 79);
-  --films-toplist-item-bg-color-hover: rgb(31, 49, 79);
-  --films-toplist-item-databox-bg-color: rgb(84, 88, 103);
-  --films-toplist-item-poster-border-color: rgba(143, 153, 196, 0.244);
-
-  /* */
-  --film-mydata-position-bg-color: rgb(39, 163, 103); /* rgb(138, 45, 79); */
-  --film-mydata-myrating-bg-color: rgb(118, 51, 177);
-  --film-mydata-imdbdiffscore-bg-color: rgb(77, 124, 130);
-
-  /* Colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
-  --film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
-  --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
-  --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
-
-  /* IMDB diff score background colours */
-  --film-mydata-imdbdiffscore-equaldiff-bg-color: rgb(102, 52, 104);
-
-  /* Film controls container */
-  --films-controls-container-bg-color: rgb(39, 41, 44);
-  --films-controls-btn-bg-color: rgb(58, 59, 62);
-  --films-controls-btn-bg-color-hover: rgb(64, 67, 74);
-  --films-controls-btn-bg-color-active: rgb(64, 67, 74);
-
-  --films-controls-btn-text-color-active: var(--text);
-  --films-controls-dropdown-list-bg-color: rgba(80, 81, 88, 0.94);
-  --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
-  --films-controls-dropdown-list-item-bg-color-hover: rgba(122, 124, 133, 0.87);
-  --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
-
-  /*  */
-  --film-toplist-item-images-border-inner-color: rgb(7, 6, 6);
-  --film-toplist-item-images-border-outer-color: rgb(50, 49, 49);
-}
-
 /* display entire page as grid (review on leftside, list on right side) */
 .favourite-films-page .section-inner {
   display: grid;
@@ -2318,25 +2265,28 @@ ul.messiahs-handbook p.quote-person {
   }
 }
 
-/* Applies to grid or list view... */
-.films-toplist-container > .films-toplist {
-  padding-top: 180px;
-  transition: all 100ms ease;
-  margin-left: var(--films-list-margin-left);
-}
-
 
 /* #region ------------------------< 13.1 Toplist (as grid with posters only) >------------------------ */
+:root {
+  /* Variables for grid view */
+  --films-list-margin-left: 400px;
+  --films-toplist-grid-items-per-row: 5;
+  --films-toplist-grid-item-fixed-width: 170px;
+  --films-toplist-grid-item-fixed-height: 250px;
+  --films-toplist-item-bg-color: rgb(55, 64, 79);
+  --films-toplist-item-bg-color-hover: rgb(31, 49, 79);
+}
 .films-toplist.view-as-grid {
   display: grid;
   grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 185px);
   grid-gap: 60px 0px;
   padding-bottom: 150px;
+  margin-left: var(--films-list-margin-left);
 }
 
 .films-toplist.view-as-grid > .films-toplist-item {
-  width: var(--films-toplist-item-fixed-width);
-  height: var(--films-toplist-item-fixed-height);
+  width: var(--films-toplist-grid-item-fixed-width);
+  height: var(--films-toplist-grid-item-fixed-height);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -2354,7 +2304,7 @@ ul.messiahs-handbook p.quote-person {
 }
 
 .films-toplist.view-as-grid .film-poster > img {
-  width: var(--films-toplist-item-fixed-width);
+  width: var(--films-toplist-grid-item-fixed-width);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   width: 100%;
@@ -2382,15 +2332,6 @@ ul.messiahs-handbook p.quote-person {
   color: var(--text);
 }
 
-div.film-dataContainer.myData > span:first-child {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-div.film-dataContainer.myData > span:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
 .films-toplist.view-as-grid div.film-dataContainer.myData > span {
   padding: 2px 5px;
   font-weight: bold;
@@ -2398,42 +2339,16 @@ div.film-dataContainer.myData > span:last-child {
   cursor: pointer;
   user-select: none;
 }
-div.film-dataContainer.myData > span {
-  color: rgb(232, 229, 229);
-}
-div.film-dataContainer > span:hover {
-  opacity: 0.65;
-}
-span.film-myPos {
-  border-top-left-radius: var(--film-mydata-container-border-radius);
-  border-bottom-left-radius: var(--film-mydata-container-border-radius);
-  /* color: rgb(233, 231, 131); */
-  background-color: var(--film-mydata-position-bg-color) !important;
-}
-span.film-myRating {
-  /* color: rgb(39, 235, 216); */
-  background-color: var(--film-mydata-myrating-bg-color) !important;
-}
-span.film-imdbDiffScore {
-  /* background-color: var(--film-mydata-imdbdiffscore-bg-color); */
-  background-color: var(--film-mydata-imdbdiffscore-bg-color);
-}
-span.film-imdbDiffScore.positive-diff { 
-  color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important;
-}
-span.film-imdbDiffScore.negative-diff { 
-  color: var(--film-mydata-imdbdiffscore-negativediff-text-color) !important;
-}
-span.film-imdbDiffScore.equal-diff    { 
-  color: var(--film-mydata-imdbdiffscore-equaldiff-text-color) !important;
-}
-span.film-imdbDiffScore:active {
-  border: 2px solid rgba(255, 255, 255, 0.282);
-}
 /* #endregion */
 
 
 /* #region ------------------------< 13.2 Toplist (as list with posters & screenshots) >------------------------ */
+:root {
+  /* Variables for list view */
+  --films-toplist-list-item-poster-fixed-height: 500px;
+  --films-toplist-list-item-fixed-width: 900px;
+  --film-toplist-item-images-border-inner-color: rgb(7, 6, 6);
+}
 .films-toplist.view-as-list {
   margin: 0 auto;
 }
@@ -2471,7 +2386,7 @@ span.film-imdbDiffScore:active {
 /* Stuff containing poster & screenshots */
 .films-toplist.view-as-list div.films-toplist-item .film-images {
   display: grid;
-  grid-template-columns: 3.7fr 7.2fr;
+  grid-template-columns: 3.9fr 7.0fr;
   opacity: 1.0 !important;
   background-color: var(--film-toplist-item-bg-color);
   /*
@@ -2486,7 +2401,7 @@ span.film-imdbDiffScore:active {
 
 /* item within toplist */
 .films-toplist.view-as-list .films-toplist-item > a {
-  width: var(--film-toplist-item-fixed-width);
+  width: var(--films-toplist-list-item-fixed-width);
   margin: 0 auto; /* Center every item in the list */
   display: block;
   border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color);
@@ -2521,13 +2436,13 @@ span.film-imdbDiffScore:active {
   border-top-left-radius: calc(var(--film-poster-border-radius) - 3px);
 }
 .films-toplist.view-as-list .film-poster {
-  height: var(--film-toplist-item-poster-fixed-height);
+  height: var(--films-toplist-list-item-poster-fixed-height);
 }
 
 /* Screenshots section */
 .film-screenshots {
   width: 100%;
-  height: calc(var(--film-toplist-item-poster-fixed-height) / 3);
+  height: calc(var(--films-toplist-list-item-poster-fixed-height) / 3);
 }
 .film-screenshots img {
   width: 100%;
@@ -2661,21 +2576,99 @@ div.genre:hover {
 /* #endregion */
 
 
-/* #region ------------------------< 13.3 Film controls >------------------------ */
+/* #region ------------------------< 13.3 Stuff common to list view or grid view >------------------------- */
+:root {
+  --film-poster-border-radius: 12px;
+  --vertical-gap-between-filmtoplistitems: 50px;
+  --vertical-gap-at-top-of-page: 180px;
 
+  /* Data background colours */
+  --film-mydata-position-bg-color: rgb(39, 163, 103); /* rgb(138, 45, 79); */
+  --film-mydata-myrating-bg-color: rgb(118, 51, 177);
+  --film-mydata-imdbdiffscore-bg-color: rgb(77, 124, 130);
+
+  /* Text colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
+  --film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
+  --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
+  --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
+}
+/* Applies to grid or list view... */
+.films-toplist-container > .films-toplist {
+  padding-top: var(--vertical-gap-at-top-of-page);
+  transition: all 100ms ease;
+}
+
+div.film-dataContainer.myData > span:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+div.film-dataContainer.myData > span:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+div.film-dataContainer.myData > span {
+  color: rgb(232, 229, 229);
+}
+div.film-dataContainer > span:hover {
+  opacity: 0.65;
+}
+span.film-myPos {
+  border-top-left-radius: var(--film-mydata-container-border-radius);
+  border-bottom-left-radius: var(--film-mydata-container-border-radius);
+  /* color: rgb(233, 231, 131); */
+  background-color: var(--film-mydata-position-bg-color) !important;
+}
+span.film-myRating {
+  /* color: rgb(39, 235, 216); */
+  background-color: var(--film-mydata-myrating-bg-color) !important;
+}
+span.film-imdbDiffScore {
+  /* background-color: var(--film-mydata-imdbdiffscore-bg-color); */
+  background-color: var(--film-mydata-imdbdiffscore-bg-color);
+}
+span.film-imdbDiffScore.positive-diff { 
+  color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important;
+}
+span.film-imdbDiffScore.negative-diff { 
+  color: var(--film-mydata-imdbdiffscore-negativediff-text-color) !important;
+}
+span.film-imdbDiffScore.equal-diff    { 
+  color: var(--film-mydata-imdbdiffscore-equaldiff-text-color) !important;
+}
+span.film-imdbDiffScore:active {
+  border: 2px solid rgba(255, 255, 255, 0.282);
+}
+
+/* #endregion */
+
+
+/* #region ------------------------< 13.4 Film controls >------------------------ */
+:root {
+    --films-controls-container-bg-color: var(--page-wrapper-bg);
+    --films-controls-btn-bg-color: rgb(56, 58, 60);
+    --films-controls-btn-bg-color-hover: rgb(73, 74, 79);
+    --films-controls-btn-bg-color-active: rgb(64, 67, 74);
+    --films-controls-btn-text-color-active: var(--text);
+    --films-controls-dropdown-list-bg-color: rgba(80, 81, 88, 0.94);
+    --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
+    --films-controls-dropdown-list-item-bg-color-hover: rgba(122, 124, 133, 0.87);
+    --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
+}
 /* ----------------------< Film controls >---------------------- */
 /* The entire container... */
 .films-controls {
   /*display: none;*/
   position: fixed;
   z-index: 999999;
-  margin: 0 240px;
-  width: 72%;
   padding: 20px 20px;
+  /*text-align: center;*/
+  width: 70%;
+  margin-left: 240px;
+  background-color: var(--films-controls-container-bg-color);
+  box-shadow: 4px 1px 8px var(--general-box-shadow-color-1);
+  /*
   box-shadow: 4px 10px 8px var(--general-box-shadow-color-1);
   background-color: var(--films-controls-container-bg-color);
-  /*
-  border-bottom: 2px solid rgb(25, 26, 27);
   */
 }
 
@@ -2771,7 +2764,7 @@ div.genre:hover {
   
 }
 .dropdown-list-btn > svg {
-  transition: all 300ms ease-in-out;
+  transition: all 100ms ease;
 }
 .dropdown-list-btn > svg.dropdown-list-is-visible {
   /* Makes arrow point down */
@@ -2793,6 +2786,11 @@ div.genre:hover {
 }
 .dropdown-list > div:nth-child(2) {
   margin-top: 10px;
+}
+
+/* Why the fuck is the languages dropdown not in the right place!?! */
+.dropdown-list-languages {
+  right: 268px;
 }
 
 /* -----------------< Sort buttons >-----------------*/
@@ -2865,8 +2863,8 @@ div.genre:hover {
   margin-bottom: 50px;
 }
 div.btn.films-reset-filters-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 /*
 .filter-by-language-btns .dropdown-list {
@@ -2876,6 +2874,10 @@ div.btn.films-reset-filters-btn svg {
 
 
 /* -----------------< View as list or grid buttons >-----------------*/
+.changeViewOfToplist-container {
+  display: block;
+  padding-top: 20px;
+}
 .changeViewOfToplist-container div.btn {
   padding: 3px 7px !important;
   background-color: var(--films-controls-btn-bg-color);
@@ -2957,8 +2959,8 @@ div.btn.films-reset-filters-btn svg {
 .pagination-btns {
   list-style: none;
   list-style-type: none;
-  margin-top: 20px;
-  margin-left: -40px;
+  margin-top: -45px;
+  margin-left: 130px;
 }
 
 .pagination-btns li.previous-btn a,
@@ -3074,7 +3076,7 @@ div.btn.films-reset-filters-btn svg {
 /* #endregion */
 
 
-/* #region ------------------------< 13.4 Film review being displayed >------------------------ */
+/* #region ------------------------< 13.5 Film review being displayed >------------------------ */
 .review-displayed {
   margin: 0 auto;
   width: 50%;
@@ -3457,19 +3459,7 @@ div.btn.films-reset-filters-btn svg {
     font-size: 0.7rem;
   }
 
-  /* */
-  .App > .top-films-grid-container {
-    margin-left: 0px;
-  }
-  .App > .top-films-grid-container .film-grid-element img {
-    width: calc(var(--film-grid-element-width) * 1.08);
-    height: calc(var(--film-grid-element-height) * 1.08);
-  }
-  #top-films-list {
-    text-align: center;
-  }
-
-  /* Review displayed */
+  /* #region --------------< Review displayed >----------------- */
   .film-review .review-displayed {
     width: 100%;
     padding: 0 10px;
@@ -3492,13 +3482,20 @@ div.btn.films-reset-filters-btn svg {
   .film-review .review-displayed .filmPoster img {
     width: 250px;
   }
+  /* #endregion */
 
-  /* */
+  /* #region --------------< Films toplist >----------------- */
+  .App > .top-films-grid-container {
+    margin-left: 0px;
+  }
+  #top-films-list {
+    text-align: center;
+  }
+
   .filmPosition {
     font-size: 0.8rem;
     font-weight: 500 !important;
   }
-
   .film-review .section-inner {
     grid-template-columns: .1fr 100fr;
   }
@@ -3551,13 +3548,28 @@ div.btn.films-reset-filters-btn svg {
   .films-controls .dropdown-list {
     font-size: 0.8rem !important;
   }
-  .films-toplist {
-    padding: 10px;
-    grid-template-columns: repeat(3, 1fr) !important;
+  .films-toplist.view-as-grid {
+    padding-top: calc(var(--vertical-gap-at-top-of-page) + 60px);
+    padding-left: 5px;
+    grid-template-columns: repeat(4, 70px) !important;
+    grid-gap: 40px 40px;
   }
   .films-toplist > .films-toplist-item {
-    width: calc(var(--films-toplist-item-fixed-width) * 1.09) !important;
-    height: calc(var(--films-toplist-item-fixed-height) * 1.09) !important;
+    width: calc(var(--films-toplist-grid-item-fixed-width) * 0.6) !important;
+    height: calc(var(--films-toplist-grid-item-fixed-height) * 0.6) !important;
+  }
+  .films-toplist .film-details > p {
+    font-size: 0.6rem !important;
+  }
+  .films-toplist div.myData {
+    display: none;
+  }
+  .films-controls .dropdown-list-btn {
+    width: 130px !important;
+  }
+  .pagination-btns {
+    margin-left: -40px;
+    padding-top: 60px;
   }
   .films-controls .pagination-btns li:not(.previous-btn):not(.next-btn) a {
     padding: 2px;
@@ -3568,6 +3580,7 @@ div.btn.films-reset-filters-btn svg {
   .pagination-btns li.pagination-active a {
     border-bottom: 3px solid var(--films-pagination-btn-bottomborder-color-active) !important;
   }
+  /* #endregion */
 
   /* #endregion */
 }

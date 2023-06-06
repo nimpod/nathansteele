@@ -1,3 +1,5 @@
+import { act } from "@testing-library/react";
+import { event } from "jquery";
 
 /**
  * [Get value of a specified CSS variable]
@@ -66,22 +68,25 @@ export function getBlogPostId(title) {
 
 /**
  * 
- * @param {*} eventTarget 
+ * @param {*} elementClicked 
  * @returns 
  */
-export function getActualButton(eventTarget, tagName) {
+export function getActualButton(elementClicked, tagName) {
     // make sure we actually find the button...
+    console.log(elementClicked);
+    
     let actualButton = NaN;
     if (tagName == "svg") {
         // user clicked on svg, bit fucking annoying
-        actualButton = eventTarget.parentElement;
+        actualButton = elementClicked.parentElement;
     } else if (tagName == "path") {
         // user clicked on path inside svg, bit fucking annoying
-        actualButton = eventTarget.parentElement.parentElement;
+        actualButton = elementClicked.parentElement.parentElement;
     } else {
         // user clicked on button, well done
-        actualButton = eventTarget;
+        actualButton = elementClicked;
     }
+    console.log(actualButton);
 
     return actualButton;
 }
