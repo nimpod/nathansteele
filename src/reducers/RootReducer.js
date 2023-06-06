@@ -303,6 +303,11 @@ const initState = {
             "myRating": "9.2",
             "myTags": ["Emotional", "Friendship", "Forgiveness", "Animal welfare", "Great cinematography", "The universal power of music", "Budapest"],
             "customPosterUrl": require('./websiteContent/films/white_god/custom_poster.webp'),
+            "screenshots": [
+                require('./websiteContent/films/white_god/screenshot1.webp'),
+                require('./websiteContent/films/white_god/screenshot2.webp'),
+                require('./websiteContent/films/white_god/screenshot3.webp'),
+            ],
             "myReview": ReactDomServer.renderToString(WhiteGodReview([
                 require('./websiteContent/films/white_god/screenshot1.webp'),
                 require('./websiteContent/films/white_god/screenshot2.webp'),
@@ -314,6 +319,11 @@ const initState = {
             "title": "Flatland: The Film",
             "myRating": "10",
             "myTags": ["Dimensionality", "Questioning reality", "Perspective", "Mathematics", "War", "Corruption", "Emotional"],
+            "screenshots": [
+                require('./websiteContent/films/flatland/screenshot1.webp'),
+                require('./websiteContent/films/flatland/screenshot2.webp'),
+                require('./websiteContent/films/flatland/screenshot3.webp'),
+            ],
             "myReview": ReactDomServer.renderToString(FlatlandReview([
                 require('./websiteContent/films/flatland/screenshot1.webp'),
                 require('./websiteContent/films/flatland/screenshot2.webp'),
@@ -326,6 +336,11 @@ const initState = {
             "myRating": "7.6",
             "myTags": ["Creature-feature", "One-location", "Survival", "Fun", "Cool practical effects"],
             "myReview": "",
+            "screenshots": [
+                require('./websiteContent/films/feast/screenshot1.webp'),
+                require('./websiteContent/films/feast/screenshot2.webp'),
+                require('./websiteContent/films/feast/screenshot10.webp'),
+            ],
             "customPosterUrl": require('./websiteContent/films/feast/custom_poster.webp')
         },
         {
@@ -334,6 +349,11 @@ const initState = {
             "title": "The Secret World of Arrietty",
             "myRating": "9.1",
             "myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
+            "screenshots": [
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot1.webp'),
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot2.webp'),
+                require('./websiteContent/films/the_secret_world_of_arrietty/screenshot3.webp'),
+            ],
             "myReview": ReactDomServer.renderToString(ArriettyReview([
                 require('./websiteContent/films/the_secret_world_of_arrietty/screenshot1.webp'),
                 require('./websiteContent/films/the_secret_world_of_arrietty/screenshot2.webp'),
@@ -346,6 +366,11 @@ const initState = {
             "myRating": "10",
             "customPosterUrl": require('./websiteContent/films/a_ghost_story/custom_poster.webp'),
             "myTags": ["Death", "Life", "Vast", "Cosmic", "Beyond existence", "Mysterious", "Creative use of lighting", "Creative use of aspect ratio", "Great soundtrack"],
+            "screenshots": [
+                require('./websiteContent/films/a_ghost_story/screenshot1.webp'),
+                require('./websiteContent/films/a_ghost_story/screenshot2.webp'),
+                require('./websiteContent/films/a_ghost_story/screenshot3.webp'),
+            ],
             "myReview": ReactDomServer.renderToString(AGhostStoryReview([
                 require('./websiteContent/films/a_ghost_story/screenshot1.webp'),
                 require('./websiteContent/films/a_ghost_story/screenshot2.webp'),
@@ -1848,6 +1873,11 @@ const initState = {
             "myTags": ["Heterodox thinker", "Religion", "Friendship", "Intricate animation style", "Textures", "Steampunk", "Colourful", "Exploring new places", "Anti-smoking"],
             "customPosterUrl": require('./websiteContent/films/poupelle_of_chimmney_town/custom_poster.webp'),
             "gradualInterest": [8, 8, 8, 8, 7, 7, 7, 8, 9, 9],
+            "screenshots": [
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot1.webp'),
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot2.webp'),
+                require('./websiteContent/films/poupelle_of_chimmney_town/screenshot3.webp'),
+            ],
             "myReview": ReactDomServer.renderToString(PoupelleOfChimmneyTownReview([
                 require('./websiteContent/films/poupelle_of_chimmney_town/screenshot1.webp'),
                 require('./websiteContent/films/poupelle_of_chimmney_town/screenshot2.webp'),
@@ -1989,6 +2019,11 @@ const initState = {
             "myRating": "7.9",
             "myTags": ["Nature", "Humanity and nature coexisting", "Summer", "Following characters through their lives as seasons pass by"],
             "myReview": "",
+            "screenshots": [
+                require('./websiteContent/films/wolf_children/screenshot7.webp'),
+                require('./websiteContent/films/wolf_children/screenshot4.webp'),
+                require('./websiteContent/films/wolf_children/screenshot1.webp'),
+            ],
             "gradualInterest": [6, 6, 7, 7, 8, 8, 8, 9, 8, 8, 8, 8]
         },
         {
@@ -2244,6 +2279,11 @@ const initState = {
             "myRating": "10",
             "customPosterUrl": require('./websiteContent/films/children_of_the_sea/custom_poster.webp'),
             "myTags": ["The origins of life", "Astronomy", "Cosmology", "Spirituality", "The mysteries of the ocean world", "Sealife", "Exploring new perspectives", "Visual trip", "Audio-visual spectacle"],
+            "screenshots": [
+                require('./websiteContent/films/children_of_the_sea/screenshot1.webp'),
+                require('./websiteContent/films/children_of_the_sea/screenshot2.webp'),
+                require('./websiteContent/films/children_of_the_sea/screenshot3.webp')
+            ],
             "myReview": ReactDomServer.renderToString(ChildrenOfTheSeaReview([
                 require('./websiteContent/films/children_of_the_sea/screenshot1.webp'),
                 require('./websiteContent/films/children_of_the_sea/screenshot2.webp'),
@@ -2345,11 +2385,15 @@ const RootReducer = (state=initState, action) => {
 
     // merge local & web film data...
     const mergedData = webdata.map(film => ({...film, ...mappedById[film.letterboxdUrl]}))
-    
-    // modify state...
-    state.filmReviews = mergedData;
 
-    // return state!
+    // add new attributes...
+    Object.entries(mergedData).forEach(([k,v]) => {
+        // calculate imdb diff score for each film...
+        v["imdbDiffScore"] = (v["myRating"] - v["imdbAvgRating"]).toFixed(1)
+    })
+    
+    // update state so its now using the merged version!
+    state.filmReviews = mergedData;
     return state;
 }
 

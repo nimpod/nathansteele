@@ -14,6 +14,7 @@ import { getRandomRGBA, getReviewId } from '../../js/helpers.js';
 
 
 class FilmsReview extends Component {
+
     /**
      * The Render() function, content rendered to screen...
      */

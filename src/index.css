@@ -2254,6 +2254,58 @@ ul.messiahs-handbook p.quote-person {
 
 
 /* #region -----------------------------------<13: FILMS PAGE>------------------------------------------ */
+:root {
+  --films-list-margin-left: 250px;
+
+  /* Fixed variables relataed to film-toplist-item */
+  --film-toplist-item-poster-fixed-height: 500px;
+  --film-toplist-item-fixed-width: 900px;
+
+  --film-toplist-item-border-outer-width: 3px;
+  --film-toplist-item-border-inner-width: 2px;
+  --film-mydata-container-border-radius: 9px;
+  --film-poster-border-radius: 13px;
+  --vertical-gap-between-filmtoplistitems: 60px;
+}
+:root {
+  /* Item in toplist grid */
+  --films-toplist-grid-items-per-row: 7;
+  --films-toplist-item-fixed-width: 170px;
+  --films-toplist-item-fixed-height: 250px;
+  --films-toplist-item-bg-color: rgb(55, 64, 79);
+  --films-toplist-item-bg-color-hover: rgb(31, 49, 79);
+  --films-toplist-item-databox-bg-color: rgb(84, 88, 103);
+  --films-toplist-item-poster-border-color: rgba(143, 153, 196, 0.244);
+
+  /* */
+  --film-mydata-position-bg-color: rgb(39, 163, 103); /* rgb(138, 45, 79); */
+  --film-mydata-myrating-bg-color: rgb(118, 51, 177);
+  --film-mydata-imdbdiffscore-bg-color: rgb(77, 124, 130);
+
+  /* Colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
+  --film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
+  --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
+  --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
+
+  /* IMDB diff score background colours */
+  --film-mydata-imdbdiffscore-equaldiff-bg-color: rgb(102, 52, 104);
+
+  /* Film controls container */
+  --films-controls-container-bg-color: rgb(39, 41, 44);
+  --films-controls-btn-bg-color: rgb(58, 59, 62);
+  --films-controls-btn-bg-color-hover: rgb(64, 67, 74);
+  --films-controls-btn-bg-color-active: rgb(64, 67, 74);
+
+  --films-controls-btn-text-color-active: var(--text);
+  --films-controls-dropdown-list-bg-color: rgba(80, 81, 88, 0.94);
+  --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
+  --films-controls-dropdown-list-item-bg-color-hover: rgba(122, 124, 133, 0.87);
+  --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
+
+  /*  */
+  --film-toplist-item-images-border-inner-color: rgb(7, 6, 6);
+  --film-toplist-item-images-border-outer-color: rgb(50, 49, 49);
+}
 
 /* display entire page as grid (review on leftside, list on right side) */
 .favourite-films-page .section-inner {
@@ -2266,63 +2318,42 @@ ul.messiahs-handbook p.quote-person {
   }
 }
 
-
-.films-container {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+/* Applies to grid or list view... */
+.films-toplist-container > .films-toplist {
+  padding-top: 180px;
+  transition: all 100ms ease;
+  margin-left: var(--films-list-margin-left);
 }
 
 
-/* #region ------------------------< 13.1 Toplist >------------------------ */
-:root {
-  /* Item in toplist grid */
-  --films-toplist-grid-items-per-row: 7;
-  --films-toplist-item-fixed-width: 170px;
-  --films-toplist-item-fixed-height: 250px;
-  --films-toplist-item-bg-color: rgb(66, 66, 71);
-  --films-toplist-item-bg-color-hover: rgb(66, 66, 71);
-  --films-toplist-item-databox-bg-color: rgb(84, 88, 103);
-  --films-toplist-item-poster-border-color: rgba(143, 153, 196, 0.244);
-
-  /* Colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
-  --film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
-  --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
-  --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
-
-  --film-mydata-imdbdiffscore-positivediff-bg-color: rgb(138, 45, 79);
-  --film-mydata-imdbdiffscore-negativediff-bg-color: rgb(57, 154, 128);
-  --film-mydata-imdbdiffscore-equaldiff-bg-color: rgb(72, 39, 74);
-}
-
-.films-container > .films-toplist {
+/* #region ------------------------< 13.1 Toplist (as grid with posters only) >------------------------ */
+.films-toplist.view-as-grid {
   display: grid;
-  grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 1fr);
-  margin-left: 400px;
-  grid-gap: 70px 15px;
-  margin-top: 50px;
+  grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 185px);
+  grid-gap: 60px 0px;
   padding-bottom: 150px;
 }
 
-.films-container > .films-toplist > .films-toplist-item {
+.films-toplist.view-as-grid > .films-toplist-item {
   width: var(--films-toplist-item-fixed-width);
   height: var(--films-toplist-item-fixed-height);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
-.films-container > .films-toplist > .films-toplist-item > a {
+.films-toplist.view-as-grid > .films-toplist-item > a {
   opacity: 1.0 !important;
 }
-.films-container > .films-toplist > .films-toplist-item > a:hover {
+.films-toplist.view-as-grid > .films-toplist-item > a:hover {
   opacity: 0.60 !important;
   transition: all 300ms ease;
 }
-.films-container > .films-toplist > .films-toplist-item > a:hover .film-details {
+.films-toplist.view-as-grid > .films-toplist-item > a:hover .film-details {
   background-color: var(--films-toplist-item-bg-color-hover);
   transition: all 300ms ease;
 }
 
-.films-container > .films-toplist .film-poster > img {
+.films-toplist.view-as-grid .film-poster > img {
   width: var(--films-toplist-item-fixed-width);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -2331,7 +2362,7 @@ ul.messiahs-handbook p.quote-person {
   object-fit: cover;
 }
 
-.films-container > .films-toplist .film-details {
+.films-toplist.view-as-grid .film-details {
   background-color: var(--films-toplist-item-bg-color);
   padding: 3px 5px;
   border-bottom-left-radius: 8px;
@@ -2340,7 +2371,7 @@ ul.messiahs-handbook p.quote-person {
   margin-left: -2px;
 }
 
-.films-container > .films-toplist .film-details > p {
+.films-toplist.view-as-grid .film-details > p {
   max-width: 300px;
   overflow: hidden;
   padding: 0;
@@ -2360,14 +2391,15 @@ div.film-dataContainer.myData > span:last-child {
   border-bottom-right-radius: 6px;
 }
 
-div.film-dataContainer.myData > span {
+.films-toplist.view-as-grid div.film-dataContainer.myData > span {
   padding: 2px 5px;
   font-weight: bold;
   font-size: 0.70rem;
   cursor: pointer;
-  color: rgb(232, 229, 229);
   user-select: none;
-  /* background-color: var(--films-toplist-item-databox-bg-color); */
+}
+div.film-dataContainer.myData > span {
+  color: rgb(232, 229, 229);
 }
 div.film-dataContainer > span:hover {
   opacity: 0.65;
@@ -2376,15 +2408,15 @@ span.film-myPos {
   border-top-left-radius: var(--film-mydata-container-border-radius);
   border-bottom-left-radius: var(--film-mydata-container-border-radius);
   /* color: rgb(233, 231, 131); */
-  background-color: var(--film-mydata-imdbdiffscore-positivediff-bg-color) !important;
+  background-color: var(--film-mydata-position-bg-color) !important;
 }
 span.film-myRating {
   /* color: rgb(39, 235, 216); */
-  background-color: var(--film-mydata-imdbdiffscore-negativediff-bg-color) !important;
+  background-color: var(--film-mydata-myrating-bg-color) !important;
 }
 span.film-imdbDiffScore {
   /* background-color: var(--film-mydata-imdbdiffscore-bg-color); */
-  background-color: var(--film-mydata-imdbdiffscore-equaldiff-bg-color);
+  background-color: var(--film-mydata-imdbdiffscore-bg-color);
 }
 span.film-imdbDiffScore.positive-diff { 
   color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important;
@@ -2395,65 +2427,273 @@ span.film-imdbDiffScore.negative-diff {
 span.film-imdbDiffScore.equal-diff    { 
   color: var(--film-mydata-imdbdiffscore-equaldiff-text-color) !important;
 }
-
 span.film-imdbDiffScore:active {
   border: 2px solid rgba(255, 255, 255, 0.282);
 }
 /* #endregion */
 
 
-/* #region ----------------< 13.2 Film controls >------------------ */
-:root {
-  /* Film controls container */
-  --films-controls-container-bg-color: rgb(46, 48, 52);
-  --films-controls-btn-bg-color: rgb(74, 75, 79);
-  --films-controls-btn-text-color-active: var(--text);
-  --films-controls-dropdown-list-bg-color: rgba(80, 81, 88, 0.94);
-  --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
-  --films-controls-dropdown-list-item-bg-color-hover: rgba(122, 124, 133, 0.87);
-
-  /* Border colour of paginaton button */
-  --films-pagination-btn-border-color: rgb(85, 81, 81);
-  --films-pagination-btn-border-color-hover: rgb(120, 117, 117);
-  --films-pagination-btn-border-color-active: rgb(42, 156, 114);
-
-  /* Background colour of pagination button in normal/hover/active state */
-  --films-pagination-btn-bg-color: rgb(75, 72, 72);
-  --films-pagination-btn-bg-color-hover: rgb(120, 117, 117);
-  --films-pagination-btn-bg-color-selected: rgb(69, 182, 141);
-  --films-pagination-btn-bg-color-active: rgb(31, 161, 104);
-
-  /* Text colour of pagination button in hover/active state */
-  --films-pagination-btn-text-color-hover: var(--text);
-  --films-pagination-btn-text-color-active: var(--text);
-
-  /* Background colour of next and previous buttons */
-  --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
+/* #region ------------------------< 13.2 Toplist (as list with posters & screenshots) >------------------------ */
+.films-toplist.view-as-list {
+  margin: 0 auto;
 }
 
+/* Layer above anchor tag */
+.films-toplist.view-as-list div.films-toplist-item {
+  padding-bottom: var(--vertical-gap-between-filmtoplistitems);
+}
+
+/* Film details above poster */
+.films-toplist.view-as-list div.films-toplist-item > a > div.film-details {
+  color: var(--text);
+  padding: 5px 10px;
+}
+
+.films-toplist.view-as-list div.film-details > span {
+  display: inline;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Film title */
+.films-toplist.view-as-list div.film-details span.film-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;  /* Space below title */
+}
+
+/* Data container... */
+.films-toplist.view-as-list div.film-data {
+  float: right;
+}
+
+/* #region --------------------------< Poster & screenshots >-------------------------- */
+
+/* Stuff containing poster & screenshots */
+.films-toplist.view-as-list div.films-toplist-item .film-images {
+  display: grid;
+  grid-template-columns: 3.7fr 7.2fr;
+  opacity: 1.0 !important;
+  background-color: var(--film-toplist-item-bg-color);
+  /*
+  box-shadow: 11px 13px 13px 0 var(--general-box-shadow-color-1);
+  */
+}
+.films-toplist.view-as-list div.films-toplist-item > .film-images:active {
+  /*
+  border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color-click);
+  */
+}
+
+/* item within toplist */
+.films-toplist.view-as-list .films-toplist-item > a {
+  width: var(--film-toplist-item-fixed-width);
+  margin: 0 auto; /* Center every item in the list */
+  display: block;
+  border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color);
+  opacity: 1.0;
+  background-color: var(--film-toplist-item-bg-color);
+  border-radius: var(--film-poster-border-radius);
+  border: 2px solid transparent;
+}
+.films-toplist.view-as-list .films-toplist-item > a:hover {
+  background-color: var(--film-toplist-item-bg-color-hover);
+}
+.films-toplist.view-as-list .films-toplist-item a:active {
+  border: 2px solid rgb(83, 72, 72);
+  transition: all 0.2s ease;
+  background-color: rgb(54, 51, 51);
+}
+
+/* Poster section */
+.films-toplist.view-as-list .films-toplist-item .film-poster img {
+  /*
+  width: calc(var(--film-grid-element-width) * 2.3);
+  height: calc(var(--film-grid-element-height) * 2.3);
+  */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
+}
+.films-toplist.view-as-list .films-toplist-item .film-poster img,
+.films-toplist.view-as-list .film-images {
+  border-bottom-left-radius: calc(var(--film-poster-border-radius) - 3px);
+  border-top-left-radius: calc(var(--film-poster-border-radius) - 3px);
+}
+.films-toplist.view-as-list .film-poster {
+  height: var(--film-toplist-item-poster-fixed-height);
+}
+
+/* Screenshots section */
+.film-screenshots {
+  width: 100%;
+  height: calc(var(--film-toplist-item-poster-fixed-height) / 3);
+}
+.film-screenshots img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*
+  border-left: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
+  border-right: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
+  */
+}
+.film-screenshots img:nth-child(1) {
+  border-top-right-radius: calc(var(--film-poster-border-radius) - 2px);
+  border-bottom: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
+}
+.film-screenshots img:nth-child(2) {
+  border-bottom: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
+}
+.film-screenshots img:nth-child(3) {
+  border-bottom-right-radius: calc(var(--film-poster-border-radius) - 2px);
+}
+/* #endregion */
+
+/* #region --------------------------< My Data >-------------------------- */
+.films-toplist.view-as-list div.film-dataContainer.myData > span {
+  padding: 3px 8px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: 2px solid var(--page-wrapper-bg);
+  cursor: pointer;
+}
+.films-toplist.view-as-list div.film-dataContainer > span:hover {
+  opacity: 0.65;
+}
+.films-toplist.view-as-list span.film-myPos {
+  border-top-left-radius: var(--film-mydata-container-border-radius);
+  border-bottom-left-radius: var(--film-mydata-container-border-radius);
+  background-color: var(--film-mydata-pos-bg-color);
+}
+.films-toplist.view-as-list span.film-myRating {
+  background-color: var(--film-mydata-rating-bg-color);
+}
+
+span.film-imdbDiffScore.positive-diff { color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important; }
+span.film-imdbDiffScore.negative-diff { color: var(--film-mydata-imdbdiffscore-negativediff-text-color) !important; }
+span.film-imdbDiffScore.equal-diff    { color: var(--film-mydata-imdbdiffscore-equaldiff-text-color) !important; }
+span.film-imdbDiffScore {
+  padding: 3px 0 !important;
+}
+span.film-imdbDiffScore > a,
+span.film-imdbDiffScore {
+  padding: 3px 8px !important;
+}
+span.film-imdbDiffScore:active {
+  border: 2px solid rgba(255, 255, 255, 0.282);
+}
+
+div.film-myPos:hover,
+div.my-tag:hover,
+div.genre-tag:hover,
+div.genre:hover {
+  cursor: pointer;
+  transition: 150ms background-color ease;
+}
+/* #endregion */
+
+/* #region --------------------------< Additional Data >-------------------------- */
+.films-toplist.view-as-list div.film-dataContainer.additionalData {
+  vertical-align: top;
+}
+.films-toplist.view-as-list div.film-dataContainer.additionalData > * {
+  margin-top: 2px;
+}
+.films-toplist.view-as-list div.film-details div.film-genres,
+.films-toplist.view-as-list .film-details div.film-directors {
+  /* Display the items within the divs horizontally */
+  display: inline-block;
+}
+.films-toplist.view-as-list div.film-details span.film-year,
+.films-toplist.view-as-list div.film-details span.film-language,
+.films-toplist.view-as-list div.film-details span.film-duration {
+  font-size: 0.7rem;
+}
+.films-toplist.view-as-list div.film-details span.genre-tag,
+.films-toplist.view-as-list div.film-details span.director-tag,
+.films-toplist.view-as-list div.film-details div.film-urls {
+  display: inline-block;
+}
+.films-toplist.view-as-list div.film-details span.genre-tag,
+.films-toplist.view-as-list div.film-details span.director-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  border-radius: 50px;
+  padding: 2px 10px;
+  margin-right: 4px;
+  background-color: var(--tags-bg-color);
+  border: 2px solid var(--tags-border-color);
+}
+.films-toplist.view-as-list span.genre-tag:hover,
+.films-toplist.view-as-list span.director-tag:hover {
+  background-color: var(--tags-bg-color-hover);
+  cursor: pointer;
+}
+/* links (might move somewhere else, outside of main anchor tag) */
+.films-toplist.view-as-list div.film-urls a {
+  border-radius: 4px;
+  padding: 2px 5px;
+  background-color: rgb(79, 80, 84);
+  border: 2px solid rgb(29, 28, 28);
+  color: var(--text) !important;
+  font-size: 0.55rem;
+  margin-right: 5px;
+}
+.films-toplist.view-as-list .film-details span.film-title > div.film-urls {
+  position: absolute;
+  margin-top: -2px;
+  padding-left: 10px;
+}
+/* Display the little circle after these elements... */
+.films-toplist.view-as-list div.film-dataContainer.additionalData > span::before,
+.films-toplist.view-as-list div.film-dataContainer.additionalData > div.film-genres::before,
+.films-toplist.view-as-list div.film-dataContainer.additionalData > *:last-child::after {
+  content: "●";
+  color: #53545b;
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 0.6rem;
+}
+/* #endregion */
+
+
+/* #endregion */
+
+
+/* #region ------------------------< 13.3 Film controls >------------------------ */
 
 /* ----------------------< Film controls >---------------------- */
 /* The entire container... */
 .films-controls {
+  /*display: none;*/
   position: fixed;
-  padding: 10px;
-  margin-top: 50px;
-  margin-left: 20px;
-  height: calc(80vh);
-  width: 320px;
+  z-index: 999999;
+  margin: 0 240px;
+  width: 72%;
+  padding: 20px 20px;
+  box-shadow: 4px 10px 8px var(--general-box-shadow-color-1);
   background-color: var(--films-controls-container-bg-color);
-  text-align: center;
-  border-radius: 10px;
+  /*
+  border-bottom: 2px solid rgb(25, 26, 27);
+  */
 }
 
 /* A subgroup inside .film-controls */
 .films-controls-subgroup {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  /*
   border-top: 1px dashed rgb(73, 76, 82);
   border-radius: 10px;
   margin-bottom: 25px;
+  */
 }
 .films-controls-subgroup.filtering-container {
+  /*
   margin-bottom: 110px;
+  */
 }
 
 /* Title of subgroup */
@@ -2469,21 +2709,8 @@ span.film-imdbDiffScore:active {
   font-size: 0.95rem;
 }
 
-/* Sorting buttons */
-.films-controls div.btn {
-  outline: none !important;
-  transition: all 200ms ease-in-out;
-  color: var(--text);
-}
-.films-controls div.btn:hover {
-  background-color: var(--films-controls-dropdown-list-item-bg-color-hover);
-}
-.films-controls div.btn.active {
-  color: var(--films-controls-btn-text-color-active) !important;
-  background-color: var(--films-pagination-btn-border-color-active);
-}
 
-/* Sort by type buttons */
+/* -----------------< Dropdown list button >-----------------*/
 .dropdown-list:not(.visible) {
   display: none;
 }
@@ -2500,7 +2727,7 @@ span.film-imdbDiffScore:active {
   border-radius: 5px;
   font-size: 0.9rem;
   border: 2px solid transparent;
-  background-color: var(--films-controls-dropdown-list-bg-color);
+  background-color: var(--films-controls-btn-bg-color);
   width: 180px;
   padding: 5px;
   margin-bottom: 4px;
@@ -2509,13 +2736,13 @@ span.film-imdbDiffScore:active {
 }
 .dropdown-list-btn:hover {
   cursor: pointer;
-  background-color: rgba(134, 135, 139, 0.603);
+  background-color: var(--films-controls-btn-bg-color-hover);
 }
 .dropdown-list-btn:active {
-  border: 2px solid rgba(147, 153, 176, 0.689);
+  border: 2px solid var(--films-controls-btn-bg-color-active);
 }
 .dropdown-list-btn.list-is-visible {
-  background-color: rgba(134, 135, 139, 0.603);
+  background-color: var(--films-controls-btn-bg-color-active);
 }
 .dropdown-list-btn > span {
   margin-left: 10px;
@@ -2555,40 +2782,36 @@ span.film-imdbDiffScore:active {
   transform: rotate(-90deg);
 }
 
-
-.beside-dropdown-btn {
-  vertical-align: middle;
+.dropdown-list-title {
+  color: var(--text);
   font-size: 0.9rem;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(105, 107, 111);
 }
-.beside-dropdown-btn > span {
+.dropdown-list > div:nth-child(2) {
+  margin-top: 10px;
+}
+
+/* -----------------< Sort buttons >-----------------*/
+.films-controls div.btn {
+  outline: none !important;
+  transition: all 200ms ease-in-out;
   color: var(--text);
 }
-
-.sort-type-btns .beside-dropdown-btn {
-  margin-top: 2px;
+.films-controls div.btn:hover {
+  background-color: var(--films-controls-btn-bg-color-hover);
 }
-.filter-by-language-btns .dropdown-list {
-  margin-top: 41px;
-}
-
-.filter-by-something-container > span {
-  display: block;
-  color: var(--text-slightly-darker);
-  font-size: 0.9rem;
-  text-align: left;
-  margin-bottom: 3px;
+.films-controls div.btn.active {
+  color: var(--films-controls-btn-text-color-active) !important;
+  background-color: var(--films-controls-dropdown-active-item-bg-color);
 }
 
-.filter-by-genre-btns {
-  margin-bottom: 50px;
+.sort-direction-btns {
+  margin-left: 10px;
 }
-
-
-.dropdown-list-btn,
-.beside-dropdown-btn {
-  display: inline-block;
-}
-/* Sort by direction buttons */
 .sort-direction-btns div.btn {
   padding: 0 3px;
   border: 2px solid transparent;
@@ -2596,7 +2819,8 @@ span.film-imdbDiffScore:active {
 .sort-direction-btns div.btn.active {
   background-color: var(--films-pagination-btn-bg-color-active);
 }
-.sort-direction-btns div.btn:not(.active):active {
+.sort-direction-btns div.btn:not(.active):active,
+.changeViewOfToplist-btns div.btn:not(.active):active {
   border: 2px solid rgba(147, 153, 176, 0.689);
 }
 .sort-direction-btns div.btn:not(.active) {
@@ -2614,9 +2838,78 @@ span.film-imdbDiffScore:active {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
-.sort-direction-btns div.btn > svg {
+.films-container div.btn > svg {
   width: 26px;
   height: 26px;
+}
+/* Make sorting buttons more central relative to dropdown btn */
+.sort-type-btns .beside-dropdown-btn {
+  margin-top: 2px;
+}
+
+/* -----------------< Filter buttons >-----------------*/
+.filtering-container > .filter-by-something-container  {
+  display: inline;
+}
+.filtering-container > .filter-by-something-container > div {
+  margin-right: 20px;
+}
+.filter-by-something-container > span {
+  display: block;
+  color: var(--text-slightly-darker);
+  font-size: 0.9rem;
+  text-align: left;
+  margin-bottom: 3px;
+}
+.filter-by-genre-btns {
+  margin-bottom: 50px;
+}
+div.btn.films-reset-filters-btn svg {
+  width: 20px;
+  height: 20px;
+}
+/*
+.filter-by-language-btns .dropdown-list {
+  margin-top: 41px;
+}
+*/
+
+
+/* -----------------< View as list or grid buttons >-----------------*/
+.changeViewOfToplist-container div.btn {
+  padding: 3px 7px !important;
+  background-color: var(--films-controls-btn-bg-color);
+  border-radius: 0px;
+  border: 2px solid transparent;
+}
+.changeViewOfToplist-container div.btn:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.changeViewOfToplist-container div.btn:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.changeViewOfToplist-container div.btn svg {
+  width: 24px;
+  height: 24px;
+}
+.changeViewOfToplist-container svg:hover {
+  fill: none;
+}
+
+
+/* Stuff next to a dropdown btn */
+.dropdown-list-btn,
+.beside-dropdown-btn {
+  display: inline-block;
+}
+.beside-dropdown-btn {
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+.beside-dropdown-btn > span {
+  color: var(--text);
 }
 
 /* Put count on right, and text on left */
@@ -2628,19 +2921,50 @@ span.film-imdbDiffScore:active {
   float: right;
 }
 
+/* Search bar in films */
+.films-container div.searchbox > input {
+  width: 300px;
+}
+
 
 /* ----------------< Pagination >------------------ */
+:root {
+  /* Background colour of pagination button in normal/hover/active state */
+  --films-pagination-btn-bg-color: var(var(--page-wrapper-bg));
+  --films-pagination-btn-bg-color-hover: rgb(65, 66, 70); /* rgb(65, 66, 70); */
+  --films-pagination-btn-bg-color-selected: rgb(69, 182, 141);
+  --films-pagination-btn-bg-color-active: rgb(31, 161, 104);
+
+  /* Text colour of pagination button in hover/active state */
+  --films-pagination-btn-text-color-hover: var(--text);
+  --films-pagination-btn-text-color-active: var(--text);
+
+  /* Border colour of paginaton button */
+  --films-pagination-btn-border-color: rgb(85, 81, 81);
+  --films-pagination-btn-border-color-hover: rgb(120, 117, 117);
+  --films-pagination-btn-bottomborder-color-active: rgb(56, 97, 7);
+
+  /* */
+  --films-pagination-btn-outer-border-color: rgb(0, 0, 0);
+  --films-pagination-btn-inner-border-color: rgb(31, 32, 34);
+
+  /* Background colour of next and previous buttons */
+  --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
+}
+.pagination-container {
+  margin: 0 auto;
+}
 .pagination-btns {
   list-style: none;
-  display: grid;
-  position: fixed;
-  grid-template-columns: repeat(2, 1fr);
   list-style-type: none;
-  margin-top: 10px;
-  margin-left: -17px;
+  margin-top: 20px;
+  margin-left: -40px;
 }
-.pagination-btns li a {
+
+.pagination-btns li.previous-btn a,
+.pagination-btns li.next-btn a {
   display: flex;
+  text-align: center;
   padding: 5px;
   margin-right: 10px;
   width: 120px;
@@ -2655,8 +2979,45 @@ span.film-imdbDiffScore:active {
 .pagination-btns li:not(.pagination-disabled) a {
   background-color: var(--films-pagination-btn-bg-color);
 }
+/* Actual page navigation buttons */
 .pagination-btns li:not(.previous-btn):not(.next-btn) {
-  margin-bottom: 5px;
+  display: inline-block;
+  background-color: #363638;
+  border-top: 1px solid var(--films-pagination-btn-outer-border-color);
+  border-bottom: 1px solid var(--films-pagination-btn-outer-border-color);
+  border-right: 2px solid var(--films-pagination-btn-inner-border-color);
+  padding: 6px 0;
+}
+/* Left border on first pagination button */
+.pagination-btns li:nth-child(2) {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-left: 1px solid var(--films-pagination-btn-outer-border-color);
+}
+.pagination-btns li:nth-child(2) a {
+  margin-left: 1px;
+}
+/* right border on last pagination button */
+.pagination-btns li:not(.previous-btn):not(.next-btn):nth-last-child(2) {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-right: 1px solid var(--films-pagination-btn-outer-border-color);
+}
+.pagination-btns li:not(.previous-btn):not(.next-btn) a {
+  padding: 7px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  user-select: none;
+}
+.pagination-btns li:not(.pagination-active):not(.previous-btn):not(.next-btn) a:hover {
+  border: 1px solid rgb(40, 40, 42);
+  background-color: var(--films-pagination-btn-bg-color-hover);
+}
+.pagination-btns li:not(.pagination-active):not(.previous-btn):not(.next-btn) a {
+  color: rgb(133, 120, 120) !important;
+}
+.pagination-btns li:not(.previous-btn):not(.next-btn):first-child {
+  border-top-left-radius: 10px;
 }
 /*
 .pagination-btns li.previous-btn,
@@ -2674,9 +3035,13 @@ span.film-imdbDiffScore:active {
   margin-top: 279px;
   margin-left: 155px;
 }
+.pagination-btns li.previous-btn,
+.pagination-btns li.next-btn {
+  display: none;
+}
+
 
 .pagination-btns li a:hover {
-  background-color: var(--films-pagination-btn-bg-color-hover);
   color: var(--films-pagination-btn-text-color-hover) !important;
   border: 2px solid var(--films-pagination-btn-border-color-hover);
   opacity: 1;
@@ -2684,7 +3049,8 @@ span.film-imdbDiffScore:active {
 .pagination-btns li.pagination-active a {
   background-color: var(--films-pagination-btn-bg-color-active);
   color: var(--films-pagination-btn-text-color-active) !important;
-  border: 2px solid var(--films-pagination-btn-border-color-active);
+  border-bottom: 5px solid var(--films-pagination-btn-bottomborder-color-active) !important;
+  transition: all 100ms ease-in-out;
   opacity: 1;
 }
 
@@ -2708,8 +3074,7 @@ span.film-imdbDiffScore:active {
 /* #endregion */
 
 
-
-/* #region ----------------< 13.2 Film review being displayed >------------------ */
+/* #region ------------------------< 13.4 Film review being displayed >------------------------ */
 .review-displayed {
   margin: 0 auto;
   width: 50%;
@@ -2785,7 +3150,7 @@ span.film-imdbDiffScore:active {
 /* #endregion */
 
 
-/* #region ----------------< Old stuff >-------------- */
+/* #region ------------------------< Old stuff >------------------------ */
 .sidebar-menu > .films-submenu {
   display: block;
   text-align: center;
@@ -2853,6 +3218,7 @@ span.film-imdbDiffScore:active {
 
 
 /* #endregion */
+
 
 
 /* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
@@ -3153,6 +3519,56 @@ span.film-imdbDiffScore:active {
     width: 20px;
     height: 20px;
   }
+
+  .films-controls {
+    top: 0;
+  }
+  .films-toplist,
+  .films-controls {
+    margin-left: 0px !important;
+  }
+  .films-controls {
+    padding: 0px 15px;
+    width: 100%;
+  }
+  .films-controls .pagination-btns {
+    font-size: .75rem;
+  }
+  .films-controls .pagination-btns li:not(.previous-btn):not(.next-btn) {
+    padding: 3px 0;
+  }
+  .films-controls .pagination-btns li:not(.previous-btn):not(.next-btn) a {
+    padding: 1px;
+  }
+  .films-controls div.searchbox > input {
+    width: 200px;
+  }
+  .films-controls .sort-direction-btns div.btn > svg {
+    width: 23px;
+    height: 23px;
+  }
+  .films-controls .dropdown-list-btn,
+  .films-controls .dropdown-list {
+    font-size: 0.8rem !important;
+  }
+  .films-toplist {
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .films-toplist > .films-toplist-item {
+    width: calc(var(--films-toplist-item-fixed-width) * 1.09) !important;
+    height: calc(var(--films-toplist-item-fixed-height) * 1.09) !important;
+  }
+  .films-controls .pagination-btns li:not(.previous-btn):not(.next-btn) a {
+    padding: 2px;
+  }
+  .pagination-btns li:not(.previous-btn):not(.next-btn) a {
+    border-radius: 5px;
+  }
+  .pagination-btns li.pagination-active a {
+    border-bottom: 3px solid var(--films-pagination-btn-bottomborder-color-active) !important;
+  }
+
   /* #endregion */
 }
 

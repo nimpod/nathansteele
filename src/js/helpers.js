@@ -66,6 +66,104 @@ export function getBlogPostId(title) {
 
 /**
  * 
+ * @param {*} eventTarget 
+ * @returns 
+ */
+export function getActualButton(eventTarget, tagName) {
+    // make sure we actually find the button...
+    let actualButton = NaN;
+    if (tagName == "svg") {
+        // user clicked on svg, bit fucking annoying
+        actualButton = eventTarget.parentElement;
+    } else if (tagName == "path") {
+        // user clicked on path inside svg, bit fucking annoying
+        actualButton = eventTarget.parentElement.parentElement;
+    } else {
+        // user clicked on button, well done
+        actualButton = eventTarget;
+    }
+
+    return actualButton;
+}
+
+/**
+ * 
+ * @param {*} imdbDiffScore 
+ * @returns 
+ */
+export function generateImdbDiffScoreStuff(imdbDiffScore) {
+    let diffScoreStr = "";
+    let diffScoreClassname = "";
+    if (imdbDiffScore > 0) {
+        diffScoreStr = "+" + imdbDiffScore;
+        diffScoreClassname = "positive-diff";
+    } else if (imdbDiffScore < 0) {
+        diffScoreStr = imdbDiffScore;
+        diffScoreClassname = "negative-diff";
+    } else if (imdbDiffScore == 0) {
+        diffScoreStr = imdbDiffScore;
+        diffScoreClassname = "equal-diff";
+    }
+
+    return {
+        "diffScoreStr": diffScoreStr, 
+        "diffScoreClassname": diffScoreClassname
+    };
+}
+
+/**
+ * 
+ * @param {*} filmData 
+ * @returns 
+ */
+export function overrideFilmPosterUrl(filmData) {
+    let posterUrl = ""
+    if (filmData.customPosterUrl !== undefined) {
+        posterUrl = filmData.customPosterUrl;
+    }
+    // use default posterUrl if I didnt specify one...
+    if (filmData.customPosterUrl == undefined) {
+        posterUrl = filmData.posterUrl;
+    }
+    return posterUrl;
+}
+
+/**
+ * 
+ * @param {*} filmData 
+ * @returns 
+ */
+export function overrideFilmTitle(filmData) {
+    let title = ""
+    if (filmData.titleDisplayed !== undefined) {
+        title = filmData.titleDisplayed;
+    } else {
+        title = filmData.title;
+    }
+    return title;
+}
+
+/**
+ * 
+ * @param {*} filterdData 
+ * @returns 
+ */
+export function getListOfPosterUrls(filterdData) {
+    let posterUrls = [];
+
+    Object.entries(filterdData).forEach(([k,v]) => {
+        if (v["customPosterUrl"] !== undefined) {
+            posterUrls.push(v["customPosterUrl"]);
+        } else {
+            posterUrls.push(v["posterUrl"]);
+        }
+    })
+
+    return posterUrls;
+}
+
+/**
+ * 
  * @param {*} str 
  * @returns 
  */
