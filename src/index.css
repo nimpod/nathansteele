@@ -272,8 +272,8 @@
   --text-slightly-darker: rgb(206, 211, 218);
   --text-darker: rgb(169, 169, 169);
   --intro-text: rgb(192, 192, 196);
-  --text-hyperlink: rgb(29, 199, 251);
-  --text-hyperlink-hover: rgb(78, 202, 255);
+  --text-hyperlink: rgb(42, 253, 120);
+  --text-hyperlink-hover: rgb(128, 252, 173);
 
   --section-inner-bg-color: rgb(34, 40, 42);    /* rgb(34, 40, 42); */
   --page-wrapper-bg: rgb(34, 40, 42);
@@ -362,7 +362,7 @@
   --blog-post-note-text: rgb(99, 105, 124);
   --blog-post-note-beside: rgba(101, 79, 130, 0.308);
   --blog-post-divider-color: rgb(69, 69, 75);
-  --blog-post-acolade-bg-color: rgba(9, 97, 27, 0.882);
+  --blog-post-acolade-bg-color: rgba(56, 71, 59, 0.882);
   --blog-post-acolade-border-color: rgba(33, 136, 33, 0.182);
   --blog-post-mobile-header-bg-color: rgb(29, 34, 36);
 
@@ -2274,7 +2274,7 @@ ul.messiahs-handbook p.quote-person {
   --films-toplist-grid-item-fixed-width: 170px;
   --films-toplist-grid-item-fixed-height: 250px;
   --films-toplist-item-bg-color: rgb(55, 64, 79);
-  --films-toplist-item-bg-color-hover: rgb(31, 49, 79);
+  --films-toplist-item-bg-color-hover: rgb(55, 64, 75);
 }
 .films-toplist.view-as-grid {
   display: grid;
@@ -2347,6 +2347,8 @@ ul.messiahs-handbook p.quote-person {
   /* Variables for list view */
   --films-toplist-list-item-poster-fixed-height: 500px;
   --films-toplist-list-item-fixed-width: 900px;
+  --film-toplist-item-border-inner-width: 3px;
+  --film-toplist-item-border-outer-width: 2px;
   --film-toplist-item-images-border-inner-color: rgb(7, 6, 6);
 }
 .films-toplist.view-as-list {
@@ -2428,7 +2430,7 @@ ul.messiahs-handbook p.quote-person {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
+  border-right: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
 }
 .films-toplist.view-as-list .films-toplist-item .film-poster img,
 .films-toplist.view-as-list .film-images {
@@ -2456,12 +2458,17 @@ ul.messiahs-handbook p.quote-person {
 .film-screenshots img:nth-child(1) {
   border-top-right-radius: calc(var(--film-poster-border-radius) - 2px);
   border-bottom: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
+  border-top: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
+  border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
 }
 .film-screenshots img:nth-child(2) {
   border-bottom: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
+  border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
 }
 .film-screenshots img:nth-child(3) {
   border-bottom-right-radius: calc(var(--film-poster-border-radius) - 2px);
+  border-bottom: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
+  border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
 }
 /* #endregion */
 
@@ -2665,9 +2672,8 @@ span.film-imdbDiffScore:active {
   width: 70%;
   margin-left: 240px;
   background-color: var(--films-controls-container-bg-color);
-  box-shadow: 4px 1px 8px var(--general-box-shadow-color-1);
   /*
-  box-shadow: 4px 10px 8px var(--general-box-shadow-color-1);
+  box-shadow: 4px 1px 8px var(--general-box-shadow-color-1);
   background-color: var(--films-controls-container-bg-color);
   */
 }
@@ -3220,7 +3226,6 @@ div.btn.films-reset-filters-btn svg {
 
 
 /* #endregion */
-
 
 
 /* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
