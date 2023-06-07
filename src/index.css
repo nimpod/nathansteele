@@ -20,11 +20,11 @@
 
 /* particlejs variables */
 :root {
-  --particle-count: 1000;
-  --particle-density: 1000;
+  --particle-count: 300;
+  --particle-density: 1500;
   --particle-opacity: 0.5;
   --particle-opacity-min: 0.0;
-  --particle-size: 1.7;
+  --particle-size: 2.9;
   --particle-speed: 0.9;
   --line-count: 60;
   --line-opacity: 0.0;
@@ -73,7 +73,7 @@
   --sidenav-art-bg-color: rgb(255, 79, 158);
   --film-grid-element-width: 935px;
   --film-grid-element-height: 525px;
-  --blog-post-tag-filters-container-width: 700px;
+  --blog-post-tag-filters-container-width: 1000px;
 }
 
 /** LIGHT MODE */
@@ -275,15 +275,15 @@
   --text-hyperlink: rgb(42, 253, 120);
   --text-hyperlink-hover: rgb(128, 252, 173);
 
-  --section-inner-bg-color: rgb(34, 40, 42);    /* rgb(34, 40, 42); */
+  --section-inner-bg-color: rgb(32, 33, 37);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
   --page-wrapper-bg: rgb(34, 40, 42);
   --page-text-color: rgba(255, 255, 255, 0.878);
   --page-text-color-faded: rgba(255, 255, 255, 0.57);
 
-  --sidenav-bg-color: rgb(29, 34, 36); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
+  --sidenav-bg-color: rgb(42, 44, 49); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
   --sidenav-shadow-color: rgba(0, 0, 0, 0.593);
   --sidenav-item-text-color: rgb(138, 140, 151);
-  --sidenav-item-bg-color: rgb(48, 45, 45);
+  --sidenav-item-bg-color: rgb(55, 56, 61);
   --sidenav-item-bg-color-hover: rgb(72, 74, 80);
   --sidenav-item-bg-color-active: rgb(101, 105, 114);
   --sidenav-item-border-color-active: rgb(157, 160, 163);
@@ -453,7 +453,7 @@
 /* Font related stuff... */
 body, button, input, select, textarea, a {
   color: rgb(0, 0, 0);
-  font-family: Helvetica !important;
+  font-family: 'karla';
 }
 h1, h2, h3, .website-logo-container a {
   font-family: 'karla', cursive !important;
@@ -880,6 +880,11 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
   width: 100vw;
   top: 0;
   margin-left: var(--sidebar-width);
+
+  /*
+  margin-left: var(--sidebar-width);
+  */
+
   /*
   background-color: var(--page-wrapper-bg) !important;
   */
@@ -1166,15 +1171,17 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 .posts-container > .posts-header-container {
   position: fixed;
   top: 0px;
-  background-color: var(--page-wrapper-bg);
+  background-color: var(--section-inner-bg-color);
+  width: 80%;
   z-index: 99999999999999999999999999999999999999999999;
+  box-shadow: 0 11px 8px -4px rgba(0, 0, 0, 0.304);
   /*
   box-shadow: 0px 25px 15px rgba(2, 2, 4, 0.176);
   width: 72%;
   */
 }
 .posts-container > .posts-header-container > .posts-header {
-  background-color: var(--page-wrapper-bg);
+  background-color: var(--section-inner-bg-color);
   margin-top: 20px;
 }
 
@@ -2263,7 +2270,8 @@ ul.messiahs-handbook p.quote-person {
 }
 
 :root {
-  --film-poster-border-radius: 12px;
+  --film-poster-border-radius-gridview: 0px;
+  --film-poster-border-radius-listview: 12px;
   --vertical-gap-between-filmtoplistitems: 50px;
   --vertical-gap-at-top-of-page: 180px;
 
@@ -2285,22 +2293,21 @@ ul.messiahs-handbook p.quote-person {
   --films-toplist-grid-items-per-row: 5;
   --films-toplist-grid-item-fixed-width: 170px;
   --films-toplist-grid-item-fixed-height: 250px;
-  --films-toplist-item-bg-color: rgb(55, 64, 79);
-  --films-toplist-item-bg-color-hover: rgb(55, 64, 75);
+  --films-toplist-item-bg-color: rgb(47, 48, 52);
+  --films-toplist-item-bg-color-hover: rgb(47, 48, 52);
 }
 .films-toplist.view-as-grid {
   display: grid;
   grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 185px);
-  grid-gap: 60px 0px;
-  padding-bottom: 150px;
+  grid-gap: 70px 0px;
   margin-left: var(--films-list-margin-left);
 }
 
 .films-toplist.view-as-grid > .films-toplist-item {
   width: var(--films-toplist-grid-item-fixed-width);
   height: var(--films-toplist-grid-item-fixed-height);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: var(--film-poster-border-radius-gridview);
+  border-top-right-radius: var(--film-poster-border-radius-gridview);
 }
 
 .films-toplist.view-as-grid > .films-toplist-item > a {
@@ -2317,8 +2324,8 @@ ul.messiahs-handbook p.quote-person {
 
 .films-toplist.view-as-grid .film-poster > img {
   width: var(--films-toplist-grid-item-fixed-width);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: var(--film-poster-border-radius-gridview);
+  border-top-right-radius: var(--film-poster-border-radius-gridview);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2326,9 +2333,9 @@ ul.messiahs-handbook p.quote-person {
 
 .films-toplist.view-as-grid .film-details {
   background-color: var(--films-toplist-item-bg-color);
-  padding: 3px 5px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  padding: 3px 5px 20px 5px;
+  border-bottom-left-radius: var(--film-poster-border-radius-gridview);
+  border-bottom-right-radius: var(--film-poster-border-radius-gridview);
   width: 101%;
   margin-left: -2px;
 }
@@ -2336,15 +2343,18 @@ ul.messiahs-handbook p.quote-person {
 .films-toplist.view-as-grid .film-details > p {
   max-width: 300px;
   overflow: hidden;
-  padding: 0;
+  padding: 4px;
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 0.80rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3em;
   color: var(--text);
 }
 
 .films-toplist.view-as-grid div.film-dataContainer.myData > span {
+  display: none;
   padding: 2px 5px;
   font-weight: bold;
   font-size: 0.70rem;
@@ -2421,7 +2431,7 @@ ul.messiahs-handbook p.quote-person {
   border: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-border-outer-color);
   opacity: 1.0;
   background-color: var(--film-toplist-item-bg-color);
-  border-radius: var(--film-poster-border-radius);
+  border-radius: var(--film-poster-border-radius-listview);
   border: 2px solid transparent;
 }
 .films-toplist.view-as-list .films-toplist-item > a:hover {
@@ -2446,8 +2456,8 @@ ul.messiahs-handbook p.quote-person {
 }
 .films-toplist.view-as-list .films-toplist-item .film-poster img,
 .films-toplist.view-as-list .film-images {
-  border-bottom-left-radius: calc(var(--film-poster-border-radius) - 3px);
-  border-top-left-radius: calc(var(--film-poster-border-radius) - 3px);
+  border-bottom-left-radius: calc(var(--film-poster-border-radius-listview) - 3px);
+  border-top-left-radius: calc(var(--film-poster-border-radius-listview) - 3px);
 }
 .films-toplist.view-as-list .film-poster {
   height: var(--films-toplist-list-item-poster-fixed-height);
@@ -2468,7 +2478,7 @@ ul.messiahs-handbook p.quote-person {
   */
 }
 .film-screenshots img:nth-child(1) {
-  border-top-right-radius: calc(var(--film-poster-border-radius) - 2px);
+  border-top-right-radius: calc(var(--film-poster-border-radius-listview) - 2px);
   border-bottom: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
   border-top: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
   border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
@@ -2478,7 +2488,7 @@ ul.messiahs-handbook p.quote-person {
   border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
 }
 .film-screenshots img:nth-child(3) {
-  border-bottom-right-radius: calc(var(--film-poster-border-radius) - 2px);
+  border-bottom-right-radius: calc(var(--film-poster-border-radius-listview) - 2px);
   border-bottom: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
   border-right: var(--film-toplist-item-border-outer-width) solid var(--film-toplist-item-images-border-inner-color);
 }
@@ -2650,7 +2660,7 @@ span.film-imdbDiffScore:active {
 
 /* #region ------------------------< 13.4 Film controls >------------------------ */
 :root {
-    --films-controls-container-bg-color: var(--page-wrapper-bg);
+    --films-controls-container-bg-color: var(--section-inner-bg-color);
     --films-controls-btn-bg-color: rgb(56, 58, 60);
     --films-controls-btn-bg-color-hover: rgb(73, 74, 79);
     --films-controls-btn-bg-color-active: rgb(64, 67, 74);
@@ -2671,6 +2681,7 @@ span.film-imdbDiffScore:active {
   width: 70%;
   margin-left: 240px;
   background-color: var(--films-controls-container-bg-color);
+  box-shadow: 0 18px 8px -4px rgba(0, 0, 0, 0.304);
   /*
   box-shadow: 4px 1px 8px var(--general-box-shadow-color-1);
   background-color: var(--films-controls-container-bg-color);
@@ -3265,8 +3276,11 @@ div.btn.films-reset-filters-btn svg {
   .section-inner .container-intro {
     padding: 0px 12px;
   }
-  table tr a:first-child{
+  table tr a {
+    /*
+    THIS FUCKS EVERYTHING UP!
     padding: 0px 8px;
+    */
   }
   /* #endregion */
 
@@ -3276,9 +3290,9 @@ div.btn.films-reset-filters-btn svg {
   }
   #nav-side {
     position: fixed;
+    width: 100vw;
     bottom: 0;
     left: 0;
-    width: 100%;
     height: var(--mobile-navbar-height);
     opacity: 1.0;
     border-top: 2px solid var(--mobile-navbar-topborder-color);
@@ -3303,14 +3317,18 @@ div.btn.films-reset-filters-btn svg {
   #nav-side .website-links a.navlink svg {
     width: 32px !important;
     height: 32px !important;
+    margin: 0 auto;
   }
-  /*
-  #nav-side.active {
-    display: block;
-  }*/
   .page-wrapper {
     margin-left: 0px;
   }
+
+  #nav-side .website-links a.navlink:nth-child(2) svg { padding: 1px 1px 1px 2px; fill: var(--sidenav-films-bg-color); }
+  #nav-side .website-links a.navlink:nth-child(3) svg { padding: 1px 1px 1px 4px; fill: var(--sidenav-films-bg-color); }
+  #nav-side .website-links a.navlink:nth-child(4) svg { padding: 0px 2px 0px 0px; fill: var(--sidenav-music-bg-color);  }
+  #nav-side .website-links a.navlink:nth-child(5) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-blog-bg-color);  }
+  #nav-side .website-links a.navlink:nth-child(6) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-art-bg-color);  }
+  
   /*
   .hamburger-menu {
     display: block !important;
@@ -3318,7 +3336,9 @@ div.btn.films-reset-filters-btn svg {
     right: 0;
     top: 10px;
     z-index: 99999999999999999999999999999999;
-  }*/
+  }
+  */
+
   /* #endregion */
   
   /* #region --------------------< Top navigation bar >-------------------- */
@@ -3422,6 +3442,10 @@ div.btn.films-reset-filters-btn svg {
   /* #endregion */
 
   /* #region --------------------< Blog table >-------------------- */
+  .posts-container > .posts-header-container {
+    width: 100%;
+  }
+
   .posts-container > table {
     margin-top: calc(var(--posts-header-height) - 30px);
   }
@@ -3432,7 +3456,7 @@ div.btn.films-reset-filters-btn svg {
     min-width: 85px;
   }
   .posts-container table tbody td.blogs-tr-date {
-    padding: 0rem;
+    padding: 0.2rem;
   }
   .posts-container table tbody td.blogs-tr-date > span {
     font-size: 0.7rem;
@@ -3458,11 +3482,11 @@ div.btn.films-reset-filters-btn svg {
   }
 
   .tag-filter-options-list-container {
-    width: 25%;
+    width: 95vw;
   }
   .scroll-through-tag-filters-btn.btn-move-right {
-    right: 0px;
-    margin: 0;
+    right: 0;
+    margin-top: -50px;
   }
   .scroll-through-tag-filters-btn.btn-move-left {
     margin-left: 1px;
@@ -3702,6 +3726,9 @@ div.btn.films-reset-filters-btn svg {
     width: 100%;
     z-index: 999;
     box-shadow: 0 3px 1px 0 var(--general-box-shadow-color-1);
+  }
+  .blog-post-info.notAtTop + .blog-post-content {
+    padding-top: 150px;
   }
   .blog-post-info.notAtTop,
   .nav-right {

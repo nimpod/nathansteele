@@ -56,14 +56,14 @@ class BlogPost extends Component {
         let blogPostInfoContainer = document.getElementsByClassName("blog-post-info")[0];
         let fuckKnows = 0;
         window.addEventListener('scroll', function(e) {
-            var st2 = window.pageYOffset || document.documentElement.scrollTop;
-            console.log('DEBUGGING: ', st2, fuckKnows);
-            if (st2 <= 30) {
+            var ypos = window.pageYOffset || document.documentElement.scrollTop;
+            console.log('DEBUGGING: ', ypos, fuckKnows);
+            if (ypos <= 130) {
                 blogPostInfoContainer.classList.remove('notAtTop');
             } else {
                 blogPostInfoContainer.classList.add('notAtTop');
             }
-            fuckKnows = st2 <= 110 ? 0 : st2;
+            fuckKnows = ypos <= 30 ? 0 : ypos;
         })
     }
 

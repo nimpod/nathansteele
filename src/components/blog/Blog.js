@@ -307,8 +307,11 @@ class Blog extends Component {
      */
     componentDidMount() {
         // set the 'AllTags' filter button as default filter...
-        let tagCategoryFilterButtons = document.querySelector('.tag-filter-options-list').childNodes;
-        tagCategoryFilterButtons[0].classList.add('selectedThisCategory');
+        let tagCategoryList = document.querySelector('.tag-filter-options-list');
+        if (tagCategoryList !== null) {
+            let tagCategoryFilterButtons = tagCategoryList.childNodes;
+            tagCategoryFilterButtons[0].classList.add('selectedThisCategory');
+        }
     }
 
 
