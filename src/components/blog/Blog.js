@@ -376,32 +376,36 @@ class Blog extends Component {
             <div className="page-wrapper blog">
                 <div className="section-inner">
                     <div className="posts-container">
-                        <div className="controls" onClick={this.handleSearchBoxClick}>
-                            <div className="searchbox">
-                                <input
-                                    onChange={this.handleSearchBoxInput} 
-                                    placeholder="search..." 
-                                    type="text"
-                                />
-                            </div>
-                        </div>
-                        <div className='container-intro'>
-                            <h3 className='page-title'>My blog</h3>
-                            <h6 className='page-text-small'>{this.state.__filtered_posts_len} posts</h6>
-                        </div>
-                        <div className='tag-filter-options-list-container'>
-                            <div className='btn-move-left scroll-through-tag-filters-btn' onClick={() => this.moveFiltersContainer(-80)}>
-                                <ArrowRightIcon className='invertable-icon' />
-                            </div>
-                            <ul className='tag-filter-options-list'>
-                                <SearchBoxTagFilterListElement
-                                    clickedTagFilter={this.clickedTagFilter}
-                                    tagSelected={this.tagCategorySelected}
-                                    tags={uniqueTagCategories}
-                                />
-                            </ul>
-                            <div className='btn-move-right scroll-through-tag-filters-btn active' onClick={() => this.moveFiltersContainer(80)}>
-                                <ArrowRightIcon className='invertable-icon' />
+                        <div className='posts-header-container'>
+                            <div className='posts-header'>
+                                <div className="controls" onClick={this.handleSearchBoxClick}>
+                                    <div className="searchbox">
+                                        <input
+                                            onChange={this.handleSearchBoxInput} 
+                                            placeholder="search..." 
+                                            type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div className='container-intro'>
+                                    <h3 className='page-title'>My blog</h3>
+                                    <h6 className='page-text-small'>{this.state.__filtered_posts_len} posts</h6>
+                                </div>
+                                <div className='tag-filter-options-list-container'>
+                                    <div className='btn-move-left scroll-through-tag-filters-btn' onClick={() => this.moveFiltersContainer(-80)}>
+                                        <ArrowRightIcon className='invertable-icon' />
+                                    </div>
+                                    <ul className='tag-filter-options-list'>
+                                        <SearchBoxTagFilterListElement
+                                            clickedTagFilter={this.clickedTagFilter}
+                                            tagSelected={this.tagCategorySelected}
+                                            tags={uniqueTagCategories}
+                                        />
+                                    </ul>
+                                    <div className='btn-move-right scroll-through-tag-filters-btn active' onClick={() => this.moveFiltersContainer(80)}>
+                                        <ArrowRightIcon className='invertable-icon' />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <table>

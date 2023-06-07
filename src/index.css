@@ -132,9 +132,6 @@
   --logo-border-color: rgba(231, 231, 236, 0.934);
   --logo-inversion-number: 1;
 
-  --scrollbar-clickybit-bg-color: rgb(119, 127, 138);
-  --scrolbar-notclickybit-bg-color: rgb(239, 234, 234); 
-
   --arrow-smooth-scroll-btn: rgb(53, 53, 53);
   --arrow-smooth-scroll-btn-hover:  rgb(88, 88, 88);
   
@@ -255,6 +252,8 @@
   --svg-color-hover: rgb(227, 229, 231);
   --svg-icon-invert-percentage: 0%;
 
+  --scrollbar-clickybit-bg-color: rgb(119, 127, 138);
+  --scrolbar-notclickybit-bg-color: rgb(239, 234, 234); 
   --scrollbar-thumb-bg-color-tags: rgb(179, 179, 179);
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(218, 217, 217) */
 
@@ -315,9 +314,6 @@
   --logo-box-shadow-color: rgba(7, 7, 7, 0.971);
   --logo-border-color: rgb(0, 0, 0);
   --logo-inversion-number: 0;
-
-  --scrollbar-clickybit-bg-color: rgba(133, 141, 140, 0.92);
-  --scrolbar-notclickybit-bg-color: rgb(43, 40, 40); 
 
   --arrow-smooth-scroll-btn: rgb(141, 141, 141);
   --arrow-smooth-scroll-btn-hover: rgb(88, 88, 88);
@@ -443,6 +439,8 @@
   --svg-color-hover: rgb(255, 255, 255);
   --svg-icon-invert-percentage: 100%;
 
+  --scrollbar-clickybit-bg-color: rgba(78, 88, 87, 0.92);
+  --scrolbar-notclickybit-bg-color: var(--page-wrapper-bg);
   --scrollbar-thumb-bg-color-tags: rgb(80, 80, 80);
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */
 }
@@ -1138,6 +1136,10 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 
 
 /* #region ----------------------------------<7: BLOG PAGE>---------------------------------- */
+:root {
+  --posts-header-height: 220px;
+}
+
 .posts-container {
   position: relative;
   padding-bottom: 20px;
@@ -1156,9 +1158,31 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
   padding: 20px 230px;
 }
 
+.posts-container {
+  padding-bottom: 50px;
+}
 
-/* Table........ */
+/* #region -------------------------< 7.1) Blog posts header >-------------------------- */
+.posts-container > .posts-header-container {
+  position: fixed;
+  top: 0px;
+  background-color: var(--page-wrapper-bg);
+  z-index: 99999999999999999999999999999999999999999999;
+  /*
+  box-shadow: 0px 25px 15px rgba(2, 2, 4, 0.176);
+  width: 72%;
+  */
+}
+.posts-container > .posts-header-container > .posts-header {
+  background-color: var(--page-wrapper-bg);
+  margin-top: 20px;
+}
+
+/* #endregion */
+
+/* #region -------------------------< 7.2) Blog post table >-------------------------- */
 table {
+  margin-top: var(--posts-header-height);
   width: 100%;
   font-size: 400 12px / 1.14 "Roboto", sans-serif;
   transition: 300ms all;
@@ -1214,6 +1238,35 @@ table tbody td.blogs-tr-info > * {
   font-size: 0.9rem;
 }
 
+/* Individual table cell... */
+table td.blogs-tr-vertical-line > div {
+  width: 0.095rem;
+  height: 42px;
+  display: block;
+  background-color: var(--blog-td-divider-color);
+}
+table td.blogs-tr-date > span,
+table td.blogs-tr-vertical-line {
+  vertical-align: middle;
+}
+.posts-container table td:nth-child(1) { width: 1%; max-width: 50px; min-width: 110px; }   /* 1st column */
+.posts-container table td:nth-child(2) { width: 1%; }   /* 2nd column */
+.posts-container table td:nth-child(3) { width: 90%; }   /* 3rd column */
+
+@media screen and (max-width: 800px) {
+  table tr td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  table tr span.blogs-tr-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+/* #endregion */
+
+/* #region -------------------------< 7.3) Tags >-------------------------- */
 .tag {
   transition: all .2s ease;
 }
@@ -1229,54 +1282,6 @@ li.selectedThisCategory span::after {
   margin-left: 0.4rem;
   opacity: 0.5;
 }
-
-
-@media screen and (max-width: 800px) {
-  table tr td {
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-  table tr span.blogs-tr-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-/* Individual table cell... */
-table td.blogs-tr-vertical-line > div {
-  width: 0.095rem;
-  height: 42px;
-  display: block;
-  background-color: var(--blog-td-divider-color);
-}
-table td.blogs-tr-date > span,
-table td.blogs-tr-vertical-line {
-  vertical-align: middle;
-}
-
-.posts-container table td:nth-child(1) { width: 1%; max-width: 50px; min-width: 110px; }   /* 1st column */
-.posts-container table td:nth-child(2) { width: 1%; }   /* 2nd column */
-.posts-container table td:nth-child(3) { width: 90%; }   /* 3rd column */
-
-/*
-Structure of tags inside a table...
-
-table
-  tbody
-    tr
-      td
-        div.tags
-          div.tag
-            span.Astronomy
-            span.Life
-    tr
-      td
-        div.tags
-          div.tag
-            span.Vexilology
-    ...
-*/
 
 /* container for group of tags in table */
 div.tags {
@@ -1351,7 +1356,6 @@ ul.tag-filter-options-list li.selectedThisCategory span {
 .tag .Running             { background-color: var(--tag-bg-color-Running); }
 .tag .Vexilology          { background-color: var(--tag-bg-color-Vexilology); }
 
-
 .tag .inline-svg {
   display: inline-block;
 }
@@ -1359,63 +1363,14 @@ ul.tag-filter-options-list li.selectedThisCategory span {
   margin-left: 4px;
 }
 
-
-/* -------------------< Searchbox style >-------------------- */
-/* blog controls */
-.blog .controls {
-  margin-bottom: 10px;
-}
-
-div.searchbox {
-  display: flex;
-}
-
-/* the input box within div.searchbox */
-div.searchbox input {
-  background-color: var(--searchbox-bg-color);
-  color: var(--searchbox-text-color);
-  width: 600px;
-  padding: 0.6rem 1.1rem;
-  border-radius: 1rem;
-  caret-color: var(--caret-color);
-  border: 2px solid transparent;
-}
-div.searchbox input {
-  transition: all 200ms ease;
-}
-
-div.searchbox input:hover {
-  background-color: var(--searchbox-hover-bg-color);
-}
-div.searchbox input:active,
-div.searchbox input.activated {
-  box-shadow: 0 1px 1px 0 var(--general-box-shadow-color-1), 0 1px 3px 1px var(--general-box-shadow-color-2);
-  background-color: var(--searchbox-active-bg-color);
-  border: 2px solid transparent;
-  /* border: 2px solid var(--searchbox-border-color); */
-}
-div.searchbox input::placeholder {
-  color: var(--searchbox-placeholder-text-color);
-}
-
-
-
 /* -------------< Dropdown list for available tag categories to filter by >----------------- */
-/*
-ul.tag-filter-options-list > li {
-  display: inline-block;
-}*/
 .tag-filter-options-list-container {
   display: block;
   overflow-y: hidden;
   overflow-x: hidden;
   width: var(--blog-post-tag-filters-container-width);
   margin: 0rem 0rem;
-  /*
-  background: linear-gradient(.95turn, rgb(16, 16, 16), 1%, var(--section-inner-bg-color));
-  */
 }
-
 ul.tag-filter-options-list {
   padding: 0.6rem 0.5rem;
 }
@@ -1424,12 +1379,6 @@ ul.tag-filter-options-list li {
   list-style-type: none;
   min-width: auto;
   user-select: none;
-}
-ul.tag-filter-options-list li:hover {
-  /*
-  background-color: var(--dropdown-list-item-bg-color-hover);
-  cursor: pointer;
-  */
 }
 ul.tag-filter-options-list li span {
   line-height: 1.5rem;
@@ -1454,7 +1403,6 @@ ul.tag-filter-options-list > li:not(.selected) svg {
 ul.tag-filter-options-list li.selected svg {
   opacity: 1;
 }
-
 
 /* 
 btn-move-right scroll-through-tag-filters-btn
@@ -1501,6 +1449,47 @@ btn-move-left scroll-through-tag-filters-btn
   height: 13px;
 }
 
+/* #endregion */
+
+/* #region -------------------------< 7.4) Searchbox style >-------------------------- */
+/* blog controls */
+.blog .controls {
+  margin-bottom: 10px;
+}
+
+div.searchbox {
+  display: flex;
+}
+
+/* the input box within div.searchbox */
+div.searchbox input {
+  background-color: var(--searchbox-bg-color);
+  color: var(--searchbox-text-color);
+  width: 600px;
+  padding: 0.6rem 1.1rem;
+  border-radius: 1rem;
+  caret-color: var(--caret-color);
+  border: 2px solid transparent;
+}
+div.searchbox input {
+  transition: all 200ms ease;
+}
+
+div.searchbox input:hover {
+  background-color: var(--searchbox-hover-bg-color);
+}
+div.searchbox input:active,
+div.searchbox input.activated {
+  box-shadow: 0 1px 1px 0 var(--general-box-shadow-color-1), 0 1px 3px 1px var(--general-box-shadow-color-2);
+  background-color: var(--searchbox-active-bg-color);
+  border: 2px solid transparent;
+  /* border: 2px solid var(--searchbox-border-color); */
+}
+div.searchbox input::placeholder {
+  color: var(--searchbox-placeholder-text-color);
+}
+
+/* #endregion */
 
 
 /* #endregion */
@@ -3239,6 +3228,10 @@ div.btn.films-reset-filters-btn svg {
 
 
 /* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
+:root {
+  --mobile-navbar-topborder-color: rgba(70, 77, 81, 0.497);
+  --mobile-navbar-height: 57px;
+}
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
 @media screen and (max-width: 900px) { .portfolio h1 { font-size: 50px; } .portfolio h2 { font-size: 40px; } }
@@ -3278,23 +3271,54 @@ div.btn.films-reset-filters-btn svg {
   /* #endregion */
 
   /* #region --------------------< Sidebar >-------------------- */
-  #nav-side {
+  .hamburger-menu {
     display: none;
-    opacity: 0.9;
   }
+  #nav-side {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--mobile-navbar-height);
+    opacity: 1.0;
+    border-top: 2px solid var(--mobile-navbar-topborder-color);
+  }
+  #nav-side .website-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  #nav-side a:not(.website-logo).navlink {
+    margin-top: 11px;
+    vertical-align: middle;
+    margin-right: 15px;
+    margin-bottom: 0px;
+  }
+  #nav-side a:not(.website-logo).navlink.active {
+    margin-top: 5px;
+    transition: all 50ms ease-in;
+  }
+  #nav-side a:not(.website-logo).navlink:not(.active) > span {
+    display: none;
+  }
+  #nav-side .website-links a.navlink svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  /*
   #nav-side.active {
     display: block;
-  }
+  }*/
   .page-wrapper {
     margin-left: 0px;
   }
+  /*
   .hamburger-menu {
     display: block !important;
     position: absolute;
     right: 0;
     top: 10px;
     z-index: 99999999999999999999999999999999;
-  }
+  }*/
   /* #endregion */
   
   /* #region --------------------< Top navigation bar >-------------------- */
@@ -3360,42 +3384,6 @@ div.btn.films-reset-filters-btn svg {
   }
   /* #endregion */
   
-  /* #region --------------------< Blog post >-------------------- */
-  
-  /* Button that appears at top to take user back to beginning of post... */
-  .back-to-top-of-post {
-    z-index: 1000;
-    width: 140px;
-  }
-  .back-to-top-of-post span {
-    font-size: 14px;
-  }
-  .back-to-top-of-post:hover span {
-    text-decoration: none !important;
-    outline: none !important;
-  }
-
-  /* font size of searchbox */
-  div.searchbox input {
-    font-size: 13px;
-    width: 400px;
-    margin-top: 3px;
-  }
-  .controls .filter-by-tag-button button span {
-    font-size: 12px;
-  }
-  .controls ul.tag-filter-options-list span {
-    font-size: 0.55rem;
-  }
-  .popover-canvas-with-arrow::after {
-    margin-left: -20px;
-  }
-
-  div.filter-by-tag-button > button > svg {
-    margin-bottom: 0px;
-  }
-  /* #endregion */
-
   /* #region --------------------< About me >-------------------- */
   
   /* make aboutme page look normal on mobile */
@@ -3434,6 +3422,10 @@ div.btn.films-reset-filters-btn svg {
   /* #endregion */
 
   /* #region --------------------< Blog table >-------------------- */
+  .posts-container > table {
+    margin-top: calc(var(--posts-header-height) - 30px);
+  }
+
   .posts-container table td:nth-child(1) {
     width: 1%;
     max-width: 100px;
@@ -3449,14 +3441,51 @@ div.btn.films-reset-filters-btn svg {
     font-size: 0.8rem;
   }
 
+  /* Searchbox stuff... */
+  div.searchbox input {
+    font-size: 13px;
+    width: 350px;
+    margin-top: 3px;
+  }
+  .controls .filter-by-tag-button button span {
+    font-size: 12px;
+  }
+  .controls ul.tag-filter-options-list span {
+    font-size: 0.55rem;
+  }
+  .popover-canvas-with-arrow::after {
+    margin-left: -20px;
+  }
+
   .tag-filter-options-list-container {
-    width: 92%;
+    width: 25%;
   }
   .scroll-through-tag-filters-btn.btn-move-right {
-    right: 8px;
+    right: 0px;
+    margin: 0;
   }
   .scroll-through-tag-filters-btn.btn-move-left {
     margin-left: 1px;
+  }
+  /* #endregion */
+
+  /* #region --------------------< Blog post >-------------------- */
+  
+  /* Button that appears at top to take user back to beginning of post... */
+  .back-to-top-of-post {
+    z-index: 1000;
+    width: 140px;
+  }
+  .back-to-top-of-post span {
+    font-size: 14px;
+  }
+  .back-to-top-of-post:hover span {
+    text-decoration: none !important;
+    outline: none !important;
+  }
+
+  div.filter-by-tag-button > button > svg {
+    margin-bottom: 0px;
   }
   /* #endregion */
 
