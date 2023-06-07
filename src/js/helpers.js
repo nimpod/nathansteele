@@ -67,14 +67,11 @@ export function getBlogPostId(title) {
 }
 
 /**
- * 
+ * Make sure we actually find the button...
  * @param {*} elementClicked 
  * @returns 
  */
 export function getActualButton(elementClicked, tagName) {
-    // make sure we actually find the button...
-    console.log(elementClicked);
-    
     let actualButton = NaN;
     if (tagName == "svg") {
         // user clicked on svg, bit fucking annoying
@@ -86,8 +83,6 @@ export function getActualButton(elementClicked, tagName) {
         // user clicked on button, well done
         actualButton = elementClicked;
     }
-    console.log(actualButton);
-
     return actualButton;
 }
 

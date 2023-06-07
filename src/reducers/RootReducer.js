@@ -2050,6 +2050,11 @@ const initState = {
             "myTags": ["Nature", "Japanese culture", "Ghosts", "Soulmate", "Studio ghibli"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 7, 8, 8, 8, 8, 8, 9, 9, 8],
+            "screenshots": [
+                "https://www.themoviedb.org/t/p/original/iFXwrL5FDFS5WbCdG8OeSy3gRAj.jpg",
+                "https://www.themoviedb.org/t/p/original/mSDsSDwaP3E7dEfUPWy4J0djt4O.jpg",
+                "https://www.themoviedb.org/t/p/original/hXd2cgvvVh1EzSxuyNysiLErjVM.jpg"
+            ],
             "customPosterUrl": require('./websiteContent/films/spirited_away/custom_poster.jpg')
         },
         {
@@ -2240,8 +2245,13 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/d27e",
             "title": "The Tag-Along",
             "myRating": "8.2",
-            "myTags": ["Possession", "Insects", "Questioning reality", "Nature", "Confusing"],
+            "myTags": ["Possession", "Insects", "Questioning reality", "Nature"],
             "myReview": "",
+            "screenshots": [
+                require('./websiteContent/films/the_tag_along/screenshot2.webp'),
+                require('./websiteContent/films/the_tag_along/screenshot5.webp'),
+                require('./websiteContent/films/the_tag_along/screenshot15.webp')
+            ],
             "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 9, 9]
         },
         {
@@ -2285,14 +2295,15 @@ const initState = {
             "customPosterUrl": require('./websiteContent/films/children_of_the_sea/custom_poster.webp'),
             "myTags": ["The origins of life", "Astronomy", "Cosmology", "Spirituality", "The mysteries of the ocean world", "Sealife", "Exploring new perspectives", "Visual trip", "Audio-visual spectacle"],
             "screenshots": [
-                require('./websiteContent/films/children_of_the_sea/screenshot1.webp'),
-                require('./websiteContent/films/children_of_the_sea/screenshot2.webp'),
-                require('./websiteContent/films/children_of_the_sea/screenshot3.webp')
+                require('./websiteContent/films/children_of_the_sea/screenshot30.webp'),
+                require('./websiteContent/films/children_of_the_sea/screenshot6.webp'),
+                require('./websiteContent/films/children_of_the_sea/screenshot17.webp')
             ],
             "myReview": ReactDomServer.renderToString(ChildrenOfTheSeaReview([
-                require('./websiteContent/films/children_of_the_sea/screenshot1.webp'),
                 require('./websiteContent/films/children_of_the_sea/screenshot2.webp'),
-                require('./websiteContent/films/children_of_the_sea/screenshot3.webp')
+                require('./websiteContent/films/children_of_the_sea/screenshot5.webp'),
+                require('./websiteContent/films/children_of_the_sea/screenshot3.webp'),
+                require('./websiteContent/films/children_of_the_sea/screenshot17.webp')
             ])),
             "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/i91YrURnZPCKhpNyIxkAAzBb4t9.jpg"
@@ -2327,7 +2338,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/rOay",
             "title": "No One Gets Out Alive",
             "myRating": "8.0",
-            "myTags": [],
+            "myTags": ["Satanic rituals", "Ancient Mayan murals", "Atmospheric", "Character moves into cheap apartment but there's dodgy stuff going on"],
             "myReview": "",
             "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8]
         },
@@ -2338,6 +2349,11 @@ const initState = {
             "myTags": [],
             "myReview": "",
             "gradualInterest": [9, 9, 9, 8, 8, 8, 7, 7, 7],
+            "screenshots": [
+                require('./websiteContent/films/turtles_are_suprisingly_good_swimmers/screenshot2.webp'),
+                require('./websiteContent/films/turtles_are_suprisingly_good_swimmers/screenshot8.webp'),
+                require('./websiteContent/films/turtles_are_suprisingly_good_swimmers/screenshot4.webp'),
+            ],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/nThjwGHNHKXI7Y1oGdrWzcoAF7P.jpg"
         },
         {
@@ -2355,6 +2371,11 @@ const initState = {
             "myTags": [],
             "myReview": "",
             "gradualInterest": [9, 9, 9, 9, 8, 9, 9],
+            "screenshots": [
+                require('./websiteContent/films/angels_egg/screenshot1.webp'),
+                require('./websiteContent/films/angels_egg/screenshot2.webp'),
+                require('./websiteContent/films/angels_egg/screenshot3.webp'),
+            ],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/dcEUGvckbePFzPKhGXnS9T3kZMG.jpg"
         },
         {
@@ -2363,6 +2384,11 @@ const initState = {
             "myRating": "8.1",
             "myTags": [],
             "myReview": "",
+            "screenshots": [
+                require('./websiteContent/films/limbo/screenshot3.webp'),
+                require('./websiteContent/films/limbo/screenshot2.webp'),
+                require('./websiteContent/films/limbo/screenshot6.webp'),
+            ],
             "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/7Hh2w1ei26DTJ3JWmW8qcGQUI1n.jpg"
         },
@@ -2372,6 +2398,11 @@ const initState = {
             "myRating": "8.3",
             "myTags": [],
             "myReview": "",
+            "screenshots": [
+                require('./websiteContent/films/climax/screenshot5.webp'),
+                require('./websiteContent/films/climax/screenshot3.webp'),
+                require('./websiteContent/films/climax/screenshot7.webp'),
+            ],
             "gradualInterest": [8, 8, 8, 7, 7, 6, 8, 9, 9]
         },
         {
@@ -2380,6 +2411,11 @@ const initState = {
             "myRating": "8.7",
             "myTags": ["Jigsaws", "Art", "Origami", "Soulmate", "Friendship"],
             "myReview": "",
+            "screenshots": [
+                require('./websiteContent/films/starry_starry_night/screenshot4.webp'),
+                require('./websiteContent/films/starry_starry_night/screenshot11.webp'),
+                require('./websiteContent/films/starry_starry_night/screenshot13.webp')
+            ],
             "gradualInterest": [7, 7, 8, 8, 9, 9, 8, 9, 9, 8],
             "customPosterUrl": require('./websiteContent/films/starry_starry_night/custom_poster.webp')
         }
@@ -2404,6 +2440,12 @@ const RootReducer = (state=initState, action) => {
     Object.entries(mergedData).forEach(([k,v]) => {
         // calculate imdb diff score for each film...
         v["imdbDiffScore"] = (v["myRating"] - v["imdbAvgRating"]).toFixed(1)
+
+        // calculate average of gradual interest array...
+        if (v["gradualInterest"] !== undefined) {
+            let arr = v["gradualInterest"];
+            v["gradualInterestAverage"] = (arr.reduce((x,y) => x+y) / arr.length).toFixed(1);
+        }
     })
     
     // update state so its now using the merged version!

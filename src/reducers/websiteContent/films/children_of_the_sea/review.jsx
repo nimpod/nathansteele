@@ -17,6 +17,7 @@ export const review = (screenshots) => (
             <p>She longs for solitude, friendship, and a greater purpose in life, and finds it at a local aquarium where she encounters a strange boy who has adapted to living in the ocean, and is undergoing experiments at the aquarium to prolong his short lifespan.</p>
             <p>The deep dark mysteries of the ocean slowly unravel, and Ruka undergoes an aquatic awakening, revealing the cosmos in its vast beauty.</p>
             <img src={screenshots[2]} alt="Screenshot from film" />
+            <img src={screenshots[3]} alt="Screenshot from film" />
         </div>
     </div>
 )

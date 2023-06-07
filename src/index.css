@@ -73,6 +73,7 @@
   --sidenav-art-bg-color: rgb(255, 79, 158);
   --film-grid-element-width: 935px;
   --film-grid-element-height: 525px;
+  --blog-post-tag-filters-container-width: 700px;
 }
 
 /** LIGHT MODE */
@@ -366,8 +367,9 @@
   --blog-post-acolade-border-color: rgba(33, 136, 33, 0.182);
   --blog-post-mobile-header-bg-color: rgb(29, 34, 36);
 
-  --filters-container-move-btns-bg-color: rgba(13, 13, 18, 0.561);
-  --filters-container-move-btns-bg-color-hover: rgba(69, 68, 68, 0.918);
+  --filters-container-move-btns-bg-color: rgba(36, 36, 41, 0.878);
+  --filters-container-move-btns-bg-color-hover: rgba(62, 63, 67, 0.918);
+  --filters-container-move-btns-bg-color-selected: rgba(84, 86, 91, 0.918);
 
   --tags-text-color: rgb(255, 255, 255);
   --tags-bg-color: rgb(57, 58, 60);
@@ -1407,7 +1409,7 @@ ul.tag-filter-options-list > li {
   display: block;
   overflow-y: hidden;
   overflow-x: hidden;
-  width: 600px;
+  width: var(--blog-post-tag-filters-container-width);
   margin: 0rem 0rem;
   /*
   background: linear-gradient(.95turn, rgb(16, 16, 16), 1%, var(--section-inner-bg-color));
@@ -1421,6 +1423,7 @@ ul.tag-filter-options-list li {
   display: inline;
   list-style-type: none;
   min-width: auto;
+  user-select: none;
 }
 ul.tag-filter-options-list li:hover {
   /*
@@ -1463,7 +1466,7 @@ btn-move-left scroll-through-tag-filters-btn
 }
 .scroll-through-tag-filters-btn.btn-move-right {
   margin-top: -53px;
-  margin-left: 605px;
+  margin-left: calc(var(--blog-post-tag-filters-container-width) + 5px);
 }
 
 .scroll-through-tag-filters-btn:not(.active) {
@@ -1486,6 +1489,10 @@ btn-move-left scroll-through-tag-filters-btn
 .scroll-through-tag-filters-btn:hover {
   cursor: pointer;
   background-color: var(--filters-container-move-btns-bg-color-hover);
+}
+.scroll-through-tag-filters-btn:active {
+  background-color: var(--filters-container-move-btns-bg-color-selected);
+  transition: all 150ms ease;
 }
 .scroll-through-tag-filters-btn svg {
   margin-top: 6px;
@@ -1561,6 +1568,7 @@ div.blog-post
   opacity: 1 !important;
   border-radius: 10px;
   text-decoration: none;
+  user-select: none;
 }
 .custom-btn-1 > span {
   font-size: 13px;
@@ -2265,6 +2273,21 @@ ul.messiahs-handbook p.quote-person {
   }
 }
 
+:root {
+  --film-poster-border-radius: 12px;
+  --vertical-gap-between-filmtoplistitems: 50px;
+  --vertical-gap-at-top-of-page: 180px;
+
+  /* Data background colours */
+  --film-mydata-position-bg-color: rgb(39, 163, 103); /* rgb(138, 45, 79); */
+  --film-mydata-myrating-bg-color: rgb(148, 62, 185);
+  --film-mydata-imdbdiffscore-bg-color: rgb(72, 97, 148);
+
+  /* Text colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
+  --film-mydata-imdbdiffscore-positivediff-text-color: rgb(173, 245, 73);
+  --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
+  --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
+}
 
 /* #region ------------------------< 13.1 Toplist (as grid with posters only) >------------------------ */
 :root {
@@ -2345,11 +2368,11 @@ ul.messiahs-handbook p.quote-person {
 /* #region ------------------------< 13.2 Toplist (as list with posters & screenshots) >------------------------ */
 :root {
   /* Variables for list view */
-  --films-toplist-list-item-poster-fixed-height: 500px;
-  --films-toplist-list-item-fixed-width: 900px;
+  --films-toplist-list-item-poster-fixed-height: 550px;
+  --films-toplist-list-item-fixed-width: 1000px;
   --film-toplist-item-border-inner-width: 3px;
   --film-toplist-item-border-outer-width: 2px;
-  --film-toplist-item-images-border-inner-color: rgb(7, 6, 6);
+  --film-toplist-item-images-border-inner-color: rgb(0, 0, 0);
 }
 .films-toplist.view-as-list {
   margin: 0 auto;
@@ -2388,7 +2411,7 @@ ul.messiahs-handbook p.quote-person {
 /* Stuff containing poster & screenshots */
 .films-toplist.view-as-list div.films-toplist-item .film-images {
   display: grid;
-  grid-template-columns: 3.9fr 7.0fr;
+  grid-template-columns: 4.2fr 7.0fr;
   opacity: 1.0 !important;
   background-color: var(--film-toplist-item-bg-color);
   /*
@@ -2495,13 +2518,15 @@ ul.messiahs-handbook p.quote-person {
 span.film-imdbDiffScore.positive-diff { color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important; }
 span.film-imdbDiffScore.negative-diff { color: var(--film-mydata-imdbdiffscore-negativediff-text-color) !important; }
 span.film-imdbDiffScore.equal-diff    { color: var(--film-mydata-imdbdiffscore-equaldiff-text-color) !important; }
+
+/*
 span.film-imdbDiffScore {
   padding: 3px 0 !important;
 }
 span.film-imdbDiffScore > a,
 span.film-imdbDiffScore {
   padding: 3px 8px !important;
-}
+}*/
 span.film-imdbDiffScore:active {
   border: 2px solid rgba(255, 255, 255, 0.282);
 }
@@ -2584,21 +2609,6 @@ div.genre:hover {
 
 
 /* #region ------------------------< 13.3 Stuff common to list view or grid view >------------------------- */
-:root {
-  --film-poster-border-radius: 12px;
-  --vertical-gap-between-filmtoplistitems: 50px;
-  --vertical-gap-at-top-of-page: 180px;
-
-  /* Data background colours */
-  --film-mydata-position-bg-color: rgb(39, 163, 103); /* rgb(138, 45, 79); */
-  --film-mydata-myrating-bg-color: rgb(118, 51, 177);
-  --film-mydata-imdbdiffscore-bg-color: rgb(77, 124, 130);
-
-  /* Text colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
-  --film-mydata-imdbdiffscore-positivediff-text-color: rgb(143, 243, 113);
-  --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
-  --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
-}
 /* Applies to grid or list view... */
 .films-toplist-container > .films-toplist {
   padding-top: var(--vertical-gap-at-top-of-page);

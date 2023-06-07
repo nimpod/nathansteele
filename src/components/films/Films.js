@@ -75,10 +75,10 @@ class Films extends React.Component {
         // search stuff...
         __search_box_contains_text: false,
         __search_box_was_clicked: false,
-        __search_post: "",
+        __search_text: "",
 
         // view stuff...
-        __view_type: ViewType.GRID,
+        __view_type: ViewType.LIST,
 
         // defaults...
         __default_sort_type: SortableType.MY_POS,
@@ -245,7 +245,6 @@ class Films extends React.Component {
      * 
      */
     highlightDefaultFiltersInDropdownLists() {
-        
         let defaultLanguageOption = document.querySelector('.dropdown-list-languages > div:nth-child(2)');
         let defaultGenreOption = document.querySelector('.dropdown-list-genres > div:nth-child(2)');
         defaultGenreOption.classList.add('active');
@@ -444,17 +443,27 @@ class Films extends React.Component {
      * @param {Event} e 
      */
     handleSearchBoxInput = (e) => {
+        let text = e.target.value;
         // get user input and update state
-        this.setState({__search_post: e.target.value});
+        this.setState({__search_text: e.target.value});
         
         // no text is in the searchbox, so set state to false
-        if (e.target.value.length == 0) {
+        if (text.length == 0) {
             this.setState({__search_box_contains_text: false});
         }
         // there's some text in the searchbox, so set state to true
-        else if (e.target.value.length > 0) {
+        else if (text.length > 0) {
             this.setState({__search_box_contains_text: true});
         }
+
+        /*
+        this.setState({
+            __filtered_data: this.state.__filtered_data
+                .filter((f) => {
+                    let isTitleEqualToSearchbox = f.title.toLowerCase().includes(text.toLowerCase());
+                    return isTitleEqualToSearchbox;
+                })
+        })*/
     }
 
     /**
@@ -525,7 +534,9 @@ class Films extends React.Component {
         // get items for current page...
         const filmsDisplayed = this.state.__filtered_data
             .filter((f) => {
-                let isTitleEqualToSearchbox = f.title.toLowerCase().includes(this.state.__search_post.toLowerCase());
+                // FIXME:   this searching mechanism wont work anymore due to the fact we're now using pagination to split the list over multiple pages... 
+                //          So this is essentially just searching the 1st page :(
+                let isTitleEqualToSearchbox = f.title.toLowerCase().includes(this.state.__search_text.toLowerCase());
                 return isTitleEqualToSearchbox;
             })
             .slice(lastIndex, lastIndex + MAX_FILMS_PER_PAGE)
@@ -704,12 +715,12 @@ class Films extends React.Component {
                             </div>
                             <div className='films-controls-subgroup changeViewOfToplist-container'>
                                 <div className='changeViewOfToplist-btns'>
-                                    <div className="btn films-change-view-btn" 
+                                    <div className="btn films-change-view-btn active" 
                                         onClick={(e) => this.changeView(e, ViewType.LIST)}
                                         title="View as list">
                                         <ViewAsListIcon className='invertable-icon' />
                                     </div>
-                                    <div className="btn films-change-view-btn active"
+                                    <div className="btn films-change-view-btn"
                                         onClick={(e) => this.changeView(e, ViewType.GRID)}
                                         title="View as grid">
                                         <ViewAsGridIcon className='invertable-icon' />

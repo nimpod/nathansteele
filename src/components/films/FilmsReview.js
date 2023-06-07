@@ -61,8 +61,11 @@ class FilmsReview extends Component {
                                 <img src={posterUrl} />
                             </picture>
                             <div className='filmDetails'>
-                                <div className='filmMyRating generic-hover' title='My rating'>
-                                    <p>{this.props.filmData.myRating}</p>
+                                <div className='filmMyRating' title='My rating'>
+                                    <p>My rating = {this.props.filmData.myRating}</p>
+                                </div>
+                                <div className='filmGradualInterest' title=''>
+                                    <p>{this.props.filmData.gradualInterest} ({this.props.filmData.gradualInterestAverage})</p>
                                 </div>
                                 <div className='filmYear' title='Year of release'>
                                     {this.props.filmData.year}
