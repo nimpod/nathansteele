@@ -2297,7 +2297,7 @@ const initState = {
             "screenshots": [
                 require('./websiteContent/films/children_of_the_sea/screenshot30.webp'),
                 require('./websiteContent/films/children_of_the_sea/screenshot6.webp'),
-                require('./websiteContent/films/children_of_the_sea/screenshot17.webp')
+                require('./websiteContent/films/children_of_the_sea/screenshot33.webp')
             ],
             "myReview": ReactDomServer.renderToString(ChildrenOfTheSeaReview([
                 require('./websiteContent/films/children_of_the_sea/screenshot2.webp'),

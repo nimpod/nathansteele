@@ -1,0 +1,589 @@
+
+/* #region ----------------------------------<11: PORTFOLIO>---------------------------------- */
+.portfolio {
+    top: 0;
+    color: var(--intro-text);
+    height: 270vh;
+    padding-top: 50px;
+  }
+  
+  .portfolio p {
+    font-size: 1.2em;
+      line-height: 1.4em;
+      letter-spacing: -0.014em;
+      font-feature-settings: "ss03","zero","cv08","cv11" 1;
+    text-transform: none;
+  }
+  .portfolio h1 {
+    font-size: 6vw;
+    font-family: "Karla", sans-serif !important;
+  
+    line-height: 0.9em;
+    margin: 0.2em 0 0.6em;
+    font-weight: 900;
+  }
+  .portfolio h2 {
+    font-size: 4vw;
+    font-weight: 900;
+    margin: 0.2em 0 0.6em;
+  }
+  
+  .portfolio #about, 
+  .portfolio #projects,
+  .portfolio #contact {
+    height: 100vh;
+  }
+  
+  #about, .projects-header {
+    padding-left: 200px;
+    transition: padding-left 0.3s ease-out;
+  }
+  
+  /* the arrow button that takes to an area on the same page */
+  .smooth-scroll-btn {
+    width: 100%;
+    margin-top: 1.8em;
+  }
+  .smooth-scroll-btn a i {
+    font-size: 5rem;
+    cursor: pointer;
+    color: var(--arrow-smooth-scroll-btn);
+  }
+  .smooth-scroll-btn a i:hover {
+    color: var(--contact-btn-colour-hover);
+  }
+  
+  /* --------------<#about SECTION> -------------- */
+  #about {
+    padding: 110px 0px 0px 200px !important;
+    display: block;
+    top: auto;
+      right: auto;
+      bottom: auto;
+    max-width: 1500px;
+    margin-top: 100px;
+  }
+  
+  #about img {
+    object-fit: cover;
+    object-position: 100% 100%; /* positioned top left of the content box */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 15px #000);
+  }
+  
+  @media screen and (max-width: 900px) {
+    #about img {
+      width: 230px;
+      height: 230px;
+      transition: 0.3s all;
+    }
+  }
+  
+  /* The contact buttons */
+  .contact {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .contact i {
+    font-size: 50px;
+    color: var(--contact-btn-colour);
+  }
+  
+  .contact a {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 20px;    /* space out the contact icons */
+  }
+  
+  .contact .cv .contact-btn {
+    background-color: var(--contact-btn-colour);
+    border: 1px solid var(--contact-btn-border-colour);
+    color: var(--contact-btn-font-colour);
+    opacity: 0.7;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    display: inline-block;
+  }
+  
+  .contact i:hover {
+    color: var(--contact-btn-colour-hover);
+    transition: 0.3s;
+  }
+  .contact-btn:hover {
+    background-color: var(--contact-btn-colour-hover) !important;
+    transition: 0.3s;
+    color: var(--bg1);
+  }
+  
+  /* --------------<#projects SECTION> -------------- */
+  #projects {
+    padding-top: 0px;
+  }
+  
+  /* #endregion */
+  
+  
+  /* #region ---------------------------------<12: MY CUSTOM GRID>---------------------------------- */
+  .my-custom-grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-rows: repeat(3, 1fr); */
+    padding: 0 120px;
+  }
+  
+  /* Media queries for the project images */
+  @media screen and (min-width: 1910px) { .card img { width: 18.5vw; } }
+  @media screen and (max-width: 1900px) { .card img { width: 15.9vw; } }
+  @media screen and (max-width: 1879px) { .card img { width: 18.9vw; } }
+  @media screen and (max-width: 1595px) { .card img { width: 24.1vw; } }
+  @media screen and (max-width: 1282px) { .card img { width: 32.1vw; } }
+  @media screen and (max-width: 969px) { .card img { width: 48.1vw; } }
+  @media screen and (max-width: 656px) { .card img { width: 97.1vw; } }
+  /* -- I had this before because I wanted two projects to be visible on the same row on a phone...
+    ... but overtime I've not been a big fan of it, so I'm commenting it out for now.
+  @media screen and (max-width: 500px) {
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .project {
+        height:42vh;
+    }
+  }
+  */
+  
+  .my-custom-grid-container > .card {
+    background-color: var(--project-card-bg) !important;
+    border: 1px solid var(--project-card-bg) !important;
+    box-shadow: 0 1px 3px 0 var(--project-card-shadow),0 0 0 1px var(--project-card-bg) !important;
+    text-align: left;
+  }
+  
+  .card, 
+  .image {
+    border-radius: 10px;
+  }
+  
+  .card a {
+    text-decoration: none;
+    opacity: 0.9 !important;
+  }
+  
+  .card img {
+    height: 29vh;
+  }
+  
+  .card * {
+    color: var(--project-card-text-color);
+  }
+  
+  .cropped {
+    height: 15vh !important;
+    object-fit: cover;
+  }
+  
+  .image {
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid var(--project-card-bg);
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+  }
+  .card-title a {
+    color: var(--project-card-text-color) !important;
+    opacity: 1.0;
+  }
+  
+  .card-date { 
+    font-size: 0.8rem;
+  }
+  .card-details { 
+    font-size: 0.85rem;
+    padding: 3px 5px 10px 5px;
+  }
+  
+  /* Rules for when mouse hovers over a project */
+  .card a:hover {
+    color: var(--project-card-text-hover);
+  }
+  .card a:hover {
+    transition: opacity 400ms;
+    opacity: 0.65 !important;
+  }
+  .image:hover + .card-details > .card-title > a {
+    color: var(--project-card-text-hover);
+  }
+  /* #endregion */
+  
+  
+  /* #region ----------------------------------<13: UNIVERSITY>---------------------------------- */
+  .page-wrapper.university {
+  
+  }
+  
+  .university h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .university .controls {
+    /*
+    display: flex;
+    flex-direction: row;
+    float: right;
+    */
+  }
+  
+  .university .controls .btn {
+    border-radius: 100px;
+    padding: 7px;
+    position: relative;
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .university .controls .btn:active {
+    background-color: var(--university-controls-btn-bg);
+    transition: background-color 250ms ease-in-out;
+  }
+  
+  .university .controls svg {
+    width: 25px !important;
+    height: 25px !important;
+    fill: var(--university-controls-btn-svg-fill);
+  }
+  
+  .university .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 24px;
+  }
+  
+  .university .card-grid > .card {
+    box-shadow: 0 1px 4px 0 var(--university-card-box-shadow);
+    background: var(--university-card-bg);
+    border: 4px solid var(--university-card-border-color);
+    border-radius: 7px;
+    display: flex;
+    height: 260px;
+    flex-direction: column;
+    position: relative;
+  }
+  .university .card-grid > .card:hover {
+    border: 4px solid var(--university-card-border-color-hover);
+    transition: border 200ms ease-in;
+  }
+  .university .card-grid > .card a {
+    opacity: 1.0;
+    text-decoration: none !important;
+  }
+  
+  .university .card-grid > .card > a.card-link > .card-img-wrapper {
+    width: 100%;
+    position: relative;
+  }
+  .university .card-grid > .card > a.card-link > .card-img-wrapper picture {
+    opacity: 1;
+    height: 0;
+    padding-top: 50%;
+    display: block;
+    position: relative;
+  }
+  .university .card-grid > .card > a.card-link > .card-img-wrapper picture img {
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset 0 0 0 0.5px var(--university-card-img-box-shadow);
+    background-color: var(--university-card-img-bg-color);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 620px;
+  }
+  
+  .university .card-grid > .card > a.card-link > div.card-meta {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 10px;
+    flex-grow: 1;
+  }
+  
+  div.card-meta > * {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-word;
+  }
+  div.card-meta p {
+    line-height: 20px;
+    margin: 0;
+  }
+  
+  p.card-moduleTitle {
+    color: var(--university-card-moduleTitle-text-color);
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  
+  p.card-assignmentTitle {
+    color: var(--university-card-assignmentTitle-text-color);
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  p.card-date {
+    color: var(--university-card-date-text-color);
+    font-size: 11px;
+    position: absolute;
+    bottom: 0px;
+    left: 9px;
+  }
+  
+  p.card-stage {
+    color: var(--university-card-stage-text-color);
+    font-size: 11px;
+    position: absolute;
+    bottom: 0px;
+    right: 9px;
+  }
+  
+  div.card-percentage {
+    color: var(--university-card-percentage-text-color);
+    font-size: 11px;
+    line-height: 20px;
+    margin: 0;
+    background-color: var(--university-card-percentage-bg-color);
+    border-radius: 10px;
+    width: 33px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    text-align: center;
+  }
+  /*
+  div.card-percent:hover {
+    width: 30px;
+    text-align: left;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  div.card-percent:hover::after {
+    content: ' %';
+  }*/
+  
+  .page-wrapper.universityAssignment {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .page-wrapper.universityAssignment .wrapper {
+    width: 100%;
+  }
+  
+  .page-wrapper.universityAssignment p {
+    font-size: 15px;
+    color: var(--blog-post-text);
+  }
+  
+  @media (min-width: 1550px) {
+    .page-wrapper.universityAssignment .wrapper {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 10px 0px;
+    }
+  }
+  /* .page-info container */
+  @media (min-width: 1280px) { 
+    .row > .col-lg-4-12 {
+      width: 33.333333%;
+    }
+  }
+  
+  .page-info > div:first-child {
+    margin-top: 0;
+  }
+  .page-info > div {
+    margin-top: 43px;
+  }
+  
+  
+  /* .page-content container */
+  .page-content {
+    margin-top: 20px;
+  }
+  
+  @media (min-width: 1024px) {
+    .page-content {
+      margin-top: 55px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .row > .col-lg-offset-2-12 {
+      margin-left: 16.666666667%;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .row > .col-lg-6-12 {
+      width: 50%;
+    }
+  }
+  
+  .page-info .back-to-previous-page {
+    
+  }
+  
+  .page-info h2, .page-info h1, .page-info h3, .page-info p.intro {
+    font-weight: 800;
+    letter-spacing: -.01em;
+    color: var(--university-assignment-title-text-color);
+  }
+  
+  .page-info h5 {
+    font-weight: 400;
+    letter-spacing: 0.4em !important;
+    color: var(--university-assignment-subheading-text-color);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    padding: 5px 0;
+  }
+  
+  .page-info h4 {
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    padding-top: 1px;
+    padding-bottom: 4px;
+    font-weight: 500;
+    color: var(--university-assignment-subheading-detail-text-color);
+    letter-spacing: normal;
+  }
+  
+  @media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
+    .page-info h1 {
+      font-size: 2.75rem;
+      line-height: 3.125rem;
+      padding-top: 4px;
+      padding-bottom: 1px;
+    }
+  }
+  
+  .page-content div.intro > p {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    font-weight: 500;
+    color: var(--university-assignment-main-text-color);
+    letter-spacing: normal;
+  }
+  @media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
+    .page-content div.intro > p {
+      font-size: 1.375rem;
+      line-height: 1.875rem;
+      padding: 2px 0px 3px 0px;
+    }
+  }
+  
+  .page-content div.main p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 100;
+    color: var(--university-assignment-main-text-color);
+    letter-spacing: normal;
+  }
+  @media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
+    .page-content div.main > p {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
+  }
+  
+  .universityAssignment svg {
+    width: 13px;
+    margin-right: 5px;
+  }
+  /* #endregion */
+  
+  
+  /* #region ----------------------------------<14: NOTES>---------------------------------- */
+  .page-wrapper.notes {
+    /* padding: 100px 125px 100px 50px; */
+  }
+  
+  .notes-page {
+    height: 100%;
+  }
+  
+  .notes, .notes-page h1 {
+    color: var(--blog-post-title-text);
+  }
+  
+  .notes-page p {
+    color: var(--text-darker);
+  }
+  
+  .notes-page .section-inner {
+    margin-left: calc(250px + 40px);
+  }
+  
+  .notes-page .sidebar {
+    box-shadow: 4px 1px 11px var(--sidebar-box-shadow);
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .notes-page .sidebar ul {
+    list-style-type: none;
+    padding: 75px 0;
+    margin: 0;
+  }
+  .notes-page .sidebar ul a li {
+    display: block;
+    padding: 4px 10px;
+  }
+  .notes-page .sidebar ul a {
+    text-decoration: none !important;
+    color: var(--notes-sidenav-item-text-color) !important;
+  }
+  .notes-page .sidebar ul a li:hover {
+    background-color: var(--sidebar-item-bg-color-hover);
+    color: inherit;
+  }
+  .notes-page .sidebar ul a.active {
+    color: var(--topnav-btn-text-color-active) !important;
+  }
+  
+  .notes-page .subsection {
+    padding-bottom: 40px;
+    height: 100vh;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.083);
+  }
+  
+  pre.prettyprint span.kwd::before {
+    content: "\A";
+    white-space: pre-line;
+  }
+  
+  .notes-page .subsection p > code {
+    background-color: rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 6px;
+  }
+  /* #endregion */
+  
+  

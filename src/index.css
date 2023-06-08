@@ -1,19 +1,29 @@
 
 /*
+        CONTENTS PAGE
+    ---------------------
     0: Variables
     1: Setup
-    2: Navbar
-    3: Main container
-    4: Portfolio
-    5: Blog page
-    6: Blog post page
-    7: University page
-    8: University Assignment page
-    9: Notes page
-    10: Media queries
-    11: Animations
-    12: Scrollbars
-    13: Miscellaneous
+    2: Top-level containers
+    3: Page container
+    ---------------------
+    4: Top navbar
+    5: Side navbar
+    ---------------------
+    7: Blog page
+    8: Blog post page
+    ---------------------
+    9: Films page
+    10: Film review page
+    ---------------------
+    11: Music page
+    12: Music review page
+    ---------------------
+    13: Mobile view
+    14: Animations
+    15: Scrollbars
+    16: Miscellaneous
+    ---------------------
 */
 
 /* #region ----------------------------------<0: VARIABLES>---------------------------------- */
@@ -272,8 +282,8 @@
   --text-slightly-darker: rgb(206, 211, 218);
   --text-darker: rgb(169, 169, 169);
   --intro-text: rgb(192, 192, 196);
-  --text-hyperlink: rgb(42, 253, 120);
-  --text-hyperlink-hover: rgb(128, 252, 173);
+  --text-hyperlink: rgb(11, 190, 255);
+  --text-hyperlink-hover: rgb(133, 232, 252);
 
   --section-inner-bg-color: rgb(32, 33, 37);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
   --page-wrapper-bg: rgb(34, 40, 42);
@@ -282,7 +292,7 @@
 
   --sidenav-bg-color: rgb(42, 44, 49); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
   --sidenav-shadow-color: rgba(0, 0, 0, 0.593);
-  --sidenav-item-text-color: rgb(138, 140, 151);
+  --sidenav-item-text-color: rgb(183, 185, 197);
   --sidenav-item-bg-color: rgb(55, 56, 61);
   --sidenav-item-bg-color-hover: rgb(72, 74, 80);
   --sidenav-item-bg-color-active: rgb(101, 105, 114);
@@ -359,7 +369,7 @@
   --blog-post-note-text: rgb(99, 105, 124);
   --blog-post-note-beside: rgba(101, 79, 130, 0.308);
   --blog-post-divider-color: rgb(69, 69, 75);
-  --blog-post-acolade-bg-color: rgba(56, 71, 59, 0.882);
+  --blog-post-acolade-bg-color: rgb(0, 0, 0);
   --blog-post-acolade-border-color: rgba(33, 136, 33, 0.182);
   --blog-post-mobile-header-bg-color: rgb(29, 34, 36);
 
@@ -447,7 +457,6 @@
 /* #endregion */
 
 
-
 /* #region ----------------------------------<1: SETUP>---------------------------------- */
 
 /* Font related stuff... */
@@ -465,7 +474,7 @@ a:not(.website-logo) {
   border: none;
   transition: color 100ms ease-out;
   color: var(--text-hyperlink) !important;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 a:not(.website-logo):hover {
   /*
@@ -579,7 +588,47 @@ body > div#root > div.App {
 /* #endregion */
 
 
-/* #region ----------------------------------<3: TOP NAVBAR>---------------------------------- */
+/* #region ----------------------------------<3: PAGE CONTAINER>---------------------------------- */
+.page-wrapper {
+  width: 100vw;
+  top: 0;
+  margin-left: var(--sidebar-width);
+
+  /*
+  margin-left: var(--sidebar-width);
+  */
+
+  /*
+  background-color: var(--page-wrapper-bg) !important;
+  */
+}
+
+.page-title {
+  color: var(--page-text-color);
+  font-size: 3.0rem !important;
+  font-weight: bold !important;
+  margin-bottom: 5px;
+}
+.page-text-small {
+  font-size: 0.8rem;
+  color: var(--page-text-color-faded);
+}
+
+.container-intro {
+  padding-bottom: 0px;
+}
+.container-intro > .page-text-small {
+  padding-left: 5px;
+}
+
+*:focus {
+  outline: 0;
+  outline: none;
+}
+/* #endregion */
+
+
+/* #region ----------------------------------<4: TOP NAVBAR>---------------------------------- */
 
 /*
 Proposed structure of top navbar
@@ -693,7 +742,7 @@ Proposed structure of top navbar
 /* #endregion */
 
 
-/* #region ----------------------------------<4: SIDE NAVBAR>---------------------------------- */
+/* #region ----------------------------------<5: SIDE NAVBAR>---------------------------------- */
 
 /*
 Proposed structure of sidebar
@@ -754,7 +803,7 @@ Proposed structure of sidebar
 #nav-side .website-links a.navlink:nth-child(5).active svg { border: 2px solid var(--sidenav-blog-bg-color); }
 #nav-side .website-links a.navlink:nth-child(6).active svg { border: 2px solid var(--sidenav-art-bg-color); }
 
-#nav-side .website-links a.navlink.active:nth-child(2) span { color: var(--text) }
+#nav-side .website-links a.navlink.active:nth-child(2) span { color: rgb(255, 149, 104); }
 #nav-side .website-links a.navlink.active:nth-child(3) span { color: var(--sidenav-films-bg-color);  }
 #nav-side .website-links a.navlink.active:nth-child(4) span { color: var(--sidenav-music-bg-color);  }
 #nav-side .website-links a.navlink.active:nth-child(5) span { color: var(--sidenav-blog-bg-color);  }
@@ -875,267 +924,34 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 /* #endregion */
 
 
-/* #region ----------------------------------<5: PAGE CONTAINER>---------------------------------- */
-.page-wrapper {
-  width: 100vw;
-  top: 0;
-  margin-left: var(--sidebar-width);
-
-  /*
-  margin-left: var(--sidebar-width);
-  */
-
-  /*
-  background-color: var(--page-wrapper-bg) !important;
-  */
-}
-
-.page-title {
+/* #region ----------------------------------<6: ABOUT ME PAGE >----------------------------------------- */
+.aboutme-intro {
+  position: absolute;
   color: var(--page-text-color);
-  font-size: 3.0rem !important;
-  font-weight: bold !important;
-  margin-bottom: 5px;
-}
-.page-text-small {
-  font-size: 0.8rem;
-  color: var(--page-text-color-faded);
+  padding: 2rem 5rem;
 }
 
-.container-intro {
-  padding-bottom: 0px;
-}
-.container-intro > .page-text-small {
-  padding-left: 5px;
+.aboutme-intro p {
+  padding: 4px 0;
+  margin: 0;
 }
 
-*:focus {
-  outline: 0;
-  outline: none;
-}
-/* #endregion */
+.aboutme-intro p.text-v1 { font-size: 1.0rem; }
+.aboutme-intro p.text-v2 { font-size: 0.6rem; }
+.aboutme-intro p.text-v3 { font-size: 0.5rem; }
+.aboutme-intro p.text-v4 { font-size: 0.3rem; }
+.aboutme-intro p.text-v5 { font-size: 0.2rem; }
+.aboutme-intro p.text-v6 { font-size: 0.1rem; }
+.aboutme-intro p.text-v7 { font-size: 0.02rem; }
 
 
-/* #region ----------------------------------<6: PORTFOLIO>---------------------------------- */
-.portfolio {
-  top: 0;
-  color: var(--intro-text);
-  height: 270vh;
-  padding-top: 50px;
-}
-
-.portfolio p {
-  font-size: 1.2em;
-	line-height: 1.4em;
-	letter-spacing: -0.014em;
-	font-feature-settings: "ss03","zero","cv08","cv11" 1;
-  text-transform: none;
-}
-.portfolio h1 {
-  font-size: 6vw;
-  font-family: "Karla", sans-serif !important;
-
-  line-height: 0.9em;
-  margin: 0.2em 0 0.6em;
-  font-weight: 900;
-}
-.portfolio h2 {
-  font-size: 4vw;
-  font-weight: 900;
-  margin: 0.2em 0 0.6em;
-}
-
-.portfolio #about, 
-.portfolio #projects,
-.portfolio #contact {
-  height: 100vh;
-}
-
-#about, .projects-header {
-  padding-left: 200px;
-  transition: padding-left 0.3s ease-out;
-}
-
-/* the arrow button that takes to an area on the same page */
-.smooth-scroll-btn {
-  width: 100%;
-  margin-top: 1.8em;
-}
-.smooth-scroll-btn a i {
-  font-size: 5rem;
-  cursor: pointer;
-  color: var(--arrow-smooth-scroll-btn);
-}
-.smooth-scroll-btn a i:hover {
-  color: var(--contact-btn-colour-hover);
-}
-
-/* --------------<#about SECTION> -------------- */
-#about {
-  padding: 110px 0px 0px 200px !important;
-  display: block;
-  top: auto;
-	right: auto;
-	bottom: auto;
-  max-width: 1500px;
-  margin-top: 100px;
-}
-
-#about img {
-  object-fit: cover;
-  object-position: 100% 100%; /* positioned top left of the content box */
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  filter: drop-shadow(0 0 15px #000);
-}
-
-@media screen and (max-width: 900px) {
-  #about img {
-    width: 230px;
-    height: 230px;
-    transition: 0.3s all;
-  }
-}
-
-/* The contact buttons */
-.contact {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.contact i {
-  font-size: 50px;
-  color: var(--contact-btn-colour);
-}
-
-.contact a {
-  cursor: pointer;
-  text-decoration: none;
-  padding: 20px;    /* space out the contact icons */
-}
-
-.contact .cv .contact-btn {
-  background-color: var(--contact-btn-colour);
-  border: 1px solid var(--contact-btn-border-colour);
-  color: var(--contact-btn-font-colour);
-  opacity: 0.7;
-  font-size: 20px;
-  border-radius: 20px;
-  padding: 20px;
-  display: inline-block;
-}
-
-.contact i:hover {
-  color: var(--contact-btn-colour-hover);
-  transition: 0.3s;
-}
-.contact-btn:hover {
-  background-color: var(--contact-btn-colour-hover) !important;
-  transition: 0.3s;
-  color: var(--bg1);
-}
-
-/* --------------<#projects SECTION> -------------- */
-#projects {
-  padding-top: 0px;
-}
-
-/* #endregion */
-
-
-/* #region ---------------------------------< 7: MY CUSTOM GRID>---------------------------------- */
-.my-custom-grid-container {
+.social-medias {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-rows: repeat(3, 1fr); */
-  padding: 0 120px;
+  grid-template-columns: repeat(6, 50px);
+  padding-top: 12px;
 }
-
-/* Media queries for the project images */
-@media screen and (min-width: 1910px) { .card img { width: 18.5vw; } }
-@media screen and (max-width: 1900px) { .card img { width: 15.9vw; } }
-@media screen and (max-width: 1879px) { .card img { width: 18.9vw; } }
-@media screen and (max-width: 1595px) { .card img { width: 24.1vw; } }
-@media screen and (max-width: 1282px) { .card img { width: 32.1vw; } }
-@media screen and (max-width: 969px) { .card img { width: 48.1vw; } }
-@media screen and (max-width: 656px) { .card img { width: 97.1vw; } }
-/* -- I had this before because I wanted two projects to be visible on the same row on a phone...
-  ... but overtime I've not been a big fan of it, so I'm commenting it out for now.
-@media screen and (max-width: 500px) {
-  .projects-container {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-  .project {
-      height:42vh;
-  }
-}
-*/
-
-.my-custom-grid-container > .card {
-  background-color: var(--project-card-bg) !important;
-  border: 1px solid var(--project-card-bg) !important;
-  box-shadow: 0 1px 3px 0 var(--project-card-shadow),0 0 0 1px var(--project-card-bg) !important;
-  text-align: left;
-}
-
-.card, 
-.image {
-  border-radius: 10px;
-}
-
-.card a {
-  text-decoration: none;
-  opacity: 0.9 !important;
-}
-
-.card img {
-  height: 29vh;
-}
-
-.card * {
-  color: var(--project-card-text-color);
-}
-
-.cropped {
-  height: 15vh !important;
-  object-fit: cover;
-}
-
-.image {
-  cursor: pointer;
-  overflow: hidden;
-  border: 1px solid var(--project-card-bg);
-}
-
-.card-title {
-  font-size: 1.4rem;
-}
-.card-title a {
-  color: var(--project-card-text-color) !important;
-  opacity: 1.0;
-}
-
-.card-date { 
-  font-size: 0.8rem;
-}
-.card-details { 
-  font-size: 0.85rem;
-  padding: 3px 5px 10px 5px;
-}
-
-/* Rules for when mouse hovers over a project */
-.card a:hover {
-  color: var(--project-card-text-hover);
-}
-.card a:hover {
-  transition: opacity 400ms;
-  opacity: 0.65 !important;
-}
-.image:hover + .card-details > .card-title > a {
-  color: var(--project-card-text-hover);
+.social-medias img {
+  width: 50px;
 }
 /* #endregion */
 
@@ -1160,7 +976,7 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 
 .blog > .section-inner,
 .blog-post > .section-inner {
-  padding: 20px 230px;
+  padding: 20px 300px;
 }
 
 .posts-container {
@@ -1174,9 +990,8 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
   background-color: var(--section-inner-bg-color);
   width: 80%;
   z-index: 99999999999999999999999999999999999999999999;
-  box-shadow: 0 11px 8px -4px rgba(0, 0, 0, 0.304);
   /*
-  box-shadow: 0px 25px 15px rgba(2, 2, 4, 0.176);
+  box-shadow: 0 11px 8px -4px rgba(0, 0, 0, 0.304);
   width: 72%;
   */
 }
@@ -1721,8 +1536,8 @@ div.blog-post
   background-color: var(--blog-post-acolade-bg-color);
   display: inline;
   font-size: 0.7rem;
-  border-radius: 8px;
-  padding: 5px 15px;
+  border-radius: 50px;
+  padding: 5px 15px 5px 8px;
 }
 @media screen and (max-width: 725px) {
   .blog-post-content p.acolade {
@@ -1731,10 +1546,14 @@ div.blog-post
   }
 }
 .blog-post-content p.acolade::before {
-  content: '⋟';
+  content: '⭐';
   font-weight: bold;
   padding-right: 7px;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
+}
+.blog-post-content p.acolade:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 /* Image sizing problems! */
@@ -1742,11 +1561,12 @@ div.blog-post
   width: 100%;
 }
 .blog-post img {
-  border-radius: 8px;
+  border-radius: 5px;
   max-height: 100%;
   height: auto;
+  max-width: 550px;
   margin: 2em 0;
-  max-width: 600px;
+  /* margin: 0 auto; */
 }
 .blog-post img, 
 .blog-post picture {
@@ -1797,376 +1617,8 @@ div.blog-post
   border: 1px solid var(--blog-post-divider-color);
   border-style: dotted;
 }
-/* #endregion */
 
-
-/* #region ----------------------------------<9: UNIVERSITY>---------------------------------- */
-.page-wrapper.university {
-
-}
-
-.university h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.university .controls {
-  /*
-  display: flex;
-  flex-direction: row;
-  float: right;
-  */
-}
-
-.university .controls .btn {
-  border-radius: 100px;
-  padding: 7px;
-  position: relative;
-  display: inline-block;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.university .controls .btn:active {
-  background-color: var(--university-controls-btn-bg);
-  transition: background-color 250ms ease-in-out;
-}
-
-.university .controls svg {
-  width: 25px !important;
-  height: 25px !important;
-  fill: var(--university-controls-btn-svg-fill);
-}
-
-.university .card-grid {
-  grid-template-columns: repeat(4, 1fr);
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 24px;
-}
-
-.university .card-grid > .card {
-  box-shadow: 0 1px 4px 0 var(--university-card-box-shadow);
-  background: var(--university-card-bg);
-  border: 4px solid var(--university-card-border-color);
-  border-radius: 7px;
-  display: flex;
-  height: 260px;
-  flex-direction: column;
-  position: relative;
-}
-.university .card-grid > .card:hover {
-  border: 4px solid var(--university-card-border-color-hover);
-  transition: border 200ms ease-in;
-}
-.university .card-grid > .card a {
-  opacity: 1.0;
-  text-decoration: none !important;
-}
-
-.university .card-grid > .card > a.card-link > .card-img-wrapper {
-  width: 100%;
-  position: relative;
-}
-.university .card-grid > .card > a.card-link > .card-img-wrapper picture {
-  opacity: 1;
-  height: 0;
-  padding-top: 50%;
-  display: block;
-  position: relative;
-}
-.university .card-grid > .card > a.card-link > .card-img-wrapper picture img {
-  border-radius: 4px 4px 0 0;
-  box-shadow: inset 0 0 0 0.5px var(--university-card-img-box-shadow);
-  background-color: var(--university-card-img-bg-color);
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  max-width: 620px;
-}
-
-.university .card-grid > .card > a.card-link > div.card-meta {
-  display: flex;
-  flex-direction: column;
-  padding: 3px 10px;
-  flex-grow: 1;
-}
-
-div.card-meta > * {
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  overflow: hidden;
-  word-break: break-word;
-}
-div.card-meta p {
-  line-height: 20px;
-  margin: 0;
-}
-
-p.card-moduleTitle {
-  color: var(--university-card-moduleTitle-text-color);
-  font-size: 12px;
-  margin-bottom: 2px;
-}
-
-p.card-assignmentTitle {
-  color: var(--university-card-assignmentTitle-text-color);
-  font-size: 16px;
-  font-weight: 600;
-}
-
-p.card-date {
-  color: var(--university-card-date-text-color);
-  font-size: 11px;
-  position: absolute;
-  bottom: 0px;
-  left: 9px;
-}
-
-p.card-stage {
-  color: var(--university-card-stage-text-color);
-  font-size: 11px;
-  position: absolute;
-  bottom: 0px;
-  right: 9px;
-}
-
-div.card-percentage {
-  color: var(--university-card-percentage-text-color);
-  font-size: 11px;
-  line-height: 20px;
-  margin: 0;
-  background-color: var(--university-card-percentage-bg-color);
-  border-radius: 10px;
-  width: 33px;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  text-align: center;
-}
-/*
-div.card-percent:hover {
-  width: 30px;
-  text-align: left;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-div.card-percent:hover::after {
-  content: ' %';
-}*/
-/* #endregion */
-
-
-/* #region ----------------------------------<10: UNIVERSITY ASSIGNMENT PAGE>---------------------------------- */
-.page-wrapper.universityAssignment {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.page-wrapper.universityAssignment .wrapper {
-  width: 100%;
-}
-
-.page-wrapper.universityAssignment p {
-  font-size: 15px;
-  color: var(--blog-post-text);
-}
-
-@media (min-width: 1550px) {
-  .page-wrapper.universityAssignment .wrapper {
-    max-width: 1480px;
-    margin: 0 auto;
-    padding: 10px 0px;
-  }
-}
-/* .page-info container */
-@media (min-width: 1280px) { 
-  .row > .col-lg-4-12 {
-    width: 33.333333%;
-  }
-}
-
-.page-info > div:first-child {
-  margin-top: 0;
-}
-.page-info > div {
-  margin-top: 43px;
-}
-
-
-/* .page-content container */
-.page-content {
-  margin-top: 20px;
-}
-
-@media (min-width: 1024px) {
-  .page-content {
-    margin-top: 55px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .row > .col-lg-offset-2-12 {
-    margin-left: 16.666666667%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .row > .col-lg-6-12 {
-    width: 50%;
-  }
-}
-
-.page-info .back-to-previous-page {
-  
-}
-
-.page-info h2, .page-info h1, .page-info h3, .page-info p.intro {
-  font-weight: 800;
-  letter-spacing: -.01em;
-  color: var(--university-assignment-title-text-color);
-}
-
-.page-info h5 {
-  font-weight: 400;
-  letter-spacing: 0.4em !important;
-  color: var(--university-assignment-subheading-text-color);
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  text-transform: uppercase;
-  padding: 5px 0;
-}
-
-.page-info h4 {
-  font-weight: 800;
-  font-size: 1.125rem;
-  line-height: 1.5625rem;
-  padding-top: 1px;
-  padding-bottom: 4px;
-  font-weight: 500;
-  color: var(--university-assignment-subheading-detail-text-color);
-  letter-spacing: normal;
-}
-
-@media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
-  .page-info h1 {
-    font-size: 2.75rem;
-    line-height: 3.125rem;
-    padding-top: 4px;
-    padding-bottom: 1px;
-  }
-}
-
-.page-content div.intro > p {
-  font-size: 1.375rem;
-  line-height: 1.875rem;
-  font-weight: 500;
-  color: var(--university-assignment-main-text-color);
-  letter-spacing: normal;
-}
-@media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
-  .page-content div.intro > p {
-    font-size: 1.375rem;
-    line-height: 1.875rem;
-    padding: 2px 0px 3px 0px;
-  }
-}
-
-.page-content div.main p {
-  font-size: 1rem;
-  line-height: 1.2rem;
-  font-weight: 100;
-  color: var(--university-assignment-main-text-color);
-  letter-spacing: normal;
-}
-@media (min-height: 620px) and (min-width: 768px), (min-width: 1280px) {
-  .page-content div.main > p {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-  }
-}
-
-.universityAssignment svg {
-  width: 13px;
-  margin-right: 5px;
-}
-/* #endregion */
-
-
-/* #region ----------------------------------<11: NOTES>---------------------------------- */
-.page-wrapper.notes {
-  /* padding: 100px 125px 100px 50px; */
-}
-
-.notes-page {
-  height: 100%;
-}
-
-.notes, .notes-page h1 {
-  color: var(--blog-post-title-text);
-}
-
-.notes-page p {
-  color: var(--text-darker);
-}
-
-.notes-page .section-inner {
-  margin-left: calc(250px + 40px);
-}
-
-.notes-page .sidebar {
-  box-shadow: 4px 1px 11px var(--sidebar-box-shadow);
-  width: 250px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.notes-page .sidebar ul {
-  list-style-type: none;
-  padding: 75px 0;
-  margin: 0;
-}
-.notes-page .sidebar ul a li {
-  display: block;
-  padding: 4px 10px;
-}
-.notes-page .sidebar ul a {
-  text-decoration: none !important;
-  color: var(--notes-sidenav-item-text-color) !important;
-}
-.notes-page .sidebar ul a li:hover {
-  background-color: var(--sidebar-item-bg-color-hover);
-  color: inherit;
-}
-.notes-page .sidebar ul a.active {
-  color: var(--topnav-btn-text-color-active) !important;
-}
-
-.notes-page .subsection {
-  padding-bottom: 40px;
-  height: 100vh;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.083);
-}
-
-pre.prettyprint span.kwd::before {
-  content: "\A";
-  white-space: pre-line;
-}
-
-.notes-page .subsection p > code {
-  background-color: rgb(56, 56, 56);
-  color: rgb(255, 255, 255);
-  border-radius: 4px;
-  padding: 6px;
-}
-/* #endregion */
-
-
-/* #region ----------------------------------<11.1: FAVOURITE QUOTES PAGE>---------------------------------- */
+/* #region ------------------< Favourite quotes page >----------------------- */
 ul.messiahs-handbook {
   list-style-type: none;
   display: grid;
@@ -2224,40 +1676,10 @@ ul.messiahs-handbook p.quote-person {
 
 /* #endregion */
 
-
-/* #region ----------------------------------<12: ABOUT ME PAGAE >----------------------------------------- */
-.aboutme-intro {
-  position: absolute;
-  color: var(--page-text-color);
-  padding: 2rem 5rem;
-}
-
-.aboutme-intro p {
-  padding: 4px 0;
-  margin: 0;
-}
-
-.aboutme-intro p.text-v1 { font-size: 1.0rem; }
-.aboutme-intro p.text-v2 { font-size: 0.6rem; }
-.aboutme-intro p.text-v3 { font-size: 0.5rem; }
-.aboutme-intro p.text-v4 { font-size: 0.3rem; }
-.aboutme-intro p.text-v5 { font-size: 0.2rem; }
-.aboutme-intro p.text-v6 { font-size: 0.1rem; }
-.aboutme-intro p.text-v7 { font-size: 0.02rem; }
-
-
-.social-medias {
-  display: grid;
-  grid-template-columns: repeat(6, 50px);
-  padding-top: 12px;
-}
-.social-medias img {
-  width: 50px;
-}
 /* #endregion */
 
 
-/* #region -----------------------------------<13: FILMS PAGE>------------------------------------------ */
+/* #region -----------------------------------<9: FILMS PAGE>------------------------------------------ */
 /* display entire page as grid (review on leftside, list on right side) */
 .favourite-films-page .section-inner {
   display: grid;
@@ -2284,10 +1706,7 @@ ul.messiahs-handbook p.quote-person {
   --film-mydata-imdbdiffscore-positivediff-text-color: rgb(173, 245, 73);
   --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
   --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
-}
 
-/* #region ------------------------< 13.1 Toplist (as grid with posters only) >------------------------ */
-:root {
   /* Variables for grid view */
   --films-list-margin-left: 400px;
   --films-toplist-grid-items-per-row: 5;
@@ -2295,7 +1714,41 @@ ul.messiahs-handbook p.quote-person {
   --films-toplist-grid-item-fixed-height: 250px;
   --films-toplist-item-bg-color: rgb(47, 48, 52);
   --films-toplist-item-bg-color-hover: rgb(47, 48, 52);
+
+  /* Variables for list view */
+  --films-toplist-list-item-poster-fixed-height: 450px;
+  --films-toplist-list-item-fixed-width: 800px;
+  --film-toplist-item-border-inner-width: 3px;
+  --film-toplist-item-border-outer-width: 2px;
+  --film-toplist-item-images-border-inner-color: rgb(0, 0, 0);
+
+  /* Film controls */
+  --films-controls-container-bg-color: var(--section-inner-bg-color);
+  --films-controls-btn-bg-color: rgb(56, 58, 60);
+  --films-controls-btn-bg-color-hover: rgb(73, 74, 79);
+  --films-controls-btn-bg-color-active: rgb(64, 67, 74);
+  --films-controls-btn-text-color-active: var(--text);
+  --films-controls-dropdown-list-bg-color: rgba(80, 81, 88, 0.94);
+  --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
+  --films-controls-dropdown-list-item-bg-color-hover: rgba(122, 124, 133, 0.87);
+  --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
+
+  /* Pagination buttons */
+  --films-pagination-btn-bg-color: var(var(--page-wrapper-bg));
+  --films-pagination-btn-bg-color-hover: rgb(65, 66, 70); /* rgb(65, 66, 70); */
+  --films-pagination-btn-bg-color-selected: rgb(69, 182, 141);
+  --films-pagination-btn-bg-color-active: rgb(31, 161, 104);
+  --films-pagination-btn-text-color-hover: var(--text);
+  --films-pagination-btn-text-color-active: var(--text);
+  --films-pagination-btn-border-color: rgb(85, 81, 81);
+  --films-pagination-btn-border-color-hover: rgb(120, 117, 117);
+  --films-pagination-btn-bottomborder-color-active: rgb(56, 97, 7);
+  --films-pagination-btn-outer-border-color: rgb(0, 0, 0);
+  --films-pagination-btn-inner-border-color: rgb(31, 32, 34);
+  --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
 }
+
+/* #region ------------------------< 13.1 Toplist (as grid with posters only) >------------------------ */
 .films-toplist.view-as-grid {
   display: grid;
   grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 185px);
@@ -2365,14 +1818,6 @@ ul.messiahs-handbook p.quote-person {
 
 
 /* #region ------------------------< 13.2 Toplist (as list with posters & screenshots) >------------------------ */
-:root {
-  /* Variables for list view */
-  --films-toplist-list-item-poster-fixed-height: 550px;
-  --films-toplist-list-item-fixed-width: 1000px;
-  --film-toplist-item-border-inner-width: 3px;
-  --film-toplist-item-border-outer-width: 2px;
-  --film-toplist-item-images-border-inner-color: rgb(0, 0, 0);
-}
 .films-toplist.view-as-list {
   margin: 0 auto;
 }
@@ -2385,7 +1830,7 @@ ul.messiahs-handbook p.quote-person {
 /* Film details above poster */
 .films-toplist.view-as-list div.films-toplist-item > a > div.film-details {
   color: var(--text);
-  padding: 5px 10px;
+  padding: 15px 5px;
 }
 
 .films-toplist.view-as-list div.film-details > span {
@@ -2410,7 +1855,7 @@ ul.messiahs-handbook p.quote-person {
 /* Stuff containing poster & screenshots */
 .films-toplist.view-as-list div.films-toplist-item .film-images {
   display: grid;
-  grid-template-columns: 4.2fr 7.0fr;
+  grid-template-columns: 4.4fr 7.0fr;
   opacity: 1.0 !important;
   background-color: var(--film-toplist-item-bg-color);
   /*
@@ -2496,9 +1941,9 @@ ul.messiahs-handbook p.quote-person {
 
 /* #region --------------------------< My Data >-------------------------- */
 .films-toplist.view-as-list div.film-dataContainer.myData > span {
-  padding: 3px 8px;
+  padding: 3px 10px;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 2.0rem;
   border: 2px solid var(--page-wrapper-bg);
   cursor: pointer;
 }
@@ -2659,17 +2104,6 @@ span.film-imdbDiffScore:active {
 
 
 /* #region ------------------------< 13.4 Film controls >------------------------ */
-:root {
-    --films-controls-container-bg-color: var(--section-inner-bg-color);
-    --films-controls-btn-bg-color: rgb(56, 58, 60);
-    --films-controls-btn-bg-color-hover: rgb(73, 74, 79);
-    --films-controls-btn-bg-color-active: rgb(64, 67, 74);
-    --films-controls-btn-text-color-active: var(--text);
-    --films-controls-dropdown-list-bg-color: rgba(80, 81, 88, 0.94);
-    --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
-    --films-controls-dropdown-list-item-bg-color-hover: rgba(122, 124, 133, 0.87);
-    --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
-}
 /* ----------------------< Film controls >---------------------- */
 /* The entire container... */
 .films-controls {
@@ -2681,9 +2115,8 @@ span.film-imdbDiffScore:active {
   width: 70%;
   margin-left: 240px;
   background-color: var(--films-controls-container-bg-color);
-  box-shadow: 0 18px 8px -4px rgba(0, 0, 0, 0.304);
   /*
-  box-shadow: 4px 1px 8px var(--general-box-shadow-color-1);
+  box-shadow: 0 18px 8px -4px rgba(0, 0, 0, 0.304);
   background-color: var(--films-controls-container-bg-color);
   */
 }
@@ -2946,29 +2379,6 @@ div.btn.films-reset-filters-btn svg {
 
 
 /* ----------------< Pagination >------------------ */
-:root {
-  /* Background colour of pagination button in normal/hover/active state */
-  --films-pagination-btn-bg-color: var(var(--page-wrapper-bg));
-  --films-pagination-btn-bg-color-hover: rgb(65, 66, 70); /* rgb(65, 66, 70); */
-  --films-pagination-btn-bg-color-selected: rgb(69, 182, 141);
-  --films-pagination-btn-bg-color-active: rgb(31, 161, 104);
-
-  /* Text colour of pagination button in hover/active state */
-  --films-pagination-btn-text-color-hover: var(--text);
-  --films-pagination-btn-text-color-active: var(--text);
-
-  /* Border colour of paginaton button */
-  --films-pagination-btn-border-color: rgb(85, 81, 81);
-  --films-pagination-btn-border-color-hover: rgb(120, 117, 117);
-  --films-pagination-btn-bottomborder-color-active: rgb(56, 97, 7);
-
-  /* */
-  --films-pagination-btn-outer-border-color: rgb(0, 0, 0);
-  --films-pagination-btn-inner-border-color: rgb(31, 32, 34);
-
-  /* Background colour of next and previous buttons */
-  --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
-}
 .pagination-container {
   margin: 0 auto;
 }
@@ -3092,7 +2502,76 @@ div.btn.films-reset-filters-btn svg {
 /* #endregion */
 
 
-/* #region ------------------------< 13.5 Film review being displayed >------------------------ */
+/* #region ------------------------< Old stuff >------------------------ */
+.sidebar-menu > .films-submenu {
+  display: block;
+  text-align: center;
+  padding-bottom: 13px;
+}
+
+.films-submenu > a {
+  padding: 0.7rem 1.0rem;
+  border-radius: 0px;
+  opacity: 1 !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  background-color:  var(--section-inner-bg-color);
+  border-bottom: 4px solid var(--section-inner-bg-color);
+}
+.films-submenu > a:hover {
+  background-color: var(--submenu-btn-bg-color-hover);
+  border-bottom: 4px solid var(--submenu-btn-bg-color-hover);
+}
+.films-submenu > a.active {
+  border-bottom: 4px solid var(--submenu-btn-text-color-active);
+  background-color: var(--submenu-btn-bg-color-active);
+}
+.films-submenu > a.active > span {
+  color: var(--submenu-btn-text-color-active);
+}
+
+.films-submenu > a:nth-child(1) {
+  border-top-left-radius: 15px;
+}
+.films-submenu > a:nth-child(3) {
+  border-top-right-radius: 15px;
+}
+
+.films-submenu > a > span {
+  font-size: 0.8rem;
+}
+.films-submenu > a:not(.active) > span {
+  color: rgb(132, 135, 143);
+}
+.films-submenu > a:not(.active):hover > span {
+  color: rgb(207, 204, 204);
+}
+
+/* */
+#table-of-films-watched-per-month {
+  margin-top: 30px;
+}
+#table-of-films-watched-per-month td:nth-child(1) { width: 20%; }   /* 1st column */
+#table-of-films-watched-per-month td:nth-child(2) { width: 20%; }   /* 2nd column */
+#table-of-films-watched-per-month td:nth-child(3) { width: 20%; }   /* 3rd column */
+#table-of-films-watched-per-month td:nth-child(4) { width: 20%; }   /* 4th column */
+#table-of-films-watched-per-month td:nth-child(5) { width: 5%; }
+#table-of-films-watched-per-month td:nth-child(6) { width: 5%; }
+#table-of-films-watched-per-month td:nth-child(7) { width: 5%; }
+#table-of-films-watched-per-month td:nth-child(8) { width: 5%; }
+
+.films-log table thead {
+  height: 50px;
+}
+.films-log table tr {
+  font-size: 0.85rem;
+}
+/* #endregion */
+
+/* #endregion */
+
+
+/* #region -----------------------------------<10: FILM REVIEW PAGE>---------------------------------- */
 .review-displayed {
   margin: 0 auto;
   width: 50%;
@@ -3168,80 +2647,20 @@ div.btn.films-reset-filters-btn svg {
 /* #endregion */
 
 
-/* #region ------------------------< Old stuff >------------------------ */
-.sidebar-menu > .films-submenu {
-  display: block;
-  text-align: center;
-  padding-bottom: 13px;
-}
-
-.films-submenu > a {
-  padding: 0.7rem 1.0rem;
-  border-radius: 0px;
-  opacity: 1 !important;
-  text-decoration: none !important;
-  font-weight: bold;
-  background-color:  var(--section-inner-bg-color);
-  border-bottom: 4px solid var(--section-inner-bg-color);
-}
-.films-submenu > a:hover {
-  background-color: var(--submenu-btn-bg-color-hover);
-  border-bottom: 4px solid var(--submenu-btn-bg-color-hover);
-}
-.films-submenu > a.active {
-  border-bottom: 4px solid var(--submenu-btn-text-color-active);
-  background-color: var(--submenu-btn-bg-color-active);
-}
-.films-submenu > a.active > span {
-  color: var(--submenu-btn-text-color-active);
-}
-
-.films-submenu > a:nth-child(1) {
-  border-top-left-radius: 15px;
-}
-.films-submenu > a:nth-child(3) {
-  border-top-right-radius: 15px;
-}
-
-.films-submenu > a > span {
-  font-size: 0.8rem;
-}
-.films-submenu > a:not(.active) > span {
-  color: rgb(132, 135, 143);
-}
-.films-submenu > a:not(.active):hover > span {
-  color: rgb(207, 204, 204);
-}
-
-/* */
-#table-of-films-watched-per-month {
-  margin-top: 30px;
-}
-#table-of-films-watched-per-month td:nth-child(1) { width: 20%; }   /* 1st column */
-#table-of-films-watched-per-month td:nth-child(2) { width: 20%; }   /* 2nd column */
-#table-of-films-watched-per-month td:nth-child(3) { width: 20%; }   /* 3rd column */
-#table-of-films-watched-per-month td:nth-child(4) { width: 20%; }   /* 4th column */
-#table-of-films-watched-per-month td:nth-child(5) { width: 5%; }
-#table-of-films-watched-per-month td:nth-child(6) { width: 5%; }
-#table-of-films-watched-per-month td:nth-child(7) { width: 5%; }
-#table-of-films-watched-per-month td:nth-child(8) { width: 5%; }
-
-.films-log table thead {
-  height: 50px;
-}
-.films-log table tr {
-  font-size: 0.85rem;
-}
-/* #endregion */
-
+/* #region -----------------------------------<11: MUSIC PAGE>---------------------------------- */
 
 /* #endregion */
 
 
-/* #region ----------------------------------<12: MEDIA QUERIES>---------------------------------- */
+/* #region -----------------------------------<12: MUSIC REVIEW PAGE>---------------------------------- */
+
+/* #endregion */
+
+
+/* #region -----------------------------------<13: MOBILE VIEW>---------------------------------- */
 :root {
   --mobile-navbar-topborder-color: rgba(70, 77, 81, 0.497);
-  --mobile-navbar-height: 57px;
+  --mobile-navbar-height: 55px;
 }
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
@@ -3304,19 +2723,20 @@ div.btn.films-reset-filters-btn svg {
   #nav-side a:not(.website-logo).navlink {
     margin-top: 11px;
     vertical-align: middle;
-    margin-right: 15px;
+    margin-right: 30px;
     margin-bottom: 0px;
   }
   #nav-side a:not(.website-logo).navlink.active {
-    margin-top: 5px;
+    margin-top: 0px;
     transition: all 50ms ease-in;
   }
   #nav-side a:not(.website-logo).navlink:not(.active) > span {
     display: none;
   }
   #nav-side .website-links a.navlink svg {
-    width: 32px !important;
-    height: 32px !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 0px;
     margin: 0 auto;
   }
   .page-wrapper {
@@ -3329,6 +2749,14 @@ div.btn.films-reset-filters-btn svg {
   #nav-side .website-links a.navlink:nth-child(5) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-blog-bg-color);  }
   #nav-side .website-links a.navlink:nth-child(6) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-art-bg-color);  }
   
+  #nav-side .website-links a.navlink svg {
+    border: 0px !important;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  #nav-side .website-links a.navlink.active svg {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
   /*
   .hamburger-menu {
     display: block !important;
@@ -3796,7 +3224,7 @@ div.btn.films-reset-filters-btn svg {
 /* #endregion */
 
 
-/* #region ----------------------------------<13: ANIMATIONS>---------------------------------- */
+/* #region ----------------------------------<14: ANIMATIONS>---------------------------------- */
 @keyframes blogPostHeaderAnimation {
   
 }
@@ -3852,7 +3280,7 @@ div.btn.films-reset-filters-btn svg {
 /* #endregion */
 
 
-/* #region ----------------------------------<14: SCROLLBARS>------------------------------------------ */
+/* #region ----------------------------------<15: SCROLLBARS>------------------------------------------ */
 
 /* Styles for custom scrollbar in Chrome... */
 body::-webkit-scrollbar-track{
@@ -3913,7 +3341,7 @@ body::-webkit-scrollbar-thumb{
 /* #endregion */
 
 
-/* #region ------------------------------------<15: MISCELLANEOUS>------------------------------------------ */
+/* #region ------------------------------------<16: MISCELLANEOUS>------------------------------------------ */
 ::selection {
   background: var(--text-highlight-color); /* WebKit/Blink Browsers */
 }
