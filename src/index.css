@@ -339,7 +339,7 @@
   --blog-td-divider-color: rgba(166, 166, 193, 0.183);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
-  --blog-table-row-bg-hover: rgb(29, 29, 33);
+  --blog-table-row-bg-hover: rgb(18, 18, 22);
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
 
@@ -987,9 +987,9 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 .posts-container > .posts-header-container {
   position: fixed;
   top: 0px;
-  background-color: var(--section-inner-bg-color);
   width: 80%;
-  z-index: 99999999999999999999999999999999999999999999;
+  z-index: 999999;
+  background-color: var(--films-controls-container-bg-color);
   /*
   box-shadow: 0 11px 8px -4px rgba(0, 0, 0, 0.304);
   width: 72%;
@@ -2110,11 +2110,11 @@ span.film-imdbDiffScore:active {
   /*display: none;*/
   position: fixed;
   z-index: 999999;
+  background-color: var(--films-controls-container-bg-color);
   padding: 20px 20px;
   /*text-align: center;*/
   width: 70%;
   margin-left: 240px;
-  background-color: var(--films-controls-container-bg-color);
   /*
   box-shadow: 0 18px 8px -4px rgba(0, 0, 0, 0.304);
   background-color: var(--films-controls-container-bg-color);
