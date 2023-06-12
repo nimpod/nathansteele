@@ -77,7 +77,6 @@ import { review as PossessionReview } from './websiteContent/films/possession/re
 import { review as PredestinationReview } from './websiteContent/films/predestination/review';
 import { review as PrincessMononokeReview } from './websiteContent/films/princess_mononoke/review';
 import { review as RevengeReview } from './websiteContent/films/revenge/review';
-import { review as RiseOfThePlanetOfTheApesReview } from './websiteContent/films/rise_of_the_planet_of_the_apes/review';
 import { review as RiseRoarRevoltReview } from './websiteContent/films/rise_roar_revolt/review';
 import { review as RockyReview } from './websiteContent/films/rocky/review';
 import { review as SevenYearsInTibetReview } from './websiteContent/films/seven_years_in_tibet/review';
@@ -1521,14 +1520,6 @@ const initState = {
             "myReview": ""
         },
         {
-            "letterboxdUrl": "https://boxd.it/cS4",
-            "title": "Rise of the Planet of the Apes",
-            "myRating": "9.3",
-            "myTags": ["Emotional"],
-            "myReview": "",
-            "customPosterUrl": require('./websiteContent/films/rise_of_the_planet_of_the_apes/custom_poster.png')
-        },
-        {
             "letterboxdUrl": "https://boxd.it/2awa",
             "title": "Batman Returns",
             "myRating": "9.3",
@@ -2432,6 +2423,7 @@ const RootReducer = (state=initState, action) => {
 
     // retrieve web film data...
     let webdata = require('../components/films/reviews_web_data.json');
+    console.log(webdata.length);
 
     // merge local & web film data...
     const mergedData = webdata.map(film => ({...film, ...mappedById[film.letterboxdUrl]}))
