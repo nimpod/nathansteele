@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
-import '../../index.css';
+import '../../css/index.css';
 
 import ProjectImageAssembly from '../../img/project-card-backgrounds/assembly.png';
 import ProjectImageMosaicsOfVideos from '../../img/project-card-backgrounds/mosaics-of-videos.png';

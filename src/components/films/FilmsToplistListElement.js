@@ -48,7 +48,7 @@ class FilmsToplistListElement extends Component {
                         <span className='film-year' title='Year of release'>({this.props.film.year})</span>
                         <div className='film-data'>
                             <div className='film-dataContainer myData'>
-                                <span className='film-myPos' title='Position in my toplist'>#{this.props.film.position}</span>
+                                <span className='film-myPos' title='Position in my toplist'>{this.props.film.position}</span>
                                 {/*}
                                 <span className='film-myRating' title='My rating (decimal rating out of 10.0)'>{this.props.film.myRating}</span>
                                 <span className={`film-imdbDiffScore ${this.props.diffScoreClassname}`} title='Difference between my rating and IMDb avg rating'>
