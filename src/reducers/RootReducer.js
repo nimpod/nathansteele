@@ -2417,6 +2417,14 @@ const initState = {
             ],
             "gradualInterest": [7, 7, 8, 8, 9, 9, 8, 9, 9, 8],
             "customPosterUrl": require('./websiteContent/films/starry_starry_night/custom_poster.webp')
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/2dD4",
+            "title": "Paco and the Magical Book",
+            "myRating": "8.2",
+            "myTags": [],
+            "myReview": "",
+            "gradualInterest": [6, 6, 7, 7, 7, 8, 8, 9, 9, 9, 9]
         }
     ]
 }

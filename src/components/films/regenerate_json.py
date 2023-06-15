@@ -288,7 +288,7 @@ def regenerate_json_file():
                 """
                 
                 # DEBUGGING....
-                print(f" > {pos}: {title} {review_id}")
+                print(f" > {pos}: {title}")
                 #print(f' > Title = ({title})')
                 #print(f' > IMDB url = ({imdb_url})')
                 #print(f' > Language = ({language})')
@@ -331,5 +331,5 @@ def regenerate_json_file():
 
 
 # call my functions........
-# download_letterboxd_data()
+download_letterboxd_data()
 regenerate_json_file()
