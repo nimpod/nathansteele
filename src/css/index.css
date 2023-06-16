@@ -1684,7 +1684,8 @@ ul.messiahs-handbook p.quote-person {
 
 
 :root {
-  --vertical-gap-at-top-of-page: 180px;
+  --vertical-gap-at-top-of-page: 40px;
+  --nice-green: rgb(15, 132, 81);
 
   /* Data background colours */
   --film-mydata-position-bg-color: rgb(39, 163, 103); /* rgb(138, 45, 79); */
@@ -1697,7 +1698,7 @@ ul.messiahs-handbook p.quote-person {
   --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
 
   /* Variables for grid view */
-  --films-list-margin-left: 400px;
+  --films-list-margin-left: 480px;
   --film-poster-border-radius-gridview: 0px;
   --films-toplist-grid-items-per-row: 5;
   --films-toplist-grid-item-fixed-width: 170px;
@@ -1716,31 +1717,36 @@ ul.messiahs-handbook p.quote-person {
   --film-toplist-item-border-outer-color: rgb(2, 2, 2);
   --film-toplist-item-bg-color-hover: rgb(55, 55, 58);
   --film-toplist-item-bg-color-active: rgb(74, 75, 78);
-  --film-toplist-item-border-color-active: rgba(72, 73, 75, 0);
+  --film-toplist-item-border-color-active: rgba(21, 124, 150, 0);
 
   /* Film controls */
-  --films-controls-container-bg-color: var(--section-inner-bg-color);
-  --films-controls-btn-bg-color: rgb(56, 58, 60);
-  --films-controls-btn-bg-color-hover: rgb(62, 62, 69);
-  --films-controls-btn-bg-color-active: rgb(64, 67, 74);
+  --films-controls-subgroup-border-color: rgb(67, 70, 78);
+  --films-controls-container-bg-color: rgb(45, 47, 50);
   --films-controls-btn-text-color-active: var(--text);
-  --films-controls-dropdown-list-bg-color: rgba(80, 81, 88, 0.94);
+  --films-controls-btn-border-color-clicked: rgba(147, 153, 176, 0.689);
+  
+  --films-controls-btn-bg-color: rgb(56, 58, 60);
+  --films-controls-btn-bg-color-hover: rgb(66, 66, 70);
+  --films-controls-btn-bg-color-active: rgb(64, 67, 74);
+  
+  --films-controls-dropdown-list-bg-color: rgba(66, 67, 73, 0.946);
   --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
-  --films-controls-dropdown-list-item-bg-color-hover: rgba(122, 124, 133, 0.87);
   --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
+  --films-controls-dropdown-list-title-bottomborder: rgba(85, 91, 104, 0.687);
 
   /* Pagination buttons */
-  --films-pagination-btn-bg-color: var(var(--page-wrapper-bg));
-  --films-pagination-btn-bg-color-hover: rgb(65, 66, 70); /* rgb(65, 66, 70); */
-  --films-pagination-btn-bg-color-selected: rgb(69, 182, 141);
-  --films-pagination-btn-bg-color-active: rgb(31, 161, 104);
+  --films-pagination-btn-bg-color: rgb(62, 63, 66);
+  --films-pagination-btn-bg-color-hover: rgb(74, 75, 78); /* rgb(65, 66, 70); */
+  --films-pagination-btn-bg-color-active: var(--nice-green);
+  
   --films-pagination-btn-text-color-hover: var(--text);
   --films-pagination-btn-text-color-active: var(--text);
-  --films-pagination-btn-border-color: rgb(85, 81, 81);
-  --films-pagination-btn-border-color-hover: rgb(120, 117, 117);
-  --films-pagination-btn-bottomborder-color-active: rgb(56, 97, 7);
-  --films-pagination-btn-outer-border-color: rgb(0, 0, 0);
-  --films-pagination-btn-inner-border-color: rgb(31, 32, 34);
+  --films-pagination-btn-text-color-inactive: rgb(187, 189, 194);
+
+  --films-pagination-btn-border-color: rgb(42, 43, 44);
+  --films-pagination-btn-border-color-hover: rgb(42, 43, 44);
+  --films-pagination-btn-border-color-active: var(--films-controls-dropdown-active-item-bg-color);
+
   --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
 }
 
@@ -1750,6 +1756,7 @@ ul.messiahs-handbook p.quote-person {
   grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 185px);
   grid-gap: 70px 0px;
   margin-left: var(--films-list-margin-left);
+  padding-top: var(--vertical-gap-at-top-of-page);
 }
 
 .films-toplist.view-as-grid > .films-toplist-item {
@@ -1816,6 +1823,7 @@ ul.messiahs-handbook p.quote-person {
 /* #region ------------------------< 13.2 Toplist (as LIST with posters & screenshots) >------------------------ */
 .films-toplist.view-as-list {
   margin: 0 auto;
+  padding-top: 25px;
 }
 
 /* Layer above anchor tag */
@@ -1872,7 +1880,7 @@ ul.messiahs-handbook p.quote-person {
   opacity: 1.0;
   background-color: var(--film-toplist-item-bg-color);
   border-radius: var(--film-poster-border-radius-listview);
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   padding: 10px;
 }
 .films-toplist.view-as-list .films-toplist-item > a:hover {
@@ -1881,7 +1889,7 @@ ul.messiahs-handbook p.quote-person {
 }
 .films-toplist.view-as-list .films-toplist-item a:active {
   background-color: var(--film-toplist-item-bg-color-active);
-  border: 2px solid var(--film-toplist-item-border-color-active);
+  border: 1px solid var(--film-toplist-item-border-color-active);
   transition: all 0.1s ease;
 }
 
@@ -2052,7 +2060,6 @@ div.genre:hover {
 /* #region ------------------------< 13.3 Stuff common to list view or grid view >------------------------- */
 /* Applies to grid or list view... */
 .films-toplist-container > .films-toplist {
-  padding-top: var(--vertical-gap-at-top-of-page);
   transition: all 100ms ease;
 }
 
@@ -2101,38 +2108,27 @@ span.film-imdbDiffScore:active {
 
 
 /* #region ------------------------< 13.4 Film controls >------------------------ */
-/* ----------------------< Film controls >---------------------- */
-/* The entire container... */
 .films-controls {
-  /*display: none;*/
   position: fixed;
-  z-index: 999999;
   background-color: var(--films-controls-container-bg-color);
-  padding: 20px 20px;
-  /*text-align: center;*/
-  width: 70%;
-  margin-left: 240px;
-  /*
-  box-shadow: 0 18px 8px -4px rgba(0, 0, 0, 0.304);
-  background-color: var(--films-controls-container-bg-color);
-  */
+  padding: 8px;
+  margin: 40px 40px;
+  width: 350px;
+  border-radius: 10px;
 }
 
-/* A subgroup inside .film-controls */
 .films-controls-subgroup {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 20px;
-  /*
-  border-top: 1px dashed rgb(73, 76, 82);
+  display: block;
+  border-top: 1px dashed var(--films-controls-subgroup-border-color);
   border-radius: 10px;
   margin-bottom: 25px;
-  */
+  padding-top: 10px;
+  text-align: center;
 }
-.films-controls-subgroup.filtering-container {
-  /*
-  margin-bottom: 110px;
-  */
+
+.films-controls-subgroup.pagination-container,
+.films-controls-subgroup.changeViewOfToplist-container {
+  padding: 10px 50px;
 }
 
 /* Title of subgroup */
@@ -2148,8 +2144,21 @@ span.film-imdbDiffScore:active {
   font-size: 0.95rem;
 }
 
+/* Button inside films-controls */
+.films-controls div.btn {
+  outline: none !important;
+  transition: all 100ms ease;
+  color: var(--text);
+}
+.films-controls div.btn:not(.active):hover {
+  background-color: var(--films-controls-btn-bg-color-hover);
+}
+.films-controls div.btn.active {
+  color: var(--films-controls-btn-text-color-active) !important;
+  background-color: var(--nice-green);
+}
 
-/* -----------------< Dropdown list button >-----------------*/
+/* #region -----------------< Dropdown list button >----------------- */
 .dropdown-list:not(.visible) {
   display: none;
 }
@@ -2165,7 +2174,7 @@ span.film-imdbDiffScore:active {
 .dropdown-list-btn {
   border-radius: 5px;
   font-size: 0.9rem;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   background-color: var(--films-controls-btn-bg-color);
   width: 180px;
   padding: 5px;
@@ -2178,7 +2187,7 @@ span.film-imdbDiffScore:active {
   background-color: var(--films-controls-btn-bg-color-hover);
 }
 .dropdown-list-btn:active {
-  border: 2px solid var(--films-controls-btn-bg-color-active);
+  border: 3px solid var(--films-controls-btn-bg-color-active);
 }
 .dropdown-list-btn.list-is-visible {
   background-color: var(--films-controls-btn-bg-color-active);
@@ -2228,7 +2237,7 @@ span.film-imdbDiffScore:active {
   text-align: center;
   font-size: 0.8rem;
   padding-bottom: 5px;
-  border-bottom: 1px solid rgb(105, 107, 111);
+  border-bottom: 2px solid var(--films-controls-dropdown-list-title-bottomborder);
 }
 .dropdown-list > div:nth-child(2) {
   margin-top: 10px;
@@ -2236,23 +2245,15 @@ span.film-imdbDiffScore:active {
 
 /* Why the fuck is the languages dropdown not in the right place!?! */
 .dropdown-list-languages {
+  /* 
   right: 268px;
+  */
+  top: 214px;
 }
+/* #endregion */
 
-/* -----------------< Sort buttons >-----------------*/
-.films-controls div.btn {
-  outline: none !important;
-  transition: all 200ms ease-in-out;
-  color: var(--text);
-}
-.films-controls div.btn:hover {
-  background-color: var(--films-controls-btn-bg-color-hover);
-}
-.films-controls div.btn.active {
-  color: var(--films-controls-btn-text-color-active) !important;
-  background-color: var(--films-controls-dropdown-active-item-bg-color);
-}
 
+/* #region -----------------< Sort buttons >----------------- */
 .sort-direction-btns {
   margin-left: 10px;
 }
@@ -2261,11 +2262,11 @@ span.film-imdbDiffScore:active {
   border: 2px solid transparent;
 }
 .sort-direction-btns div.btn.active {
-  background-color: var(--films-pagination-btn-bg-color-active);
+  background-color: var(--nice-green);
 }
 .sort-direction-btns div.btn:not(.active):active,
 .changeViewOfToplist-btns div.btn:not(.active):active {
-  border: 2px solid rgba(147, 153, 176, 0.689);
+  border: 2px solid var(--films-controls-btn-border-color-clicked);
 }
 .sort-direction-btns div.btn:not(.active) {
   background-color: var(--films-controls-btn-bg-color);
@@ -2290,8 +2291,13 @@ span.film-imdbDiffScore:active {
 .sort-type-btns .beside-dropdown-btn {
   margin-top: 2px;
 }
+/* #endregion */
 
-/* -----------------< Filter buttons >-----------------*/
+
+/* #region -----------------< Filter buttons >-----------------*/
+.filtering-container {
+  margin-bottom: 70px;
+}
 .filtering-container > .filter-by-something-container  {
   display: inline;
 }
@@ -2317,12 +2323,12 @@ div.btn.films-reset-filters-btn svg {
   margin-top: 41px;
 }
 */
+/* #endregion */
 
 
-/* -----------------< View as list or grid buttons >-----------------*/
+/* #region -----------------< View as list or grid buttons >-----------------*/
 .changeViewOfToplist-container {
   display: block;
-  padding-top: 20px;
 }
 .changeViewOfToplist-container div.btn {
   padding: 3px 7px !important;
@@ -2345,8 +2351,10 @@ div.btn.films-reset-filters-btn svg {
 .changeViewOfToplist-container svg:hover {
   fill: none;
 }
+/* #endregion */
 
 
+/* #region -----------------< More stuff >----------------- */
 /* Stuff next to a dropdown btn */
 .dropdown-list-btn,
 .beside-dropdown-btn {
@@ -2373,98 +2381,47 @@ div.btn.films-reset-filters-btn svg {
 .films-container div.searchbox > input {
   width: 300px;
 }
+/* #endregion */
 
 
-/* ----------------< Pagination >------------------ */
+/* #endregion */
+
+
+/* #region ------------------------< 13.5 Pagination buttons >------------------------ */
 .pagination-container {
   margin: 0 auto;
 }
 .pagination-btns {
   list-style: none;
   list-style-type: none;
-  margin-top: -45px;
-  margin-left: 130px;
+  display: grid;
+  grid-template-columns: repeat(2, calc(100px + 10px));
+  grid-gap: 0px;
+  padding: 0;
 }
 
-.pagination-btns li.previous-btn a,
-.pagination-btns li.next-btn a {
-  display: flex;
-  text-align: center;
-  padding: 5px;
-  margin-right: 10px;
-  width: 120px;
-  font-weight: bold;
-  border-radius: 10px;
-  border: 2px solid var(--films-pagination-btn-border-color);
-  color: var(--text) !important;
-  cursor: pointer;
-  display: inline-block;
-  user-select: none;
-}
-.pagination-btns li:not(.pagination-disabled) a {
-  background-color: var(--films-pagination-btn-bg-color);
-}
 /* Actual page navigation buttons */
 .pagination-btns li:not(.previous-btn):not(.next-btn) {
-  display: inline-block;
-  background-color: #363638;
-  border-top: 1px solid var(--films-pagination-btn-outer-border-color);
-  border-bottom: 1px solid var(--films-pagination-btn-outer-border-color);
-  border-right: 2px solid var(--films-pagination-btn-inner-border-color);
-  padding: 6px 0;
-}
-/* Left border on first pagination button */
-.pagination-btns li:nth-child(2) {
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-left: 1px solid var(--films-pagination-btn-outer-border-color);
-}
-.pagination-btns li:nth-child(2) a {
-  margin-left: 1px;
-}
-/* right border on last pagination button */
-.pagination-btns li:not(.previous-btn):not(.next-btn):nth-last-child(2) {
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-right: 1px solid var(--films-pagination-btn-outer-border-color);
+  margin-bottom: 5px;
 }
 .pagination-btns li:not(.previous-btn):not(.next-btn) a {
-  padding: 7px;
-  border-radius: 50px;
-  border: 1px solid transparent;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+  border-radius: 8px;
+  border: 2px solid var(--films-pagination-btn-border-color);
+  background-color: var(--films-pagination-btn-bg-color);
   user-select: none;
 }
+
 .pagination-btns li:not(.pagination-active):not(.previous-btn):not(.next-btn) a:hover {
-  border: 1px solid rgb(40, 40, 42);
+  border: 2px solid var(--films-pagination-btn-border-color-hover);
   background-color: var(--films-pagination-btn-bg-color-hover);
 }
 .pagination-btns li:not(.pagination-active):not(.previous-btn):not(.next-btn) a {
-  color: rgb(133, 120, 120) !important;
+  color: var(--films-pagination-btn-text-color-inactive) !important;
 }
-.pagination-btns li:not(.previous-btn):not(.next-btn):first-child {
-  border-top-left-radius: 10px;
-}
-/*
-.pagination-btns li.previous-btn,
-.pagination-btns li.next-btn {
-  display: none;
-}*/
-/* Move these buttons to bottom of page.... Horrendous */
-.pagination-btns li.previous-btn {
-  position: fixed;
-  margin-top: 279px;
-  margin-left: -20px;
-}
-.pagination-btns li.next-btn {
-  position: fixed;
-  margin-top: 279px;
-  margin-left: 155px;
-}
-.pagination-btns li.previous-btn,
-.pagination-btns li.next-btn {
-  display: none;
-}
-
 
 .pagination-btns li a:hover {
   color: var(--films-pagination-btn-text-color-hover) !important;
@@ -2472,11 +2429,14 @@ div.btn.films-reset-filters-btn svg {
   opacity: 1;
 }
 .pagination-btns li.pagination-active a {
-  background-color: var(--films-pagination-btn-bg-color-active);
+  background-color: var(--films-pagination-btn-bg-color-active) !important;
   color: var(--films-pagination-btn-text-color-active) !important;
-  border-bottom: 5px solid var(--films-pagination-btn-bottomborder-color-active) !important;
+  border: 2px solid var(--nice-green) !important;
   transition: all 100ms ease-in-out;
   opacity: 1;
+}
+.pagination-btns li.pagination-active a:active {
+  border: 2px solid var(--films-controls-btn-border-color-clicked);
 }
 
 .pagination-btns li:not(.pagination-disabled).previous-btn a:hover,
@@ -2494,6 +2454,17 @@ div.btn.films-reset-filters-btn svg {
   border: 2px solid rgba(169, 162, 162, 0.185);
   color: rgb(101, 105, 116) !important;
   cursor: not-allowed;
+}
+
+.pagination-btns li.previous-btn {
+  position: fixed;
+  margin-top: 279px;
+  margin-left: -20px;
+}
+.pagination-btns li.next-btn {
+  position: fixed;
+  margin-top: 279px;
+  margin-left: 155px;
 }
 
 /* #endregion */
@@ -3071,7 +3042,7 @@ div.btn.films-reset-filters-btn svg {
     border-radius: 5px;
   }
   .pagination-btns li.pagination-active a {
-    border-bottom: 3px solid var(--films-pagination-btn-bottomborder-color-active) !important;
+    border-bottom: 3px solid var(--films-pagination-btn-border-color-active) !important;
   }
   /* #endregion */
 

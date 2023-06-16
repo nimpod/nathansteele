@@ -1,0 +1,135 @@
+:root {
+    /* Pagination buttons */
+    --films-pagination-btn-bg-color: rgb(77, 78, 81);
+    --films-pagination-btn-bg-color-hover: rgb(65, 66, 70); /* rgb(65, 66, 70); */
+    --films-pagination-btn-bg-color-selected: rgb(69, 182, 141);
+    --films-pagination-btn-bg-color-active: rgb(31, 161, 104);
+    
+    --films-pagination-btn-text-color-hover: var(--text);
+    --films-pagination-btn-text-color-active: var(--text);
+    --films-pagination-btn-text-color-inactive: rgb(187, 189, 194);
+  
+    --films-pagination-btn-border-color: rgb(85, 81, 81);
+    --films-pagination-btn-border-color-hover: rgb(31, 28, 28);
+    --films-pagination-btn-bottomborder-color-active: rgb(56, 97, 7);
+  
+    --films-pagination-btn-outer-border-color: rgb(35, 36, 40);
+    --films-pagination-btn-inner-border-color: rgb(31, 32, 34);
+  
+    --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89); 
+}
+
+/* #region ------------------------< 13.5 Pagination buttons >------------------------ */
+
+
+.pagination-btns li.previous-btn a,
+.pagination-btns li.next-btn a {
+  display: flex;
+  text-align: center;
+  padding: 5px;
+  margin-right: 10px;
+  width: 120px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid var(--films-pagination-btn-border-color);
+  color: var(--text) !important;
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+}
+.pagination-btns li:not(.pagination-disabled) a {
+  background-color: var(--films-pagination-btn-bg-color);
+}
+/* Actual page navigation buttons */
+.pagination-btns li:not(.previous-btn):not(.next-btn) {
+  display: inline-block;
+  background-color: #363638;
+  border-top: 1px solid var(--films-pagination-btn-outer-border-color);
+  border-bottom: 1px solid var(--films-pagination-btn-outer-border-color);
+  border-right: 2px solid var(--films-pagination-btn-inner-border-color);
+  padding: 6px 0;
+}
+/* Left border on first pagination button */
+.pagination-btns li:nth-child(2) {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-left: 1px solid var(--films-pagination-btn-outer-border-color);
+}
+.pagination-btns li:nth-child(2) a {
+  margin-left: 1px;
+}
+/* right border on last pagination button */
+.pagination-btns li:not(.previous-btn):not(.next-btn):nth-last-child(2) {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-right: 1px solid var(--films-pagination-btn-outer-border-color);
+}
+.pagination-btns li:not(.previous-btn):not(.next-btn) a {
+  padding: 7px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  user-select: none;
+}
+.pagination-btns li:not(.pagination-active):not(.previous-btn):not(.next-btn) a:hover {
+  border: 1px solid rgb(40, 40, 42);
+  background-color: var(--films-pagination-btn-bg-color-hover);
+}
+.pagination-btns li:not(.pagination-active):not(.previous-btn):not(.next-btn) a {
+  color: rgb(133, 120, 120) !important;
+}
+.pagination-btns li:not(.previous-btn):not(.next-btn):first-child {
+  border-top-left-radius: 10px;
+}
+/*
+.pagination-btns li.previous-btn,
+.pagination-btns li.next-btn {
+  display: none;
+}*/
+/* Move these buttons to bottom of page.... Horrendous */
+.pagination-btns li.previous-btn {
+  position: fixed;
+  margin-top: 279px;
+  margin-left: -20px;
+}
+.pagination-btns li.next-btn {
+  position: fixed;
+  margin-top: 279px;
+  margin-left: 155px;
+}
+.pagination-btns li.previous-btn,
+.pagination-btns li.next-btn {
+  display: none;
+}
+
+
+.pagination-btns li a:hover {
+  color: var(--films-pagination-btn-text-color-hover) !important;
+  border: 2px solid var(--films-pagination-btn-border-color-hover);
+  opacity: 1;
+}
+.pagination-btns li.pagination-active a {
+  background-color: var(--films-pagination-btn-bg-color-active);
+  color: var(--films-pagination-btn-text-color-active) !important;
+  border-bottom: 5px solid var(--films-pagination-btn-bottomborder-color-active) !important;
+  transition: all 100ms ease-in-out;
+  opacity: 1;
+}
+
+.pagination-btns li:not(.pagination-disabled).previous-btn a:hover,
+.pagination-btns li:not(.pagination-disabled).next-btn a:hover,
+.pagination-btns li.previous-btn.pagination-active a,
+.pagination-btns li.next-btn.pagination-active a {
+  color: var(--text) !important;
+  background-color: var(--films-pagination-nextandprevious-btns-bg-color);
+}
+
+/* Modify styles of a disabled button (applies only to .previous-btn, and next-btn) */
+.pagination-btns li.pagination-disabled a,
+.pagination-btns li.pagination-disabled:hover a {
+  background-color: var(--page-wrapper-bg);
+  border: 2px solid rgba(169, 162, 162, 0.185);
+  color: rgb(101, 105, 116) !important;
+  cursor: not-allowed;
+}
+
+/* #endregion */

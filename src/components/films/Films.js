@@ -705,8 +705,6 @@ class Films extends React.Component {
                                         }
                                     </div>
                                 </div>
-                            </div>
-                            <div className='films-controls-subgroup resetFilters-container'>
                                 <div className="btn films-reset-filters-btn" 
                                     onClick={(e) => this.resetFilters(e)}
                                     title="Reset filters">
