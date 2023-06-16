@@ -194,8 +194,7 @@ def regenerate_json_file():
                 poster_url = ""
                 
                 # parse data from letterboxd web page... (this takes ~1.21s)
-                headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36' }
-                page = session.get(url=letterboxd_url, verify=False, stream=True, headers=headers)
+                page = session.get(url=letterboxd_url, verify=False, stream=True)
                 soup = BeautifulSoup(page.content, 'html.parser')
                 
                 # retrieve list of genres...

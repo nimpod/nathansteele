@@ -2229,7 +2229,7 @@ const initState = {
                 require('./websiteContent/films/big_fish_and_begonia/screenshot5.webp'),
                 require('./websiteContent/films/big_fish_and_begonia/screenshot35.webp'),
             ],
-            "gradualInterest": [8, 9, 9, 9, 8, 7, 8, 8, 9, 9],
+            "gradualInterest": [8, 9, 9, 9, 8, 7, 8, 9, 10, 9],
             "customPosterUrl": require('./websiteContent/films/big_fish_and_begonia/custom_poster.webp')
         },
         {
@@ -2425,6 +2425,19 @@ const initState = {
             "myTags": [],
             "myReview": "",
             "gradualInterest": [6, 6, 7, 7, 7, 8, 8, 9, 9, 9, 9]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/2M6k",
+            "title": "Children Who Chase Lost Voices",
+            "myRating": "8.3",
+            "myTags": [],
+            "myReview": "",
+            "screenshots": [
+                require('./websiteContent/films/children_who_chase_lost_voices/screenshot1.webp'),
+                require('./websiteContent/films/children_who_chase_lost_voices/screenshot2.webp'),
+                require('./websiteContent/films/children_who_chase_lost_voices/screenshot3.webp'),
+            ],
+            "gradualInterest": [7, 8, 8, 8, 8, 8, 8, 9, 8, 8, 9, 8]
         }
     ]
 }

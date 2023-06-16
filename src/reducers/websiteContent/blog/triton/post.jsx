@@ -5,8 +5,7 @@ export const post = (screenshots) => (
         <div className='intro-text blog-subsection' id='section1'>
             <h3 className='subgroup-title'></h3>
             <p><b>Triton</b> is the largest moon of Neptune, the 7th largest moon in the Solar System.</p>
-            <p>The mysterious moon contains a <b>geothermally heated sub-surface ocean</b>, the moon is geologically active with cryovolcanoes meaning the surface is constantly reshaping,
-                <b>geysers</b> are spewing out water vapor 8km above the surface, and frosty nitrogen snow covers the moons icy surface.</p>
+            <p>The mysterious moon contains a <b>geothermally heated sub-surface ocean</b>, the moon is geologically active with cryovolcanoes meaning the surface is constantly reshaping, <b>geysers</b> are spewing out water vapor 8km above the surface, and frosty nitrogen snow covers the moons icy surface.</p>
             <picture className="img">
                 <img width="600" height="400" src="https://www.thefactsite.com/wp-content/uploads/2019/10/triton-facts.jpg" alt='' />
             </picture>

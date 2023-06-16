@@ -263,11 +263,6 @@
   --svg-color-hover: rgb(227, 229, 231);
   --svg-icon-invert-percentage: 0%;
 
-  --scrollbar-clickybit-bg-color: rgb(119, 127, 138);
-  --scrolbar-notclickybit-bg-color: rgb(239, 234, 234); 
-  --scrollbar-thumb-bg-color-tags: rgb(179, 179, 179);
-  --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(218, 217, 217) */
-
   --caret-color: rgb(35, 32, 32);
 }
 
@@ -450,11 +445,6 @@
   --svg-color: rgb(192, 192, 192);
   --svg-color-hover: rgb(255, 255, 255);
   --svg-icon-invert-percentage: 100%;
-
-  --scrollbar-clickybit-bg-color: rgba(78, 88, 87, 0.92);
-  --scrolbar-notclickybit-bg-color: var(--page-wrapper-bg);
-  --scrollbar-thumb-bg-color-tags: rgb(80, 80, 80);
-  --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */
 }
 /* #endregion */
 
@@ -1716,10 +1706,10 @@ ul.messiahs-handbook p.quote-person {
   --films-toplist-item-bg-color-hover: rgb(47, 48, 52);
 
   /* Variables for list view */
+  --films-toplist-list-item-fixed-width: 850px;
   --film-poster-border-radius-listview: 15px;
   --films-toplist-list-item-poster-fixed-height: 450px;
   --vertical-gap-between-filmtoplistitems: 30px;
-  --films-toplist-list-item-fixed-width: 800px;
   --film-toplist-item-border-inner-width: 3px;
   --film-toplist-item-border-outer-width: 2px;
   --film-toplist-item-images-border-inner-color: rgb(0, 0, 0);
@@ -1754,7 +1744,7 @@ ul.messiahs-handbook p.quote-person {
   --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
 }
 
-/* #region ------------------------< 13.1 Toplist (as grid with posters only) >------------------------ */
+/* #region ------------------------< 13.1 Toplist (as GRID with posters only) >------------------------ */
 .films-toplist.view-as-grid {
   display: grid;
   grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 185px);
@@ -1823,7 +1813,7 @@ ul.messiahs-handbook p.quote-person {
 /* #endregion */
 
 
-/* #region ------------------------< 13.2 Toplist (as list with posters & screenshots) >------------------------ */
+/* #region ------------------------< 13.2 Toplist (as LIST with posters & screenshots) >------------------------ */
 .films-toplist.view-as-list {
   margin: 0 auto;
 }
@@ -3289,17 +3279,46 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region ----------------------------------<15: SCROLLBARS>------------------------------------------ */
 
+:root {
+  --scrollbar-clickybit-bg-color: rgb(120, 142, 125);
+  --scrollbar-clickybit-bg-color-hover: rgb(99, 175, 142);
+  --scrollbar-clickybit-bg-color-active: rgb(36, 158, 105);
+  --scrollbar-notclickybit-bg-color: var(--section-inner-bg-color);
+  --scrollbar-thumb-bg-color-tags: rgb(179, 179, 179);
+  --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(218, 217, 217) */
+}
+
+[data-theme="dark"] {
+  --scrollbar-clickybit-bg-color: rgba(102, 106, 110, 0.92);
+  --scrollbar-clickybit-bg-color-hover: rgb(134, 137, 135);
+  --scrollbar-clickybit-bg-color-active: rgb(23, 151, 87);
+  --scrollbar-notclickybit-bg-color: var(--section-inner-bg-color);
+  --scrollbar-thumb-bg-color-tags: rgb(80, 80, 80);
+  --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */
+}
+
+
 /* Styles for custom scrollbar in Chrome... */
 body::-webkit-scrollbar-track{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #000000;
 }
 body::-webkit-scrollbar{
-	width: 6px;
-	background-color: #b72323;
+	width: 12px;
+  background: var(--scrollbar-notclickybit-bg-color);
 }
 body::-webkit-scrollbar-thumb{
-	background-color: #292727;
+  background: var(--scrollbar-clickybit-bg-color);
+  -webkit-border-radius: 0.0ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.942);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-clickybit-bg-color-hover);
+}
+body::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-clickybit-bg-color-active);
+}
+body::-webkit-scrollbar-corner {
+  background: rgb(0, 0, 0);
 }
 
 #top-films-list::-webkit-scrollbar-track {
@@ -3325,11 +3344,11 @@ body::-webkit-scrollbar-thumb{
 
 
 /* Styles for custom scrollbar in Firefox.... */
-
 :root {
-  scrollbar-color: var(--scrollbar-clickybit-bg-color) var(--scrolbar-notclickybit-bg-color) !important;
-  scrollbar-width: thin !important;
+  scrollbar-color: var(--scrollbar-clickybit-bg-color) var(--scrollbar-notclickybit-bg-color) !important;
+  scrollbar-width: thin;
 }
+
 .tags::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb-bg-color-tags) !important;
 }
