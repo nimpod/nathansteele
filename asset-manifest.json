@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/nathansteele/static/css/main.220c98ed.chunk.css",
-    "main.js": "/nathansteele/static/js/main.017ac08f.chunk.js",
-    "main.js.map": "/nathansteele/static/js/main.017ac08f.chunk.js.map",
+    "main.css": "/nathansteele/static/css/main.4bcf6745.chunk.css",
+    "main.js": "/nathansteele/static/js/main.fbfb9c68.chunk.js",
+    "main.js.map": "/nathansteele/static/js/main.fbfb9c68.chunk.js.map",
     "runtime-main.js": "/nathansteele/static/js/runtime-main.a2f3e498.js",
     "runtime-main.js.map": "/nathansteele/static/js/runtime-main.a2f3e498.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/nathansteele/static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.f9976ab5.chunk.js": "/nathansteele/static/js/2.f9976ab5.chunk.js",
     "static/js/2.f9976ab5.chunk.js.map": "/nathansteele/static/js/2.f9976ab5.chunk.js.map",
     "index.html": "/nathansteele/index.html",
-    "precache-manifest.20b551d453c0384f42372f58d9f2623f.js": "/nathansteele/precache-manifest.20b551d453c0384f42372f58d9f2623f.js",
+    "precache-manifest.9a7cc0a904afdad716837839d58cccdb.js": "/nathansteele/precache-manifest.9a7cc0a904afdad716837839d58cccdb.js",
     "service-worker.js": "/nathansteele/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/nathansteele/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.220c98ed.chunk.css.map": "/nathansteele/static/css/main.220c98ed.chunk.css.map",
+    "static/css/main.4bcf6745.chunk.css.map": "/nathansteele/static/css/main.4bcf6745.chunk.css.map",
     "static/js/2.f9976ab5.chunk.js.LICENSE.txt": "/nathansteele/static/js/2.f9976ab5.chunk.js.LICENSE.txt",
     "static/media/arrowDown.99634c62.svg": "/nathansteele/static/media/arrowDown.99634c62.svg",
     "static/media/arrowLeft.dcf9277b.svg": "/nathansteele/static/media/arrowLeft.dcf9277b.svg",
@@ -24,6 +24,7 @@
     "static/media/bobomb.jpg": "/nathansteele/static/media/bobomb.9a12ebd2.jpg",
     "static/media/calendar.cd18b83b.svg": "/nathansteele/static/media/calendar.cd18b83b.svg",
     "static/media/casiobasic.png": "/nathansteele/static/media/casiobasic.4c17871b.png",
+    "static/media/controls.025c722c.svg": "/nathansteele/static/media/controls.025c722c.svg",
     "static/media/cross.edf2351a.svg": "/nathansteele/static/media/cross.edf2351a.svg",
     "static/media/custom_poster.webp": "/nathansteele/static/media/custom_poster.fc308323.webp",
     "static/media/custom_poster.jpg": "/nathansteele/static/media/custom_poster.fa9886a0.jpg",
@@ -75,7 +76,7 @@
     "static/js/runtime-main.a2f3e498.js",
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.f9976ab5.chunk.js",
-    "static/css/main.220c98ed.chunk.css",
-    "static/js/main.017ac08f.chunk.js"
+    "static/css/main.4bcf6745.chunk.css",
+    "static/js/main.fbfb9c68.chunk.js"
   ]
 }
