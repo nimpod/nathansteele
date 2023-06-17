@@ -2453,6 +2453,14 @@ const initState = {
             ],
             "customPosterUrl": require('./websiteContent/films/zoe/custom_poster.webp')
         },
+        {
+            "letterboxdUrl": "https://boxd.it/5Ymq",
+            "title": "The Garden of Words",
+            "myRating": "8.0",
+            "myTags": ["Soulmate", "Nature", "Rain", "Detailed animation"],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 8]
+        },
     ]
 }
 
