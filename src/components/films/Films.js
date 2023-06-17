@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
 import { ReactComponent as ArrowLeftIcon } from "../../icons/arrowLeft.svg";
+import { ReactComponent as ControlsIcon } from "../../icons/controls.svg";
 import { ReactComponent as SortAscendingIcon } from "../../icons/sortAscending.svg";
 import { ReactComponent as SortDescendingIcon } from "../../icons/sortDescending.svg";
 import { ReactComponent as ViewAsListIcon } from "../../icons/showList.svg";
@@ -519,6 +520,21 @@ class Films extends React.Component {
     }
 
     /**
+     * 
+     * @param {*} e 
+     */
+    toggleControls = (e) => {
+        let toggleControlsBtn = document.getElementsByClassName('toggle-controls-btn')[0];
+        let filmsControls = document.getElementsByClassName('films-controls')[0];
+
+        if (filmsControls.classList.contains('visible')) {
+            filmsControls.classList.remove('visible');
+        } else {
+            filmsControls.classList.add('visible');
+        }
+    }
+
+    /**
      * Content rendered to screen
      */
     render() {
@@ -743,6 +759,9 @@ class Films extends React.Component {
                                     */
                                 />
                             </div>
+                        </div>
+                        <div class='toggle-controls-btn' onClick={this.toggleControls}>
+                            <ControlsIcon className='invertable-icon' />
                         </div>
                         <div className={`films-toplist-container`}>
                             <div className={`films-toplist ${viewTypeClassname}`}>

@@ -2438,7 +2438,21 @@ const initState = {
                 require('./websiteContent/films/children_who_chase_lost_voices/screenshot3.webp'),
             ],
             "gradualInterest": [7, 8, 8, 8, 8, 8, 8, 9, 8, 8, 9, 8]
-        }
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/gml2",
+            "title": "Zoe",
+            "myRating": "8.5",
+            "myTags": ["Soulmate", "AI", "Great cinematography", "Great soundtrack"],
+            "myReview": "",
+            "gradualInterest": [6, 8, 9, 9, 9, 8, 7, 7, 8, 8, 9],
+            "screenshots": [
+                require('./websiteContent/films/zoe/screenshot5.webp'),
+                require('./websiteContent/films/zoe/screenshot2.webp'),
+                require('./websiteContent/films/zoe/screenshot4.webp'),
+            ],
+            "customPosterUrl": require('./websiteContent/films/zoe/custom_poster.webp')
+        },
     ]
 }
 

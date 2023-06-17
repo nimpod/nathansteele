@@ -335,7 +335,7 @@
   --blog-td-divider-color: rgba(166, 166, 193, 0.183);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
-  --blog-table-row-bg-hover: rgb(18, 18, 22);
+  --blog-table-row-bg-hover: rgb(27, 27, 31);
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
   --blog-table-header-bottom-shadow-color: rgba(0, 0, 0, 0.304);
@@ -980,13 +980,14 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
   position: fixed;
   top: 0px;
   z-index: 999999;
-  background-color: var(--films-controls-container-bg-color);
-  border-bottom: 0.15rem dashed var(--blog-table-border);
+  /*
   box-shadow: 0 21px 8px -4px var(--blog-table-header-bottom-shadow-color);
+  */
 }
 .posts-container > .posts-header-container > .posts-header {
   background-color: var(--section-inner-bg-color);
-  margin-top: 20px;
+  padding-top: 20px;
+  border-bottom: 0.1rem dashed var(--blog-table-border);
 }
 
 /* #endregion */
@@ -1678,9 +1679,6 @@ ul.messiahs-handbook p.quote-person {
   }
 }
 
-.films-toplist-container {
-  padding-bottom: 80px;
-}
 
 
 :root {
@@ -1709,7 +1707,7 @@ ul.messiahs-handbook p.quote-person {
   /* Variables for list view */
   --films-toplist-list-item-fixed-width: 850px;
   --film-poster-border-radius-listview: 15px;
-  --films-toplist-list-item-poster-fixed-height: 450px;
+  --films-toplist-list-item-poster-fixed-height: 470px;
   --vertical-gap-between-filmtoplistitems: 30px;
   --film-toplist-item-border-inner-width: 3px;
   --film-toplist-item-border-outer-width: 2px;
@@ -1726,11 +1724,12 @@ ul.messiahs-handbook p.quote-person {
   --films-controls-btn-border-color-clicked: rgba(147, 153, 176, 0.689);
   
   --films-controls-btn-bg-color: rgb(56, 58, 60);
-  --films-controls-btn-bg-color-hover: rgb(66, 66, 70);
+  --films-controls-btn-bg-color-hover: rgb(69, 69, 72);
   --films-controls-btn-bg-color-active: rgb(64, 67, 74);
   
   --films-controls-dropdown-list-bg-color: rgba(66, 67, 73, 0.946);
   --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
+  --films-controls-dropdown-item-bg-color-hover: rgb(51, 53, 54);
   --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
   --films-controls-dropdown-list-title-bottomborder: rgba(85, 91, 104, 0.687);
 
@@ -1754,9 +1753,10 @@ ul.messiahs-handbook p.quote-person {
 .films-toplist.view-as-grid {
   display: grid;
   grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 185px);
-  grid-gap: 70px 0px;
+  grid-gap: 90px 0px;
   margin-left: var(--films-list-margin-left);
   padding-top: var(--vertical-gap-at-top-of-page);
+  padding-bottom: 120px;
 }
 
 .films-toplist.view-as-grid > .films-toplist-item {
@@ -1810,10 +1810,10 @@ ul.messiahs-handbook p.quote-person {
 }
 
 .films-toplist.view-as-grid div.film-dataContainer.myData > span {
-  display: none;
-  padding: 2px 5px;
-  font-weight: bold;
-  font-size: 0.70rem;
+  padding: 1px 4px;
+  text-align: center;
+  display: inline-block;
+  font-size: 0.65rem;
   cursor: pointer;
   user-select: none;
 }
@@ -1824,6 +1824,7 @@ ul.messiahs-handbook p.quote-person {
 .films-toplist.view-as-list {
   margin: 0 auto;
   padding-top: 25px;
+  padding-bottom: 20px;
 }
 
 /* Layer above anchor tag */
@@ -2128,7 +2129,7 @@ span.film-imdbDiffScore:active {
 
 .films-controls-subgroup.pagination-container,
 .films-controls-subgroup.changeViewOfToplist-container {
-  padding: 10px 50px;
+  padding: 10px 60px;
 }
 
 /* Title of subgroup */
@@ -2204,7 +2205,7 @@ span.film-imdbDiffScore:active {
   width: 11px;
 }
 
-.dropdown-list div.btn {
+.dropdown-list > div.btn {
   width: 170px;
   background-color: var(--films-controls-dropdown-list-btn-bg-color);
   padding: 3px 10px;
@@ -2215,7 +2216,10 @@ span.film-imdbDiffScore:active {
   display: block;
   font-size: 0.80rem;
 }
-.dropdown-list div.btn.active {
+.dropdown-list > div.btn:not(.active):hover {
+  background-color: var(--films-controls-dropdown-item-bg-color-hover);
+}
+.dropdown-list > div.btn.active {
   
 }
 .dropdown-list-btn > svg {
@@ -2355,6 +2359,7 @@ div.btn.films-reset-filters-btn svg {
 
 
 /* #region -----------------< More stuff >----------------- */
+
 /* Stuff next to a dropdown btn */
 .dropdown-list-btn,
 .beside-dropdown-btn {
@@ -2380,6 +2385,25 @@ div.btn.films-reset-filters-btn svg {
 /* Search bar in films */
 .films-container div.searchbox > input {
   width: 300px;
+}
+
+.toggle-controls-btn {
+  display: none;
+  background-color: #3d3d41;
+  border-radius: 30px;
+  width: 28px;
+  cursor: pointer;
+}
+.toggle-controls-btn:hover {
+  background-color: #464b4c;
+}
+.toggle-controls-btn:hover svg {
+  fill: none;
+}
+.toggle-controls-btn svg {
+  width: 28px;
+  height: 28px;
+  padding: 1px;
 }
 /* #endregion */
 
@@ -2984,13 +3008,23 @@ div.btn.films-reset-filters-btn svg {
   .films-controls {
     top: 0;
   }
-  .films-toplist,
-  .films-controls {
+  .films-toplist {
     margin-left: 0px !important;
   }
-  .films-controls {
+  .films-controls:not(.visible) {
+    display: none;
     padding: 0px 15px;
     width: 100%;
+  }
+  .toggle-controls-btn {
+    display: block;
+  }
+  .films-controls.visible {
+    margin: 0;
+    height: 90%;
+    width: 100%;
+    border-radius: 0px;
+    margin-top: 50px;
   }
   .films-controls .pagination-btns {
     font-size: .75rem;
@@ -3018,15 +3052,30 @@ div.btn.films-reset-filters-btn svg {
     grid-template-columns: repeat(4, 70px) !important;
     grid-gap: 40px 40px;
   }
-  .films-toplist > .films-toplist-item {
-    width: calc(var(--films-toplist-grid-item-fixed-width) * 0.6) !important;
-    height: calc(var(--films-toplist-grid-item-fixed-height) * 0.6) !important;
+  .films-toplist.view-as-list .films-toplist-item > a {
+    width: fit-content;
+  }
+  .films-toplist.films-toplist.view-as-list .film-poster {
+    height: 300px;
+  }
+  .film-screenshots {
+    height: calc(300px / 3);
+  }
+  .films-toplist.view-as-list div.films-toplist-item > a > div.film-details {
+    padding: 0px 5px;
   }
   .films-toplist .film-details > p {
     font-size: 0.6rem !important;
   }
-  .films-toplist div.myData {
-    display: none;
+  .films-toplist.view-as-list div.film-details span.film-title {
+    font-size: 1.2rem;
+  }
+  .films-toplist.view-as-list div.film-dataContainer.myData {
+    margin-top: -10px;
+  }
+  .films-toplist.view-as-list div.film-dataContainer.myData > span {
+    font-size: 1.5rem;
+    padding: 2px 4px;
   }
   .films-controls .dropdown-list-btn {
     width: 130px !important;
