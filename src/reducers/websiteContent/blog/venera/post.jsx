@@ -1,5 +1,6 @@
 import React  from 'react';
 
+
 export const post = (veneraAudioRecording) => (
     <div>
         <div className='intro-text blog-subsection' id='section1'>

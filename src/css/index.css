@@ -150,16 +150,6 @@
   --project-card-text-hover: rgb(94, 93, 93);
   --project-card-text-color: rgb(0, 0, 0);
 
-  --blog-table-bg: var(--page-wrapper-bg);
-  --blog-table-thead-bg: rgb(229, 229, 229);
-  --blog-table-border: rgba(0, 0, 0, 0.202);
-  --blog-td-divider-color: rgba(52, 49, 49, 0.192);
-  --blog-table-text: rgb(3, 2, 2);
-  --blog-table-text-hover: var(--text);
-  --blog-table-row-bg-hover: rgb(224, 228, 231);
-  --blog-table-tag-text: rgb(27, 27, 27);
-  --blog-table-header-bottom-shadow-color: rgba(0, 0, 0, 0);
-
   --searchbox-bg-color: rgb(228, 230, 234);
   --searchbox-hover-bg-color: rgb(225, 225, 228);
   --searchbox-active-bg-color: rgb(255, 255, 255);
@@ -328,17 +318,6 @@
   --project-card-bg: rgb(36, 36, 36);
   --project-card-text-hover: rgb(235, 235, 235);
   --project-card-text-color: var(--intro-text);
-  
-  --blog-table-bg: var(--page-wrapper-bg);
-  --blog-table-thead-bg: rgb(45, 51, 58);
-  --blog-table-border: rgba(180, 180, 186, 0.189);
-  --blog-td-divider-color: rgba(166, 166, 193, 0.183);
-  --blog-table-text: var(--intro-text);
-  --blog-table-text-hover: var(--intro-text);
-  --blog-table-row-bg-hover: rgb(27, 27, 31);
-  --blog-table-tag-text: rgb(189, 189, 189);
-  --blog-post-subgroup-border-color: rgb(49, 48, 50);
-  --blog-table-header-bottom-shadow-color: rgba(0, 0, 0, 0.304);
 
   --searchbox-bg-color: rgb(55, 55, 58);
   --searchbox-hover-bg-color: rgb(72, 72, 76);
@@ -366,8 +345,8 @@
   --blog-post-note-text: rgb(99, 105, 124);
   --blog-post-note-beside: rgba(101, 79, 130, 0.308);
   --blog-post-divider-color: rgb(69, 69, 75);
-  --blog-post-acolade-bg-color: rgb(0, 0, 0);
-  --blog-post-acolade-border-color: rgba(33, 136, 33, 0.182);
+  --blog-post-acolade-bg-color: var(--section-inner-bg-color);
+  --blog-post-acolade-border-color: rgba(90, 89, 51, 0.697);
   --blog-post-mobile-header-bg-color: rgb(29, 34, 36);
 
   --filters-container-move-btns-bg-color: rgba(36, 36, 41, 0.878);
@@ -949,10 +928,6 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 
 
 /* #region ----------------------------------<7: BLOG PAGE>---------------------------------- */
-:root {
-  --posts-header-height: 220px;
-}
-
 .posts-container {
   position: relative;
   padding-bottom: 20px;
@@ -975,14 +950,45 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
   padding-bottom: 50px;
 }
 
-/* #region -------------------------< 7.1) Blog posts header >-------------------------- */
+/* #region -------------------------< 7.1) Blog posts table >-------------------------- */
+:root {
+  --posts-header-height: 220px;
+  --posts-table-item-border-radius: 10px;
+}
+:root {
+  /* Light mode */  
+  --blog-table-bg: var(--page-wrapper-bg);
+  --blog-table-thead-bg: rgb(229, 229, 229);
+  --blog-table-border: rgba(0, 0, 0, 0.202);
+  --blog-td-divider-color: rgba(52, 49, 49, 0.192);
+  --blog-table-text: rgb(3, 2, 2);
+  --blog-table-text-hover: var(--text);
+  --blog-table-row-bg-hover: rgb(229, 229, 229);
+  --blog-table-row-bg-selected: rgb(210, 209, 209);
+  --blog-table-tag-text: rgb(27, 27, 27);
+  --blog-table-header-bottom-shadow-color: rgba(0, 0, 0, 0);
+}
+[data-theme="dark"] {
+  /* Dark mode */
+  --blog-table-bg: var(--page-wrapper-bg);
+  --blog-table-thead-bg: rgb(45, 51, 58);
+  --blog-table-border: rgba(180, 180, 186, 0.189);
+  --blog-td-divider-color: rgba(166, 166, 193, 0.183);
+  --blog-table-text: var(--intro-text);
+  --blog-table-text-hover: var(--intro-text);
+  --blog-table-row-bg-hover: rgb(42, 42, 44);
+  --blog-table-row-bg-selected: rgb(51, 54, 56);
+  --blog-table-tag-text: rgb(189, 189, 189);
+  --blog-post-subgroup-border-color: rgb(49, 48, 50);
+  --blog-table-header-bottom-shadow-color: rgba(0, 0, 0, 0.304);
+}
+
 .posts-container > .posts-header-container {
   position: fixed;
   top: 0px;
   z-index: 999999;
-  /*
-  box-shadow: 0 21px 8px -4px var(--blog-table-header-bottom-shadow-color);
-  */
+  width: 100%;
+  /* box-shadow: 0 21px 8px -4px var(--blog-table-header-bottom-shadow-color); */
 }
 .posts-container > .posts-header-container > .posts-header {
   background-color: var(--section-inner-bg-color);
@@ -990,73 +996,82 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
   border-bottom: 0.1rem dashed var(--blog-table-border);
 }
 
-/* #endregion */
-
-/* #region -------------------------< 7.2) Blog post table >-------------------------- */
-table {
+.posts-container table {
   margin-top: var(--posts-header-height);
-  width: 100%;
+  width: 88%;
   font-size: 400 12px / 1.14 "Roboto", sans-serif;
-  transition: 300ms all;
   color: var(--blog-table-text);
   overflow-y: scroll;
 }
 
-/* Styles for thead... */
-table thead {
-  text-align: center;
-  background-color: var(--blog-table-thead-bg);
-}
-table thead tr { 
-  text-align: left; 
-}
-
 /* Styles for a table row... */
-table tbody tr {
+.posts-container table tbody tr {
   max-height: 200px;
   line-height: 1.5;
 }
-table tbody tr:hover {
+.posts-container table tbody tr:hover td {
   color: var(--blog-table-text-hover);
   background-color: var(--blog-table-row-bg-hover);
 }
-table tbody tr:hover span {
+.posts-container table tbody tr:active td {
+  transition: all 50ms ease;
+  background-color: var(--blog-table-row-bg-selected);
+}
+
+/* All this crap makes the table rows have borders when hovered */
+.posts-container table td {
+  border: solid 1px transparent;
+  border-style: solid none;
+  padding: 0px;
+}
+.posts-container table td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: var(--posts-table-item-border-radius); 
+  border-bottom-left-radius: var(--posts-table-item-border-radius);
+}
+.posts-container table td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: var(--posts-table-item-border-radius);
+  border-top-right-radius: var(--posts-table-item-border-radius);
+}
+
+.posts-container table tbody tr:hover span {
   text-decoration: none;
 }
-table tbody tr[data-filter='invisible'] {
+.posts-container table tbody tr[data-filter='invisible'] {
   display: none;
 }
-table tbody td.blogs-tr-info > span,
-table tbody td.blogs-tr-date > span {
+.posts-container table tbody td.blogs-tr-info > span,
+.posts-container table tbody td.blogs-tr-date > span {
   color: var(--page-text-color);
 }
 
-table tbody td.blogs-tr-date {
+.posts-container table tbody td.blogs-tr-date {
   vertical-align: middle;
   padding: 0rem 0.9rem;
 }
-table tbody td.blogs-tr-date > span {
+.posts-container table tbody td.blogs-tr-date > span {
   color: var(--page-text-color) !important;
   font-size: 0.75rem;
 }
 
-table tbody td.blogs-tr-info {
+.posts-container table tbody td.blogs-tr-info {
   padding: 0.35rem 0.7rem;
 }
-table tbody td.blogs-tr-info > * {
+.posts-container table tbody td.blogs-tr-info > * {
   display: block;
   font-size: 0.9rem;
 }
 
 /* Individual table cell... */
-table td.blogs-tr-vertical-line > div {
+.posts-container table td.blogs-tr-vertical-line > div {
   width: 0.095rem;
   height: 42px;
   display: block;
   background-color: var(--blog-td-divider-color);
 }
-table td.blogs-tr-date > span,
-table td.blogs-tr-vertical-line {
+.posts-container table td.blogs-tr-date > span,
+.posts-container table td.blogs-tr-vertical-line {
   vertical-align: middle;
 }
 .posts-container table td:nth-child(1) { width: 1%; max-width: 50px; min-width: 110px; }   /* 1st column */
@@ -1103,7 +1118,7 @@ div.tags {
 /* an individual tag */
 .tag {
   display: inline;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 /* text inside tag */
@@ -1112,6 +1127,7 @@ div.tags {
   background-color: var(--tags-bg-color);
   color: var(--blog-table-tag-text);
   border-color: transparent;
+  
 }
 
 .tag span,
@@ -1195,7 +1211,8 @@ ul.tag-filter-options-list li span {
 }
 
 div.filter-by-tag-button > button > span,
-ul.tag-filter-options-list li span {
+ul.tag-filter-options-list li span,
+.tag span {
   font-weight: 700; 
   font-family: PolySans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
@@ -1522,10 +1539,12 @@ div.blog-post
 .blog-post-content p.acolade {
   /* insert 'acolade' within blog post */
   background-color: var(--blog-post-acolade-bg-color);
+  border: 1px solid var(--blog-post-acolade-border-color);
   display: inline;
   font-size: 0.7rem;
   border-radius: 50px;
   padding: 5px 15px 5px 8px;
+  user-select: none;
 }
 @media screen and (max-width: 725px) {
   .blog-post-content p.acolade {
@@ -1572,6 +1591,16 @@ div.blog-post
 .blog-post table th, 
 .blog-post table td {
   width: 20%;
+}
+
+/* Styles for thead... */
+.blog-post table thead {
+  text-align: center;
+  background-color: var(--blog-table-thead-bg);
+  color: var(--text-darker);
+}
+.blog-post table thead tr { 
+  text-align: left; 
 }
 
 @media screen and (max-width: 670px) {
@@ -2677,6 +2706,10 @@ div.btn.films-reset-filters-btn svg {
   .blog-post > .section-inner {
     padding: 14px;
   }
+  .blog > .section-inner,
+  .blog-post > .section-inner {
+    padding: 0px;
+  }
   .page-text-small {
     font-size: 0.63rem;
   }
@@ -2883,6 +2916,15 @@ div.btn.films-reset-filters-btn svg {
   }
   .posts-container table tbody td.blogs-tr-info > span {
     font-size: 0.8rem;
+  }
+
+
+  .posts-container table {
+    width: 100%;
+  }
+  .posts-container table td:first-child,
+  .posts-container table td:last-child {
+    border-radius: 0px;
   }
 
   /* Searchbox stuff... */
@@ -3158,7 +3200,9 @@ div.btn.films-reset-filters-btn svg {
   }
   .blog > .section-inner,
   .blog-post > .section-inner {
+    /*
     padding: 15px 4px;
+    */
   }
   .blog-post-info {
     padding: 5px 15px;
