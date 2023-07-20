@@ -1,3 +1,4 @@
+import { getReviewId } from '../js/helpers.js';
 
 
 import { review as AGhostStoryReview } from './websiteContent/films/a_ghost_story/review';
@@ -7,6 +8,7 @@ import { review as PoupelleOfChimmneyTownReview } from './websiteContent/films/p
 import { review as WhiteGodReview } from './websiteContent/films/white_god/review';
 import { review as TetsuoTheBulletManReview } from './websiteContent/films/tetsuo_the_bullet_man/review';
 import { review as FlatlandReview } from './websiteContent/films/flatland/review';
+import { review as FeastReview } from './websiteContent/films/feast/review';
 
 import { post as CassiniHuygensPost } from './websiteContent/blog/cassini_huygens/post';
 import { post as WhyTheMoonLandingWasNotAHoaxPost } from './websiteContent/blog/why_the_moon_landing_was_not_a_hoax/post';
@@ -45,7 +47,6 @@ import { review as ExMachinaReview } from './websiteContent/films/ex_machina/rev
 import { review as ExteHairExtensionsReview } from './websiteContent/films/exte_hair_extensions/review';
 import { review as FantasticMrFoxReview } from './websiteContent/films/fantastic_mr_fox/review';
 import { review as FantasticPlanetReview } from './websiteContent/films/fantastic_planet/review';
-import { review as FeastReview } from './websiteContent/films/feast/review';
 import { review as GremlinsReview } from './websiteContent/films/gremlins/review';
 import { review as HacksawRidgeReview } from './websiteContent/films/hacksaw_ridge/review';
 import { review as HellbenderReview } from './websiteContent/films/hellbender/review';
@@ -342,6 +343,11 @@ const initState = {
                 require('./websiteContent/films/feast/screenshot2.webp'),
                 require('./websiteContent/films/feast/screenshot5.webp'),
             ],
+            "myReview": ReactDomServer.renderToString(FeastReview([
+                require('./websiteContent/films/feast/screenshot1.webp'),
+                require('./websiteContent/films/feast/screenshot2.webp'),
+                require('./websiteContent/films/feast/screenshot5.webp'),
+            ])),
             "customPosterUrl": require('./websiteContent/films/feast/custom_poster.webp')
         },
         {
@@ -2218,6 +2224,11 @@ const initState = {
                 require('./websiteContent/films/tetsuo_the_bullet_man/screenshot2.webp'),
                 require('./websiteContent/films/tetsuo_the_bullet_man/screenshot3.webp')
             ])),
+            "screenshots": [
+                require('./websiteContent/films/tetsuo_the_bullet_man/screenshot1.webp'),
+                require('./websiteContent/films/tetsuo_the_bullet_man/screenshot2.webp'),
+                require('./websiteContent/films/tetsuo_the_bullet_man/screenshot3.webp')
+            ],
             "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8],
             "customPosterUrl": require('./websiteContent/films/tetsuo_the_bullet_man/custom_poster.webp')
         },
@@ -2288,7 +2299,7 @@ const initState = {
             "title": "Children of the Sea",
             "myRating": "10",
             "customPosterUrl": require('./websiteContent/films/children_of_the_sea/custom_poster.webp'),
-            "myTags": ["The origins of life", "Astronomy", "Cosmology", "Spirituality", "The mysteries of the ocean world", "Sealife", "Exploring new perspectives", "Visual trip", "Audio-visual spectacle"],
+            "myTags": ["The origins of life", "Astronomy", "Cosmology", "Spirituality", "The mysteries of the ocean world", "Exploring new perspectives", "Audio-visual spectacle"],
             "screenshots": [
                 require('./websiteContent/films/children_of_the_sea/screenshot30.webp'),
                 require('./websiteContent/films/children_of_the_sea/screenshot6.webp'),
@@ -2425,7 +2436,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2dD4",
             "title": "Paco and the Magical Book",
-            "myRating": "8.5",
+            "myRating": "8.25",
             "myTags": [],
             "myReview": "",
             "gradualInterest": [6, 6, 7, 7, 7, 8, 8, 9, 9, 9, 9]
@@ -2433,7 +2444,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/2M6k",
             "title": "Children Who Chase Lost Voices",
-            "myRating": "8.5",
+            "myRating": "8.25",
             "myTags": [],
             "myReview": "",
             "screenshots": [
@@ -2495,7 +2506,8 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Death", "Summer", "Road trip", "Cats", "Portals", "Grieving"],
             "myReview": "",
-            "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 8, 9, 8, 8, 8]
+            "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 8, 9, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/i4fgst7Rhw0ScUltDzP9Nmq5Hpm.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/ffTY",
@@ -2559,19 +2571,21 @@ const RootReducer = (state=initState, action) => {
             v["gradualInterestAverage"] = (arr.reduce((x,y) => x+y) / arr.length).toFixed(1);
         }
         
-        /*
-        // next/prev film
-        let nextFilm = mergedData[v["position"]-1];
-        let prevFilm = mergedData[v["position"]+1];
+        // find id of next/previous films
+        let currentFilm = mergedData[v["position"] - 1];  // remember, arrays start at 0.... so current film is N-1
+        let nextFilm = mergedData[v["position"] - 2];  // therefore, next film is N-2
+        let prevFilm = mergedData[v["position"]];  // and previous film is N-0
+
         let reviewIdOfNextFilm = "";
         let reviewIdOfPrevFilm = "";
-
         if (nextFilm !== undefined) {
             reviewIdOfNextFilm = getReviewId(nextFilm.title, nextFilm.letterboxdUrl);
         }
         if (prevFilm !== undefined) {
             reviewIdOfPrevFilm = getReviewId(prevFilm.title, prevFilm.letterboxdUrl);
-        }*/
+        }
+        v["reviewIdOfNextFilm"] = reviewIdOfNextFilm;
+        v["reviewIdOfPrevFilm"] = reviewIdOfPrevFilm;
     })
     
     // update state so its now using the merged version!

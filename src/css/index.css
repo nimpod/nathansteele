@@ -2037,7 +2037,10 @@ div.film-myPos:hover,
 div.my-tag:hover,
 div.genre-tag:hover,
 div.genre:hover,
-div.director-tag:hover {
+div.director-tag:hover,
+p.film-year:hover,
+p.film-duration:hover,
+p.film-language:hover {
   cursor: pointer;
   user-select: none;
   transition: 150ms background-color ease;
@@ -2656,9 +2659,23 @@ div.btn.films-reset-filters-btn svg {
 /* #region -----------------------------------<10: FILM REVIEW PAGE>---------------------------------- */
 .review-displayed {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.67fr 0.1fr 4fr 0.1fr;
   color: var(--intro-text);
-  padding: 20px 0 20px 20px;
+  padding: 0px 0 20px 20px;
+}
+
+.review-content-container {
+  
+}
+
+.review-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.review-displayed .filmPoster,
+.review-displayed .review-content {
+  padding-top: 20px;
 }
 
 /* #region ----------------------< (10.1) Film poster >---------------------- */
@@ -2681,12 +2698,10 @@ div.btn.films-reset-filters-btn svg {
   margin-bottom: 6px;
 }
 
-.review-displayed .film-details-header {
-  border-bottom: 1px solid var(--blog-td-divider-color);
-}
-.review-displayed .film-details-header > p {
-  display: inline-block;
-  margin-right: 15px;
+/* Back to previous page button */
+.review-displayed .back-to-previous-page {
+  margin-left: -50px;
+  margin-top: 15px;
 }
 
 /* Title of film */
@@ -2694,24 +2709,24 @@ div.btn.films-reset-filters-btn svg {
   font-size: 2.2rem;
   margin-right: 30px;
 }
-
-/* Year & duration */
-.review-displayed .film-details-header > p.film-year,
-.review-displayed .film-details-header > p.film-duration,
-.review-displayed .film-details-header > p.film-language {
-  font-size: 0.95rem;
-  border-radius: 10px;
-  background-color: #2d2f32;
-  padding: 2px 10px;
-  user-select: none;
-  cursor: pointer;
+.review-displayed .film-details-header {
+  border-bottom: 1px solid var(--blog-td-divider-color);
 }
 
+.review-displayed .film-details-header {
+  margin-bottom: 0px;
+}
+.review-displayed .film-details-header > p {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
 
 /* 2nd header */
 .film-details-header-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.73fr;
+  padding-top: 10px;
 }
 
 /* List of genres & directors */
@@ -2722,7 +2737,10 @@ div.btn.films-reset-filters-btn svg {
 }
 
 .review-displayed .filmGenres .genre-tag,
-.review-displayed .filmDirectors .director-tag {
+.review-displayed .filmDirectors .director-tag,
+.review-displayed p.film-year,
+.review-displayed p.film-duration,
+.review-displayed p.film-language {
   background-color: var(--tags-bg-color);
   border-radius: 50px;
   font-size: 0.7rem;
@@ -2732,21 +2750,43 @@ div.btn.films-reset-filters-btn svg {
   margin-right: 6px;
 }
 .review-displayed .genre-tag:hover,
-.review-displayed .director-tag:hover {
+.review-displayed .director-tag:hover,
+.review-displayed p.film-year:hover,
+.review-displayed p.film-duration:hover,
+.review-displayed p.film-language:hover {
   background-color: var(--tags-bg-color-hover);
+  cursor: pointer;
 }
 
+.review-displayed .filmMoreData p {
+  margin-bottom: 0px;
+}
+
+.review-displayed .film-details-more > div::before,
+.review-displayed .review-my-tags::before {
+  font-size: 0.7rem;
+  color: rgb(101, 105, 114);
+}
+
+.review-displayed .filmMoreData::before {
+  content: "more info";
+  margin-right: 10px;
+}
 .review-displayed .filmGenres::before {
-  content: "⌬";
+  content: "genres";
   margin-right: 10px;
 }
 .review-displayed .filmDirectors::before { 
-  content: "☺";
-  margin-right: 8px;
+  content: "directors";
+  margin-right: 10px;
 }
 .review-displayed .filmLinks::before { 
-  content: '🢡';
+  content: 'links';
   margin-right: 10px;
+}
+.review-displayed .review-my-tags::before {
+  content: "my tags";
+  margin-right: 9px;
 }
 
 .review-displayed .filmGenres::before,
@@ -2781,7 +2821,7 @@ div.btn.films-reset-filters-btn svg {
 
 /* My data */
 .review-displayed .film-details-myData {
-  padding-top: 10px;
+
 }
 .review-displayed .film-details-myData > * {
   display: inline-block;
@@ -2790,12 +2830,14 @@ div.btn.films-reset-filters-btn svg {
 
 /* My rating */
 .review-displayed .filmMyRating {
-  font-size: 3.5rem;
+  font-size: 3.7rem;
   border-radius: 100%;
   background-color: rgb(56, 58, 60);
   border: 3px solid rgba(255, 255, 255, 0.33);
-  width: fit-content;
-  padding: 6px 20px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  padding-top: 20px;
   user-select: none;
 }
 .review-displayed .filmMyRating:hover {
@@ -2812,7 +2854,7 @@ div.btn.films-reset-filters-btn svg {
 /* My position in toplist */
 .review-displayed .filmPosition {
   width: fit-content;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   border-radius: 50px;
   background-color: rgb(47, 137, 104);
   border: 3px solid transparent;
@@ -2820,6 +2862,10 @@ div.btn.films-reset-filters-btn svg {
   font-weight: bold;
   cursor: pointer;
   user-select: none;
+  transition: all ease 0.2s;
+}
+.review-displayed .filmPosition > a {
+  color: var(--text) !important;
 }
 .review-displayed .filmPosition:hover {
   background-color: rgb(42, 147, 110);
@@ -2834,12 +2880,7 @@ div.btn.films-reset-filters-btn svg {
 /* #region ----------------------< (10.3) Review content >---------------------- */
 
 .review-content-container {
-  padding-top: 30px;
-}
-
-.review-content {
-  margin: 0 auto;
-  width: 80%;
+  padding-top: 10px;
 }
 
 /* A review is splt into several sections */
@@ -2886,11 +2927,25 @@ div.btn.films-reset-filters-btn svg {
   display: block;
 }
 
-.review-displayed > div.next-review-link {
-  right: 0;
-  top: 0;
+/*  */
+.review-displayed > div.next-review-link > a {
+  right: 2px;
 }
-.review-displayed > div.next-review-link:hover {
+
+.review-displayed > div.next-review-link > a,
+.review-displayed > div.prev-review-link > a {
+  display: block;
+  position: fixed;
+  font-size: 3rem;
+  color: var(--text) !important;
+}
+.review-displayed > div.next-review-link > a > p,
+.review-displayed > div.prev-review-link > a > p {
+  height: 100vh;
+  margin-top: 50vh;
+}
+.review-displayed > div.next-review-link:hover,
+.review-displayed > div.prev-review-link:hover {
   background-color: #3f4144;
 }
 
@@ -2899,8 +2954,7 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region ----------------------< (10.4) My tags >---------------------- */
 .review-displayed .review-my-tags {
-  text-align: center;
-  padding-top: 20px;
+  
 }
 .review-displayed .review-my-tags > .my-tag {
   font-size: 0.65rem;

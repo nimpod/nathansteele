@@ -571,7 +571,7 @@ class Films extends React.Component {
                         title={title}
                         diffScoreStr={imdbDiff.diffScoreStr}
                         diffScoreClassname={imdbDiff.diffScoreClassname} 
-                        posterUrls={posterUrls} 
+                        posterUrls={posterUrls}
                         film={film}
                         index={i} 
                         key={i} 

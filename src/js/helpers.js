@@ -42,8 +42,6 @@ export function getReviewId(title, letterboxdUrl) {
     let letterboxdId = letterboxdUrl.split('/').pop()
     
     // define structure of the review ID
-    // ideally would be {title}-{year}-review
-    // (e.g. thelegomovie-2017-review)
     let reviewId = newTitle + '-' + letterboxdId + '-' + 'review';
     return reviewId;
 }
