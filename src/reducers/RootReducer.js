@@ -2525,6 +2525,15 @@ const initState = {
             "myReview": "",
             "gradualInterest": [7, 7, 7, 8, 9, 8, 9, 8]
         },
+        {
+            "letterboxdUrl": "https://boxd.it/1Kju",
+            "title": "The Children",
+            "myRating": "8.25",
+            "myTags": ["Virus", "Evil children", "Disturbing", "One-location"],
+            "myReview": "",
+            "gradualInterest": [7, 8, 8, 8, 9, 9, 9, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/vTyc2ahe0qq7BVBlPD3L4zAl7WU.jpg"
+        },
 
         /* RATING SYSTEM */
         // 10.0 = Absolute 10
