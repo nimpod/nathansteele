@@ -557,11 +557,13 @@ class Films extends React.Component {
             })
             .slice(lastIndex, lastIndex + MAX_FILMS_PER_PAGE)
             .map((film, i) => {
+                // generate final data...
                 let reviewId = getReviewId(film.title, film.letterboxdUrl)
                 let imdbDiff = generateImdbDiffScoreStuff(film.imdbDiffScore);
                 let posterUrl = overrideFilmPosterUrl(film);
                 let title = overrideFilmTitle(film);
 
+                // display as list (default) or grid
                 if (this.state.__view_type == ViewType.LIST) {
                     return <FilmsToplistListElement 
                         reviewId={reviewId}
@@ -570,7 +572,7 @@ class Films extends React.Component {
                         diffScoreStr={imdbDiff.diffScoreStr}
                         diffScoreClassname={imdbDiff.diffScoreClassname} 
                         posterUrls={posterUrls} 
-                        film={film} 
+                        film={film}
                         index={i} 
                         key={i} 
                     />;
@@ -582,7 +584,7 @@ class Films extends React.Component {
                         diffScoreStr={imdbDiff.diffScoreStr}
                         diffScoreClassname={imdbDiff.diffScoreClassname} 
                         posterUrls={posterUrls}
-                        film={film} 
+                        film={film}
                         index={i} 
                         key={i} 
                     />;
@@ -744,8 +746,8 @@ class Films extends React.Component {
                             <div className='films-controls-subgroup pagination-container'>
                                 {/* <span className='subgroup-title'>Pages</span> */}
                                 <ReactPaginate
-                                    previousLabel={"< previous"}
-                                    nextLabel={"> next"}
+                                    previousLabel={"<"}
+                                    nextLabel={">"}
                                     pageCount={this.state.__totalNumOfPages}
                                     onPageChange={(obj) => this.goToPage(obj.selected)}
                                     pageRangeDisplayed={100}
