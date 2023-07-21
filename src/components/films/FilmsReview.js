@@ -71,7 +71,7 @@ class FilmsReview extends React.Component {
                         </div>
 
                         {/* Review content */}                        
-                        <div className='review-content'>
+                        <div className='review-allContent'>
                             {/*}
                             <div onClick={() => this.props.history.goBack()} className="custom-btn-1 back-to-previous-page" title="Back to toplist">
                                 <ArrowLeftV2 className="invertable-icon" />
@@ -79,7 +79,7 @@ class FilmsReview extends React.Component {
                             */}
                             <Link to='/films' className="custom-btn-1 back-to-previous-page" title="Back to toplist">
                                 <ArrowLeftV2 className="invertable-icon" />
-                                {/*}
+                                {/*} 
                                 <span>Back to toplist</span>
                                 */}
                             </Link>
@@ -88,25 +88,27 @@ class FilmsReview extends React.Component {
                             <div className='film-details'>
                                 <div className='film-details-header'>
                                     <p className='film-title' title="Title">{title}</p>
+                                    <p className='film-year' title="Release year">({this.props.filmData.year})</p>
                                 </div>
                                 <div className='film-details-header-2'>
                                     <div className='film-details-more'>
-                                        <div className='filmMoreData'>
-                                            <p className='film-year' title="Release year">{this.props.filmData.year}</p>
-                                            <p className='film-duration' title="Duraton in minutes">{this.props.filmData.duration} mins</p>
-                                            <p className='film-language' title="Language">{this.props.filmData.language}</p>
+                                        <div className='film-duration' title="Duraton in minutes">
+                                            {this.props.filmData.duration} mins
                                         </div>
-                                        <div className='filmGenres' title='Genres'>
-                                            {this.props.filmData.genres.map(genre => {
-                                                return <div className='genre-tag'>{genre}</div>
-                                            })}
+                                        <div className='film-language' title="Language">
+                                            <div className='language-tag'>{this.props.filmData.language}</div>
                                         </div>
-                                        <div className='filmDirectors' title='Directors'>
+                                        <div className='film-directors' title='Directors'>
                                             {this.props.filmData.directors.map(director => {
                                                 return <div className='director-tag'>{director}</div>
                                             })}
                                         </div>
-                                        <div className='filmLinks' title="Links">
+                                        <div className='film-genres' title='Genres'>
+                                            {this.props.filmData.genres.map(genre => {
+                                                return <div className='genre-tag'>{genre}</div>
+                                            })}
+                                        </div>
+                                        <div className='film-links' title="Links">
                                             <a className='filmImdbLink' href={this.props.filmData.imdbUrl} target='_blank'>IMDb</a>
                                             <a className='filmTmdbLink' href={this.props.filmData.tmdbUrl} target='_blank'>TMDb</a>
                                             <a className='filmLetterboxdLink' href={this.props.filmData.letterboxdUrl} target='_blank'>Letterboxd</a>
@@ -115,11 +117,12 @@ class FilmsReview extends React.Component {
                                     <div className='film-details-myData'>
                                         <div className='filmPosition generic-hover' title='Position in my list'>
                                             <Link to='/films'>
-                                                #{this.props.filmData.position} in my toplist
+                                                <span>#{this.props.filmData.position}</span>
+                                                <span>in my toplist</span>
                                             </Link>
                                         </div>
                                         <div className='filmMyRating' title='My rating'>
-                                            <p>{this.props.filmData.myRating}</p>
+                                            <span>{this.props.filmData.myRating}</span>
                                         </div>
                                     </div>
                                 </div>

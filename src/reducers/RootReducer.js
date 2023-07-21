@@ -9,6 +9,7 @@ import { review as WhiteGodReview } from './websiteContent/films/white_god/revie
 import { review as TetsuoTheBulletManReview } from './websiteContent/films/tetsuo_the_bullet_man/review';
 import { review as FlatlandReview } from './websiteContent/films/flatland/review';
 import { review as FeastReview } from './websiteContent/films/feast/review';
+import { review as BigFishAndBegoniaReview } from './websiteContent/films/big_fish_and_begonia/review';
 
 import { post as CassiniHuygensPost } from './websiteContent/blog/cassini_huygens/post';
 import { post as WhyTheMoonLandingWasNotAHoaxPost } from './websiteContent/blog/why_the_moon_landing_was_not_a_hoax/post';
@@ -24,7 +25,6 @@ import { review as AliensReview } from './websiteContent/films/aliens/review';
 import { review as ArrivalReview } from './websiteContent/films/arrival/review';
 import { review as BatmanReturnsReview } from './websiteContent/films/batman_returns/review';
 import { review as BelleReview } from './websiteContent/films/belle/review';
-import { review as BigFishAndBegonia } from './websiteContent/films/big_fish_and_begonia/review';
 import { review as BirdmanReview } from './websiteContent/films/birdman/review';
 import { review as BlackSheepReview } from './websiteContent/films/black_sheep/review';
 import { review as BoyhoodReview } from './websiteContent/films/boyhood/review';
@@ -778,7 +778,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/FKS",
             "title": "The Man Who Planted Trees",
-            "myRating": "8.5",
+            "myRating": "8.0",
             "myTags": ["Alone in the wilderness", "Embrace mother nature", "Poetic", "Profound", "Humanity and nature coexisting", "Nature thriving", "The ebb-and-flow of nature"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/un0NjREDaLEWWOTr7tE52MjQY6O.jpg"
@@ -1122,7 +1122,7 @@ const initState = {
         {
             "letterboxdUrl": "https://boxd.it/1BPm",
             "title": "Possession",
-            "myRating": "8.5",
+            "myRating": "8.0",
             "myTags": ["Possession", "Disturbing", "Depressing", "Gross", "Challenging to watch at times"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/sz6IXLRJu58EBRpUuRFKxo4d6lf.jpg"
@@ -1792,7 +1792,7 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Challenging to watch at times", "Audio-visual spectacle", "Addiction", "Isolation", "Fake celebrity personas", "Terrifying"],
             "myReview": "",
-            "customPosterUrl": require('./websiteContent/films/helter_skelter/custom_poster.jpg'),
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/rctha2z3lZ5YTCo4IE3cUJT4q2D.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/7t3Q",
@@ -2244,6 +2244,11 @@ const initState = {
                 require('./websiteContent/films/big_fish_and_begonia/screenshot5.webp'),
                 require('./websiteContent/films/big_fish_and_begonia/screenshot35.webp'),
             ],
+            "myReview": ReactDomServer.renderToString(BigFishAndBegoniaReview([
+                require('./websiteContent/films/big_fish_and_begonia/screenshot1.webp'),
+                require('./websiteContent/films/big_fish_and_begonia/screenshot5.webp'),
+                require('./websiteContent/films/big_fish_and_begonia/screenshot35.webp'),
+            ])),
             "gradualInterest": [8, 9, 9, 9, 8, 7, 8, 9, 10, 9],
             "customPosterUrl": require('./websiteContent/films/big_fish_and_begonia/custom_poster.webp')
         },
@@ -2521,7 +2526,7 @@ const initState = {
             "letterboxdUrl": "https://boxd.it/1QwY",
             "title": "The Living and the Dead",
             "myRating": "8.25",
-            "myTags": ["Depressing", "Grim", "Disturbing", "Learning disability", "Mental health"],
+            "myTags": ["Depressing", "Grim", "Disturbing", "Learning disability", "Mental health", "Amazing soundtrack", "One-location"],
             "myReview": "",
             "gradualInterest": [7, 7, 7, 8, 9, 8, 9, 8]
         },
