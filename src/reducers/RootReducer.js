@@ -2539,6 +2539,14 @@ const initState = {
             "gradualInterest": [7, 8, 8, 8, 9, 9, 9, 8, 8],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/vTyc2ahe0qq7BVBlPD3L4zAl7WU.jpg"
         },
+        {
+            "letterboxdUrl": "https://boxd.it/qQW8",
+            "title": "The Blind Man Who Did Not Want to See Titanic",
+            "myRating": "8.0",
+            "myTags": ["Experiencing the world of a blind person", "Unique", "Sad", "Makes you grateful for what you have"],
+            "myReview": "",
+            "gradualInterest": [6, 7, 7, 7, 8, 8, 8, 8]
+        },
 
         /* RATING SYSTEM */
         // 10.0 = Absolute 10
