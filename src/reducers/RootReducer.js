@@ -2547,6 +2547,22 @@ const initState = {
             "myReview": "",
             "gradualInterest": [6, 7, 7, 7, 8, 8, 8, 8]
         },
+        {
+            "letterboxdUrl": "https://boxd.it/bJVW",
+            "title": "Flying Colours",
+            "myRating": "9.0",
+            "myTags": ["Awakening", "Studying", "J-drama"],
+            "myReview": "",
+            "gradualInterest": [7, 8, 8, 9, 9, 10, 9, 9, 9, 8, 9, 9]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/pZDC",
+            "title": "We Made a Beautiful Bouquet",
+            "myRating": "8.5",
+            "myTags": [""],
+            "myReview": "",
+            "gradualInterest": [7, 8, 8, 9, 9, 9, 8, 8, 8, 7, 7, 7]
+        },
 
         /* RATING SYSTEM */
         // 10.0 = Absolute 10
