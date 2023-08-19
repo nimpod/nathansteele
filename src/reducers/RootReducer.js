@@ -1808,7 +1808,7 @@ const initState = {
             "myRating": "7.75",
             "myTags": ["Death", "Stoicism"],
             "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/iP9Fiq7O1v3CZ3ds0fZozFqESTk.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/50hz3aCL2U2BPkxnv6JcMZ7g4eF.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/2a8W",
@@ -2503,7 +2503,8 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Cannibalism", "Growing up", "Body horror", "University life", "Great soundtrack"],
             "myReview": "",
-            "gradualInterest": [7, 8, 9, 9, 8, 8, 8, 8, 8, 8]
+            "gradualInterest": [7, 8, 9, 9, 8, 8, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/6kXW9b1FZXvB3l0mLMDbKwGgL3P.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/yv7Y",
@@ -2561,7 +2562,23 @@ const initState = {
             "myRating": "8.5",
             "myTags": [""],
             "myReview": "",
-            "gradualInterest": [7, 8, 8, 9, 9, 9, 8, 8, 8, 7, 7, 7]
+            "gradualInterest": [7, 8, 9, 9, 9, 9, 8, 8, 8, 7, 7, 7]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/oRIs",
+            "title": "Deep Sea",
+            "myRating": "8.0",
+            "myTags": [""],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 9, 8, 8, 9, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/8N9G",
+            "title": "Cub",
+            "myRating": "8.0",
+            "myTags": [""],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 8, 8, 8, 8, 8]
         },
 
         /* RATING SYSTEM */
