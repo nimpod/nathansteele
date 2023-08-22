@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67d1bd43b196ffb5657568b80bca0120",
+    "revision": "47977c6abf91e4875e7d6f7b3cf6a19f",
     "url": "/nathansteele/index.html"
   },
   {
-    "revision": "038ae7c7b8ed31f7e4c5",
+    "revision": "44b376b0709ea500f9d7",
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "17cf7881b46dbdc2632d",
+    "revision": "c1d4984a23c1bf383319",
     "url": "/nathansteele/static/css/main.cd4f3131.chunk.css"
   },
   {
-    "revision": "038ae7c7b8ed31f7e4c5",
-    "url": "/nathansteele/static/js/2.a80d722c.chunk.js"
+    "revision": "44b376b0709ea500f9d7",
+    "url": "/nathansteele/static/js/2.2171d721.chunk.js"
   },
   {
     "revision": "6c34604bbffd201221e408b8191af396",
-    "url": "/nathansteele/static/js/2.a80d722c.chunk.js.LICENSE.txt"
+    "url": "/nathansteele/static/js/2.2171d721.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "17cf7881b46dbdc2632d",
-    "url": "/nathansteele/static/js/main.a5c7c35b.chunk.js"
+    "revision": "c1d4984a23c1bf383319",
+    "url": "/nathansteele/static/js/main.abf82c8b.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -80,40 +80,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/custom_poster.03bc1ef9.webp"
   },
   {
-    "revision": "11eef6222b5abeab6a5c618a53ccb435",
-    "url": "/nathansteele/static/media/custom_poster.11eef622.jpg"
-  },
-  {
-    "revision": "1232638ea551d9c49a2cfca9a9067a55",
-    "url": "/nathansteele/static/media/custom_poster.1232638e.webp"
-  },
-  {
-    "revision": "1518cc9b2e568e9cffb53d8b84e5f4f5",
-    "url": "/nathansteele/static/media/custom_poster.1518cc9b.webp"
-  },
-  {
     "revision": "16ea42a22e89d35f7f5ca3f8409067cd",
     "url": "/nathansteele/static/media/custom_poster.16ea42a2.jpg"
-  },
-  {
-    "revision": "1af80382bbf865e40d3e79b88c7eb37e",
-    "url": "/nathansteele/static/media/custom_poster.1af80382.webp"
-  },
-  {
-    "revision": "1ce9105b0003f59b5fbb156a5197147e",
-    "url": "/nathansteele/static/media/custom_poster.1ce9105b.jpg"
-  },
-  {
-    "revision": "1d344318dfd7b73cbe66cfc843f8bdbc",
-    "url": "/nathansteele/static/media/custom_poster.1d344318.jpg"
-  },
-  {
-    "revision": "219cf6bcfdbd770eadba65d17079ffcb",
-    "url": "/nathansteele/static/media/custom_poster.219cf6bc.webp"
-  },
-  {
-    "revision": "21f8bcbdaeded3a3c468a530a5397361",
-    "url": "/nathansteele/static/media/custom_poster.21f8bcbd.jpg"
   },
   {
     "revision": "25a9c519cc8a220fbe0a3645bd122959",
@@ -124,94 +92,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/custom_poster.2889aa2a.png"
   },
   {
-    "revision": "28b6bb7bbbb4735e4d4253041ce985b1",
-    "url": "/nathansteele/static/media/custom_poster.28b6bb7b.webp"
-  },
-  {
-    "revision": "2b5686d32fedbaa247639f87a5a65b2f",
-    "url": "/nathansteele/static/media/custom_poster.2b5686d3.jpg"
-  },
-  {
-    "revision": "2ff94ffdd11dcd47696e57db37f57342",
-    "url": "/nathansteele/static/media/custom_poster.2ff94ffd.jpg"
-  },
-  {
-    "revision": "33369072bd861991e3f084160d7a667a",
-    "url": "/nathansteele/static/media/custom_poster.33369072.webp"
-  },
-  {
-    "revision": "366b1fb8e7e54d8f09f37d243df0706d",
-    "url": "/nathansteele/static/media/custom_poster.366b1fb8.jpg"
-  },
-  {
-    "revision": "3930688c0a3a60279f784c461ac9c493",
-    "url": "/nathansteele/static/media/custom_poster.3930688c.jpg"
-  },
-  {
-    "revision": "3b5968b6023d16b8c1c847096e969fdd",
-    "url": "/nathansteele/static/media/custom_poster.3b5968b6.jpg"
-  },
-  {
-    "revision": "4463ba984ffd4f6d820eb2dd45d75562",
-    "url": "/nathansteele/static/media/custom_poster.4463ba98.jpg"
-  },
-  {
-    "revision": "450e1c834e12e781b8fdb2255e791c6b",
-    "url": "/nathansteele/static/media/custom_poster.450e1c83.jpg"
-  },
-  {
-    "revision": "4b93a24b4e58d0166f052400f8c6a621",
-    "url": "/nathansteele/static/media/custom_poster.4b93a24b.jpg"
-  },
-  {
-    "revision": "4efbe72c9a3b6111248028f49648e9d0",
-    "url": "/nathansteele/static/media/custom_poster.4efbe72c.webp"
-  },
-  {
-    "revision": "4f03736e681a00389be702a0a9a299a6",
-    "url": "/nathansteele/static/media/custom_poster.4f03736e.png"
-  },
-  {
-    "revision": "4fa5dba3ac130d96a6e0ff4215ebd082",
-    "url": "/nathansteele/static/media/custom_poster.4fa5dba3.png"
-  },
-  {
-    "revision": "547c1426c474a34308cde14f6bab425d",
-    "url": "/nathansteele/static/media/custom_poster.547c1426.webp"
-  },
-  {
-    "revision": "5a1e6804cd201095d9534000725d0599",
-    "url": "/nathansteele/static/media/custom_poster.5a1e6804.jpg"
-  },
-  {
-    "revision": "5a4490098ad0720cb252e9a0d705a73c",
-    "url": "/nathansteele/static/media/custom_poster.5a449009.jpg"
-  },
-  {
-    "revision": "5a462585d995767667aa2465cad149dd",
-    "url": "/nathansteele/static/media/custom_poster.5a462585.webp"
-  },
-  {
-    "revision": "5af3898fee0a23b385e8e4ab212d1b1d",
-    "url": "/nathansteele/static/media/custom_poster.5af3898f.webp"
-  },
-  {
-    "revision": "5d9cdc38c99257e4e4275cb6acab732a",
-    "url": "/nathansteele/static/media/custom_poster.5d9cdc38.webp"
-  },
-  {
-    "revision": "5fdc5051dd2750a7804bc1ad8f97bf6e",
-    "url": "/nathansteele/static/media/custom_poster.5fdc5051.jpg"
-  },
-  {
-    "revision": "6382e4e32a615120f7b0fd8ccf984ee5",
-    "url": "/nathansteele/static/media/custom_poster.6382e4e3.png"
-  },
-  {
-    "revision": "65444a6435b5e921278446e161620892",
-    "url": "/nathansteele/static/media/custom_poster.65444a64.jpg"
-  },
-  {
     "revision": "687ba80e2124abf109fb69e0b7cabaae",
     "url": "/nathansteele/static/media/custom_poster.687ba80e.jpg"
   },
@@ -220,152 +100,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/custom_poster.6affc014.png"
   },
   {
-    "revision": "6c436b5062032ac86d18be58596a29ce",
-    "url": "/nathansteele/static/media/custom_poster.6c436b50.webp"
-  },
-  {
-    "revision": "73e8fe0d97cd65de7f4bca32c5303c8c",
-    "url": "/nathansteele/static/media/custom_poster.73e8fe0d.jpg"
-  },
-  {
-    "revision": "7595ba026cd7062a5cba202b13d9bf64",
-    "url": "/nathansteele/static/media/custom_poster.7595ba02.webp"
-  },
-  {
-    "revision": "77833a1593f79cbaf3943f9267dfc501",
-    "url": "/nathansteele/static/media/custom_poster.77833a15.jpg"
-  },
-  {
-    "revision": "7c460ace65967e9b6377dd0f78902ad7",
-    "url": "/nathansteele/static/media/custom_poster.7c460ace.webp"
-  },
-  {
-    "revision": "7fe31ab73b0c9592f718c7308f8415db",
-    "url": "/nathansteele/static/media/custom_poster.7fe31ab7.jpg"
-  },
-  {
-    "revision": "81848aa67f4d0378e2d29a5a1c123a18",
-    "url": "/nathansteele/static/media/custom_poster.81848aa6.png"
-  },
-  {
-    "revision": "85031a3038110835a471652edea1ee89",
-    "url": "/nathansteele/static/media/custom_poster.85031a30.webp"
-  },
-  {
-    "revision": "8b0710cb790f849c0492c71b307c93a1",
-    "url": "/nathansteele/static/media/custom_poster.8b0710cb.webp"
-  },
-  {
-    "revision": "9ab5dd2bf92f3dd36ab192ac16c5b92e",
-    "url": "/nathansteele/static/media/custom_poster.9ab5dd2b.jpg"
-  },
-  {
-    "revision": "9b15ad3037f8bceb15c32400c5165dd0",
-    "url": "/nathansteele/static/media/custom_poster.9b15ad30.jpeg"
-  },
-  {
-    "revision": "9b4697df154bf161cc235a559bdd0ee0",
-    "url": "/nathansteele/static/media/custom_poster.9b4697df.webp"
-  },
-  {
-    "revision": "9e6fa0ef8e3250b3501d01e28d1f0d4e",
-    "url": "/nathansteele/static/media/custom_poster.9e6fa0ef.jpg"
-  },
-  {
-    "revision": "9e9131e161e162f2aafd558de853bf55",
-    "url": "/nathansteele/static/media/custom_poster.9e9131e1.jpg"
-  },
-  {
-    "revision": "9fcb2b3fe17506dad57665c021302212",
-    "url": "/nathansteele/static/media/custom_poster.9fcb2b3f.webp"
-  },
-  {
     "revision": "a670f4d4555d7f194c2a583f704da0d6",
     "url": "/nathansteele/static/media/custom_poster.a670f4d4.jpg"
-  },
-  {
-    "revision": "b54df65115ab5707e09c84bdb7ac2fe3",
-    "url": "/nathansteele/static/media/custom_poster.b54df651.jpg"
-  },
-  {
-    "revision": "bbfeabf4c2a9a99748ee083fd90a5f26",
-    "url": "/nathansteele/static/media/custom_poster.bbfeabf4.jpg"
-  },
-  {
-    "revision": "bd64444bdb9fb906cd33c15b8ab7f88b",
-    "url": "/nathansteele/static/media/custom_poster.bd64444b.jpg"
   },
   {
     "revision": "c31c8f92f83dbb3c41e9802842d41194",
     "url": "/nathansteele/static/media/custom_poster.c31c8f92.jpg"
   },
   {
-    "revision": "c696c630a54b4321f7ecf25c87a87923",
-    "url": "/nathansteele/static/media/custom_poster.c696c630.png"
-  },
-  {
-    "revision": "c6f784e4d5f4a90b7c1101ace851995e",
-    "url": "/nathansteele/static/media/custom_poster.c6f784e4.jpg"
-  },
-  {
-    "revision": "d3079b35a8d68ad711ed6fc62abe0bb3",
-    "url": "/nathansteele/static/media/custom_poster.d3079b35.jpg"
-  },
-  {
-    "revision": "db2a41101dc874a39cb3fc3a2f17f183",
-    "url": "/nathansteele/static/media/custom_poster.db2a4110.jpg"
-  },
-  {
-    "revision": "dded8c02ca812ec488ef06f090734922",
-    "url": "/nathansteele/static/media/custom_poster.dded8c02.jpg"
-  },
-  {
-    "revision": "dee30e2796f0dcba92675b159caf5da6",
-    "url": "/nathansteele/static/media/custom_poster.dee30e27.jpg"
-  },
-  {
-    "revision": "e25e307c3b6ee70de125024f9962f12b",
-    "url": "/nathansteele/static/media/custom_poster.e25e307c.png"
-  },
-  {
-    "revision": "e2d19f54484cd406df7bd896f2fac521",
-    "url": "/nathansteele/static/media/custom_poster.e2d19f54.jpg"
-  },
-  {
-    "revision": "ea09dd1302674827da3fec25913d84fe",
-    "url": "/nathansteele/static/media/custom_poster.ea09dd13.webp"
-  },
-  {
-    "revision": "eda9388b7557001a25b93b1fc8fca358",
-    "url": "/nathansteele/static/media/custom_poster.eda9388b.jpg"
-  },
-  {
-    "revision": "f27b8899e65b58544b83f310fb67d472",
-    "url": "/nathansteele/static/media/custom_poster.f27b8899.jpg"
-  },
-  {
     "revision": "f416105def78cda8782dff6df766d338",
     "url": "/nathansteele/static/media/custom_poster.f416105d.jpg"
-  },
-  {
-    "revision": "f520bacf197ad3a1da7c67767e584fc7",
-    "url": "/nathansteele/static/media/custom_poster.f520bacf.jpg"
-  },
-  {
-    "revision": "f81977d8ac6376c8f0051bb12a19abde",
-    "url": "/nathansteele/static/media/custom_poster.f81977d8.jpg"
-  },
-  {
-    "revision": "fa9886a055728e6f839a71be597e9685",
-    "url": "/nathansteele/static/media/custom_poster.fa9886a0.jpg"
-  },
-  {
-    "revision": "fc30832346ba7612f61f0c9422693f41",
-    "url": "/nathansteele/static/media/custom_poster.fc308323.webp"
-  },
-  {
-    "revision": "fff9d3ec1f1f9e9f9b6f64ed773dad87",
-    "url": "/nathansteele/static/media/custom_poster.fff9d3ec.png"
   },
   {
     "revision": "6f9afe9dcfb0584e595a0b4b062c4c6d",
@@ -468,6 +212,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/screenshot1.7ffbb7f9.webp"
   },
   {
+    "revision": "84588f909fb8b1ea5061faae2650d725",
+    "url": "/nathansteele/static/media/screenshot1.84588f90.webp"
+  },
+  {
     "revision": "b659c2597f0f3c5c5dca35dc8822ee8b",
     "url": "/nathansteele/static/media/screenshot1.b659c259.webp"
   },
@@ -548,6 +296,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/screenshot2.e47583de.webp"
   },
   {
+    "revision": "e6acd0bcde179d3b6a222175aa8ed8d7",
+    "url": "/nathansteele/static/media/screenshot2.e6acd0bc.webp"
+  },
+  {
     "revision": "e94c4a94734b1ae2254f5b0d100c0465",
     "url": "/nathansteele/static/media/screenshot2.e94c4a94.webp"
   },
@@ -588,6 +340,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/screenshot3.99c48aa5.webp"
   },
   {
+    "revision": "a74e8201e0dfd504b5836e910aeef725",
+    "url": "/nathansteele/static/media/screenshot3.a74e8201.webp"
+  },
+  {
     "revision": "b6dfd87148d8146cd1313f6924ec41cb",
     "url": "/nathansteele/static/media/screenshot3.b6dfd871.webp"
   },
@@ -622,6 +378,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d2f3e0be151f2214f28a86ee16577164",
     "url": "/nathansteele/static/media/screenshot4.d2f3e0be.webp"
+  },
+  {
+    "revision": "da20fefe84dbb7892b76bed7094639da",
+    "url": "/nathansteele/static/media/screenshot4.da20fefe.webp"
   },
   {
     "revision": "03296fb3d52dd44cd2ed349838304c55",
