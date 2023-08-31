@@ -18,6 +18,8 @@ from urllib3 import disable_warnings
 disable_warnings(InsecurePlatformWarning)
 disable_warnings(InsecureRequestWarning)
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 # https://devpress.csdn.net/python/630454e3c67703293080b48b.html
@@ -78,13 +80,12 @@ class Helpers:
 def download_letterboxd_data():
     """
     Function to automatically download letterboxd data (uses selenium python library)
-    """
-    
+    """    
     # setup selenium...
-    export_letterboxd_data_url = "https://letterboxd.com/settings/data/"
-    print(f"Loading {export_letterboxd_data_url}")
-    driver = webdriver.Chrome()
-    driver.get(url=export_letterboxd_data_url)
+    # (if this stops working, try `pip3 install --update requests`)
+    option = webdriver.ChromeOptions()
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
+    driver.get(url="https://letterboxd.com/settings/data/")
 
     # enter username & password...
     username = driver.find_element(By.ID, "signin-username")
@@ -115,7 +116,7 @@ def download_letterboxd_data():
     time.sleep(10)
 
     # close web browser
-    driver.close()
+    driver.quit()
 
 
 def regenerate_json_file():

@@ -642,7 +642,8 @@ const initState = {
             "title": "Crawl",
             "myRating": "7.5",
             "myTags": ["Total escapism", "Creature-feature", "One-location", "Claustrophobic", "Hurricane setting", "Brutal", "Not giving up despite being in a shitty situation"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/9kOtMOUa5HrOiIG2Z9Anv7M8AbY.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/dCpo",
@@ -1815,7 +1816,8 @@ const initState = {
             "title": "Dogville",
             "myRating": "7.5",
             "myTags": ["Innovative", "One-location", "Depressing", "Challenging to watch at times"],
-            "myReview": ""
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/liQwD1KipGNUdyFKOUs1wzISrAf.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/48WY",
@@ -2493,7 +2495,8 @@ const initState = {
             "myRating": "8.0",
             "myTags": ["Critique of modern art"],
             "myReview": "",
-            "gradualInterest": [8, 7, 6, 7, 8, 8, 8, 8, 7, 7, 8, 8]
+            "gradualInterest": [8, 7, 6, 7, 8, 8, 8, 8, 7, 7, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/5PEfwcJf2JlbbXqfqOWSGHwdsVL.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/dLd2",
@@ -2519,7 +2522,8 @@ const initState = {
             "myRating": "7.5",
             "myTags": ["Magic", "Positive reflection on witches"],
             "myReview": "",
-            "gradualInterest": [7, 7, 8, 8, 8, 8, 7, 8, 8, 8]
+            "gradualInterest": [7, 7, 8, 8, 8, 8, 7, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/YCFgQhtmWrvm5jhvQ05nqaBMeo.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/1QwY",
@@ -2570,8 +2574,8 @@ const initState = {
                 require('./websiteContent/films/we_made_a_beautiful_bouquet/screenshot2.webp'),
                 require('./websiteContent/films/we_made_a_beautiful_bouquet/screenshot3.webp'),
             ],
-            "gradualInterest": [7, 8, 9, 9, 9, 9, 8, 8, 8, 7, 7, 7],
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/3T2VU3n2atx9o4GtX6USR1NGL2x.jpg"
+            "gradualInterest": [7, 8, 9, 9, 9, 9, 9, 8, 8, 7, 7, 7],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/i4CRAls90VIXm9KocszTeTUpMsB.jpg"
         },
         {
             "letterboxdUrl": "https://boxd.it/oRIs",
@@ -2588,6 +2592,125 @@ const initState = {
             "myTags": [""],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 8, 8, 8, 8, 8, 8]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/169Y",
+            "title": "The Cranes Are Flying",
+            "myRating": "8.0",
+            "myTags": [""],
+            "myReview": "",
+            "gradualInterest": [6, 6, 7, 8, 8, 8, 8, 8, 8, 9]
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1PCG",
+            "title": "CJ7",
+            "myRating": "8.0",
+            "myTags": [""],
+            "myReview": "",
+            "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/v8xUyWtRrFmZ5iVEHI0pbQuxHD5.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/jYoY",
+            "title": "Greener Grass",
+            "myRating": "8.0",
+            "myTags": [""],
+            "myReview": "",
+            "gradualInterest": [8, 8, 7, 7, 8, 8, 7, 8, 9, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/qu7uH9cU3eEaACAtR1CUt0HKnS5.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/3kf6",
+            "title": "Bunny Drop",
+            "myRating": "8.0",
+            "myTags": [""],
+            "myReview": "",
+            "gradualInterest": [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/kt8HccnWkg464C6OawGamwNF2ZG.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/3V4Y",
+            "title": "Sightseers",
+            "myRating": "7.5",
+            "myTags": [""],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/l52cpdZcVkEVTaLqga6xxSQoaKX.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/26ua",
+            "title": "The Blair Witch Project",
+            "myRating": "7.5",
+            "myTags": [""],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/oD0o6bnp3l9QxiUvPJAp5y5gMqV.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/eq1Q",
+            "title": "BLAME!",
+            "myRating": "7.5",
+            "myTags": [""],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/7eoRQY7VUMawwBnuD6uwN4szc8k.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1Sf6",
+            "title": "Cashback",
+            "myRating": "8.0",
+            "myTags": [""],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/iXJKrcjHXrL148OfmovdGPBvnSw.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/rPHy",
+            "title": "The Stylist",
+            "myRating": "7.5",
+            "myTags": [""],
+            "myReview": "",
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/nqbk",
+            "title": "The Forest of Love",
+            "myRating": "7.5",
+            "myTags": [""],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/lJaRdstEc8XwrH2VALEvU35oiz8.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1ZvA",
+            "title": "Steamboy",
+            "myRating": "7.5",
+            "myTags": [""],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/fFZmfoupqWmHg73A07MIBMwRYqc.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/4e8q",
+            "title": "Hells",
+            "myRating": "7.5",
+            "myTags": [""],
+            "myReview": "",
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/u7UO",
+            "title": "Carter",
+            "myRating": "8.0",
+            "myTags": [""],
+            "myReview": "",
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/1xdy",
+            "title": "The Eye 2",
+            "myRating": "7.5",
+            "myTags": [""],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/2l8GsWmmJItS4TAhp3ff5xQxcSn.jpg"
+        },
+        {
+            "letterboxdUrl": "https://boxd.it/iZpm",
+            "title": "In The Tall Grass",
+            "myRating": "7.5",
+            "myTags": [""],
+            "myReview": ""
         },
 
         /* RATING SYSTEM */
