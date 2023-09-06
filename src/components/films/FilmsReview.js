@@ -10,7 +10,7 @@ import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
 
 import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";
 import { ReactComponent as Calendar } from "../../icons/calendar.svg";
-import { getRandomRGBA, getReviewId } from '../../js/helpers.js';
+import { getRandomRGBA, getFilmReviewId } from '../../js/helpers.js';
 
 
 class FilmsReview extends React.Component {
@@ -169,7 +169,7 @@ const mapStateToProps = (state, ownProps) => {
     console.log(id);
 
     return {
-        filmData: state.filmReviews.find(film => getReviewId(film.title, film.letterboxdUrl) === id),
+        filmData: state.filmReviews.find(film => getFilmReviewId(film.title, film.letterboxdUrl) === id),
     }
 }
 

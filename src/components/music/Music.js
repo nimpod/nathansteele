@@ -16,13 +16,16 @@ class Music extends Component {
         return (
             <div className='page-wrapper top-music-grid-container'>
                 <div className='section-inner'>
-                    <div id='top-music-list'>
-                        {this.props.albumReviewsData.map(a => {
-                            return <AlbumGridElement
-                                album={a}
-                                albumsList={this.props.albumReviewsData}
-                            />
-                        })}
+                    <div className='frontpage top-music-list-container'>
+                        <span className='page-title'>My top {this.props.albumReviewsData.length} favourite albums of all time</span>
+                        <div className='top-music-list'>
+                            {this.props.albumReviewsData.map(a => {
+                                return <AlbumGridElement
+                                    album={a}
+                                    albumsList={this.props.albumReviewsData}
+                                />
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

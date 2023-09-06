@@ -5,7 +5,7 @@
 
 import ReactDomServer from 'react-dom/server';
 import React from 'react';
-import { getReviewId } from '../../js/helpers.js';
+import { getFilmReviewId } from '../../js/helpers.js';
 
 // import the film review content jsx files...
 import { review as AGhostStoryReview } from '../websiteContent/films/a_ghost_story/review.jsx';

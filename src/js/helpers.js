@@ -17,7 +17,7 @@ export function getValueOfCSSVariable(variable_name) {
  * @param {*} letterboxdUrl 
  * @returns 
  */
-export function getReviewId(title, letterboxdUrl) {
+export function getFilmReviewId(title, letterboxdUrl) {
     // format title...
     let newTitle = title.replaceAll('.', '')
         .replaceAll(' ', '')
@@ -44,6 +44,17 @@ export function getReviewId(title, letterboxdUrl) {
     // define structure of the review ID
     let reviewId = newTitle + '-' + letterboxdId + '-' + 'review';
     return reviewId;
+}
+
+/**
+ * Construct album review ID
+ * @param {*} artistName 
+ * @param {*} albumName 
+ * @param {*} yearOfRelease 
+ * @returns 
+ */
+export function getAlbumReviewId(artistName, albumName) {
+    return artistName + '-' + albumName + '-' + '2016';    
 }
 
 /**

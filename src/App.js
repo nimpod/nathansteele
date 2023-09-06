@@ -31,10 +31,7 @@ import FilmsReview from './components/films/FilmsReview';
 
 // Music page
 import Music from './components/music/Music';
-
-// Movies page
-// import Movies from './components/movies/Movies';
-// import MoviesReview from './components/movies/MoviesReview';
+import MusicReview from './components/music/MusicReview';
 
 
 export default class App extends Component {
@@ -60,12 +57,8 @@ export default class App extends Component {
                       <Route path='/films' component={Films} exact />
                       <Route path='/films/:film_id' component={FilmsReview} exact />
 
-                      {/*}
-                      <Route path='/movies' component={Movies} exact />
-                      <Route path='/movies/:movie_id' component={MoviesReview} exact />
-                      */}
-
                       <Route path='/music' component={Music} exact />
+                      <Route path='/music/:album_id' component={MusicReview} exact />
 
                       <Route path='/university' component={University} exact />
                       <Route path='/university/:assignment_id' component={UniversityAssignment} exact />

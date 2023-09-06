@@ -14,7 +14,7 @@ import { ReactComponent as ViewAsListIcon } from "../../icons/showList.svg";
 import { ReactComponent as ViewAsGridIcon } from "../../icons/showGrid.svg";
 import { ReactComponent as ResetFiltersIcon } from "../../icons/reset.svg";
 import { connect }  from 'react-redux';
-import { removeGenreDuplicates, removeLanguageDuplicates, generateImdbDiffScoreStuff, getActualButton, overrideFilmPosterUrl, getListOfPosterUrls, overrideFilmTitle, getReviewId, removeClassFromItemWhenUserClicksOutsideOfItem } from '../../js/helpers.js';
+import { removeGenreDuplicates, removeLanguageDuplicates, generateImdbDiffScoreStuff, getActualButton, overrideFilmPosterUrl, getListOfPosterUrls, overrideFilmTitle, getFilmReviewId, removeClassFromItemWhenUserClicksOutsideOfItem } from '../../js/helpers.js';
 import FilmsToplistGridElement from './FilmsToplistGridElement.js';
 import FilmsToplistListElement from './FilmsToplistListElement.js';
 import ReactPaginate from 'react-paginate';
@@ -79,7 +79,7 @@ class Films extends React.Component {
         __search_text: "",
 
         // view stuff...
-        __view_type: ViewType.LIST,
+        __view_type: ViewType.GRID,
 
         // defaults...
         __default_sort_type: SortableType.MY_POS,
@@ -558,7 +558,7 @@ class Films extends React.Component {
             .slice(lastIndex, lastIndex + MAX_FILMS_PER_PAGE)
             .map((film, i) => {
                 // generate final data...
-                let reviewId = getReviewId(film.title, film.letterboxdUrl)
+                let reviewId = getFilmReviewId(film.title, film.letterboxdUrl)
                 let imdbDiff = generateImdbDiffScoreStuff(film.imdbDiffScore);
                 let posterUrl = overrideFilmPosterUrl(film);
                 let title = overrideFilmTitle(film);
@@ -614,11 +614,13 @@ class Films extends React.Component {
         return(
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
-                    <div className='films-container'>
+                    <div className='frontpage films-container'>
+                        <span className='page-title'>My top {this.props.filmReviewsData.length} favourite films of all time</span>
+                        <div class='toggle-controls-btn' onClick={this.toggleControls}>
+                            <ControlsIcon className='invertable-icon' />
+                        </div>
                         <div className='films-controls'>
-                            {/*{this.state.__current_sort_order.toString()} {this.state.__current_sort_type.toString()} {this.state.__current_genre_filter.toString()} {this.state.__current_language_filter.toString()}*/}
                             <div className='films-controls-subgroup searching-container'>
-                                {/*<span className='subgroup-title'>Search</span>*/}
                                 <div className="searchbox">
                                     <input
                                         onChange={this.handleSearchBoxInput} 
@@ -627,9 +629,22 @@ class Films extends React.Component {
                                     />
                                 </div>
                             </div>
+                            <div className='films-controls-subgroup changeViewOfToplist-container'>
+                                <div className='changeViewOfToplist-btns'>
+                                    <div className={this.state.__view_type == ViewType.LIST ? 'btn films-change-view-btn active' : 'btn films-change-view-btn'}
+                                        onClick={(e) => this.changeView(e, ViewType.LIST)}
+                                        title="View as list">
+                                        <ViewAsListIcon className='invertable-icon' />
+                                    </div>
+                                    <div className={this.state.__view_type == ViewType.GRID ? 'btn films-change-view-btn active' : 'btn films-change-view-btn'}
+                                        onClick={(e) => this.changeView(e, ViewType.GRID)}
+                                        title="View as grid">
+                                        <ViewAsGridIcon className='invertable-icon' />
+                                    </div>
+                                </div>
+                            </div>
                             <div className='films-controls-subgroup sorting-container'>
                                 <div className='sort-type-btns'>
-                                    {/*} <span className='subgroup-title'>Sort by</span> */}
                                     <div className='dropdown-list-sorting-btn dropdown-list-btn' onClick={(e) => this.toggleDropdownList(e, 'dropdown-list-sorting')}>
                                         <span>{currentSortTypeStr}</span>
                                         <ArrowDownIcon className='invertable-icon' />
@@ -670,7 +685,6 @@ class Films extends React.Component {
                                 </div>
                             </div>
                             <div className='films-controls-subgroup filtering-container'>
-                                {/*<span className='subgroup-title'>Filter by</span>*/}
                                 <div className='filter-by-genre-btns filter-by-something-container'>
                                     <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={(e) => this.toggleDropdownList(e, 'dropdown-list-genres')}>
                                         <span>{this.state.__current_genre_filter}</span>
@@ -729,22 +743,9 @@ class Films extends React.Component {
                                     <ResetFiltersIcon className='invertable-icon' />
                                 </div>
                             </div>
-                            <div className='films-controls-subgroup changeViewOfToplist-container'>
-                                <div className='changeViewOfToplist-btns'>
-                                    <div className="btn films-change-view-btn active" 
-                                        onClick={(e) => this.changeView(e, ViewType.LIST)}
-                                        title="View as list">
-                                        <ViewAsListIcon className='invertable-icon' />
-                                    </div>
-                                    <div className="btn films-change-view-btn"
-                                        onClick={(e) => this.changeView(e, ViewType.GRID)}
-                                        title="View as grid">
-                                        <ViewAsGridIcon className='invertable-icon' />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='films-controls-subgroup pagination-container'>
-                                {/* <span className='subgroup-title'>Pages</span> */}
+                        </div>
+                        <div className='films-toplist-container'>
+                            <div className='films-pagination-container'>
                                 <ReactPaginate
                                     previousLabel={"<"}
                                     nextLabel={">"}
@@ -761,11 +762,6 @@ class Films extends React.Component {
                                     */
                                 />
                             </div>
-                        </div>
-                        <div class='toggle-controls-btn' onClick={this.toggleControls}>
-                            <ControlsIcon className='invertable-icon' />
-                        </div>
-                        <div className={`films-toplist-container`}>
                             <div className={`films-toplist ${viewTypeClassname}`}>
                                 {filmsDisplayed}
                             </div>

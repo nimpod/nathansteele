@@ -49,6 +49,31 @@ class Helpers:
                             .replace('¬', "\"")\
                             .replace('@', '?')
 
+    def remove_special_characters(str_to_edit):
+        return str_to_edit.replace(" ", "_")\
+                          .replace(".", "")\
+                          .replace("/", "")\
+                          .replace("(", "")\
+                          .replace(")", "")\
+                          .replace("[", "")\
+                          .replace("]", "")\
+                          .replace("!", "")\
+                          .replace("?", "")\
+                          .replace("'", "")\
+                          .replace("\"", "")\
+                          .replace(":", "")\
+                          .replace(";", "")\
+                          .replace(",", "")\
+                          .replace("·", "")\
+                          .replace("&", "and")\
+                          .replace("Ã¸", "o")\
+                          .replace("Ã", "a")\
+                          .replace("Â", "")\
+                          .replace("¤", "")\
+                          .replace("ã", "a")\
+                          .replace("¸", "")\
+                          .lower()
+
 
 def generate_data_from_musicbee():
     """
@@ -85,7 +110,13 @@ def generate_data_from_musicbee():
                 # extract artist name & album name...
                 artist_name = folder_name_fixed.split(' - ')[0].strip()
                 album_name = folder_name_fixed.split(' - ')[1].strip()
-                print(f"{pos_padded}: {artist_name} - {album_name}")
+                # print(f"{pos_padded}: {artist_name} - {album_name}")
+                
+                # construct review ID...
+                artist_name_v2 = Helpers.remove_special_characters(artist_name)
+                album_name_v2 = Helpers.remove_special_characters(album_name)
+                review_id = f"{artist_name_v2}-{album_name_v2}"
+                print(f"{pos_padded}: {review_id}")
                 
                 # get more data via LastFM API...
                 data = lastfm_get_album_info(artist_name=artist_name, album_name=album_name)
@@ -128,7 +159,8 @@ def generate_data_from_musicbee():
                     'artistName': artist_name,
                     'albumName': album_name,
                     'duration': duration,
-                    'albumCoverUrl': album_cover_url
+                    'albumCoverUrl': album_cover_url,
+                    'reviewId': review_id,
                 })
             
             # clear json file first...

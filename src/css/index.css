@@ -83,28 +83,8 @@
   --sidenav-art-bg-color: rgb(255, 79, 158);
   --sidebar-width: 4.2rem;
 
-  /* Films list */
-  --film-grid-element-width: 935px;
-  --film-grid-element-height: 525px;
-  --vertical-gap-at-top-of-films-page-gridView: 40px;
-
-  /* Films list (grid view) */
-  --films-list-margin-left: 480px;
-  --film-poster-border-radius-gridview: 0px;
-  --films-toplist-grid-items-per-row: 5;
-  --films-toplist-grid-item-fixed-width: 170px;
-  --films-toplist-grid-item-fixed-height: 250px;
-
-  /* Films list (list view) */
-  --films-toplist-list-item-fixed-width: 830px;
-  --film-poster-border-radius-listview: 11px;
-  --films-toplist-list-item-poster-fixed-height: 450px;
-  --vertical-gap-between-filmtoplistitems: 30px;
-  --film-toplist-item-border-inner-width: 3px;
-  --film-toplist-item-border-outer-width: 2px;
-
   /* Blog page */
-  --posts-header-height: 220px;
+  --posts-header-height: 150px;
   --posts-table-item-border-radius: 10px;
   --blog-post-tag-filters-container-width: 1000px;
 }
@@ -125,6 +105,7 @@
   --text: rgb(128, 128, 128);
   --text-slightly-darker: rgb(185, 196, 208);
   --text-darker: rgb(68, 68, 68);
+  --text-in-container: rgb(5, 5, 5);
   --intro-text: rgb(33, 37, 41);
   --text-hyperlink: rgb(0, 123, 255);
   --text-hyperlink-hover: rgb(9, 194, 250);
@@ -210,8 +191,68 @@
   --blog-post-mobile-header-bg-color: rgb(251, 251, 251);
 
   
-  /* ----------------< FILMS >---------------- */
+  /* -----------------< FILMS >----------------- */
+    /* Films page (controls) */
+      /* Main stuff */
+      --films-controls-container-bg-color: rgb(29, 31, 34);
+      --films-controls-subgroup-border-color: rgb(67, 70, 78);
+      /* Button in controls panel */
+      --films-controls-btn-bg-color: rgb(212, 213, 213);
+      --films-controls-btn-bg-color-hover: rgb(190, 191, 193);
+      --films-controls-btn-bg-color-active: rgb(76, 78, 84);
+      /* Dropdown menu */
+      --films-controls-dropdown-list-bg-color: rgba(66, 67, 73, 0.946);
+      --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
+      --films-controls-dropdown-item-bg-color-hover: rgb(51, 53, 54);
+      --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
+      --films-controls-dropdown-item-border-color-active: rgb(157, 164, 172);
+      --films-controls-dropdown-list-title-bottomborder: rgba(85, 91, 104, 0.687);
+      /* Miscellaneous */
+      --films-controls-toggle-btn-bg-color: rgb(61, 61, 65);
+      --films-controls-toggle-btn-bg-color-hover: rgb(70, 75, 76);
+      --films-controls-btn-text-color-active: var(--text);
+      --films-controls-btn-border-color-clicked: rgba(116, 120, 136, 0.429);
 
+    /* Films page (pagination buttons) */
+      /* Pagination button text colours */
+      --films-pagination-btn-text-color-hover: var(--text);
+      --films-pagination-btn-text-color-active: rgb(0, 0, 0);
+      --films-pagination-btn-text-color-inactive: rgb(18, 18, 20);
+      /* Pagination button background colours */
+      --films-pagination-btn-bg-color: rgb(210, 211, 212);
+      --films-pagination-btn-bg-color-hover: rgb(185, 186, 190); /* rgb(65, 66, 70); */
+      --films-pagination-btn-bg-color-active: rgb(49, 201, 128);
+      /* Pagination button border colours */
+      --films-pagination-btn-border-color: var(--films-pagination-btn-bg-color);
+      --films-pagination-btn-border-color-hover: var(--films-pagination-btn-bg-color-hover);
+      --films-pagination-btn-border-color-active: var(--films-controls-dropdown-active-item-bg-color);
+      /* Pagination next/previous button */
+      --films-pagination-nextandprevious-btns-bg-color: rgb(55, 50, 50);
+      --films-pagination-nextandprevious-btns-bg-color-hover: rgb(91, 95, 103);
+      --films-pagination-nextandprevious-btns-disabled-bg-color: rgb(230, 230, 230);
+      --films-pagination-nextandprevious-btns-disabled-text-color: rgb(211, 212, 215);
+      --films-pagination-nextandprevious-btns-disabled-border-color: rgba(169, 162, 162, 0.042);
+
+    /* Films page (grid view & list view) */
+      /* Grid view */
+      --films-toplist-item-bg-color: rgb(231, 231, 231);
+      --films-toplist-item-bg-color-hover: rgb(195, 195, 195);
+      /* List view */
+      --film-toplist-item-images-border-inner-color: rgb(0, 0, 0);
+      --film-toplist-item-border-outer-color: rgb(2, 2, 2);
+      --film-toplist-item-bg-color-hover: rgb(38, 38, 41);
+      --film-toplist-item-bg-color-active: rgb(47, 48, 52);
+      --film-toplist-item-border-color-active: rgba(21, 124, 150, 0);
+
+    /* Data colours */
+      /* Data background colours */
+      --film-mydata-position-bg-color: rgb(43, 191, 119); /* rgb(138, 45, 79); */
+      --film-mydata-myrating-bg-color: rgb(209, 126, 245);
+      --film-mydata-imdbdiffscore-bg-color: rgb(72, 97, 148);
+      /* Text colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
+      --film-mydata-imdbdiffscore-positivediff-text-color: rgb(173, 245, 73);
+      --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
+      --film-mydata-imdbdiffscore-equaldiff-text-color: rgb(201, 189, 80);
   
   /* Film review */
   --film-review-btn-text-color: rgb(21, 20, 20);
@@ -230,10 +271,11 @@
 
   /* Searchbox */
   --searchbox-bg-color: rgb(228, 230, 234);
-  --searchbox-hover-bg-color: rgb(225, 225, 228);
-  --searchbox-active-bg-color: rgb(255, 255, 255);
+  --searchbox-hover-bg-color: rgb(183, 183, 187);
+  --searchbox-active-bg-color: rgb(220, 221, 223);
   --searchbox-border-color: rgba(174, 181, 192, 0.019);
   --searchbox-text-color: rgb(60, 114, 240);
+  --searchbox-text-placeholder-color: rgb(98, 98, 98);
 
   /* Box shadow */
   --general-box-shadow-color-1: rgba(65, 69, 73, 0.3);
@@ -256,7 +298,7 @@
 [data-theme="dark"] {
 
   /* Main stuff */
-  --section-inner-bg-color: rgb(16, 17, 19);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
+  --section-inner-bg-color: rgb(26, 27, 29);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
   --page-wrapper-bg: rgb(34, 40, 42);
   --bg1: rgb(153, 145, 70); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
   --bg2: rgb(127, 66, 66); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
@@ -268,6 +310,7 @@
   --text: rgb(240, 240, 240);
   --text-slightly-darker: rgb(206, 211, 218);
   --text-darker: rgb(169, 169, 169);
+  --text-in-container: var(--text);
   --intro-text: rgb(192, 192, 196);
   --text-hyperlink: rgb(11, 190, 255);
   --text-hyperlink-hover: rgb(133, 232, 252);
@@ -278,11 +321,11 @@
 
   /* -----------------< NAVBAR >----------------- */
   /* Sidebar */
-  --sidenav-bg-color: rgb(28, 29, 33); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
+  --sidenav-bg-color: rgb(35, 37, 46); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
   --sidenav-shadow-color: rgba(0, 0, 0, 0.593);
   --sidenav-item-text-color: rgb(183, 185, 197);
-  --sidenav-item-bg-color: rgb(45, 46, 50);
-  --sidenav-item-bg-color-hover: rgb(72, 74, 80);
+  --sidenav-item-bg-color: rgb(60, 61, 67);
+  --sidenav-item-bg-color-hover: rgb(88, 89, 93);
   --sidenav-item-bg-color-active: rgb(101, 105, 114);
   --sidenav-item-border-color-active: rgb(157, 160, 163);
 
@@ -320,8 +363,8 @@
   --blog-td-divider-color: rgba(166, 166, 193, 0.183);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
-  --blog-table-row-bg-hover: rgb(26, 26, 28);
-  --blog-table-row-bg-selected: rgb(43, 46, 47);
+  --blog-table-row-bg-hover: rgb(38, 38, 40);
+  --blog-table-row-bg-selected: rgb(49, 51, 52);
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
   --blog-table-header-bottom-shadow-color: rgba(0, 0, 0, 0.304);
@@ -357,7 +400,7 @@
       --films-controls-container-bg-color: rgb(29, 31, 34);
       --films-controls-subgroup-border-color: rgb(67, 70, 78);
       /* Button in controls panel */
-      --films-controls-btn-bg-color: rgb(42, 45, 47);
+      --films-controls-btn-bg-color: rgb(46, 49, 51);
       --films-controls-btn-bg-color-hover: rgb(59, 61, 66);
       --films-controls-btn-bg-color-active: rgb(76, 78, 84);
       /* Dropdown menu */
@@ -365,6 +408,7 @@
       --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
       --films-controls-dropdown-item-bg-color-hover: rgb(51, 53, 54);
       --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
+      --films-controls-dropdown-item-border-color-active: rgb(89, 89, 90);
       --films-controls-dropdown-list-title-bottomborder: rgba(85, 91, 104, 0.687);
       /* Miscellaneous */
       --films-controls-toggle-btn-bg-color: rgb(61, 61, 65);
@@ -377,18 +421,20 @@
       --films-pagination-btn-text-color-hover: var(--text);
       --films-pagination-btn-text-color-active: var(--text);
       --films-pagination-btn-text-color-inactive: rgb(187, 189, 194);
-      /* Pagination button border colours */
-      --films-pagination-btn-border-color: rgb(42, 43, 44);
-      --films-pagination-btn-border-color-hover: rgb(42, 43, 44);
-      --films-pagination-btn-border-color-active: var(--films-controls-dropdown-active-item-bg-color);
       /* Pagination button background colours */
-      --films-pagination-btn-bg-color: rgb(62, 63, 66);
-      --films-pagination-btn-bg-color-hover: rgb(74, 75, 78); /* rgb(65, 66, 70); */
+      --films-pagination-btn-bg-color: rgb(57, 58, 61);
+      --films-pagination-btn-bg-color-hover: rgb(79, 81, 87); /* rgb(65, 66, 70); */
       --films-pagination-btn-bg-color-active: rgb(15, 132, 81);
+      /* Pagination button border colours */
+      --films-pagination-btn-border-color: var(--films-pagination-btn-bg-color);
+      --films-pagination-btn-border-color-hover: var(--films-pagination-btn-bg-color-hover);
+      --films-pagination-btn-border-color-active: var(--films-controls-dropdown-active-item-bg-color);
       /* Pagination next/previous button */
       --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
-      --films-pagination-nextandprevious-btn-disabled-text-color: rgb(101, 105, 116);
-      --films-pagination-nextandprevious-btn-disabled-border-color: rgba(169, 162, 162, 0.042);
+      --films-pagination-nextandprevious-btns-bg-color-hover: rgb(100, 100, 100);
+      --films-pagination-nextandprevious-btns-disabled-bg-color: rgb(24, 25, 26);
+      --films-pagination-nextandprevious-btns-disabled-text-color: rgb(62, 65, 70);
+      --films-pagination-nextandprevious-btns-disabled-border-color: rgba(85, 80, 80, 0.223);
 
   /* Films page (grid view & list view) */
     /* Grid view */
@@ -397,7 +443,7 @@
     /* List view */
     --film-toplist-item-images-border-inner-color: rgb(0, 0, 0);
     --film-toplist-item-border-outer-color: rgb(2, 2, 2);
-    --film-toplist-item-bg-color-hover: rgb(29, 29, 32);
+    --film-toplist-item-bg-color-hover: rgb(38, 38, 41);
     --film-toplist-item-bg-color-active: rgb(47, 48, 52);
     --film-toplist-item-border-color-active: rgba(21, 124, 150, 0);
 
@@ -432,6 +478,7 @@
   --searchbox-active-bg-color: rgb(66, 68, 71);
   --searchbox-border-color: rgba(8, 93, 149, 0.293);
   --searchbox-text-color: rgb(38, 220, 144);
+  --searchbox-text-placeholder-color: rgb(98, 98, 98);
 
   /* Box shadow */
   --general-box-shadow-color-1: rgba(0, 0, 0, 0.415);
@@ -568,7 +615,9 @@ body > div#root > div.App {
   box-shadow: 0 1px 12px 0 var(--section-inner-card-box-shadow);
   min-height: 100vh;
 }
-
+.section-inner > div.frontpage {
+  padding: 10px 100px;
+}
 
 /* Accomodate for sidebar... */
 /*
@@ -600,7 +649,7 @@ body > div#root > div.App {
 
 .page-title {
   color: var(--page-text-color);
-  font-size: 3.0rem !important;
+  font-size: 2.0rem !important;
   font-weight: bold !important;
   margin-bottom: 5px;
 }
@@ -967,7 +1016,7 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 
 .blog > .section-inner,
 .blog-post > .section-inner {
-  padding: 20px 300px;
+  padding: 0px 300px;
 }
 
 .posts-container {
@@ -987,6 +1036,14 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
   background-color: var(--section-inner-bg-color);
   padding-top: 20px;
   border-bottom: 0.1rem dashed var(--blog-table-border);
+}
+
+.posts-header .container-intro {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+.posts-header .container-intro-text > h6 {
+  margin-left: 3px;
 }
 
 .posts-container table {
@@ -1306,7 +1363,7 @@ div.searchbox input.activated {
   /* border: 2px solid var(--searchbox-border-color); */
 }
 div.searchbox input::placeholder {
-  color: var(--text-darker) !important;
+  color: var(--searchbox-text-placeholder-color);
 }
 
 /* #endregion */
@@ -1641,6 +1698,27 @@ div.blog-post
 
 /* #region -----------------------------------<9: FILMS PAGE>------------------------------------------ */
 
+:root {
+  /* Films list */
+  --film-grid-element-width: 935px;
+  --film-grid-element-height: 525px;
+  --vertical-gap-at-top-of-films-page-gridView: 40px;
+
+  /* Films list (grid view) */
+  --films-list-margin-left: 430px;
+  --film-poster-border-radius-gridview: 0px;
+  --films-toplist-grid-item-fixed-width: 170px;
+  --films-toplist-grid-item-fixed-height: 250px;
+
+  /* Films list (list view) */
+  --films-toplist-list-item-fixed-width: 830px;
+  --film-poster-border-radius-listview: 11px;
+  --films-toplist-list-item-poster-fixed-height: 450px;
+  --vertical-gap-between-filmtoplistitems: 30px;
+  --film-toplist-item-border-inner-width: 3px;
+  --film-toplist-item-border-outer-width: 2px;
+}
+
 /* display entire page as grid (review on leftside, list on right side) */
 .favourite-films-page .section-inner {
   display: grid;
@@ -1652,16 +1730,51 @@ div.blog-post
   }
 }
 
+.films-toplist-container {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  padding-top: 30px;
+}
+
 
 
 /* #region ------------------------< 13.1 Toplist as GRID (i.e posters only) >------------------------ */
+:root {
+  --films-toplist-grid-items-per-row: 7;
+  --film-grid-item-width: 182px;
+}
+
 .films-toplist.view-as-grid {
   display: grid;
-  grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), 185px);
-  grid-gap: 90px 0px;
+  grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), minmax(0, var(--film-grid-item-width)));
+  grid-gap: 95px 0;
+  /*
   margin-left: var(--films-list-margin-left);
   padding-top: var(--vertical-gap-at-top-of-films-page-gridView);
+  */
+  margin-left: 10px;
   padding-bottom: 120px;
+}
+@media screen and (max-width: 700px) {
+  .films-toplist.view-as-grid {
+    padding-top: calc(var(--vertical-gap-at-top-of-films-page-gridView) + 60px);
+    padding-left: 5px;
+    grid-template-columns: repeat(3, minmax(0, var(--film-grid-item-width))) !important;
+    grid-gap: 80px 0px;
+  }
+  .films-toplist.view-as-grid .film-details {
+    padding: 2px 0px 5px 5px !important;
+    margin-left: -1px !important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .films-toplist.view-as-grid {
+    padding-top: calc(var(--vertical-gap-at-top-of-films-page-gridView) + 60px);
+    grid-template-columns: repeat(2, minmax(0, var(--film-grid-item-width))) !important;
+  }
+  .films-toplist.view-as-grid .film-details {
+    padding: 2px 0px 5px 5px !important;
+  }
 }
 
 .films-toplist.view-as-grid > .films-toplist-item {
@@ -1688,6 +1801,7 @@ div.blog-post
   border-top-left-radius: var(--film-poster-border-radius-gridview);
   border-top-right-radius: var(--film-poster-border-radius-gridview);
   width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -1697,8 +1811,6 @@ div.blog-post
   padding: 3px 5px 20px 5px;
   border-bottom-left-radius: var(--film-poster-border-radius-gridview);
   border-bottom-right-radius: var(--film-poster-border-radius-gridview);
-  width: 101%;
-  margin-left: -2px;
 }
 
 .films-toplist.view-as-grid .film-details > p {
@@ -1711,14 +1823,14 @@ div.blog-post
   font-size: 14px;
   font-weight: 500;
   line-height: 1.3em;
-  color: var(--text);
+  color: var(--text-in-container);
 }
 
 .films-toplist.view-as-grid div.film-dataContainer.myData > span {
   padding: 1px 4px;
   text-align: center;
   display: inline-block;
-  font-size: 0.65rem;
+  font-size: 0.76rem;
   cursor: pointer;
   user-select: none;
 }
@@ -1728,7 +1840,6 @@ div.blog-post
 /* #region ------------------------< 13.2 Toplist as LIST (i.e. posters & screenshots) >------------------------ */
 .films-toplist.view-as-list {
   margin: 0 auto;
-  padding-top: 25px;
   padding-bottom: 20px;
 }
 
@@ -1992,7 +2103,7 @@ div.film-dataContainer.myData > span:last-child {
   border-bottom-right-radius: 6px;
 }
 div.film-dataContainer.myData > span {
-  color: var(--text);
+  color: var(--text-in-container);
 }
 div.film-dataContainer > span:hover {
   opacity: 0.65;
@@ -2029,28 +2140,16 @@ span.film-imdbDiffScore:active {
 
 /* #region ------------------------< 13.4 Film controls >------------------------ */
 .films-controls {
-  position: fixed;
-  background-color: var(--films-controls-container-bg-color);
-  padding: 8px;
-  margin: 40px 40px;
-  width: 350px;
-  height: 650px;
-  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 10px 10px -16px var(--general-box-shadow-color-3);
 }
 
 .films-controls-subgroup {
-  display: block;
-  border-top: 1px dashed var(--films-controls-subgroup-border-color);
+  display: inline-block;
   border-radius: 10px;
-  margin-bottom: 25px;
-  padding-top: 10px;
-  text-align: center;
+  margin-right: 30px;
 }
 
-.films-controls-subgroup.pagination-container,
-.films-controls-subgroup.changeViewOfToplist-container {
-  padding: 10px 60px;
-}
 
 /* Title of subgroup */
 .films-controls-subgroup span.subgroup-title {
@@ -2102,20 +2201,21 @@ span.film-imdbDiffScore:active {
   margin-bottom: 4px;
   text-align: left;
   float: left;
+  user-select: none;
 }
 .dropdown-list-btn:hover {
   cursor: pointer;
   background-color: var(--films-controls-btn-bg-color-hover);
 }
 .dropdown-list-btn:active {
-  border: 3px solid var(--films-controls-btn-bg-color-active);
+  border: 3px solid var(--films-controls-dropdown-item-border-color-active);
 }
 .dropdown-list-btn.list-is-visible {
   background-color: var(--films-controls-btn-bg-color-active);
 }
 .dropdown-list-btn > span {
   margin-left: 10px;
-  color: var(--text);
+  color: var(--text-in-container);
   user-select: none;
 }
 .dropdown-list-btn > svg {
@@ -2169,17 +2269,14 @@ span.film-imdbDiffScore:active {
 
 /* Why the fuck is the languages dropdown not in the right place!?! */
 .dropdown-list-languages {
-  /* 
-  right: 268px;
-  */
-  top: 214px;
+  margin-left: 200px;
 }
 /* #endregion */
 
 
 /* #region -----------------< Sort buttons >----------------- */
 .sort-direction-btns {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .sort-direction-btns div.btn {
   padding: 0 3px;
@@ -2219,9 +2316,6 @@ span.film-imdbDiffScore:active {
 
 
 /* #region -----------------< Filter buttons >-----------------*/
-.filtering-container {
-  margin-bottom: 70px;
-}
 .filtering-container > .filter-by-something-container  {
   display: inline;
 }
@@ -2252,7 +2346,6 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region -----------------< View as list or grid buttons >-----------------*/
 .changeViewOfToplist-container {
-  display: block;
   margin-bottom: 0px;
 }
 .changeViewOfToplist-container div.btn {
@@ -2385,18 +2478,19 @@ div.btn.films-reset-filters-btn svg {
 .pagination-btns li.pagination-active a:active {
   border: 2px solid var(--films-controls-btn-border-color-clicked);
 }
-
-.pagination-btns li:not(.pagination-disabled).previous-btn a:hover,
-.pagination-btns li:not(.pagination-disabled).next-btn a:hover,
-.pagination-btns li.previous-btn.pagination-active a,
-.pagination-btns li.next-btn.pagination-active a {
-  color: var(--text) !important;
-  background-color: var(--films-pagination-nextandprevious-btns-bg-color);
-}
 /* #endregion */
 
 
 /* #region ------------------------< 13.6 Next & Previous pagination buttons >------------------------ */
+.pagination-btns li.pagination-active a {
+  color: var(--text) !important;
+  background-color: var(--films-pagination-nextandprevious-btns-bg-color);
+}
+
+.pagination-btns li.pagination-active a:hover {
+  background-color: var(--films-pagination-nextandprevious-btns-bg-color-hover);
+}
+
 .pagination-btns li.previous-btn a,
 .pagination-btns li.next-btn a {
   display: flex;
@@ -2419,11 +2513,10 @@ div.btn.films-reset-filters-btn svg {
 }
 
 /* When Next/Previous page button IS disabled */
-.pagination-btns li.pagination-disabled a,
-.pagination-btns li.pagination-disabled:hover a {
-  background-color: var(--page-wrapper-bg);
-  border: 2px solid var(--films-pagination-nextandprevious-btn-disabled-border-color);
-  color: var(--films-pagination-nextandprevious-btn-disabled-text-color) !important;
+.pagination-btns li.pagination-disabled a {
+  background-color: var(--films-pagination-nextandprevious-btns-disabled-bg-color);
+  border: 2px solid var(--films-pagination-nextandprevious-btns-disabled-border-color);
+  color: var(--films-pagination-nextandprevious-btns-disabled-text-color) !important;
   cursor: not-allowed;
 }
 
@@ -2433,14 +2526,14 @@ div.btn.films-reset-filters-btn svg {
 
 /* Previous page button */
 .pagination-btns li.previous-btn {
-  position: fixed;
+  position: absolute;
   margin-top: var(--next-and-previous-pagination-btns-distance-from-top);
   margin-left: 0px;
 }
 
 /* Next page button */
 .pagination-btns li.next-btn {
-  position: fixed;
+  position: absolute;
   margin-top: var(--next-and-previous-pagination-btns-distance-from-top);
   margin-left: 175px;
 }
@@ -2882,19 +2975,50 @@ div.btn.films-reset-filters-btn svg {
   --album-cover-border-radius: 0.5rem;
 }
 
-#top-music-list {
+/* The actual toplist */
+.top-music-list {
   display: grid;
   grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
-  padding: 100px 120px;
+  padding-top: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .top-music-list {
+    padding: 50px 10px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 1100px) {
+  .top-music-list {
+    padding: 50px 10px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 800px) {
+  .top-music-list {
+    padding: 50px 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 600px) {
+  .top-music-list {
+    padding: 50px 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 400px) {
+  .top-music-list {
+    padding: 50px 10px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 div.albumInfoContainer {
   margin: 0.25rem;
   position: relative;
 }
-div.albumInfoContainer:hover {
-  opacity: 0.7;
-  transition: all 100ms ease;
+div.albumInfoContainer:hover > img.albumCover {
+  opacity: 0.4;
+  transition: all 200ms ease;
 }
 
 div.albumInfoContainer > img.albumCover {
@@ -3008,6 +3132,9 @@ div.albumInfoContainer > div.myRating {
   .blog > .section-inner,
   .blog-post > .section-inner {
     padding: 0px;
+  }
+  .section-inner > div.frontpage {
+    padding: 14px 0px;
   }
   .page-text-small {
     font-size: 0.63rem;
@@ -3226,10 +3353,14 @@ div.albumInfoContainer > div.myRating {
     border-radius: 0px;
   }
 
+  .posts-header .container-intro {
+    grid-template-columns: 2fr 1fr;
+  }
+
   /* Searchbox stuff... */
   div.searchbox input {
     font-size: 13px;
-    width: 350px;
+    width: 220px;
     margin-top: 3px;
   }
   .controls .filter-by-tag-button button span {
@@ -3286,6 +3417,10 @@ div.albumInfoContainer > div.myRating {
   }
   .films-log table td {
     font-size: 0.7rem;
+  }
+
+  .films-toplist-container {
+    display: block;
   }
 
   /* #region --------------< Review displayed >----------------- */
@@ -3387,12 +3522,6 @@ div.albumInfoContainer > div.myRating {
   .films-controls .dropdown-list {
     font-size: 0.8rem !important;
   }
-  .films-toplist.view-as-grid {
-    padding-top: calc(var(--vertical-gap-at-top-of-films-page-gridView) + 60px);
-    padding-left: 5px;
-    grid-template-columns: repeat(4, 70px) !important;
-    grid-gap: 40px 40px;
-  }
   .films-toplist.view-as-list .films-toplist-item > a {
     width: fit-content;
   }
@@ -3419,11 +3548,13 @@ div.albumInfoContainer > div.myRating {
     padding: 2px 4px;
   }
   .films-controls .dropdown-list-btn {
-    width: 130px !important;
+    width: 140px !important;
   }
   .pagination-btns {
+    /*
     margin-left: -40px;
     padding-top: 60px;
+    */
   }
   .films-controls .pagination-btns li:not(.previous-btn):not(.next-btn) a {
     padding: 2px;

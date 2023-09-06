@@ -378,21 +378,23 @@ class Blog extends Component {
         return(
             <div className="page-wrapper blog">
                 <div className="section-inner">
-                    <div className="posts-container">
+                    <div className="frontpage posts-container">
                         <div className='posts-header-container'>
                             <div className='posts-header'>
-                                <div className="controls" onClick={this.handleSearchBoxClick}>
-                                    <div className="searchbox">
-                                        <input
-                                            onChange={this.handleSearchBoxInput} 
-                                            placeholder="search..." 
-                                            type="text"
-                                        />
-                                    </div>
-                                </div>
                                 <div className='container-intro'>
-                                    <h3 className='page-title'>My blog</h3>
-                                    <h6 className='page-text-small'>{this.state.__filtered_posts_len} posts</h6>
+                                    <div className='container-intro-text'>
+                                        <h3 className='page-title'>My blog</h3>
+                                        <h6 className='page-text-small'>{this.state.__filtered_posts_len} posts</h6>
+                                    </div>
+                                    <div className="controls" onClick={this.handleSearchBoxClick}>
+                                        <div className="searchbox">
+                                            <input
+                                                onChange={this.handleSearchBoxInput} 
+                                                placeholder="search by blog post title..." 
+                                                type="text"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className='tag-filter-options-list-container'>
                                     <div className='btn-move-left scroll-through-tag-filters-btn' onClick={() => this.moveFiltersContainer(-80)}>

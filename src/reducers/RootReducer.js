@@ -4,7 +4,7 @@
 
 import ReactDomServer from 'react-dom/server';
 import React from 'react';
-import { getReviewId } from '../js/helpers.js';
+import { getFilmReviewId } from '../js/helpers.js';
 
 // import local data json files...
 import { filmReviews as localDataFilmReviews } from './localData/filmReviews.js';
@@ -84,10 +84,10 @@ const mergeFilmData = (initState) => {
         let reviewIdOfNextFilm = "";
         let reviewIdOfPrevFilm = "";
         if (nextFilm !== undefined) {
-            reviewIdOfNextFilm = getReviewId(nextFilm.title, nextFilm.letterboxdUrl);
+            reviewIdOfNextFilm = getFilmReviewId(nextFilm.title, nextFilm.letterboxdUrl);
         }
         if (prevFilm !== undefined) {
-            reviewIdOfPrevFilm = getReviewId(prevFilm.title, prevFilm.letterboxdUrl);
+            reviewIdOfPrevFilm = getFilmReviewId(prevFilm.title, prevFilm.letterboxdUrl);
         }
         v["reviewIdOfNextFilm"] = reviewIdOfNextFilm;
         v["reviewIdOfPrevFilm"] = reviewIdOfPrevFilm;
