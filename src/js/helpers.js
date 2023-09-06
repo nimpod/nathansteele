@@ -12,14 +12,12 @@ export function getValueOfCSSVariable(variable_name) {
 
 
 /**
- * Construct film review ID
+ * Remove special characters from a string
  * @param {*} title 
- * @param {*} letterboxdUrl 
  * @returns 
  */
-export function getFilmReviewId(title, letterboxdUrl) {
-    // format title...
-    let newTitle = title.replaceAll('.', '')
+export function removeSpecialCharacters(title) {
+    return title.replaceAll('.', '')
         .replaceAll(' ', '')
         .replaceAll("\\", "")
         .replaceAll("\"", '')
@@ -37,6 +35,50 @@ export function getFilmReviewId(title, letterboxdUrl) {
         .replaceAll(/[/]/g, '')
         .replaceAll('¤', 'a')
         .toLowerCase();
+}
+
+/**
+ * 
+ * @param {*} strToEdit 
+ * @returns 
+ */
+export function removeSpecialCharactersForMusicbeeExport(strToEdit) {
+    return strToEdit.replaceAll(" ", "_")
+                    .replaceAll(".", "")
+                    .replaceAll("/", "")
+                    .replaceAll("(", "")
+                    .replaceAll(")", "")
+                    .replaceAll("[", "")
+                    .replaceAll("]", "")
+                    .replaceAll("!", "")
+                    .replaceAll("%", "")
+                    .replaceAll("?", "")
+                    .replaceAll("'", "")
+                    .replaceAll("\"", "")
+                    .replaceAll(":", "")
+                    .replaceAll(";", "")
+                    .replaceAll(",", "")
+                    .replaceAll("·", "")
+                    .replaceAll("&", "and")
+                    .replaceAll("Ã¸", "o")
+                    .replaceAll("Ã", "a")
+                    .replaceAll("Â", "")
+                    .replaceAll("¤", "")
+                    .replaceAll("ã", "a")
+                    .replaceAll("¸", "")
+                    .toLowerCase()
+}
+
+
+/**
+ * Construct film review ID
+ * @param {*} title 
+ * @param {*} letterboxdUrl 
+ * @returns 
+ */
+export function getFilmReviewId(title, letterboxdUrl) {
+    // format title...
+    let newTitle = removeSpecialCharacters(title);
 
     // get id from URL
     let letterboxdId = letterboxdUrl.split('/').pop()
@@ -54,7 +96,9 @@ export function getFilmReviewId(title, letterboxdUrl) {
  * @returns 
  */
 export function getAlbumReviewId(artistName, albumName) {
-    return artistName + '-' + albumName + '-' + '2016';    
+    let artistNameV2 = removeSpecialCharactersForMusicbeeExport(artistName);
+    let albumNameV2 = removeSpecialCharactersForMusicbeeExport(albumName);
+    return artistNameV2 + '-' + albumNameV2;
 }
 
 /**

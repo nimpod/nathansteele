@@ -4,7 +4,7 @@
 
 import ReactDomServer from 'react-dom/server';
 import React from 'react';
-import { getFilmReviewId } from '../js/helpers.js';
+import { getAlbumReviewId, getFilmReviewId } from '../js/helpers.js';
 
 // import local data json files...
 import { filmReviews as localDataFilmReviews } from './localData/filmReviews.js';
@@ -113,6 +113,25 @@ const mergeAlbumData = (initState) => {
 
     // merge local & web album ata...
     const mergedData = webdata.map(album => ({...album, ...mappedById[album.lastFmUrl]}))
+
+    // add new attributes...
+    Object.entries(mergedData).forEach(([k,v]) => {
+        // find id of next/previous albums
+        let currentAlbum = mergedData[v["position"] - 1];  // remember, arrays start at 0.... so current film is N-1
+        let prevAlbum = mergedData[v["position"] - 2];
+        let nextAlbum = mergedData[v["position"]];
+
+        let reviewIdOfNextAlbum = "";
+        let reviewIdOfPrevAlbum = "";
+        if (nextAlbum !== undefined) {
+            reviewIdOfNextAlbum = getAlbumReviewId(nextAlbum.artistName, nextAlbum.albumName);
+        }
+        if (prevAlbum !== undefined) {
+            reviewIdOfPrevAlbum = getAlbumReviewId(prevAlbum.artistName, prevAlbum.albumName)
+        }
+        v["reviewIdOfNextAlbum"] = reviewIdOfNextAlbum;
+        v["reviewIdOfPrevAlbum"] = reviewIdOfPrevAlbum;
+    });
 
     return mergedData;
 }

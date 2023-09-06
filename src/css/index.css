@@ -1016,7 +1016,7 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 
 .blog > .section-inner,
 .blog-post > .section-inner {
-  padding: 0px 300px;
+  padding: 20px 300px;
 }
 
 .posts-container {
@@ -1458,11 +1458,13 @@ div.blog-post
 }
 
 /* button to go back to list of blogs */
+.blog-post .back-to-previous-page {
+  margin-top: 20px;
+}
 .back-to-previous-page {
   display: inline-block;
   position: fixed;
   margin-left: -180px;
-  margin-top: 7px;
   color: inherit;
   border: 2px solid transparent;
   border-radius: 10px;
@@ -2622,40 +2624,26 @@ div.btn.films-reset-filters-btn svg {
 
 
 /* #region -----------------------------------<10: FILM REVIEW PAGE>---------------------------------- */
-.review-displayed {
+.film-review .review-displayed {
   display: grid;
   grid-template-columns: 1.67fr 0.1fr 4fr 0.1fr;
   color: var(--intro-text);
   padding: 0px 0 20px 20px;
 }
 
-.review-content-container {
-  
-}
-
-.review-allContent {
-  padding-top: 15px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.review-content {
+.film-review .review-content {
   width: 72%;
   margin: 0 auto;
 }
 
-.review-displayed .filmPoster,
-.review-displayed .review-content {
-  padding-top: 20px;
-}
 
 /* #region ----------------------< (10.1) Film poster >---------------------- */
 
-.review-displayed .filmPoster {
+.film-review .review-displayed .filmPoster {
   position: fixed;
 }
 
-.review-displayed .filmPoster img {
+.film-review .review-displayed .filmPoster img {
   width: 500px;
 }
 
@@ -2665,144 +2653,131 @@ div.btn.films-reset-filters-btn svg {
 /* #region ----------------------< (10.2) Film details >---------------------- */
 
 /* Film details */
-.review-displayed .film-details > * {
+.film-review .review-displayed .film-details > * {
   margin-bottom: 6px;
 }
 
 /* Back to previous page button */
-.review-displayed .back-to-previous-page {
+.film-review .review-displayed .back-to-previous-page {
   margin-left: -50px;
   margin-top: 15px;
+  display: inline-block;
 }
 
 /* Title of film */
-.review-displayed .film-details-header > p {
+.film-review .review-displayed .film-details-header > p {
   font-size: 2.3rem;
 }
-.review-displayed .film-details-header > p.film-title {
+.film-review .review-displayed .film-details-header > p.film-title {
   font-weight: bold;
 }
-.review-displayed .film-details-header {
+.film-review .review-displayed .film-details-header {
   border-bottom: 1px solid var(--blog-td-divider-color);
 }
 
-.review-displayed .film-details-header {
+.film-review .review-displayed .film-details-header {
   margin-bottom: 0px;
 }
-.review-displayed .film-details-header > p {
+.film-review .review-displayed .film-details-header > p {
   display: inline-block;
   margin-right: 15px;
 }
 
 
 /* List of genres & directors */
-.review-displayed .film-genres,
-.review-displayed .film-directors,
-.review-displayed .film-links {
+.film-review .review-displayed .film-genres,
+.film-review .review-displayed .film-directors,
+.film-review .review-displayed .film-links {
   padding-top: 10px;
 }
 
-.review-displayed .genre-tag,
-.review-displayed .director-tag,
-.review-displayed .language-tag {
+.film-review .review-displayed .genre-tag,
+.film-review .review-displayed .director-tag,
+.film-review .review-displayed .language-tag {
   border-radius: 5px;
   background-color: rgb(42, 43, 45);
   padding: 3px 7px;
 }
 
-.review-displayed .film-genres .genre-tag,
-.review-displayed .film-directors .director-tag,
-.review-displayed .film-duration,
-.review-displayed .film-language .language-tag {
+.film-review .review-displayed .film-genres .genre-tag,
+.film-review .review-displayed .film-directors .director-tag,
+.film-review .review-displayed .film-duration,
+.film-review .review-displayed .film-language .language-tag {
   font-size: 0.75rem;
   display: inline-block;
   margin-right: 6px;
 }
 
-.review-displayed .film-details-more > div {
+.film-review .review-displayed .film-details-more > div {
   display: inline-block;
 }
 
-.review-displayed .film-details-more > div + div {
+.film-review .review-displayed .film-details-more > div + div {
   
 }
-.review-displayed .film-details-more > div + div::before {
+.film-review .review-displayed .film-details-more > div + div::before {
   font-size: 1.1em;
   line-height: 1;
   content: "•";
   margin-right: 7px;
 }
 
-.review-displayed .film-details-more > div::before,
-.review-displayed .review-my-tags::before {
+.film-review .review-displayed .film-details-more > div::before,
+.film-review .review-displayed .review-my-tags::before {
   font-size: 0.7rem;
   color: rgb(101, 105, 114);
 }
 
-/*
-.review-displayed .filmMoreData::before {
-  content: "more info";
-  margin-right: 10px;
-}
-.review-displayed .film-genres::before {
-  content: "genres";
-  margin-right: 10px;
-}
-.review-displayed .film-directors::before { 
-  content: "directors";
-  margin-right: 10px;
-}
-.review-displayed .film-links::before { 
-  content: 'links';
-  margin-right: 10px;
-}
-.review-displayed .review-my-tags::before {
-  content: "my tags";
-  margin-right: 9px;
-}*/
 
-.review-displayed .film-genres::before,
-.review-displayed .film-directors::before,
-.review-displayed .film-links::before {
+.film-review .review-displayed .film-genres::before,
+.film-review .review-displayed .film-directors::before,
+.film-review .review-displayed .film-links::before {
   color: var(--text-darker);
 }
 
 /* List of links */
-.review-displayed .film-links > a {
+.links > a {
   border-radius: 5px;
-  font-size: 0.65rem;
-  padding: 3px 6px;
+  font-size: 0.8rem;
+  padding: 3px 10px;
   margin-right: 6px;
   border: 2px solid rgb(159, 159, 159);
   background-color: rgb(58, 60, 62);
   display: inline-block;
 }
-.review-displayed .film-links > a:hover {
+.links > a:hover {
   background-color: rgb(85, 85, 94);
 }
-.review-displayed .film-links > a.filmImdbLink {
+.links > a.film-imdb-link {
   color: rgb(253, 253, 44) !important;
 }
-.review-displayed .film-links > a.filmTmdbLink {
+.links > a.film-tmdb-link {
   color: rgb(36, 201, 234) !important;
 }
-.review-displayed .film-links > a.filmLetterboxdLink {
+.links > a.film-letterboxd-link {
   color: rgb(242, 150, 250) !important;
 }
+.links > a.album-lastfm-link {
+  color: rgb(255, 115, 87) !important;
+}
+.links > a.album-rym-link {
+  color: rgb(72, 182, 255) !important;
+}
+
 
 
 /* My data */
-.review-displayed .film-details-myData {
+.film-review .review-displayed .film-details-myData {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.review-displayed .film-details-myData > * {
+.film-review .review-displayed .film-details-myData > * {
   display: inline-block;
   margin-right: 10px;
 }
 
 /* My rating */
-.review-displayed .filmMyRating {
+.film-review .review-displayed .filmMyRating {
   font-size: 1.7rem;
   border-radius: 100%;
   background-color: rgb(100, 29, 151);
@@ -2816,17 +2791,17 @@ div.btn.films-reset-filters-btn svg {
   color: rgb(255, 255, 255);
   font-weight: bold;
 }
-.review-displayed .filmMyRating:hover {
+.film-review .review-displayed .filmMyRating:hover {
   background-color: rgb(147, 63, 208);
   cursor: pointer;
 }
-.review-displayed .filmMyRating > span {
+.film-review .review-displayed .filmMyRating > span {
 
 }
 
 
 /* My position in toplist */
-.review-displayed .filmPosition {
+.film-review .review-displayed .filmPosition {
   width: fit-content;
   border-radius: 5px;
   background-color: rgb(47, 137, 104);
@@ -2835,31 +2810,31 @@ div.btn.films-reset-filters-btn svg {
   cursor: pointer;
   user-select: none;
 }
-.review-displayed .filmPosition > a {
+.film-review .review-displayed .filmPosition > a {
   color: var(--text) !important;
 }
-.review-displayed .filmPosition:hover {
+.film-review .review-displayed .filmPosition:hover {
   background-color: rgb(63, 169, 132);
 }
-.review-displayed .filmPosition:active,
-.review-displayed .filmMyRating:active {
+.film-review .review-displayed .filmPosition:active,
+.film-review .review-displayed .filmMyRating:active {
   transition: all ease 0.2s;
   border: 3px solid rgba(209, 209, 209, 0.486);
 }
 
-.review-displayed .filmPosition > a {
+.film-review .review-displayed .filmPosition > a {
   text-align: center;
 }
-.review-displayed .filmPosition > a > span {
+.film-review .review-displayed .filmPosition > a > span {
   display: block;
   margin: 0;
   padding: 0;
 }
-.review-displayed .filmPosition > a > span:nth-child(1) {
+.film-review .review-displayed .filmPosition > a > span:nth-child(1) {
   font-size: 2.0rem;
   font-weight: bold;
 }
-.review-displayed .filmPosition > a > span:nth-child(2) {
+.film-review .review-displayed .filmPosition > a > span:nth-child(2) {
   font-size: 0.65rem;
   font-weight: 100;
 }
@@ -2869,8 +2844,64 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region ----------------------< (10.3) Review content >---------------------- */
 
-.review-content-container {
+.film-review .review-content-container {
   padding-top: 10px;
+}
+
+/* Image sizing problems! */
+.film-review .review-content-container img:not(.dont-resize) {
+  width: 100%;
+}
+.film-review .review-content-container img {
+  border-radius: 8px;
+  max-height: 100%;
+  height: auto;
+  margin: 2em 0;
+}
+.film-review .review-content-container img, 
+.film-review .review-content-container picture {
+  display: block;
+}
+
+/*  */
+.film-review .review-displayed > div.next-review-link > a {
+  right: 2px;
+}
+
+.film-review .review-displayed > div.next-review-link > a,
+.film-review .review-displayed > div.prev-review-link > a {
+  display: block;
+  position: fixed;
+  font-size: 3rem;
+  color: var(--text) !important;
+}
+.film-review .review-displayed > div.next-review-link > a > p,
+.film-review .review-displayed > div.prev-review-link > a > p {
+  height: 100vh;
+  margin-top: 50vh;
+}
+.film-review .review-displayed > div.next-review-link:hover,
+.film-review .review-displayed > div.prev-review-link:hover {
+  background-color: #3f4144;
+}
+
+/* #endregion */
+
+
+/* #region ----------------------< (10.4) Stuff that's common to any review...> ---------------------------- */
+
+/* where I put the jsx import... */
+.review-content-container {
+  
+}
+.review-allContent {
+  padding-top: 15px;
+  width: 90%;
+  margin: 0 auto;
+}
+.review-displayed .filmPoster,
+.review-displayed .review-content {
+  padding-top: 20px;
 }
 
 /* A review is splt into several sections */
@@ -2878,7 +2909,7 @@ div.btn.films-reset-filters-btn svg {
   border: 1px solid transparent;
   padding: 5px;
   border-radius: 5px;
-  margin-bottom: 7px;
+  margin-bottom: 35px;
   color: var(--intro-text);
   font-size: 0.8rem;
 }
@@ -2901,52 +2932,14 @@ div.btn.films-reset-filters-btn svg {
   color: var(--film-review-section-subtitle-text-color);
   font-size: 0.8rem;
 }
-
-/* Image sizing problems! */
-.review-content-container img:not(.dont-resize) {
-  width: 100%;
-}
-.review-content-container img {
-  border-radius: 8px;
-  max-height: 100%;
-  height: auto;
-  margin: 2em 0;
-}
-.review-content-container img, 
-.review-content-container picture {
-  display: block;
-}
-
-/*  */
-.review-displayed > div.next-review-link > a {
-  right: 2px;
-}
-
-.review-displayed > div.next-review-link > a,
-.review-displayed > div.prev-review-link > a {
-  display: block;
-  position: fixed;
-  font-size: 3rem;
-  color: var(--text) !important;
-}
-.review-displayed > div.next-review-link > a > p,
-.review-displayed > div.prev-review-link > a > p {
-  height: 100vh;
-  margin-top: 50vh;
-}
-.review-displayed > div.next-review-link:hover,
-.review-displayed > div.prev-review-link:hover {
-  background-color: #3f4144;
-}
-
 /* #endregion */
 
 
 /* #region ----------------------< (10.4) My tags >---------------------- */
-.review-displayed .review-my-tags {
+.film-review .review-displayed .review-my-tags {
   
 }
-.review-displayed .review-my-tags > .my-tag {
+.film-review .review-displayed .review-my-tags > .my-tag {
   font-size: 0.65rem;
   border-radius: 50px;
   padding: 4px 10px;
@@ -2959,7 +2952,7 @@ div.btn.films-reset-filters-btn svg {
   color: var(--film-review-btn-text-color);
   user-select: none;
 }
-.review-displayed .review-my-tags > .my-tag:hover {
+.film-review .review-displayed .review-my-tags > .my-tag:hover {
   background-color: var(--tags-bg-color-hover);
 }
 /* #endregion */
@@ -3068,7 +3061,7 @@ div.albumInfoContainer > div.albumInfo > div > p {
   aspect-ratio: 1/1;
 }
 .dataInCircle p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 200;
   margin-top: -10px;
 }
@@ -3089,13 +3082,181 @@ div.albumInfoContainer > div.pos {
 div.albumInfoContainer > div.myRating {
   top: 0;
   right: 0;
-  background-color: rgba(241, 127, 46, 0.897);
+  background-color: rgba(206, 181, 19, 0.897);
 }
 
 /* #endregion */
 
 
 /* #region -----------------------------------<12: MUSIC REVIEW PAGE>---------------------------------- */
+
+.album-review-displayed {
+  display: grid;
+  grid-template-columns: 3fr 0.2fr 10fr 0.2fr;
+}
+
+.album-review-displayed .album-info {
+  
+}
+
+
+/* actual review content */
+.album-review .review-content {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.album-review-displayed .album-info {
+  padding: 50px 20px; 
+}
+
+.album-review-displayed > .album-info span {
+  color: var(--text);
+}
+.album-review-displayed > .album-info > span {
+  display: block;
+}
+
+.album-review-displayed .album-info > div {
+  margin-top: 10px;
+}
+
+/* Artist name */
+.album-review-displayed > .album-info > span.artist-name {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+/* Album name */
+.album-review-displayed > .album-info > span.album-name {
+  font-size: 1.0rem;
+}
+
+.album-review-displayed > .album-info > div > p {
+  display: inline-block;
+  color: var(--text-darker);
+  font-size: 0.6rem;
+  margin-right: 5px;
+}
+
+/* Year */
+.album-review-displayed > .album-info > div.year-of-release > span {
+  border-radius: 10px;
+  background-color: rgb(63, 62, 62);
+  display: inline-block;
+  padding: 2px 8px;
+}
+
+.album-review-displayed > .album-info > div.list-of-tags > span {
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50px;
+  padding: 1px 5px;
+  font-size: 0.65rem;
+  cursor: pointer;
+}
+
+/* Genre label */
+span.genre-text {
+  background-color: rgba(47, 120, 176, 0.5);
+}
+span.theme-text {
+  background-color: rgba(223, 81, 226, 0.529);
+}
+
+:root {
+  --album-cover-width: 450px;
+}
+
+/* Album cover */
+.album-review-displayed > .album-info > img {
+  width: var(--album-cover-width);
+}
+
+/* Back to previous page button */
+.album-review-displayed .back-to-previous-page {
+  margin-left: 0px;
+  margin-top: -30px;
+}
+
+.album-review-displayed > .album-info .album-dataContainer {
+  margin-bottom: 30px;
+}
+
+
+/* My rating */
+.album-review-displayed > .album-info .my-rating {
+  position: absolute;
+  margin-left: calc(var(--album-cover-width) - 80px);
+  font-size: 1.7rem;
+  border-radius: 100%;
+  background-color: rgb(100, 29, 151);
+  border: 3px solid transparent;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding-top: 12px;
+  user-select: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.album-review-displayed > .album-info .my-rating:hover {
+  background-color: rgb(147, 63, 208);
+  cursor: pointer;
+}
+.album-review-displayed > .album-info .my-rating > span {
+
+}
+
+
+/* My position in toplist */
+.album-review-displayed > .album-info .my-pos {
+  width: fit-content;
+  border-radius: 5px;
+  background-color: rgb(47, 137, 104);
+  border: 3px solid transparent;
+  padding: 0px 5px;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+.album-review-displayed > .album-info .my-pos > a {
+  color: var(--text) !important;
+}
+.album-review-displayed > .album-info .my-pos:hover {
+  background-color: rgb(63, 169, 132);
+}
+.album-review-displayed > .album-info .my-pos:active,
+.album-review-displayed > .album-info .my-pos:active {
+  transition: all ease 0.2s;
+  border: 3px solid rgba(209, 209, 209, 0.486);
+}
+
+
+/*  */
+.album-review-displayed div.next-review-link > a {
+  right: 2px;
+}
+
+.album-review-displayed div.next-review-link > a,
+.album-review-displayed div.prev-review-link > a {
+  display: block;
+  position: fixed;
+  font-size: 3rem;
+  color: var(--text) !important;
+}
+.album-review-displayed div.next-review-link > a > p,
+.album-review-displayed div.prev-review-link > a > p {
+  height: 100vh;
+  margin-top: 50vh;
+}
+.album-review-displayed div.next-review-link:hover,
+.album-review-displayed div.prev-review-link:hover {
+  background-color: #3f4144;
+}
 
 
 /* #endregion */
@@ -3567,6 +3728,12 @@ div.albumInfoContainer > div.myRating {
   }
   /* #endregion */
 
+  /* #endregion */
+
+  /* #region --------------------< Music >------------------------- */
+  .album-review-displayed {
+    display: block;
+  }
   /* #endregion */
 }
 

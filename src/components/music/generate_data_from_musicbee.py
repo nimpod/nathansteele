@@ -49,7 +49,10 @@ class Helpers:
                             .replace('¬', "\"")\
                             .replace('@', '?')
 
-    def remove_special_characters(str_to_edit):
+    def remove_special_characters_based_on_musicbee_export(str_to_edit):
+        """
+        Musicbee exports are annoying
+        """
         return str_to_edit.replace(" ", "_")\
                           .replace(".", "")\
                           .replace("/", "")\
@@ -58,6 +61,7 @@ class Helpers:
                           .replace("[", "")\
                           .replace("]", "")\
                           .replace("!", "")\
+                          .replace("%", "")\
                           .replace("?", "")\
                           .replace("'", "")\
                           .replace("\"", "")\
@@ -113,8 +117,8 @@ def generate_data_from_musicbee():
                 # print(f"{pos_padded}: {artist_name} - {album_name}")
                 
                 # construct review ID...
-                artist_name_v2 = Helpers.remove_special_characters(artist_name)
-                album_name_v2 = Helpers.remove_special_characters(album_name)
+                artist_name_v2 = Helpers.remove_special_characters_based_on_musicbee_export(artist_name)
+                album_name_v2 = Helpers.remove_special_characters_based_on_musicbee_export(album_name)
                 review_id = f"{artist_name_v2}-{album_name_v2}"
                 print(f"{pos_padded}: {review_id}")
                 

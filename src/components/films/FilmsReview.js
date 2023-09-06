@@ -43,7 +43,7 @@ class FilmsReview extends React.Component {
             title = this.props.filmData.title;
         }
 
-        // 
+        // id of next/previous films...
         if (this.props.filmData.reviewIdOfNextFilm !== undefined) {
             reviewIdOfNextFilm = this.props.filmData.reviewIdOfNextFilm;
         }
@@ -108,10 +108,10 @@ class FilmsReview extends React.Component {
                                                 return <div className='genre-tag'>{genre}</div>
                                             })}
                                         </div>
-                                        <div className='film-links' title="Links">
-                                            <a className='filmImdbLink' href={this.props.filmData.imdbUrl} target='_blank'>IMDb</a>
-                                            <a className='filmTmdbLink' href={this.props.filmData.tmdbUrl} target='_blank'>TMDb</a>
-                                            <a className='filmLetterboxdLink' href={this.props.filmData.letterboxdUrl} target='_blank'>Letterboxd</a>
+                                        <div className='links' title="Links">
+                                            <a className='film-imdb-link' href={this.props.filmData.imdbUrl} target='_blank'>IMDb</a>
+                                            <a className='film-tmdb-link' href={this.props.filmData.tmdbUrl} target='_blank'>TMDb</a>
+                                            <a className='film-letterboxd-link' href={this.props.filmData.letterboxdUrl} target='_blank'>Letterboxd</a>
                                         </div>
                                     </div>
                                     <div className='film-details-myData'>
@@ -166,7 +166,7 @@ class FilmsReview extends React.Component {
  */
 const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.film_id;     // the id of the review being displayed in the UI
-    console.log(id);
+    //  console.log(id);
 
     return {
         filmData: state.filmReviews.find(film => getFilmReviewId(film.title, film.letterboxdUrl) === id),

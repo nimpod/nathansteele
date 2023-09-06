@@ -9,8 +9,6 @@ import AlbumGridElement from './AlbumGridElement';
 
 class Music extends Component {
     render() {
-        let albumsJsonList = require('./reviews_web_data.json');
-        // console.log(albumsJsonList);
         // console.log(this.props.albumReviewsData);
 
         return (

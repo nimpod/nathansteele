@@ -10,7 +10,7 @@ import { getValueOfCSSVariable } from '../../js/helpers';
 class AlbumGridElement extends Component {
     render() {
         let albumCoverUrl = ""
-        console.log(this.props.album);
+        // console.log(this.props.album);
 
         // use custom album cover url if it exists...
         if (this.props.album.customCoverUrl !== undefined) {
@@ -23,7 +23,7 @@ class AlbumGridElement extends Component {
         
         // console.log(this.props);
         return(
-            <Link to={'/music/' + this.props.reviewId}>
+            <Link to={'/music/' + this.props.album.reviewId}>
                 <div className='albumInfoContainer'>
                     <img className='albumCover' src={albumCoverUrl}></img>
                     <div className='albumInfo'>
@@ -31,19 +31,8 @@ class AlbumGridElement extends Component {
                             <p>{this.props.album.artistName}</p>
                         </div>
                         <div className='albumName'>
-                            <p>{this.props.album.reviewId}</p>
+                            <p>{this.props.album.albumName}</p>
                         </div>
-                        {/*}
-                        <div className='genres'>
-                            <p>{this.props.album.genres}</p>
-                        </div>
-                        <div className='year'>
-                            <p>{this.props.album.year}</p>
-                        </div>
-                        <div className='myDiscoveryYear'>
-                            <p>{this.props.album.myDiscoveryYear}</p>
-                        </div>
-                        */}
                     </div>
                     <div className='pos dataInCircle'>
                         <ToplistPosIcon className="invertable-icon" />
