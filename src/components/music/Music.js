@@ -10,17 +10,20 @@ import AlbumGridElement from './AlbumGridElement';
 class Music extends Component {
     render() {
         let albumsJsonList = require('./reviews_web_data.json');
-        console.log(albumsJsonList);
+        // console.log(albumsJsonList);
+        // console.log(this.props.albumReviewsData);
 
         return (
             <div className='page-wrapper top-music-grid-container'>
-                <div id='top-music-list'>
-                    {albumsJsonList.map(a => {
-                        return <AlbumGridElement
-                            album={a}
-                            albumsList={albumsJsonList}
-                        />
-                    })}
+                <div className='section-inner'>
+                    <div id='top-music-list'>
+                        {this.props.albumReviewsData.map(a => {
+                            return <AlbumGridElement
+                                album={a}
+                                albumsList={this.props.albumReviewsData}
+                            />
+                        })}
+                    </div>
                 </div>
             </div>
         )
@@ -33,7 +36,7 @@ class Music extends Component {
  */
 const mapStateToProps = (state) => {
     return {
-        albumReviews: state.albumReviews
+        albumReviewsData: state.albumReviews
     }
 }
 

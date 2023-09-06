@@ -27,7 +27,7 @@ session = requests.Session()
 
 
 class Helpers:
-    """ Useful functions """
+    """ Useful functions (TODO: move to separate file) """
     
     def read_txt_file(relative_path_to_txt_file: str):
         """
@@ -74,7 +74,6 @@ class Helpers:
                     .replace("ã", "a")\
                     .replace("¸", "")\
                     .lower()
-
 
 
 def download_letterboxd_data():

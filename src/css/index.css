@@ -96,9 +96,9 @@
   --films-toplist-grid-item-fixed-height: 250px;
 
   /* Films list (list view) */
-  --films-toplist-list-item-fixed-width: 850px;
-  --film-poster-border-radius-listview: 15px;
-  --films-toplist-list-item-poster-fixed-height: 470px;
+  --films-toplist-list-item-fixed-width: 830px;
+  --film-poster-border-radius-listview: 11px;
+  --films-toplist-list-item-poster-fixed-height: 450px;
   --vertical-gap-between-filmtoplistitems: 30px;
   --film-toplist-item-border-inner-width: 3px;
   --film-toplist-item-border-outer-width: 2px;
@@ -221,6 +221,7 @@
   --film-review-section-btnToggler-border-color: rgb(230, 232, 237);
   --film-review-section-btnToggler-border-color-active: rgb(118, 129, 131);
   --film-review-section-subtitle-text-color: rgb(85, 87, 90);
+  --films-controls-container-bg-color: rgb(187, 189, 190);
 
 
   /* Messiahs handbook */
@@ -232,7 +233,6 @@
   --searchbox-hover-bg-color: rgb(225, 225, 228);
   --searchbox-active-bg-color: rgb(255, 255, 255);
   --searchbox-border-color: rgba(174, 181, 192, 0.019);
-  --searchbox-placeholder-text-color: rgba(64, 64, 69, 0.531);
   --searchbox-text-color: rgb(60, 114, 240);
 
   /* Box shadow */
@@ -256,7 +256,7 @@
 [data-theme="dark"] {
 
   /* Main stuff */
-  --section-inner-bg-color: rgb(32, 33, 37);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
+  --section-inner-bg-color: rgb(16, 17, 19);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
   --page-wrapper-bg: rgb(34, 40, 42);
   --bg1: rgb(153, 145, 70); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
   --bg2: rgb(127, 66, 66); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
@@ -278,10 +278,10 @@
 
   /* -----------------< NAVBAR >----------------- */
   /* Sidebar */
-  --sidenav-bg-color: rgb(42, 44, 49); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
+  --sidenav-bg-color: rgb(28, 29, 33); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
   --sidenav-shadow-color: rgba(0, 0, 0, 0.593);
   --sidenav-item-text-color: rgb(183, 185, 197);
-  --sidenav-item-bg-color: rgb(55, 56, 61);
+  --sidenav-item-bg-color: rgb(45, 46, 50);
   --sidenav-item-bg-color-hover: rgb(72, 74, 80);
   --sidenav-item-bg-color-active: rgb(101, 105, 114);
   --sidenav-item-border-color-active: rgb(157, 160, 163);
@@ -320,8 +320,8 @@
   --blog-td-divider-color: rgba(166, 166, 193, 0.183);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
-  --blog-table-row-bg-hover: rgb(42, 42, 44);
-  --blog-table-row-bg-selected: rgb(51, 54, 56);
+  --blog-table-row-bg-hover: rgb(26, 26, 28);
+  --blog-table-row-bg-selected: rgb(43, 46, 47);
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
   --blog-table-header-bottom-shadow-color: rgba(0, 0, 0, 0.304);
@@ -353,10 +353,13 @@
 
   /* -----------------< FILMS >----------------- */
     /* Films page (controls) */
+      /* Main stuff */
+      --films-controls-container-bg-color: rgb(29, 31, 34);
+      --films-controls-subgroup-border-color: rgb(67, 70, 78);
       /* Button in controls panel */
-      --films-controls-btn-bg-color: rgb(56, 58, 60);
-      --films-controls-btn-bg-color-hover: rgb(69, 69, 72);
-      --films-controls-btn-bg-color-active: rgb(64, 67, 74);
+      --films-controls-btn-bg-color: rgb(42, 45, 47);
+      --films-controls-btn-bg-color-hover: rgb(59, 61, 66);
+      --films-controls-btn-bg-color-active: rgb(76, 78, 84);
       /* Dropdown menu */
       --films-controls-dropdown-list-bg-color: rgba(66, 67, 73, 0.946);
       --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
@@ -366,10 +369,8 @@
       /* Miscellaneous */
       --films-controls-toggle-btn-bg-color: rgb(61, 61, 65);
       --films-controls-toggle-btn-bg-color-hover: rgb(70, 75, 76);
-      --films-controls-subgroup-border-color: rgb(67, 70, 78);
-      --films-controls-container-bg-color: rgb(45, 47, 50);
       --films-controls-btn-text-color-active: var(--text);
-      --films-controls-btn-border-color-clicked: rgba(147, 153, 176, 0.689);
+      --films-controls-btn-border-color-clicked: rgba(116, 120, 136, 0.429);
 
     /* Films page (pagination buttons) */
       /* Pagination button text colours */
@@ -387,7 +388,7 @@
       /* Pagination next/previous button */
       --films-pagination-nextandprevious-btns-bg-color: rgb(92, 89, 89);
       --films-pagination-nextandprevious-btn-disabled-text-color: rgb(101, 105, 116);
-      --films-pagination-nextandprevious-btn-disabled-border-color: rgba(169, 162, 162, 0.185);
+      --films-pagination-nextandprevious-btn-disabled-border-color: rgba(169, 162, 162, 0.042);
 
   /* Films page (grid view & list view) */
     /* Grid view */
@@ -396,8 +397,8 @@
     /* List view */
     --film-toplist-item-images-border-inner-color: rgb(0, 0, 0);
     --film-toplist-item-border-outer-color: rgb(2, 2, 2);
-    --film-toplist-item-bg-color-hover: rgb(55, 55, 58);
-    --film-toplist-item-bg-color-active: rgb(74, 75, 78);
+    --film-toplist-item-bg-color-hover: rgb(29, 29, 32);
+    --film-toplist-item-bg-color-active: rgb(47, 48, 52);
     --film-toplist-item-border-color-active: rgba(21, 124, 150, 0);
 
   /* Data colours */
@@ -426,11 +427,10 @@
 
 
   /* Searchbox */
-  --searchbox-bg-color: rgb(55, 55, 58);
-  --searchbox-hover-bg-color: rgb(72, 72, 76);
-  --searchbox-active-bg-color: rgb(79, 80, 82);
+  --searchbox-bg-color: rgb(43, 43, 46);
+  --searchbox-hover-bg-color: rgb(56, 56, 61);
+  --searchbox-active-bg-color: rgb(66, 68, 71);
   --searchbox-border-color: rgba(8, 93, 149, 0.293);
-  --searchbox-placeholder-text-color: rgba(245, 245, 240, 0.35);
   --searchbox-text-color: rgb(38, 220, 144);
 
   /* Box shadow */
@@ -1306,7 +1306,7 @@ div.searchbox input.activated {
   /* border: 2px solid var(--searchbox-border-color); */
 }
 div.searchbox input::placeholder {
-  color: var(--searchbox-placeholder-text-color);
+  color: var(--text-darker) !important;
 }
 
 /* #endregion */
@@ -1780,7 +1780,7 @@ div.blog-post
 
 /* item within toplist */
 .films-toplist.view-as-list .films-toplist-item > a {
-  width: var(--films-toplist-list-item-fixed-width);
+  width: var(--films-toplist-list-item-fixed-width);  /* set width of entire container */
   margin: 0 auto; /* Center every item in the list */
   display: block;
   opacity: 1.0;
@@ -2034,6 +2034,7 @@ span.film-imdbDiffScore:active {
   padding: 8px;
   margin: 40px 40px;
   width: 350px;
+  height: 650px;
   border-radius: 10px;
 }
 
@@ -2335,6 +2336,8 @@ div.btn.films-reset-filters-btn svg {
 .pagination-container {
   margin: 0 auto;
 }
+
+/* display pagination buttons in grid (2 per row) */
 .pagination-btns {
   list-style: none;
   list-style-type: none;
@@ -2390,9 +2393,10 @@ div.btn.films-reset-filters-btn svg {
   color: var(--text) !important;
   background-color: var(--films-pagination-nextandprevious-btns-bg-color);
 }
+/* #endregion */
 
 
-/* Next & Previous buttons................. */
+/* #region ------------------------< 13.6 Next & Previous pagination buttons >------------------------ */
 .pagination-btns li.previous-btn a,
 .pagination-btns li.next-btn a {
   display: flex;
@@ -2423,17 +2427,21 @@ div.btn.films-reset-filters-btn svg {
   cursor: not-allowed;
 }
 
+:root {
+  --next-and-previous-pagination-btns-distance-from-top: 263px;
+}
+
 /* Previous page button */
 .pagination-btns li.previous-btn {
   position: fixed;
-  margin-top: 213px;
+  margin-top: var(--next-and-previous-pagination-btns-distance-from-top);
   margin-left: 0px;
 }
 
 /* Next page button */
 .pagination-btns li.next-btn {
   position: fixed;
-  margin-top: 213px;
+  margin-top: var(--next-and-previous-pagination-btns-distance-from-top);
   margin-left: 175px;
 }
 
@@ -2869,10 +2877,102 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region -----------------------------------<11: MUSIC PAGE>---------------------------------- */
 
+:root {
+  --albums-displayed-per-row: 6;
+  --album-cover-border-radius: 0.5rem;
+}
+
+#top-music-list {
+  display: grid;
+  grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
+  padding: 100px 120px;
+}
+
+div.albumInfoContainer {
+  margin: 0.25rem;
+  position: relative;
+}
+div.albumInfoContainer:hover {
+  opacity: 0.7;
+  transition: all 100ms ease;
+}
+
+div.albumInfoContainer > img.albumCover {
+  display: block;
+  border-top-left-radius: var(--album-cover-border-radius);
+  border-top-right-radius: var(--album-cover-border-radius);
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+}
+
+div.albumInfoContainer > div.albumInfo {
+  border-bottom-left-radius: var(--album-cover-border-radius);
+  border-bottom-right-radius: var(--album-cover-border-radius);
+  border-collapse: separate;
+  overflow: hidden;
+}
+
+div.albumInfoContainer > div.albumInfo > div  {
+  background-color: rgb(49, 49, 51);
+  color: var(--text);
+  font-size: 0.83rem;
+  padding: 2px 5px;
+}
+div.albumInfoContainer > div.albumInfo > div > p {
+  margin: 0;
+}
+
+div.albumInfoContainer > div.albumInfo > div > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+}
+
+.dataInCircle {
+  position: absolute;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  color: var(--text);
+  padding: 0.25rem;
+  border-radius: 9999px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 1/1;
+}
+.dataInCircle p {
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin-top: -10px;
+}
+.dataInCircle svg {
+  width: 0.95em;
+  height: 0.95em;
+  margin: 0 auto;
+  margin-top: -13px;
+  margin-left: -3px;
+}
+
+div.albumInfoContainer > div.pos {
+  top: 0;
+  left: 0;
+  background-color: rgba(35, 37, 41, 0.897);
+}
+
+div.albumInfoContainer > div.myRating {
+  top: 0;
+  right: 0;
+  background-color: rgba(241, 127, 46, 0.897);
+}
+
 /* #endregion */
 
 
 /* #region -----------------------------------<12: MUSIC REVIEW PAGE>---------------------------------- */
+
 
 /* #endregion */
 
