@@ -47,7 +47,8 @@ class Helpers:
         """
         return folder_name.replace('~', ':')\
                             .replace('¬', "\"")\
-                            .replace('@', '?')
+                            .replace('@', '?')\
+                            .replace('^', '.')
 
     def remove_special_characters_based_on_musicbee_export(str_to_edit):
         """
@@ -134,6 +135,7 @@ def generate_data_from_musicbee():
                     # get lastfm url...
                     if "url" in data['album']:
                         last_fm_url = data['album']['url']
+                        print(last_fm_url)
                     else:
                         print('not url found :(')
                 
@@ -152,6 +154,7 @@ def generate_data_from_musicbee():
                     # get album cover (if it was in response)...
                     if 'image' in data['album']:
                         album_cover_url = data['album']['image'][-1]['#text']
+                        print(album_cover_url)
                     else:
                         print('no album cover found :(')
                 

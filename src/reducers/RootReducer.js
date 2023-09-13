@@ -131,6 +131,11 @@ const mergeAlbumData = (initState) => {
         }
         v["reviewIdOfNextAlbum"] = reviewIdOfNextAlbum;
         v["reviewIdOfPrevAlbum"] = reviewIdOfPrevAlbum;
+
+        // create proper array from the 'list' of genres (each genre is seperated by a semi colon (copying the genres from Musicbee, rather than rewritting each one manually enclosed in quotations))
+        if (v["genres"]) {
+            v["genres"] = v["genres"][0].split(';');
+        }
     });
 
     return mergedData;

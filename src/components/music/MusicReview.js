@@ -31,6 +31,7 @@ class MusicReview extends React.Component {
         if (this.props.albumData.genres !== undefined) {
             genres = this.props.albumData.genres;
         }
+        console.log(genres);
         
         // get themes list if it exists...
         if (this.props.albumData.themes !== undefined) {
