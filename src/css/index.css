@@ -30,22 +30,22 @@
 
 /* particlejs variables */
 :root {
-  --particle-count: 300;
+  --particle-count: 800;
   --particle-density: 1500;
   --particle-opacity: 0.5;
-  --particle-opacity-min: 0.0;
-  --particle-size: 2.9;
-  --particle-speed: 0.9;
+  --particle-opacity-min: 0.3;
+  --particle-size: 1.7;
+  --particle-speed: 0.5;
   --line-count: 60;
   --line-opacity: 0.0;
-  --line-width: 1.50;
-  --linked-line-opacity: 0.2;
-  --linked-line-radius: 100;
-  --particle-color-1: rgba(86, 244, 173, 0.613);
-  --particle-color-2: rgba(137, 255, 137, 0.604);
-  --particle-color-3: rgba(94, 15, 15, 0.816);
-  --particle-color-4: rgba(15, 61, 109, 0.79);
-  --particle-line-color: rgba(0, 0, 0, 0.419);
+  --line-width: 1.00;
+  --linked-line-opacity: 1.6;
+  --linked-line-radius: 200;
+  --particle-color-1: rgb(255, 255, 255);
+  --particle-color-2: rgb(255, 255, 255);
+  --particle-color-3: rgb(255, 255, 255);
+  --particle-color-4: rgb(255, 255, 255);
+  --particle-line-color: rgba(18, 90, 43, 0.105);
   --num-of-particles-to-spawn-on-push: 10;
   --particle-animation-speed: 3;
 }
@@ -95,8 +95,8 @@
   /* Main stuff */
   --section-inner-bg-color: rgb(243, 243, 243);
   --page-wrapper-bg: rgb(225, 231, 238);
-  --bg1: rgb(225, 231, 238);   /* rgb(243, 235, 169);  rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(156, 189, 183);   /* rgb(191, 63, 63);    rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  --bg1: rgb(225, 231, 238);
+  --bg2: rgb(156, 189, 183);
   --bg3: rgb(252, 242, 155);
   --bg4: rgb(249, 195, 125);
   --bg5: rgb(254, 172, 255);
@@ -300,11 +300,18 @@
   /* Main stuff */
   --section-inner-bg-color: rgb(26, 27, 29);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
   --page-wrapper-bg: rgb(34, 40, 42);
-  --bg1: rgb(153, 145, 70); /*rgb(50, 56, 64);*/   /* rgb(5, 27, 63);    rgb(104, 73, 218);           rgb(79, 156, 158);       rgb(255, 255, 255); */
-  --bg2: rgb(127, 66, 66); /*rgb(50, 56, 64);*/   /* rgb(31, 31, 31);   rgba(102, 238, 165, 0.521);  rgba(255, 145, 0, 0.4);  rgb(219, 212, 188); */
+  /*
+  --bg1: rgb(153, 145, 70);
+  --bg2: rgb(127, 66, 66);
   --bg3: rgb(61, 101, 100);
   --bg4: rgb(71, 90, 70);
   --bg5: rgb(31, 27, 38);
+  */
+  --bg1: rgb(73, 32, 58);
+  --bg2: rgb(14, 14, 14);
+  --bg3: rgb(15, 16, 16);
+  --bg4: rgb(9, 9, 9);
+  --bg5: rgb(0, 0, 0);
 
   /* Text */
   --text: rgb(240, 240, 240);

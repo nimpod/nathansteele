@@ -13,7 +13,7 @@ import { getValueOfCSSVariable } from '../../js/helpers';
 const PARTICLE_COUNT = getValueOfCSSVariable('--particle-count');
 const PARTICLE_DENSITY = getValueOfCSSVariable('--particle-density');
 const PARTICLE_OPACITY = getValueOfCSSVariable('--particle-opacity');
-const PARTICLE_SIZE = Math.floor(Math.random() * 5) + 1;
+const PARTICLE_SIZE = getValueOfCSSVariable('--particle-size');
 const PARTICLE_SPEED = getValueOfCSSVariable('--particle-speed');
 const PARTICLE_COLOUR_1 = getValueOfCSSVariable('--particle-color-1');
 const PARTICLE_COLOUR_2 = getValueOfCSSVariable('--particle-color-2');
