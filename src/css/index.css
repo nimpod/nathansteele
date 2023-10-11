@@ -782,6 +782,10 @@ Proposed structure of top navbar
   color: var(--svg-color-hover);
 }
 
+/* toggle theme button */
+.theme-toggle {
+  user-select: none;
+}
 .theme-toggle .inline-svg { 
   width: 33px;
 }

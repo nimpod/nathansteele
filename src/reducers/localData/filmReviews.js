@@ -1003,7 +1003,8 @@ export const filmReviews = [
         "title": "Beginners",
         "myRating": "8.25",
         "myTags": ["Friendship", "Soulmate", "Forgiveness", "Melancholic", "Depressing", "Honest"],
-        "myReview": ""
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/io2Tm89or3jO2pDtEAPEACx4wUe.jpg"
     },
     {
         "letterboxdUrl": "https://boxd.it/20ZQ",
@@ -1923,7 +1924,8 @@ export const filmReviews = [
         "myRating": "7.5",
         "myTags": ["Funny", "Gory", "Absurd", "Creature-feature"],
         "myReview": "",
-        "gradualInterest": [7, 7, 7, 7, 8, 8, 8, 8, 8]
+        "gradualInterest": [7, 7, 7, 7, 8, 8, 8, 8, 8],
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/pVpQHtGsGFGRxaq2Fh3LrA5QJiN.jpg"
     },
     {
         "letterboxdUrl": "https://boxd.it/qIvo",
@@ -2407,7 +2409,8 @@ export const filmReviews = [
         "myRating": "8.0",
         "myTags": [""],
         "myReview": "",
-        "gradualInterest": [8, 8, 8, 9, 8, 8, 9, 8, 8, 8]
+        "gradualInterest": [8, 8, 8, 9, 8, 8, 9, 8, 8, 8],
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/mhugOCm0eC1BP6nDjnaSRvgorQj.jpg"
     },
     {
         "letterboxdUrl": "https://boxd.it/8N9G",
@@ -2458,7 +2461,7 @@ export const filmReviews = [
         "myRating": "7.5",
         "myTags": [""],
         "myReview": "",
-        "customPosterUrl": "https://www.themoviedb.org/t/p/original/l52cpdZcVkEVTaLqga6xxSQoaKX.jpg"
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/3L7zuJ6TdbB7Cizd1eZNNbAr9YG.jpg"
     },
     {
         "letterboxdUrl": "https://boxd.it/26ua",
@@ -2482,7 +2485,7 @@ export const filmReviews = [
         "myRating": "8.0",
         "myTags": [""],
         "myReview": "",
-        "customPosterUrl": "https://www.themoviedb.org/t/p/original/iXJKrcjHXrL148OfmovdGPBvnSw.jpg"
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/nz28d5ZSUe0hJdvd69L7SsVJW0V.jpg"
     },
     {
         "letterboxdUrl": "https://boxd.it/rPHy",
@@ -2534,7 +2537,8 @@ export const filmReviews = [
         "title": "In The Tall Grass",
         "myRating": "7.5",
         "myTags": [""],
-        "myReview": ""
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/1RxhzwFkAUqMt215Brb06u8P8pn.jpg"
     },
     {
         "letterboxdUrl": "https://boxd.it/5mUO",
@@ -2548,8 +2552,188 @@ export const filmReviews = [
         "title": "Spontaneous",
         "myRating": "8.25",
         "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/qhDICM8YxuDn9241O2UVEe9DupC.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/1ldQ",
+        "title": "A Tree of Palme",
+        "myRating": "8.75",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/ui796jZGaqcLD89BHISwFNugd0X.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/dj9c",
+        "title": "A Bride for Rip Van Winkle",
+        "myRating": "8.0",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/ug9a2UEzSRJ6xG5NEvU4YXIbH2A.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/rBtC",
+        "title": "Incredible But True",
+        "myRating": "8.0",
+        "myTags": [""],
         "myReview": ""
     },
+    {
+        "letterboxdUrl": "https://boxd.it/1Pui",
+        "title": "Tekkonkinkreet",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/ePFlq56e7MmVDGKtKeOPy1YbKC3.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/nqbk",
+        "title": "The Forest of Love",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/lJaRdstEc8XwrH2VALEvU35oiz8.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/nBnG",
+        "title": "Portals",
+        "myRating": "8.0",
+        "myTags": [""],
+        "myReview": ""
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/13qs",
+        "title": "Oblivion Island: Haruka and the Magic Mirror",
+        "myRating": "9.0",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/ml8M4MCwHJudF4zbd0KF1SZ6lYr.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/j1Ac",
+        "title": "Meander",
+        "myRating": "7.75",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/gDNHgbbDgLcl67Q0Ges9R3qvwUU.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/llgK",
+        "title": "Get Duked!",
+        "myRating": "8.0",
+        "myTags": [""],
+        "myReview": ""
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/BCig",
+        "title": "Convenience Story",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": ""
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/1L54",
+        "title": "Dead Leaves",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/793WvrgqnX6Xvz7XNAXmKGLVfiC.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/27qS",
+        "title": "Solaris",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/o839RFIxPrpgOMKQ21SOQl4908t.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/kOde",
+        "title": "Diner",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": ""
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/nrek",
+        "title": "The Beach House",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/p8M21d4vzXKa027a00BeRvc3JoX.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/1Tp2",
+        "title": "Porco Rosso",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/c5RDchTXih0OFEoYE25uVORvprq.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/29wS",
+        "title": "Jin-Roh: The Wolf Brigade",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/yO7Ev1VFqMHcwd6GJl4mjmoCyJd.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/1Mn4",
+        "title": "Lupin the Third: The Castle of Cagliostro",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": ""
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/1Q3M",
+        "title": "Frontier(s)",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/lX5XyaUQ4yXRY1knq5N8IKj6Ua4.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/1WSw",
+        "title": "The Midnight Meat Train",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/x5YbfyUA8huK0shr008xwzNVJ5Y.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/1s3y",
+        "title": "Pulse",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/eeWFCRz1lDk2cdlGY1NfbH1XW82.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/15Mg",
+        "title": "The Divide",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/sfjN76YhJKVonJIDYz8cYGxFcye.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/3oFs",
+        "title": "Himizu",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/8qDMK0MMSH7rMMrFZP0zgmz64kf.jpg"
+    },
+    {
+        "letterboxdUrl": "https://boxd.it/1Tri",
+        "title": "Last Life in the Universe",
+        "myRating": "7.5",
+        "myTags": [""],
+        "myReview": "",
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/dOdGczlrw5e1p5SrywEt1v0H5qp.jpg"
+    },
+
 
     /* RATING SYSTEM */
     // 10.0 = Absolute 10
