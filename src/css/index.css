@@ -29,8 +29,7 @@
 /* #region ----------------------------------<0: VARIABLES>---------------------------------- */
 
 /* particlejs variables */
-:root {
-  --particle-count: 800;
+:root {  --particle-count: 800;
   --particle-density: 1500;
   --particle-opacity: 0.5;
   --particle-opacity-min: 0.3;
