@@ -3169,7 +3169,7 @@ div.albumInfoContainer > div.myRating {
 }
 
 /* Genre label */
-span.genre-text {
+.album-review span.genre-text {
   background-color: rgba(47, 120, 176, 0.5);
 }
 span.theme-text {
