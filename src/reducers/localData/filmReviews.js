@@ -120,111 +120,226 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
 const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.png|.PNG|.jpeg|.webp)$")
 
 
-// all local data goes here
-// all films in the toplist must exist in here (matching is done based on the letterboxdUrl)
-// it's safe to have more than necessary in this list (e.g. if I removed a film from my toplist, keeping it here won't break anything)
+
+/**
+ * Place to store references to screenshots...
+ */
+const screenshots = {
+    "white_god": [
+        require('../websiteContent/films/white_god/screenshot1.webp'),
+        require('../websiteContent/films/white_god/screenshot2.webp'),
+        require('../websiteContent/films/white_god/screenshot3.webp'),
+    ],
+
+    "flatland": [
+        require('../websiteContent/films/flatland/screenshot1.webp'),
+        require('../websiteContent/films/flatland/screenshot2.webp'),
+        require('../websiteContent/films/flatland/screenshot3.webp'),
+    ],
+
+    "feast": [
+        require('../websiteContent/films/feast/screenshot1.webp'),
+        require('../websiteContent/films/feast/screenshot2.webp'),
+        require('../websiteContent/films/feast/screenshot5.webp'),
+    ],
+
+    "the_secret_world_of_arrietty": [
+        require('../websiteContent/films/the_secret_world_of_arrietty/screenshot1.webp'),
+        require('../websiteContent/films/the_secret_world_of_arrietty/screenshot2.webp'),
+        require('../websiteContent/films/the_secret_world_of_arrietty/screenshot3.webp'),
+    ],
+
+    "a_ghost_story": [
+        require('../websiteContent/films/a_ghost_story/screenshot1.webp'),
+        require('../websiteContent/films/a_ghost_story/screenshot2.webp'),
+        require('../websiteContent/films/a_ghost_story/screenshot3.webp'),
+    ]
+}
+
+
+/**
+ * All local film data...
+ */
+const data = {
+    "white_god": {
+        "rating": 9.25,
+        "URL": "https://boxd.it/81lO",
+        "title": "White God",
+        "screenshots": screenshots.white_god,
+        "review": ReactDomServer.renderToString(WhiteGodReview(screenshots.white_god)),
+        "tags": [
+            "Emotional",
+            "Friendship",
+            "Forgiveness",
+            "Animal welfare",
+            "Great cinematography",
+            "The universal power of music",
+            "Budapest"
+        ],
+    },
+
+    "flatland": {
+        "rating": 10,
+        "URL": "https://boxd.it/2sXo",
+        "title": "Flatland: The Film",
+        "screenshots": screenshots.flatland,
+        "review": ReactDomServer.renderToString(FlatlandReview(screenshots.flatland)),
+        "tags": [
+            "Dimensionality",
+            "Questioning reality",
+            "Perspective",
+            "Mathematics",
+            "War",
+            "Corruption",
+            "Emotional"
+        ],
+    },
+
+    "feast": {
+        "rating": 7.5,
+        "URL": "https://boxd.it/1Xag",
+        "title": "Feast",
+        "poster": "https://www.themoviedb.org/t/p/original/4wNJiD1c8lb5qyGYXAXY8JJaNLf.jpg",
+        "screenshots": screenshots.feast,
+        "review": ReactDomServer.renderToString(FeastReview(screenshots.feast)),
+        "tags": [
+            "Creature-feature",
+            "One-location",
+            "Survival",
+            "Fun",
+            "Cool practical effects"
+        ],
+    },
+
+    "the_secret_world_of_arrietty": {
+        "rating": 9.0,
+        "URL": "https://boxd.it/AF4",
+        "title": "The Secret World of Arrietty",
+        "poster": "https://www.themoviedb.org/t/p/original/oFlgPpxmZ4oTdxGc8aePWsKClxw.jpg",
+        "screenshots": screenshots.the_secret_world_of_arrietty,
+        "review": ReactDomServer.renderToString(ArriettyReview(screenshots.the_secret_world_of_arrietty)),
+        "tags": [
+            "Humanity and nature coexisting",
+            "Friendship",
+            "Kindness",
+            "Embrace mother nature",
+            "Evolving perspective of life",
+            "Intimate",
+            "Colourful",
+            "Great cinematography",
+            "Great soundtrack",
+            "Girl power"
+        ],
+    },
+
+    "a_ghost_story": {
+        "rating": 10.0,
+        "URL": "https://boxd.it/fb0K",
+        "poster": "https://www.themoviedb.org/t/p/original/sD94aixD7fMAc2e9ugbv4KQprBL.jpg",
+        "title": "A Ghost Story",
+        "screenshots": screenshots.a_ghost_story,
+        "review": ReactDomServer.renderToString(AGhostStoryReview(screenshots.a_ghost_story)),
+        "tags": [
+            "Death",
+            "Life",
+            "Vast",
+            "Cosmic",
+            "Beyond existence",
+            "Mysterious",
+            "Creative use of lighting",
+            "Creative use of aspect ratio",
+            "Great soundtrack"
+        ],
+    },
+
+    "belle": {
+        "rating": 9.25,
+        "URL": "https://boxd.it/tbEe",
+        "title": "Belle",
+        "titleDisplayed": "Belle: The Dragon and the Freckled Princess",
+        "poster": "https://www.themoviedb.org/t/p/original/sp0LOwp7dVeF2c2fn9l422O5cdb.jpg",
+        "tags": [
+            "Virtual world", 
+            "Social media",
+            "Bullying",
+            "Friendship",
+            "Sad", 
+            "Great soundtrack", 
+            "Colourful",
+            "Anime",
+            "Girl power"
+        ],
+    }
+}
+
+
+
+/**
+ * All local data goes here
+ * All films in the toplist must exist in here (matching is done based on the letterboxdUrl)
+ * It's safe to have more than necessary in this list (e.g. if I removed a film from my toplist, keeping it here won't break anything)
+ */
 export const filmReviews = [
     {
-        "letterboxdUrl": "https://boxd.it/81lO",
-        "title": "White God",
-        "myRating": "9.25",
-        "myTags": ["Emotional", "Friendship", "Forgiveness", "Animal welfare", "Great cinematography", "The universal power of music", "Budapest"],
-        "customPosterUrl": "https://www.themoviedb.org/t/p/original/jT9IjPwA5aIYlgvC55VxJOLc0sI.jpg",
-        "screenshots": [
-            require('../websiteContent/films/white_god/screenshot1.webp'),
-            require('../websiteContent/films/white_god/screenshot2.webp'),
-            require('../websiteContent/films/white_god/screenshot3.webp'),
-        ],
-        "myReview": ReactDomServer.renderToString(WhiteGodReview([
-            require('../websiteContent/films/white_god/screenshot1.webp'),
-            require('../websiteContent/films/white_god/screenshot2.webp'),
-            require('../websiteContent/films/white_god/screenshot3.webp'),
-        ])),
+        "letterboxdUrl": data.white_god.URL,
+        "title": data.white_god.title,
+        "myRating": data.white_god.rating,
+        "myTags": data.white_god.tags,
+        "screenshots": data.white_god.screenshots,
+        "myReview": data.white_god.review,
     },
     {
-        "letterboxdUrl": "https://boxd.it/2sXo",
-        "title": "Flatland: The Film",
-        "myRating": "10",
-        "myTags": ["Dimensionality", "Questioning reality", "Perspective", "Mathematics", "War", "Corruption", "Emotional"],
-        "screenshots": [
-            require('../websiteContent/films/flatland/screenshot1.webp'),
-            require('../websiteContent/films/flatland/screenshot2.webp'),
-            require('../websiteContent/films/flatland/screenshot3.webp'),
-        ],
-        "myReview": ReactDomServer.renderToString(FlatlandReview([
-            require('../websiteContent/films/flatland/screenshot1.webp'),
-            require('../websiteContent/films/flatland/screenshot2.webp'),
-            require('../websiteContent/films/flatland/screenshot3.webp'),
-        ])),
+        "letterboxdUrl": data.flatland.URL,
+        "title": data.flatland.title,
+        "myRating": data.flatland.rating,
+        "myTags": data.flatland.tags,
+        "screenshots": data.flatland.screenshots,
+        "myReview": data.flatland.review,
     },
     {
-        "letterboxdUrl": "https://boxd.it/1Xag",
-        "title": "Feast",
-        "myRating": "7.5",
-        "myTags": ["Creature-feature", "One-location", "Survival", "Fun", "Cool practical effects"],
+        "letterboxdUrl": data.feast.URL,
+        "title": data.feast.title,
+        "myRating": data.feast.rating,
+        "myTags": data.feast.tags,
         "myReview": "",
-        "screenshots": [
-            require('../websiteContent/films/feast/screenshot1.webp'),
-            require('../websiteContent/films/feast/screenshot2.webp'),
-            require('../websiteContent/films/feast/screenshot5.webp'),
-        ],
-        "myReview": ReactDomServer.renderToString(FeastReview([
-            require('../websiteContent/films/feast/screenshot1.webp'),
-            require('../websiteContent/films/feast/screenshot2.webp'),
-            require('../websiteContent/films/feast/screenshot5.webp'),
-        ])),
-        "customPosterUrl": "https://www.themoviedb.org/t/p/original/4wNJiD1c8lb5qyGYXAXY8JJaNLf.jpg"
+        "customPosterUrl": data.feast.poster,
+        "screenshots": data.feast.screenshots,
+        "myReview": data.feast.review,
     },
     {
-        "letterboxdUrl": "https://boxd.it/AF4",
-        "customPosterUrl": "https://www.themoviedb.org/t/p/original/oFlgPpxmZ4oTdxGc8aePWsKClxw.jpg",
-        "title": "The Secret World of Arrietty",
-        "myRating": "9.0",
-        "myTags": ["Humanity and nature coexisting", "Friendship", "Kindness", "Embrace mother nature", "Evolving perspective of life", "Intimate", "Colourful", "Great cinematography", "Great soundtrack", "Girl power"],
-        "screenshots": [
-            require('../websiteContent/films/the_secret_world_of_arrietty/screenshot1.webp'),
-            require('../websiteContent/films/the_secret_world_of_arrietty/screenshot2.webp'),
-            require('../websiteContent/films/the_secret_world_of_arrietty/screenshot3.webp'),
-        ],
-        "myReview": ReactDomServer.renderToString(ArriettyReview([
-            require('../websiteContent/films/the_secret_world_of_arrietty/screenshot1.webp'),
-            require('../websiteContent/films/the_secret_world_of_arrietty/screenshot2.webp'),
-            require('../websiteContent/films/the_secret_world_of_arrietty/screenshot3.webp'),
-        ])),
+        "letterboxdUrl": data.the_secret_world_of_arrietty.URL,
+        "customPosterUrl": data.the_secret_world_of_arrietty.poster,
+        "title": data.the_secret_world_of_arrietty.title,
+        "myRating": data.the_secret_world_of_arrietty.rating,
+        "myTags": data.the_secret_world_of_arrietty.tags,
+        "screenshots": data.the_secret_world_of_arrietty.screenshots,
+        "myReview": data.the_secret_world_of_arrietty.review,
     },
     {
-        "letterboxdUrl": "https://boxd.it/fb0K",
-        "title": "A Ghost Story",
-        "myRating": "10",
-        "customPosterUrl": "https://www.themoviedb.org/t/p/original/sD94aixD7fMAc2e9ugbv4KQprBL.jpg",
-        "myTags": ["Death", "Life", "Vast", "Cosmic", "Beyond existence", "Mysterious", "Creative use of lighting", "Creative use of aspect ratio", "Great soundtrack"],
-        "screenshots": [
-            require('../websiteContent/films/a_ghost_story/screenshot1.webp'),
-            require('../websiteContent/films/a_ghost_story/screenshot2.webp'),
-            require('../websiteContent/films/a_ghost_story/screenshot3.webp'),
-        ],
-        "myReview": ReactDomServer.renderToString(AGhostStoryReview([
-            require('../websiteContent/films/a_ghost_story/screenshot1.webp'),
-            require('../websiteContent/films/a_ghost_story/screenshot2.webp'),
-            require('../websiteContent/films/a_ghost_story/screenshot3.webp'),
-        ])),
+        "letterboxdUrl": data.a_ghost_story.URL,
+        "title": data.a_ghost_story.title,
+        "myRating": data.a_ghost_story.rating,
+        "customPosterUrl": data.a_ghost_story.poster,
+        "myTags": data.a_ghost_story.tags,
+        "screenshots": data.a_ghost_story.screenshots,
+        "myReview": data.a_ghost_story.review,
     },
     {
         "letterboxdUrl": "https://boxd.it/2BiY",
         "title": "Detachment",
         "myRating": "9.0",
         "myTags": ["School", "Teacher-student dichotomy", "Addiction", "Profound", "Melancholic", "Kindness", "Sad", "Depressing"],
+        "customPosterUrl": "https://www.themoviedb.org/t/p/original/lw1wlekuMMKxmYg7v01vB7Snkq6.jpg",
         "myReview": "",
-        "customPosterUrl": "https://www.themoviedb.org/t/p/original/lw1wlekuMMKxmYg7v01vB7Snkq6.jpg"
     },
     {
-        "letterboxdUrl": "https://boxd.it/tbEe",
-        "title": "Belle",
-        "titleDisplayed": "Belle: The Dragon and the Freckled Princess",
-        "myRating": "9.25",
-        "myTags": ["Virtual world", "Social media", "Bullying", "Friendship", "Sad", "Great soundtrack", "Colourful", "Anime", "Girl power"],
+        "letterboxdUrl": data.belle.URL,
+        "title": data.belle.title,
+        "titleDisplayed": data.belle.titleDisplayed,
+        "myRating": data.belle.rating,
+        "myTags": data.belle.tags,
+        "customPosterUrl": data.belle.poster,
         "myReview": "",
-        "customPosterUrl": "https://www.themoviedb.org/t/p/original/sp0LOwp7dVeF2c2fn9l422O5cdb.jpg"
     },
     {
         "letterboxdUrl": "https://boxd.it/cOo6",
