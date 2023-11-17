@@ -29,7 +29,7 @@ export const post = (screenshots) => (
                 <p>This is done with pin-point accuracy and is still in operation today. Many countries including Russia use the reflectors placed on the moon to conduct their own experiments.</p>
                 <p>This was part of The <a href='https://en.wikipedia.org/wiki/Lunar_Laser_Ranging_experiment'>Lunar Laser Ranging Experiment</a></p>
                 <picture className="img">
-                    <img width="400" height="200" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.12942%2Flrr-2010-7/MediaObjects/41114_2016_9126_Fig1.jpg" alt="https://media.springernature.com/lw685/springer-static/image/art%3A10.12942%2Flrr-2010-7/MediaObjects/41114_2016_9126_Fig1.jpg" />
+                    <img width="400" height="200" alt="Lunar laser ranging experiment" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.12942%2Flrr-2010-7/MediaObjects/41114_2016_9126_Fig1.jpg" />
                 </picture>
             <h3 className='subgroup-title'>1.2) Lunar rocks</h3>
                 <p>Buzz Aldrin collected 16 <a href='https://en.wikipedia.org/wiki/Moon_rock'>Moon Rocks</a> and brought them back to Earth to examine. Once they were returned, there was still 16 rocks, and they were all legit.</p>

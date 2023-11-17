@@ -1345,6 +1345,7 @@ btn-move-left scroll-through-tag-filters-btn
 }
 
 div.searchbox {
+  height: 37px;
   display: flex;
 }
 
@@ -1749,7 +1750,6 @@ div.blog-post
 }
 
 
-
 /* #region ------------------------< 13.1 Toplist as GRID (i.e posters only) >------------------------ */
 :root {
   --films-toplist-grid-items-per-row: 7;
@@ -1847,7 +1847,6 @@ div.blog-post
   user-select: none;
 }
 /* #endregion */
-
 
 /* #region ------------------------< 13.2 Toplist as LIST (i.e. posters & screenshots) >------------------------ */
 .films-toplist.view-as-list {
@@ -2099,7 +2098,6 @@ div.director-tag:hover {
 
 /* #endregion */
 
-
 /* #region ------------------------< 13.3 Stuff common to list view or grid view >------------------------- */
 /* Applies to grid or list view... */
 .films-toplist-container > .films-toplist {
@@ -2149,11 +2147,10 @@ span.film-imdbDiffScore:active {
 
 /* #endregion */
 
-
 /* #region ------------------------< 13.4 Film controls >------------------------ */
 .films-controls {
   padding: 10px 0;
-  box-shadow: 0 10px 10px -16px var(--general-box-shadow-color-3);
+  box-shadow: 0 10px 10px -11px var(--general-box-shadow-color-3);
 }
 
 .films-controls-subgroup {
@@ -2436,7 +2433,6 @@ div.btn.films-reset-filters-btn svg {
 
 /* #endregion */
 
-
 /* #region ------------------------< 13.5 Pagination buttons >------------------------ */
 .pagination-container {
   margin: 0 auto;
@@ -2491,7 +2487,6 @@ div.btn.films-reset-filters-btn svg {
   border: 2px solid var(--films-controls-btn-border-color-clicked);
 }
 /* #endregion */
-
 
 /* #region ------------------------< 13.6 Next & Previous pagination buttons >------------------------ */
 .pagination-btns li.pagination-active a {
@@ -2551,7 +2546,6 @@ div.btn.films-reset-filters-btn svg {
 }
 
 /* #endregion */
-
 
 /* #region ------------------------< Old stuff >------------------------ */
 :root {

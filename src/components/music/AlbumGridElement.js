@@ -1,10 +1,7 @@
 import React, {Component} from 'react'
-import { connect}  from 'react-redux'
-import { NavLink, withRouter, Link } from 'react-router-dom';
-import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
+import { withRouter, Link } from 'react-router-dom';
 import { ReactComponent as ToplistPosIcon } from "../../icons/toplistPos.svg";
 import { ReactComponent as ToplistRatingIcon } from "../../icons/toplistRating.svg";
-import { getValueOfCSSVariable } from '../../js/helpers';
 
 
 class AlbumGridElement extends Component {
@@ -17,7 +14,7 @@ class AlbumGridElement extends Component {
             albumCoverUrl = this.props.album.customCoverUrl;
         }
         // use default posterUrl if I didnt specify one...
-        if (this.props.album.customCoverUrl == undefined) {
+        if (this.props.album.customCoverUrl === undefined) {
             albumCoverUrl = this.props.album.albumCoverUrl;
         }
         
@@ -25,7 +22,7 @@ class AlbumGridElement extends Component {
         return(
             <Link to={'/music/' + this.props.album.reviewId}>
                 <div className='albumInfoContainer'>
-                    <img className='albumCover' src={albumCoverUrl}></img>
+                    <img className='albumCover' src={albumCoverUrl} alt="Album cover"></img>
                     <div className='albumInfo'>
                         <div className='artistName'>
                             <p>{this.props.album.artistName}</p>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
-import { Link } from 'react-scroll';
 import { ReactComponent as Logo } from "../../icons/logoNew.svg";
 import { ReactComponent as DarkThemeIcon } from "../../icons/moon.svg";
 import { ReactComponent as LightThemeIcon } from "../../icons/sun.svg";
@@ -9,7 +8,6 @@ import { ReactComponent as FilmsIcon } from "../../icons/navIconFilms.svg";
 import { ReactComponent as MusicIcon } from "../../icons/navIconMusic.svg";
 import { ReactComponent as BlogIcon } from "../../icons/navIconBlog.svg";
 import { ReactComponent as ArtIcon } from "../../icons/navIconArt.svg";
-import { ReactComponent as HamburgerMenuIcon } from "../../icons/hamburgerMenu.svg";
 import { removeClassFromItemWhenUserClicksOutsideOfItem } from '../../js/helpers';
 
 class NavbarSide extends Component {

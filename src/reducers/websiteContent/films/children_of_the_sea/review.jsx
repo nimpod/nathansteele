@@ -3,7 +3,7 @@ import React from 'react';
 export const review = (screenshots) => (
     <div className='review-content'>
         <div className="review-meRambling">
-            <p class="review-section-subtitle"># me rambling</p>
+            <p className="review-section-subtitle"># me rambling</p>
             <p>Absolutely essential viewing if you are interested in <b>astronomy</b>, <b>spirituality</b>, the <b>mysteries of the ocean</b>, the <b>origins of life</b>, 
                 the <b>universe</b>, and combining all of that with <b>unique stylish visual art</b>.</p>
             <p>The depth and scale of the cinematography in the ocean was huge. This creates an interesting contrast compared to the vast incomprehensible scale of the Universe, since we have imaged a lot more of this space we constantly spin and whiz through, in comparison to the oceans all around us that are too dark, inhabitable, vast, and difficult to study to the same level of detail.</p>
@@ -15,7 +15,7 @@ export const review = (screenshots) => (
             <img src={screenshots[1]} alt="Screenshot from film" />
         </div>
         <div className="review-synopsis">
-            <p class="review-section-subtitle"># brief synopsis</p>
+            <p className="review-section-subtitle"># brief synopsis</p>
             <p>Ruka has just finished school and endless months of summer are looming. She feels bored and disconnected from her classmates and life at home.</p>
             <p>She longs for solitude, friendship, and a greater purpose in life, and finds it at a local aquarium where she encounters a strange boy who has adapted to living in the ocean, and is undergoing experiments at the aquarium to prolong his short lifespan.</p>
             <p>The deep dark mysteries of the ocean slowly unravel, and Ruka undergoes an aquatic awakening, revealing the cosmos in its vast beauty.</p>

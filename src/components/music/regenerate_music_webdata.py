@@ -47,6 +47,7 @@ class Helpers:
         """
         return folder_name.replace('~', ':')\
                             .replace('¬', "\"")\
+                            .replace('))', "/")\
                             .replace('@', '?')\
                             .replace('^', '.')
 

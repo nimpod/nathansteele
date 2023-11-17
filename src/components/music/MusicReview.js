@@ -19,7 +19,7 @@ class MusicReview extends React.Component {
      * The Render() function, content rendered to screen...
      */
     render() {
-        console.log(this.props.albumData);
+        /// console.log(this.props.albumData);
         
         let genres = [];
         let themes = [];
@@ -31,7 +31,6 @@ class MusicReview extends React.Component {
         if (this.props.albumData.genres !== undefined) {
             genres = this.props.albumData.genres;
         }
-        console.log(genres);
         
         // get themes list if it exists...
         if (this.props.albumData.themes !== undefined) {
@@ -82,7 +81,7 @@ class MusicReview extends React.Component {
                             <div className='genres list-of-tags'>
                                 {/* <p>genres</p> */}
                                 {genres.map(g => {
-                                    return <span className='genre-text'>
+                                    return <span className='genre-text' key={g}>
                                         {g}
                                     </span>
                                 })}
@@ -92,7 +91,7 @@ class MusicReview extends React.Component {
                             <div className='themes list-of-tags'>
                                 {/* <p>themes</p> */}
                                 {themes.map(t => {
-                                    return <span className='theme-text'>
+                                    return <span className='theme-text' key={t}>
                                         {t}
                                     </span>
                                 })}

@@ -1,5 +1,4 @@
 import ReactDomServer from 'react-dom/server';
-import React from 'react';
 
 import { post as CassiniHuygensPost } from '../websiteContent/blog/cassini_huygens/post';
 import { post as WhyTheMoonLandingWasNotAHoaxPost } from '../websiteContent/blog/why_the_moon_landing_was_not_a_hoax/post';

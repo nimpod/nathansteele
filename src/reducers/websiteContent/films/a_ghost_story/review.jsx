@@ -3,7 +3,7 @@ import React from 'react';
 export const review = (screenshots) => (
     <div className='review-content'>
         <div className="review-meRambling">
-            <p class="review-section-subtitle"># me rambling</p>
+            <p className="review-section-subtitle"># me rambling</p>
             <p>There are so many layers to this wonderful thoughtful piece of art - it's so atmospheric, mysterious, sad, beautiful, ambitious, unusual, creative, minimal, cosmic, vast, and its all centered around such a simple idea but with immaculate execution. </p>
             <p>The soundtrack is just beautiful. Quiet and ambient at times, heartbreaking at other times, and explosive with energy other times. </p>
             <img src={screenshots[2]} alt="Screenshot from film" />
@@ -19,7 +19,7 @@ export const review = (screenshots) => (
         </div>
 
         <div className="review-synopsis">
-            <p class="review-section-subtitle"># brief synposis</p>
+            <p className="review-section-subtitle"># brief synposis</p>
             <p>A nameless partner are deeply in love. One day the nameless man dies, but returns to his home in a spectral state that has become stuck in time,
             forced to watch passively as the life he knew and the woman he loves slowly fades away.</p>
             <img src={screenshots[0]} alt="Screenshot from film" />

@@ -1,19 +1,13 @@
-import React, {Component, useState, useEffect} from 'react';
+import React, { Component } from 'react';
 import { connect }  from 'react-redux';
-import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
-import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
-import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
-import { ReactComponent as OpenDropdownIcon } from "../../icons/openDropdown.svg";
-import { ReactComponent as ArrowLeftIcon } from "../../icons/arrowLeft.svg";
+
 import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
+import { getListOfTagCategories } from '../../js/helpers';
 import BlogPostList from './BlogPostList';
-import { Helpers } from 'react-scroll';
-import { removeDuplicatesFromArray, getListOfTagCategories } from '../../js/helpers';
 import SearchBoxTagFilterListElement from './SearchBoxTagFilterListElement';
 
 
 class Blog extends Component {   
-
     state = {
         // array of posts (ordered by newest dates first, oldest dates last)
         __filtered_posts: Array.from(this.props.posts)
@@ -50,6 +44,8 @@ class Blog extends Component {
         });
 
         console.log(newArray);
+
+        return newArray;
     }
 
     /**
@@ -106,7 +102,7 @@ class Blog extends Component {
         this.setState({__search_post: e.target.value});
         
         // no text is in the searchbox, so set state to false
-        if (e.target.value.length == 0) {
+        if (e.target.value.length === 0) {
             this.setState({__search_box_contains_text: false});
         }
         // there's some text in the searchbox, so set state to true
@@ -124,7 +120,7 @@ class Blog extends Component {
         let copyOfThis = this;
 
         // no text is in the searchbox, so set state to false
-        if (this.state.__search_box_contains_text == false) {
+        if (this.state.__search_box_contains_text === false) {
 
             // access .posts-container
             var postsContainer = document.querySelector('.posts-container');
@@ -259,7 +255,7 @@ class Blog extends Component {
         this.toggleSelectedTag(selectedTag);
         
         // base case tag category...
-        if (selectedTagText.toUpperCase() == this.state.__tag_category_default.toUpperCase()) {
+        if (selectedTagText.toUpperCase() === this.state.__tag_category_default.toUpperCase()) {
             // show all tr's because user choose 'AllTags'
             this.showAllTableRows(tableRows);
             
@@ -285,7 +281,7 @@ class Blog extends Component {
             if (tr !== undefined) {
                 // (iterate over list of tags per blog post...)
                 for (let j = 0; j < tagsInPost.length; j++) {
-                    if (tagsInPost[j] == selectedTagText) {
+                    if (tagsInPost[j] === selectedTagText) {
                         // match, make row visible
                         this.showTableRow(tr);
                         count += 1;
@@ -314,7 +310,6 @@ class Blog extends Component {
         }
     }
 
-
     /**
      * Move filters container left or right...
      * @param {*} e 
@@ -339,7 +334,7 @@ class Blog extends Component {
         }
 
         // hide left button when user is at beginning...
-        if (container.scrollLeft == 0) {
+        if (container.scrollLeft === 0) {
             if (btnLeft !== null && btnRight !== null) {
                 btnLeft.classList.remove('active');
                 btnRight.classList.add('active');
@@ -353,7 +348,6 @@ class Blog extends Component {
             }
         }
     }
-
 
     /**
      * The Render() function, content rendered to screen

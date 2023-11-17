@@ -23,7 +23,7 @@ export const post = (screenshots) => (
             <p>The Huygens probe landed just off the easternmost tip of a region called Adiri. Adiri is packed with lakes and islands.</p>
             <p>When the spacecraft landed, it felt the surface as similar to a slightly more absorbent, sludgy mud texture... This is a photograph Huygens took when it landed!!!!</p>
             <picture className="img">
-                <img width="200" height="100" className='dont-resize' src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Huygens_surface_color_sr.jpg/200px-Huygens_surface_color_sr.jpg" alt='Photo taken of Titan surface' />
+                <img width="200" height="100" className='dont-resize' alt='Surface of Titan' src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Huygens_surface_color_sr.jpg/200px-Huygens_surface_color_sr.jpg" />
             </picture>
             <h5 className='subgroup-title'>What is it like on Titan?</h5>
             <p><b>Extremely cold</b> - the Titanian lakes are estimated to be around <b>-179°C</b>...</p> 

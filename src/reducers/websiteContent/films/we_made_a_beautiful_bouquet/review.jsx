@@ -3,7 +3,7 @@ import React  from 'react';
 export const review = (screenshots) => (
     <div className='review-content'>
         <div className="review-meRambling">
-            <p class="review-section-subtitle"># me rambling</p>
+            <p className="review-section-subtitle"># me rambling</p>
             <p>I am rarely so enamored by a film that is centered entirely on 2 people, but the chemistry between them is just so infectious and authentic. 
                 I found the first half of this film to be addictively gentle and brimming with genuine passion, joy, and inspiration. 
                 I could have watched another 10 hours of them just chatting about anime and books and just hanging out.
@@ -28,7 +28,7 @@ export const review = (screenshots) => (
             <p>Generally, if like me your life is full of uncertainty, chaos, insecurities, and unknowns, films like these are basically medication that help to sooth the mind and soul.</p>
         </div>
         <div className="review-synopsis">
-            <p class="review-section-subtitle"># brief synopsis</p>
+            <p className="review-section-subtitle"># brief synopsis</p>
             <p>Two people meet each other after missing the last train home, leading to a beautiful relationship over five years.</p>
             <img src={screenshots[1]} alt="Screenshot from film" />
         </div>

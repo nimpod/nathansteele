@@ -616,7 +616,7 @@ class Films extends React.Component {
                 <div className="section-inner">
                     <div className='frontpage films-container'>
                         <span className='page-title'>My top {this.props.filmReviewsData.length} favourite films of all time</span>
-                        <div class='toggle-controls-btn' onClick={this.toggleControls}>
+                        <div className='toggle-controls-btn' onClick={this.toggleControls}>
                             <ControlsIcon className='invertable-icon' />
                         </div>
                         <div className='films-controls'>

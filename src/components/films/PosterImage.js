@@ -1,10 +1,17 @@
-import React, {Component} from 'react'
-import { connect}  from 'react-redux'
+import React from 'react';
 
+
+/**
+ * Poster image
+ * @param {*} props 
+ * @returns 
+ */
 function PosterImage(props) {
+    /*
     const onLoad = () => {
         props.onLoad();
     };
+    */
 
     return (
         <picture className='film-poster'>
@@ -12,6 +19,7 @@ function PosterImage(props) {
                 style={props.isCurrentlyLoading ? {backgroundColor: 'black'} : {}}
                 src={props.src}
                 onLoad={props.updateLoading}
+                alt="Film poster"
             />
         </picture>
     )

@@ -1,5 +1,5 @@
-import { act } from "@testing-library/react";
-import { event } from "jquery";
+// import { act } from "@testing-library/react";
+// import { event } from "jquery";
 
 /**
  * [Get value of a specified CSS variable]
@@ -126,10 +126,10 @@ export function getBlogPostId(title) {
  */
 export function getActualButton(elementClicked, tagName) {
     let actualButton = NaN;
-    if (tagName == "svg") {
+    if (tagName === "svg") {
         // user clicked on svg, bit fucking annoying
         actualButton = elementClicked.parentElement;
-    } else if (tagName == "path") {
+    } else if (tagName === "path") {
         // user clicked on path inside svg, bit fucking annoying
         actualButton = elementClicked.parentElement.parentElement;
     } else {
@@ -153,7 +153,7 @@ export function generateImdbDiffScoreStuff(imdbDiffScore) {
     } else if (imdbDiffScore < 0) {
         diffScoreStr = imdbDiffScore;
         diffScoreClassname = "negative-diff";
-    } else if (imdbDiffScore == 0) {
+    } else if (imdbDiffScore === 0) {
         diffScoreStr = imdbDiffScore;
         diffScoreClassname = "equal-diff";
     }
@@ -175,7 +175,7 @@ export function overrideFilmPosterUrl(filmData) {
         posterUrl = filmData.customPosterUrl;
     }
     // use default posterUrl if I didnt specify one...
-    if (filmData.customPosterUrl == undefined) {
+    if (filmData.customPosterUrl === undefined) {
         posterUrl = filmData.posterUrl;
     }
     return posterUrl;
@@ -368,4 +368,24 @@ export function removeClassFromItemWhenUserClicksOutsideOfItem(itemToRemoveClass
 }
 
 
+/**
+ * Convert local data JSON objects, into one list
+ * @returns Array
+ */
+export function convert_collection_of_json_objects_to_one_list(data) {
+    const local_data_array = [];
+
+    // itearate over local data...
+    Object.entries(data).forEach((letter_group) => {
+        const _letter_group = letter_group[1];
+        
+        // iterate over each letter group...
+        Object.entries(_letter_group).forEach((review) => {
+            const _review = review[1];
+            local_data_array.push(_review);
+        })
+    });
+
+    return local_data_array;
+}
   

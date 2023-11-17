@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
-import { Link } from 'react-scroll';
-import { ReactComponent as Logo } from "../../icons/logoNew.svg";
-import { ReactComponent as DarkThemeIcon } from "../../icons/moon.svg";
-import { ReactComponent as LightThemeIcon } from "../../icons/sun.svg";
-import { ReactComponent as ThreeDotsIcon } from "../../icons/threeDots.svg";
+import { withRouter } from 'react-router-dom';
 import { ReactComponent as HamburgerMenuIcon } from "../../icons/hamburgerMenu.svg";
 import { removeClassFromItemWhenUserClicksOutsideOfItem } from '../../js/helpers';
 

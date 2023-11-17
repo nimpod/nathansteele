@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { ReactComponent as TickIcon } from "../../icons/tick.svg";
 
 class SearchBoxTagFilterListElement extends Component {
     

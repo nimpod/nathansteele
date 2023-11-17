@@ -3,7 +3,7 @@ import React from 'react';
 export const review = (screenshots) => (
     <div className='review-content'>
         <div className="review-meRambling">
-            <p class="review-section-subtitle"># me rambling</p>
+            <p className="review-section-subtitle"># me rambling</p>
             <p>Arrietty is a film about growing up and beginning your own exploration of the world, but is also a film about discovering new ways of living, integrating humanity with nature, finding positives out of negatives, and generally about the ever-changing perspectives of life and how that evolves as you gather more life experience.</p>
             <p>It never resorted to petty narrative cliches despite so many opportunities to do so (like many U-rated animation films these days).</p>
             <p>Explores similar themes to Kikis Delivery Service (a young mind venturing out into a big scary world), except with Arrietty the world is literally massive, and the characters are tiny!</p>
@@ -14,7 +14,7 @@ export const review = (screenshots) => (
             <img src={screenshots[1]} alt="Screenshot from film" />
         </div>
         <div className="review-synopsis">
-            <p class="review-section-subtitle"># brief synopsis</p>
+            <p className="review-section-subtitle"># brief synopsis</p>
             <p>A family of tiny people live anonymously in another family's residence, borrowing simple items to make their home. Life changes for the tiny people when Arrietty, is discovered.</p>
             <img src={screenshots[2]} alt="Screenshot from film" />
         </div>

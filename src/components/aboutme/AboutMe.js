@@ -1,9 +1,5 @@
 import React, {Component} from 'react'
-import { connect}  from 'react-redux'
-import { NavLink, withRouter, Link } from 'react-router-dom';
-import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
-import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
-import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
+import { withRouter, Link } from 'react-router-dom';
 
 import Particles from 'react-particles-js';
 import { getValueOfCSSVariable } from '../../js/helpers';
@@ -168,22 +164,22 @@ class AboutMe extends Component {
                         <p className='text-v4'>Watch the skies traveller.</p>
                         <div className='social-medias'>
                             <a className='strava' href='https://www.strava.com/athletes/45999759'>
-                                <img src='https://seeklogo.com/images/S/strava-logo-C419D1A461-seeklogo.com.png'></img>
+                                <img src='https://seeklogo.com/images/S/strava-logo-C419D1A461-seeklogo.com.png' alt='Strava logo'></img>
                             </a>
                             <a className='letterboxd' href='https://letterboxd.com/nbofni/'>
-                                <img src='https://a.ltrbxd.com/logos/letterboxd-logo-alt-v-neg-rgb-1000px.png'></img>
+                                <img src='https://a.ltrbxd.com/logos/letterboxd-logo-alt-v-neg-rgb-1000px.png' alt='Letterboxd logo'></img>
                             </a>
                             <a className='Lastfm' href='https://www.last.fm/user/gutash'>
-                                <img src='https://www.last.fm/static/images/lastfm_avatar_twitter.52a5d69a85ac.png'></img>
+                                <img src='https://www.last.fm/static/images/lastfm_avatar_twitter.52a5d69a85ac.png' alt='lastfm logo'></img>
                             </a>
                             <a className='twitter' href='https://twitter.com/cozminski_katax'>
-                                <img src='https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png'></img>
+                                <img src='https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png' alt='twitter logo'></img>
                             </a>
                             <a className='github' href='https://github.com/nimpod'>
-                                <img src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'></img>
+                                <img src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' alt='github logo'></img>
                             </a>
                             <a className='linkedin' href='https://www.linkedin.com/in/nathan-steele-1564a3183/'>
-                                <img src='https://cdn-icons-png.flaticon.com/512/174/174857.png'></img>
+                                <img src='https://cdn-icons-png.flaticon.com/512/174/174857.png' alt='linkedin logo'></img>
                             </a>
                         </div>
                     </div>

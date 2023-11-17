@@ -1,6 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-scroll';
+// import Particles from 'react-particles-js';
+
 import '../../css/index.css';
 
 import ProjectImageAssembly from '../../img/project-card-backgrounds/assembly.png';
@@ -12,7 +12,6 @@ import ProjectImageFitbitDataAnalysis from '../../img/project-card-backgrounds/f
 import ProjectImageSpaceInvaders from '../../img/project-card-backgrounds/spaceinvaders.png';
 import ProjectImageWebDevUniProject from '../../img/project-card-backgrounds/web-dev-thumbnail.PNG';
 import ProjectImagePong from '../../img/project-card-backgrounds/casiobasic.png';
-import Particles from 'react-particles-js';
 import { getValueOfCSSVariable } from '../../js/helpers';
 
 

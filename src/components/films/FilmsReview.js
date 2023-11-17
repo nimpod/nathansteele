@@ -19,9 +19,6 @@ class FilmsReview extends React.Component {
      * The Render() function, content rendered to screen...
      */
     render() {
-        console.log(this.state);
-        console.log(this.props);
-
         let posterUrl = ""
         let title = ""
         let reviewIdOfNextFilm = "";
