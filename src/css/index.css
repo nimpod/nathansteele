@@ -1995,7 +1995,7 @@ div.blog-post
   background-color: var(--film-mydata-pos-bg-color);
 }
 .films-toplist.films-toplist.view-as-list span.film-myPos::after {
-  content: "/250";
+  content: "/300";
   font-size: 0.6rem;
   font-weight: 100;
 }

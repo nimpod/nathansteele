@@ -134,8 +134,8 @@
             "Jaco Van Dormael"
         ],
         "genres": [
-            "Comedy",
-            "Fantasy"
+            "Fantasy",
+            "Comedy"
         ],
         "reviewId": "thebrandnewtestament-aPMO-review"
     },
@@ -204,8 +204,8 @@
             "Denis Villeneuve"
         ],
         "genres": [
-            "Mystery",
             "Science fiction",
+            "Mystery",
             "Drama"
         ],
         "reviewId": "arrival-aNGk-review"
@@ -2361,7 +2361,7 @@
         "duration": "100",
         "language": "English",
         "imdbAvgRating": "7.7",
-        "imdbNumVotes": "254603",
+        "imdbNumVotes": "256918",
         "tmdbUrl": "https://www.themoviedb.org/movie/14836/",
         "directors": [
             "Henry Selick"
@@ -2986,8 +2986,8 @@
             "Gabor Csupo"
         ],
         "genres": [
-            "Family",
             "Adventure",
+            "Family",
             "Drama"
         ],
         "reviewId": "bridgetoterabithia-28YG-review"
@@ -3029,15 +3029,15 @@
         "duration": "100",
         "language": "English",
         "imdbAvgRating": "6.5",
-        "imdbNumVotes": "21216",
+        "imdbNumVotes": "21383",
         "tmdbUrl": "https://www.themoviedb.org/movie/22244/",
         "directors": [
             "Brian Yuzna"
         ],
         "genres": [
             "Comedy",
-            "Mystery",
-            "Horror"
+            "Horror",
+            "Mystery"
         ],
         "reviewId": "society-1ARc-review"
     },
@@ -3205,8 +3205,8 @@
             "Dennis Widmyer"
         ],
         "genres": [
-            "Horror",
-            "Drama"
+            "Drama",
+            "Horror"
         ],
         "reviewId": "starryeyes-7t3Q-review"
     },
@@ -3222,7 +3222,7 @@
         "duration": "129",
         "language": "English",
         "imdbAvgRating": "7.4",
-        "imdbNumVotes": "30538",
+        "imdbNumVotes": "30617",
         "tmdbUrl": "https://www.themoviedb.org/movie/44009/",
         "directors": [
             "Mike Leigh"
@@ -3803,8 +3803,8 @@
             "Mike Mills"
         ],
         "genres": [
-            "Comedy",
             "Romance",
+            "Comedy",
             "Drama"
         ],
         "reviewId": "beginners-s2S-review"
@@ -3899,10 +3899,10 @@
             "Alex Lehmann"
         ],
         "genres": [
+            "Fantasy",
             "Comedy",
             "Science fiction",
-            "Romance",
-            "Fantasy"
+            "Romance"
         ],
         "reviewId": "meetcute-vOri-review"
     },
@@ -4465,8 +4465,8 @@
             "Jim Sonzero"
         ],
         "genres": [
-            "Science fiction",
-            "Horror"
+            "Horror",
+            "Science fiction"
         ],
         "reviewId": "pulse-1Y44-review"
     },
@@ -4558,8 +4558,8 @@
             "Jason Howden"
         ],
         "genres": [
-            "Action",
-            "Comedy"
+            "Comedy",
+            "Action"
         ],
         "reviewId": "gunsakimbo-gkFu-review"
     },
@@ -4583,8 +4583,8 @@
         "genres": [
             "Comedy",
             "Horror",
-            "Drama",
             "Fantasy",
+            "Drama",
             "Mystery"
         ],
         "reviewId": "rubber-P2m-review"
@@ -4802,9 +4802,9 @@
             "Quentin Dupieux"
         ],
         "genres": [
-            "Drama",
             "Fantasy",
             "Mystery",
+            "Drama",
             "Comedy"
         ],
         "reviewId": "incrediblebuttrue-rBtC-review"
@@ -4821,7 +4821,7 @@
         "duration": "146",
         "language": "English",
         "imdbAvgRating": "7.7",
-        "imdbNumVotes": "380775",
+        "imdbNumVotes": "382192",
         "tmdbUrl": "https://www.themoviedb.org/movie/9509/",
         "directors": [
             "Tony Scott"
@@ -4874,8 +4874,8 @@
             "Ninian Doff"
         ],
         "genres": [
-            "Comedy",
             "Horror",
+            "Comedy",
             "Action"
         ],
         "reviewId": "getduked-llgK-review"
@@ -4898,8 +4898,8 @@
             "Roseanne Liang"
         ],
         "genres": [
-            "War",
             "Horror",
+            "War",
             "Action"
         ],
         "reviewId": "shadowinthecloud-pah6-review"
@@ -5115,9 +5115,9 @@
             "Carlo Ledesma"
         ],
         "genres": [
-            "Mystery",
             "Thriller",
-            "Horror"
+            "Horror",
+            "Mystery"
         ],
         "reviewId": "thetunnel-NGk-review"
     },
@@ -5185,8 +5185,8 @@
             "Lee Hae-jun"
         ],
         "genres": [
-            "Comedy",
             "Drama",
+            "Comedy",
             "Romance"
         ],
         "reviewId": "castawayonthemoon-1GXU-review"
@@ -5699,7 +5699,7 @@
         "duration": "89",
         "language": "English",
         "imdbAvgRating": "6.3",
-        "imdbNumVotes": "37327",
+        "imdbNumVotes": "37592",
         "tmdbUrl": "https://www.themoviedb.org/movie/800510/",
         "directors": [
             "Steven Soderbergh"
@@ -5728,8 +5728,8 @@
             "Greg McLean"
         ],
         "genres": [
-            "Adventure",
             "Drama",
+            "Adventure",
             "Thriller"
         ],
         "reviewId": "jungle-dCpo-review"
@@ -5941,8 +5941,8 @@
         ],
         "genres": [
             "Drama",
-            "Horror",
-            "Thriller"
+            "Thriller",
+            "Horror"
         ],
         "reviewId": "thebroken-25jq-review"
     },
@@ -5964,8 +5964,8 @@
             "Mamoru Hosoda"
         ],
         "genres": [
-            "Science fiction",
-            "Animation"
+            "Animation",
+            "Science fiction"
         ],
         "reviewId": "summerwars-1oDC-review"
     },
@@ -5987,8 +5987,8 @@
             "Gus Van Sant"
         ],
         "genres": [
-            "Drama",
-            "Comedy"
+            "Comedy",
+            "Drama"
         ],
         "reviewId": "dontworryhewontgetfaronfoot-fLeo-review"
     },
@@ -6004,7 +6004,7 @@
         "duration": "122",
         "language": "English",
         "imdbAvgRating": "7.3",
-        "imdbNumVotes": "129217",
+        "imdbNumVotes": "129707",
         "tmdbUrl": "https://www.themoviedb.org/movie/387426/",
         "directors": [
             "Bong Joon Ho"
@@ -6572,10 +6572,11 @@
         "duration": "103",
         "language": "Japanese",
         "imdbAvgRating": "7.5",
-        "imdbNumVotes": "14281",
+        "imdbNumVotes": "14336",
         "tmdbUrl": "https://www.themoviedb.org/movie/13754/",
         "directors": [
-            "Michael Arias"
+            "Michael Arias",
+            "Hiroaki And\u00f4"
         ],
         "genres": [
             "Crime",
@@ -6692,7 +6693,7 @@
         "duration": "103",
         "language": "Japanese",
         "imdbAvgRating": "6.8",
-        "imdbNumVotes": "15547",
+        "imdbNumVotes": "15618",
         "tmdbUrl": "https://www.themoviedb.org/movie/430447/",
         "directors": [
             "Hiromasa Yonebayashi"
@@ -6887,7 +6888,7 @@
         "duration": "117",
         "language": "Japanese",
         "imdbAvgRating": "6.2",
-        "imdbNumVotes": "359",
+        "imdbNumVotes": "368",
         "tmdbUrl": "https://www.themoviedb.org/movie/129465/",
         "directors": [
             "Yoshinobu Yamakawa",
@@ -7077,7 +7078,7 @@
         "year": "2022",
         "duration": "97",
         "language": "Japanese",
-        "imdbAvgRating": "N/A",
+        "imdbAvgRating": 5.6,
         "imdbNumVotes": "91",
         "tmdbUrl": "https://www.themoviedb.org/movie/995387/",
         "directors": [
@@ -7107,8 +7108,8 @@
             "Ry\u00fbhei Kitamura"
         ],
         "genres": [
-            "Horror",
             "Mystery",
+            "Horror",
             "Fantasy"
         ],
         "reviewId": "themidnightmeattrain-1WSw-review"

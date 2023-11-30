@@ -124,6 +124,24 @@ const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.pn
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    MEANDER: [
+        require('../websiteContent/films/meander/screenshot3.PNG'),
+        require('../websiteContent/films/meander/screenshot4.PNG'),
+        require('../websiteContent/films/meander/screenshot2.PNG'),
+    ],
+
+    "shadow_in_the_cloud": [
+        require('../websiteContent/films/shadow_in_the_cloud/screenshot1.PNG'),
+        require('../websiteContent/films/shadow_in_the_cloud/screenshot2.PNG'),
+        require('../websiteContent/films/shadow_in_the_cloud/screenshot8.PNG'),
+    ],
+
+    "await_further_instructions": [
+        require('../websiteContent/films/await_further_instructions/screenshot4.PNG'),
+        require('../websiteContent/films/await_further_instructions/screenshot13.PNG'),
+        require('../websiteContent/films/await_further_instructions/screenshot11.PNG'),
+    ],
+
     "children_of_the_sea": [
         require('../websiteContent/films/children_of_the_sea/screenshot30.webp'),
         require('../websiteContent/films/children_of_the_sea/screenshot6.webp'),
@@ -916,6 +934,21 @@ const database = {
             ],
         },
 
+        "await_further_instructions": {
+            "letterboxdUrl": "https://boxd.it/ifti",
+            "title": "Await Further Instructions",
+            "myRating": 7.5,
+            "myTags": [
+                "Claustrophobic",
+                "Brutal",
+                "Creepy",
+                "Mysterious",
+            ],
+            "gradualInterest": [7, 6, 4, 4, 4, 4, 6, 9, 9],
+            "myReview": "",
+            "screenshots": screenshots.await_further_instructions
+        },
+
         "after_hours": {
             "letterboxdUrl": "https://boxd.it/1VfS",
             "title": "After Hours",
@@ -1466,7 +1499,7 @@ const database = {
         "convenience_story": {
             "letterboxdUrl": "https://boxd.it/BCig",
             "title": "Convenience Story",
-            "myRating": "7.5",
+            "myRating": 7.5,
             "myTags": [""],
             "myReview": ""
         },
@@ -2400,9 +2433,15 @@ const database = {
             "letterboxdUrl": "https://boxd.it/j1Ac",
             "title": "Meander",
             "myRating": "7.75",
-            "myTags": [""],
+            "myTags": [
+                "Claustrophobic",
+                "Colourful",
+                "Mysterious",
+            ],
             "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/gDNHgbbDgLcl67Q0Ges9R3qvwUU.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/gDNHgbbDgLcl67Q0Ges9R3qvwUU.jpg",
+            "gradualInterest": [7, 6, 4, 4, 4, 4, 6, 9, 9],
+            "screenshots": screenshots.MEANDER,
         },
     
         "mr_jones": {
@@ -2835,6 +2874,20 @@ const database = {
                 "One-location"
             ],
         },
+        
+        "shadow_in_the_cloud": {
+            "letterboxdUrl": "https://boxd.it/pah6",
+            "title": "Shadow in the Cloud",
+            "myRating": "8.0",
+            "myTags": [
+                "Intense",
+                "Claustrophobic",
+                "One-location",
+                "Thrilling",
+            ],
+            "myReview": "",
+            "screenshots": screenshots.shadow_in_the_cloud,
+        },
     
         "sound_of_metal": {
             "letterboxdUrl": "https://boxd.it/i7Q4",
@@ -2955,14 +3008,6 @@ const database = {
             "myTags": ["Atmospheric", "Disgusting", "Gross", "Creature-feature", "Cults", "Religion", "Satanic worshipers", "Foggy town", "Mysterious", "Video game adapatation", "Great soundtrack"],
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/ljAIu5OJWS8AYy5c5zmtwHPdHd1.jpg"
-        },
-    
-        "shadow_in_the_cloud": {
-            "letterboxdUrl": "https://boxd.it/pah6",
-            "title": "Shadow in the Cloud",
-            "myRating": "8.0",
-            "myTags": [""],
-            "myReview": "",
         },
     
         "solaris": {

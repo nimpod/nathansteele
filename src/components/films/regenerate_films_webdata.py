@@ -247,6 +247,10 @@ def regenerate_json_file():
 
                 # retrieve avg IMD rating
                 imdb_avg_rating = imdb_json['imdbRating']
+                if (title == 'Convenience Story'):
+                    # why is the 'imdbRating' property not in the json response for Convenience Story?!?!?
+                    # https://www.imdb.com/title/tt22775702/
+                    imdb_avg_rating = 5.6;
                 
                 # retrieve number of votes on IMDB (we remove the comma, because react is fucking stupid and cant sort numbers when they contain commas)
                 imdb_num_votes = imdb_json['imdbVotes'].replace(',', '')
@@ -287,7 +291,7 @@ def regenerate_json_file():
                 """
                 
                 # DEBUGGING....
-                print(f" > {pos}: {title}")
+                print(f" > {pos}: {title} (imdb_avg_rating={imdb_avg_rating})")
                 #print(f' > Title = ({title})')
                 #print(f' > IMDB url = ({imdb_url})')
                 #print(f' > Language = ({language})')
@@ -330,5 +334,5 @@ def regenerate_json_file():
 
 
 # call my functions........
-download_letterboxd_data()
+# download_letterboxd_data()
 regenerate_json_file()
