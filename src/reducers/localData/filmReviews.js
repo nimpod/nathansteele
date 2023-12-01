@@ -124,25 +124,55 @@ const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.pn
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    MALIGNANT: [
+        require('../websiteContent/films/malignant/screenshot5.PNG'),
+        require('../websiteContent/films/malignant/screenshot7.PNG'),
+        require('../websiteContent/films/malignant/screenshot10.PNG'),
+    ],
+
+    CJ7: [
+        require('../websiteContent/films/cj7/screenshot1.PNG'),
+        require('../websiteContent/films/cj7/screenshot3.PNG'),
+        require('../websiteContent/films/cj7/screenshot2.PNG'),
+    ],
+    
+    A_BRIDGE_FOR_RIP_VAN_WINKLE: [
+        require('../websiteContent/films/a_bride_for_rip_van_winkle/screenshot11.PNG'),
+        require('../websiteContent/films/a_bride_for_rip_van_winkle/screenshot6.PNG'),
+        require('../websiteContent/films/a_bride_for_rip_van_winkle/screenshot10.PNG'),
+    ],
+
+    GET_DUKED: [
+        require('../websiteContent/films/get_duked/screenshot1.PNG'),
+        require('../websiteContent/films/get_duked/screenshot3.PNG'),
+        require('../websiteContent/films/get_duked/screenshot4.PNG'),
+    ],
+
+    PULSE: [
+        require('../websiteContent/films/pulse/screenshot1.PNG'),
+        require('../websiteContent/films/pulse/screenshot2.PNG'),
+        require('../websiteContent/films/pulse/screenshot8.PNG'),
+    ],
+
     MEANDER: [
         require('../websiteContent/films/meander/screenshot3.PNG'),
         require('../websiteContent/films/meander/screenshot4.PNG'),
         require('../websiteContent/films/meander/screenshot2.PNG'),
     ],
 
-    "shadow_in_the_cloud": [
+    SHADOW_IN_THE_CLOUD: [
         require('../websiteContent/films/shadow_in_the_cloud/screenshot1.PNG'),
         require('../websiteContent/films/shadow_in_the_cloud/screenshot2.PNG'),
         require('../websiteContent/films/shadow_in_the_cloud/screenshot8.PNG'),
     ],
 
-    "await_further_instructions": [
+    AWAIT_FURTHER_INSTRUCTIONS: [
         require('../websiteContent/films/await_further_instructions/screenshot4.PNG'),
         require('../websiteContent/films/await_further_instructions/screenshot13.PNG'),
         require('../websiteContent/films/await_further_instructions/screenshot11.PNG'),
     ],
 
-    "children_of_the_sea": [
+    CHILDREN_OF_THE_SEA: [
         require('../websiteContent/films/children_of_the_sea/screenshot30.webp'),
         require('../websiteContent/films/children_of_the_sea/screenshot6.webp'),
         require('../websiteContent/films/children_of_the_sea/screenshot33.webp'),
@@ -154,115 +184,115 @@ const screenshots = {
         */
     ],
 
-    "white_god": [
+    WHITE_GOD: [
         require('../websiteContent/films/white_god/screenshot1.webp'),
         require('../websiteContent/films/white_god/screenshot2.webp'),
         require('../websiteContent/films/white_god/screenshot3.webp'),
     ],
 
-    "flatland": [
+    FLATLAND: [
         require('../websiteContent/films/flatland/screenshot1.webp'),
         require('../websiteContent/films/flatland/screenshot2.webp'),
         require('../websiteContent/films/flatland/screenshot3.webp'),
     ],
 
-    "feast": [
+    FEAST: [
         require('../websiteContent/films/feast/screenshot1.webp'),
         require('../websiteContent/films/feast/screenshot2.webp'),
         require('../websiteContent/films/feast/screenshot5.webp'),
     ],
 
-    "the_secret_world_of_arrietty": [
+    THE_SECRET_WORLD_OF_ARRIETTY: [
         require('../websiteContent/films/the_secret_world_of_arrietty/screenshot1.webp'),
         require('../websiteContent/films/the_secret_world_of_arrietty/screenshot2.webp'),
         require('../websiteContent/films/the_secret_world_of_arrietty/screenshot3.webp'),
     ],
 
-    "a_ghost_story": [
+    A_GHOST_STORY: [
         require('../websiteContent/films/a_ghost_story/screenshot1.webp'),
         require('../websiteContent/films/a_ghost_story/screenshot2.webp'),
         require('../websiteContent/films/a_ghost_story/screenshot3.webp'),
     ],
 
-    "poupelle_of_chimmney_town": [
+    POUPELLE_OF_CHIMMNEY_TOWN: [
         require('../websiteContent/films/poupelle_of_chimmney_town/screenshot1.webp'),
         require('../websiteContent/films/poupelle_of_chimmney_town/screenshot2.webp'),
         require('../websiteContent/films/poupelle_of_chimmney_town/screenshot3.webp'),
     ],
 
-    "wolf_children": [
+    WOLF_CHILDREN: [
         require('../websiteContent/films/wolf_children/screenshot7.webp'),
         require('../websiteContent/films/wolf_children/screenshot4.webp'),
         require('../websiteContent/films/wolf_children/screenshot1.webp'),
     ],
 
-    "spirited_away": [
+    SPIRITED_AWAY: [
         "https://www.themoviedb.org/t/p/original/iFXwrL5FDFS5WbCdG8OeSy3gRAj.jpg",
         "https://www.themoviedb.org/t/p/original/mSDsSDwaP3E7dEfUPWy4J0djt4O.jpg",
         "https://www.themoviedb.org/t/p/original/hXd2cgvvVh1EzSxuyNysiLErjVM.jpg"
     ],
 
-    "tetsuo_the_bullet_man": [
+    TETSUO_THE_BULLET_MAN: [
         require('../websiteContent/films/tetsuo_the_bullet_man/screenshot1.webp'),
         require('../websiteContent/films/tetsuo_the_bullet_man/screenshot2.webp'),
         require('../websiteContent/films/tetsuo_the_bullet_man/screenshot3.webp')
     ],
 
-    "big_fish_and_begonia": [
+    BIG_FISH_AND_BEGONIA: [
         require('../websiteContent/films/big_fish_and_begonia/screenshot1.webp'),
         require('../websiteContent/films/big_fish_and_begonia/screenshot5.webp'),
         require('../websiteContent/films/big_fish_and_begonia/screenshot35.webp'),
     ],
 
-    "the_tag_along": [
+    THE_TAG_ALONG: [
         require('../websiteContent/films/the_tag_along/screenshot2.webp'),
         require('../websiteContent/films/the_tag_along/screenshot5.webp'),
         require('../websiteContent/films/the_tag_along/screenshot15.webp')
     ],
 
-    "turtles_are_suprisingly_good_swimmers": [
+    TURTLES_ARE_SUPRISINGLY_GOOD_SWIMMERS: [
         require('../websiteContent/films/turtles_are_suprisingly_good_swimmers/screenshot2.webp'),
         require('../websiteContent/films/turtles_are_suprisingly_good_swimmers/screenshot8.webp'),
         require('../websiteContent/films/turtles_are_suprisingly_good_swimmers/screenshot4.webp'),
     ],
 
-    "angels_egg": [
+    ANGELS_EGG: [
         require('../websiteContent/films/angels_egg/screenshot1.webp'),
         require('../websiteContent/films/angels_egg/screenshot2.webp'),
         require('../websiteContent/films/angels_egg/screenshot3.webp'),
     ],
 
-    "limbo": [
+    LIMBO: [
         require('../websiteContent/films/limbo/screenshot3.webp'),
         require('../websiteContent/films/limbo/screenshot2.webp'),
         require('../websiteContent/films/limbo/screenshot6.webp'),
     ],
 
-    "climax": [
+    CLIMAX: [
         require('../websiteContent/films/climax/screenshot5.webp'),
         require('../websiteContent/films/climax/screenshot3.webp'),
         require('../websiteContent/films/climax/screenshot7.webp'),
     ],
 
-    "starry_starry_night": [
+    STARRY_STARRY_NIGHT: [
         require('../websiteContent/films/starry_starry_night/screenshot4.webp'),
         require('../websiteContent/films/starry_starry_night/screenshot11.webp'),
         require('../websiteContent/films/starry_starry_night/screenshot13.webp'),
     ],
 
-    "children_who_chase_lost_voices": [
+    CHILDREN_WHO_CHASE_LOST_VOICES: [
         require('../websiteContent/films/children_who_chase_lost_voices/screenshot1.webp'),
         require('../websiteContent/films/children_who_chase_lost_voices/screenshot2.webp'),
         require('../websiteContent/films/children_who_chase_lost_voices/screenshot3.webp'),
     ],
 
-    "zoe": [
+    ZOE: [
         require('../websiteContent/films/zoe/screenshot5.webp'),
         require('../websiteContent/films/zoe/screenshot2.webp'),
         require('../websiteContent/films/zoe/screenshot4.webp'),
     ],
 
-    "we_made_a_beautiful_bouquet": [
+    WE_MADE_A_BEAUTIFUL_BOUQUET: [
         require('../websiteContent/films/we_made_a_beautiful_bouquet/screenshot1.webp'),
         require('../websiteContent/films/we_made_a_beautiful_bouquet/screenshot2.webp'),
         require('../websiteContent/films/we_made_a_beautiful_bouquet/screenshot3.webp'),
@@ -272,7 +302,7 @@ const screenshots = {
 
 /**
  * My database of film reviews
- * This doesn't include web data (e.g. genres, year, director, etc...), that data is recieved later on from an API
+ * This doesn't include web data (e.g. genres, year, director, etc...), that data is recieved later on from an API.
  * This database should only include things like myRating, myReview, customPosterUrl, etc...
  * Crucially, the letterboxdUrl parameter MUST be correct, because I am essentially using that as an ID for each film.
  */
@@ -338,8 +368,8 @@ const database = {
             "letterboxdUrl": "https://boxd.it/AF4",
             "title": "The Secret World of Arrietty",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/oFlgPpxmZ4oTdxGc8aePWsKClxw.jpg",
-            "screenshots": screenshots.the_secret_world_of_arrietty,
-            "myReview": ReactDomServer.renderToString(ArriettyReview(screenshots.the_secret_world_of_arrietty)),
+            "screenshots": screenshots.THE_SECRET_WORLD_OF_ARRIETTY,
+            "myReview": ReactDomServer.renderToString(ArriettyReview(screenshots.THE_SECRET_WORLD_OF_ARRIETTY)),
             "myTags": [
                 "Humanity and nature coexisting",
                 "Friendship",
@@ -889,7 +919,7 @@ const database = {
             "myRating": "8.25",
             "myTags": ["Possession", "Insects", "Questioning reality", "Nature"],
             "myReview": "",
-            "screenshots": screenshots.the_tag_along,
+            "screenshots": screenshots.THE_TAG_ALONG,
             "gradualInterest": [8, 8, 8, 8, 8, 8, 9, 9, 9]
         },
     
@@ -913,14 +943,14 @@ const database = {
         },
     },
 
-    A: {
+    A_starts_with_single_word_a: {
         "a_ghost_story": {
             "myRating": 10.0,
             "letterboxdUrl": "https://boxd.it/fb0K",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/sD94aixD7fMAc2e9ugbv4KQprBL.jpg",
             "title": "A Ghost Story",
-            "screenshots": screenshots.a_ghost_story,
-            "myReview": ReactDomServer.renderToString(AGhostStoryReview(screenshots.a_ghost_story)),
+            "screenshots": screenshots.A_GHOST_STORY,
+            "myReview": ReactDomServer.renderToString(AGhostStoryReview(screenshots.A_GHOST_STORY)),
             "myTags": [
                 "Death",
                 "Life",
@@ -934,6 +964,45 @@ const database = {
             ],
         },
 
+        "a_silent_voice": {
+            "letterboxdUrl": "https://boxd.it/d99c",
+            "title": "A Silent Voice: The Movie",
+            "titleDisplayed": "A Silent Voice",
+            "myRating": "8.0",
+            "myTags": ["Bullying", "Forgiveness", "Anime", "Great soundtrack"],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/rgKWgY1pJ0bolXu2YhYPN4frkpd.jpg"
+        },
+    
+        "a_quiet_place": {
+            "letterboxdUrl": "https://boxd.it/fVJQ",
+            "title": "A Quiet Place",
+            "myRating": "9.0",
+            "myTags": ["Minimal dialogue", "Atmospheric", "Intense", "Aliens", "Post-apocalypse society"],
+            "myReview": ""
+        },
+        
+        "a_tree_of_palme": {
+            "letterboxdUrl": "https://boxd.it/1ldQ",
+            "title": "A Tree of Palme",
+            "myRating": "8.75",
+            "myTags": [""],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ui796jZGaqcLD89BHISwFNugd0X.jpg"
+        },
+    
+        "a_bride_for_rip_van_winkle": {
+            "letterboxdUrl": "https://boxd.it/dj9c",
+            "title": "A Bride for Rip Van Winkle",
+            "myRating": "8.0",
+            "myTags": [""],
+            "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ug9a2UEzSRJ6xG5NEvU4YXIbH2A.jpg",
+            "screenshots": screenshots.A_BRIDGE_FOR_RIP_VAN_WINKLE
+        },
+    },
+
+    A: {
         "await_further_instructions": {
             "letterboxdUrl": "https://boxd.it/ifti",
             "title": "Await Further Instructions",
@@ -946,7 +1015,7 @@ const database = {
             ],
             "gradualInterest": [7, 6, 4, 4, 4, 4, 6, 9, 9],
             "myReview": "",
-            "screenshots": screenshots.await_further_instructions
+            "screenshots": screenshots.AWAIT_FURTHER_INSTRUCTIONS
         },
 
         "after_hours": {
@@ -1018,17 +1087,7 @@ const database = {
             "myTags": ["Total escapism", "Ancient mayan civilisation", "Architecture", "Amazing set design", "Revenge-fantasy", "Brutal", "Not giving up despite being in a shitty situation"],
             "myReview": ""
         },
-    
-        "a_silent_voice": {
-            "letterboxdUrl": "https://boxd.it/d99c",
-            "title": "A Silent Voice: The Movie",
-            "titleDisplayed": "A Silent Voice",
-            "myRating": "8.0",
-            "myTags": ["Bullying", "Forgiveness", "Anime", "Great soundtrack"],
-            "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/rgKWgY1pJ0bolXu2YhYPN4frkpd.jpg"
-        },
-    
+
         "alive": {
             "letterboxdUrl": "https://boxd.it/210u",
             "title": "Alive",
@@ -1054,15 +1113,7 @@ const database = {
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/zrkQcAatfBox5x9KZjaYGnKoqu6.jpg"
         },
-    
-        "a_quiet_place": {
-            "letterboxdUrl": "https://boxd.it/fVJQ",
-            "title": "A Quiet Place",
-            "myRating": "9.0",
-            "myTags": ["Minimal dialogue", "Atmospheric", "Intense", "Aliens", "Post-apocalypse society"],
-            "myReview": ""
-        },
-        
+
         "aliens": {
             "letterboxdUrl": "https://boxd.it/29PA",
             "title": "Aliens",
@@ -1071,16 +1122,7 @@ const database = {
             "myReview": "",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/4y7pFNes6oUTphF5cZpx24qt5yo.jpg"
         },
-    
-        "a_tree_of_palme": {
-            "letterboxdUrl": "https://boxd.it/1ldQ",
-            "title": "A Tree of Palme",
-            "myRating": "8.75",
-            "myTags": [""],
-            "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ui796jZGaqcLD89BHISwFNugd0X.jpg"
-        },
-    
+
         "april_story": {
             "letterboxdUrl": "https://boxd.it/2n9o",
             "title": "April Story",
@@ -1097,7 +1139,7 @@ const database = {
             "myTags": [],
             "myReview": "",
             "gradualInterest": [9, 9, 9, 9, 8, 9, 9],
-            "screenshots": screenshots.angels_egg,
+            "screenshots": screenshots.ANGELS_EGG,
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/dcEUGvckbePFzPKhGXnS9T3kZMG.jpg"
         },
     
@@ -1146,15 +1188,6 @@ const database = {
             "myReview": "",
             "gradualInterest": [8, 7, 6, 7, 8, 8, 8, 8, 7, 7, 8, 8],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/rU6UkrcH0QyJ5FhmKAKFhZ1nfAC.jpg"
-        },
-    
-        "a_bride_for_rip_van_winkle": {
-            "letterboxdUrl": "https://boxd.it/dj9c",
-            "title": "A Bride for Rip Van Winkle",
-            "myRating": "8.0",
-            "myTags": [""],
-            "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/ug9a2UEzSRJ6xG5NEvU4YXIbH2A.jpg"
         },
     },
 
@@ -1315,8 +1348,8 @@ const database = {
             "myRating": "9.5",
             "myTags": ["Life", "Death", "Magic", "The afterlife", "Oceans", "Sealife", "Amazing cinematography", "Great soundtrack"],
             "myReview": "",
-            "screenshots": screenshots.big_fish_and_begonia,
-            "myReview": ReactDomServer.renderToString(BigFishAndBegoniaReview(screenshots.big_fish_and_begonia)),
+            "screenshots": screenshots.BIG_FISH_AND_BEGONIA,
+            "myReview": ReactDomServer.renderToString(BigFishAndBegoniaReview(screenshots.BIG_FISH_AND_BEGONIA)),
             "gradualInterest": [8, 9, 9, 9, 8, 7, 8, 9, 10, 9],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/tAmHBydreAbLn0gPXBHmbyEytNP.jpg"
         },
@@ -1329,8 +1362,8 @@ const database = {
             "myRating": "10",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/i91YrURnZPCKhpNyIxkAAzBb4t9.jpg",
             "myTags": ["The origins of life", "Astronomy", "Cosmology", "Spirituality", "The mysteries of the ocean world", "Exploring new perspectives", "Audio-visual spectacle"],
-            "screenshots": screenshots.children_of_the_sea,
-            "myReview": ReactDomServer.renderToString(ChildrenOfTheSeaReview(screenshots.children_of_the_sea)),
+            "screenshots": screenshots.CHILDREN_OF_THE_SEA,
+            "myReview": ReactDomServer.renderToString(ChildrenOfTheSeaReview(screenshots.CHILDREN_OF_THE_SEA)),
             "gradualInterest": [8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10],
         },
     
@@ -1465,7 +1498,7 @@ const database = {
             "myRating": "8.25",
             "myTags": [],
             "myReview": "",
-            "screenshots": screenshots.climax,
+            "screenshots": screenshots.CLIMAX,
             "gradualInterest": [8, 8, 8, 7, 7, 6, 8, 9, 9]
         },
     
@@ -1475,7 +1508,7 @@ const database = {
             "myRating": "8.25",
             "myTags": [],
             "myReview": "",
-            "screenshots": screenshots.children_who_chase_lost_voices,
+            "screenshots": screenshots.CHILDREN_WHO_CHASE_LOST_VOICES,
             "gradualInterest": [7, 8, 8, 8, 8, 8, 8, 9, 8, 8, 9, 8]
         },
     
@@ -1520,7 +1553,8 @@ const database = {
             "myTags": [""],
             "myReview": "",
             "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 8, 8],
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/v8xUyWtRrFmZ5iVEHI0pbQuxHD5.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/v8xUyWtRrFmZ5iVEHI0pbQuxHD5.jpg",
+            "screenshots": screenshots.CJ7,
         },
     },
 
@@ -1711,8 +1745,8 @@ const database = {
             "myRating": 10,
             "letterboxdUrl": "https://boxd.it/2sXo",
             "title": "Flatland: The Film",
-            "screenshots": screenshots.flatland,
-            "myReview": ReactDomServer.renderToString(FlatlandReview(screenshots.flatland)),
+            "screenshots": screenshots.FLATLAND,
+            "myReview": ReactDomServer.renderToString(FlatlandReview(screenshots.FLATLAND)),
             "myTags": [
                 "Dimensionality",
                 "Questioning reality",
@@ -1729,8 +1763,8 @@ const database = {
             "letterboxdUrl": "https://boxd.it/1Xag",
             "title": "Feast",
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/4wNJiD1c8lb5qyGYXAXY8JJaNLf.jpg",
-            "screenshots": screenshots.feast,
-            "myReview": ReactDomServer.renderToString(FeastReview(screenshots.feast)),
+            "screenshots": screenshots.FEAST,
+            "myReview": ReactDomServer.renderToString(FeastReview(screenshots.FEAST)),
             "myTags": [
                 "Creature-feature",
                 "One-location",
@@ -1855,7 +1889,8 @@ const database = {
             "title": "Get Duked!",
             "myRating": "8.0",
             "myTags": [""],
-            "myReview": ""
+            "myReview": "",
+            "screenshots": screenshots.GET_DUKED,
         },
     },
 
@@ -2260,7 +2295,7 @@ const database = {
             "myRating": "8.0",
             "myTags": [],
             "myReview": "",
-            "screenshots": screenshots.limbo,
+            "screenshots": screenshots.LIMBO,
             "gradualInterest": [7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/7Hh2w1ei26DTJ3JWmW8qcGQUI1n.jpg"
         },
@@ -2399,7 +2434,8 @@ const database = {
             "myRating": "9.0",
             "myTags": ["Wild", "Great cinematography", "Murder mystery", "Amazing finale"],
             "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/mwl0Vk9DzyN68986ALKhC7xBe24.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/mwl0Vk9DzyN68986ALKhC7xBe24.jpg",
+            "screenshots": screenshots.MALIGNANT,
         },
     
         "moonrise_kingdom": {
@@ -2599,16 +2635,18 @@ const database = {
             "myTags": ["Heterodox thinker", "Religion", "Friendship", "Intricate animation style", "Textures", "Steampunk", "Colourful", "Exploring new places", "Anti-smoking"],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/z0W6hrjGd9NrY4eQypaNDGlLkN9.jpg",
             "gradualInterest": [8, 8, 8, 8, 7, 7, 7, 8, 9, 9],
-            "screenshots": screenshots.poupelle_of_chimmney_town,
-            "myReview": ReactDomServer.renderToString(PoupelleOfChimmneyTownReview(screenshots.poupelle_of_chimmney_town)),
+            "screenshots": screenshots.POUPELLE_OF_CHIMMNEY_TOWN,
+            "myReview": ReactDomServer.renderToString(PoupelleOfChimmneyTownReview(screenshots.POUPELLE_OF_CHIMMNEY_TOWN)),
         },
-    
+
         "pulse": {
             "letterboxdUrl": "https://boxd.it/1Y44",
             "title": "Pulse",
             "myRating": "8.0",
             "myTags": [""],
             "myReview": "",
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/tmcSKby8AARIFCGFJRqcHAcaYRt.jpg",
+            "screenshots": screenshots.PULSE,
         },
     
         "porco_rosso": {
@@ -2886,7 +2924,7 @@ const database = {
                 "Thrilling",
             ],
             "myReview": "",
-            "screenshots": screenshots.shadow_in_the_cloud,
+            "screenshots": screenshots.SHADOW_IN_THE_CLOUD,
         },
     
         "sound_of_metal": {
@@ -3044,7 +3082,7 @@ const database = {
             "myRating": "8.75",
             "myTags": ["Jigsaws", "Art", "Origami", "Soulmate", "Friendship"],
             "myReview": "",
-            "screenshots": screenshots.starry_starry_night,
+            "screenshots": screenshots.STARRY_STARRY_NIGHT,
             "gradualInterest": [7, 7, 8, 8, 9, 9, 8, 9, 9, 8],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/9DEDG5QcktqifgQwO4rW9BLWdEO.jpg"
         },
@@ -3112,7 +3150,7 @@ const database = {
             "myTags": ["Nature", "Japanese culture", "Ghosts", "Soulmate", "Studio ghibli"],
             "myReview": "",
             "gradualInterest": [8, 8, 8, 7, 8, 8, 8, 8, 8, 9, 9, 8],
-            "screenshots": screenshots.spirited_away,
+            "screenshots": screenshots.SPIRITED_AWAY,
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/y2K14f237l9IgwGZi5FyNnyG8RL.jpg"
         },
     
@@ -3186,7 +3224,7 @@ const database = {
             "myTags": [],
             "myReview": "",
             "gradualInterest": [9, 9, 9, 8, 8, 8, 7, 7, 7],
-            "screenshots": screenshots.turtles_are_suprisingly_good_swimmers,
+            "screenshots": screenshots.TURTLES_ARE_SUPRISINGLY_GOOD_SWIMMERS,
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/nThjwGHNHKXI7Y1oGdrWzcoAF7P.jpg"
         },
     
@@ -3197,8 +3235,8 @@ const database = {
             "gradualInterest": [7, 7, 8, 8, 8, 8, 8, 7, 7, 8],
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/sYcYjZ65YEEelekUgJcUp4HkRmw.jpg",
             "myTags": ["Disturbing", "Cyberpunk", "Biopunk", "Stylish", "Metal", "Chaotic", "Claustrophobic", "Challenging to watch at times", "Great soundtrack"],
-            "myReview": ReactDomServer.renderToString(TetsuoTheBulletManReview(screenshots.tetsuo_the_bullet_man)),
-            "screenshots": screenshots.tetsuo_the_bullet_man,
+            "myReview": ReactDomServer.renderToString(TetsuoTheBulletManReview(screenshots.TETSUO_THE_BULLET_MAN)),
+            "screenshots": screenshots.TETSUO_THE_BULLET_MAN,
         },
     
         "tokyo_vampire_hotel": {
@@ -3278,8 +3316,8 @@ const database = {
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/i4CRAls90VIXm9KocszTeTUpMsB.jpg",
             "myRating": "8.5",
             "myTags": ["Finding your soulmate", "Happy romcom turns depressing", "Great soundtrack"],
-            "myReview": ReactDomServer.renderToString(WeMadeABeautifulBouquet(screenshots.we_made_a_beautiful_bouquet)),
-            "screenshots": screenshots.we_made_a_beautiful_bouquet,
+            "myReview": ReactDomServer.renderToString(WeMadeABeautifulBouquet(screenshots.WE_MADE_A_BEAUTIFUL_BOUQUET)),
+            "screenshots": screenshots.WE_MADE_A_BEAUTIFUL_BOUQUET,
             "gradualInterest": [7, 8, 9, 9, 9, 9, 9, 8, 8, 7, 7, 7],
         },
     
@@ -3325,8 +3363,8 @@ const database = {
             "myRating": 9.25,
             "letterboxdUrl": "https://boxd.it/81lO",
             "title": "White God",
-            "screenshots": screenshots.white_god,
-            "myReview": ReactDomServer.renderToString(WhiteGodReview(screenshots.white_god)),
+            "screenshots": screenshots.WHITE_GOD,
+            "myReview": ReactDomServer.renderToString(WhiteGodReview(screenshots.WHITE_GOD)),
             "myTags": [
                 "Emotional",
                 "Friendship",
@@ -3353,7 +3391,7 @@ const database = {
             "myRating": "8.0",
             "myTags": ["Nature", "Humanity and nature coexisting", "Summer", "Following characters through their lives as seasons pass by"],
             "myReview": "",
-            "screenshots": screenshots.wolf_children,
+            "screenshots": screenshots.WOLF_CHILDREN,
             "gradualInterest": [6, 6, 7, 7, 8, 8, 8, 9, 8, 8, 8, 8]
         },
     
@@ -3401,7 +3439,7 @@ const database = {
             "myTags": ["Soulmate", "AI", "Great cinematography", "Great soundtrack"],
             "myReview": "",
             "gradualInterest": [6, 8, 9, 9, 9, 8, 7, 7, 8, 8, 9],
-            "screenshots": screenshots.zoe,
+            "screenshots": screenshots.ZOE,
             "customPosterUrl": "https://www.themoviedb.org/t/p/original/cSzwzCEOk4AM0w6Br8J6mDl7HzR.jpg"
         },
     }
