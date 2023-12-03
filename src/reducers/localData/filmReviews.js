@@ -124,10 +124,40 @@ const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.pn
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    LUPIN_THE_THIRD: [
+        require('../websiteContent/films/lupin_the_third/screenshot14.PNG'),
+        require('../websiteContent/films/lupin_the_third/screenshot7.PNG'),
+        require('../websiteContent/films/lupin_the_third/screenshot3.PNG'),
+    ],
+
+    CONVENIENCE_STORY: [
+        require('../websiteContent/films/convenience_story/screenshot2.PNG'),
+        require('../websiteContent/films/convenience_story/screenshot6.PNG'),
+        require('../websiteContent/films/convenience_story/screenshot13.PNG'),
+    ],
+
+    PORTALS: [
+        require('../websiteContent/films/portals/screenshot3.PNG'),
+        require('../websiteContent/films/portals/screenshot8.PNG'),
+        require('../websiteContent/films/portals/screenshot1.PNG'),
+    ],
+
+    SPONTANEOUS: [
+        require('../websiteContent/films/spontaneous/screenshot1.PNG'),
+        require('../websiteContent/films/spontaneous/screenshot2.PNG'),
+        require('../websiteContent/films/spontaneous/screenshot5.PNG'),
+    ],
+
+    CASHBACK: [
+        require('../websiteContent/films/cashback/screenshot1.PNG'),
+        require('../websiteContent/films/cashback/screenshot5.PNG'),
+        require('../websiteContent/films/cashback/screenshot4.PNG'),
+    ],
+
     MALIGNANT: [
         require('../websiteContent/films/malignant/screenshot5.PNG'),
+        require('../websiteContent/films/malignant/screenshot2.PNG'),
         require('../websiteContent/films/malignant/screenshot7.PNG'),
-        require('../websiteContent/films/malignant/screenshot10.PNG'),
     ],
 
     CJ7: [
@@ -241,7 +271,7 @@ const screenshots = {
     BIG_FISH_AND_BEGONIA: [
         require('../websiteContent/films/big_fish_and_begonia/screenshot1.webp'),
         require('../websiteContent/films/big_fish_and_begonia/screenshot5.webp'),
-        require('../websiteContent/films/big_fish_and_begonia/screenshot35.webp'),
+        require('../websiteContent/films/big_fish_and_begonia/screenshot37.webp'),
     ],
 
     THE_TAG_ALONG: [
@@ -1518,7 +1548,8 @@ const database = {
             "myRating": "8.0",
             "myTags": [""],
             "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/nz28d5ZSUe0hJdvd69L7SsVJW0V.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/nz28d5ZSUe0hJdvd69L7SsVJW0V.jpg",
+            "screenshots": screenshots.CASHBACK,
         },
     
         "carter": {
@@ -1534,7 +1565,8 @@ const database = {
             "title": "Convenience Story",
             "myRating": 7.5,
             "myTags": [""],
-            "myReview": ""
+            "myReview": "",
+            "screenshots": screenshots.CONVENIENCE_STORY,
         },
     
         "cub": {
@@ -2286,7 +2318,8 @@ const database = {
             "title": "Lupin the Third: The Castle of Cagliostro",
             "myRating": "7.5",
             "myTags": [""],
-            "myReview": ""
+            "myReview": "",
+            "screenshots": screenshots.LUPIN_THE_THIRD,
         },
     
         "limbo": {
@@ -2663,7 +2696,8 @@ const database = {
             "title": "Portals",
             "myRating": "8.0",
             "myTags": [""],
-            "myReview": ""
+            "myReview": "",
+            "screenshots": screenshots.PORTALS,
         },
     
         "ponyo": {
@@ -3064,7 +3098,8 @@ const database = {
             "myRating": "8.25",
             "myTags": [""],
             "myReview": "",
-            "customPosterUrl": "https://www.themoviedb.org/t/p/original/qhDICM8YxuDn9241O2UVEe9DupC.jpg"
+            "customPosterUrl": "https://www.themoviedb.org/t/p/original/qhDICM8YxuDn9241O2UVEe9DupC.jpg",
+            "screenshots": screenshots.SPONTANEOUS,
         },
     
         "steamboy": {

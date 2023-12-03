@@ -21,11 +21,18 @@ class MusicReview extends React.Component {
     render() {
         /// console.log(this.props.albumData);
         
+        let tracks = [];
         let genres = [];
         let themes = [];
         let customAlbumCoverUrl = "";
         let reviewIdOfNextAlbum = "";
         let reviewIdOfPrevAlbum = "";
+
+        console.log(this.props.albumData.tracks);
+
+        if (this.props.albumData.tracks !== undefined) {
+            tracks = this.props.albumData.tracks;
+        }
 
         // get genres list if it exists...
         if (this.props.albumData.genres !== undefined) {
@@ -120,6 +127,17 @@ class MusicReview extends React.Component {
                             <img className='album-cover' src={customAlbumCoverUrl} alt="album cover">
 
                             </img>
+
+                            {/* tracks */}
+                            <div className='tracks' title='Tracks'>
+                                {tracks.map(t => {
+                                    let track_name = t['name'];
+
+                                    return <span className='track' key={track_name}>
+                                        {track_name}
+                                    </span>
+                                })}
+                            </div>
                         </div>
 
                         {/* Prev review link */}

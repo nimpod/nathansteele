@@ -3240,6 +3240,15 @@ span.theme-text {
 }
 
 
+.album-review-displayed .tracks {
+  display: flex;
+  flex-direction: column;
+}
+.album-review-displayed .tracks > span {
+  color: rgb(130, 121, 121);
+}
+
+
 /*  */
 .album-review-displayed div.next-review-link > a {
   right: 2px;

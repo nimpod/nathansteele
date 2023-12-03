@@ -79,7 +79,7 @@ class Films extends React.Component {
         __search_text: "",
 
         // view stuff...
-        __view_type: ViewType.GRID,
+        __view_type: ViewType.LIST,
 
         // defaults...
         __default_sort_type: SortableType.MY_POS,
