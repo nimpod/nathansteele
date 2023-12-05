@@ -1,7 +1,7 @@
 import requests
 from LastFmHelpers import LASTFM_API_METHODS
 from LastFmHelpers import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
-from LastFmHelpers import pretty_print_json
+from Helpers import pretty_print_json
 
 
 class LastFM:
@@ -89,7 +89,7 @@ class LastFM:
             'artist': artist_name,
             'track': track_name
         })
-        pretty_print_json(r.json())
+        # pretty_print_json(r.json())
         return r.json()
     
     def GET_my_top_tracks(self, period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.OVERALL.value, limit=50):
@@ -102,7 +102,6 @@ class LastFM:
         Returns:
             _type_: JSON response from API
         """
-        print(period)
         r = self.GET({
             'method': LASTFM_API_METHODS.GET_MY_TOP_TRACKS.value,
             'user': self.user_agent,

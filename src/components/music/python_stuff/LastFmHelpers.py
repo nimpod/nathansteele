@@ -1,4 +1,3 @@
-import json
 from enum import Enum
 
 class LASTFM_API_METHODS(Enum):
@@ -27,11 +26,3 @@ class GET_TOP_TRACKS_TIME_PERIOD_OPTIONS(Enum):
     LAST_3_MONTHS = '3month'
     LAST_6_MONTHS = '6month'
     LAST_12_MONTHS = '12month'
-
-
-def pretty_print_json(obj):
-    """
-    Create a formatted string of the Python JSON object
-    """
-    text = json.dumps(obj, sort_keys=True, indent=4)
-    print(text)

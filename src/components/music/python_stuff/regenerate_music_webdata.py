@@ -4,6 +4,7 @@ import json
 from LastFm import LastFM
 from LastFm import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
 from MusicbeeHelpers import MusicbeeHelpers
+from Helpers import export_list_to_json
 
 from urllib3.exceptions import InsecurePlatformWarning, InsecureRequestWarning
 from urllib3 import disable_warnings
@@ -17,27 +18,32 @@ disable_warnings(InsecureRequestWarning)
 lastfm = LastFM(API_KEY='641be1ed643c913edb609208c24efad7', USERNAME='gutash')
 
 
-def convert_m3u_to_json():
+def get_top_albums_via_musicbee_m3u_exported_file():
+    # find the .m3u export...
+    dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
+    musicbee_export_filename = 'All time best albums.m3u'
+    fullpath_to_musicbee_export = f"{dir_export}\\{musicbee_export_filename}"
+    
+    # define full path to json file...
+    json_output_filename = 'reviews_web_data.json'
+    fullpath_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\{json_output_filename}'
+    
+    # convert .m3u file to .json file...
+    convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output)
+
+def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
     """
     Convert an m3u musicbee export into a json file
     """
     
-    # filepaths...
-    dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
-    musicbee_export_filename = 'All time best albums.m3u'
-    path_to_musicbee_export = f"{dir_export}\\{musicbee_export_filename}"
-    json_output_filename = 'reviews_web_data.json'
-    path_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\{json_output_filename}'
-    path_to_music_files_storage = 'D:\\Music\\Music files\\'
-    
     # locate m3u export
-    if os.path.exists(path_to_musicbee_export):
-        with open(path_to_musicbee_export, 'r', encoding="utf8") as f:
+    if os.path.exists(fullpath_to_musicbee_export):
+        with open(fullpath_to_musicbee_export, 'r', encoding="utf8") as f:
             # convert m3u to str
             content = f.read()
 
             # convert str to list
-            toplist = content.split(path_to_music_files_storage)
+            toplist = content.split('D:\\Music\\Music files\\')
             toplist = toplist[1:]   # dunno why there's a blank item at front of list
             ##print(toplist)
             
@@ -119,25 +125,30 @@ def convert_m3u_to_json():
                     'reviewId': review_id,
                 })
             
-            # clear json file first...
-            open(path_to_json_output, 'w').close()
             
-            # write new content...
-            with open(path_to_json_output, 'w') as f:
-                json.dump(albums_list, f, indent=4)
-            
-            print(f'JSON export finished! -> {path_to_json_output}')
+            # export list to json...
+            export_list_to_json(fullpath_to_json_output, albums_list)
 
 
-def get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.OVERALL.value, limit=10):
+
+def get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.OVERALL, limit=10):
     """
     Get top tracks.
     """
     
-    data = lastfm.GET_my_top_tracks(period=period, limit=limit)
+    # add to this list...
+    tracks = []
+    
+    # GET request...
+    data = lastfm.GET_my_top_tracks(period=period.value, limit=limit)
+    
+    # get string representation of time period
+    time_period_str = period.value.upper()
+    
+    # iterate over tracks in response...
     if 'toptracks' in data:
         if 'track' in data['toptracks']:
-            print(f'MY TOP {limit} MOST LISTENED SONGS ({period.upper()})')
+            print(f'\nMY TOP {limit} MOST LISTENED SONGS ({time_period_str})')
             for track in data['toptracks']['track']:
                 track_name = track['name']
                 album_cover = track['image'][-1]['#text']
@@ -148,12 +159,61 @@ def get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.OVERALL.value, limi
                 pos = track['@attr']['rank']
                 play_count = track['playcount']
                 
+                musicbrainz_artist_id = track['artist']['mbid']
+                musicbrainz_track_id = track['mbid']
+                
+                # print(track)
+                # print(f'{musicbrainz_artist_id} - {musicbrainz_track_id}')
                 print(f'[{pos}] ({play_count} scrobbles): {artist_name} - {track_name} ({lastfm_track_url})')
+                
+                tracks.append({
+                    'position': pos,
+                    'track_name': track_name,
+                    'artist_name': artist_name,
+                    'lastfm_track_url': lastfm_track_url,
+                    'lastfm_artist_url': lastfm_artist_url,
+                    'album_cover': album_cover,
+                    'track_duration': track_duration,
+                    'play_count': play_count,
+                    'musicbrainz_artist_id': musicbrainz_artist_id,
+                    'musicbrainz_track_id': musicbrainz_track_id,
+                })
+    
+    return {
+        'tracks': tracks,
+        'period': time_period_str
+    }
+    
+def get_top_tracks_all_data(limit=10):
+    """
+    Get top tracks, for every time period
+    """
+    
+    # get all data...
+    overall = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.OVERALL, limit=limit)
+    last_12_months = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_12_MONTHS, limit=limit)
+    last_6_months = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_6_MONTHS, limit=limit)
+    last_3_months = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_3_MONTHS, limit=limit)
+    last_month = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_MONTH, limit=limit)
+    
+    # name of json files...
+    overall_json = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\top_tracks\\{overall["period"]}.json'
+    last_12_months_json = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\top_tracks\\{last_12_months["period"]}.json'
+    last_6_months_json = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\top_tracks\\{last_6_months["period"]}.json'
+    last_3_months_json = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\top_tracks\\{last_3_months["period"]}.json'
+    last_month_json = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\top_tracks\\{last_month["period"]}.json'
+
+    # export all data to individual json files...
+    export_list_to_json(overall_json, overall['tracks'])
+    export_list_to_json(last_12_months_json, last_12_months['tracks'])
+    export_list_to_json(last_6_months_json, last_6_months['tracks'])
+    export_list_to_json(last_3_months_json, last_3_months['tracks'])
+    export_list_to_json(last_month_json, last_month['tracks'])
 
 
-# Generate JSON data from musicbee list.....
-convert_m3u_to_json()
 
-# get top tracks
-# get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_12_MONTHS.value, limit=25)
+# get top albums...
+get_top_albums_via_musicbee_m3u_exported_file()
 
+# get top tracks...
+# get_top_tracks_all_data()
