@@ -10,7 +10,8 @@ class MusicbeeHelpers:
                             .replace('¬', "\"")\
                             .replace('))', "/")\
                             .replace('@', '?')\
-                            .replace('^', '.')
+                            .replace('^', '.')\
+                            .replace(')(', ';')
 
     def remove_special_characters_based_on_musicbee_export(str_to_edit):
         """
