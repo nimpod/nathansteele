@@ -4,42 +4,51 @@
 
 import ReactDomServer from 'react-dom/server';
 import React from 'react';
-import { getAlbumReviewId, getFilmReviewId } from '../js/helpers.js';
+import { get_album_review_id, get_film_review_id } from '../js/helpers.js';
 
-import { filmReviews as local_data_films } from './localData/filmReviews.js';
-import { albumReviews as local_data_albums } from './localData/albumReviews.js';
-import { blogPosts as local_data_blog } from './localData/blogPosts.js';
+// data...
+import { blog_posts as localdata_blog } from './localData/blog_posts.js';
+import { film_reviews as localdata_films } from './localData/film_reviews.js';
+import { album_reviews as localdata_albums } from './localData/album_reviews.js';
+
+// retrieve web film data...
+let webdata_top_films = require(`../components/films/webdata_top_films_list.json`);
+let webdata_top_tracks = require(`../components/music/webdata_top_tracks_list.json`);
+let webdata_top_albums = require(`../components/music/webdata_top_albums_list.json`);
 
 
 /**
  * Initial state
  */
 const init_state = {
-    // blog posts...
-    posts: local_data_blog,
-
-    // album reviews (this is merged with web data)...
-    albumReviews: local_data_albums,
-
-    // film reviews (this is merged with web data)...
-    filmReviews: local_data_films,
+    posts: localdata_blog,
+    top_films: localdata_films,
+    top_albums: localdata_albums,
+    top_tracks: webdata_top_tracks,
 }
 
 
 /**
- * Merge local data, with web data
+ * Actual database...
  * @param {*} state 
  * @param {*} action 
  * @returns 
  */
 const RootReducer = (state=init_state, action) => {
-    // merge local and web data for films...
-    let all_films_data = merge_films_local_and_web_data(init_state);
-    state.filmReviews = all_films_data;
+    // merge local & web data...
+    state.top_films = merge_films_data(
+        init_state.top_films,       // local data (my review, my rating, etc...)
+        webdata_top_films           // web data (genres, year, poster, etc...)
+    );
+    
+    // merge local & web data...
+    state.top_albums = merge_albums_data(
+        init_state.top_albums,      // local data (my review, my rating, etc...)
+        webdata_top_albums          // web data (genres, year, album cover, etc...)
+    );
 
-    // merge local and web data for albums...
-    let all_albums_data = merge_albums_local_and_web_data(init_state);
-    state.albumReviews = all_albums_data;
+    // top tracks (no local data being stored, just web data)
+    state.top_tracks = init_state.top_tracks;
 
     // return modified state...
     return state;
@@ -47,32 +56,30 @@ const RootReducer = (state=init_state, action) => {
 
 
 /**
- * Merge local film review data, with web film review data.
- * @param {*} init_state 
+ * Merge local data & web data
+ * @param {Local representation of top films list} local_data 
+ * @param {Online representation of top films list} web_data 
  * @returns 
  */
-const merge_films_local_and_web_data = (init_state) => {
+const merge_films_data = (local_data, web_data) => {
     // retrieve local film data...
-    const mapped_by_id = (init_state.filmReviews.reduce((acc, film) => {
-        acc[film.letterboxdUrl] = film;
+    const mapped_by_id = (local_data.reduce((acc, film) => {
+        acc[film.letterboxd_url] = film;
         return acc;
     }, {}));
 
-    // retrieve web film data...
-    let webdata = require('../components/films/reviews_web_data.json');
-
     // merge local & web film data...
-    const merged_data = webdata.map(film => ({...film, ...mapped_by_id[film.letterboxdUrl]}))
+    const merged_data = web_data.map(film => ({...film, ...mapped_by_id[film.letterboxd_url]}))
 
     // add new attributes...
     Object.entries(merged_data).forEach(([k,v]) => {
         // calculate imdb diff score for each film...
-        v["imdbDiffScore"] = (v["myRating"] - v["imdbAvgRating"]).toFixed(1)
+        v["IMDB_diff_score"] = (v["my_rating"] - v["IMDB_avg_rating"]).toFixed(1)
 
         // calculate average of gradual interest array...
-        if (v["gradualInterest"] !== undefined) {
-            let arr = v["gradualInterest"];
-            v["gradualInterestAverage"] = (arr.reduce((x,y) => x+y) / arr.length).toFixed(1);
+        if (v["gradual_interest"] !== undefined) {
+            let arr = v["gradual_interest"];
+            v["gradual_interest_average"] = (arr.reduce((x,y) => x+y) / arr.length).toFixed(1);
         }
         
         // find id of next/previous films
@@ -83,13 +90,13 @@ const merge_films_local_and_web_data = (init_state) => {
         let review_id_of_next_film = "";
         let review_id_of_prev_film = "";
         if (next_film !== undefined) {
-            review_id_of_next_film = getFilmReviewId(next_film.title, next_film.letterboxdUrl);
+            review_id_of_next_film = get_film_review_id(next_film.title, next_film.letterboxd_url);
         }
         if (prev_film !== undefined) {
-            review_id_of_prev_film = getFilmReviewId(prev_film.title, prev_film.letterboxdUrl);
+            review_id_of_prev_film = get_film_review_id(prev_film.title, prev_film.letterboxd_url);
         }
-        v["reviewIdOfNextFilm"] = review_id_of_next_film;
-        v["reviewIdOfPrevFilm"] = review_id_of_prev_film;
+        v["review_id_of_next_film"] = review_id_of_next_film;
+        v["review_id_of_prev_film"] = review_id_of_prev_film;
     });
 
     return merged_data;
@@ -97,22 +104,20 @@ const merge_films_local_and_web_data = (init_state) => {
 
 
 /**
- * Merge local album review data, with album review data.
- * @param {*} init_state
+ * Merge local data & web data
+ * @param {Local representation of top albums list} local_data 
+ * @param {Online representation of top albums list} web_data 
  * @returns 
  */
-const merge_albums_local_and_web_data = (init_state) => {
+const merge_albums_data = (local_data, web_data) => {
     // retrieve local film data...
-    const mapped_by_id = (init_state.albumReviews.reduce((acc, album) => {
-        acc[album.lastFmUrl] = album;
+    const mapped_by_id = (local_data.reduce((acc, album) => {
+        acc[album.lastfm_url] = album;
         return acc;
     }, {}));
 
-    // retrieve web album data...
-    let webdata = require('../components/music/reviews_web_data.json');
-
     // merge local & web album ata...
-    const merged_data = webdata.map(album => ({...album, ...mapped_by_id[album.lastFmUrl]}))
+    const merged_data = web_data.map(album => ({...album, ...mapped_by_id[album.lastfm_url]}))
 
     // add new attributes...
     Object.entries(merged_data).forEach(([k,v]) => {
@@ -124,13 +129,13 @@ const merge_albums_local_and_web_data = (init_state) => {
         let review_id_of_next_album = "";
         let review_id_of_prev_album = "";
         if (next_album !== undefined) {
-            review_id_of_next_album = getAlbumReviewId(next_album.artistName, next_album.albumName);
+            review_id_of_next_album = get_album_review_id(next_album.artist_name, next_album.album_name);
         }
         if (prev_album !== undefined) {
-            review_id_of_prev_album = getAlbumReviewId(prev_album.artistName, prev_album.albumName)
+            review_id_of_prev_album = get_album_review_id(prev_album.artist_name, prev_album.album_name)
         }
-        v["reviewIdOfNextAlbum"] = review_id_of_next_album;
-        v["reviewIdOfPrevAlbum"] = review_id_of_prev_album;
+        v["review_id_of_next_album"] = review_id_of_next_album;
+        v["review_id_of_prev_album"] = review_id_of_prev_album;
 
         // create proper array from the 'list' of genres (each genre is seperated by a semi colon (copying the genres from Musicbee, rather than rewritting each one manually enclosed in quotations))
         if (v["genres"]) {

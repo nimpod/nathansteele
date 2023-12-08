@@ -9,7 +9,7 @@ import { NavLink, withRouter, Link } from 'react-router-dom';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as PlusIcon } from "../../icons/plus.svg";
 import { ReactComponent as CrossIcon } from "../../icons/cross.svg";
-import { getValueOfCSSVariable, getFilmReviewId } from '../../js/helpers.js';
+import { get_value_of_CSS_variable, get_film_review_id } from '../../js/helpers.js';
 import PosterImage from './PosterImage.js';
 
 

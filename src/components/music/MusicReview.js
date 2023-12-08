@@ -10,7 +10,7 @@ import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
 
 import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";
 import { ReactComponent as Calendar } from "../../icons/calendar.svg";
-import { getRandomRGBA, getAlbumReviewId } from '../../js/helpers.js';
+import { get_random_RGBA, get_album_review_id } from '../../js/helpers.js';
 
 
 class MusicReview extends React.Component {
@@ -19,46 +19,46 @@ class MusicReview extends React.Component {
      * The Render() function, content rendered to screen...
      */
     render() {
-        /// console.log(this.props.albumData);
+        /// console.log(this.props.album_data);
         
         let tracks = [];
         let genres = [];
         let themes = [];
-        let customAlbumCoverUrl = "";
-        let reviewIdOfNextAlbum = "";
-        let reviewIdOfPrevAlbum = "";
+        let custom_album_cover_url = "";
+        let review_id_of_next_album = "";
+        let review_id_of_prev_album = "";
 
-        console.log(this.props.albumData.tracks);
+        console.log(this.props.album_data.tracks);
 
-        if (this.props.albumData.tracks !== undefined) {
-            tracks = this.props.albumData.tracks;
+        if (this.props.album_data.tracks !== undefined) {
+            tracks = this.props.album_data.tracks;
         }
 
         // get genres list if it exists...
-        if (this.props.albumData.genres !== undefined) {
-            genres = this.props.albumData.genres;
+        if (this.props.album_data.genres !== undefined) {
+            genres = this.props.album_data.genres;
         }
         
         // get themes list if it exists...
-        if (this.props.albumData.themes !== undefined) {
-            themes = this.props.albumData.themes;
+        if (this.props.album_data.themes !== undefined) {
+            themes = this.props.album_data.themes;
         }
 
         // use custom poster url if it exists...
-        if (this.props.albumData.customCoverUrl !== undefined) {
-            customAlbumCoverUrl = this.props.albumData.customCoverUrl;
+        if (this.props.album_data.custom_cover_url !== undefined) {
+            custom_album_cover_url = this.props.album_data.custom_cover_url;
         }
         // use default posterUrl if I didnt specify one...
-        if (this.props.albumData.customCoverUrl == undefined) {
-            customAlbumCoverUrl = this.props.albumData.albumCoverUrl;
+        if (this.props.album_data.custom_cover_url == undefined) {
+            custom_album_cover_url = this.props.album_data.album_cover_url;
         }
 
         // id of next/previous films...
-        if (this.props.albumData.reviewIdOfNextAlbum !== undefined) {
-            reviewIdOfNextAlbum = this.props.albumData.reviewIdOfNextAlbum;
+        if (this.props.album_data.review_id_of_next_album !== undefined) {
+            review_id_of_next_album = this.props.album_data.review_id_of_next_album;
         }
-        if (this.props.albumData.reviewIdOfPrevAlbum !== undefined) {
-            reviewIdOfPrevAlbum = this.props.albumData.reviewIdOfPrevAlbum;
+        if (this.props.album_data.review_id_of_prev_album !== undefined) {
+            review_id_of_prev_album = this.props.album_data.review_id_of_prev_album;
         }
 
         return(
@@ -73,15 +73,15 @@ class MusicReview extends React.Component {
                             </Link>
                             
                             {/* Arist name */}
-                            <span className='artist-name'>{this.props.albumData.artistName}</span>
+                            <span className='artist-name'>{this.props.album_data.artist_name}</span>
                             
                             {/* Album name */}
-                            <span className='album-name'>{this.props.albumData.albumName}</span>
+                            <span className='album-name'>{this.props.album_data.album_name}</span>
                             
                             {/* Year of release */}
                             <div className='year-of-release'>
                                 {/* <p>year</p> */}
-                                <span>{this.props.albumData.yearOfRelease}</span>
+                                <span>{this.props.album_data.year_of_release}</span>
                             </div>
 
                             {/* List of genres */}
@@ -107,24 +107,24 @@ class MusicReview extends React.Component {
                             {/* Links */}
                             <div className='links' title="Links">
                                 {/* <p>links</p> */}
-                                <a className='album-lastfm-link' href={this.props.albumData.lastFmUrl} target='_blank'>LastFM</a>
-                                <a className='album-rym-link' href={this.props.albumData.rymUrl} target='_blank'>RYM</a>
+                                <a className='album-lastfm-link' href={this.props.album_data.lastfm_url} target='_blank'>LastFM</a>
+                                <a className='album-rym-link' href={this.props.album_data.rym_url} target='_blank'>RYM</a>
                             </div>
                             
                             <div className='album-dataContainer'>
                                 {/* My rating */}
                                 <div className='my-rating'>
-                                    <span>{this.props.albumData.myRating}</span>
+                                    <span>{this.props.album_data.my_rating}</span>
                                 </div>
                                 
                                 {/* My pos */}
                                 <div className='my-pos'>
-                                    <span>{this.props.albumData.positionStr}</span>
+                                    <span>{this.props.album_data.position_str}</span>
                                 </div>
                             </div>
 
                             {/* Album cover */}
-                            <img className='album-cover' src={customAlbumCoverUrl} alt="album cover">
+                            <img className='album-cover' src={custom_album_cover_url} alt="album cover">
 
                             </img>
 
@@ -142,19 +142,19 @@ class MusicReview extends React.Component {
 
                         {/* Prev review link */}
                         <div className='prev-review-link' title="Click to go to previous album in toplist">
-                            <Link to={'/music/' + reviewIdOfPrevAlbum}>
+                            <Link to={'/music/' + review_id_of_prev_album}>
                                 <p>&lt;</p>
                             </Link>
                         </div>
 
                         {/* The actual review content!! */}
-                        <div className='review-content-container' dangerouslySetInnerHTML={{__html: this.props.albumData.myReview}}>
+                        <div className='review-content-container' dangerouslySetInnerHTML={{__html: this.props.album_data.my_review}}>
                             
                         </div>
                         
                         {/* Next review link */}
                         <div className='next-review-link' title="Click to go to next album in toplist">
-                            <Link to={'/music/' + reviewIdOfNextAlbum}>
+                            <Link to={'/music/' + review_id_of_next_album}>
                                 <p>&gt;</p>
                             </Link>
                         </div>
@@ -173,7 +173,7 @@ const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.album_id;     // the id of the review being displayed in the UI
 
     return {
-        albumData: state.albumReviews.find(album => album.reviewId === id),
+        album_data: state.top_albums.find(album => album.review_id === id),
     }
 }
 

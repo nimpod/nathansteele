@@ -6,38 +6,38 @@ import { ReactComponent as ToplistRatingIcon } from "../../icons/toplistRating.s
 
 class AlbumGridElement extends Component {
     render() {
-        let albumCoverUrl = ""
+        let album_cover_url = ""
         // console.log(this.props.album);
 
         // use custom album cover url if it exists...
-        if (this.props.album.customCoverUrl !== undefined) {
-            albumCoverUrl = this.props.album.customCoverUrl;
+        if (this.props.album.custom_cover_url !== undefined) {
+            album_cover_url = this.props.album.custom_cover_url;
         }
         // use default posterUrl if I didnt specify one...
-        if (this.props.album.customCoverUrl === undefined) {
-            albumCoverUrl = this.props.album.albumCoverUrl;
+        if (this.props.album.custom_cover_url === undefined) {
+            album_cover_url = this.props.album.album_cover_url;
         }
         
         // console.log(this.props);
         return(
-            <Link to={'/music/' + this.props.album.reviewId}>
+            <Link to={'/music/' + this.props.album.review_id}>
                 <div className='albumInfoContainer'>
-                    <img className='albumCover' src={albumCoverUrl} alt="Album cover"></img>
+                    <img className='albumCover' src={album_cover_url} alt="Album cover"></img>
                     <div className='albumInfo'>
                         <div className='artistName'>
-                            <p>{this.props.album.artistName}</p>
+                            <p>{this.props.album.artist_name}</p>
                         </div>
                         <div className='albumName'>
-                            <p>{this.props.album.albumName}</p>
+                            <p>{this.props.album.album_name}</p>
                         </div>
                     </div>
                     <div className='pos dataInCircle'>
                         <ToplistPosIcon className="invertable-icon" />
-                        <p>{this.props.album.positionStr}</p>
+                        <p>{this.props.album.position_str}</p>
                     </div>
                     <div className='myRating dataInCircle'>
                         <ToplistRatingIcon className="invertable-icon" />
-                        <p>{this.props.album.myRating}</p>
+                        <p>{this.props.album.my_rating}</p>
                     </div>
                 </div>
             </Link>

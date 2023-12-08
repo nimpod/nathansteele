@@ -2,30 +2,30 @@ import React, {Component} from 'react'
 import { withRouter, Link } from 'react-router-dom';
 
 import Particles from 'react-particles-js';
-import { getValueOfCSSVariable } from '../../js/helpers';
+import { get_value_of_CSS_variable } from '../../js/helpers';
 
 
 /* particlesjs variables (defined in css) */
-const PARTICLE_COUNT = getValueOfCSSVariable('--particle-count');
-const PARTICLE_DENSITY = getValueOfCSSVariable('--particle-density');
-const PARTICLE_OPACITY = getValueOfCSSVariable('--particle-opacity');
-const PARTICLE_SIZE = getValueOfCSSVariable('--particle-size');
-const PARTICLE_SPEED = getValueOfCSSVariable('--particle-speed');
-const PARTICLE_COLOUR_1 = getValueOfCSSVariable('--particle-color-1');
-const PARTICLE_COLOUR_2 = getValueOfCSSVariable('--particle-color-2');
-const PARTICLE_COLOUR_3 = getValueOfCSSVariable('--particle-color-3');
-const PARTICLE_COLOUR_4 = getValueOfCSSVariable('--particle-color-4');
-const PARTICLE_LINE_COLOUR = getValueOfCSSVariable('--particle-line-color');
-const LINE_COUNT = getValueOfCSSVariable('--line-count');
-const LINE_OPACITY = getValueOfCSSVariable('--line-opacity');
-const LINE_WIDTH = getValueOfCSSVariable('--line-width');
-const LINKED_LINE_OPACITY = getValueOfCSSVariable('--linked-line-opacity');
-const LINKED_LINE_RADIUS = getValueOfCSSVariable('--linked-line-radius')
-const PARTICLES_TO_SPAWN_ON_PUSH = getValueOfCSSVariable('--num-of-particles-to-spawn-on-push');
+const PARTICLE_COUNT = get_value_of_CSS_variable('--particle-count');
+const PARTICLE_DENSITY = get_value_of_CSS_variable('--particle-density');
+const PARTICLE_OPACITY = get_value_of_CSS_variable('--particle-opacity');
+const PARTICLE_SIZE = get_value_of_CSS_variable('--particle-size');
+const PARTICLE_SPEED = get_value_of_CSS_variable('--particle-speed');
+const PARTICLE_COLOUR_1 = get_value_of_CSS_variable('--particle-color-1');
+const PARTICLE_COLOUR_2 = get_value_of_CSS_variable('--particle-color-2');
+const PARTICLE_COLOUR_3 = get_value_of_CSS_variable('--particle-color-3');
+const PARTICLE_COLOUR_4 = get_value_of_CSS_variable('--particle-color-4');
+const PARTICLE_LINE_COLOUR = get_value_of_CSS_variable('--particle-line-color');
+const LINE_COUNT = get_value_of_CSS_variable('--line-count');
+const LINE_OPACITY = get_value_of_CSS_variable('--line-opacity');
+const LINE_WIDTH = get_value_of_CSS_variable('--line-width');
+const LINKED_LINE_OPACITY = get_value_of_CSS_variable('--linked-line-opacity');
+const LINKED_LINE_RADIUS = get_value_of_CSS_variable('--linked-line-radius')
+const PARTICLES_TO_SPAWN_ON_PUSH = get_value_of_CSS_variable('--num-of-particles-to-spawn-on-push');
 const PARTICLE_DIRECTION = "none";   /* "none", "bottom", "right", "left" */
 const PARTICLE_TYPE = "circle";  /* "circle", "square", "triangle", "polygon" */
-const PARTICLE_ANIMATION_SPEED = getValueOfCSSVariable('--particle-animation-speed');
-const PARTICLE_OPACITY_MIN = getValueOfCSSVariable('--particle-opacity-min');
+const PARTICLE_ANIMATION_SPEED = get_value_of_CSS_variable('--particle-animation-speed');
+const PARTICLE_OPACITY_MIN = get_value_of_CSS_variable('--particle-opacity-min');
 
 /*
     What do the custom attributes on Link mean? Those enable react-scroll animations. Do not fear future traveller, I am here to help you:

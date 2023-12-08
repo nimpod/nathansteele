@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import { getBlogPostId } from '../../js/helpers.js';
+import { get_blog_post_id } from '../../js/helpers.js';
 
 class BlogPostList extends Component {
 
@@ -10,7 +10,7 @@ class BlogPostList extends Component {
         return(
             this.props.filteredPosts.map((p => {
                 // reconstruct review id from title
-                let postId = getBlogPostId(p.title)
+                let postId = get_blog_post_id(p.title)
                 return (
                     <tr key={p.id} data-filter='visible'>
                         <Link to={'/blog/' + postId}>

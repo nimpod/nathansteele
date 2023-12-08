@@ -10,7 +10,7 @@ import { post as TritonPost } from '../websiteContent/blog/triton/post';
 import { post as MessiahsHandbookPost } from '../websiteContent/blog/messiahs_handbook/post';
 
 
-export const blogPosts = [
+export const blog_posts = [
     {
         id: "1",
         date: "27 Apr 2017",

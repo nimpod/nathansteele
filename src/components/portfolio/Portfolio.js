@@ -12,25 +12,25 @@ import ProjectImageFitbitDataAnalysis from '../../img/project-card-backgrounds/f
 import ProjectImageSpaceInvaders from '../../img/project-card-backgrounds/spaceinvaders.png';
 import ProjectImageWebDevUniProject from '../../img/project-card-backgrounds/web-dev-thumbnail.PNG';
 import ProjectImagePong from '../../img/project-card-backgrounds/casiobasic.png';
-import { getValueOfCSSVariable } from '../../js/helpers';
+import { get_value_of_CSS_variable } from '../../js/helpers';
 
 
 /* particlesjs variables (defined in css) */
-const PARTICLE_COUNT = getValueOfCSSVariable('--particle-count');
-const PARTICLE_DENSITY = getValueOfCSSVariable('--particle-density');
-const PARTICLE_OPACITY = getValueOfCSSVariable('--particle-opacity');
-const PARTICLE_SIZE = getValueOfCSSVariable('--particle-size');
-const PARTICLE_SPEED = getValueOfCSSVariable('--particle-speed');
-const PARTICLE_COLOUR_1 = getValueOfCSSVariable('--particle-color-1');
-const PARTICLE_COLOUR_2 = getValueOfCSSVariable('--particle-color-2');
-const PARTICLE_COLOUR_3 = getValueOfCSSVariable('--particle-color-3');
-const PARTICLE_COLOUR_4 = getValueOfCSSVariable('--particle-color-4');
-const PARTICLE_LINE_COLOUR = getValueOfCSSVariable('--particle-line-color');
-const LINE_COUNT = getValueOfCSSVariable('--line-count');
-const LINE_OPACITY = getValueOfCSSVariable('--line-opacity');
-const LINE_WIDTH = getValueOfCSSVariable('--line-width');
-const LINKED_LINE_OPACITY = getValueOfCSSVariable('--linked-line-opacity');
-const LINKED_LINE_RADIUS = getValueOfCSSVariable('--linked-line-radius')
+const PARTICLE_COUNT = get_value_of_CSS_variable('--particle-count');
+const PARTICLE_DENSITY = get_value_of_CSS_variable('--particle-density');
+const PARTICLE_OPACITY = get_value_of_CSS_variable('--particle-opacity');
+const PARTICLE_SIZE = get_value_of_CSS_variable('--particle-size');
+const PARTICLE_SPEED = get_value_of_CSS_variable('--particle-speed');
+const PARTICLE_COLOUR_1 = get_value_of_CSS_variable('--particle-color-1');
+const PARTICLE_COLOUR_2 = get_value_of_CSS_variable('--particle-color-2');
+const PARTICLE_COLOUR_3 = get_value_of_CSS_variable('--particle-color-3');
+const PARTICLE_COLOUR_4 = get_value_of_CSS_variable('--particle-color-4');
+const PARTICLE_LINE_COLOUR = get_value_of_CSS_variable('--particle-line-color');
+const LINE_COUNT = get_value_of_CSS_variable('--line-count');
+const LINE_OPACITY = get_value_of_CSS_variable('--line-opacity');
+const LINE_WIDTH = get_value_of_CSS_variable('--line-width');
+const LINKED_LINE_OPACITY = get_value_of_CSS_variable('--linked-line-opacity');
+const LINKED_LINE_RADIUS = get_value_of_CSS_variable('--linked-line-radius')
 const PARTICLES_TO_SPAWN_ON_PUSH = 30;
 const PARTICLE_DIRECTION = "none";   /* "none", "bottom", "right", "left" */
 const PARTICLE_TYPE = "circle";  /* "circle", "square", "triangle", "polygon" */

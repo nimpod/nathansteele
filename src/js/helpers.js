@@ -6,7 +6,7 @@
  * @param  {[str]} variable_name [Name of the CSS variable]
  * @return {[type]}     [Value of the CSS variable]
  */
-export function getValueOfCSSVariable(variable_name) {
+export function get_value_of_CSS_variable(variable_name) {
     return window.getComputedStyle(document.documentElement).getPropertyValue(variable_name);
 }
 
@@ -16,7 +16,7 @@ export function getValueOfCSSVariable(variable_name) {
  * @param {*} title 
  * @returns 
  */
-export function removeSpecialCharacters(title) {
+export function remove_special_characters(title) {
     return title.replaceAll('.', '')
         .replaceAll(' ', '')
         .replaceAll("\\", "")
@@ -42,8 +42,8 @@ export function removeSpecialCharacters(title) {
  * @param {*} strToEdit 
  * @returns 
  */
-export function removeSpecialCharactersForMusicbeeExport(strToEdit) {
-    return strToEdit.replaceAll(" ", "_")
+export function remove_special_characters_for_musicbee_export(str_to_edit) {
+    return str_to_edit.replaceAll(" ", "_")
                     .replaceAll(".", "")
                     .replaceAll("/", "")
                     .replaceAll("(", "")
@@ -66,7 +66,7 @@ export function removeSpecialCharactersForMusicbeeExport(strToEdit) {
                     .replaceAll("¤", "")
                     .replaceAll("ã", "a")
                     .replaceAll("¸", "")
-                    .toLowerCase()
+                    .toLowerCase();
 }
 
 
@@ -76,9 +76,9 @@ export function removeSpecialCharactersForMusicbeeExport(strToEdit) {
  * @param {*} letterboxdUrl 
  * @returns 
  */
-export function getFilmReviewId(title, letterboxdUrl) {
+export function get_film_review_id(title, letterboxdUrl) {
     // format title...
-    let newTitle = removeSpecialCharacters(title);
+    let newTitle = remove_special_characters(title);
 
     // get id from URL
     let letterboxdId = letterboxdUrl.split('/').pop()
@@ -95,9 +95,9 @@ export function getFilmReviewId(title, letterboxdUrl) {
  * @param {*} yearOfRelease 
  * @returns 
  */
-export function getAlbumReviewId(artistName, albumName) {
-    let artistNameV2 = removeSpecialCharactersForMusicbeeExport(artistName);
-    let albumNameV2 = removeSpecialCharactersForMusicbeeExport(albumName);
+export function get_album_review_id(artistName, albumName) {
+    let artistNameV2 = remove_special_characters_for_musicbee_export(artistName);
+    let albumNameV2 = remove_special_characters_for_musicbee_export(albumName);
     return artistNameV2 + '-' + albumNameV2;
 }
 
@@ -106,7 +106,7 @@ export function getAlbumReviewId(artistName, albumName) {
  * @param {*} title 
  * @returns 
  */
-export function getBlogPostId(title) {
+export function get_blog_post_id(title) {
     // format the title...
     let newTitle = title.replaceAll(' ', '_')
         .replaceAll("\'", '')
@@ -124,43 +124,51 @@ export function getBlogPostId(title) {
  * @param {*} elementClicked 
  * @returns 
  */
-export function getActualButton(elementClicked, tagName) {
-    let actualButton = NaN;
-    if (tagName === "svg") {
+export function get_actual_button(element_clicked, tag_name) {
+    let actual_button = NaN;
+    if (tag_name === "svg") {
         // user clicked on svg, bit fucking annoying
-        actualButton = elementClicked.parentElement;
-    } else if (tagName === "path") {
+        actual_button = element_clicked.parentElement;
+    } else if (tag_name === "path") {
         // user clicked on path inside svg, bit fucking annoying
-        actualButton = elementClicked.parentElement.parentElement;
+        actual_button = element_clicked.parentElement.parentElement;
     } else {
         // user clicked on button, well done
-        actualButton = elementClicked;
+        actual_button = element_clicked;
     }
-    return actualButton;
+    return actual_button;
 }
 
 /**
  * 
- * @param {*} imdbDiffScore 
+ * @param {*} IMDB_diff_score 
  * @returns 
  */
-export function generateImdbDiffScoreStuff(imdbDiffScore) {
-    let diffScoreStr = "";
-    let diffScoreClassname = "";
-    if (imdbDiffScore > 0) {
-        diffScoreStr = "+" + imdbDiffScore;
-        diffScoreClassname = "positive-diff";
-    } else if (imdbDiffScore < 0) {
-        diffScoreStr = imdbDiffScore;
-        diffScoreClassname = "negative-diff";
-    } else if (imdbDiffScore === 0) {
-        diffScoreStr = imdbDiffScore;
-        diffScoreClassname = "equal-diff";
+export function generate_IMDB_diff_score(IMDB_diff_score) {
+    let diff_score_str = "";
+    let diff_score_str_classname = "";
+
+    // Positive diff score...
+    if (IMDB_diff_score > 0) {
+        diff_score_str = "+" + IMDB_diff_score;
+        diff_score_str_classname = "positive-diff";
+    }
+    
+    // Negative diff score...
+    else if (IMDB_diff_score < 0) {
+        diff_score_str = IMDB_diff_score;
+        diff_score_str_classname = "negative-diff";
+    } 
+    
+    // My rating and IMDB rating are exactly the same...
+    else if (IMDB_diff_score === 0) {
+        diff_score_str = IMDB_diff_score;
+        diff_score_str_classname = "equal-diff";
     }
 
     return {
-        "diffScoreStr": diffScoreStr, 
-        "diffScoreClassname": diffScoreClassname
+        "diff_score_str": diff_score_str, 
+        "diff_score_str_classname": diff_score_str_classname
     };
 }
 
@@ -169,16 +177,20 @@ export function generateImdbDiffScoreStuff(imdbDiffScore) {
  * @param {*} filmData 
  * @returns 
  */
-export function overrideFilmPosterUrl(filmData) {
-    let posterUrl = ""
-    if (filmData.customPosterUrl !== undefined) {
-        posterUrl = filmData.customPosterUrl;
+export function override_film_poster_url(film_data) {
+    let poster_url = ""
+
+    // use custom poster....
+    if (film_data.custom_poster_url !== undefined) {
+        poster_url = film_data.custom_poster_url;
     }
-    // use default posterUrl if I didnt specify one...
-    if (filmData.customPosterUrl === undefined) {
-        posterUrl = filmData.posterUrl;
+
+    // use default poster if I didnt specify one...
+    if (film_data.custom_poster_url === undefined) {
+        poster_url = film_data.poster_url;
     }
-    return posterUrl;
+
+    return poster_url;
 }
 
 /**
@@ -186,13 +198,19 @@ export function overrideFilmPosterUrl(filmData) {
  * @param {*} filmData 
  * @returns 
  */
-export function overrideFilmTitle(filmData) {
+export function override_film_title(film_data) {
     let title = ""
-    if (filmData.titleDisplayed !== undefined) {
-        title = filmData.titleDisplayed;
-    } else {
-        title = filmData.title;
+    
+    // use custom title...
+    if (film_data.title_displayed !== undefined) {
+        title = film_data.title_displayed;
     }
+    
+    // otherwise use default title...
+    else {
+        title = film_data.title;
+    }
+
     return title;
 }
 
@@ -201,18 +219,18 @@ export function overrideFilmTitle(filmData) {
  * @param {*} filterdData 
  * @returns 
  */
-export function getListOfPosterUrls(filterdData) {
-    let posterUrls = [];
+export function get_list_of_poster_urls(filterd_data) {
+    let poster_urls = [];
 
-    Object.entries(filterdData).forEach(([k,v]) => {
-        if (v["customPosterUrl"] !== undefined) {
-            posterUrls.push(v["customPosterUrl"]);
+    Object.entries(filterd_data).forEach(([k,v]) => {
+        if (v["custom_poster_url"] !== undefined) {
+            poster_urls.push(v["custom_poster_url"]);
         } else {
-            posterUrls.push(v["posterUrl"]);
+            poster_urls.push(v["poster_url"]);
         }
     })
 
-    return posterUrls;
+    return poster_urls;
 }
 
 /**
@@ -243,11 +261,11 @@ export function* zip(arrays) {
 // #region ------------------< Remove dupliactes from a list functions >------------------
 
 /**
- * [Remove duplicate values from array]
+ * Remove duplicate values from array
  * @param {Array to investigate} arr 
  * @returns New array
  */
-export function removeDuplicatesFromArray(arr) {
+export function remove_duplicates_from_array(arr) {
     return Array.from(new Set(arr));
 }
 
@@ -255,63 +273,70 @@ export function removeDuplicatesFromArray(arr) {
  * Get set of genres (set meaning there should be no duplicates)
  * @returns 
  */
-export function removeGenreDuplicates(filmsList, defaultGenre) {
-    const uniqueGenres = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+export function remove_genre_duplicates(films_list, default_genre) {
+    const unique_genres = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
 
     // store each genre once...
-    filmsList.map((film => {
+    films_list.map((film => {
         film.genres.map((g => {
-            uniqueGenres.add(g);
+            unique_genres.add(g);
         }));
     }));
 
     // sort the set alphabetically, cause why not.
-    const uniqueGenresSorted = Array.from(uniqueGenres).sort();
+    const unique_genres_sorted = Array.from(unique_genres).sort();
 
     // add default...
-    uniqueGenresSorted.unshift(defaultGenre);
+    unique_genres_sorted.unshift(default_genre);
 
-    return uniqueGenresSorted;
+    return unique_genres_sorted;
 }
 
 /**
  * Get set of languages (set meaning there should be no duplicates)
  * @returns 
  */
-export function removeLanguageDuplicates(filmsList, defaultLanguage) {
-    const uniqueLanguages = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+export function remove_language_duplicates(films_list, default_language) {
+    const unique_languages = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
 
     // store each language once...
-    filmsList.map((film => {
-        uniqueLanguages.add(film.language);
+    films_list.map((film => {
+        unique_languages.add(film.language);
     }));
 
     // sort the set alphabetically, cause why not.
-    const uniqueLanguagesSorted = Array.from(uniqueLanguages).sort();
+    const unique_languages_sorted = Array.from(unique_languages).sort();
 
     // add default...
-    uniqueLanguagesSorted.unshift(defaultLanguage);
+    unique_languages_sorted.unshift(default_language);
     
-    return uniqueLanguagesSorted;
+    return unique_languages_sorted;
 }
 
-export function getListOfTagCategories(postsList, defaultTag) {
-    const uniqueTags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+/**
+ * Get list of tag categories
+ * @param {*} posts_list 
+ * @param {*} default_tag 
+ * @returns 
+ */
+export function get_list_of_tag_categories(posts_list, default_tag) {
+    const unique_tags = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
     
     // add default tag...
-    uniqueTags.add(defaultTag);
+    unique_tags.add(default_tag);
 
     // store each tag category once...
-    postsList.map((p => {
+    posts_list.map((p => {
         // console.log('DEBUGGING: ', p.tags);
         p.tags.map((t => {
-            uniqueTags.add(t);
+            unique_tags.add(t);
         }));
     }));
 
     // sort the set of tags alphabetically, cause why not.
-    const uniqueTagsSorted = Array.from(uniqueTags).sort();
-    return uniqueTagsSorted;
+    const unique_tags_sorted = Array.from(unique_tags).sort();
+
+    return unique_tags_sorted;
     /*
     this.setState({tagCategories:
         arrayOfTags.map(tag => {
@@ -340,7 +365,7 @@ export function getListOfTagCategories(postsList, defaultTag) {
  * @param {[float]} opacity [specify an opacity/transparency for the colour (0.0=invisible, 1.0=opaque, 0.5=somewhere in between)]
  * @returns [rgba value]
  */
-export function getRandomRGBA(opacity) {
+export function get_random_RGBA(opacity) {
     var o = Math.round;
     var r = Math.random;
     var s = 255;
@@ -355,14 +380,14 @@ export function getRandomRGBA(opacity) {
  * @param {*} mouseEvent 
  * @param {*} classNameToRemove
  */
-export function removeClassFromItemWhenUserClicksOutsideOfItem(itemToRemoveClassFrom, itemClickedBefore, mouseEvent, classNameToRemove) {
+export function remove_class_from_item_when_user_clicks_outside_of_item(item_to_remove_class_from, item_clicked_before, mouseEvent, classname_to_remove) {
     window.addEventListener('click', function(mouseEvent) {   
-        if (itemClickedBefore.contains(mouseEvent.target)) {
-            // clicked itemClickedBefore (e.g. button)
+        if (item_clicked_before.contains(mouseEvent.target)) {
+            // clicked item_clicked_before (e.g. button)
         } else {
             // otherwise we must of clicked outside the itemToRemoveClassFrom
             console.log('Clicked outside input box...')
-            itemToRemoveClassFrom.classList.remove(classNameToRemove);
+            item_to_remove_class_from.classList.remove(classname_to_remove);
         }
     });
 }

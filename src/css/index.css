@@ -104,6 +104,8 @@
   --text: rgb(128, 128, 128);
   --text-slightly-darker: rgb(185, 196, 208);
   --text-darker: rgb(68, 68, 68);
+  --text-much-darker: rgb(38, 37, 37);
+
   --text-in-container: rgb(5, 5, 5);
   --intro-text: rgb(33, 37, 41);
   --text-hyperlink: rgb(0, 123, 255);
@@ -316,6 +318,8 @@
   --text: rgb(240, 240, 240);
   --text-slightly-darker: rgb(206, 211, 218);
   --text-darker: rgb(169, 169, 169);
+  --text-much-darker: rgb(112, 112, 112);
+
   --text-in-container: var(--text);
   --intro-text: rgb(192, 192, 196);
   --text-hyperlink: rgb(11, 190, 255);
@@ -2972,38 +2976,228 @@ div.btn.films-reset-filters-btn svg {
   --album-cover-border-radius: 0.5rem;
 }
 
-/* The actual toplist */
-.top-music-list {
+#music-page .section-inner {
+  padding: 30px;
+}
+
+.music-page-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.custom-card {
+}
+
+.custom-card .card-divider {
+  border: 1px solid rgba(51, 51, 55, 0.816);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.custom-card .card-title {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-slightly-darker);
+}
+
+.custom-card .card-title .more-info {
+  color: var(--text-much-darker);
+  font-size: 0.65rem;
+}
+
+/* #region ------------< Top Tracks List >------------ */
+
+.top-tracks-list-container .btns {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.top-tracks-list-container .btns .filter-btn {
+  margin-right: 10px;
+  background-color: #1c1c1e;
+  padding: 3px 10px;
+  font-size: 0.9rem;
+  border-radius: 7px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  user-select: none;
+}
+.top-tracks-list-container .btns .filter-btn:active {
+  border: 3px solid rgba(255, 239, 68, 0.202);
+}
+.top-tracks-list-container .dropdown-list-btn > svg {
+
+}
+
+/* Top tracks list container */
+.top-tracks-list-container {
+  border-radius: 10px;
+  background-color: rgb(32, 37, 43);
+  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.411);
+  color: var(--text);
+  height: fit-content;
+}
+
+/* The list is scrollable... */
+.top-tracks-list {
+  height: 87vh;
+  overflow-y: auto;
+}
+
+/* column names */
+.top-tracks-list-columnNames {
+  display: flex;
+  flex-direction: row;
+  color: var(--text-much-darker);
+  /*
+    padding-bottom: 10px;
+  box-shadow: 0 10px 20px 2px rgba(15, 15, 15, 0.216);
+  */
+}
+.play-count-th {
+  margin-left: auto;
+}
+
+.col {
+  flex: 1;        /* distributes space on the line equally among items */
+}
+
+/* an individual track */
+.track-container {
+  display: grid;
+  grid-template-columns: 10% 70% 20%;
+  align-items: center;
+  padding: 5px 0;
+  justify-content: space-between;
+  user-select: none;
+}
+.track-container:hover {
+  cursor: pointer;
+  background-color: rgb(42, 48, 56);
+}
+
+
+/* Track info */
+.track-container > .track-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+/* album cover */
+.track-container > .track-info > .album-cover {
+  margin-right: 6px;
+}
+
+
+/* Artist name & track name */
+.track-container .artist-and-track-name-container {
+  display: flex;
+  flex-direction: column;
+}
+.track-container .artist-and-track-name-container > .track-name,
+.track-container .artist-and-track-name-container > .artist-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+/* artist name */
+.track-container .artist-and-track-name-container > .artist-name,
+.track-container .position {
+  color: var(--text-slightly-darker);
+}
+
+/* track name */
+.track-container .artist-and-track-name-container > .track-name {
+  color: var(--text-much-darker);
+  font-size: 0.75rem;
+}
+
+
+/* play count */
+.play-count {
+  margin-left: 16px;
+  background-color: #98d80d;
+  color: black;
+  border-radius: 4px;
+  padding: 0 4px !important;
+  width: fit-content !important;
+  font-weight: bold;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* scrollbar */
+.top-tracks-list::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.top-tracks-list::-webkit-scrollbar{
+	width: 10px;
+  background: var(--scrollbar-notclickybit-bg-color);
+}
+.top-tracks-list::-webkit-scrollbar-thumb{
+  background: var(--scrollbar-clickybit-bg-color);
+  -webkit-border-radius: 2rem;
+  -webkit-box-shadow: 0px 1px 2px rgba(254, 227, 227, 0.942);
+}
+.top-tracks-list::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-clickybit-bg-color-hover);
+}
+.top-tracks-list::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-clickybit-bg-color-active);
+}
+.top-tracks-list::-webkit-scrollbar-corner {
+  background: rgb(124, 84, 84);
+}
+
+/* #endregion */
+
+/* #region ------------< Top Albums List >------------ */
+
+/* Top albums list */
+.top-albums-list-container {
+  margin-left: 30px;
+}
+
+.top-albums-list {
   display: grid;
   grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
   padding-top: 10px;
 }
 @media screen and (max-width: 1200px) {
-  .top-music-list {
+  .top-albums-list {
     padding: 50px 10px;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 1100px) {
-  .top-music-list {
+  .top-albums-list {
     padding: 50px 10px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 800px) {
-  .top-music-list {
+  .top-albums-list {
     padding: 50px 10px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 600px) {
-  .top-music-list {
+  .top-albums-list {
     padding: 50px 10px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 400px) {
-  .top-music-list {
+  .top-albums-list {
     padding: 50px 10px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -3088,6 +3282,7 @@ div.albumInfoContainer > div.myRating {
   right: 0;
   background-color: rgba(206, 181, 19, 0.897);
 }
+/* #endregion */
 
 /* #endregion */
 
@@ -3965,7 +4160,7 @@ span.theme-text {
 [data-theme="dark"] {
   --scrollbar-clickybit-bg-color: rgba(102, 106, 110, 0.92);
   --scrollbar-clickybit-bg-color-hover: rgb(134, 137, 135);
-  --scrollbar-clickybit-bg-color-active: rgb(23, 151, 87);
+  --scrollbar-clickybit-bg-color-active: rgb(228, 230, 229);
   --scrollbar-notclickybit-bg-color: var(--section-inner-bg-color);
   --scrollbar-thumb-bg-color-tags: rgb(80, 80, 80);
   --scrollbar-track-bg-color-tags: var(--blog-table-bg); /* rgb(29, 29, 29); */

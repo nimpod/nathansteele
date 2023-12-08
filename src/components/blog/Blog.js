@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect }  from 'react-redux';
 
 import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
-import { getListOfTagCategories } from '../../js/helpers';
+import { getListOfTagCategories, get_list_of_tag_categories } from '../../js/helpers';
 import BlogPostList from './BlogPostList';
 import SearchBoxTagFilterListElement from './SearchBoxTagFilterListElement';
 
@@ -364,7 +364,7 @@ class Blog extends Component {
         });
 
         // get list of unique tags (i.e. no duplicates)...
-        let uniqueTagCategories = getListOfTagCategories(this.props.posts, this.state.__tag_category_default);
+        let uniqueTagCategories = get_list_of_tag_categories(this.props.posts, this.state.__tag_category_default);
 
         // deal with the colours of searchbox...
         this.handleSearchBoxColours();

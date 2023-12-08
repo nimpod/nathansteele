@@ -4,6 +4,9 @@
 
 import React, {useState, useEffect} from 'react';
 import { withRouter } from 'react-router-dom';
+import ReactPaginate from 'react-paginate';
+import { connect }  from 'react-redux';
+
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
 import { ReactComponent as ArrowLeftIcon } from "../../icons/arrowLeft.svg";
@@ -13,11 +16,19 @@ import { ReactComponent as SortDescendingIcon } from "../../icons/sortDescending
 import { ReactComponent as ViewAsListIcon } from "../../icons/showList.svg";
 import { ReactComponent as ViewAsGridIcon } from "../../icons/showGrid.svg";
 import { ReactComponent as ResetFiltersIcon } from "../../icons/reset.svg";
-import { connect }  from 'react-redux';
-import { removeGenreDuplicates, removeLanguageDuplicates, generateImdbDiffScoreStuff, getActualButton, overrideFilmPosterUrl, getListOfPosterUrls, overrideFilmTitle, getFilmReviewId, removeClassFromItemWhenUserClicksOutsideOfItem } from '../../js/helpers.js';
 import FilmsToplistGridElement from './FilmsToplistGridElement.js';
 import FilmsToplistListElement from './FilmsToplistListElement.js';
-import ReactPaginate from 'react-paginate';
+import { 
+    remove_genre_duplicates,
+    remove_language_duplicates,
+    generate_IMDB_diff_score,
+    get_actual_button,
+    override_film_poster_url,
+    get_list_of_poster_urls,
+    override_film_title,
+    get_film_review_id,
+    remove_class_from_item_when_user_clicks_outside_of_item
+} from '../../js/helpers.js';
 
 
 let STARTING_PAGE_NUM = 0;
@@ -54,12 +65,12 @@ class Films extends React.Component {
     
     state = {
         // state representation of data that is displayed/filtered/sorted
-        __filtered_data: Array.from(this.props.filmReviewsData)
+        __filtered_data: Array.from(this.props.top_films)
             .sort((a,b) => { return a['position'] - b['position'] })
             .reverse(),
 
         // state representation of number of pages
-        __totalNumOfPages: Math.ceil(this.props.filmReviewsData.length / MAX_FILMS_PER_PAGE),
+        __totalNumOfPages: Math.ceil(this.props.top_films.length / MAX_FILMS_PER_PAGE),
 
         // state representation of page number the user is currently on
         __currentPageNum: STARTING_PAGE_NUM,
@@ -121,7 +132,7 @@ class Films extends React.Component {
                 return {
                     __current_sort_type: type,
                     __current_sort_type_str: type,
-                    __filtered_data: Array.from(this.props.filmReviewsData)
+                    __filtered_data: Array.from(this.props.top_films)
                         .sort((a,b) => {
                             if (type == SortableType.IMDB_DIFF) {
                                 return (a["myRating"] - a["imdbAvgRating"]) - (b["myRating"] - b["imdbAvgRating"])
@@ -138,7 +149,7 @@ class Films extends React.Component {
                 return {
                     __current_sort_type: type,
                     __current_sort_type_str: type,
-                    __filtered_data: Array.from(this.props.filmReviewsData)
+                    __filtered_data: Array.from(this.props.top_films)
                         .sort((a,b) => {
                             if (type == SortableType.IMDB_DIFF) {
                                 return (a["myRating"] - a["imdbAvgRating"]) - (b["myRating"] - b["imdbAvgRating"])
@@ -259,7 +270,7 @@ class Films extends React.Component {
     sortingBtnClicked = (e) => {
         // find the actual button...
         let tagName = (e.target.tagName).toString();
-        let actualButton = getActualButton(e.target, tagName);
+        let actualButton = get_actual_button(e.target, tagName);
 
         var byTypeClassname = "films-sort-by-type-btn";
         var byOrderClassname = "films-sort-by-direction-btn";
@@ -313,8 +324,8 @@ class Films extends React.Component {
         // close collapsed menu if user clicks out of it...
         let itemToHide = dropdownList;
         window.addEventListener('click', function(mouseEvent) {
-            removeClassFromItemWhenUserClicksOutsideOfItem(itemToHide, dropdownListBtn, mouseEvent, 'visible');
-            removeClassFromItemWhenUserClicksOutsideOfItem(arrowIconInDropdownBtn, dropdownListBtn, mouseEvent, 'dropdown-list-is-visible');
+            remove_class_from_item_when_user_clicks_outside_of_item(itemToHide, dropdownListBtn, mouseEvent, 'visible');
+            remove_class_from_item_when_user_clicks_outside_of_item(arrowIconInDropdownBtn, dropdownListBtn, mouseEvent, 'dropdown-list-is-visible');
             dropdownListBtn.classList.remove('list-is-visible');
         });
         
@@ -366,7 +377,7 @@ class Films extends React.Component {
 
             this.setState(prevState => {
                 return {
-                    __filtered_data: Array.from(this.props.filmReviewsData)
+                    __filtered_data: Array.from(this.props.top_films)
                         .filter((f) => {
                             if (genreSelected == this.state.__default_genre_filter) {
                                 return true;
@@ -407,7 +418,7 @@ class Films extends React.Component {
 
             this.setState(prevState => {
                 return {
-                    __filtered_data: Array.from(this.props.filmReviewsData)
+                    __filtered_data: Array.from(this.props.top_films)
                         .filter((f) => {
                             if (languageSelected == this.state.__default_language_filter) {
                                 return true;
@@ -476,7 +487,7 @@ class Films extends React.Component {
 
         // find the actual button...
         let tagName = (e.target.tagName).toString();
-        let actualButton = getActualButton(e.target, tagName);
+        let actualButton = get_actual_button(e.target, tagName);
 
         // change view type in state and html...
         if (selectedViewType == ViewType.LIST) {
@@ -511,7 +522,7 @@ class Films extends React.Component {
                 __current_sort_order: this.state.__default_sort_order,
                 __current_genre_filter: this.state.__default_genre_filter,
                 __current_language_filter: this.state.__default_language_filter,
-                __filtered_data: Array.from(this.props.filmReviewsData).reverse(),
+                __filtered_data: Array.from(this.props.top_films).reverse(),
             }
         });
 
@@ -542,7 +553,7 @@ class Films extends React.Component {
         const lastIndex = this.state.__currentPageNum * MAX_FILMS_PER_PAGE;
 
         // get list of poster URLs to help with loading images more efficently...
-        const posterUrls = getListOfPosterUrls(this.state.__filtered_data);
+        const posterUrls = get_list_of_poster_urls(this.state.__filtered_data);
 
         // determine view type classname
         const viewTypeClassname = (this.state.__view_type == ViewType.GRID) ? "view-as-grid" : "view-as-list";
@@ -558,10 +569,10 @@ class Films extends React.Component {
             .slice(lastIndex, lastIndex + MAX_FILMS_PER_PAGE)
             .map((film, i) => {
                 // generate final data...
-                let reviewId = getFilmReviewId(film.title, film.letterboxdUrl)
-                let imdbDiff = generateImdbDiffScoreStuff(film.imdbDiffScore);
-                let posterUrl = overrideFilmPosterUrl(film);
-                let title = overrideFilmTitle(film);
+                let reviewId = get_film_review_id(film.title, film.letterboxd_url)
+                let imdbDiff = generate_IMDB_diff_score(film.imdb_diff_score);
+                let posterUrl = override_film_poster_url(film);
+                let title = override_film_title(film);
 
                 // display as list (default) or grid
                 if (this.state.__view_type == ViewType.LIST) {
@@ -608,14 +619,14 @@ class Films extends React.Component {
         }
 
         // get no duplicate lists...
-        let genres = removeGenreDuplicates(this.props.filmReviewsData, this.state.__default_genre_filter);
-        let languages = removeLanguageDuplicates(this.props.filmReviewsData, this.state.__default_language_filter);
+        let genres = remove_genre_duplicates(this.props.top_films, this.state.__default_genre_filter);
+        let languages = remove_language_duplicates(this.props.top_films, this.state.__default_language_filter);
 
         return(
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
                     <div className='frontpage films-container'>
-                        <span className='page-title'>My top {this.props.filmReviewsData.length} favourite films of all time</span>
+                        <span className='page-title'>My top {this.props.top_films.length} favourite films of all time</span>
                         <div className='toggle-controls-btn' onClick={this.toggleControls}>
                             <ControlsIcon className='invertable-icon' />
                         </div>
@@ -699,7 +710,7 @@ class Films extends React.Component {
                                                         {g}
                                                     </span>
                                                     <span className='genre-count'>
-                                                        {Array.from(this.props.filmReviewsData).filter((f) => {
+                                                        {Array.from(this.props.top_films).filter((f) => {
                                                             if (g == this.state.__default_genre_filter) {
                                                                 return Array.from(f.genres)
                                                             }
@@ -725,7 +736,7 @@ class Films extends React.Component {
                                                         {l}
                                                     </span>
                                                     <span className='language-count'>
-                                                        {Array.from(this.props.filmReviewsData).filter((f) => {
+                                                        {Array.from(this.props.top_films).filter((f) => {
                                                             if (l == this.state.__default_language_filter) {
                                                                 return f.language;
                                                             }
@@ -780,7 +791,7 @@ class Films extends React.Component {
  */
 const mapStateToProps = (state) => {
     return {
-        filmReviewsData: state.filmReviews,
+        top_films: state.top_films,
     }
 }
 

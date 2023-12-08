@@ -126,8 +126,8 @@ def regenerate_json_file():
     # filepaths used in generating json data...
     dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
     list_name = 'my-favourite-films.csv'
-    json_output_filename = 'reviews_web_data.json'
-    path_to_rootreducer = f'D:\\Programming-Projects\\nathansteele\\src\\reducers\\RootReducer.js';
+    json_output_filename = 'webdata_top_films_list.json'
+    path_to_rootreducer = f'D:\\Programming-Projects\\nathansteele\\src\\reducers\\RootReducer.js'
     path_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\films\\{json_output_filename}'
     
     # 1) find letterboxd zip export...
@@ -305,22 +305,22 @@ def regenerate_json_file():
                 
                 # append to list...
                 letterboxd_list.append({
-                    'letterboxdFilmId': letterboxd_film_id,
-                    'imdbFilmId': imdb_film_id,
-                    'letterboxdUrl': letterboxd_url,
-                    'imdbUrl': imdb_url,
-                    'posterUrl': poster_url,
                     'position': pos,
+                    'letterboxd_film_id': letterboxd_film_id,
+                    'letterboxd_url': letterboxd_url,
+                    'poster_url': poster_url,
                     'title': title,
                     'year': year,
                     'duration': duration,
                     'language': language,
-                    'imdbAvgRating': imdb_avg_rating,
-                    'imdbNumVotes': imdb_num_votes,
-                    'tmdbUrl': tmdb_url,
                     'directors': directors,
                     'genres': genres,
-                    'reviewId': review_id
+                    'IMDB_film_id': imdb_film_id,
+                    'IMDB_url': imdb_url,
+                    'IMDB_avg_rating': imdb_avg_rating,
+                    'IMDB_num_votes': imdb_num_votes,
+                    'TMDB_url': tmdb_url,
+                    'review_id': review_id
                 })
                     
             # clear json file first...
@@ -334,5 +334,5 @@ def regenerate_json_file():
 
 
 # call my functions........
-download_letterboxd_data()
+# download_letterboxd_data()
 regenerate_json_file()

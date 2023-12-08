@@ -8,7 +8,7 @@ import { ReactComponent as FilmsIcon } from "../../icons/navIconFilms.svg";
 import { ReactComponent as MusicIcon } from "../../icons/navIconMusic.svg";
 import { ReactComponent as BlogIcon } from "../../icons/navIconBlog.svg";
 import { ReactComponent as ArtIcon } from "../../icons/navIconArt.svg";
-import { removeClassFromItemWhenUserClicksOutsideOfItem } from '../../js/helpers';
+import { remove_class_from_item_when_user_clicks_outside_of_item } from '../../js/helpers';
 
 class NavbarSide extends Component {
 
@@ -49,7 +49,7 @@ class NavbarSide extends Component {
         let itemToHide = document.getElementById('nav-side');
 
         window.addEventListener('click', function(mouseEvent) {
-            removeClassFromItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent, 'active');
+            remove_class_from_item_when_user_clicks_outside_of_item(itemToHide, toggleThemeButton, mouseEvent, 'active');
         });
     }
 

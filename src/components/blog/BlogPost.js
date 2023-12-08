@@ -6,7 +6,7 @@ import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
 
 import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";
 import { ReactComponent as Calendar } from "../../icons/calendar.svg";
-import { getRandomRGBA, getBlogPostId } from '../../js/helpers.js';
+import { get_random_RGBA, get_blog_post_id } from '../../js/helpers.js';
 
 
 class BlogPost extends Component {
@@ -28,7 +28,7 @@ class BlogPost extends Component {
             let items = quotesContainer.getElementsByTagName('li')
             
             for (let i = 0; i < items.length; i++) {
-                items[i].style.backgroundColor =  getRandomRGBA(0.05);
+                items[i].style.backgroundColor =  get_random_RGBA(0.05);
             }
         }
 
@@ -124,7 +124,7 @@ const mapStateToProps = (state, ownProps) => {
     
     return {
         // post: state.posts.find(post => post.id === id)      // get the actual post data from the redux data store
-        post: state.posts.find(post => getBlogPostId(post.title) === id )
+        post: state.posts.find(post => get_blog_post_id(post.title) === id )
     }
 }
 

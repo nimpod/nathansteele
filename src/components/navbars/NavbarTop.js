@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { ReactComponent as HamburgerMenuIcon } from "../../icons/hamburgerMenu.svg";
-import { removeClassFromItemWhenUserClicksOutsideOfItem } from '../../js/helpers';
+import { remove_class_from_item_when_user_clicks_outside_of_item } from '../../js/helpers';
 
 
 class NavbarTop extends Component {
@@ -74,7 +74,7 @@ class NavbarTop extends Component {
         let itemToHide = document.getElementById('nav-side');
 
         window.addEventListener('click', function(mouseEvent) {
-            removeClassFromItemWhenUserClicksOutsideOfItem(itemToHide, toggleThemeButton, mouseEvent, 'active');
+            remove_class_from_item_when_user_clicks_outside_of_item(itemToHide, toggleThemeButton, mouseEvent, 'active');
         });
     }
 
