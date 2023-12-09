@@ -20,9 +20,9 @@ class FilmsToplistGridElement extends Component {
         __loaded_images_counter: 0
     }
 
-    updateLoading = () => {
+    update_loading = () => {
         // this.setState({__poster_has_loaded: true})
-        if (this.state.__loaded_images_counter + 1 == this.props.posterUrls.length) {
+        if (this.state.__loaded_images_counter + 1 == this.props.poster_urls.length) {
             this.setState({__is_all_loaded: true})
         }
         this.setState(prevState => prevState + 1)
@@ -33,19 +33,19 @@ class FilmsToplistGridElement extends Component {
             <div className='films-toplist-item'>
                 <Link to={'/films/' + this.props.reviewId}>
                     <PosterImage 
-                        key={this.props.posterUrl}
-                        src={this.props.posterUrl}
+                        key={this.props.poster_url}
+                        src={this.props.poster_url}
                         index={this.props.index}
                         isCurrentlyLoading={!this.state.__is_all_loaded}
-                        onLoad={this.updateLoading}
+                        onLoad={this.update_loading}
                     />
                     <div className='film-details'>
                         <p>{this.props.title}</p>
                         <div className='film-dataContainer myData'>
                             <span className='film-myPos' title='Position in my toplist'>#{this.props.film.position}</span>
-                            <span className='film-myRating' title='My rating (decimal rating out of 10.0)'>{this.props.film.myRating}</span>
-                            <span className={`film-imdbDiffScore ${this.props.diffScoreClassname}`} title='Difference between my rating and IMDb avg rating'>
-                                {this.props.diffScoreStr}
+                            <span className='film-myRating' title='My rating (decimal rating out of 10.0)'>{this.props.film.my_rating}</span>
+                            <span className={`film-imdbDiffScore ${this.props.diff_score_classname}`} title='Difference between my rating and IMDb avg rating'>
+                                {this.props.diff_score_str}
                             </span>
                         </div>
                     </div>

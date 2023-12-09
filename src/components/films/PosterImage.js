@@ -18,7 +18,7 @@ function PosterImage(props) {
             <img
                 style={props.isCurrentlyLoading ? {backgroundColor: 'black'} : {}}
                 src={props.src}
-                onLoad={props.updateLoading}
+                onLoad={props.update_loading}
                 alt="Film poster"
             />
         </picture>

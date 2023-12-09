@@ -2971,11 +2971,6 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region -----------------------------------<11: MUSIC PAGE>---------------------------------- */
 
-:root {
-  --albums-displayed-per-row: 6;
-  --album-cover-border-radius: 0.5rem;
-}
-
 #music-page .section-inner {
   padding: 30px;
 }
@@ -2986,6 +2981,9 @@ div.btn.films-reset-filters-btn svg {
 }
 
 .custom-card {
+  background-color: rgb(32, 37, 43);
+  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.411);
+  border-radius: 10px;
 }
 
 .custom-card .card-divider {
@@ -3011,6 +3009,18 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region ------------< Top Tracks List >------------ */
 
+/* Top tracks list container */
+.top-tracks-list-container {
+  color: var(--text);
+  height: fit-content;
+}
+
+/* The list is scrollable... */
+.top-tracks-list {
+  height: 80vh;
+  overflow-y: auto;
+}
+
 .top-tracks-list-container .btns {
   display: flex;
   flex-direction: row;
@@ -3029,24 +3039,6 @@ div.btn.films-reset-filters-btn svg {
 }
 .top-tracks-list-container .btns .filter-btn:active {
   border: 3px solid rgba(255, 239, 68, 0.202);
-}
-.top-tracks-list-container .dropdown-list-btn > svg {
-
-}
-
-/* Top tracks list container */
-.top-tracks-list-container {
-  border-radius: 10px;
-  background-color: rgb(32, 37, 43);
-  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.411);
-  color: var(--text);
-  height: fit-content;
-}
-
-/* The list is scrollable... */
-.top-tracks-list {
-  height: 87vh;
-  overflow-y: auto;
 }
 
 /* column names */
@@ -3162,9 +3154,15 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region ------------< Top Albums List >------------ */
 
+:root {
+  --albums-displayed-per-row: 5;
+  --album-cover-border-radius: 0.5rem;
+}
+
 /* Top albums list */
 .top-albums-list-container {
   margin-left: 30px;
+  padding: 10px 30px;
 }
 
 .top-albums-list {

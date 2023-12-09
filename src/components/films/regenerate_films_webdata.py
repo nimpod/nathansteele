@@ -87,13 +87,14 @@ def download_letterboxd_data():
     driver.get(url="https://letterboxd.com/settings/data/")
 
     # enter username & password...
-    username = driver.find_element(By.ID, "signin-username")
+    username = driver.find_element(By.ID, "field-username")
+    print(username)
     username.send_keys(Helpers.read_txt_file('../../../../blahu.txt'))
-    password = driver.find_element(By.ID, "signin-password")
+    password = driver.find_element(By.ID, "field-password")
     password.send_keys(Helpers.read_txt_file('../../../../blahp.txt'))
 
     # click sign in button
-    button_sign_in = driver.find_element(By.CSS_SELECTOR, "div.button-container > input")
+    button_sign_in = driver.find_element(By.CSS_SELECTOR, "button.standalone-flow-button")
     button_sign_in.click()
 
     # wait for website to load properly...
@@ -244,65 +245,41 @@ def regenerate_json_file():
                 url = f'http://www.omdbapi.com/?i={imdb_film_id}&apikey={omdb_api_key}'
                 imdb = requests.get(url=url, verify=False)
                 imdb_json = json.loads(imdb.text)
-
-                # retrieve avg IMD rating
-                imdb_avg_rating = imdb_json['imdbRating']
-                if (title == 'Convenience Story'):
-                    # why is the 'imdbRating' property not in the json response for Convenience Story?!?!?
-                    # https://www.imdb.com/title/tt22775702/
-                    imdb_avg_rating = 5.6;
                 
-                # retrieve number of votes on IMDB (we remove the comma, because react is fucking stupid and cant sort numbers when they contain commas)
-                imdb_num_votes = imdb_json['imdbVotes'].replace(',', '')
+                if (imdb_json['Response'] == "False"):
+                    print(imdb_json)
+                else:
+                    # retrieve avg IMDB rating
+                    imdb_avg_rating = imdb_json['imdbRating']
+                    if (title == 'Convenience Story'):
+                        # why is the 'imdbRating' property not in the json response for Convenience Story?!?!?
+                        # https://www.imdb.com/title/tt22775702/
+                        imdb_avg_rating = 5.6;
                 
-                # retrieve poster from IMDB
-                poster_url = imdb_json['Poster']
-                if 'SX300' in poster_url:
-                    poster_url = poster_url.split('SX300')[0]
+                    # retrieve number of votes on IMDB (we remove the comma, because react is fucking stupid and cant sort numbers when they contain commas)
+                    imdb_num_votes = imdb_json['imdbVotes'].replace(',', '')
                 
-                # retrieve title from IMDB (because letterboxd parsing is shite!)
-                # title = imdb_json['Title']
+                    # retrieve poster from IMDB
+                    poster_url = imdb_json['Poster']
+                    if 'SX300' in poster_url:
+                        poster_url = poster_url.split('SX300')[0]
                 
-                # retrieve list of directors (because letterboxd parsing is shite!)
-                directors = imdb_json['Director'].split(', ')
+                    # retrieve title from IMDB (because letterboxd parsing is shite!)
+                    # title = imdb_json['Title']
+                
+                    # retrieve list of directors (because letterboxd parsing is shite!)
+                    directors = imdb_json['Director'].split(', ')
                 
                 # id of my review!
                 titlev2 = Helpers.simplify_movie_title(title=title)
                 review_id = f"{titlev2}-{letterboxd_film_id}-review"
-                
-                """
-                # iterate over \\img\\films\\
-                screenshots = []
-                directory_in_str = f'D:\\Programming-Projects\\nathansteele\\src\\img\\films';
-                for subdir, dirs, files in os.walk(directory_in_str):
-                    for file in files:
-                        # find the right directory...
-                        title_from_directory_storing_screenshots = subdir.split('\\')[-1]
-                        titlev3 = Helpers.simplify_movie_title(title=title_from_directory_storing_screenshots)
-                        if titlev3 == titlev2:
-                            # get my screenshots...
-                            if 'screenshot' in file:
-                                screenshot = os.path.join(subdir, file)
-                                screenshots.append(screenshot)
-                            
-                            # use my custom poster if I put one there...
-                            if 'custom_poster' in file:
-                                poster_url = os.path.join(subdir, file)
-                """
-                
+            
                 # DEBUGGING....
                 print(f" > {pos}: {title} (imdb_avg_rating={imdb_avg_rating})")
                 #print(f' > Title = ({title})')
                 #print(f' > IMDB url = ({imdb_url})')
                 #print(f' > Language = ({language})')
-                #print(f' > Duration = ({duration})')
-                #print(f' > Genres = ({genres})')
-                #print(f' > IMDB avg rating = ({imdb_avg_rating})')
-                #print(f' > IMDB num votes = ({imdb_num_votes})')
-                #print(f' > Poster = ({poster_url})')
-                #print(f' > Directors = ({directors})')
-                #print(f' > Tags = ({my_tags})')
-                
+            
                 # append to list...
                 letterboxd_list.append({
                     'position': pos,

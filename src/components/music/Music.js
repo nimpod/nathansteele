@@ -91,7 +91,7 @@ class Music extends Component {
                             {/* Actual list */}
                             <div className='top-tracks-list'>
                                 {this.props.top_tracks.overall.map(t => {
-                                    return <a className='track-container' href={t.lastfm_track_url} id={`track-${t.position}`} data-playCount={t.play_count}>
+                                    return <a className='track-container' href={t.lastfm_track_url} target="_blank" id={`track-${t.position}`} data-playCount={t.play_count}>
                                         <div className='col position'>{t.position}</div>
                                         <div className='col track-info'>
                                             <img className='album-cover' src={t.album_cover} width={30} height={30} />
@@ -108,7 +108,7 @@ class Music extends Component {
                             </div>
                         </div>
 
-                        <div className='top-albums-list-container'>
+                        <div className='top-albums-list-container custom-card'>
                             <span className='page-title'>My top {this.props.top_albums.length} favourite albums of all time</span>
                             <div className='top-albums-list'>
                                 {this.props.top_albums.map(a => {

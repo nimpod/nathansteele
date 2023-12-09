@@ -19,33 +19,33 @@ class FilmsReview extends React.Component {
      * The Render() function, content rendered to screen...
      */
     render() {
-        let posterUrl = ""
+        let poster_url = ""
         let title = ""
-        let reviewIdOfNextFilm = "";
-        let reviewIdOfPrevFilm = "";
+        let review_id_of_next_film = "";
+        let review_id_of_prev_film = "";
 
         // use custom poster url if it exists...
-        if (this.props.filmData.customPosterUrl !== undefined) {
-            posterUrl = this.props.filmData.customPosterUrl;
+        if (this.props.film.custom_poster_url !== undefined) {
+            poster_url = this.props.film.custom_poster_url;
         }
         // use default posterUrl if I didnt specify one...
-        if (this.props.filmData.customPosterUrl == undefined) {
-            posterUrl = this.props.filmData.posterUrl;
+        if (this.props.film.custom_poster_url == undefined) {
+            poster_url = this.props.film.poster_url;
         }
         
         // use custom title if it exists...
-        if (this.props.filmData.titleDisplayed !== undefined) {
-            title = this.props.filmData.titleDisplayed;
+        if (this.props.film.title_displayed !== undefined) {
+            title = this.props.film.title_displayed;
         } else {
-            title = this.props.filmData.title;
+            title = this.props.film.title;
         }
 
         // id of next/previous films...
-        if (this.props.filmData.reviewIdOfNextFilm !== undefined) {
-            reviewIdOfNextFilm = this.props.filmData.reviewIdOfNextFilm;
+        if (this.props.film.review_id_of_next_film !== undefined) {
+            review_id_of_next_film = this.props.film.review_id_of_next_film;
         }
-        if (this.props.filmData.reviewIdOfPrevFilm !== undefined) {
-            reviewIdOfPrevFilm = this.props.filmData.reviewIdOfPrevFilm;
+        if (this.props.film.review_id_of_prev_film !== undefined) {
+            review_id_of_prev_film = this.props.film.review_id_of_prev_film;
         }
     
         return (
@@ -56,13 +56,13 @@ class FilmsReview extends React.Component {
                         {/* Poster */}
                         <div className='review-filmPoster'>
                             <picture className='filmPoster'>
-                                <img src={posterUrl} />
+                                <img src={poster_url} />
                             </picture>
                         </div>
 
                         {/* Prev review link */}
                         <div className='prev-review-link' title="Click to go to previous film in toplist">
-                            <Link to={'/films/' + reviewIdOfPrevFilm}>
+                            <Link to={'/films/' + review_id_of_prev_film}>
                                 <p>&lt;</p>
                             </Link>
                         </div>
@@ -85,41 +85,41 @@ class FilmsReview extends React.Component {
                             <div className='film-details'>
                                 <div className='film-details-header'>
                                     <p className='film-title' title="Title">{title}</p>
-                                    <p className='film-year' title="Release year">({this.props.filmData.year})</p>
+                                    <p className='film-year' title="Release year">({this.props.film.year})</p>
                                 </div>
                                 <div className='film-details-header-2'>
                                     <div className='film-details-more'>
                                         <div className='film-duration' title="Duraton in minutes">
-                                            {this.props.filmData.duration} mins
+                                            {this.props.film.duration} mins
                                         </div>
                                         <div className='film-language' title="Language">
-                                            <div className='language-tag'>{this.props.filmData.language}</div>
+                                            <div className='language-tag'>{this.props.film.language}</div>
                                         </div>
                                         <div className='film-directors' title='Directors'>
-                                            {this.props.filmData.directors.map(director => {
+                                            {this.props.film.directors.map(director => {
                                                 return <div className='director-tag'>{director}</div>
                                             })}
                                         </div>
                                         <div className='film-genres' title='Genres'>
-                                            {this.props.filmData.genres.map(genre => {
+                                            {this.props.film.genres.map(genre => {
                                                 return <div className='genre-tag'>{genre}</div>
                                             })}
                                         </div>
                                         <div className='links' title="Links">
-                                            <a className='film-imdb-link' href={this.props.filmData.imdbUrl} target='_blank'>IMDb</a>
-                                            <a className='film-tmdb-link' href={this.props.filmData.tmdbUrl} target='_blank'>TMDb</a>
-                                            <a className='film-letterboxd-link' href={this.props.filmData.letterboxdUrl} target='_blank'>Letterboxd</a>
+                                            <a className='film-imdb-link' href={this.props.film.IMDB_url} target='_blank'>IMDb</a>
+                                            <a className='film-tmdb-link' href={this.props.film.TMDB_url} target='_blank'>TMDb</a>
+                                            <a className='film-letterboxd-link' href={this.props.film.letterboxd_url} target='_blank'>Letterboxd</a>
                                         </div>
                                     </div>
                                     <div className='film-details-myData'>
                                         <div className='filmPosition generic-hover' title='Position in my list'>
                                             <Link to='/films'>
-                                                <span>#{this.props.filmData.position}</span>
+                                                <span>#{this.props.film.position}</span>
                                                 <span>in my toplist</span>
                                             </Link>
                                         </div>
                                         <div className='filmMyRating' title='My rating'>
-                                            <span>{this.props.filmData.myRating}</span>
+                                            <span>{this.props.film.my_rating}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -127,25 +127,25 @@ class FilmsReview extends React.Component {
                             
                             {/* Tags */}
                             <div className='review-my-tags' title="My tags">
-                                {this.props.filmData.myTags.map(tag => {
+                                {this.props.film.my_tags.map(tag => {
                                     return <div className='my-tag'>{tag}</div>
                                 })}
                             </div>
                             
                             {/* Gradual interest graph */}
                             <div className='filmGradualInterest' title=''>
-                                <p>{this.props.filmData.gradualInterest} ({this.props.filmData.gradualInterestAverage})</p>
+                                <p>{this.props.film.gradual_interest} ({this.props.film.gradual_interest_average})</p>
                             </div>
 
                             {/* The actual review content!! */}
-                            <div className='review-content-container' dangerouslySetInnerHTML={{__html: this.props.filmData.myReview}}>
+                            <div className='review-content-container' dangerouslySetInnerHTML={{__html: this.props.film.my_review}}>
                                 
                             </div>
                         </div>
                         
                         {/* Next review link */}
                         <div className='next-review-link' title="Click to go to next film in toplist">
-                            <Link to={'/films/' + reviewIdOfNextFilm}>
+                            <Link to={'/films/' + review_id_of_next_film}>
                                 <p>&gt;</p>
                             </Link>
                         </div>
@@ -166,7 +166,7 @@ const mapStateToProps = (state, ownProps) => {
     //  console.log(id);
 
     return {
-        filmData: state.filmReviews.find(film => get_film_review_id(film.title, film.letterboxdUrl) === id),
+        film: state.top_films.find(film => get_film_review_id(film.title, film.letterboxd_url) === id),
     }
 }
 

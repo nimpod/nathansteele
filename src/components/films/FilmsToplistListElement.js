@@ -21,19 +21,19 @@ class FilmsToplistListElement extends Component {
         __loaded_images_counter: 0
     }
 
-    updateLoading = () => {
+    update_loading = () => {
         // this.setState({__poster_has_loaded: true})
-        if (this.state.__loaded_images_counter + 1 == this.props.posterUrls.length) {
+        if (this.state.__loaded_images_counter + 1 == this.props.poster_urls.length) {
             this.setState({__is_all_loaded: true})
         }
         this.setState(prevState => prevState + 1)
     }
 
     render() {
-        let tempScreenshot = "https://m.media-amazon.com/images/M/MV5BNjUxYTkxYzgtYzU5OC00NDVmLWExYTAtYmY0NDBiZWRhY2E0XkEyXkFqcGdeQXVyNzEzMzA1MTQ@._V1_.jpg"
-        let screenshot1 = tempScreenshot
-        let screenshot2 = tempScreenshot
-        let screenshot3 = tempScreenshot
+        let temp_screenshot = "https://m.media-amazon.com/images/M/MV5BNjUxYTkxYzgtYzU5OC00NDVmLWExYTAtYmY0NDBiZWRhY2E0XkEyXkFqcGdeQXVyNzEzMzA1MTQ@._V1_.jpg"
+        let screenshot1 = temp_screenshot;
+        let screenshot2 = temp_screenshot;
+        let screenshot3 = temp_screenshot;
         if (this.props.film.screenshots !== undefined) {
             screenshot1 = this.props.film.screenshots[0];
             screenshot2 = this.props.film.screenshots[1];
@@ -42,7 +42,7 @@ class FilmsToplistListElement extends Component {
 
         return (
             <div className='films-toplist-item'>
-                <Link to={'/films/' + this.props.reviewId}>
+                <Link to={'/films/' + this.props.review_id}>
                     <div className='film-details'>
                         <span className='film-title' title='Title'>{this.props.title}</span>
                         <span className='film-year' title='Year of release'>({this.props.film.year})</span>
@@ -70,11 +70,11 @@ class FilmsToplistListElement extends Component {
                     </div>
                     <div className="film-images">
                         <PosterImage 
-                            key={this.props.posterUrl}
-                            src={this.props.posterUrl}
+                            key={this.props.poster_url}
+                            src={this.props.poster_url}
                             index={this.props.index}
                             isCurrentlyLoading={!this.state.__is_all_loaded}
-                            onLoad={this.updateLoading}
+                            onLoad={this.update_loading}
                         />
                         <div className='film-screenshots'>
                             <img src={screenshot1} />
