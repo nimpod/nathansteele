@@ -46,7 +46,7 @@ export const post = (screenshots) => (
             <p>There has been a mission proposed called the <a href='https://www.nasa.gov/content/titan-submarine-exploring-the-depths-of-kraken/'>Titan Mare Explorer</a> to send a submarine-like lander to investigate these mysterious Titanian lakes in more detail.</p> \
             <p>The lake of particular interest is the <a href='https://en.wikipedia.org/wiki/Kraken_Mare'>Kraken Mare</a>.</p>
             <picture className="img">
-                <img width="300" height="400" className='dont-resize' src="https://imageio.forbes.com/specials-images/imageserve/638a3d6abc51bdee9320296e/0x0.jpg?format=jpg&width=1200" alt='Photo of Titan taken by the James Webb Space Telescope' />
+                <img width="300" height="400" className='dont-resize' src="https://imageio.forbes.com/specials-images/imageserve/638a3d6abc51bdee9320296e/0x0.jpg?format=jpg&width=1200" alt='Titan imaged by the James Webb Space Telescope' />
             </picture>
             <h5 className='subgroup-title'>The far future of Titan</h5> 
             <p>Unfortunately it's probably too cold on the surface for life as we know it to emerge. Titan-specific life could potentially evolve to work with the cold temperatures on Titan, but it's an unknown...</p>

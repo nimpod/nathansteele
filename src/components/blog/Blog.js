@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect }  from 'react-redux';
 
 import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
-import { getListOfTagCategories, get_list_of_tag_categories } from '../../js/helpers';
+import { get_list_of_tag_categories } from '../../js/helpers';
 import BlogPostList from './BlogPostList';
 import SearchBoxTagFilterListElement from './SearchBoxTagFilterListElement';
 
@@ -38,13 +38,13 @@ class Blog extends Component {
 
         var newArray = posts.filter(function (el) {
             let tags = el.tags;
-            
-            for (let i = 0; i < tags.length; i++)
+            for (let i = 0; i < tags.length; i++) {
                 return tags[i] === tagSeleceted;
+            }
+            return null;
         });
 
-        console.log(newArray);
-
+        // console.log(newArray);
         return newArray;
     }
 

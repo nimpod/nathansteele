@@ -13,12 +13,13 @@ class CasioBasic extends Component {
                         <Link to="hello-world" spy={true} smooth={true} offset={0} duration={400}><li>Hello World</li></Link>
                         <Link to="variables" spy={true} smooth={true} offset={0} duration={400}><li>Variables</li></Link>
                         <Link to="math-operators" spy={true} smooth={true} offset={0} duration={400}><li>Math Operators</li></Link>
-                        <a><li>User input</li></a>
-                        <a><li>Loops</li></a>
-                        <a><li>Conditionals</li></a>
-                        <a><li>Logical operators</li></a>
-                        <a><li>Subroutines</li></a>
-                        <a><li>Graphics</li></a>
+                        
+                        <a href="#introduction"><li>User input</li></a>
+                        <a href="#introduction"><li>Loops</li></a>
+                        <a href="#introduction"><li>Conditionals</li></a>
+                        <a href="#introduction"><li>Logical operators</li></a>
+                        <a href="#introduction"><li>Subroutines</li></a>
+                        <a href="#introduction"><li>Graphics</li></a>
                     </ul>
                 </div>
                 <div className="section-inner">

@@ -412,13 +412,13 @@
       /* Button in controls panel */
       --films-controls-btn-bg-color: rgb(46, 49, 51);
       --films-controls-btn-bg-color-hover: rgb(59, 61, 66);
-      --films-controls-btn-bg-color-active: rgb(76, 78, 84);
+      --films-controls-btn-bg-color-active: rgb(73, 74, 80);
       /* Dropdown menu */
       --films-controls-dropdown-list-bg-color: rgba(66, 67, 73, 0.946);
       --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
       --films-controls-dropdown-item-bg-color-hover: rgb(51, 53, 54);
       --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
-      --films-controls-dropdown-item-border-color-active: rgb(89, 89, 90);
+      --films-controls-dropdown-item-border-color-active: rgba(112, 117, 115, 0.649);
       --films-controls-dropdown-list-title-bottomborder: rgba(85, 91, 104, 0.687);
       /* Miscellaneous */
       --films-controls-toggle-btn-bg-color: rgb(61, 61, 65);
@@ -1072,6 +1072,7 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 .posts-container table tbody tr {
   max-height: 200px;
   line-height: 1.5;
+  user-select: none;
 }
 .posts-container table tbody tr:hover td {
   color: var(--blog-table-text-hover);
@@ -2205,7 +2206,7 @@ span.film-imdbDiffScore:active {
   margin-top: 42px;
 }
 .dropdown-list-btn {
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 0.9rem;
   border: 3px solid transparent;
   background-color: var(--films-controls-btn-bg-color);
@@ -2224,7 +2225,10 @@ span.film-imdbDiffScore:active {
   border: 3px solid var(--films-controls-dropdown-item-border-color-active);
 }
 .dropdown-list-btn.list-is-visible {
+  /*
   background-color: var(--films-controls-btn-bg-color-active);
+  */
+  border: 3px solid var(--films-controls-dropdown-item-border-color-active);
 }
 .dropdown-list-btn > span {
   margin-left: 10px;
@@ -3027,7 +3031,9 @@ div.btn.films-reset-filters-btn svg {
   padding-left: 20px;
   padding-right: 20px;
 }
-.top-tracks-list-container .btns .filter-btn {
+
+/*
+.top-tracks-list-container .dropdown-list-btn {
   margin-right: 10px;
   background-color: #1c1c1e;
   padding: 3px 10px;
@@ -3037,8 +3043,19 @@ div.btn.films-reset-filters-btn svg {
   cursor: pointer;
   user-select: none;
 }
-.top-tracks-list-container .btns .filter-btn:active {
-  border: 3px solid rgba(255, 239, 68, 0.202);
+.top-tracks-list-container .dropdown-list-btn:active {
+  border: 3px solid rgba(68, 124, 255, 0.202);
+}
+
+.top-tracks-list-container .dropdown-list-timePeriod {
+  background-color: #1c1c1e;
+}
+.top-tracks-list-container .dropdown-list-timePeriod .dropdown-list-title {
+  border-bottom: 2px solid rgb(53, 50, 50);
+}
+*/
+.top-tracks-list-container .dropdown-list-timePeriod span {
+  color: var(--text);
 }
 
 /* column names */
@@ -3067,12 +3084,15 @@ div.btn.films-reset-filters-btn svg {
   padding: 5px 0;
   justify-content: space-between;
   user-select: none;
+  cursor: pointer;
 }
 .track-container:hover {
-  cursor: pointer;
   background-color: rgb(42, 48, 56);
 }
-
+.track-container:active,
+.track-container:focus-within {
+  background-color: rgb(56, 63, 70);
+}
 
 /* Track info */
 .track-container > .track-info {
@@ -3102,15 +3122,15 @@ div.btn.films-reset-filters-btn svg {
 }
 
 /* artist name */
-.track-container .artist-and-track-name-container > .artist-name,
-.track-container .position {
-  color: var(--text-slightly-darker);
+.track-container .artist-and-track-name-container > .artist-name {
+  color: var(--text-much-darker);
+  font-size: 0.75rem;
 }
 
 /* track name */
-.track-container .artist-and-track-name-container > .track-name {
-  color: var(--text-much-darker);
-  font-size: 0.75rem;
+.track-container .artist-and-track-name-container > .track-name, 
+.track-container .position {
+  color: var(--text-slightly-darker);
 }
 
 

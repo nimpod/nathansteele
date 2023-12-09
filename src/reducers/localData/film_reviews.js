@@ -3,9 +3,8 @@
  * The json is merged with the web data in /reducers/RootReducer.js
  */
 
-import React from 'react';
 import ReactDomServer from 'react-dom/server';
-import { convert_collection_of_json_objects_to_one_list, get_film_review_id } from '../../js/helpers.js';
+import { convert_collection_of_json_objects_to_one_list } from '../../js/helpers.js';
 
 import { review as AGhostStoryReview } from '../websiteContent/films/a_ghost_story/review.jsx';
 import { review as ChildrenOfTheSeaReview } from '../websiteContent/films/children_of_the_sea/review.jsx';
@@ -116,7 +115,7 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
 // but currently I have no idea how to make this work.
 // this is a bit annoying because it means I have to 'hardcode' paths to screenshots.
 // (e.g. require('../websiteContent/films/white_god/screenshot1.webp'))
-const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.png|.PNG|.jpeg|.webp)$")
+//const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.png|.PNG|.jpeg|.webp)$")
 
 
 /**
@@ -391,7 +390,7 @@ const database = {
         "500_days_of_summer": {
             "letterboxd_url": "https://boxd.it/1EmM",
             "title": "500 Days of Summer",
-            "titleDisplayed": "(500) Days of Summer",
+            "title_displayed": "(500) Days of Summer",
             "my_rating": "9.25",
             "my_tags": ["Soulmate", "Non-linear timeline", "Emotional"],
             "my_review": ""
@@ -1003,7 +1002,7 @@ const database = {
         "a_silent_voice": {
             "letterboxd_url": "https://boxd.it/d99c",
             "title": "A Silent Voice: The Movie",
-            "titleDisplayed": "A Silent Voice",
+            "title_displayed": "A Silent Voice",
             "my_rating": "8.0",
             "my_tags": ["Bullying", "Forgiveness", "Anime", "Great soundtrack"],
             "my_review": "",
@@ -1232,7 +1231,7 @@ const database = {
             "my_rating": 9.25,
             "letterboxd_url": "https://boxd.it/tbEe",
             "title": "Belle",
-            "titleDisplayed": "Belle: The Dragon and the Freckled Princess",
+            "title_displayed": "Belle: The Dragon and the Freckled Princess",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/sp0LOwp7dVeF2c2fn9l422O5cdb.jpg",
             "my_tags": [
                 "Virtual world", 
@@ -1303,7 +1302,7 @@ const database = {
         "birdman": {
             "letterboxd_url": "https://boxd.it/5RFA",
             "title": "Birdman or (The Unexpected Virtue of Ignorance)",
-            "titleDisplayed": "Birdman",
+            "title_displayed": "Birdman",
             "my_rating": "9.5",
             "my_tags": ["One-take", "Inspiring", "Nightlife", "Great soundtrack"],
             "my_review": "",
@@ -1380,10 +1379,9 @@ const database = {
         "big_fish_and_begonia": {
             "letterboxd_url": "https://boxd.it/8bfm",
             "title": "Big Fish & Begonia",
-            "titleDisplayed": "Big Fish and Begonia",
+            "title_displayed": "Big Fish and Begonia",
             "my_rating": "9.5",
             "my_tags": ["Life", "Death", "Magic", "The afterlife", "Oceans", "Sealife", "Amazing cinematography", "Great soundtrack"],
-            "my_review": "",
             "screenshots": screenshots.BIG_FISH_AND_BEGONIA,
             "my_review": ReactDomServer.renderToString(BigFishAndBegoniaReview(screenshots.BIG_FISH_AND_BEGONIA)),
             "gradual_interest": [8, 9, 9, 9, 8, 7, 8, 9, 10, 9],
@@ -2489,7 +2487,7 @@ const database = {
         "my_life_as_a_courgette": {
             "letterboxd_url": "https://boxd.it/dL2y",
             "title": "My Life as a Zucchini",
-            "titleDisplayed": "My Life as a Courgette",
+            "title_displayed": "My Life as a Courgette",
             "my_rating": "8.75",
             "my_tags": ["Stop motion animation", "Uplifting", "Finding happiness", "Friendship", "Emotional", "Endearing", "Soulmate", "Bad parenting"],
             "my_review": "",
@@ -2835,7 +2833,7 @@ const database = {
         "rrr": {
             "letterboxd_url": "https://boxd.it/ljDs",
             "title": "RRR",
-            "titleDisplayed": "Rise Roar Revolt",
+            "title_displayed": "Rise Roar Revolt",
             "my_rating": "8.0",
             "my_tags": ["Indian culture", "Kindness", "The evil British empire", "Poverty", "Friendship", "Great cinematography", "Very long", "Great soundtrack"],
             "my_review": "",
@@ -3193,15 +3191,6 @@ const database = {
             "gradual_interest": [8, 8, 8, 7, 8, 8, 8, 8, 8, 9, 9, 8],
             "screenshots": screenshots.SPIRITED_AWAY,
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/y2K14f237l9IgwGZi5FyNnyG8RL.jpg"
-        },
-    
-        "se7en": {
-            "letterboxd_url": "https://boxd.it/29zs",
-            "title": "Se7en",
-            "my_rating": "7.75",
-            "my_tags": ["Neo-noir"],
-            "my_review": "",
-            "gradual_interest": [7, 7, 7, 8, 8, 8, 8, 8, 7, 7, 8, 8]
         },
     
         "species": {

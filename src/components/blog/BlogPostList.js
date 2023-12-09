@@ -37,6 +37,7 @@ class BlogPostList extends Component {
                                                 </span> 
                                             </div>
                                         }
+                                        return <div>{index}</div>
                                     })}
                                 </div>
                             </td>

@@ -20,8 +20,8 @@ class GET_TOP_TRACKS_TIME_PERIOD_OPTIONS(Enum):
     https://www.last.fm/api/show/user.getTopTracks
     """
     
-    OVERALL = 'overall'
-    LAST_SEVEN_DAYS = '7day'
+    ALL_TIME = 'overall'
+    LAST_7_DAYS = '7day'
     LAST_MONTH = '1month'
     LAST_3_MONTHS = '3month'
     LAST_6_MONTHS = '6month'

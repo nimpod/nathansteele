@@ -152,6 +152,7 @@ const particlesConfig =
   },
   "retina_detect": true
 }
+console.log(particlesConfig)
 
 
 const Portfolio = (props) => {
@@ -230,13 +231,13 @@ const Portfolio = (props) => {
 
                     <div className="card fitbit-data-analysis">
                         <div className="image">
-                            <a href="https://github.com/nimpod/fitbit-data-analysis" target="_blank">
+                            <a href="https://github.com/nimpod/fitbit-data-analysis" target="_blank" rel="noopener noreferrer">
                                 <img className="cropped" src={ProjectImageFitbitDataAnalysis} alt="project thumbnail"  />
                             </a>
                         </div>
                         <div className="card-details">
                             <span className="card-title">
-                                <a href="https://github.com/nimpod/fitbit-data-analysis" target="_blank">Fitbit Data Analysis</a>
+                                <a href="https://github.com/nimpod/fitbit-data-analysis" target="_blank" rel="noopener noreferrer">Fitbit Data Analysis</a>
                             </span> <br />
                             <span className="card-date">2018</span> <br /> <br />
                             <span className="card-desc">Extracted and produced various types of analysis on my Fitbit data. Programmed in Python, using Pandas and Numpy for data analysis.</span>
@@ -260,7 +261,7 @@ const Portfolio = (props) => {
 
                     <div className="card error-corrector">
                         <div className="image">
-                            <a href="https://github.com/nimpod/decorruptor" target="_blank">
+                            <a href="https://github.com/nimpod/decorruptor" target="_blank" rel="noopener noreferrer">
                                 <img className="cropped" src={ProjectImageAssembly} alt="project thumbnail" />
                             </a>
                         </div>
@@ -288,7 +289,7 @@ const Portfolio = (props) => {
 
                     <div className="card pong">
                         <div className="image">
-                            <a href="https://github.com/nimpod/pong" target="_blank">
+                            <a href="https://github.com/nimpod/pong" target="_blank" rel="noopener noreferrer">
                                 <img className="cropped" src={ProjectImagePong}  alt="project thumbnail" />
                             </a>
                         </div>

@@ -2,25 +2,25 @@ import React, {Component} from 'react'
 import { withRouter } from 'react-router-dom';
 
 
-function readTextFile(file) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4) {
-            if (rawFile.status === 200 || rawFile.status == 0) {
-                var allText = rawFile.responseText;
-                console.log(allText);
+function read_text_file(file) {
+    let raw_file = new XMLHttpRequest();
+    raw_file.open("GET", file, false);
+    raw_file.onreadystatechange = function () {
+        if (raw_file.readyState === 4) {
+            if (raw_file.status === 200 || raw_file.status === 0) {
+                let all_text = raw_file.responseText;
+                console.log(all_text);
             }
         }
     }
-    rawFile.send(null);
+    raw_file.send(null);
 }
 
 
 class MessiahsHandbook extends Component {
     render() {
-        // readTextFile("../../../public/listOfQuotes.txt");
-        // readTextFile("file:///D:\\Programming-Projects\\rainmeter-random-quotes\\listOfQuotes.txt");
+        // read_text_file("../../../public/listOfQuotes.txt");
+        read_text_file("file:///D:\\Programming-Projects\\rainmeter-random-quotes\\listOfQuotes.txt");
 
         return(
             <div className='page-wrapper'>

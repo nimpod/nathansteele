@@ -131,7 +131,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
 
 
 
-def get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.OVERALL, limit=10):
+def get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.ALL_TIME, limit=10):
     """
     Get top tracks.
     """
@@ -187,19 +187,21 @@ def get_top_tracks_all_data(limit=10):
     """
     
     # get all data...
-    overall = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.OVERALL, limit=limit)
+    all_time = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.ALL_TIME, limit=limit)
     last_12_months = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_12_MONTHS, limit=limit)
     last_6_months = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_6_MONTHS, limit=limit)
     last_3_months = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_3_MONTHS, limit=limit)
     last_month = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_MONTH, limit=limit)
-    
+    last_7_days = get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_7_DAYS, limit=limit)
+
     # structure of json output...
     all_data = {
-        GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.OVERALL.value: overall,
+        GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.ALL_TIME.value: all_time,
         GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_12_MONTHS.value: last_12_months,
         GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_6_MONTHS.value: last_6_months,
         GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_3_MONTHS.value: last_3_months,
         GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_MONTH.value: last_month,
+        GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.LAST_7_DAYS.value: last_7_days,
     }
     
     # name of json files...

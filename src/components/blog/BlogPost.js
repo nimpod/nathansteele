@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
-import { ReactComponent as ArrowLeft } from "../../icons/arrowLeft.svg";
 import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
 
 import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";

@@ -1,7 +1,44 @@
 import React, { Component } from 'react';
 import { connect }  from 'react-redux';
-import AlbumGridElement from './AlbumGridElement';
+
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
+import AlbumGridElement from './AlbumGridElement';
+import {
+    // handle_filter_button_toggling_stuff,
+    toggle_dropdown_list,
+    // toggle_dropdown_list_arrow_icon,
+    // remove_class_from_item_when_user_clicks_outside_of_item
+} from '../../js/helpers.js';
+
+
+const enumValue = (name) => Object.freeze({toString: () => name});
+const TimePeriodOptions = Object.freeze({
+    ALL_TIME: enumValue("all_time"),
+    LAST_12_MONTHS: enumValue("last_12_months"),
+    LAST_6_MONTHS: enumValue("last_6_months"),
+    LAST_3_MONTHS: enumValue("last_3_months"),
+    LAST_MONTH: enumValue("last_month"),
+    LAST_7_DAYS: enumValue("last_7_days"),
+});
+const TimePeriodOptionsStr = Object.freeze({
+    ALL_TIME: "All Time",
+    LAST_12_MONTHS: "Last 12 months",
+    LAST_6_MONTHS: "Last 6 months",
+    LAST_3_MONTHS:"Last 3 months",
+    LAST_MONTH: "Last month",
+    LAST_7_DAYS: "Last 7 days",
+})
+
+// TODO: make this less shit. Surely there's a way to automate this iterating over the enum types.....
+const time_period_options = [
+    TimePeriodOptions.ALL_TIME.toString(),
+    TimePeriodOptions.LAST_12_MONTHS.toString(),
+    TimePeriodOptions.LAST_6_MONTHS.toString(),
+    TimePeriodOptions.LAST_3_MONTHS.toString(),
+    TimePeriodOptions.LAST_MONTH.toString(),
+    TimePeriodOptions.LAST_7_DAYS.toString(),
+]
+
 
 class Music extends Component {
 
@@ -19,20 +56,22 @@ class Music extends Component {
         // calculte colour...
         let Red = 255 - (255 * (play_count / max));
         let Green = 255 * (play_count / max);
-        let Blue = 0;
+        let Blue = 100;
 
         // format to CSS value and return
         return 'rgb(' + Red + ',' + Green + ',' + Blue + ')'; 
     }
 
-
+    /**
+     * 
+     */
     componentDidMount() {
         // first find out what highest play count is...
         const play_counts = [];
         const tracks = document.getElementsByClassName("track-container");
         for (let i = 0; i < tracks.length; i++) {
             let track = tracks[i];
-            let play_count = Number(track.getAttribute('data-playCount'));
+            let play_count = Number(track.getAttribute('data-playcount'));
             play_counts.push(play_count);
         }
         
@@ -40,15 +79,32 @@ class Music extends Component {
         let highest_play_count = Math.max(...play_counts);
         for (let i = 0; i < tracks.length; i++) {
             let track = tracks[i];
-            let play_count = Number(track.getAttribute('data-playCount'));
+            let play_count = Number(track.getAttribute('data-playcount'));
             let play_count_div = track.children[2];
             play_count_div.style.backgroundColor = this.generate_bg_colour_of_play_count(play_count, highest_play_count);
         }
     }
 
+    
+    /**
+     * 
+     * @param {*} event 
+     * @param {*} time_period 
+     */
+    filter_by_time_period(event, time_period) {
+        console.log(time_period);
+    }
+
+    /**
+     * Render function
+     * @returns 
+     */
     render() {
         // console.log(this.props.albumReviewsData);
         console.log(this.props);
+
+        // top tracks list (default to overall time period)
+        let top_tracks_list = this.props.top_tracks.overall;
 
         return (
             <div className='page-wrapper' id="music-page">
@@ -63,19 +119,35 @@ class Music extends Component {
                                 </div>
                             </div>
 
-                            {/* buttons */}
+                            {/* filter buttons */}
                             <div className='btns'>
                                 {/* Time period */}
-                                <div className='dropdown-list-btn filter-btn filter-time-period'>
-                                    <span>All time</span>
-                                    <ArrowDownIcon className='invertable-icon' />
+                                <div className='filter-by-timePeriod-btn filter-by-something-container'>
+                                    <div className='dropdown-list-timePeriod-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-timePeriod')}>
+                                        <span>All time</span>
+                                        <ArrowDownIcon className='invertable-icon' />
+                                    </div>
+                                    <div className='dropdown-list-timePeriod dropdown-list'>
+                                        <div className='dropdown-list-title'>Filter by time period</div>
+                                        {
+                                            time_period_options.map((time_period => {
+                                                return <div className="btn tracks-filter-by-timePeriod-btn" key={time_period} onClick={(e) => this.filter_by_time_period(e, time_period)}>
+                                                    <span className='timePeriod-text'>{time_period}</span>
+                                                </div>
+                                            }))
+                                        }
+                                    </div>
                                 </div>
-                                
+
                                 {/* Genres */}
-                                <div className='dropdown-list-btn filter-btn filter-genre'>
-                                    <span>All genres</span>
-                                    <ArrowDownIcon className='invertable-icon' />
+                                {/*}
+                                <div className='filter-by-genre-btn filter-by-something-container'>
+                                    <div className='dropdown-list-btn filter-btn filter-genre'>
+                                        <span>All genres</span>
+                                        <ArrowDownIcon className='invertable-icon' />
+                                    </div>
                                 </div>
+                                */}
                             </div>
                             
                             {/* Divider */}
@@ -90,14 +162,16 @@ class Music extends Component {
 
                             {/* Actual list */}
                             <div className='top-tracks-list'>
-                                {this.props.top_tracks.overall.map(t => {
-                                    return <a className='track-container' href={t.lastfm_track_url} target="_blank" id={`track-${t.position}`} data-playCount={t.play_count}>
+                                {top_tracks_list.map(t => {
+                                    return <a className='track-container' href={t.lastfm_track_url} target="_blank" id={`track-${t.position}`} data-playcount={t.play_count} key={t.lastfm_track_url}>
                                         <div className='col position'>{t.position}</div>
                                         <div className='col track-info'>
+                                            {/*}
                                             <img className='album-cover' src={t.album_cover} width={30} height={30} />
+                                            */}
                                             <div className='artist-and-track-name-container'>
-                                                <span className='artist-name'>{t.artist_name}</span>
                                                 <span className='track-name'>{t.track_name}</span>
+                                                <span className='artist-name'>{t.artist_name}</span>
                                             </div>
                                         </div>
                                         <div className='col play-count'>

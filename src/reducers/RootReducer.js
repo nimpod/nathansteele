@@ -2,8 +2,6 @@
  * This RootReducer JS file is essentially a shite database.
  */
 
-import ReactDomServer from 'react-dom/server';
-import React from 'react';
 import { get_album_review_id, get_film_review_id } from '../js/helpers.js';
 
 // data...
@@ -83,7 +81,7 @@ const merge_films_data = (local_data, web_data) => {
         }
         
         // find id of next/previous films
-        let current_film = merged_data[v["position"] - 1];  // remember, arrays start at 0.... so current film is N-1
+        //let current_film = merged_data[v["position"] - 1];  // remember, arrays start at 0.... so current film is N-1
         let next_film = merged_data[v["position"] - 2];  // therefore, next film is N-2
         let prev_film = merged_data[v["position"]];  // and previous film is N-0
 
@@ -122,7 +120,7 @@ const merge_albums_data = (local_data, web_data) => {
     // add new attributes...
     Object.entries(merged_data).forEach(([k,v]) => {
         // find id of next/previous albums
-        let current_album = merged_data[v["position"] - 1];  // remember, arrays start at 0.... so current film is N-1
+        //let current_album = merged_data[v["position"] - 1];  // remember, arrays start at 0.... so current film is N-1
         let prev_album = merged_data[v["position"] - 2];
         let next_album = merged_data[v["position"]];
 

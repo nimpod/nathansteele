@@ -2,14 +2,11 @@
  * This is a react component that renders my 'Films' homepage
  */
 
-import React, {useState, useEffect} from 'react';
-import { withRouter } from 'react-router-dom';
+import React from 'react';
 import ReactPaginate from 'react-paginate';
 import { connect }  from 'react-redux';
 
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
-import { ReactComponent as ArrowRightIcon } from "../../icons/arrowRight.svg";
-import { ReactComponent as ArrowLeftIcon } from "../../icons/arrowLeft.svg";
 import { ReactComponent as ControlsIcon } from "../../icons/controls.svg";
 import { ReactComponent as SortAscendingIcon } from "../../icons/sortAscending.svg";
 import { ReactComponent as SortDescendingIcon } from "../../icons/sortDescending.svg";
@@ -27,7 +24,8 @@ import {
     get_list_of_poster_urls,
     override_film_title,
     get_film_review_id,
-    remove_class_from_item_when_user_clicks_outside_of_item
+    handle_filter_button_toggling_stuff,
+    toggle_dropdown_list,
 } from '../../js/helpers.js';
 
 
@@ -139,14 +137,14 @@ class Films extends React.Component {
      * @param {*} type 
      */
     sort_list = (type) => {
-        if (this.state.__current_sort_order == SortableDirection.ASC) {
+        if (this.state.__current_sort_order === SortableDirection.ASC) {
             this.setState(prevState => {
                 return {
                     __current_sort_type: type,
                     __current_sort_type_str: type,
                     __filtered_data: Array.from(this.props.top_films)
                         .sort((a,b) => {
-                            if (type == SortableType.IMDB_DIFF) {
+                            if (type === SortableType.IMDB_DIFF) {
                                 return (a["my_rating"] - a["IMDB_avg_rating"]) - (b["my_rating"] - b["IMDB_avg_rating"])
                             }
                             return a[type] - b[type] 
@@ -156,14 +154,14 @@ class Films extends React.Component {
             })
         }
 
-        else if (this.state.__current_sort_order == SortableDirection.DESC) {
+        else if (this.state.__current_sort_order === SortableDirection.DESC) {
             this.setState(prevState => {
                 return {
                     __current_sort_type: type,
                     __current_sort_type_str: type,
                     __filtered_data: Array.from(this.props.top_films)
                         .sort((a,b) => {
-                            if (type == SortableType.IMDB_DIFF) {
+                            if (type === SortableType.IMDB_DIFF) {
                                 return (a["my_rating"] - a["IMDB_avg_rating"]) - (b["my_rating"] - b["IMDB_avg_rating"])
                             }
                             return a[type] - b[type] 
@@ -181,7 +179,7 @@ class Films extends React.Component {
         // console.log(order);
         // console.log(this.state.__current_sort_type);
 
-        if (order == SortableDirection.ASC) {
+        if (order === SortableDirection.ASC) {
             this.setState(prevState => {
                 return {
                     __current_sort_type: this.state.__current_sort_type,
@@ -189,7 +187,7 @@ class Films extends React.Component {
                     __current_sort_order: order,
                     __filtered_data: this.state.__filtered_data
                         .sort((a,b) => {
-                            if (this.state.__current_sort_type == SortableType.IMDB_DIFF) {
+                            if (this.state.__current_sort_type === SortableType.IMDB_DIFF) {
                                 return (a["my_rating"] - a["IMDB_avg_rating"]) - (b["my_rating"] - b["IMDB_avg_rating"])
                             }
                             return a[this.state.__current_sort_type] - b[this.state.__current_sort_type] 
@@ -199,7 +197,7 @@ class Films extends React.Component {
             })
         }
 
-        else if (order == SortableDirection.DESC) {
+        else if (order === SortableDirection.DESC) {
             this.setState(prevState => {
                 return {
                     __current_sort_type: this.state.__current_sort_type,
@@ -207,7 +205,7 @@ class Films extends React.Component {
                     __current_sort_order: order,
                     __filtered_data: this.state.__filtered_data
                         .sort((a,b) => {
-                            if (this.state.__current_sort_type == SortableType.IMDB_DIFF) {
+                            if (this.state.__current_sort_type === SortableType.IMDB_DIFF) {
                                 return (a["my_rating"] - a["IMDB_avg_rating"]) - (b["my_rating"] - b["IMDB_avg_rating"])
                             }
                             return a[this.state.__current_sort_type] - b[this.state.__current_sort_type] 
@@ -234,11 +232,11 @@ class Films extends React.Component {
     manually_change_text_of_pagination_buttons() {
         let pagination_btns = document.querySelector('.films-container ul.pagination-btns');
         let pagination_btns_list = pagination_btns.childNodes;
-        // if (paginationBtnsList[1].childNodes[0].textContent == "1") {
+        // if (paginationBtnsList[1].childNodes[0].textContent === "1") {
         for (let i = 0; i < pagination_btns_list.length; i++) {
             // console.log('i = ' + i);
             let btn = pagination_btns_list[i];
-            if (btn.classList.contains('previous-btn') == true || btn.classList.contains('next-btn') == true) {
+            if (btn.classList.contains('previous-btn') === true || btn.classList.contains('next-btn') === true) {
                 // ignore the 'previous' and 'next' buttons...
             } else {
                 let anchor_tag = btn.childNodes[0];
@@ -280,98 +278,24 @@ class Films extends React.Component {
         
         //
         if (actual_button.classList.contains(by_type_classname)) {
-            var activeBtns = document.getElementsByClassName(by_type_classname + ' active');
-            while (activeBtns.length > 0) {
-                activeBtns[0].classList.remove('active');
+            let active_btns = document.getElementsByClassName(by_type_classname + ' active');
+            while (active_btns.length > 0) {
+                active_btns[0].classList.remove('active');
             }
             actual_button.classList.add('active');
         } else if (actual_button.classList.contains(by_order_classname)) {
-            var activeBtns = document.getElementsByClassName(by_order_classname + ' active');
-            while (activeBtns.length > 0) {
-                activeBtns[0].classList.remove('active');
+            let active_btns = document.getElementsByClassName(by_order_classname + ' active');
+            while (active_btns.length > 0) {
+                active_btns[0].classList.remove('active');
             }
             actual_button.classList.add('active');
         }
-    }
-
-    /**
-     * Toggle the arrow icon
-     * @param {*} dropdownListBtn 
-     */
-    toggle_dropdown_list_arrow_icon(arrow_icon_in_dropdown_btn) {
-        if (arrow_icon_in_dropdown_btn.classList.contains('dropdown-list-is-visible')) {
-            arrow_icon_in_dropdown_btn.classList.remove('dropdown-list-is-visible');
-        } else {
-            arrow_icon_in_dropdown_btn.classList.add('dropdown-list-is-visible');
-        }
-    }
-
-    /**
-     * Either open or close a dropdown list
-     * @param {*} classname_of_list 
-     */
-    toggle_dropdown_list = (e, classname_of_list) => {
-        var dropdown_list = document.getElementsByClassName(classname_of_list + "")[0];
-        var dropdown_list_btn = document.getElementsByClassName(classname_of_list + "-btn")[0];
-        var arrow_icon_in_dropdown_btn = dropdown_list_btn.childNodes[1];
-
-        if (dropdown_list.classList.contains('visible')) {
-            dropdown_list.classList.remove('visible');
-            dropdown_list_btn.classList.remove('list-is-visible');
-            arrow_icon_in_dropdown_btn.classList.remove('dropdown-list-is-visible');
-        } else {
-            dropdown_list.classList.add('visible');
-            dropdown_list_btn.classList.add('list-is-visible');
-            arrow_icon_in_dropdown_btn.classList.add('dropdown-list-is-visible');
-        }
-
-        // close collapsed menu if user clicks out of it...
-        let item_to_hide = dropdown_list;
-        window.addEventListener('click', function(mouseEvent) {
-            remove_class_from_item_when_user_clicks_outside_of_item(item_to_hide, dropdown_list_btn, mouseEvent, 'visible');
-            remove_class_from_item_when_user_clicks_outside_of_item(arrow_icon_in_dropdown_btn, dropdown_list_btn, mouseEvent, 'dropdown-list-is-visible');
-            dropdown_list_btn.classList.remove('list-is-visible');
-        });
-        
-        // toggle arrow...
-        // this.toggle_dropdown_list_arrow_icon(arrow_icon_in_dropdown_btn);
-    }
-
-    /**
-     * Handle filter button toggling
-     * @param {*} target 
-     * @param {*} classname_of_buttons_in_this_dropdown_list 
-     * @returns Button the user clicked on
-     */
-    handle_filter_button_toggling_stuff(target, classname_of_buttons_in_this_dropdown_list) {
-        // make sure we actually find the button...
-        let actual_button = NaN;
-        if (target.tagName == "SPAN") {
-            // user clicked on text, bit fucking annoying
-            actual_button = target.parentElement;
-        } else {
-            // user clicked on button, well done
-            actual_button = target;
-        }
-
-        // remove .active from everything first... 
-        // This ensures only one filter is highlighted at a time...
-        // Dont do this if the actual button is inactive (i.e. nothing has been filtered yet)
-        if (!actual_button.classList.contains('active')) {
-            let dropdown_btns = document.querySelectorAll(classname_of_buttons_in_this_dropdown_list);
-            for (let i = 0; i < dropdown_btns.length; i++) {
-                dropdown_btns[i].classList.remove('active');
-            }
-        }
-
-        // return the button in the dropdown list that the user originally clicked
-        return actual_button;
     }
 
     /**
      * Filter list by specified genre
      * @param {*} e 
-     * @param {*} genre 
+     * @param {*} genre_selected 
      */
     filter_by_genre = (e, genre_selected) => {
         // do nothing if the language selected is already selected...
@@ -383,7 +307,7 @@ class Films extends React.Component {
                 return {
                     __filtered_data: Array.from(this.props.top_films)
                         .filter((f) => {
-                            if (genre_selected == this.state.__default_genre_filter) {
+                            if (genre_selected === this.state.__default_genre_filter) {
                                 return true;
                             }
                             let array_of_genres = Array.from(f.genres);
@@ -394,7 +318,7 @@ class Films extends React.Component {
             })
 
             // deal with button stuff...
-            let actual_button = this.handle_filter_button_toggling_stuff(e.target, '.films-filter-by-genre-btn');
+            let actual_button = handle_filter_button_toggling_stuff(e.target, '.films-filter-by-genre-btn');
             
             // toggle the .active class
             if (!actual_button.classList.contains('active')) {
@@ -412,7 +336,7 @@ class Films extends React.Component {
     /**
      * Filter list by language
      * @param {*} e 
-     * @param {*} language 
+     * @param {*} language_selected 
      */
     filter_by_language = (e, language_selected) => {
         // do nothing if the language selected is already selected...
@@ -424,22 +348,23 @@ class Films extends React.Component {
                 return {
                     __filtered_data: Array.from(this.props.top_films)
                         .filter((f) => {
-                            if (language_selected == this.state.__default_language_filter) {
+                            if (language_selected === this.state.__default_language_filter) {
                                 return true;
                             }
-                            return f.language == language_selected;
+                            return f.language === language_selected;
                         })
                         .sort((a,b) => {
-                            if (this.state.__current_sort_type == SortableType.IMDB_DIFF) {
+                            if (this.state.__current_sort_type === SortableType.IMDB_DIFF) {
                                 return (a["my_rating"] - a["IMDB_avg_rating"]) - (b["my_rating"] - b["IMDB_avg_rating"])
                             }
+                            return null;
                         })
                         .reverse()
                 }
             })
 
             // deal with button stuff...
-            let actual_button = this.handle_filter_button_toggling_stuff(e.target, '.films-filter-by-language-btn');
+            let actual_button = handle_filter_button_toggling_stuff(e.target, '.films-filter-by-language-btn');
 
             // toggle the .active class
             if (!actual_button.classList.contains('active')) {
@@ -464,7 +389,7 @@ class Films extends React.Component {
         this.setState({__search_text: e.target.value});
         
         // no text is in the searchbox, so set state to false
-        if (text.length == 0) {
+        if (text.length === 0) {
             this.setState({__search_box_contains_text: false});
         }
         // there's some text in the searchbox, so set state to true
@@ -484,7 +409,7 @@ class Films extends React.Component {
 
     /**
      * Change view type
-     * @param {*} viewType 
+     * @param {*} selected_view_type 
      */
     change_view = (e, selected_view_type) => {
         let toplist = document.getElementsByClassName('films-toplist')[0];
@@ -494,11 +419,11 @@ class Films extends React.Component {
         let actual_button = get_actual_button(e.target, tag_name);
 
         // change view type in state and html...
-        if (selected_view_type == ViewType.LIST) {
+        if (selected_view_type === ViewType.LIST) {
             this.setState({__view_type: ViewType.LIST});
             toplist.classList.add('view-as-list');
             toplist.classList.remove('view-as-grid');
-        } else if (selected_view_type == ViewType.GRID) {
+        } else if (selected_view_type === ViewType.GRID) {
             this.setState({__view_type: ViewType.GRID});
             toplist.classList.remove('view-as-list');
             toplist.classList.add('view-as-grid');
@@ -539,7 +464,7 @@ class Films extends React.Component {
      * @param {*} e 
      */
     toggle_controls = (e) => {
-        let toggle_controls_btn = document.getElementsByClassName('toggle-controls-btn')[0];
+        // let toggle_controls_btn = document.getElementsByClassName('toggle-controls-btn')[0];
         let films_controls = document.getElementsByClassName('films-controls')[0];
 
         if (films_controls.classList.contains('visible')) {
@@ -560,7 +485,7 @@ class Films extends React.Component {
         const poster_urls = get_list_of_poster_urls(this.state.__filtered_data);
 
         // determine view type classname
-        const view_type_classname = (this.state.__view_type == ViewType.GRID) ? "view-as-grid" : "view-as-list";
+        const view_type_classname = (this.state.__view_type === ViewType.GRID) ? "view-as-grid" : "view-as-list";
 
         // get items for current page...
         const films_displayed = this.state.__filtered_data
@@ -579,7 +504,7 @@ class Films extends React.Component {
                 let title = override_film_title(film);
 
                 // display as list (default) or grid
-                if (this.state.__view_type == ViewType.LIST) {
+                if (this.state.__view_type === ViewType.LIST) {
                     return <FilmsToplistListElement 
                         review_id={review_id}
                         poster_url={poster_url}
@@ -591,7 +516,7 @@ class Films extends React.Component {
                         index={i} 
                         key={i} 
                     />;
-                } else if (this.state.__view_type == ViewType.GRID) {
+                } else if (this.state.__view_type === ViewType.GRID) {
                     return <FilmsToplistGridElement
                         review_id={review_id}
                         poster_url={poster_url}
@@ -604,21 +529,23 @@ class Films extends React.Component {
                         key={i} 
                     />;
                 }
+
+                return null;
             });
         
         // get string representations...
         let current_sort_type_str = "";
-        if (this.state.__current_sort_type == SortableType.MY_POS) {
+        if (this.state.__current_sort_type === SortableType.MY_POS) {
             current_sort_type_str = SortableTypeStr.MY_POS;
-        } else if (this.state.__current_sort_type == SortableType.IMDB_AVG) {
+        } else if (this.state.__current_sort_type === SortableType.IMDB_AVG) {
             current_sort_type_str = SortableTypeStr.IMDB_AVG;
-        } else if (this.state.__current_sort_type == SortableType.IMDB_VOTES) {
+        } else if (this.state.__current_sort_type === SortableType.IMDB_VOTES) {
             current_sort_type_str = SortableTypeStr.IMDB_VOTES;
-        } else if (this.state.__current_sort_type == SortableType.IMDB_DIFF) {
+        } else if (this.state.__current_sort_type === SortableType.IMDB_DIFF) {
             current_sort_type_str = SortableTypeStr.IMDB_DIFF;
-        } else if (this.state.__current_sort_type == SortableType.DURATION) {
+        } else if (this.state.__current_sort_type === SortableType.DURATION) {
             current_sort_type_str = SortableTypeStr.DURATION;
-        } else if (this.state.__current_sort_type == SortableType.YEAR) {
+        } else if (this.state.__current_sort_type === SortableType.YEAR) {
             current_sort_type_str = SortableTypeStr.YEAR;
         }
 
@@ -646,12 +573,12 @@ class Films extends React.Component {
                             </div>
                             <div className='films-controls-subgroup changeViewOfToplist-container'>
                                 <div className='changeViewOfToplist-btns'>
-                                    <div className={this.state.__view_type == ViewType.LIST ? 'btn films-change-view-btn active' : 'btn films-change-view-btn'}
+                                    <div className={this.state.__view_type === ViewType.LIST ? 'btn films-change-view-btn active' : 'btn films-change-view-btn'}
                                         onClick={(e) => this.change_view(e, ViewType.LIST)}
                                         title="View as list">
                                         <ViewAsListIcon className='invertable-icon' />
                                     </div>
-                                    <div className={this.state.__view_type == ViewType.GRID ? 'btn films-change-view-btn active' : 'btn films-change-view-btn'}
+                                    <div className={this.state.__view_type === ViewType.GRID ? 'btn films-change-view-btn active' : 'btn films-change-view-btn'}
                                         onClick={(e) => this.change_view(e, ViewType.GRID)}
                                         title="View as grid">
                                         <ViewAsGridIcon className='invertable-icon' />
@@ -660,7 +587,7 @@ class Films extends React.Component {
                             </div>
                             <div className='films-controls-subgroup sorting-container'>
                                 <div className='sort-type-btns'>
-                                    <div className='dropdown-list-sorting-btn dropdown-list-btn' onClick={(e) => this.toggle_dropdown_list(e, 'dropdown-list-sorting')}>
+                                    <div className='dropdown-list-sorting-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-sorting')}>
                                         <span>{current_sort_type_str}</span>
                                         <ArrowDownIcon className='invertable-icon' />
                                     </div>
@@ -701,7 +628,7 @@ class Films extends React.Component {
                             </div>
                             <div className='films-controls-subgroup filtering-container'>
                                 <div className='filter-by-genre-btns filter-by-something-container'>
-                                    <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={(e) => this.toggle_dropdown_list(e, 'dropdown-list-genres')}>
+                                    <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-genres')}>
                                         <span>{this.state.__current_genre_filter}</span>
                                         <ArrowDownIcon className='invertable-icon' />
                                     </div>
@@ -715,7 +642,7 @@ class Films extends React.Component {
                                                     </span>
                                                     <span className='genre-count'>
                                                         {Array.from(this.props.top_films).filter((f) => {
-                                                            if (g == this.state.__default_genre_filter) {
+                                                            if (g === this.state.__default_genre_filter) {
                                                                 return Array.from(f.genres)
                                                             }
                                                             return Array.from(f.genres).includes(g);
@@ -727,7 +654,7 @@ class Films extends React.Component {
                                     </div>
                                 </div>
                                 <div className='filter-by-language-btns filter-by-something-container'>
-                                    <div className='dropdown-list-languages-btn dropdown-list-btn' onClick={(e) => this.toggle_dropdown_list(e, 'dropdown-list-languages')}>
+                                    <div className='dropdown-list-languages-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-languages')}>
                                         <span>{this.state.__current_language_filter}</span>
                                         <ArrowDownIcon className='invertable-icon' />
                                     </div>
@@ -735,13 +662,13 @@ class Films extends React.Component {
                                         <div className='dropdown-list-title'>Filter by language...</div>
                                         {
                                             languages.map((l => {
-                                                return <div className="btn films-filter-by-language-btn" key={l} onClick={(e) => this.filterByLanguage(e, l)}>
+                                                return <div className="btn films-filter-by-language-btn" key={l} onClick={(e) => this.filter_by_language(e, l)}>
                                                     <span className='language-text'>
                                                         {l}
                                                     </span>
                                                     <span className='language-count'>
                                                         {Array.from(this.props.top_films).filter((f) => {
-                                                            if (l == this.state.__default_language_filter) {
+                                                            if (l === this.state.__default_language_filter) {
                                                                 return f.language;
                                                             }
                                                             return f.language.includes(l);

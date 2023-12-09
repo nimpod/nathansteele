@@ -281,6 +281,7 @@ export function remove_genre_duplicates(films_list, default_genre) {
         film.genres.map((g => {
             unique_genres.add(g);
         }));
+        return null;
     }));
 
     // sort the set alphabetically, cause why not.
@@ -302,6 +303,7 @@ export function remove_language_duplicates(films_list, default_language) {
     // store each language once...
     films_list.map((film => {
         unique_languages.add(film.language);
+        return null;
     }));
 
     // sort the set alphabetically, cause why not.
@@ -375,21 +377,119 @@ export function get_random_RGBA(opacity) {
 
 /**
  * Hide something when a user clicks outside the item
- * @param {*} itemToRemoveClassFrom 
- * @param {*} itemClickedBefore 
+ * @param {*} item_to_remove_class_from 
+ * @param {*} item_clicked_before 
  * @param {*} mouseEvent 
- * @param {*} classNameToRemove
+ * @param {*} classname_to_remove
  */
 export function remove_class_from_item_when_user_clicks_outside_of_item(item_to_remove_class_from, item_clicked_before, mouseEvent, classname_to_remove) {
     window.addEventListener('click', function(mouseEvent) {   
         if (item_clicked_before.contains(mouseEvent.target)) {
             // clicked item_clicked_before (e.g. button)
+            return true;
         } else {
             // otherwise we must of clicked outside the itemToRemoveClassFrom
             console.log('Clicked outside input box...')
             item_to_remove_class_from.classList.remove(classname_to_remove);
+            return false;
         }
     });
+}
+
+/**
+ * Either open or close a dropdown list
+ * @param {*} classname_of_list 
+ */
+export const toggle_dropdown_list = (e, classname_of_list) => {
+    let dropdown_list = document.getElementsByClassName(classname_of_list + "")[0];
+    let dropdown_list_btn = document.getElementsByClassName(classname_of_list + "-btn")[0];
+    let arrow_icon_in_dropdown_btn = dropdown_list_btn.childNodes[1];
+    // console.log(dropdown_list_btn);
+
+    if (dropdown_list.classList.contains('visible')) {
+        dropdown_list.classList.remove('visible');
+        dropdown_list_btn.classList.remove('list-is-visible');
+        arrow_icon_in_dropdown_btn.classList.remove('dropdown-list-is-visible');
+    } else {
+        dropdown_list.classList.add('visible');
+        dropdown_list_btn.classList.add('list-is-visible');
+        arrow_icon_in_dropdown_btn.classList.add('dropdown-list-is-visible');
+    }
+
+    // close collapsed menu if user clicks out of it...
+    window.addEventListener('click', function(mouseEvent) {
+        // hide dropdown list when user clicks outside of btn...
+        remove_class_from_item_when_user_clicks_outside_of_item(
+            dropdown_list,
+            dropdown_list_btn,
+            mouseEvent,
+            'visible'
+        );
+
+        // rotate arrow icon when user clicks outside of btn...
+        remove_class_from_item_when_user_clicks_outside_of_item(
+            arrow_icon_in_dropdown_btn, 
+            dropdown_list_btn,
+            mouseEvent,
+            'dropdown-list-is-visible'
+        );
+
+        // deactivate btn when user clicks outside of btn...
+        remove_class_from_item_when_user_clicks_outside_of_item(
+            dropdown_list_btn,
+            dropdown_list_btn,
+            mouseEvent,
+            'list-is-visible'
+        );
+    });
+
+    return null;
+    
+    // toggle arrow...
+    // this.toggle_dropdown_list_arrow_icon(arrow_icon_in_dropdown_btn);
+}
+
+/**
+ * Toggle the arrow icon
+ * @param {*} arrow_icon_in_dropdown_btn 
+ */
+export function toggle_dropdown_list_arrow_icon(arrow_icon_in_dropdown_btn) {
+    if (arrow_icon_in_dropdown_btn.classList.contains('dropdown-list-is-visible')) {
+        arrow_icon_in_dropdown_btn.classList.remove('dropdown-list-is-visible');
+    } else {
+        arrow_icon_in_dropdown_btn.classList.add('dropdown-list-is-visible');
+    }
+}
+
+/**
+ * Handle filter button toggling
+ * @param {*} target 
+ * @param {*} classname_of_buttons_in_this_dropdown_list 
+ * @returns Button the user clicked on
+ */
+export function handle_filter_button_toggling_stuff(target, classname_of_buttons_in_this_dropdown_list) {
+    // make sure we actually find the button...
+    let actual_button = NaN;
+    if (target.tagName === "SPAN") {
+        // user clicked on text, bit fucking annoying
+        actual_button = target.parentElement;
+    } else {
+        // user clicked on button, well done
+        actual_button = target;
+    }
+
+    // remove .active from everything first... 
+    // This ensures only one filter is highlighted at a time...
+    // Dont do this if the actual button is inactive (i.e. nothing has been filtered yet)
+    if (!actual_button.classList.contains('active')) {
+        let dropdown_btns = document.querySelectorAll(classname_of_buttons_in_this_dropdown_list);
+        for (let i = 0; i < dropdown_btns.length; i++) {
+            dropdown_btns[i].classList.remove('active');
+        }
+    }
+
+    // return the button in the dropdown list that the user originally clicked
+    return actual_button;
 }
 
 
