@@ -1,7 +1,7 @@
 import requests
-from LastFmHelpers import LASTFM_API_METHODS
-from LastFmHelpers import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
-from Helpers import pretty_print_json
+from lastfm_helpers import LASTFM_API_METHODS
+from lastfm_helpers import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
+from helpers import pretty_print_json
 
 
 class LastFM:
@@ -72,7 +72,7 @@ class LastFM:
         # pretty_print_json(r.json())
         return r.json()
     
-    def GET_track_info(self, artist_name, track_name, mbid=""):
+    def GET_track_info(self, artist_name="", track_name="", mbid=""):
         """Get info about a track
 
         Args:
@@ -92,7 +92,7 @@ class LastFM:
         # pretty_print_json(r.json())
         return r.json()
     
-    def GET_my_top_tracks(self, period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.OVERALL.value, limit=50):
+    def GET_my_top_tracks(self, period, limit):
         """Get my top tracks
 
         Args:

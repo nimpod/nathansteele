@@ -1,5 +1,4 @@
 import os
-import json
 
 from LastFm import LastFM
 from LastFm import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
@@ -139,6 +138,7 @@ def get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.ALL_TIME, limit=10)
     # add to this list...
     tracks = []
     
+    print(period.value)
     # GET request...
     data = lastfm.GET_my_top_tracks(period=period.value, limit=limit)
     
