@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c0df494274fa5931a369fb35eca2660",
+    "revision": "ee92438eac8bdd901a22edb7e817925f",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "5f13f8f25a1309be69e0",
+    "revision": "6acd88d4c5631d78dfb3",
     "url": "/nathansteele/static/css/main.bc369ebc.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.78577f33.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5f13f8f25a1309be69e0",
-    "url": "/nathansteele/static/js/main.2d888aa1.chunk.js"
+    "revision": "6acd88d4c5631d78dfb3",
+    "url": "/nathansteele/static/js/main.bd40c3aa.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -70,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "edf2351a614c072644366e790e474367",
     "url": "/nathansteele/static/media/cross.edf2351a.svg"
+  },
+  {
+    "revision": "68e3c996e0ac29ded0c3f9091d90b643",
+    "url": "/nathansteele/static/media/custom_album_cover.68e3c996.jpg"
   },
   {
     "revision": "16ea42a22e89d35f7f5ca3f8409067cd",

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nathansteele/static/css/main.bc369ebc.chunk.css",
-    "main.js": "/nathansteele/static/js/main.2d888aa1.chunk.js",
-    "main.js.map": "/nathansteele/static/js/main.2d888aa1.chunk.js.map",
+    "main.js": "/nathansteele/static/js/main.bd40c3aa.chunk.js",
+    "main.js.map": "/nathansteele/static/js/main.bd40c3aa.chunk.js.map",
     "runtime-main.js": "/nathansteele/static/js/runtime-main.a2f3e498.js",
     "runtime-main.js.map": "/nathansteele/static/js/runtime-main.a2f3e498.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/nathansteele/static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.78577f33.chunk.js": "/nathansteele/static/js/2.78577f33.chunk.js",
     "static/js/2.78577f33.chunk.js.map": "/nathansteele/static/js/2.78577f33.chunk.js.map",
     "index.html": "/nathansteele/index.html",
-    "precache-manifest.a02084c648e8da073bc7db4719dd3671.js": "/nathansteele/precache-manifest.a02084c648e8da073bc7db4719dd3671.js",
+    "precache-manifest.600fc22cc3f7bd65101811c97de06869.js": "/nathansteele/precache-manifest.600fc22cc3f7bd65101811c97de06869.js",
     "service-worker.js": "/nathansteele/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/nathansteele/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.bc369ebc.chunk.css.map": "/nathansteele/static/css/main.bc369ebc.chunk.css.map",
@@ -25,6 +25,7 @@
     "static/media/casiobasic.png": "/nathansteele/static/media/casiobasic.4c17871b.png",
     "static/media/controls.025c722c.svg": "/nathansteele/static/media/controls.025c722c.svg",
     "static/media/cross.edf2351a.svg": "/nathansteele/static/media/cross.edf2351a.svg",
+    "static/media/custom_album_cover.jpg": "/nathansteele/static/media/custom_album_cover.68e3c996.jpg",
     "static/media/custom_poster.jpg": "/nathansteele/static/media/custom_poster.f416105d.jpg",
     "static/media/custom_poster.png": "/nathansteele/static/media/custom_poster.6affc014.png",
     "static/media/d3.PNG": "/nathansteele/static/media/d3.6f9afe9d.PNG",
@@ -84,6 +85,6 @@
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.78577f33.chunk.js",
     "static/css/main.bc369ebc.chunk.css",
-    "static/js/main.2d888aa1.chunk.js"
+    "static/js/main.bd40c3aa.chunk.js"
   ]
 }
