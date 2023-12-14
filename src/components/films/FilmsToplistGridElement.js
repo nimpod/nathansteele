@@ -31,7 +31,7 @@ class FilmsToplistGridElement extends Component {
     render() {
         return (
             <div className='films-toplist-item'>
-                <Link to={'/films/' + this.props.reviewId}>
+                <Link to={'/films/' + this.props.review_id}>
                     <PosterImage 
                         key={this.props.poster_url}
                         src={this.props.poster_url}

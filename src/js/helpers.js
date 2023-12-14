@@ -497,7 +497,7 @@ export function handle_filter_button_toggling_stuff(target, classname_of_buttons
  * Convert local data JSON objects, into one list
  * @returns Array
  */
-export function convert_collection_of_json_objects_to_one_list(data) {
+export function convert_collection_of_json_objects_to_one_list_grouped_by_letters(data) {
     const local_data_array = [];
 
     // itearate over local data...
@@ -513,4 +513,21 @@ export function convert_collection_of_json_objects_to_one_list(data) {
 
     return local_data_array;
 }
-  
+
+
+/**
+ * 
+ * @param {*} data 
+ * @returns 
+ */
+export function convert_collection_of_json_objects_to_one_list(data) {
+    const local_data_array = [];
+
+    // itearate over local data...
+    Object.entries(data).forEach((review) => {
+        const _review = review[1];
+        local_data_array.push(_review);
+    });
+
+    return local_data_array;
+}

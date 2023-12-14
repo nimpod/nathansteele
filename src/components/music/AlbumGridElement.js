@@ -7,7 +7,7 @@ import { ReactComponent as ToplistRatingIcon } from "../../icons/toplistRating.s
 class AlbumGridElement extends Component {
     render() {
         let album_cover_url = ""
-        // console.log(this.props.album);
+        //console.log(this.props.album);
 
         // use custom album cover url if it exists...
         if (this.props.album.custom_cover_url !== undefined) {

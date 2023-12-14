@@ -4,7 +4,7 @@
  */
 
 import ReactDomServer from 'react-dom/server';
-import { convert_collection_of_json_objects_to_one_list } from '../../js/helpers.js';
+import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../js/helpers.js';
 
 import { review as AGhostStoryReview } from '../websiteContent/films/a_ghost_story/review.jsx';
 import { review as ChildrenOfTheSeaReview } from '../websiteContent/films/children_of_the_sea/review.jsx';
@@ -3492,4 +3492,4 @@ const database = {
 }
 
 
-export const film_reviews = convert_collection_of_json_objects_to_one_list(database);
+export const film_reviews = convert_collection_of_json_objects_to_one_list_grouped_by_letters(database);
