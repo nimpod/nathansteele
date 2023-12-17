@@ -123,6 +123,12 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    THE_DOG_OF_FLANDERS: [
+        require('../websiteContent/films/the_dog_of_flanders/screenshot1.PNG'),
+        require('../websiteContent/films/the_dog_of_flanders/screenshot6.PNG'),
+        require('../websiteContent/films/the_dog_of_flanders/screenshot24.PNG'),
+    ],
+
     TONY_TAKITANI: [
         require('../websiteContent/films/tony_takitani/screenshot1.PNG'),
         require('../websiteContent/films/tony_takitani/screenshot3.PNG'),
@@ -398,6 +404,21 @@ const database = {
     },
 
     THE: {
+        "the_dog_of_flanders": {
+            "letterboxd_url": "https://boxd.it/HVe",
+            "my_rating": 8.0,
+            "title": "The Dog of Flanders",
+            "custom_poster_url": "https://www.themoviedb.org/t/p/original/nUWxMi30IGkesljk6v6upnUX7lv.jpg",
+            "screenshots": screenshots.THE_DOG_OF_FLANDERS,
+            "my_tags": [
+                "Friendship",
+                "Kindness",
+                "Embrace mother nature",
+                "Intimate",
+                "Great soundtrack",
+            ],
+        },
+        
         "the_secret_world_of_arrietty": {
             "my_rating": 9.0,
             "letterboxd_url": "https://boxd.it/AF4",
