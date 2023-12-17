@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4564e55d78f7fb3265929a6e0086b326",
+    "revision": "acc6341a8548c6c5c533047313854742",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "749bbf856f59c86b955f",
+    "revision": "af2f3133a250d772e78f",
     "url": "/nathansteele/static/css/main.ff5b13d0.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.78577f33.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "749bbf856f59c86b955f",
-    "url": "/nathansteele/static/js/main.0332b9ac.chunk.js"
+    "revision": "af2f3133a250d772e78f",
+    "url": "/nathansteele/static/js/main.74862a5c.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -236,6 +236,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/screenshot1.84588f90.webp"
   },
   {
+    "revision": "8f7668e7eec8544e42914349b16a4dbe",
+    "url": "/nathansteele/static/media/screenshot1.8f7668e7.PNG"
+  },
+  {
     "revision": "b659c2597f0f3c5c5dca35dc8822ee8b",
     "url": "/nathansteele/static/media/screenshot1.b659c259.webp"
   },
@@ -370,6 +374,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e94c4a94734b1ae2254f5b0d100c0465",
     "url": "/nathansteele/static/media/screenshot2.e94c4a94.webp"
+  },
+  {
+    "revision": "af26bda8cd47f64fed1371c1df318859",
+    "url": "/nathansteele/static/media/screenshot24.af26bda8.PNG"
   },
   {
     "revision": "012bf7cc30d3390b6f068662b071a7bc",
@@ -534,6 +542,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "acba86c89f76cfdda8bdccbc3fc2fe2b",
     "url": "/nathansteele/static/media/screenshot6.acba86c8.PNG"
+  },
+  {
+    "revision": "adf009225909726bc4c9e2013d2fe0ee",
+    "url": "/nathansteele/static/media/screenshot6.adf00922.PNG"
   },
   {
     "revision": "08dbfbde1d2995773357453ec4e32e34",
