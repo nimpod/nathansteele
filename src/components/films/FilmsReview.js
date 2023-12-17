@@ -54,7 +54,6 @@ class FilmsReview extends React.Component {
             <div className="page-wrapper film-review">
                 <div className="section-inner">
                     <div className='review-displayed'>
-
                         {/* Poster */}
                         <div className='review-filmPoster'>
                             <picture className='filmPoster'>
@@ -78,9 +77,7 @@ class FilmsReview extends React.Component {
                             */}
                             <Link to='/films' className="custom-btn-1 back-to-previous-page" title="Back to toplist">
                                 <ArrowLeftV2 className="invertable-icon" />
-                                {/*} 
-                                <span>Back to toplist</span>
-                                */}
+                                {/*} <span>Back to toplist</span> */}
                             </Link>
 
                             {/* Film details */}
@@ -114,13 +111,13 @@ class FilmsReview extends React.Component {
                                         </div>
                                     </div>
                                     <div className='film-details-myData'>
-                                        <div className='filmPosition generic-hover' title='Position in my list'>
+                                        <div className='myPosition generic-hover' title='Position in my toplist'>
                                             <Link to='/films'>
                                                 <span>#{this.props.film.position}</span>
                                                 <span>in my toplist</span>
                                             </Link>
                                         </div>
-                                        <div className='filmMyRating' title='My rating'>
+                                        <div className='myRating' title='My rating'>
                                             <span>{this.props.film.my_rating}</span>
                                         </div>
                                     </div>

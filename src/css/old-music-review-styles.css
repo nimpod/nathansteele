@@ -1,0 +1,184 @@
+
+/* #region -----------------------------------<12: MUSIC REVIEW PAGE>---------------------------------- */
+
+.album-review-displayed {
+    display: grid;
+    grid-template-columns: 3fr 0.2fr 10fr 0.2fr;
+  }
+  
+  .album-review-displayed .album-info {
+    
+  }
+  
+  
+  /* actual review content */
+  .album-review .review-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+  
+  .album-review-displayed .album-info {
+    padding: 50px 20px; 
+  }
+  
+  .album-review-displayed > .album-info span {
+    color: var(--text);
+  }
+  .album-review-displayed > .album-info > span {
+    display: block;
+  }
+  
+  .album-review-displayed .album-info > div {
+    margin-top: 10px;
+  }
+  
+  /* Artist name */
+  .album-review-displayed > .album-info > span.artist-name {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  
+  /* Album name */
+  .album-review-displayed > .album-info > span.album-name {
+    font-size: 1.0rem;
+  }
+  
+  .album-review-displayed > .album-info > div > p {
+    display: inline-block;
+    color: var(--text-darker);
+    font-size: 0.6rem;
+    margin-right: 5px;
+  }
+  
+  /* Year */
+  .album-review-displayed > .album-info > div.year-of-release > span {
+    border-radius: 10px;
+    background-color: rgb(63, 62, 62);
+    display: inline-block;
+    padding: 2px 8px;
+  }
+  
+  .album-review-displayed > .album-info > div.list-of-tags > span {
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50px;
+    padding: 1px 5px;
+    font-size: 0.65rem;
+    cursor: pointer;
+  }
+  
+  /* Genre label */
+  .album-review span.genre-text {
+    background-color: rgba(47, 120, 176, 0.5);
+  }
+  span.theme-text {
+    background-color: rgba(223, 81, 226, 0.529);
+  }
+  
+  :root {
+    --album-cover-width: 450px;
+  }
+  
+  /* Album cover */
+  .album-review-displayed > .album-info > img {
+    width: var(--album-cover-width);
+  }
+  
+  /* Back to previous page button */
+  .album-review-displayed .back-to-previous-page {
+    margin-left: 0px;
+    margin-top: -30px;
+  }
+  
+  .album-review-displayed > .album-info .album-dataContainer {
+    margin-bottom: 30px;
+  }
+  
+  
+  /* My rating */
+  .album-review-displayed > .album-info .my-rating {
+    position: absolute;
+    margin-left: calc(var(--album-cover-width) - 80px);
+    font-size: 1.7rem;
+    border-radius: 100%;
+    background-color: rgb(100, 29, 151);
+    border: 3px solid transparent;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 12px;
+    user-select: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  .album-review-displayed > .album-info .my-rating:hover {
+    background-color: rgb(147, 63, 208);
+    cursor: pointer;
+  }
+  .album-review-displayed > .album-info .my-rating > span {
+  
+  }
+  
+  
+  /* My position in toplist */
+  .album-review-displayed > .album-info .my-pos {
+    width: fit-content;
+    border-radius: 5px;
+    background-color: rgb(47, 137, 104);
+    border: 3px solid transparent;
+    padding: 0px 5px;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .album-review-displayed > .album-info .my-pos > a {
+    color: var(--text) !important;
+  }
+  .album-review-displayed > .album-info .my-pos:hover {
+    background-color: rgb(63, 169, 132);
+  }
+  .album-review-displayed > .album-info .my-pos:active,
+  .album-review-displayed > .album-info .my-pos:active {
+    transition: all ease 0.2s;
+    border: 3px solid rgba(209, 209, 209, 0.486);
+  }
+  
+  
+  .album-review-displayed .tracks {
+    display: flex;
+    flex-direction: column;
+  }
+  .album-review-displayed .tracks > span {
+    color: rgb(130, 121, 121);
+  }
+  
+  
+  /*  */
+  .album-review-displayed div.next-review-link > a {
+    right: 2px;
+  }
+  
+  .album-review-displayed div.next-review-link > a,
+  .album-review-displayed div.prev-review-link > a {
+    display: block;
+    position: fixed;
+    font-size: 3rem;
+    color: var(--text) !important;
+  }
+  .album-review-displayed div.next-review-link > a > p,
+  .album-review-displayed div.prev-review-link > a > p {
+    height: 100vh;
+    margin-top: 50vh;
+  }
+  .album-review-displayed div.next-review-link:hover,
+  .album-review-displayed div.prev-review-link:hover {
+    background-color: #3f4144;
+  }
+  
+  
+  /* #endregion */
+  
+  

@@ -7,6 +7,7 @@ import { ReactComponent as ToplistRatingIcon } from "../../icons/toplistRating.s
 class AlbumGridElement extends Component {
     render() {
         let album_cover_url = ""
+        let artist_name = this.props.album.artist_name;
         //console.log(this.props.album);
 
         // use custom album cover url if it exists...
@@ -18,6 +19,14 @@ class AlbumGridElement extends Component {
             album_cover_url = this.props.album.album_cover_url;
         }
         
+        // use English name if it exists...
+        if (this.props.album.artist_name_English) {
+            artist_name = this.props.album.artist_name_displayed;
+        }
+        if (this.props.album.artist_name_Japanese) {
+            artist_name = this.props.album.artist_name_displayed;
+        }
+
         // console.log(this.props);
         return(
             <Link to={'/music/' + this.props.album.review_id}>
@@ -25,7 +34,7 @@ class AlbumGridElement extends Component {
                     <img className='albumCover' src={album_cover_url} alt="Album cover"></img>
                     <div className='albumInfo'>
                         <div className='artistName'>
-                            <p>{this.props.album.artist_name}</p>
+                            <p>{artist_name}</p>
                         </div>
                         <div className='albumName'>
                             <p>{this.props.album.album_name}</p>

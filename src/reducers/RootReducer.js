@@ -116,6 +116,14 @@ const merge_albums_data = (init_state) => {
         }
         v["review_id_of_next_album"] = reviewIdOfNextAlbum;
         v["review_id_of_prev_album"] = reviewIdOfPrevAlbum;
+
+        if (v["artist_name_English"]) {
+            v["artist_name_displayed"] = v["artist_name_English"] + " [" + v["artist_name"] + "]";
+        } 
+        
+        if (v["artist_name_Japanese"]) {
+            v["artist_name_displayed"] = v["artist_name"] + " [" + v["artist_name_Japanese"] + "]";
+        }
     });
 
     return mergedData;
