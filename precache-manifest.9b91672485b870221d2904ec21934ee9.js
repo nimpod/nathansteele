@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "acc6341a8548c6c5c533047313854742",
+    "revision": "29d749fa11b0dead7b1830207c38458d",
     "url": "/nathansteele/index.html"
   },
   {
-    "revision": "f2f83b4138e655914d02",
+    "revision": "bed405b9e605bcb16a5e",
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "af2f3133a250d772e78f",
-    "url": "/nathansteele/static/css/main.ff5b13d0.chunk.css"
+    "revision": "448f2a8e6c310eb9438a",
+    "url": "/nathansteele/static/css/main.426efcd3.chunk.css"
   },
   {
-    "revision": "f2f83b4138e655914d02",
-    "url": "/nathansteele/static/js/2.78577f33.chunk.js"
+    "revision": "bed405b9e605bcb16a5e",
+    "url": "/nathansteele/static/js/2.4f57fac7.chunk.js"
   },
   {
     "revision": "074ec3c156c22b67d041e77ad5bb7be1",
-    "url": "/nathansteele/static/js/2.78577f33.chunk.js.LICENSE.txt"
+    "url": "/nathansteele/static/js/2.4f57fac7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "af2f3133a250d772e78f",
-    "url": "/nathansteele/static/js/main.74862a5c.chunk.js"
+    "revision": "448f2a8e6c310eb9438a",
+    "url": "/nathansteele/static/js/main.a13b6f06.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -578,6 +578,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f4e5e96ae063e943faf3d5b128d96a76",
     "url": "/nathansteele/static/media/screenshot8.f4e5e96a.webp"
+  },
+  {
+    "revision": "0dd063fe7fc67b446fbf7c868b954a47",
+    "url": "/nathansteele/static/media/scrobbles-per-month-graph.0dd063fe.PNG"
+  },
+  {
+    "revision": "24fe6bf0dc80913b161913043ea3f4c5",
+    "url": "/nathansteele/static/media/scrobbles-per-month-graph.24fe6bf0.PNG"
+  },
+  {
+    "revision": "7d6f3c554aa4617d57eda9160e84507d",
+    "url": "/nathansteele/static/media/scrobbles-per-month-graph.7d6f3c55.PNG"
   },
   {
     "revision": "87d0340e150028391e51a45dcf457f6f",

@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/nathansteele/static/css/main.ff5b13d0.chunk.css",
-    "main.js": "/nathansteele/static/js/main.74862a5c.chunk.js",
-    "main.js.map": "/nathansteele/static/js/main.74862a5c.chunk.js.map",
+    "main.css": "/nathansteele/static/css/main.426efcd3.chunk.css",
+    "main.js": "/nathansteele/static/js/main.a13b6f06.chunk.js",
+    "main.js.map": "/nathansteele/static/js/main.a13b6f06.chunk.js.map",
     "runtime-main.js": "/nathansteele/static/js/runtime-main.a2f3e498.js",
     "runtime-main.js.map": "/nathansteele/static/js/runtime-main.a2f3e498.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/nathansteele/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.78577f33.chunk.js": "/nathansteele/static/js/2.78577f33.chunk.js",
-    "static/js/2.78577f33.chunk.js.map": "/nathansteele/static/js/2.78577f33.chunk.js.map",
+    "static/js/2.4f57fac7.chunk.js": "/nathansteele/static/js/2.4f57fac7.chunk.js",
+    "static/js/2.4f57fac7.chunk.js.map": "/nathansteele/static/js/2.4f57fac7.chunk.js.map",
     "index.html": "/nathansteele/index.html",
-    "precache-manifest.3d36cf2a320ca8166e289538dff6f232.js": "/nathansteele/precache-manifest.3d36cf2a320ca8166e289538dff6f232.js",
+    "precache-manifest.9b91672485b870221d2904ec21934ee9.js": "/nathansteele/precache-manifest.9b91672485b870221d2904ec21934ee9.js",
     "service-worker.js": "/nathansteele/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/nathansteele/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.ff5b13d0.chunk.css.map": "/nathansteele/static/css/main.ff5b13d0.chunk.css.map",
-    "static/js/2.78577f33.chunk.js.LICENSE.txt": "/nathansteele/static/js/2.78577f33.chunk.js.LICENSE.txt",
+    "static/css/main.426efcd3.chunk.css.map": "/nathansteele/static/css/main.426efcd3.chunk.css.map",
+    "static/js/2.4f57fac7.chunk.js.LICENSE.txt": "/nathansteele/static/js/2.4f57fac7.chunk.js.LICENSE.txt",
     "static/media/arrowDown.99634c62.svg": "/nathansteele/static/media/arrowDown.99634c62.svg",
     "static/media/arrowLeft.dcf9277b.svg": "/nathansteele/static/media/arrowLeft.dcf9277b.svg",
     "static/media/arrowLeftV2.5d47cef3.svg": "/nathansteele/static/media/arrowLeftV2.5d47cef3.svg",
@@ -71,6 +71,7 @@
     "static/media/screenshot7.webp": "/nathansteele/static/media/screenshot7.d9d1d1b8.webp",
     "static/media/screenshot8.PNG": "/nathansteele/static/media/screenshot8.93a2ce88.PNG",
     "static/media/screenshot8.webp": "/nathansteele/static/media/screenshot8.f4e5e96a.webp",
+    "static/media/scrobbles-per-month-graph.PNG": "/nathansteele/static/media/scrobbles-per-month-graph.7d6f3c55.PNG",
     "static/media/showGrid.87d0340e.svg": "/nathansteele/static/media/showGrid.87d0340e.svg",
     "static/media/showList.0926f19d.svg": "/nathansteele/static/media/showList.0926f19d.svg",
     "static/media/sortAscending.34d1bb60.svg": "/nathansteele/static/media/sortAscending.34d1bb60.svg",
@@ -84,8 +85,8 @@
   "entrypoints": [
     "static/js/runtime-main.a2f3e498.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.78577f33.chunk.js",
-    "static/css/main.ff5b13d0.chunk.css",
-    "static/js/main.74862a5c.chunk.js"
+    "static/js/2.4f57fac7.chunk.js",
+    "static/css/main.426efcd3.chunk.css",
+    "static/js/main.a13b6f06.chunk.js"
   ]
 }
