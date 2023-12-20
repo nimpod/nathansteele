@@ -206,7 +206,7 @@ export const post = (scrobbles_graph) => (
             <p>
                 I used to be a big fan of this Nu-metal band called 'Issues'.
                 One song in particular I remember loving was this collab with female UK rapper 'Snow Tha Product'.
-                In retrospect this song is still fire. Shame they didn't collab more than this one-off song.
+                This particular vibe doesn't really appeal to me anymore. It improves a lot around the 3:30 mark when we start hearing some spooky ambient noise and then Snow Tha Product starts rapping.
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/33IBS4qx-hc?si=Bk7lCnREp81gXCn1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -265,9 +265,9 @@ export const post = (scrobbles_graph) => (
                 <span className='track-artist-and-title'>System Of A Down - Lonely Day</span>
             </h3>
             <p>
-                One of the more accessible, poppy, mellow, downtempo SOAD songs. Still slaps though.
+                One of the more accessible, mellow, downtempo SOAD songs. Still slaps though.
             </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JTeKpWp8Psw?si=MC6Ghm5S8TZUObZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DnGdoEa1tPg?si=nOz1EW6OZcbn7oNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div className='blog-subsection' id='track22'>
             <h3 className='subgroup-title'>
@@ -277,7 +277,7 @@ export const post = (scrobbles_graph) => (
             </h3>
             <p>
                 Vangoffey are a fairly obscure Indie-rock/Brit-pop band from the UK.
-                I barely remembered this song when I saw it in the list, but as soon as I heard those first few seconds all the memories came flooding back.
+                I barely remembered this song when I saw it in the list, but as soon as the bassline hit all the memories came flooding back.
                 It's actually a really solid indie rock tune with a lot of energy and charisma, deserves more attention.
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ygoYHIzKg4w?si=Um3-2uGXrgHM3SDN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -315,7 +315,7 @@ export const post = (scrobbles_graph) => (
                 In particular the album this song is from 'Deja Entendu' I was loving at the time.
                 I don't quite love the songs from this album as much as I used to, but I can still see the appeal (it's angsty, dark, rebellious, angry, depressing, etc...)
             </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2Lsjm3aA1rM?si=bER9otoPCpXUW73_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iOHg1rKzWuE?si=pK_9ni4Gla1_7eW6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div className='blog-subsection' id='track26'>
             <h3 className='subgroup-title'>

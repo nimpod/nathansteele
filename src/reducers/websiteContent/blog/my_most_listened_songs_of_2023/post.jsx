@@ -8,7 +8,7 @@ export const post = (scrobbles_graph) => (
                     <h3 className='subgroup-title'>Intro</h3>
                     <p>2023 has probably been the most insane year so far in terms of personal musical discoveries. Unfortuantly I have discovered way more than 25 great songs this year... I could probably make a pretty solid top 300 list? According to LastFM, I listened to <b>7,361</b> individual songs, and scrobbled <b>16,743</b> songs overall.</p>
                     <p>In this blog post I will go over the 25 songs that I listened to most this year...</p>
-                    <p>I did the same for <a href="https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2022" target="_blank">2022</a>, <a href="https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2021" target="_blank">2021</a>, <a href="https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2020" target="_blank">2020</a>, and <a href="https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2014_2015_2016" target="_blank">2014/15/16</a> too.</p>
+                    <p>I did the same for 2022, 2021, 2020, and 2014/15/16 too.</p>
                     <p>If for some bizzare reason you wish to see more than the top 25 tracks, the <a href="https://www.last.fm/user/gutash/library/tracks?from=2023-01-01&rangetype=year" target="_blank">entire 2023 list is here</a> if you want to see that.</p>
                     <p className='note'>Disclaimer: this is <b>NOT a 'top 25 songs of 2022 list'</b>, this is simply <b>a list of the '25 songs that I listened to most throughout 2023'. </b> 
                         It would be a waste of time messing about with arbitary ordering, when the quantitative measurement of a 'play count' already exists thanks to LastFM scrobbling!
@@ -106,7 +106,7 @@ export const post = (scrobbles_graph) => (
             </h3>
             <p>
                 Another amazing musical discovery this year has been Alice Longyu Gao.
-                Her 2023 album 'Let's Hope Heteros Fail, Learn and Retire' is absolutely bat-shit crazy.
+                Her 2023 album 'Let's Hope Heteros Fail, Learn and Retire' is absolutely bat-shit crazy, fusing genres from Hyper-pop, Bubblegum-pop, Alt-metal, Trap-metal, and Industrial Hip-Hop.
                 Possibly the craziest song on the album is 'Monk'.
                 It's best to experience it yourself... Go ahead...
             </p>
@@ -121,9 +121,11 @@ export const post = (scrobbles_graph) => (
             <p>
                 Way back in February I was exploring the New Age genre on RYM, and stumbled upon Andreas Vollenweider, a Swiss Harpist who has been releasing albums since the 80s and is still going strong to this day.
                 I started listening to his 1986 album 'Down To The Moon' - life has never been the same since...
-                This stunning album that exists somewhere between the genres of New Age, Ambient, Progressive Pop, and Electronic was released in 1986... INSANE!
-                There are a lot of stand-out tracks from this album, Night Fire Dance (#5 in the album tracklist) seems to be the one I listened to most!
-                Another excellent addition to my favourite albums of all time list, probably lingers around top 50 at the moment.
+                This stunning album exists somewhere between the genres of New Age, Ambient, Progressive Pop, and Electronic.
+            </p>
+            <p>
+                There are a lot of stand-out tracks from this album, Night Fire Dance (#5 in the album tracklist) seems to be the one I listened to most, but there are 3 in total that appeared in this top 25 list.
+                The album is another excellent addition to my favourite albums of all time list, probably lingers around top 50 at the moment.
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Le1j0WM-cUo?si=1d3gw9PpkH33f8Zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -170,7 +172,9 @@ export const post = (scrobbles_graph) => (
                 <span className='track-artist-and-title'>Hakushi Hasegawa - Somoku</span>
             </h3>
             <p>
-                This is my favourite jazz album of all time... Obviously it's a lot more than just jazz, so people that are well into their classic jazz albums probably wouldn't rate this album as highly as I personally do... I just can't help it, this music is way too good for it to be so unpopular in the wider jazz community.
+                This is probably my favourite jazz album of all time... 
+                Obviously it's a lot more than just jazz, so people that are well into jazz classics probably wouldn't rate this album as highly as I personally do...
+                I just can't help it, this music is way too good for it to be so unpopular in the wider jazz community.
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/O77-6NXd9Pw?si=d_qa51uixHRBD-NM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -327,10 +331,10 @@ export const post = (scrobbles_graph) => (
                 <span className='track-artist-and-title'>Cerrone - Supernature (CLIMAX Instrumental Edit)</span>
             </h3>
             <p>
-                This was the song used during the introduction to Gaspar Noé's 2018 film <a hre="https://boxd.it/ikvo">Climax</a>.
+                This was the song used during the introduction to Gaspar Noé's 2018 film <a href="https://boxd.it/ikvo" target='_blank'>Climax</a>.
                 It's one of the most memorable opening scenes to any film I've ever seen, and this song certainly helps to achieve that.
             </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/po8stpdCyXc?si=HO3EnSE6NlatM1z3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Hwkacrln26o?si=ysDPpngyGDVzI7ND" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 )

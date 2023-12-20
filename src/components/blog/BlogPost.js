@@ -7,6 +7,11 @@ import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";
 import { ReactComponent as Calendar } from "../../icons/calendar.svg";
 import { get_random_RGBA, get_blog_post_id } from '../../js/helpers.js';
 
+// Remove the annoying video recomendations that appear on the embedded youtube video
+// I can't believe this actually works...
+import $ from "jquery";
+$(".my-most-listened-songs-of-this-year iframe").contents().find(".ytp-pause-overlay").remove();
+
 
 class BlogPost extends Component {
 

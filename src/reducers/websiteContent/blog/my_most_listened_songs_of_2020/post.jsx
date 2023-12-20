@@ -247,12 +247,14 @@ export const post = () => (
             <h3 className='subgroup-title'>
                 <span className='track-pos'>#20</span>
                 <span className='track-scrobbles'>19 scrobbles</span>
-                <span className='track-artist-and-title'>Agnes Obel - Parliment of Owls</span>
+                <span className='track-artist-and-title'>Bring Me The Horizon - Dear Diary</span>
             </h3>
             <p>
-                    
+                Bring Me The Horizon released a new album this year... And it's probably turning out to be one of my favourite Alt-metal albums of all time...
+                I absolutely love this entire album.
+                It's short, concise, intense, passionate and extremely memorable metal music.
             </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/NpwdJMOPbIs?si=zmEMhRVSvU0ihTRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dcGKVnEbi8E?si=MQVHds2s_24USte7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div className='blog-subsection' id='track21'>
             <h3 className='subgroup-title'>
@@ -261,7 +263,8 @@ export const post = () => (
                 <span className='track-artist-and-title'>Matmos - The Crying Pill</span>
             </h3>
             <p>
-                    
+                Believe it or not, all of the instruments you can here are not actually your normal musical instruments...
+                Rather, Matmos innovated to the extreme by <b>only using plastic objects to create this album!</b>
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ltNwzJSsSPo?si=YjDTDYq0IZcIOkTR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -279,12 +282,12 @@ export const post = () => (
         </div>
         <div className='blog-subsection' id='track23'>
             <h3 className='subgroup-title'>
-                <span className='track-pos'>#24</span>
+                <span className='track-pos'>#23</span>
                 <span className='track-scrobbles'>19 scrobbles</span>
                 <span className='track-artist-and-title'>Logic - Soul Food II</span>
             </h3>
             <p>
-                I haven't watched the film that this song was made for... But doesn't mean that I can't this song is pretty fanstastic.
+                One of my favourite songs from Logic's new album 'No Pressure', probably his best album since 'Under Pressure'!
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/RGscCU-oEiE?si=Jq53eQTF9rI1z5tr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -295,7 +298,7 @@ export const post = () => (
                 <span className='track-artist-and-title'>The Aurora Principle - Sen</span>
             </h3>
             <p>
-
+                A beautiful downtempo track. Love this one.
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/p-yinf6Bl3o?si=Xwl_M836alvby5np" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -306,7 +309,7 @@ export const post = () => (
                 <span className='track-artist-and-title'>FKJ - Ylang Ylang</span>
             </h3>
             <p>
-
+                Deliciouly mellow vibe. Love this EP and especially this song.
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/EfgAd6iHApE?si=jhe3k7n1a6JCZpJD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>

@@ -1763,10 +1763,31 @@ div.blog-post
   .my-most-listened-songs-of-this-year img.scrobbles-per-month-graph {
     margin-top: 0px;
   }
-
+  .my-most-listened-songs-of-this-year h3.subgroup-title > span.track-pos {
+    font-size: 1.6rem;
+  }
   .my-most-listened-songs-of-this-year h3.subgroup-title > span.track-scrobbles {
-    font-size: 0.85rem;
-    padding: 0px 3px;
+    font-size: 1.3rem;
+  }
+
+  .my-most-listened-songs-of-this-year h3.subgroup-title {
+    display: block;
+  }
+  .my-most-listened-songs-of-this-year h3.subgroup-title > span.track-artist-and-title {
+    display: block;
+    max-width: fit-content;
+    font-size: 1rem;
+    padding: 2px 4px;
+    margin-top: 6px;
+    line-height: 1;
+    border-radius: 3px;
+  }
+
+  .my-most-listened-songs-of-this-year h3.subgroup-title > span {
+  }
+
+  .my-most-listened-songs-of-this-year iframe {
+    width: calc(100%);
   }
 }
 
@@ -3642,6 +3663,9 @@ div.albumInfoContainer > div.myRating {
   .section-inner .container-intro {
     padding: 0px 12px;
   }
+  .section-inner table tbody tr a {
+    padding-left: 6px;
+  }
   table tr a {
     /*
     THIS FUCKS EVERYTHING UP!
@@ -4151,6 +4175,7 @@ div.albumInfoContainer > div.myRating {
   }
   .blog-post-info.notAtTop + .blog-post-content {
     padding-top: 150px;
+    padding-bottom: 100px;
   }
   .blog-post-info.notAtTop,
   .nav-right {
