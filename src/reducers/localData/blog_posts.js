@@ -8,9 +8,52 @@ import { post as InspirationDatabase } from '../websiteContent/blog/inspiration_
 import { post as VeneraPost } from '../websiteContent/blog/venera/post';
 import { post as TritonPost } from '../websiteContent/blog/triton/post';
 import { post as MessiahsHandbookPost } from '../websiteContent/blog/messiahs_handbook/post';
+import { post as MyMostListenedSongsOf2023Post } from '../websiteContent/blog/my_most_listened_songs_of_2023/post';
+import { post as MyMostListenedSongsOf2022Post } from '../websiteContent/blog/my_most_listened_songs_of_2022/post';
+import { post as MyMostListenedSongsOf2021Post } from '../websiteContent/blog/my_most_listened_songs_of_2021/post';
+import { post as MyMostListenedSongsOf2020Post } from '../websiteContent/blog/my_most_listened_songs_of_2020/post';
+import { post as MyMostListenedSongsOf2016Post } from '../websiteContent/blog/my_most_listened_songs_of_2014_2015_2016/post';
 
+const scrobbles_2021 = require('../websiteContent/blog/my_most_listened_songs_of_2021/scrobbles-per-month-graph.PNG');
+const scrobbles_2022 = require('../websiteContent/blog/my_most_listened_songs_of_2022/scrobbles-per-month-graph.PNG');
+const scrobbles_2023 = require('../websiteContent/blog/my_most_listened_songs_of_2023/scrobbles-per-month-graph.PNG');
 
 export const blog_posts = [
+    {
+        id: "29",
+        date: "31 Dec 2023",
+        title: "My 25 most listened songs of 2023",
+        content: ReactDomServer.renderToString(MyMostListenedSongsOf2023Post(scrobbles_2023)),
+        tags: ["Music"]
+    },
+    {
+        id: "27",
+        date: "31 Dec 2022",
+        title: "My 25 most listened songs of 2022",
+        content: ReactDomServer.renderToString(MyMostListenedSongsOf2022Post(scrobbles_2022)),
+        tags: ["Music"]
+    },
+    {
+        id: "28",
+        date: "31 Dec 2021",
+        title: "My 25 most listened songs of 2021",
+        content: ReactDomServer.renderToString(MyMostListenedSongsOf2021Post(scrobbles_2021)),
+        tags: ["Music"]
+    },
+    {
+        id: "29",
+        date: "31 Dec 2020",
+        title: "My 25 most listened songs of 2020",
+        content: ReactDomServer.renderToString(MyMostListenedSongsOf2020Post()),
+        tags: ["Music"]
+    },
+    {
+        id: "29",
+        date: "31 Dec 2017",
+        title: "My 32 most listened songs between 2014 - 2016",
+        content: ReactDomServer.renderToString(MyMostListenedSongsOf2016Post()),
+        tags: ["Music"]
+    },
     {
         id: "1",
         date: "27 Apr 2017",
@@ -132,6 +175,7 @@ export const blog_posts = [
         content: "blah",
         tags: ["Running"]
     },
+    /*
     {
         id: "23",
         date: "30 Sep 2022",
@@ -139,6 +183,7 @@ export const blog_posts = [
         content: "blah",
         tags: ["Vexilology", "Mathematics"]
     },
+    */
     {
         id: "24",
         date: "16 Jan 2022",
@@ -154,7 +199,7 @@ export const blog_posts = [
         tags: ["InterestingPeople"]
     },
     {
-        id: "5",
+        id: "26",
         date: "30 Sep 2022",
         title: "The Messiah's Handbook",
         content: ReactDomServer.renderToString(MessiahsHandbookPost()),

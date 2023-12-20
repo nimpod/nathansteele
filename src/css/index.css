@@ -62,7 +62,7 @@
   --tag-bg-color-Interesting-people: rgba(211, 159, 104, 0.4);
   --tag-bg-color-Life: rgba(109, 104, 104, 0.4);
   --tag-bg-color-Oceanography: rgba(45, 150, 255, 0.4);
-  --tag-bg-color-Music: rgba(246, 234, 13, 0.4);
+  --tag-bg-color-Music: rgba(226, 68, 68, 0.479);
   --tag-bg-color-Mathematics: rgba(238, 93, 68, 0.4);
   --tag-bg-color-Notes: rgba(109, 104, 104, 0.4);
   --tag-bg-color-Python: rgba(128, 155, 243, 0.4);
@@ -1712,6 +1712,67 @@ div.blog-post
 
 /* #endregion */
 
+
+/* #region -----------------------< 8.3) Specific blog posts >------------------------ */
+
+.my-most-listened-songs-of-this-year h3.subgroup-title {
+  display: flex;
+  align-items: center;
+}
+
+.my-most-listened-songs-of-this-year h3.subgroup-title > span {
+  margin-right: 10px;
+  border-radius: 6px;
+  padding: 0 6px;
+}
+
+.my-most-listened-songs-of-this-year h3.subgroup-title > span.track-pos {
+  background-color: rgb(9, 95, 51);
+}
+
+.my-most-listened-songs-of-this-year h3.subgroup-title > span.track-artist-and-title {
+  background-color: #32333b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(80%);
+}
+
+.my-most-listened-songs-of-this-year h3.subgroup-title > span.track-scrobbles {
+  background-color: rgb(114, 80, 182);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.my-most-listened-songs-of-this-year img.scrobbles-per-month-graph {
+  width: 370px;
+  margin-top: 80px;
+  padding-left: 15px;
+}
+
+.display-img-beside-text {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+@media screen and (max-width: 670px) {
+  .display-img-beside-text {
+    grid-template-columns: 100%;
+  }
+  .my-most-listened-songs-of-this-year img.scrobbles-per-month-graph {
+    margin-top: 0px;
+  }
+
+  .my-most-listened-songs-of-this-year h3.subgroup-title > span.track-scrobbles {
+    font-size: 0.85rem;
+    padding: 0px 3px;
+  }
+}
+
+
+
+/* #endregion */
 
 /* #endregion */
 
@@ -4075,7 +4136,8 @@ div.albumInfoContainer > div.myRating {
     padding: 15px 4px;
     */
   }
-  .blog-post-info {
+  .blog-post-info,
+  .blog-post-content {
     padding: 5px 15px;
   }
   .blog-post-info.notAtTop {

@@ -115,7 +115,7 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
 // but currently I have no idea how to make this work.
 // this is a bit annoying because it means I have to 'hardcode' paths to screenshots.
 // (e.g. require('../websiteContent/films/white_god/screenshot1.webp'))
-//const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.png|.PNG|.jpeg|.webp)$")
+//const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.png|.PNG|.jpeg|.webp)$")    
 
 
 /**
