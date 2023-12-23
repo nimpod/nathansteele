@@ -1078,7 +1078,8 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
   color: var(--blog-table-text-hover);
   background-color: var(--blog-table-row-bg-hover);
 }
-.posts-container table tbody tr:active td {
+.posts-container table tbody tr:active td,
+.posts-container table tbody tr:focus-within td {
   transition: all 50ms ease;
   background-color: var(--blog-table-row-bg-selected);
 }
@@ -3553,6 +3554,7 @@ div.albumInfoContainer > div.myRating {
   font-size: 0.9rem;
   width: 200px;
   z-index: 99999;
+  user-select: none;
 }
 .album-review .prev-review-link:hover,
 .album-review .next-review-link:hover {
@@ -3627,6 +3629,7 @@ div.albumInfoContainer > div.myRating {
   --mobile-navbar-topborder-color: rgba(70, 77, 81, 0.497);
   --mobile-navbar-height: 55px;
 }
+/* anything that should be hidden in mobile goes here... */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
 
 @media screen and (max-width: 900px) { .portfolio h1 { font-size: 50px; } .portfolio h2 { font-size: 40px; } }
@@ -3667,8 +3670,8 @@ div.albumInfoContainer > div.myRating {
   .section-inner .container-intro {
     padding: 0px 12px;
   }
-  .section-inner table tbody tr a {
-    padding-left: 6px;
+  .section-inner table tbody tr a > td {
+    padding-left: 10px;
   }
   table tr a {
     /*
@@ -3851,6 +3854,11 @@ div.albumInfoContainer > div.myRating {
 
   .posts-container > table {
     margin-top: calc(var(--posts-header-height) - 30px);
+    width: 100%;
+  }
+
+  .blog {
+    padding-bottom: 55px;
   }
 
   .posts-container table td:nth-child(1) {
@@ -3868,10 +3876,6 @@ div.albumInfoContainer > div.myRating {
     font-size: 0.8rem;
   }
 
-
-  .posts-container table {
-    width: 100%;
-  }
   .posts-container table td:first-child,
   .posts-container table td:last-child {
     border-radius: 0px;
@@ -4097,7 +4101,56 @@ div.albumInfoContainer > div.myRating {
   .album-review-displayed {
     display: block;
   }
+  #music-page .section-inner {
+    padding: 0px;
+  }
+  #music-page .top-tracks-list-container {
+    display: none;
+  }
+  .music-page-container {
+    grid-template-columns: 100%;
+  }
+  #music-page .top-albums-list-container {
+    margin-left: 0px;
+    padding: 4px 8px;
+  }
+  #music-page .top-albums-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   /* #endregion */
+
+  /* #region --------------------< Music - album review >------------------- */
+  .album-review .section-inner {
+    padding: 0;
+  }
+  
+  .album-review .album-header-container {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .album-review .album-header {
+    flex-direction: column;
+    border-radius: 0;
+  }
+  .album-review .album-info {
+    width: 100%;
+  }
+  .album-review .album-cover-container img {
+    width: 210px;
+  }
+  .album-review .review-content-and-tracklist {
+    width: 100%;
+    left: 0;
+  }
+  /* #endregion */
+}
+
+
+@media screen and (max-width: 500px) {
+  #music-page .top-albums-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 
@@ -4105,7 +4158,7 @@ div.albumInfoContainer > div.myRating {
 @media screen and (max-width: 1083px) {
   .blog-post-info .back-to-previous-page {
     position: relative;
-    left: 170px;
+    left: 175px;
     top: -10px;
     background-color: transparent;
     box-shadow: none;
@@ -4190,7 +4243,7 @@ div.albumInfoContainer > div.myRating {
     margin-right: 180px;
   }
   .blog-post-info.notAtTop > h3.blog-post-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     position: absolute;
     top: 0;
     padding-top: 10px;
@@ -4242,7 +4295,24 @@ div.albumInfoContainer > div.myRating {
 @media only screen and (max-width: 1100px) { .blog-post { padding-left: 100px; padding-right: 100px; } .blog-post-title { font-size: 2.6rem; } }
 @media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } .blog-post-title { font-size: 2.5rem; } }
 @media only screen and (max-width: 900px) { .blog-post { padding-left: 0px; padding-right: 0px; } .blog-post-title { font-size: 2.4rem; } }
-@media only screen and (max-width: 800px) { .blog-post { padding-left: 0px; padding-right: 0px; } .blog-post-title { font-size: 1.9rem; } .blog-post-content h5.subgroup-title {font-size: 1.4rem;} h3.subgroup-title { font-size: 1.5rem;}.blog-post-content p, .blog-post-content li { font-size: 0.8rem !important; } }
+@media only screen and (max-width: 800px) { 
+  .blog-post {
+    padding-left: 0px; padding-right: 0px;
+  }
+  .blog-post-title {
+    font-size: 1.9rem;
+  } 
+  .blog-post-content h5.subgroup-title {
+    font-size: 1.4rem;
+  } 
+  h3.subgroup-title { 
+    font-size: 1.5rem;
+  }
+  .blog-post-content p, 
+  .blog-post-content li {
+    font-size: 0.95rem !important; 
+  } 
+}
 
 /* #endregion */
 
