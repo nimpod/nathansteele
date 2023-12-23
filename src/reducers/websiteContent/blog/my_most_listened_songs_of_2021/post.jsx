@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const post = (scrobbles_graph) => (
+const IMAGES = {
+    scrobbles_graph: require('./scrobbles_per_month_graph.PNG'),
+}
+
+export const post = () => (
     <div className='my-most-listened-songs-of-this-year'>
         <div className='intro-text blog-subsection' id='section1'>
             <div className='display-img-beside-text'>
@@ -8,7 +12,10 @@ export const post = (scrobbles_graph) => (
                     <h3 className='subgroup-title'>Intro</h3>
                     <p>2021 was the first year I have a full array of scrobbling data to analyse. I started scrobbling in October 2020, so needless to say I am excited to have an entire years worth of data to bathe in. According to LastFM, I listened to <b>7,512</b> individual songs, and scrobbled <b>18,164</b> overall.</p>
                     <p>In this blog post I will go over the 25 songs that I listened to most this year...</p>
-                    <p>I did the same for <a href="https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2020" target="_blank">2020</a>, and <a href="https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2014_2015_2016" target="_blank">2014/15/16</a> too.</p>
+                    <p>I did the same for 
+                        <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2020' target='_blank'> 2020</a>, 
+                        and <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2014_2015_2016' target='_blank'>2014/15/16</a>,  too.
+                    </p>
                     <p>If for some bizzare reason you wish to see more than the top 25 tracks, the <a href="https://www.last.fm/user/gutash/library/tracks?from=2021-01-01&rangetype=year">entire 2021 list is here</a>...</p>
                     <p className='note'>Disclaimer: this is <b>NOT a 'top 25 songs of 2021 list'</b>, this is simply <b>a list of the '25 songs that I listened to most throughout 2021'.</b> 
                         It would be a waste of time messing about with arbitary ordering, when the quantitative measurement of a 'play count' already exists thanks to LastFM scrobbling!
@@ -16,7 +23,7 @@ export const post = (scrobbles_graph) => (
                         not to mention how much music is out there that you've never heard before and will inevitably discover several years down the line leaving your old lists outdated.
                     </p>
                 </div>
-                <img src={scrobbles_graph} className='scrobbles-per-month-graph beside-text' alt="Srobbles per month graph" />
+                <img src={IMAGES.scrobbles_graph} className='scrobbles-per-month-graph beside-text' alt="Srobbles per month graph" />
             </div>
         </div>
         <div className='blog-subsection' id='track1'>

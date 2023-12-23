@@ -1,6 +1,20 @@
 import React  from 'react';
 
-export const post = (screenshots) => (
+const IMAGES = {
+    Enceladus: require('./photos/Enceladus.jpg'),
+    Encealdus_geysers: require('./photos/Enceladus_geysers.jpg'),
+    an_enceladus_rise: require('./photos/an_Enceladus_rise.png'),
+    huygens_lander_descent: require('./photos/huygens_lander_descent.jpg'),
+    huygens_lander_Titan_surface: require('./photos/huygens_lander_Titan_surface.jpg'),
+    jwst_photo_of_Titan: require('./photos/jwst_photo_of_Titan.webp'),
+
+    // diagrams...
+    titan_map: require('./diagrams/Titan_map.jpg'),
+    titan_map2: require('./diagrams/Titan_map2.jpg'),
+    cassini_huygens_mission_summary: require('./diagrams/cassini_huygens_mission_summary.png'),
+}
+
+export const post = () => (
     <div>
         <div className='intro-text blog-subsection' id='section1'>
             <h3 className='subgroup-title'>Intro</h3>
@@ -10,7 +24,7 @@ export const post = (screenshots) => (
                 The spacecraft made many profound discoveries, completely changing our understanding of solar system formation, planet evolution, moons, etc...
             </p>
             <picture className="img">
-                <img width="600" height="400" src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/52866f89042123.5de8954d6880a.png" alt='Infographic of Cassini-Huygens 7 year journey from Earth to Saturn' />
+                <img className='larger-image' width="600" height="400" src={IMAGES.cassini_huygens_mission_summary} alt='Infographic of Cassini-Huygens 7 year journey from Earth to Saturn' />
             </picture>
         </div>
         <div className='blog-subsection' id='section2'>
@@ -18,12 +32,12 @@ export const post = (screenshots) => (
             <p>The 'Huygens' part of the mission was the lander, which touched down on <a href='https://en.wikipedia.org/wiki/Titan_(moon)'>Titan</a> (the largest of Saturn's 83 moons) on July 1st 2004, shortly after the spacecraft arrived at Saturn.</p>
             <p>Remarkably, we have <a href='https://www.youtube.com/watch?v=svmGxFaGILY'>video footage</a> of the lander descending for onto the surface of Titan for 2h 27m!!!! The image shown below is a screenshot of that slow descent.</p>
             <picture className="img">
-                <img width="500" height="400" src="https://i.ytimg.com/vi/svmGxFaGILY/maxresdefault.jpg" alt='Screenshot of video footage showing Huygens descending' />
+                <img width="500" height="400" src={IMAGES.huygens_lander_descent} alt='Screenshot of video footage showing Huygens descending' />
             </picture>
             <p>The Huygens probe landed just off the easternmost tip of a region called Adiri. Adiri is packed with lakes and islands.</p>
             <p>When the spacecraft landed, it felt the surface as similar to a slightly more absorbent, sludgy mud texture... This is a photograph Huygens took when it landed!!!!</p>
             <picture className="img">
-                <img width="200" height="100" className='dont-resize' alt='Surface of Titan' src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Huygens_surface_color_sr.jpg/200px-Huygens_surface_color_sr.jpg" />
+                <img width="200" height="100" className='dont-resize' alt='Surface of Titan' src={IMAGES.huygens_lander_Titan_surface} />
             </picture>
             <h5 className='subgroup-title'>What is it like on Titan?</h5>
             <p><b>Extremely cold</b> - the Titanian lakes are estimated to be around <b>-179°C</b>...</p> 
@@ -40,13 +54,13 @@ export const post = (screenshots) => (
                 This may explain the reason for the strange reappearance and disappearance of small islands which Cassini saw happening.</p>
             <p>Huygens Titan lander remains the most distant landing of any human made spacecraft EVER.</p>
             <picture className="img">
-                <img width="600" height="400" src="https://aasnova.wpenginepowered.com/wp-content/uploads/2018/05/fig1-7.jpg" alt="Map of Titan" />
+                <img width="600" height="400" src={IMAGES.titan_map} alt="Map of Titan" />
             </picture>
             <h5 className='subgroup-title'>Returning to Titan?</h5>
-            <p>There has been a mission proposed called the <a href='https://www.nasa.gov/content/titan-submarine-exploring-the-depths-of-kraken/'>Titan Mare Explorer</a> to send a submarine-like lander to investigate these mysterious Titanian lakes in more detail.</p> \
+            <p>There has been a mission proposed called the <a href='https://www.nasa.gov/content/titan-submarine-exploring-the-depths-of-kraken/'>Titan Mare Explorer</a> to send a submarine-like lander to investigate these mysterious Titanian lakes in more detail.</p>
             <p>The lake of particular interest is the <a href='https://en.wikipedia.org/wiki/Kraken_Mare'>Kraken Mare</a>.</p>
             <picture className="img">
-                <img width="300" height="400" className='dont-resize' src="https://imageio.forbes.com/specials-images/imageserve/638a3d6abc51bdee9320296e/0x0.jpg?format=jpg&width=1200" alt='Titan imaged by the James Webb Space Telescope' />
+                <img width="300" height="400" className='dont-resize' src={IMAGES.jwst_photo_of_Titan} alt='Titan imaged by the James Webb Space Telescope' />
             </picture>
             <h5 className='subgroup-title'>The far future of Titan</h5> 
             <p>Unfortunately it's probably too cold on the surface for life as we know it to emerge. Titan-specific life could potentially evolve to work with the cold temperatures on Titan, but it's an unknown...</p>
@@ -55,7 +69,7 @@ export const post = (screenshots) => (
             <p>In other words, Titan will become an Earth-like oasis when the Sun is dying. Our Earth will be long gone, but perhaps Titan will be the place to be when it goes supernova.</p>
             <p>This Earth-like period could last anywhere between 100,000,000 - 500,000,000 years. Possibly not long enough for intelligent life to emerge, but long enough for some life to develop.</p>
             <picture className="img">
-                <img width="600" height="400" src="https://cdn.mos.cms.futurecdn.net/dpNszjv28a6t8x3krC7JXT.jpg" alt='Map of Titan' />
+                <img width="600" height="400" src={IMAGES.titan_map2} alt='Map of Titan' />
             </picture>
         </div>
         <div className='blog-subsection' id='section3'>
@@ -65,14 +79,14 @@ export const post = (screenshots) => (
             <p>The geysers shoot out water vapor, other volatiles, and solid material, including sodium chloride crystals and ice particles, into space, totaling approximately 200 kilograms (440 lb) per second. This indicates geothermal energy.</p>
             <p>The image shown below showing those geyser tendrils is a REAL IMAGE!!!!!</p>
             <picture className="img">
-                <img width="600" height="400" src="https://solarsystem.nasa.gov/system/news_items/main_images/13148_Enceladus_plumes-16x9-rotated-180.jpg" alt="Photograph of geysers on Enceladus spewing out liquid water" />
+                <img width="600" height="400" src={IMAGES.Encealdus_geysers} alt="Photograph of geysers on Enceladus spewing out liquid water" />
             </picture>
             <p>In 2014 Cassini confirmed the existence of a deep, warm, sub-surface ocean making it a prime suspect for life elsewhere in our Solar System.</p>\
             <p>Enceladus's ocean is <b>10-30km deep</b>, whilst Earth's average ocean depth is a mere 3.7km... This is MAD considering how much of Earth's oceans are a complete mystery to us, and we live on this damn world!</p>
             <p>In order for the liquid water to be useful, and be a source of life creating stuff, it needs to react with a rocky surface. Luckily, Enceladus has a rocky core, meaning geothermal reactions like the ones in Earth's oceans are likely happening as we speak.</p>
             <p>This makes Enceladus the most likely candidate for extra terrestrial life in our solar system. Astrobiologists are almost certain extremophiles could develop in Enceledus's ocean.</p>
             <picture className="img">
-                <img width="600" height="400" src="https://solarsystem.nasa.gov/system/content_pages/main_images/1534_50_Enceladus_768.jpg" alt="https://solarsystem.nasa.gov/missions/cassini/science/enceladus/" />
+                <img width="600" height="400" src={IMAGES.Enceladus} alt="https://solarsystem.nasa.gov/missions/cassini/science/enceladus/" />
             </picture>
         </div>
         <div className='blog-subsection' id='section4'>
@@ -95,7 +109,7 @@ export const post = (screenshots) => (
             </p>
             <p>Cassini officially descended into Saturn on September 15th 2017.</p> 
             <picture className="img">
-                <img width="400" height="200" src="https://solarsystem.nasa.gov/internal_resources/1910/" alt="Final image from Cassini spacecraft, you can see Enceladus setting behind Saturn" />
+                <img width="400" height="200" src={IMAGES.an_enceladus_rise} alt="Final image from Cassini spacecraft, you can see Enceladus setting behind Saturn" />
             </picture>
             <p>
                 I don't think enough people know about the Cassini-Huygens mission and it's discoveries, and there's a lot more that can be talked about, but unfortunately 'this margin is too small'

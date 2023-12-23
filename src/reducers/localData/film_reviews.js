@@ -2261,6 +2261,20 @@ const database = {
     },
 
     L: {
+        "leon_the_professional": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/2b8S",
+            "title": "Léon: The Professional",
+            "my_review": "",
+            "custom_poster_url": "https://www.themoviedb.org/t/p/original/yI6X2cCM5YPJtxMhUd3dPGqDAhw.jpg",
+            "my_tags": [
+                "Inticing",
+                "Gritty",
+                "Unorthodox",
+                "Explosions",
+            ],
+        },
+
         "life_is_beautiful": {
             "my_rating": 10,
             "letterboxd_url": "https://boxd.it/29Wm",

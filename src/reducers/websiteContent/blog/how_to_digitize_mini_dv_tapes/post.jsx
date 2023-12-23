@@ -1,13 +1,17 @@
 import React from 'react';
 
-export const post = (screenshots) => (
+const IMAGES = {
+    mini_dv_tape: require('./photos/mini_dv_tape.jpg'),
+}
+
+export const post = () => (
     <div>
         <div className='intro-text blog-subsection'>
             <h3 className='subgroup-title'>What is a Mini DV Tape?</h3>
             <p>A Mini DV tape is a type of cassette tape used in most <a href='https://en.wikipedia.org/wiki/Camcorder'>digital camcorders</a> until the early 2000's.</p>
             <p><a href='https://en.wikipedia.org/wiki/DV'>Digital Video (DV)</a> is a format for storing digital videos, created by Sony, JVC, Panasonic and other video camera manufacturers in 1995.</p>
             <picture className="img">
-                <img width="200" className='dont-resize' src="https://img.fruugo.com/product/2/52/138446522_max.jpg" alt="Mini DV tape" />
+                <img width="200" className='dont-resize' src={IMAGES.mini_dv_tape} alt="Mini DV tape" />
             </picture>
             <h3 className='subgroup-title'>Why do we need to digitize Mini DV tapes?</h3>
             <p>In 2003, DV was joined by a successor format <a href='https://en.wikipedia.org/wiki/HDV'>HDV</a>, which used the same tape format with a different video codec. Some cameras at the time had the ability to switch between DV and HDV recording modes. Some, however, do not have that ability, meaning the only way to watch videos back is through the device itself. Such is the case with the Sony DCR-TRV900E Camcorder.</p>

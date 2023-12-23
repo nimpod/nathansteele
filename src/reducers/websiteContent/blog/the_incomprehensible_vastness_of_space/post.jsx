@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const post = (screenshots) => (
+const IMAGES = {
+    map_of_spacecrafts_that_have_reached_interstellar_space: require('./diagrams/map_of_spacecrafts_that_have_reached_interstellar_space.png'),
+}
+
+export const post = () => (
     <div>
         <div className='intro-text blog-subsection'>
             <h3 className='subgroup-title'></h3>
@@ -75,7 +79,7 @@ export const post = (screenshots) => (
             <p>In other words, it's covered <b>0.00005928% of the distance to Alpha Centuri</b>... And it's not even heading in that direction!</p>
             <p>However it is due to pass within 1.6 lightyears (9.3 trillion miles) of an obscure star in the constellation Ursa Minor (aka. the little dipper) called AC+79 3888, in the year 40,272 AD (more than 38,200 years from now)...</p>
             <picture className="img">
-                <img width="400" height="200" src="https://cdn.mos.cms.futurecdn.net/38UnvH7oaiQX4VkAHhNqbN-970-80.png" alt="Not to scale illustration of spacecrafts venturing beyond the solar system" />
+                <img className='larger-image' width="400" height="200" src={IMAGES.map_of_spacecrafts_that_have_reached_interstellar_space} alt="Not to scale illustration of spacecrafts venturing beyond the solar system" />
             </picture>
         </div>
     </div>

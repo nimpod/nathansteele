@@ -1,13 +1,30 @@
 import React from 'react';
 
+const IMAGES = {
+    // photos...
+    surface1: require('./photos/surface1.jpg'),
+    surface2: require('./photos/surface2.jpg'),
+    surface3: require('./photos/surface3.jpg'),
+    surface4: require('./photos/surface4.jpg'),
+    surface5: require('./photos/surface5.jpg'),
+    surface6: require('./photos/surface6.jpg'),
+    cryolava_lake: require('./photos/cryolava_lake.jpg'),
+    leviathan_patera_volcanic_dome: require('./photos/leviathan_patera_volcanic_dome.png'),
+
+    // diagrams...
+    geomorphology: require('./diagrams/geomorphology.jpg'),
+    subsurface_ocean: require('./diagrams/subsurface_ocean.jpg'),
+    unusual_orbit: require('./diagrams/unusual_orbit.jpg'),
+}
+
 export const post = (screenshots) => (
     <div>
         <div className='intro-text blog-subsection' id='section1'>
             <h3 className='subgroup-title'></h3>
             <p><b>Triton</b> is the largest moon of Neptune, the 7th largest moon in the Solar System.</p>
             <p>The mysterious moon contains a <b>geothermally heated sub-surface ocean</b>, the moon is geologically active with cryovolcanoes meaning the surface is constantly reshaping, <b>geysers</b> are spewing out water vapor 8km above the surface, and frosty nitrogen snow covers the moons icy surface.</p>
-            <picture className="img">
-                <img width="600" height="400" src="https://www.thefactsite.com/wp-content/uploads/2019/10/triton-facts.jpg" alt='' />
+            <picture className="img"> 
+                <img width="600" height="400" src={IMAGES.surface5} alt='' />
             </picture>
         </div>
         <div className='blog-subsection' id='section2'>
@@ -20,7 +37,7 @@ export const post = (screenshots) => (
                 which would indicate that the surface is being endlessly reshaped by geological activity.</p>
             <p>But the secrets behind Triton's mysterious geological activity may lie in its unusual orbit...</p>
             <picture className="img">
-                <img width="600" height="400" src="https://static01.nyt.com/images/2014/11/04/multimedia/out-there-ice-moon/out-there-ice-moon-superJumbo.jpg" alt='' />
+                <img width="600" height="400" src={IMAGES.surface1} alt='' />
             </picture>
         </div>
         <div className='blog-subsection' id='section3'>
@@ -30,7 +47,10 @@ export const post = (screenshots) => (
                 direction - we have hundreds of pieces of evidence showing us this how most normal moons behave. Triton breaks this rule, orbiting in the opposite direction to its planet.
                 This is what we call a <b>Retrograde Orbit</b>.</p>
             <picture className="img">
-                <img width="600" height="400" src="https://www.nasa.gov/sites/default/files/thumbnails/image/pia23874-1041.jpg" alt='' />
+                <img width="600" height="400" src={IMAGES.unusual_orbit} alt='' />
+            </picture>
+            <picture className="img">
+                <img width="600" height="400" src={IMAGES.surface2} alt='' />
             </picture>
         </div>
         <div className='blog-references references-text ' id='section14'>

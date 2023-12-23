@@ -8,7 +8,7 @@ export const post = () => (
             <p>However, due to the wonderful modern world we live in, there is an insane app called <a href="https://stats.fm/">stats.fm</a> that is able to investigate your spotify listening history, and tell your what your most listened songs/albums/artists are over a specific time period (plus a lot of delicious stats to gaze at).
                 I started using spotify in 2017, so I technically have the equivalant of LastFM scrobbling stats for 2017, 2018, 2019, and 2020... This was an unexpected twist.</p>
             <p>So, in this blog post I will go over the 25 songs that I listened to most in the year of our lord and saviour, <b>2020</b>...</p>
-            <p>I did the same for <a href="https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2014_2015_2016" target="_blank">2014/15/16</a> too.</p>
+            <p>I did the same for <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2014_2015_2016' target='_blank'>2014/15/16</a> too.</p>
             <p className='note'>Disclaimer: this is <b>NOT a 'top 25 songs of 2020 list'</b>, this is simply <b>a list of the '25 songs that I listened to most throughout 2020'.</b> 
                 It would be a waste of time messing about with arbitary ordering, when the quantitative measurement of a 'play count' already exists thanks to LastFM scrobbling!
                 I personally don't see the point of making 'top 25 songs of 2020' lists, or 'top 50 albums of 2020' lists, when you are bound to change your opinion on the arbitary ordering in a few months,

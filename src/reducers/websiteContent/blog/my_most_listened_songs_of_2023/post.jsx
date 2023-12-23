@@ -1,6 +1,11 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
-export const post = (scrobbles_graph) => (
+const IMAGES = {
+    scrobbles_graph: require('./scrobbles_per_month_graph.PNG'),
+}
+
+export const post = () => (
     <div className='my-most-listened-songs-of-this-year'>
         <div className='intro-text blog-subsection' id='section1'>
             <div className='display-img-beside-text'>
@@ -8,14 +13,19 @@ export const post = (scrobbles_graph) => (
                     <h3 className='subgroup-title'>Intro</h3>
                     <p>2023 has probably been the most insane year so far in terms of personal musical discoveries. Unfortuantly I have discovered way more than 25 great songs this year... I could probably make a pretty solid top 300 list? According to LastFM, I listened to <b>7,361</b> individual songs, and scrobbled <b>16,743</b> songs overall.</p>
                     <p>In this blog post I will go over the 25 songs that I listened to most this year...</p>
-                    <p>I did the same for 2022, 2021, 2020, and 2014/15/16 too.</p>
+                    <p>I did the same for 
+                        <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2022' target='_blank'> 2022</a>, 
+                        <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2021' target='_blank'> 2021</a>, 
+                        <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2020' target='_blank'> 2020</a>, 
+                        and <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2014_2015_2016' target='_blank'>2014/15/16</a>,  too.
+                    </p>
                     <p>If for some bizzare reason you wish to see more than the top 25 tracks, the <a href="https://www.last.fm/user/gutash/library/tracks?from=2023-01-01&rangetype=year" target="_blank">entire 2023 list is here</a> if you want to see that.</p>
                     <p className='note'>Disclaimer: this is <b>NOT a 'top 25 songs of 2022 list'</b>, this is simply <b>a list of the '25 songs that I listened to most throughout 2023'. </b> 
                         It would be a waste of time messing about with arbitary ordering, when the quantitative measurement of a 'play count' already exists thanks to LastFM scrobbling!
                         I personally don't see the point of making 'top 25 songs of 2022' lists, or 'top 50 albums of 2022' lists, when you are bound to change your opinion on the arbitary ordering in a few months,
                         not to mention how much music is out there that you've never heard before and will inevitably discover several years down the line leaving your old lists outdated.</p>
                 </div>
-                <img src={scrobbles_graph} className='scrobbles-per-month-graph beside-text' alt="Srobbles per month graph" />
+                <img src={IMAGES.scrobbles_graph} className='scrobbles-per-month-graph beside-text' alt="Srobbles per month graph" />
             </div>
         </div>
         <div className='blog-subsection' id='track1'>

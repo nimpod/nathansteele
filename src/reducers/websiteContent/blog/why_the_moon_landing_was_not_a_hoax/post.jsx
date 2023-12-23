@@ -1,6 +1,16 @@
 import React from 'react';
 
-export const post = (screenshots) => (
+const IMAGES = {
+    // diagrams...
+    moon_landing_sites: require('./diagrams/Moon_landing_sites.svg.png'),
+
+    // photos...
+    flag_shadow_on_surface_of_the_moon: require('./photos/flag_shadow_on_surface_of_the_moon.webp'),
+    lunar_lasers: require('./photos/lunar_lasers.jpg'),
+    moon_rock: require('./photos/moon_rock.webp'),
+}
+
+export const post = () => (
     <div>
         <div className='intro-text blog-subsection'>
             <h3 className='subgroup-title'>Intro</h3>
@@ -29,7 +39,7 @@ export const post = (screenshots) => (
                 <p>This is done with pin-point accuracy and is still in operation today. Many countries including Russia use the reflectors placed on the moon to conduct their own experiments.</p>
                 <p>This was part of The <a href='https://en.wikipedia.org/wiki/Lunar_Laser_Ranging_experiment'>Lunar Laser Ranging Experiment</a></p>
                 <picture className="img">
-                    <img width="400" height="200" alt="Lunar laser ranging experiment" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.12942%2Flrr-2010-7/MediaObjects/41114_2016_9126_Fig1.jpg" />
+                    <img width="400" height="200" alt="Lunar laser ranging experiment" src={IMAGES.lunar_lasers} />
                 </picture>
             <h3 className='subgroup-title'>1.2) Lunar rocks</h3>
                 <p>Buzz Aldrin collected 16 <a href='https://en.wikipedia.org/wiki/Moon_rock'>Moon Rocks</a> and brought them back to Earth to examine. Once they were returned, there was still 16 rocks, and they were all legit.</p>
@@ -40,12 +50,12 @@ export const post = (screenshots) => (
                 <p>The moon has no atmosphere, so glass does not decay the same way.</p>
                 <p>These lunar glass balls have been tested throughout the world by numerous scientists.</p>
                 <picture className="img">
-                    <img width="200" height="100" src="https://cdn.britannica.com/26/76826-050-D9D81830/samples-breccia-Basalt-astronauts-sample-Moon-Apollo-1971.jpg" alt="https://cdn.britannica.com/26/76826-050-D9D81830/samples-breccia-Basalt-astronauts-sample-Moon-Apollo-1971.jpg" />
+                    <img width="200" height="100" src={IMAGES.moon_rock} />
                 </picture>
             <h3 className='subgroup-title'>1.3) We can see it</h3>
                 <p>The Apollo landing sites and lunar rover trails from NASA's Lunar Reconnaissance Orbiter (LRO), about 21km above the surface.</p>
                 <picture className="img">
-                    <img width="200" height="100" src="https://www.gannett-cdn.com/presto/2019/06/06/PPHX/1fa11563-b89c-4e14-8f50-9d9c951d2b95-Apollo_17_landing_site_showing_American_flag.png?width=509&height=509&fit=crop&format=pjpg&auto=webp" alt="Photographic evidence of rovers" />
+                    <img width="200" height="100" src={IMAGES.flag_shadow_on_surface_of_the_moon} alt="Photographic evidence of flag" />
                 </picture>
             <h3 className='subgroup-title'>1.4) Limitations of camreas in the 60's</h3>
                 <p>Cameras and films in 1969 were very different to present day.</p>
@@ -108,13 +118,15 @@ export const post = (screenshots) => (
                 </p>
                 <p>Here is a beautiful diagram of all the (successfull) <a href='https://en.wikipedia.org/wiki/Moon_landing'>moon landings on The Moon</a>:</p>
                 <picture className="img">
-                    <img width="200" height="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Moon_landing_sites.svg/800px-Moon_landing_sites.svg.png" alt="Map of all moon landings" />
+                    <img width="200" height="100" src={IMAGES.moon_landing_sites} alt="Map of all moon landings" />
                 </picture>
         </div>
-        <div className='blog-subsection' id='references'>
+        <div className='blog-subsection references-text' id='references'>
             <h3 className='subgroup-title'>References</h3>
-            <p><a href='https://www.smithsonianmag.com/science-nature/interactive-map-shows-all-21-successful-moon-landings-180972687/'>Cool interactive diagram of moon landings</a></p>
-            <p><a href='https://en.wikipedia.org/wiki/Moon_landing'>Wikipedia, Moon Landing</a></p>
+            <ul>
+                <li><a href='https://www.smithsonianmag.com/science-nature/interactive-map-shows-all-21-successful-moon-landings-180972687/'>Cool interactive diagram of moon landings</a></li>
+                <li><a href='https://en.wikipedia.org/wiki/Moon_landing'>Wikipedia, Moon Landing</a></li>
+            </ul>
         </div>
     </div>
 )

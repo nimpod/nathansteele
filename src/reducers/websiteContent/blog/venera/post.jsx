@@ -1,5 +1,9 @@
 import React  from 'react';
 
+const IMAGES = {
+    venus_topography_map: require('./venus_topography_map.png'),
+    venera_falling_through_venus_atmosphere: require('./venera_falling_through_venus_atmosphere.png'),
+}
 
 export const post = (veneraAudioRecording) => (
     <div>
@@ -20,7 +24,7 @@ export const post = (veneraAudioRecording) => (
                 of the Universe and our insignificant but precious place within it.
             </p>
             <picture className="img">
-                <img width="600" height="400" src="https://raw.githubusercontent.com/nimpod/nathansteele/master/src/img/blogPosts/venusTopographyMap.PNG" alt='Venus topography map' />
+                <img className='larger-image' src={IMAGES.venus_topography_map} alt='Venus topography map' />
             </picture>
         </div>
         <div className='blog-subsection' id='section2'>
@@ -93,7 +97,7 @@ export const post = (veneraAudioRecording) => (
                 transmitted back to Earth for you and me to gaze at through our computer screens 40 years later - such otherworldly discoveries within an photograph containing 750x less
                 data than a photograph on your average modern-day smartphone. A profound example of quality over quantity.</p> \
             <picture className="img">
-                <img width="600" height="200" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/USSR_Venera_10_Venus_ground_1975_colorized_by_Don_P._Mitchell.png" alt='Venus landscape' />
+                <img width="600" height="200" src={IMAGES.venera_falling_through_venus_atmosphere} alt='Venus landscape' />
             </picture>
         </div>
         <div className='blog-subsection' id='section9'>

@@ -181,14 +181,14 @@ class MusicReview extends React.Component {
                                 {/* Prev review link */}
                                 <div className='prev-review-link' title="Click to go to previous album in toplist">
                                     <Link to={'/music/' + review_id_of_prev_album}>
-                                        <p>&lt; Previous in toplist</p>
+                                        <p>&lt;</p>
                                     </Link>
                                 </div>
 
                                 {/* Next review link */}
                                 <div className='next-review-link' title="Click to go to next album in toplist">
                                     <Link to={'/music/' + review_id_of_next_album}>
-                                        <p>&gt; Next in toplist</p>                             
+                                        <p>&gt;</p>                             
                                     </Link>
                                 </div>
                             </div>
@@ -196,6 +196,7 @@ class MusicReview extends React.Component {
 
                         <div className='review-content-and-tracklist'>
                             {/* Tracklist */}
+                            {/*}
                             <div className='tracklist'>
                                 {all_tracks.map(t => {
                                     let track_index = t['@attr']['rank'];
@@ -207,7 +208,8 @@ class MusicReview extends React.Component {
                                     </a>
                                 })}
                             </div>
-                            
+                            */}
+
                             {/* The actual review content!! */}
                             <div className='review-content-container' dangerouslySetInnerHTML={{__html: this.props.album_data.my_review}}>
                                 

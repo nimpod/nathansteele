@@ -1650,6 +1650,9 @@ div.blog-post
   margin: 2em 0;
   /* margin: 0 auto; */
 }
+.blog-post img.larger-image {
+  max-width: 850px !important;
+}
 .blog-post img, 
 .blog-post picture {
   display: block;
@@ -3566,7 +3569,8 @@ div.albumInfoContainer > div.myRating {
 
 /* review content */
 .album-review .review-content-container {
-  width: 68%;
+  width: 100%;
+  padding-top: 20px;
   border-radius: 10px;
   background-color: var(--album-info-header-bg-color);
 }
@@ -4162,7 +4166,7 @@ div.albumInfoContainer > div.myRating {
   }
   .blog-post-info,
   .blog-post-content {
-    padding: 5px 15px;
+    padding: 5px 12px 5px 8px;
   }
   .blog-post-info.notAtTop {
     position: fixed;
