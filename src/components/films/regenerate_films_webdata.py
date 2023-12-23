@@ -11,6 +11,7 @@ import csv
 import json
 import glob
 import requests
+from json.decoder import JSONDecodeError
 from pathlib import Path
 from bs4 import BeautifulSoup
 from urllib3.exceptions import InsecurePlatformWarning, InsecureRequestWarning
@@ -244,7 +245,12 @@ def regenerate_json_file():
                 imdb_film_id = imdb_url.split('/')[-2]
                 url = f'http://www.omdbapi.com/?i={imdb_film_id}&apikey={omdb_api_key}'
                 imdb = requests.get(url=url, verify=False)
-                imdb_json = json.loads(imdb.text)
+                print(imdb.text)
+                
+                try:
+                    imdb_json = json.loads(imdb.text)
+                except JSONDecodeError:
+                    print('uh oh')
                 
                 if (imdb_json['Response'] == "False"):
                     print(imdb_json)
@@ -312,5 +318,5 @@ def regenerate_json_file():
 
 
 # call my functions........
-download_letterboxd_data()
+#download_letterboxd_data()
 regenerate_json_file()
