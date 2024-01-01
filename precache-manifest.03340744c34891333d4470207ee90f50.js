@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "077c26a9f0beb0ba4d38f9b9d4a500a8",
+    "revision": "78f5e0fe64e72a26e5a8789ebcf30eb3",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "a5213b8f1f3b6735bee7",
+    "revision": "b4563ad2f16e1d247184",
     "url": "/nathansteele/static/css/main.17dd5f83.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.63e9c10a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a5213b8f1f3b6735bee7",
-    "url": "/nathansteele/static/js/main.2cf23cff.chunk.js"
+    "revision": "b4563ad2f16e1d247184",
+    "url": "/nathansteele/static/js/main.da2d2c02.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
@@ -656,12 +656,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/scrobbles_per_month_graph.0dd063fe.PNG"
   },
   {
-    "revision": "24fe6bf0dc80913b161913043ea3f4c5",
-    "url": "/nathansteele/static/media/scrobbles_per_month_graph.24fe6bf0.PNG"
-  },
-  {
     "revision": "7d6f3c554aa4617d57eda9160e84507d",
     "url": "/nathansteele/static/media/scrobbles_per_month_graph.7d6f3c55.PNG"
+  },
+  {
+    "revision": "9122ba819bf492f8a7b017e565bc4f12",
+    "url": "/nathansteele/static/media/scrobbles_per_month_graph.9122ba81.PNG"
   },
   {
     "revision": "87d0340e150028391e51a45dcf457f6f",
