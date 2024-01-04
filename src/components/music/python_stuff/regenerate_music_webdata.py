@@ -78,7 +78,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 print(f"{pos_padded}: {review_id}")
                 
                 # get more data via LastFM API...
-                data = lastfm.GET_album_info(artist_name=artist_name, album_name=album_name)
+                data = lastfm.GET_album_info(artist_name=artist_name, album_name=album_name)                
                 lastfm_url = ""
                 album_cover_url = ""
                 duration = 0
@@ -89,7 +89,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     # get lastfm url...
                     if 'url' in data['album']:
                         lastfm_url = data['album']['url']
-                        print(lastfm_url)
+                        # print(lastfm_url)
                     else:
                         print('not url found :(')
                 
@@ -107,7 +107,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     # get album cover (if it was in response)...
                     if 'image' in data['album']:
                         album_cover_url = data['album']['image'][-1]['#text']
-                        print(album_cover_url)
+                        # print(album_cover_url)
                     else:
                         print('no album cover found :(')
                 

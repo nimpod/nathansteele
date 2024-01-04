@@ -490,10 +490,12 @@ class Films extends React.Component {
         // get items for current page...
         const films_displayed = this.state.__filtered_data
             .filter((f) => {
-                // FIXME:   this searching mechanism wont work anymore due to the fact we're now using pagination to split the list over multiple pages... 
-                //          So this is essentially just searching the 1st page :(
-                let is_title_equal_to_searchbox = f.title.toLowerCase().includes(this.state.__search_text.toLowerCase());
-                return is_title_equal_to_searchbox;
+                let search_text = this.state.__search_text.toLowerCase();
+                if ('title_displayed' in f) {
+                    return f.title_displayed.toLowerCase().includes(search_text);
+                } else {
+                    return f.title.toLowerCase().includes(search_text);
+                }
             })
             .slice(last_index, last_index + MAX_FILMS_PER_PAGE)
             .map((film, i) => {

@@ -5,6 +5,14 @@ class MusicbeeHelpers:
     def fix_symbols_on_album_filenames(folder_name: str):
         """
         Because on windows you can't put certain icons in file names, and the musicbee export is based on the name of the folder represting the album!!!
+        
+        Use these characters instead:
+        . = •
+        ? = ♪
+        : = ⋮
+        ; = ⧽
+        / = ⇗
+        \ = ⇖
         """
         return folder_name.replace('~', ':')\
                             .replace('¬', "\"")\
