@@ -124,6 +124,42 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    OBLIVION_ISLAND: [
+        require('../websiteContent/films/oblivion_island/screenshot1.PNG'),
+        require('../websiteContent/films/oblivion_island/screenshot5.PNG'),
+        require('../websiteContent/films/oblivion_island/screenshot8.PNG'),
+    ],
+
+    LEON_THE_PROFESSIONAL: [
+        require('../websiteContent/films/leon_the_professional/screenshot1.PNG'),
+        require('../websiteContent/films/leon_the_professional/screenshot2.PNG'),
+        require('../websiteContent/films/leon_the_professional/screenshot3.PNG'),
+    ],
+
+    DEEP_SEA: [
+        require('../websiteContent/films/deep_sea/screenshot1.PNG'),
+        require('../websiteContent/films/deep_sea/screenshot10.PNG'),
+        require('../websiteContent/films/deep_sea/screenshot12.PNG'),
+    ],
+
+    BAREFOOT_GEN: [
+        require('../websiteContent/films/barefoot_gen/screenshot11.PNG'),
+        require('../websiteContent/films/barefoot_gen/screenshot16.PNG'),
+        require('../websiteContent/films/barefoot_gen/screenshot2.PNG'),
+    ],
+
+    LITTLE_SHOP_OF_HORRORS: [
+        require('../websiteContent/films/little_shop_of_horrors/screenshot2.PNG'),
+        require('../websiteContent/films/little_shop_of_horrors/screenshot3.PNG'),
+        require('../websiteContent/films/little_shop_of_horrors/screenshot4.PNG'),
+    ],
+    
+    SPRING_AND_CHAOS: [
+        require('../websiteContent/films/spring_and_chaos/screenshot1.PNG'),
+        require('../websiteContent/films/spring_and_chaos/screenshot2.PNG'),
+        require('../websiteContent/films/spring_and_chaos/screenshot12.PNG'),
+    ],
+
     THE_DOG_OF_FLANDERS: [
         require('../websiteContent/films/the_dog_of_flanders/screenshot1.PNG'),
         require('../websiteContent/films/the_dog_of_flanders/screenshot6.PNG'),
@@ -1430,6 +1466,8 @@ const database = {
             "my_rating": 9.0,
             "letterboxd_url": "https://boxd.it/1OMK",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/lQ6Leu6UDIvN6nrVoOgICFm6mdL.jpg",
+            "screenshots": screenshots.BAREFOOT_GEN,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.BAREFOOT_GEN)),
             "my_tags": [
 
             ],
@@ -1964,9 +2002,12 @@ const database = {
     
         "deep_sea": {
             "letterboxd_url": "https://boxd.it/oRIs",
-            "my_rating": 8.0,
-            "my_tags": [""],
-            "my_review": "",
+            "my_rating": 8.5,
+            "my_tags": [
+                "Insane visuals"
+            ],
+            "screenshots": screenshots.DEEP_SEA,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.DEEP_SEA)),
             "gradual_interest": [8, 8, 8, 9, 8, 8, 9, 8, 8, 8],
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/mhugOCm0eC1BP6nDjnaSRvgorQj.jpg"
         },
@@ -2675,7 +2716,8 @@ const database = {
             "my_rating": 9.0,
             "letterboxd_url": "https://boxd.it/1Vqm",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/iKkbN17OmFosaW6asCNZTTsyvpu.jpg",
-            "my_review": "",
+            "screenshots": screenshots.LITTLE_SHOP_OF_HORRORS,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.LITTLE_SHOP_OF_HORRORS)),
             "my_tags": [
                 
             ],
@@ -2683,8 +2725,10 @@ const database = {
 
         "leon_the_professional": {
             "my_rating": 8.0,
+            "title_displayed": "Léon: The Professional",
             "letterboxd_url": "https://boxd.it/2b8S",
-            "my_review": "",
+            "screenshots": screenshots.LEON_THE_PROFESSIONAL,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.LEON_THE_PROFESSIONAL)),
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/yI6X2cCM5YPJtxMhUd3dPGqDAhw.jpg",
             "my_tags": [
                 "Inticing",
@@ -3041,9 +3085,12 @@ const database = {
         "oblivion_island": {
             "letterboxd_url": "https://boxd.it/13qs",
             "my_rating": 9.0,
-            "my_tags": [""],
-            "my_review": "",
-            "custom_poster_url": "https://www.themoviedb.org/t/p/original/ml8M4MCwHJudF4zbd0KF1SZ6lYr.jpg"
+            "custom_poster_url": "https://www.themoviedb.org/t/p/original/ml8M4MCwHJudF4zbd0KF1SZ6lYr.jpg",
+            "screenshots": screenshots.OBLIVION_ISLAND,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.OBLIVION_ISLAND)),
+            "my_tags": [
+                "Insane visuals"
+            ],
         },
     
         "okja": {
@@ -3317,7 +3364,8 @@ const database = {
             "my_rating": 7.75,
             "letterboxd_url": "https://boxd.it/1u02",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/Aq9nsKCv0biNKTFMmfdQWYXVngm.jpg",
-            "my_review": "",
+            "screenshots": screenshots.SPRING_AND_CHAOS,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.SPRING_AND_CHAOS)),
             "my_tags": [
                 
             ],

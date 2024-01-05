@@ -2014,13 +2014,15 @@ div.blog-post
   transition: all 0.1s ease;
 }
 
+/* apply 100% width when screen is big */
+@media screen and (min-width: 1200px) {
+  .films-toplist.view-as-list .films-toplist-item .film-poster img {
+    width: 100%;
+  }  
+}
+
 /* Poster section */
 .films-toplist.view-as-list .films-toplist-item .film-poster img {
-  /*
-  width: calc(var(--film-grid-element-width) * 2.3);
-  height: calc(var(--film-grid-element-height) * 2.3);
-  */
-  width: 100%;
   height: 100%;
   object-fit: cover;
   border-right: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
@@ -3319,25 +3321,22 @@ div.btn.films-reset-filters-btn svg {
 }
 @media screen and (max-width: 1100px) {
   .top-albums-list {
-    padding: 50px 10px;
+    padding: 0px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 800px) {
   .top-albums-list {
-    padding: 50px 10px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 600px) {
   .top-albums-list {
-    padding: 50px 10px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media screen and (max-width: 400px) {
   .top-albums-list {
-    padding: 50px 10px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
@@ -3974,6 +3973,14 @@ div.albumInfoContainer > div.myRating {
     text-align: center;
   }
 
+  .films-toplist.view-as-list .films-toplist-item .film-poster img {
+    height: calc(var(--film-grid-element-height) * 2.3);
+    height: 100%;
+    width: cover;
+    object-fit: cover;
+    border-right: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
+  }
+
   .filmPosition {
     font-size: 0.8rem;
     font-weight: 500 !important;
@@ -4083,14 +4090,19 @@ div.albumInfoContainer > div.myRating {
   .pagination-btns li.pagination-active a {
     border-bottom: 3px solid var(--films-pagination-btn-border-color-active) !important;
   }
+
   /* #endregion */
 
   /* #endregion */
 
   /* #region --------------------< Films page - review >-------------------- */
+  .film-review .review-displayed .back-to-previous-page {
+    margin-top: -10px;
+  }
+
   .film-review .review-displayed {
     width: 100%;
-    padding: 0 10px;
+    padding: 0;
   }
   .film-review .top-films-grid-container {
     display: none;
@@ -4103,13 +4115,90 @@ div.albumInfoContainer > div.myRating {
   }
   .film-review .section-inner {
     display: block;
+    padding: 0;
   }
   .film-review .review-displayed .back-to-previous-page {
     margin-left: 0px !important;
   }
-  .film-review .review-displayed .filmPoster img {
-    width: 250px;
+  .film-review .review-displayed .filmPoster {
+    position: absolute;
   }
+  .film-review .review-displayed .filmPoster img {
+    width: 150px;
+  }
+
+  .film-review .review-displayed {
+    grid-template-columns: 100%;
+  }
+
+  .film-review .review-allContent {
+    width: 100%;
+  }
+
+  .film-review .review-displayed .film-details-header > p.film-title {
+    font-size: 1.2rem;
+  }
+  .film-review .review-displayed .film-details-header > p.film-year {
+    font-size: 0.75rem;
+  }
+  .film-review .review-displayed .film-details-header > p {
+    margin-right: 7px;
+  }
+
+  .genre-tag, .director-tag, .film-duration, .language-tag, .theme-tag,
+  .film-review .review-displayed .review-my-tags > .my-tag {
+    font-size: 0.7rem;
+  }
+
+  .film-review .review-allContent .review-content > div > *:not(img),
+  .film-review .review-allContent .review-my-tags {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .film-review .review-content-container img {
+    border-radius: 0;
+  }
+
+  .review-content-container .review-content > div {
+    padding: 0px;
+  }
+
+  .film-review .film-details {
+    margin-left: 36%;
+  }
+
+  /* display each item on its own row */
+  .film-review .review-displayed .film-details-more > div {
+    display: block;
+  }
+
+  /* remove little dot separators */
+  .film-review .review-displayed .film-details-more > div + div::before {
+    display: none;
+  }
+
+  /* prev & next review links... */
+  .film-review .review-displayed > div.prev-review-link,
+  .film-review .review-displayed > div.next-review-link {
+    display: block;
+    position: absolute;
+    margin-top: 350px;
+    background-color: #000;
+  }
+  .film-review .review-displayed > div.next-review-link {
+    margin-left: 50px;
+  }
+  .film-review .review-displayed > div.prev-review-link > a,
+  .film-review .review-displayed > div.next-review-link > a {
+    display: block;
+  }
+  .film-review .review-displayed > div.prev-review-link > a > p,
+  .film-review .review-displayed > div.next-review-link > a > p {
+    height: 20px;
+    margin: 0;
+  }
+
   /* #endregion */
 
   /* #region --------------------< Music page >------------------------- */
@@ -4189,12 +4278,21 @@ div.albumInfoContainer > div.myRating {
 }
 
 
+@media screen and (max-width: 900px) {
+  #music-page .top-albums-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
 @media screen and (max-width: 500px) {
+  #music-page .top-albums-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 400px) {
   #music-page .top-albums-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 
 /* bigger than mobile but smaller than pc */
 @media screen and (max-width: 1083px) {
@@ -4328,7 +4426,7 @@ div.albumInfoContainer > div.myRating {
 
 @media screen and (max-width: 900px) { .my-custom-grid-container { padding: 0px 5px; } }
 
-@media screen and (max-width: 700px) { .page-title{ font-size: 1.65rem !important; } }
+@media screen and (max-width: 700px) { .page-title{ font-size: 1.25rem !important; } }
 
 
 /* remove padding from a blog post as screen gets smaller */
