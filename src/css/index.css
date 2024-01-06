@@ -1860,6 +1860,7 @@ div.blog-post
   margin-left: 10px;
   padding-bottom: 120px;
 }
+
 @media screen and (max-width: 700px) {
   .films-toplist.view-as-grid {
     padding-top: calc(var(--vertical-gap-at-top-of-films-page-gridView) + 60px);
@@ -1953,26 +1954,37 @@ div.blog-post
 }
 
 /* Film details above poster */
-.films-toplist.view-as-list div.films-toplist-item > a > div.film-details {
+.films-toplist.view-as-list div.films-toplist-item > a > div.film-details span.film-title {
   color: var(--text);
-  padding: 15px 5px;
 }
-
-.films-toplist.view-as-list div.film-details > span {
+.films-toplist.view-as-list div.films-toplist-item > a > div.film-details div.film-details-main-more div {
+  color: var(--text-darker);
+}
+.films-toplist.view-as-list div.film-details-main-more div {
   display: inline;
-  margin-right: 10px;
-  vertical-align: middle;
+  margin-right: 6px;
+}
+.films-toplist.view-as-list div.film-details-main-more {
+  font-size: 0.75rem;
 }
 
 /* Film title */
 .films-toplist.view-as-list div.film-details span.film-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;  /* Space below title */
+  font-size: 1.6rem;
 }
 
 /* Data container... */
 .films-toplist.view-as-list div.film-data {
-  float: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.films-toplist.view-as-list div.film-details-main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 /* #region --------------------------< Poster & screenshots >-------------------------- */
@@ -2090,9 +2102,11 @@ div.blog-post
   background-color: var(--film-mydata-pos-bg-color);
 }
 .films-toplist.films-toplist.view-as-list span.film-myPos::after {
+  /*
   content: "/300";
   font-size: 0.6rem;
   font-weight: 100;
+  */
 }
 
 /* My rating */
@@ -2144,7 +2158,7 @@ span.film-imdbDiffScore.equal-diff    { color: var(--film-mydata-imdbdiffscore-e
 .films-toplist.view-as-list div.film-details span.film-year,
 .films-toplist.view-as-list div.film-details span.film-language,
 .films-toplist.view-as-list div.film-details span.film-duration {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 .films-toplist.view-as-list div.film-details span.genre-tag,
 .films-toplist.view-as-list div.film-details span.director-tag,
@@ -2773,7 +2787,7 @@ div.btn.films-reset-filters-btn svg {
 
 /* Title of film */
 .film-review .review-displayed .film-details-header > p {
-  font-size: 2.3rem;
+  font-size: 2.0rem;
 }
 .film-review .review-displayed .film-details-header > p.film-title {
   font-weight: bold;
@@ -2791,14 +2805,14 @@ div.btn.films-reset-filters-btn svg {
 }
 
 .film-details-header-2 > div {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 /* List of genres & directors */
 .film-genres,
 .film-directors,
 .film-links {
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .genre-tag,
@@ -2807,7 +2821,7 @@ div.btn.films-reset-filters-btn svg {
 .theme-tag {
   border-radius: 5px;
   background-color: rgb(42, 43, 45);
-  padding: 3px 6px;
+  padding: 2px 6px;
 }
 
 .album-review .genre-tag,
@@ -2820,6 +2834,7 @@ div.btn.films-reset-filters-btn svg {
   background-color: rgb(92, 94, 98);
 }
 
+.year-tag,
 .genre-tag,
 .director-tag,
 .film-duration,
@@ -2829,6 +2844,9 @@ div.btn.films-reset-filters-btn svg {
   display: inline-block;
   margin-right: 6px;
 }
+.year-tag {
+  font-size: 0.8rem;
+}
 
 .film-review .review-displayed .film-details-more > div {
   display: inline-block;
@@ -2837,7 +2855,8 @@ div.btn.films-reset-filters-btn svg {
 .film-review .review-displayed .film-details-more > div + div {
   
 }
-.film-review .review-displayed .film-details-more > div + div::before {
+.film-review .review-displayed .film-details-more > div + div::before,
+.films-toplist.view-as-list .film-details-main-more > div:not(:first-child)::before {
   font-size: 1.1em;
   line-height: 1;
   content: "•";
@@ -3672,7 +3691,7 @@ div.albumInfoContainer > div.myRating {
     padding: 0px;
   }
   .section-inner > div.frontpage {
-    padding: 14px 0px;
+    padding: 0px 0px;
   }
   .page-text-small {
     font-size: 0.63rem;
@@ -3973,12 +3992,39 @@ div.albumInfoContainer > div.myRating {
     text-align: center;
   }
 
+  .films-toplist-container {
+    padding-top: 10px;
+  }
+
+  .pagination-btns {
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  .pagination-btns li.previous-btn {
+    margin-left: 25%;
+  }
+  .pagination-btns li.next-btn {
+    margin-left: 64%;
+  }
+
   .films-toplist.view-as-list .films-toplist-item .film-poster img {
-    height: calc(var(--film-grid-element-height) * 2.3);
-    height: 100%;
-    width: cover;
+    width: 100%;
     object-fit: cover;
     border-right: var(--film-toplist-item-border-inner-width) solid var(--film-toplist-item-images-border-inner-color);
+  }
+
+  .films-toplist.view-as-list div.films-toplist-item .film-images {
+    grid-template-columns: 40% 60%;
+  }
+
+  .films-toplist.view-as-list div.film-details span.genre-tag,
+  .films-toplist.view-as-list div.film-details span.language-tag {
+    padding: 0 3px;
+    font-size: 0.6rem;
+  }
+
+  .films-toplist.view-as-list .films-toplist-item > a {
+    padding: 4px;
   }
 
   .filmPosition {
@@ -4012,7 +4058,8 @@ div.albumInfoContainer > div.myRating {
   .films-toplist {
     margin-left: 0px !important;
   }
-  .films-controls:not(.visible) {
+  .films-controls:not(.visible) div.sorting-container,
+  .films-controls:not(.visible) div.filtering-container {
     display: none;
     padding: 0px 15px;
     width: 100%;
@@ -4037,7 +4084,6 @@ div.albumInfoContainer > div.myRating {
     padding: 1px;
   }
   .films-controls div.searchbox > input {
-    width: 200px;
   }
   .films-controls .sort-direction-btns div.btn > svg {
     width: 23px;
@@ -4051,10 +4097,10 @@ div.albumInfoContainer > div.myRating {
     width: fit-content;
   }
   .films-toplist.films-toplist.view-as-list .film-poster {
-    height: 300px;
+    height: 250px;
   }
   .film-screenshots {
-    height: calc(300px / 3);
+    height: calc(250px / 3);
   }
   .films-toplist.view-as-list div.films-toplist-item > a > div.film-details {
     padding: 0px 5px;
@@ -4069,8 +4115,8 @@ div.albumInfoContainer > div.myRating {
     margin-top: -10px;
   }
   .films-toplist.view-as-list div.film-dataContainer.myData > span {
-    font-size: 1.5rem;
-    padding: 2px 4px;
+    font-size: 1.2rem;
+    padding: 4px 4px;
   }
   .films-controls .dropdown-list-btn {
     width: 140px !important;
@@ -4145,9 +4191,20 @@ div.albumInfoContainer > div.myRating {
     margin-right: 7px;
   }
 
-  .genre-tag, .director-tag, .film-duration, .language-tag, .theme-tag,
+  .genre-tag, .director-tag, .film-duration, .language-tag, .theme-tag, .film-year,
   .film-review .review-displayed .review-my-tags > .my-tag {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+  }
+
+  .films-toplist.view-as-list .film-details-main-more > div:not(:first-child)::before {
+    margin-right: 3px;
+  }
+  .films-toplist.view-as-list div.film-details-main-more div {
+    margin-right: 3px;
+  }
+
+  .films-toplist.view-as-list div.film-details-main {
+    margin-left: 4px;
   }
 
   .film-review .review-allContent .review-content > div > *:not(img),

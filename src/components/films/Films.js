@@ -34,9 +34,9 @@ let MAX_FILMS_PER_PAGE = 25;
 
 const enumValue = (name) => Object.freeze({toString: () => name});
 const SortableType = Object.freeze({
-    IMDB_AVG: enumValue("imdbAvgRating"),
-    IMDB_VOTES: enumValue("imdbNumVotes"),
-    IMDB_DIFF: enumValue("imdbDiffScore"),
+    IMDB_AVG: enumValue("IMDB_avg_rating"),
+    IMDB_VOTES: enumValue("IMDB_num_votes"),
+    IMDB_DIFF: enumValue("IMDB_diff_score"),
     MY_POS: enumValue("position"),
     DURATION: enumValue("duration"),
     YEAR: enumValue("year")
@@ -147,7 +147,7 @@ class Films extends React.Component {
                             if (type === SortableType.IMDB_DIFF) {
                                 return (a["my_rating"] - a["IMDB_avg_rating"]) - (b["my_rating"] - b["IMDB_avg_rating"])
                             }
-                            return a[type] - b[type] 
+                            return a[type] - b[type];
                         })
                         .reverse()
                 }
@@ -560,9 +560,6 @@ class Films extends React.Component {
                 <div className="section-inner">
                     <div className='frontpage films-container'>
                         <span className='page-title'>My top {this.props.top_films.length} favourite films of all time</span>
-                        <div className='toggle-controls-btn' onClick={this.toggle_controls}>
-                            <ControlsIcon className='invertable-icon' />
-                        </div>
                         <div className='films-controls'>
                             <div className='films-controls-subgroup searching-container'>
                                 <div className="searchbox">
@@ -686,6 +683,9 @@ class Films extends React.Component {
                                     title="Reset filters">
                                     <ResetFiltersIcon className='invertable-icon' />
                                 </div>
+                            </div>
+                            <div className='toggle-controls-btn' onClick={this.toggle_controls}>
+                                <ControlsIcon className='invertable-icon' />
                             </div>
                         </div>
                         <div className='films-toplist-container'>

@@ -124,6 +124,12 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    LIKE_FATHER_LIKE_SON: [
+        require('../websiteContent/films/like_father_like_son/screenshot1.PNG'),
+        require('../websiteContent/films/like_father_like_son/screenshot11.PNG'),
+        require('../websiteContent/films/like_father_like_son/screenshot10.PNG'),
+    ],
+
     MR_JONES: [
         require('../websiteContent/films/mr_jones/screenshot3.PNG'),
         require('../websiteContent/films/mr_jones/screenshot11.PNG'),
@@ -2190,6 +2196,7 @@ const database = {
     
         "finding_nemo": {
             "letterboxd_url": "https://boxd.it/72i",
+            "custom_poster_url": "https://www.themoviedb.org/t/p/original/ggQ6o8X5984OCh3kZi2UIJQJY5y.jpg",
             "my_rating": 8.75,
             "my_tags": [
                 "Fun",
@@ -2732,6 +2739,20 @@ const database = {
     },
 
     L: {
+        "like_father_like_son": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/5rQs",
+            "custom_poster_url": "https://www.themoviedb.org/t/p/original/cc8LgROz7cBi8WrAUJSWj72GtE8.jpg",
+            "screenshots": screenshots.LIKE_FATHER_LIKE_SON,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.LIKE_FATHER_LIKE_SON)),
+            "my_tags": [
+                "Emotional",
+                "Touching family drama",
+                "Quiet",
+                "Enduring hardship"
+            ],
+        },
+
         "little_shop_of_horrors": {
             "my_rating": 9.0,
             "letterboxd_url": "https://boxd.it/1Vqm",

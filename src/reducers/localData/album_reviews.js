@@ -2430,12 +2430,12 @@ const database = {
     },
 
     "worlds_end_girlfriend__hurtbreak_wonderland": {
+		custom_cover_url: require('../websiteContent/albums/worlds_end_girlfriend__hurtbreak_wonderland/album_cover.jpg'),
         lastfm_url: "https://www.last.fm/music/World%27s+End+Girlfriend/Hurtbreak+Wonderland",
         rym_url: "",
         spotify_url: "https://open.spotify.com/album/7KtBhRWitpnHoma8UWiDgz?si=dhQ99k1YT3-tdBWS46M7GA",
         year_of_release: "2007",
         genres: ["Post-Rock; Modern Classical; IDM; Breakcore; Glitch; Chamber jazz; Electronic"],
-        custom_cover_url: "https://e.snmc.io/i/1200/s/d47bc66835d87bec07db7789341d5fbc/10509124",
         my_rating: 8.0,
         my_review: "",
         year_of_discovery: "2023",

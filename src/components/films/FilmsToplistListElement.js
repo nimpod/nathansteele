@@ -44,11 +44,10 @@ class FilmsToplistListElement extends Component {
             <div className='films-toplist-item'>
                 <Link to={'/films/' + this.props.review_id}>
                     <div className='film-details'>
-                        <span className='film-title' title='Title'>{this.props.title}</span>
-                        <span className='film-year' title='Year of release'>({this.props.film.year})</span>
                         <div className='film-data'>
                             <div className='film-dataContainer myData'>
-                                <span className='film-myPos' title='Position in my toplist'>{this.props.film.position}</span>
+                                <span className='film-myPos' title='Position in my toplist'>#{this.props.film.position}</span>
+                                <span className="film-myRating" title="My rating">{this.props.film.my_rating}</span>
 
                                 {/*}
                                 <span className={`film-imdbDiffScore ${this.props.diffScoreClassname}`} title='Difference between my rating and IMDb avg rating'>{this.props.diffScoreStr}</span>
@@ -66,6 +65,22 @@ class FilmsToplistListElement extends Component {
                                     })}
                                 </div>
                             </div>*/}
+
+                            <div className='film-details-main'>
+                                <span className='film-title' title='Title'>{this.props.title}</span>
+                                <div class='film-details-main-more'>
+                                    <div className='film-year' title='Year of release'>{this.props.film.year}</div>
+                                    <div className='film-duration' title='Duration in mins'>{this.props.film.duration} mins</div>
+                                    <div className='film-language' title='Language'>
+                                        <span className='language-tag'>{this.props.film.language}</span>
+                                    </div>
+                                    <div className='film-genres' title='Genres'>
+                                        {this.props.film.genres.map(genre => {
+                                            return <span className='genre-tag'>{genre}</span>
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="film-images">

@@ -84,10 +84,12 @@ class FilmsReview extends React.Component {
                             <div className='film-details'>
                                 <div className='film-details-header'>
                                     <p className='film-title' title="Title">{title}</p>
-                                    <p className='film-year' title="Release year">({this.props.film.year})</p>
                                 </div>
                                 <div className='film-details-header-2'>
                                     <div className='film-details-more'>
+                                        <div className='film-year' title='Year of release'>
+                                            <div className='year-tag'>{this.props.film.year}</div>
+                                        </div>
                                         <div className='film-duration' title="Duraton in minutes">
                                             {this.props.film.duration} mins
                                         </div>
@@ -104,12 +106,14 @@ class FilmsReview extends React.Component {
                                                 return <div className='genre-tag'>{genre}</div>
                                             })}
                                         </div>
-                                        <div className='links' title="Links">
+                                    </div>
+
+                                    <div className='links' title="Links">
                                             <a className='film-imdb-link' href={this.props.film.IMDB_url} target='_blank'>IMDb</a>
                                             <a className='film-tmdb-link' href={this.props.film.TMDB_url} target='_blank'>TMDb</a>
                                             <a className='film-letterboxd-link' href={this.props.film.letterboxd_url} target='_blank'>Letterboxd</a>
                                         </div>
-                                    </div>
+
                                     <div className='film-details-myData'>
                                         <div className='myPosition generic-hover' title='Position in my toplist'>
                                             <Link to='/films'>
