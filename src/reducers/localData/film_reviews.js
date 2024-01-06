@@ -124,6 +124,24 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    MR_JONES: [
+        require('../websiteContent/films/mr_jones/screenshot3.PNG'),
+        require('../websiteContent/films/mr_jones/screenshot11.PNG'),
+        require('../websiteContent/films/mr_jones/screenshot2.PNG'),
+    ],
+
+    THE_BRAND_NEW_TESTAMENT: [
+        require('../websiteContent/films/the_brand_new_testament/screenshot3.PNG'),
+        require('../websiteContent/films/the_brand_new_testament/screenshot13.PNG'),
+        require('../websiteContent/films/the_brand_new_testament/screenshot14.PNG'),
+    ],
+
+    INCREDIBLE_BUT_TRUE: [
+        require('../websiteContent/films/incredible_but_true/screenshot1.PNG'),
+        require('../websiteContent/films/incredible_but_true/screenshot2.PNG'),
+        require('../websiteContent/films/incredible_but_true/screenshot6.PNG'),
+    ],
+
     OBLIVION_ISLAND: [
         require('../websiteContent/films/oblivion_island/screenshot1.PNG'),
         require('../websiteContent/films/oblivion_island/screenshot5.PNG'),
@@ -559,7 +577,8 @@ const database = {
         "the_brand_new_testament": {
             "my_rating": 10,
             "letterboxd_url": "https://boxd.it/aPMO",
-            "my_review": "",
+            "screenshots": screenshots.THE_BRAND_NEW_TESTAMENT,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.THE_BRAND_NEW_TESTAMENT)),
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/1aHD703Qkh9Rf9vLjdJRxJT25F0.jpg",
             "my_tags": [
                 "Life",
@@ -2009,7 +2028,7 @@ const database = {
             "screenshots": screenshots.DEEP_SEA,
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.DEEP_SEA)),
             "gradual_interest": [8, 8, 8, 9, 8, 8, 9, 8, 8, 8],
-            "custom_poster_url": "https://www.themoviedb.org/t/p/original/mhugOCm0eC1BP6nDjnaSRvgorQj.jpg"
+            "custom_poster_url": "https://www.themoviedb.org/t/p/original/qLj5JaXRRDsVjFtFYSaSpeyOQyz.jpg"
         },
     
         "dead_leaves": {
@@ -2615,7 +2634,8 @@ const database = {
             "letterboxd_url": "https://boxd.it/rBtC",
             "my_rating": 8.0,
             "my_tags": [""],
-            "my_review": ""
+            "screenshots": screenshots.INCREDIBLE_BUT_TRUE,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.INCREDIBLE_BUT_TRUE)),
         },
     
         "it_comes_at_night": {
@@ -2993,7 +3013,8 @@ const database = {
             "letterboxd_url": "https://boxd.it/5mUO",
             "my_rating": 8.0,
             "my_tags": [""],
-            "my_review": ""
+            "screenshots": screenshots.MR_JONES,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.MR_JONES)),
         },
     
         "mary_and_the_witches_flower": {
