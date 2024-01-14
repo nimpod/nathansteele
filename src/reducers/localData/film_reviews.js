@@ -412,7 +412,7 @@ const database = {
     123: {
         "1408": {
             "letterboxd_url": "https://boxd.it/25Vu",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Claustrophobic", 
                 "Disturbing",
@@ -425,7 +425,7 @@ const database = {
     
         "2001_a_space_odyssey": {
             "letterboxd_url": "https://boxd.it/2bf0",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Mysterious", 
                 "Grand", 
@@ -455,7 +455,7 @@ const database = {
     
         "10_cloverfield_lane": {
             "letterboxd_url": "https://boxd.it/aZiu",
-            "my_rating": 8.75,
+            "my_rating": 9.0,
             "my_tags": [
                 "Mysterious",
                 "Claustrophobic", 
@@ -481,7 +481,7 @@ const database = {
         "500_days_of_summer": {
             "letterboxd_url": "https://boxd.it/1EmM",
             "title_displayed": "(500) Days of Summer",
-            "my_rating": "9.25",
+            "my_rating": 9.0,
             "my_tags": [
                 "Soulmate", 
                 "Non-linear timeline", 
@@ -607,7 +607,7 @@ const database = {
     
         "the_red_turtle": {
             "letterboxd_url": "https://boxd.it/bdkE",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Alone in the wilderness", 
                 "Embrace mother nature",
@@ -636,7 +636,7 @@ const database = {
     
         "the_nightmare_before_christmas": {
             "letterboxd_url": "https://boxd.it/1YzQ",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Stumbling across the prospect of happiness",
                 "Creature-feature", 
@@ -648,7 +648,7 @@ const database = {
     
         "the_empty_man": {
             "letterboxd_url": "https://boxd.it/iIWS",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Atmospheric",
                 "Confusing", 
@@ -678,7 +678,7 @@ const database = {
     
         "the_autopsy_of_jane_doe": {
             "letterboxd_url": "https://boxd.it/dUu2",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Creepy",
                 "Disturbing"
@@ -705,7 +705,7 @@ const database = {
     
         "the_bridge_to_terabithia": {
             "letterboxd_url": "https://boxd.it/28YG",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Sad", 
                 "Depressing", 
@@ -757,7 +757,7 @@ const database = {
     
         "the_faculty": {
             "letterboxd_url": "https://boxd.it/1Z5C",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Creature-feature", 
                 "School setting",
@@ -771,7 +771,7 @@ const database = {
     
         "the_map_of_tiny_perfect_things": {
             "letterboxd_url": "https://boxd.it/p3O8",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Time loop",
                 "Friendship", 
@@ -796,7 +796,7 @@ const database = {
     
         "the_girl_with_the_dragon_tattoo": {
             "letterboxd_url": "https://boxd.it/2Pa",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Atmospheric",
                 "Murder mystery",
@@ -843,7 +843,7 @@ const database = {
     
         "the_frame": {
             "letterboxd_url": "https://boxd.it/9JNE",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Contemplative sci-fi",
                 "Mysterious", 
@@ -869,7 +869,7 @@ const database = {
     
         "the_peanut_butter_falcon": {
             "letterboxd_url": "https://boxd.it/gzu2",
-            "my_rating": "9.25",
+            "my_rating": 9.0,
             "my_tags": [
                 "Uplifting",
                 "Soulmate",
@@ -883,7 +883,7 @@ const database = {
     
         "the_mitchells_vs_the_machines": {
             "letterboxd_url": "https://boxd.it/i7xm",
-            "my_rating": "9.25",
+            "my_rating": 9.0,
             "my_tags": [
                 "Intricate animation style", 
                 "End of the world", 
@@ -921,7 +921,7 @@ const database = {
     
         "the_shape_of_water": {
             "letterboxd_url": "https://boxd.it/dZ5m",
-            "my_rating": 9.75,
+            "my_rating": 9.5,
             "my_tags": [
                 "Atmospheric",
                 "Water",
@@ -990,7 +990,7 @@ const database = {
     
         "the_tunnel": {
             "letterboxd_url": "https://boxd.it/NGk",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Found footage", "Stuck underground", "Claustrophobic", "Frightening", "Creepy"],
             "my_review": "",
             "gradual_interest": [6, 6, 7, 7, 8, 8, 8, 8, 8]
@@ -1039,7 +1039,7 @@ const database = {
     
         "the_book_of_eli": {
             "letterboxd_url": "https://boxd.it/1Dnu",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Faith", "Religon", "Exploring unknown territory", "Post-apocalyptic world", "Humanity", "Growth", "Death", "Stylistic", "Atmospheric", "People that are blind"],
             "my_review": "",
             "gradual_interest": [6, 6, 6, 7, 7, 6, 7, 7, 8, 8, 8, 8],
@@ -1048,7 +1048,7 @@ const database = {
     
         "the_visit": {
             "letterboxd_url": "https://boxd.it/9ssO",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": [],
             "my_review": "",
             "gradual_interest": [7, 7, 7, 7, 7, 7, 8, 8, 8, 8]
@@ -1127,7 +1127,7 @@ const database = {
     
         "the_living_and_the_dead": {
             "letterboxd_url": "https://boxd.it/1QwY",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Depressing", "Grim", "Disturbing", "Learning disability", "Mental health", "Amazing soundtrack", "One-location"],
             "my_review": "",
             "gradual_interest": [7, 7, 7, 8, 9, 8, 9, 8]
@@ -1135,7 +1135,7 @@ const database = {
     
         "the_children": {
             "letterboxd_url": "https://boxd.it/1Kju",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Virus", "Evil children", "Disturbing", "One-location"],
             "my_review": "",
             "gradual_interest": [7, 8, 8, 8, 9, 9, 9, 8, 8],
@@ -1152,7 +1152,7 @@ const database = {
     
         "the_tag_along": {
             "letterboxd_url": "https://boxd.it/d27e",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Possession", "Insects", "Questioning reality", "Nature"],
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.THE_TAG_ALONG)),
             "screenshots": screenshots.THE_TAG_ALONG,
@@ -1169,7 +1169,7 @@ const database = {
     
         "the_last_duel": {
             "letterboxd_url": "https://boxd.it/mQbe",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Medieval lifestyle", "Historical", "Perspective"],
             "my_review": "",
             "gradual_interest": [7, 7, 7, 7, 7, 8, 8, 8, 8, 7, 7, 8, 8, 8, 7],
@@ -1226,7 +1226,7 @@ const database = {
         
         "a_tree_of_palme": {
             "letterboxd_url": "https://boxd.it/1ldQ",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [""],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/ui796jZGaqcLD89BHISwFNugd0X.jpg"
@@ -1243,6 +1243,20 @@ const database = {
     },
 
     A: {
+        "a_banquet": {
+            "letterboxd_url": "https://boxd.it/t8Ay",
+            "my_rating": 8.0,
+            "my_tags": [
+                "Dark",
+                "Atmospheric",
+                "Sad",
+                "Emotional",
+                "Depressing"
+            ],
+            "gradual_interest": [7, 7, 7, 8, 8, 8, 7, 7, 8, 8],
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/TfVmuG4lxQ2o6bbwiSvQEbCrij.jpg",
+        },
+
         "await_further_instructions": {
             "letterboxd_url": "https://boxd.it/ifti",
             "my_rating": 8.0,
@@ -1274,7 +1288,7 @@ const database = {
     
         "arctic": {
             "letterboxd_url": "https://boxd.it/gc1Q",
-            "my_rating": 7.75,
+            "my_rating": 7.5,
             "my_tags": [
                 "Alone in the wilderness", 
                 "Dialogueless", 
@@ -1300,7 +1314,7 @@ const database = {
         },
     
         "aniara": {
-            "my_rating": 9.75,
+            "my_rating": 9.5,
             "letterboxd_url": "https://boxd.it/hUMe",
             "my_tags": [
                 "The incomprehensible vastness of space", 
@@ -1426,7 +1440,7 @@ const database = {
     
         "american_beauty": {
             "letterboxd_url": "https://boxd.it/71Y",
-            "my_rating": 7.75,
+            "my_rating": 7.5,
             "my_tags": [],
             "my_review": "",
             "gradual_interest": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7],
@@ -1465,7 +1479,7 @@ const database = {
     
         "american_mary": {
             "letterboxd_url": "https://boxd.it/48WY",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": [
                 "Disturbing",
                 "Body modification"
@@ -1499,7 +1513,7 @@ const database = {
         },
 
         "belle": {
-            "my_rating": 9.25,
+            "my_rating": 9.0,
             "letterboxd_url": "https://boxd.it/tbEe",
             "title_displayed": "Belle: The Dragon and the Freckled Princess",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/sp0LOwp7dVeF2c2fn9l422O5cdb.jpg",
@@ -1525,7 +1539,7 @@ const database = {
     
         "beginners": {
             "letterboxd_url": "https://boxd.it/s2S",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Friendship", "Soulmate", "Forgiveness", "Melancholic", "Depressing", "Honest"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/io2Tm89or3jO2pDtEAPEACx4wUe.jpg"
@@ -1549,7 +1563,7 @@ const database = {
     
         "being_john_malkovich": {
             "letterboxd_url": "https://boxd.it/2ahu",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": ["Surrealist fantasy comedy", "Questioning reality", "Funny", "Quirky"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/xVSvIwRNzwXSs0CLefiiG6A96m4.jpg"
@@ -1625,7 +1639,7 @@ const database = {
     
         "buried": {
             "letterboxd_url": "https://boxd.it/1tXC",
-            "my_rating": 7.75,
+            "my_rating": 7.5,
             "my_tags": ["Claustrophobic"],
             "my_review": "",
             "gradual_interest": [7, 7, 7, 7, 8, 8, 8, 8, 8],
@@ -1666,7 +1680,7 @@ const database = {
     
         "confessions": {
             "letterboxd_url": "https://boxd.it/uRS",
-            "my_rating": 8.25,
+            "my_rating": 8.5,
             "my_tags": [
                 "Audio-visual spectacle", 
                 "Poetic",
@@ -1681,7 +1695,7 @@ const database = {
     
         "chicken_run": {
             "letterboxd_url": "https://boxd.it/20Xg",
-            "my_rating": 8.75,
+            "my_rating": 8.0,
             "my_tags": [
                 "Fun",
                 "Kids film",
@@ -1711,7 +1725,7 @@ const database = {
     
         "cloud_atlas": {
             "letterboxd_url": "https://boxd.it/2W60",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Very long"
             ],
@@ -1721,7 +1735,7 @@ const database = {
     
         "castaway_on_the_moon": {
             "letterboxd_url": "https://boxd.it/1GXU",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Alone in the wilderness", 
                 "Survival story",
@@ -1737,7 +1751,7 @@ const database = {
     
         "creep": {
             "letterboxd_url": "https://boxd.it/203C",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": [
                 "Disturbing",
                 "Claustrophobic", 
@@ -1796,7 +1810,7 @@ const database = {
     
         "cloverfield": {
             "letterboxd_url": "https://boxd.it/2192",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Found-footage",
                 "Terrifying",
@@ -1865,7 +1879,7 @@ const database = {
     
         "climax": {
             "letterboxd_url": "https://boxd.it/ikvo",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [],
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.CLIMAX)),
             "screenshots": screenshots.CLIMAX,
@@ -1874,7 +1888,7 @@ const database = {
     
         "children_who_chase_lost_voices": {
             "letterboxd_url": "https://boxd.it/2M6k",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [],
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.CHILDREN_WHO_CHASE_LOST_VOICES)),
             "screenshots": screenshots.CHILDREN_WHO_CHASE_LOST_VOICES,
@@ -1943,7 +1957,7 @@ const database = {
         },
     
         "district9": {
-            "my_rating": 9.75,
+            "my_rating": 9.5,
             "letterboxd_url": "https://boxd.it/1Iik",
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/tuGlQkqLxnodDSk6mp5c2wvxUEd.jpg",
@@ -2003,7 +2017,7 @@ const database = {
         
         "dont_worry_he_wont_get_far_on_foot": {
             "letterboxd_url": "https://boxd.it/fLeo",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": [
                 "Death",
                 "Stoicism"
@@ -2121,7 +2135,7 @@ const database = {
     
         "evil_dead": {
             "letterboxd_url": "https://boxd.it/3GPq",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Brutal",
                 "Gory",
@@ -2135,7 +2149,7 @@ const database = {
     
         "evil_dead_2": {
             "letterboxd_url": "https://boxd.it/29Ge",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Brutal",
                 "Gory",
@@ -2149,7 +2163,7 @@ const database = {
         
         "evil_dead_rise": {
             "letterboxd_url": "https://boxd.it/qIvo",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Gory",
                 "Chaotic",
@@ -2197,7 +2211,7 @@ const database = {
         "finding_nemo": {
             "letterboxd_url": "https://boxd.it/72i",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/ggQ6o8X5984OCh3kZi2UIJQJY5y.jpg",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Fun",
                 "Nostalgic",
@@ -2223,7 +2237,7 @@ const database = {
     
         "fantastic_mr_fox": {
             "letterboxd_url": "https://boxd.it/1WyQ",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Intricate animation style",
                 "Animal welfare",
@@ -2238,7 +2252,7 @@ const database = {
     
         "fantastic_planet": {
             "letterboxd_url": "https://boxd.it/1KnQ",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Surrealism", 
                 "Quirky", 
@@ -2286,7 +2300,7 @@ const database = {
     G: {
         "good_will_hunting": {
             "letterboxd_url": "https://boxd.it/2ahY",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Student teacher dichotomy", 
                 "Poetic", 
@@ -2299,7 +2313,7 @@ const database = {
     
         "gremlins": {
             "letterboxd_url": "https://boxd.it/29gg",
-            "my_rating": 8.75,
+            "my_rating": 9.0,
             "my_tags": [
                 "Fun", 
                 "Gross", 
@@ -2410,7 +2424,7 @@ const database = {
     
         "hereditary": {
             "letterboxd_url": "https://boxd.it/hNVe",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": [
                 "Terrifying", 
                 "Gross", 
@@ -2454,7 +2468,7 @@ const database = {
     
         "howls_moving_castle": {
             "letterboxd_url": "https://boxd.it/23De",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "War", 
                 "Magic", 
@@ -2482,7 +2496,7 @@ const database = {
     
         "hellbender": {
             "letterboxd_url": "https://boxd.it/w1Im",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": [
                 "Satanic rituals"
             ],
@@ -2525,7 +2539,7 @@ const database = {
     
         "im_thinking_of_ending_things": {
             "letterboxd_url": "https://boxd.it/i4IQ",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [
                 "Atmospheric", 
                 "Confusing", 
@@ -2541,7 +2555,7 @@ const database = {
     
         "insidious": {
             "letterboxd_url": "https://boxd.it/H4k",
-            "my_rating": "9.25",
+            "my_rating": 9.0,
             "my_tags": [
                 "Disturbing",
                 "Terrifying", 
@@ -2569,7 +2583,7 @@ const database = {
     
         "its_a_wonderful_life": {
             "letterboxd_url": "https://boxd.it/28xA",
-            "my_rating": "9.25",
+            "my_rating": 9.0,
             "my_tags": [
                 "Family", 
                 "Death", 
@@ -2580,7 +2594,7 @@ const database = {
     
         "interstellar": {
             "letterboxd_url": "https://boxd.it/4VZ8",
-            "my_rating": "9.25",
+            "my_rating": 9.0,
             "my_tags": [
                 "Space exploration", 
                 "Timey-wimey"
@@ -2614,7 +2628,7 @@ const database = {
     
         "in_fabric": {
             "letterboxd_url": "https://boxd.it/h2sY",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": [
                 "Atmospheric", 
                 "Ghosts", 
@@ -2672,7 +2686,7 @@ const database = {
     J: {
         "jungle": {
             "letterboxd_url": "https://boxd.it/dCpo",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Embrace mother nature", "Alone in the wilderness", "South American culture", "Jungle setting", "Not giving up despite being in a shitty situation", "Brutal", "Hallucinations"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/tDgxknTVwrScxpCYyGUjXSn5NRk.jpg"
@@ -2697,7 +2711,7 @@ const database = {
 
     K: {
         "kikis_delivery_service": {
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "letterboxd_url": "https://boxd.it/1JAY",
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/rlNKTz07MtYlIJY6zKaQedRN8HF.jpg",
@@ -2731,7 +2745,7 @@ const database = {
     
         "kpax": {
             "letterboxd_url": "https://boxd.it/2aYo",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Melancholic", "Mysterious", "Alien visitor disguised as human", "Search for Extraterrestrial Intelligence (SETI)", "Quirky", "Mental hospital"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/vJqhlC6QNXFxFhJ02kg1CFtcaa.jpg"
@@ -2794,7 +2808,7 @@ const database = {
         },
     
         "love_exposure": {
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/1pDe",
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/83i9Q1WmWcogcPGv501D26BoEyT.jpg",
@@ -2812,14 +2826,14 @@ const database = {
     
         "la_la_land": {
             "letterboxd_url": "https://boxd.it/a5fa",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": ["Uplifting", "Finding yourself", "Friendship", "Great soundtrack"],
             "my_review": ""
         },
     
         "lion": {
             "letterboxd_url": "https://boxd.it/b2La",
-            "my_rating": 9.75,
+            "my_rating": 9.5,
             "my_tags": ["Poverty", "Family", "Emotional"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/mcbFRezI77mJveOVzKvpPaF8nzK.jpg"
@@ -2878,7 +2892,7 @@ const database = {
         
         "last_sunrise": {
             "letterboxd_url": "https://boxd.it/lvxQ",
-            "my_rating": 8.75,
+            "my_rating": 9.0,
             "my_tags": ["Astronomy", "Night skies", "End of the world", "Contemplative sci-fi", "Not giving up despite being in a shitty situation"],
             "my_review": "",
             "gradual_interest": [7, 7, 8, 8, 8, 7, 8, 9, 9, 9],
@@ -2904,7 +2918,7 @@ const database = {
         },
     
         "mr_nobody": {
-            "my_rating": 9.75,
+            "my_rating": 9.5,
             "letterboxd_url": "https://boxd.it/1k44",
             "my_review": "",
             "my_tags": [
@@ -2946,7 +2960,7 @@ const database = {
     
         "monsters": {
             "letterboxd_url": "https://boxd.it/Tdy",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Atmospheric", "Melancholic", "Aliens", "Soulmate", "Travelling", "Alone in the wilderness", "Virus", "Great soundtrack"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/lH6oWfGjwnM81Nzu8vipx9OfPmv.jpg"
@@ -2977,7 +2991,7 @@ const database = {
     
         "my_neighbour_totoro": {
             "letterboxd_url": "https://boxd.it/20eA",
-            "my_rating": "9.25",
+            "my_rating": 9.0,
             "my_tags": ["Embrace mother nature", "Endearing", "Humanity and nature coexisting", "Nature thriving", "Colourful", "Great soundtrack"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/ykeaF3Ldz1Kf6sfnOJJH4dW56F4.jpg"
@@ -2994,7 +3008,7 @@ const database = {
     
         "moonrise_kingdom": {
             "letterboxd_url": "https://boxd.it/2Wng",
-            "my_rating": 8.75,
+            "my_rating": 9.0,
             "my_tags": ["Quirky", "Great cinematography", "Friendship", "Great chemistry between characters"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/xrziXRHRQ7c7YLIehgSJY8GQBsx.jpg"
@@ -3003,7 +3017,7 @@ const database = {
         "my_life_as_a_courgette": {
             "letterboxd_url": "https://boxd.it/dL2y",
             "title_displayed": "My Life as a Courgette",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": ["Stop motion animation", "Uplifting", "Finding happiness", "Friendship", "Emotional", "Endearing", "Soulmate", "Bad parenting"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/g91phMUr77Vw6uRmpIjH1hvZpov.jpg"
@@ -3018,7 +3032,7 @@ const database = {
     
         "meander": {
             "letterboxd_url": "https://boxd.it/j1Ac",
-            "my_rating": 7.75,
+            "my_rating": 7.5,
             "my_tags": [
                 "Claustrophobic",
                 "Colourful",
@@ -3066,7 +3080,7 @@ const database = {
     
         "meet_cute": {
             "letterboxd_url": "https://boxd.it/vOri",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Time travel", "Soulmate", "Loneliness", "Self-inflicted time loop", "Exploring the inner mechanism of the female mind"],
             "my_review": "",
             "gradual_interest": [8, 8, 8, 9, 8, 8, 8, 8, 8]
@@ -3093,7 +3107,7 @@ const database = {
     
         "nocturnal_animals": {
             "letterboxd_url": "https://boxd.it/bkFu",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Atmospheric", "Mysterious", "Murder mystery", "Confusing", "Non-linear timeline", "Story within a story", "Great soundtrack"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/6zTRty2REwxljziiWyrRbgOwAo7.jpg"
@@ -3101,7 +3115,7 @@ const database = {
     
         "notes_on_blindness": {
             "letterboxd_url": "https://boxd.it/d9YE",
-            "my_rating": 8.75,
+            "my_rating": 9.0,
             "my_tags": ["Poetic", "Contemplative", "Based on true events", "Turning negatives into positives", "Not giving up despite being in a shitty situation"],
             "my_review": "",
             "custom_poster_url": require('../websiteContent/films/notes_on_blindness/custom_poster.jpg'),
@@ -3119,7 +3133,7 @@ const database = {
     O: {
         "one_million_yen_girl": {
             "letterboxd_url": "https://boxd.it/2h5K",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [""],
             "my_review": "",
         },
@@ -3137,7 +3151,7 @@ const database = {
     
         "okja": {
             "letterboxd_url": "https://boxd.it/dvXe",
-            "my_rating": 7.75,
+            "my_rating": 7.5,
             "my_tags": ["Animal welfare", "Ends a bit weak but the rest is great", "Conspiracy"],
             "my_review": ""
         },
@@ -3162,14 +3176,14 @@ const database = {
     
         "princess_mononoke": {
             "letterboxd_url": "https://boxd.it/2b4w",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Embrace mother nature", "Humanity and nature coexisting", "War", "Corruption", "Evil people in power", "Anime", "Great soundtrack"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/cDuKyP0SqubYo7hTVMN5wihjjJG.jpg"
         },
     
         "poupelle_of_chimmney_town": {
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/on14",
             "my_tags": [
                 "Heterodox thinker", 
@@ -3213,7 +3227,7 @@ const database = {
     
         "ponyo": {
             "letterboxd_url": "https://boxd.it/1S0A",
-            "my_rating": "9.25",
+            "my_rating": 9.5,
             "my_tags": ["Feverdreamy", "Majestic", "Viewing the world through the mind of a child", "Sealife merging with humanity", "Great soundtrack"],
             "my_review": "",
             "gradual_interest": [8, 8, 8, 8, 8, 8, 9, 9, 9, 10],
@@ -3222,7 +3236,7 @@ const database = {
     
         "primer": {
             "letterboxd_url": "https://boxd.it/6YA",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Timey-wimey"],
             "my_review": "",
             "gradual_interest": [8, 8, 8, 8, 8, 8, 8, 8]
@@ -3230,7 +3244,7 @@ const database = {
     
         "paco_and_the_magical_book": {
             "letterboxd_url": "https://boxd.it/2dD4",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [],
             "my_review": "",
             "gradual_interest": [6, 6, 7, 7, 7, 8, 8, 9, 9, 9, 9]
@@ -3268,7 +3282,7 @@ const database = {
         
         "phenomenon": {
             "letterboxd_url": "https://boxd.it/1Z2I",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": ["Uplifting", "Mysterious", "Awakanening-ish", "Soulmate"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/5eK1HNf0Kl2vDPOeqf1kX4SKxrw.jpg"
@@ -3276,7 +3290,7 @@ const database = {
     
         "predestination": {
             "letterboxd_url": "https://boxd.it/6bJM",
-            "my_rating": 8.75,
+            "my_rating": 8.0,
             "my_tags": ["Mad concept", "Confusing", "Timey-wimey", "Very small cast"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/38Xr1JnV1ZcLQ55zmdSp6n475cZ.jpg"
@@ -3284,14 +3298,14 @@ const database = {
     
         "portrait_of_a_lady_on_fire": {
             "letterboxd_url": "https://boxd.it/jkPq",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": ["Great cinematography", "Mysterious", "Melancholic", "France 1800s", "Art"],
             "my_review": ""
         },
         
         "parasite_in_love": {
             "letterboxd_url": "https://boxd.it/qyhw",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Another life-form trying to take control of a human mind", "Soulmate", "Social anxiety", "Scopophobia", "Study of unorthodox people who are outcasts from societal norms"],
             "my_review": "",
             "gradual_interest": [7, 7, 7, 8, 8, 8, 8, 7, 8, 8]
@@ -3344,7 +3358,7 @@ const database = {
     
         "revenge": {
             "letterboxd_url": "https://boxd.it/gL9g",
-            "my_rating": "9.25",
+            "my_rating": 9.5,
             "my_tags": ["Revenge-fantasy thriller", "Challenging to watch at times", "Girl power"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/uOiNnowvNEBroDVtZ5FY0zRaKtK.jpg"
@@ -3352,7 +3366,7 @@ const database = {
     
         "recycle": {
             "letterboxd_url": "https://boxd.it/1Qfo",
-            "my_rating": 8.25,
+            "my_rating": 8.5,
             "my_tags": ["Surreal", "Ghosts", "Abortion"],
             "my_review": "",
             "gradual_interest": [7, 7, 8, 8, 9, 9, 9, 8, 8, 8, 8]
@@ -3385,7 +3399,7 @@ const database = {
     
         "ready_or_not": {
             "letterboxd_url": "https://boxd.it/kOf0",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Suprising", "Fun", "Intense"],
             "my_review": "",
             "gradual_interest": [7, 7, 7, 8, 8, 8, 8, 8, 8, 9]
@@ -3403,7 +3417,7 @@ const database = {
 
     S: {
         "spring_and_chaos": {
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/1u02",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/Aq9nsKCv0biNKTFMmfdQWYXVngm.jpg",
             "screenshots": screenshots.SPRING_AND_CHAOS,
@@ -3485,7 +3499,7 @@ const database = {
     
         "safety_not_guaranteed": {
             "letterboxd_url": "https://boxd.it/2Y3M",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Time travel", "Soulmate", "Friendship", "Fun", "Quirky"],
             "my_review": ""
         },
@@ -3500,7 +3514,7 @@ const database = {
     
         "se7en": {
             "letterboxd_url": "https://boxd.it/29zs",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Crime", "Murder mystery", "Mysterious", "Atmospheric"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/GQP6noTBKsYiAYyn8PYXFcsSgH.jpg",
@@ -3508,7 +3522,7 @@ const database = {
     
         "speak": {
             "letterboxd_url": "https://boxd.it/1MTO",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Sad", "Art", "School setting", "Friendship", "Teacher-student dichotomy"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/kxQ9lRgC3tMVNPzLMFsiOK8H8fn.jpg"
@@ -3516,7 +3530,7 @@ const database = {
     
         "shiva_baby": {
             "letterboxd_url": "https://boxd.it/oIv0",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["One-location", "Claustrophobic", "Jewish culture", "Funny", "Family gathering"],
             "my_review": ""
         },
@@ -3546,7 +3560,7 @@ const database = {
     
         "shaun_of_the_dead": {
             "letterboxd_url": "https://boxd.it/29J8",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": ["Zombies", "British humour", "Funny"],
             "my_review": ""
         },
@@ -3560,7 +3574,7 @@ const database = {
     
         "silent_hill": {
             "letterboxd_url": "https://boxd.it/2a3C",
-            "my_rating": 9.75,
+            "my_rating": 9.5,
             "my_tags": ["Atmospheric", "Disgusting", "Gross", "Creature-feature", "Cults", "Religion", "Satanic worshipers", "Foggy town", "Mysterious", "Video game adapatation", "Great soundtrack"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/ljAIu5OJWS8AYy5c5zmtwHPdHd1.jpg"
@@ -3577,7 +3591,7 @@ const database = {
     
         "spontaneous": {
             "letterboxd_url": "https://boxd.it/mjPq",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [""],
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.SPONTANEOUS)),
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/qhDICM8YxuDn9241O2UVEe9DupC.jpg",
@@ -3594,7 +3608,7 @@ const database = {
     
         "starry_starry_night": {
             "letterboxd_url": "https://boxd.it/32CG",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": ["Jigsaws", "Art", "Origami", "Soulmate", "Friendship"],
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.STARRY_STARRY_NIGHT)),
             "screenshots": screenshots.STARRY_STARRY_NIGHT,
@@ -3629,7 +3643,7 @@ const database = {
     
         "starry_eyes": {
             "letterboxd_url": "https://boxd.it/7t3Q",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Fake celebrity personas", "Terrifying", "Metamorphosis", "Challenging to watch at times", "Cults"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/t1sIumVCl91XThMoJqUjpERYeAM.jpg"
@@ -3637,7 +3651,7 @@ const database = {
     
         "super8": {
             "letterboxd_url": "https://boxd.it/dVI",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": [""],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/gUFHzEiJFgzGfwYvZv5opXHUJfo.jpg"
@@ -3645,7 +3659,7 @@ const database = {
     
         "summer_wars": {
             "letterboxd_url": "https://boxd.it/1oDC",
-            "my_rating": 7.75,
+            "my_rating": 7.5,
             "my_tags": ["End of the world", "Nature", "Summer", "Family", "Togetherness"],
             "my_review": "",
             "gradual_interest": [7, 7, 7, 7, 8, 8, 7, 7, 8, 8, 8, 8],
@@ -3654,7 +3668,7 @@ const database = {
     
         "spirited_away": {
             "letterboxd_url": "https://boxd.it/2b4m",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": ["Nature", "Japanese culture", "Ghosts", "Soulmate", "Studio ghibli"],
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.SPIRITED_AWAY)),
             "gradual_interest": [8, 8, 8, 7, 8, 8, 8, 8, 8, 9, 9, 8],
@@ -3664,7 +3678,7 @@ const database = {
     
         "species": {
             "letterboxd_url": "https://boxd.it/1YUk",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Creatures"],
             "my_review": "",
             "gradual_interest": [6, 7, 7, 8, 8, 8, 8, 8, 8, 8, 7]
@@ -3706,7 +3720,7 @@ const database = {
     
         "titanic": {
             "letterboxd_url": "https://boxd.it/2a2k",
-            "my_rating": 8.75,
+            "my_rating": 8.5,
             "my_tags": ["Nostalgic", "Great soundtrack"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/1kLYRzVj6byWvFa3SLrAOcfgnfp.jpg"
@@ -3729,7 +3743,7 @@ const database = {
     
         "turtles_are_suprisingly_fast_swimmers": {
             "letterboxd_url": "https://boxd.it/1ba8",
-            "my_rating": 8.25,
+            "my_rating": 8.0,
             "my_tags": [],
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.TURTLES_ARE_SUPRISINGLY_GOOD_SWIMMERS)),
             "gradual_interest": [9, 9, 9, 8, 8, 8, 7, 7, 7],
@@ -3749,7 +3763,7 @@ const database = {
     
         "tokyo_vampire_hotel": {
             "letterboxd_url": "https://boxd.it/lpUk",
-            "my_rating": "9.25",
+            "my_rating": 9.5,
             "my_tags": ["Intense", "The audience is thrown into a bizzare situation and forced to experience it", "Colourful", "Amazing soundtrack"],
             "my_review": "",
             "gradual_interest": [8, 9, 9, 9, 8, 8, 8, 9, 9, 9, 9, 8, 9, 9],
@@ -3805,7 +3819,7 @@ const database = {
     
         "vivarium": {
             "letterboxd_url": "https://boxd.it/gmVE",
-            "my_rating": 8.75,
+            "my_rating": 9.0,
             "my_tags": ["Claustrophobic", "Terrifying", "Stuck somewhere"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/rkmtRnDsbdimPVxjCl1NseNz9Gn.jpg"
@@ -3859,7 +3873,7 @@ const database = {
         },
     
         "white_god": {
-            "my_rating": 9.25,
+            "my_rating": 9.0,
             "letterboxd_url": "https://boxd.it/81lO",
             "screenshots": screenshots.WHITE_GOD,
             "my_review": ReactDomServer.renderToString(WhiteGodReview(screenshots.WHITE_GOD)),
@@ -3905,7 +3919,7 @@ const database = {
     X: {
         "xxx_holic": {
             "letterboxd_url": "https://boxd.it/y3U4",
-            "my_rating": 9.0,
+            "my_rating": 9.5,
             "my_tags": ["Dimensionality", "Audio-visual spectacle", "Positive reflection on witches", "Colourful", "Time loop"],
             "my_review": "",
             "gradual_interest": [9, 8, 8, 8, 8, 8, 8, 7, 8, 9, 9],
@@ -3920,7 +3934,7 @@ const database = {
     Z: {
         "zombieland": {
             "letterboxd_url": "https://boxd.it/1En6",
-            "my_rating": 7.75,
+            "my_rating": 8.0,
             "my_tags": ["Zombies", "Fun", "Short but effective", "Great character chemistry", "Nostalgic"],
             "my_review": "",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/dUkAmAyPVqubSBNRjRqCgHggZcK.jpg"
