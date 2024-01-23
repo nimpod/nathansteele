@@ -13,9 +13,17 @@ import { post as MyMostListenedSongsOf2022Post } from '../websiteContent/blog/my
 import { post as MyMostListenedSongsOf2021Post } from '../websiteContent/blog/my_most_listened_songs_of_2021/post';
 import { post as MyMostListenedSongsOf2020Post } from '../websiteContent/blog/my_most_listened_songs_of_2020/post';
 import { post as MyMostListenedSongsOf2016Post } from '../websiteContent/blog/my_most_listened_songs_of_2014_2015_2016/post';
+import { Post as OurMoon } from '../websiteContent/blog/our_moon/post';
 
 
 export const blog_posts = [
+    {
+        id: "29",
+        date: "23 Jan 2024",
+        title: "Our wonderful Moon",
+        content: ReactDomServer.renderToString(OurMoon()),
+        tags: ["Astronomy"]
+    },
     {
         id: "29",
         date: "31 Dec 2023",
@@ -153,9 +161,7 @@ export const blog_posts = [
         id: "20",
         date: "14 Mar 2023",
         title: "The Venera space probes",
-        content: ReactDomServer.renderToString(VeneraPost([
-            require('../websiteContent/blog/venera/veneraAudioRecording.wav')
-        ])),
+        content: ReactDomServer.renderToString(VeneraPost()),
         tags: ["Astronomy"]
     },
     {

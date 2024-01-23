@@ -1654,6 +1654,9 @@ div.blog-post
 .blog-post img.larger-image {
   max-width: 850px !important;
 }
+.blog-post img.smaller-image {
+  max-width: 400px !important;
+}
 .blog-post img, 
 .blog-post picture {
   display: block;
@@ -3886,7 +3889,7 @@ div.albumInfoContainer > div.myRating {
   }
 
   .posts-container > table {
-    margin-top: calc(var(--posts-header-height) - 30px);
+    margin-top: calc(var(--posts-header-height) - 18px);
     width: 100%;
   }
 

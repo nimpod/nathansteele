@@ -61,7 +61,7 @@ class BlogPost extends Component {
         let fuckKnows = 0;
         window.addEventListener('scroll', function(e) {
             var ypos = window.pageYOffset || document.documentElement.scrollTop;
-            console.log('DEBUGGING: ', ypos, fuckKnows);
+            // console.log('DEBUGGING: ', ypos, fuckKnows);
             if (ypos <= 130) {
                 blogPostInfoContainer.classList.remove('notAtTop');
             } else {
