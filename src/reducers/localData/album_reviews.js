@@ -992,17 +992,6 @@ const database = {
 		my_review: "",
 	},
 	
-	"daniel_hart__a_ghost_story_soundtrack": {
-		lastfm_url: "https://www.last.fm/music/Daniel+Hart/A+Ghost+Story",
-		rym_url: "",
-		spotify_url: "",
-		year_of_release: "2017",
-		year_of_discovery: "2021",
-		genres: ["Film soundtrack; Ambient; Post-minimalism; Modern classical"],
-		my_rating: 9.0,
-		my_review: "",
-	},
-	
 	"alexandre_desplat__the_shape_of_water_soundtrack": {
 		lastfm_url: "https://www.last.fm/music/Alexandre+Desplat/The+Shape+Of+Water+(Original+Motion+Picture+Soundtrack)",
 		rym_url: "",
@@ -1176,17 +1165,6 @@ const database = {
 		year_of_release: "1996",
 		year_of_discovery: "2023",
 		genres: ["Acid house; Drum and bass; Trip hop; Jungle; Breakbeat; Electronic"],
-		my_rating: 9.0,
-		my_review: "",
-	},
-	
-	"g_jones__acid_disk_2": {
-		lastfm_url: "https://www.last.fm/music/G+Jones/Acid+Disk+2",
-		rym_url: "",
-		spotify_url: "",
-		year_of_release: "1978",
-		year_of_discovery: "2013",
-		genres: ["Acid house; Hybrid trap; Trap [EDM]; Future bass; Breakbeat; Electronic"],
 		my_rating: 9.0,
 		my_review: "",
 	},
