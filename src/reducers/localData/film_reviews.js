@@ -2400,6 +2400,20 @@ const database = {
     },
 
     H: {
+        "house_of_flying_daggers": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/1YoI",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/aYBlboYCUeC62UiGEnF3OZVwNtW.jpg",
+            "my_review": "",
+            "my_tags": [
+                "Embrace mother nature", 
+                "China", 
+                "9th century China",
+                "Martial arts",
+                "Great soundtrack",
+            ],
+        },
+
         "human_space_time_and_human": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/gpDy",
@@ -2755,6 +2769,19 @@ const database = {
     },
 
     K: {
+        "kids_return": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/1sfY",
+            "my_review": "",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/1QvBEEurqbRsldD7ScsAUMywU4Q.jpg",
+            "my_tags": [
+                "Relaxing",
+                "Running",
+                "Amazing soundtrack",
+                "Joe Hisaishi soundtrack"
+            ],
+        },
+
         "kikis_delivery_service": {
             "my_rating": 8.5,
             "letterboxd_url": "https://boxd.it/1JAY",
@@ -2923,7 +2950,7 @@ const database = {
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.LIMBO)),
             "screenshots": screenshots.LIMBO,
             "gradual_interest": [7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9],
-            "custom_poster_url": "https://www.themoviedb.org/t/p/original/7Hh2w1ei26DTJ3JWmW8qcGQUI1n.jpg"
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/6ctJRG33gvj5MqtUEU34HQMHJUp.jpg"
         },
     
         "leave_no_trace": {
@@ -2946,6 +2973,21 @@ const database = {
     },
 
     M: {
+        "mind_game": {
+            "my_rating": 9.5,
+            "letterboxd_url": "https://boxd.it/1Bv2",
+            "my_review": "",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/f8CbqeFILuSOFC6KgtufdJZTw4j.jpg",
+            "my_tags": [
+                "Intense", 
+                "Polarising", 
+                "Bizzare", 
+                "Surreal", 
+                "Weird", 
+                "Uplifting",
+            ],
+        },
+
         "mother!": {
             "my_rating": 9.5,
             "letterboxd_url": "https://boxd.it/dgRU",
@@ -3222,6 +3264,27 @@ const database = {
     },
 
     P: {
+        "perfect": {
+            "letterboxd_url": "https://boxd.it/gyPS",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/mbYqNA0m3JUAvkzlMvmLVRziZss.jpg",
+            "my_rating": 9.5,
+            "my_tags": [
+                "Mesmerising",
+                "Audio-visual experience",
+                "Mysterious",
+                "Questioning reality",
+            ],
+            "my_review": "",
+        },
+
+        "patlabor_2": {
+            "letterboxd_url": "https://boxd.it/1NP4",
+            "my_rating": 7.5,
+            "my_tags": ["Melancholic", "Just war vs Unjust war", "Philosophical", "Amazing soundtrack"],
+            "my_review": "",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/vIyWhMyMEHnavjUhbusOXDwrJgz.jpg"
+        },
+
         "parasite": {
             "letterboxd_url": "https://boxd.it/hTha",
             "my_rating": 9.5,
@@ -3373,6 +3436,19 @@ const database = {
     },
 
     R: {
+        "ride_or_die": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/tZk4",
+            "my_review": "",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/1A7SVcEDqaTFKgzQV3ctb7g0pu9.jpg",
+            "my_tags": [
+                "Melancholic", 
+                "Road trip", 
+                "Soulmate", 
+                "Contemporary"
+            ],
+        },
+
         "rocky": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/28Uk",
@@ -3472,6 +3548,17 @@ const database = {
     },
 
     S: {
+        "serial_experiments_lain": {
+            "my_rating": 7.5,
+            "letterboxd_url": "https://boxd.it/hYQE",
+            "my_tags": [
+                "Surreal",
+                "Anime series",
+                "Weird",
+                "Philosophical",
+            ],
+        },
+
         "spring_and_chaos": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/1u02",
@@ -3931,6 +4018,7 @@ const database = {
         "white_god": {
             "my_rating": 9.0,
             "letterboxd_url": "https://boxd.it/81lO",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/jT9IjPwA5aIYlgvC55VxJOLc0sI.jpg",
             "screenshots": screenshots.WHITE_GOD,
             "my_review": ReactDomServer.renderToString(WhiteGodReview(screenshots.WHITE_GOD)),
             "my_tags": [

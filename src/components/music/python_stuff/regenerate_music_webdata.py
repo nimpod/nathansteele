@@ -212,8 +212,6 @@ def get_top_tracks_all_data(limit=10):
 
 
 
-# get top albums...
+# call my functions...
 get_top_albums_via_musicbee_m3u_exported_file()
-
-# get top tracks...
 get_top_tracks_all_data(limit=100)

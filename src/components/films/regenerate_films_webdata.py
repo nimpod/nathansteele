@@ -317,6 +317,6 @@ def regenerate_json_file():
 
 
 
-# call my functions........
+# call my functions...
 download_letterboxd_data()
 regenerate_json_file()
