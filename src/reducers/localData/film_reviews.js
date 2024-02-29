@@ -124,6 +124,48 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    POOR_THINGS: [
+        require('../websiteContent/films/poor_things/screenshot17.PNG'),
+        require('../websiteContent/films/poor_things/screenshot16.PNG'),
+        require('../websiteContent/films/poor_things/screenshot3.PNG'),
+    ],
+
+    FUNUKE_SHOW_SOME_LOVE_YOU_LOSERS: [
+        require('../websiteContent/films/funuke_show_some_love_you_losers/screenshot5.jpg'),
+        require('../websiteContent/films/funuke_show_some_love_you_losers/screenshot8.jpg'),
+        require('../websiteContent/films/funuke_show_some_love_you_losers/screenshot6.jpg'),
+    ],
+
+    THREE_IRON: [
+        require('../websiteContent/films/3iron/screenshot1.jpg'),
+        require('../websiteContent/films/3iron/screenshot4.jpg'),
+        require('../websiteContent/films/3iron/screenshot3.jpg'),
+    ],
+
+    KIDS_RETURN: [
+        require('../websiteContent/films/kids_return/screenshot5.jpg'),
+        require('../websiteContent/films/kids_return/screenshot7.jpg'),
+        require('../websiteContent/films/kids_return/screenshot12.jpg'),
+    ],
+
+    PERFECT: [
+        require('../websiteContent/films/perfect/screenshot10.jpg'),
+        require('../websiteContent/films/perfect/screenshot4.jpg'),
+        require('../websiteContent/films/perfect/screenshot13.jpg'),
+    ],
+
+    A_SCENE_AT_THE_SEA: [
+        require('../websiteContent/films/a_scene_at_the_sea/screenshot3.jpg'),
+        require('../websiteContent/films/a_scene_at_the_sea/screenshot9.jpg'),
+        require('../websiteContent/films/a_scene_at_the_sea/screenshot5.jpg'),
+    ],
+
+    HOUSE_OF_FLYING_DAGGERS: [
+        require('../websiteContent/films/house_of_flying_daggers/screenshot13.jpg'),
+        require('../websiteContent/films/house_of_flying_daggers/screenshot36.jpg'),
+        require('../websiteContent/films/house_of_flying_daggers/screenshot5.jpg'),
+    ],
+
     LIKE_FATHER_LIKE_SON: [
         require('../websiteContent/films/like_father_like_son/screenshot1.PNG'),
         require('../websiteContent/films/like_father_like_son/screenshot11.PNG'),
@@ -167,9 +209,9 @@ const screenshots = {
     ],
 
     BAREFOOT_GEN: [
+        require('../websiteContent/films/barefoot_gen/screenshot4.PNG'),
+        require('../websiteContent/films/barefoot_gen/screenshot8.PNG'),
         require('../websiteContent/films/barefoot_gen/screenshot11.PNG'),
-        require('../websiteContent/films/barefoot_gen/screenshot16.PNG'),
-        require('../websiteContent/films/barefoot_gen/screenshot2.PNG'),
     ],
 
     LITTLE_SHOP_OF_HORRORS: [
@@ -412,12 +454,13 @@ const database = {
     123: {
         "3_iron": {
             "letterboxd_url": "https://boxd.it/28WK",
+            "screenshots": screenshots.THREE_IRON,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.THREE_IRON)),
             "my_rating": 9.0,
             "my_tags": [
                 "Soulmate",
             ],
-            "my_review": "",
-            "custom_poster_url": "https://image.tmdb.org/t/p/original/oTuOzkKT3gkqvEbB6BrN8cv1gto.jpg"
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/dwxT6srhjJfBhDePFCbcorlnbIp.jpg"
         },
     
         "1408": {
@@ -905,6 +948,7 @@ const database = {
     
         "the_mitchells_vs_the_machines": {
             "letterboxd_url": "https://boxd.it/i7xm",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/7PbKmufk7c4sGbDZ8FHHxks8XaZ.jpg",
             "my_rating": 9.0,
             "my_tags": [
                 "Intricate animation style", 
@@ -1200,6 +1244,41 @@ const database = {
     },
 
     A_starts_with_single_word_a: {
+        "a_scene_at_the_sea": {
+            "letterboxd_url": "https://boxd.it/1z10",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/4wM16hbACD7btRRcbRxHXMn3slS.jpg",
+            "screenshots": screenshots.A_SCENE_AT_THE_SEA,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.A_SCENE_AT_THE_SEA)),
+            "my_rating": 8.0,
+            "my_tags": [
+                "Relaxing",
+                "Contemplative",
+                "Quiet",
+                "Not much dialogue",
+                "J-drama",
+                "Sad",
+                "Lonely",
+                "Deaf person",
+                "Surfing",
+                "The sea",
+            ],
+            "gradual_interest": [8, 8, 9, 8, 8, 8, 8, 8, 8, 8],
+        },
+
+        "a_banquet": {
+            "letterboxd_url": "https://boxd.it/t8Ay",
+            "my_rating": 8.0,
+            "my_tags": [
+                "Dark",
+                "Atmospheric",
+                "Sad",
+                "Emotional",
+                "Depressing"
+            ],
+            "gradual_interest": [7, 7, 7, 8, 8, 8, 7, 7, 8, 8],
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/4FlSYrcjO4z3McJ6UP3V5npb4B4.jpg",
+        },
+
         "a_ghost_story": {
             "my_rating": 10.0,
             "letterboxd_url": "https://boxd.it/fb0K",
@@ -1265,20 +1344,6 @@ const database = {
     },
 
     A: {
-        "a_banquet": {
-            "letterboxd_url": "https://boxd.it/t8Ay",
-            "my_rating": 8.0,
-            "my_tags": [
-                "Dark",
-                "Atmospheric",
-                "Sad",
-                "Emotional",
-                "Depressing"
-            ],
-            "gradual_interest": [7, 7, 7, 8, 8, 8, 7, 7, 8, 8],
-            "custom_poster_url": "https://image.tmdb.org/t/p/original/4FlSYrcjO4z3McJ6UP3V5npb4B4.jpg",
-        },
-
         "await_further_instructions": {
             "letterboxd_url": "https://boxd.it/ifti",
             "my_rating": 8.0,
@@ -2204,6 +2269,8 @@ const database = {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/9Gu",
             "custom_poster_url": "https://image.tmdb.org/t/p/original/nd6ftBtCWWkaHc1l5cG8BniTncl.jpg",
+            "screenshots": screenshots.FUNUKE_SHOW_SOME_LOVE_YOU_LOSERS,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.FUNUKE_SHOW_SOME_LOVE_YOU_LOSERS)),
             "my_tags": [
                 "Dark humour",
                 "Nature",
@@ -2404,7 +2471,8 @@ const database = {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/1YoI",
             "custom_poster_url": "https://image.tmdb.org/t/p/original/aYBlboYCUeC62UiGEnF3OZVwNtW.jpg",
-            "my_review": "",
+            "screenshots": screenshots.HOUSE_OF_FLYING_DAGGERS,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.HOUSE_OF_FLYING_DAGGERS)),
             "my_tags": [
                 "Embrace mother nature", 
                 "China", 
@@ -2772,7 +2840,8 @@ const database = {
         "kids_return": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/1sfY",
-            "my_review": "",
+            "screenshots": screenshots.KIDS_RETURN,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.KIDS_RETURN)),
             "custom_poster_url": "https://image.tmdb.org/t/p/original/1QvBEEurqbRsldD7ScsAUMywU4Q.jpg",
             "my_tags": [
                 "Relaxing",
@@ -3264,9 +3333,22 @@ const database = {
     },
 
     P: {
+        "poor_things": {
+            "letterboxd_url": "https://boxd.it/tNWU",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/jG4o67eZKlvuL5R6WTysRkPwE75.jpg",
+            "my_rating": 8.0,
+            "screenshots": screenshots.POOR_THINGS,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.POOR_THINGS)),
+            "my_tags": [
+                
+            ],
+        },
+
         "perfect": {
             "letterboxd_url": "https://boxd.it/gyPS",
             "custom_poster_url": "https://image.tmdb.org/t/p/original/mbYqNA0m3JUAvkzlMvmLVRziZss.jpg",
+            "screenshots": screenshots.PERFECT,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.PERFECT)),
             "my_rating": 9.5,
             "my_tags": [
                 "Mesmerising",
@@ -3274,7 +3356,6 @@ const database = {
                 "Mysterious",
                 "Questioning reality",
             ],
-            "my_review": "",
         },
 
         "patlabor_2": {
