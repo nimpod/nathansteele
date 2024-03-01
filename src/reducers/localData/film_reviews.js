@@ -124,6 +124,42 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    MEET_CUTE: [
+        require('../websiteContent/films/meet_cute/screenshot1.PNG'),
+        require('../websiteContent/films/meet_cute/screenshot3.PNG'),
+        require('../websiteContent/films/meet_cute/screenshot5.PNG'),
+    ],
+
+    THE_BLIND_MAN_WHO_DID_NOT_WANT_TO_SEE_TITANIC: [
+        require('../websiteContent/films/the_blind_man_who_did_not_want_to_see_titanic/screenshot1.PNG'),
+        require('../websiteContent/films/the_blind_man_who_did_not_want_to_see_titanic/screenshot2.PNG'),
+        require('../websiteContent/films/the_blind_man_who_did_not_want_to_see_titanic/screenshot4.PNG'),
+    ],
+
+    THE_CRANES_ARE_FLYING: [
+        require('../websiteContent/films/the_cranes_are_flying/screenshot14.PNG'),
+        require('../websiteContent/films/the_cranes_are_flying/screenshot5.PNG'),
+        require('../websiteContent/films/the_cranes_are_flying/screenshot1.PNG'),
+    ],
+
+    MIND_GAME: [
+        require('../websiteContent/films/mind_game/screenshot23.jpg'),
+        require('../websiteContent/films/mind_game/screenshot2.jpg'),
+        require('../websiteContent/films/mind_game/screenshot14.jpg'),
+    ],
+
+    HUMAN_SPACE_TIME_AND_HUMAN: [
+        require('../websiteContent/films/human_space_time_and_human/screenshot8.PNG'),
+        require('../websiteContent/films/human_space_time_and_human/screenshot6.PNG'),
+        require('../websiteContent/films/human_space_time_and_human/screenshot5.PNG'),
+    ],
+    
+    THE_BOW: [
+        require('../websiteContent/films/the_bow/screenshot8.PNG'),
+        require('../websiteContent/films/the_bow/screenshot9.PNG'),
+        require('../websiteContent/films/the_bow/screenshot11.PNG'),
+    ],
+
     POOR_THINGS: [
         require('../websiteContent/films/poor_things/screenshot17.PNG'),
         require('../websiteContent/films/poor_things/screenshot16.PNG'),
@@ -318,7 +354,7 @@ const screenshots = {
 
     CHILDREN_OF_THE_SEA: [
         require('../websiteContent/films/children_of_the_sea/screenshot30.webp'),
-        require('../websiteContent/films/children_of_the_sea/screenshot6.webp'),
+        require('../websiteContent/films/children_of_the_sea/screenshot31.webp'),
         require('../websiteContent/films/children_of_the_sea/screenshot33.webp'),
         /*
         require('../websiteContent/films/children_of_the_sea/screenshot2.webp'),
@@ -549,6 +585,8 @@ const database = {
             "letterboxd_url": "https://boxd.it/27Ky",
             "my_rating": 8.0,
             "custom_poster_url": "https://image.tmdb.org/t/p/original/w10BkMqJi2vLtdSJHB0dg4JEiVO.jpg",
+            "screenshots": screenshots.THE_BOW,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.THE_BOW)),
             "my_tags": [
                 "Almost dialogueless",
                 "Amazing soundtrack",
@@ -1179,8 +1217,10 @@ const database = {
             "letterboxd_url": "https://boxd.it/169Y",
             "my_rating": 8.0,
             "my_tags": [""],
-            "my_review": "",
-            "gradual_interest": [6, 6, 7, 8, 8, 8, 8, 8, 8, 9]
+            "screenshots": screenshots.THE_CRANES_ARE_FLYING,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.THE_CRANES_ARE_FLYING)),
+            "gradual_interest": [6, 6, 7, 8, 8, 8, 8, 8, 8, 9],
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/tNS9u5FxmjaVmJoJMwztYeqIvBL.jpg",
         },
     
         "the_garden_of_words": {
@@ -1212,7 +1252,8 @@ const database = {
             "letterboxd_url": "https://boxd.it/qQW8",
             "my_rating": 8.0,
             "my_tags": ["Experiencing the world of a blind person", "Unique", "Sad", "Makes you grateful for what you have"],
-            "my_review": "",
+            "screenshots": screenshots.THE_BLIND_MAN_WHO_DID_NOT_WANT_TO_SEE_TITANIC,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.THE_BLIND_MAN_WHO_DID_NOT_WANT_TO_SEE_TITANIC)),
             "gradual_interest": [6, 7, 7, 7, 8, 8, 8, 8]
         },
     
@@ -2486,11 +2527,15 @@ const database = {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/gpDy",
             "custom_poster_url": "https://image.tmdb.org/t/p/original/iV7V0Hwjiz5dzHteGWSEXBmPRkc.jpg",
-            "my_review": "",
+            "screenshots": screenshots.HUMAN_SPACE_TIME_AND_HUMAN,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.HUMAN_SPACE_TIME_AND_HUMAN)),
             "my_tags": [
                 "Allegory for humanity", 
                 "Obsession for power", 
-                "Fantastical",
+                "God",
+                "Religion",
+                "Symbolism",
+                "Allegory for biblical story of Adam & Eve",
             ],
         },
 
@@ -3045,7 +3090,8 @@ const database = {
         "mind_game": {
             "my_rating": 9.5,
             "letterboxd_url": "https://boxd.it/1Bv2",
-            "my_review": "",
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.MIND_GAME)),
+            "screenshots": screenshots.MIND_GAME,
             "custom_poster_url": "https://image.tmdb.org/t/p/original/f8CbqeFILuSOFC6KgtufdJZTw4j.jpg",
             "my_tags": [
                 "Intense", 
@@ -3238,7 +3284,8 @@ const database = {
             "letterboxd_url": "https://boxd.it/vOri",
             "my_rating": 8.0,
             "my_tags": ["Time travel", "Soulmate", "Loneliness", "Self-inflicted time loop", "Exploring the inner mechanism of the female mind"],
-            "my_review": "",
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.MEET_CUTE)),
+            "screenshots": screenshots.MEET_CUTE,
             "gradual_interest": [8, 8, 8, 9, 8, 8, 8, 8, 8]
         },
     },
@@ -3686,6 +3733,7 @@ const database = {
         
         "shadow_in_the_cloud": {
             "letterboxd_url": "https://boxd.it/pah6",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/t7EUMSlfUN3jUSZUJOLURAzJzZs.jpg",
             "my_rating": 8.0,
             "my_tags": [
                 "Intense",
