@@ -124,6 +124,30 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    THE_LIVING_AND_THE_DEAD: [
+        require('../websiteContent/films/the_living_and_the_dead/screenshot3.PNG'),
+        require('../websiteContent/films/the_living_and_the_dead/screenshot2.PNG'),
+        require('../websiteContent/films/the_living_and_the_dead/screenshot1.PNG'),
+    ],
+
+    A_BANQUET: [
+        require('../websiteContent/films/a_banquet/screenshot1.PNG'),
+        require('../websiteContent/films/a_banquet/screenshot3.PNG'),
+        require('../websiteContent/films/a_banquet/screenshot6.PNG'),
+    ],
+
+    ROYAL_SPACE_FORCE_THE_WINGS_OF_HONNEAMISE: [
+        require('../websiteContent/films/royal_space_force_the_wings_of_honneamise/screenshot1.PNG'),
+        require('../websiteContent/films/royal_space_force_the_wings_of_honneamise/screenshot2.PNG'),
+        require('../websiteContent/films/royal_space_force_the_wings_of_honneamise/screenshot3.PNG'),
+    ],
+
+    LANDSCAPE_WITH_INVISIBLE_HAND: [
+        require('../websiteContent/films/landscape_with_invisible_hand/screenshot1.PNG'),
+        require('../websiteContent/films/landscape_with_invisible_hand/screenshot6.PNG'),
+        require('../websiteContent/films/landscape_with_invisible_hand/screenshot10.PNG'),
+    ],
+
     MEET_CUTE: [
         require('../websiteContent/films/meet_cute/screenshot1.PNG'),
         require('../websiteContent/films/meet_cute/screenshot3.PNG'),
@@ -293,9 +317,9 @@ const screenshots = {
     ],
 
     SPONTANEOUS: [
-        require('../websiteContent/films/spontaneous/screenshot1.PNG'),
-        require('../websiteContent/films/spontaneous/screenshot2.PNG'),
         require('../websiteContent/films/spontaneous/screenshot5.PNG'),
+        require('../websiteContent/films/spontaneous/screenshot7.PNG'),
+        require('../websiteContent/films/spontaneous/screenshot1.PNG'),
     ],
 
     CASHBACK: [
@@ -1234,8 +1258,11 @@ const database = {
         "the_living_and_the_dead": {
             "letterboxd_url": "https://boxd.it/1QwY",
             "my_rating": 8.0,
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/fxdORa3kVs4wPtI0ZmdRSsjNHYn.jpg",
             "my_tags": ["Depressing", "Grim", "Disturbing", "Learning disability", "Mental health", "Amazing soundtrack", "One-location"],
             "my_review": "",
+            "screenshots": screenshots.THE_LIVING_AND_THE_DEAD,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.THE_LIVING_AND_THE_DEAD)),
             "gradual_interest": [7, 7, 7, 8, 9, 8, 9, 8]
         },
     
@@ -1309,6 +1336,8 @@ const database = {
         "a_banquet": {
             "letterboxd_url": "https://boxd.it/t8Ay",
             "my_rating": 8.0,
+            "screenshots": screenshots.A_BANQUET,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.A_BANQUET)),
             "my_tags": [
                 "Dark",
                 "Atmospheric",
@@ -1316,7 +1345,7 @@ const database = {
                 "Emotional",
                 "Depressing"
             ],
-            "gradual_interest": [7, 7, 7, 8, 8, 8, 7, 7, 8, 8],
+            "gradual_interest": [7, 7, 7, 8, 8, 8, 7, 7, 8, 9],
             "custom_poster_url": "https://image.tmdb.org/t/p/original/4FlSYrcjO4z3McJ6UP3V5npb4B4.jpg",
         },
 
@@ -2939,6 +2968,22 @@ const database = {
     },
 
     L: {
+        "landscape_with_invsible_hand": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/tesq",
+            "screenshots": screenshots.LANDSCAPE_WITH_INVISIBLE_HAND,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.LANDSCAPE_WITH_INVISIBLE_HAND)),
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/cnXvfZrj1azU5Rvbb8D7Fz0wkyt.jpg",
+            "my_tags": [
+                "Art",
+                "Reflection on humanity",
+                "Enduring hardship",
+                "Quirky",
+                "Analogy for social media and influencers",
+                "Money hungry capitalists who are incapable of love and profit off destroying human expression"
+            ],
+        },
+
         "like_father_like_son": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/5rQs",
@@ -3387,7 +3432,9 @@ const database = {
             "screenshots": screenshots.POOR_THINGS,
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.POOR_THINGS)),
             "my_tags": [
-                
+                "Weird",
+                "Quirky",
+                "Great combination of CGI and real life",
             ],
         },
 
@@ -3564,6 +3611,19 @@ const database = {
     },
 
     R: {
+        "royal_space_force_the_wings_of_honneamise": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/1E9S",
+            "my_review": "",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/5M9Mrdrj3swDt9EewNSeUkYOiHe.jpg",
+            "screenshots": screenshots.ROYAL_SPACE_FORCE_THE_WINGS_OF_HONNEAMISE,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.ROYAL_SPACE_FORCE_THE_WINGS_OF_HONNEAMISE)),
+            "my_tags": [
+                "Great art style", 
+                "Space exploration",
+            ],
+        },
+
         "ride_or_die": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/tZk4",

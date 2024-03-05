@@ -101,7 +101,7 @@
   --bg5: rgb(254, 172, 255);
 
   /* Text */
-  --text: rgb(128, 128, 128);
+  --text: rgb(30, 29, 29);
   --text-slightly-darker: rgb(185, 196, 208);
   --text-darker: rgb(68, 68, 68);
   --text-much-darker: rgb(38, 37, 37);
@@ -202,16 +202,16 @@
       --films-controls-btn-bg-color-hover: rgb(190, 191, 193);
       --films-controls-btn-bg-color-active: rgb(76, 78, 84);
       /* Dropdown menu */
-      --films-controls-dropdown-list-bg-color: rgba(66, 67, 73, 0.946);
+      --films-controls-dropdown-list-bg-color: rgba(217, 213, 213, 0.946);
       --films-controls-dropdown-list-btn-bg-color: rgba(88, 88, 91, 0);
-      --films-controls-dropdown-item-bg-color-hover: rgb(51, 53, 54);
+      --films-controls-dropdown-item-bg-color-hover: rgb(149, 153, 155);
       --films-controls-dropdown-active-item-bg-color: rgb(35, 137, 96);
       --films-controls-dropdown-item-border-color-active: rgb(157, 164, 172);
       --films-controls-dropdown-list-title-bottomborder: rgba(85, 91, 104, 0.687);
       /* Miscellaneous */
       --films-controls-toggle-btn-bg-color: rgb(61, 61, 65);
       --films-controls-toggle-btn-bg-color-hover: rgb(70, 75, 76);
-      --films-controls-btn-text-color-active: var(--text);
+      --films-controls-btn-text-color-active: rgb(255, 255, 255);
       --films-controls-btn-border-color-clicked: rgba(116, 120, 136, 0.429);
 
     /* Films page (pagination buttons) */
@@ -241,8 +241,8 @@
       /* List view */
       --film-toplist-item-images-border-inner-color: rgb(0, 0, 0);
       --film-toplist-item-border-outer-color: rgb(2, 2, 2);
-      --film-toplist-item-bg-color-hover: rgb(38, 38, 41);
-      --film-toplist-item-bg-color-active: rgb(47, 48, 52);
+      --film-toplist-item-bg-color-hover: rgb(221, 221, 226);
+      --film-toplist-item-bg-color-active: rgb(205, 208, 213);
       --film-toplist-item-border-color-active: rgba(21, 124, 150, 0);
 
     /* Data colours */
@@ -461,7 +461,7 @@
     /* Data background colours */
     --film-mydata-position-bg-color: rgb(39, 163, 103); /* rgb(138, 45, 79); */
     --film-mydata-myrating-bg-color: rgb(148, 62, 185);
-    --film-mydata-imdbdiffscore-bg-color: rgb(72, 97, 148);
+    --film-mydata-imdbdiffscore-bg-color: rgb(80, 91, 114);
     /* Text colour of difference score when positive (> 0), negative (< 0), or equal (= 0) */
     --film-mydata-imdbdiffscore-positivediff-text-color: rgb(173, 245, 73);
     --film-mydata-imdbdiffscore-negativediff-text-color: rgb(255, 108, 108);
@@ -2125,6 +2125,7 @@ div.blog-post
 /* IMDB diff score */
 .films-toplist.view-as-list span.film-imdbDiffScore {
   font-weight: 100 !important;
+  font-size: 1.3rem !important;
 }
 
 span.film-imdbDiffScore.positive-diff { color: var(--film-mydata-imdbdiffscore-positivediff-text-color) !important; }
@@ -2564,6 +2565,7 @@ div.btn.films-reset-filters-btn svg {
   grid-template-columns: repeat(2, calc(100px + 10px));
   grid-gap: 0px;
   padding: 0;
+  margin-top: 40px;
 }
 
 /* Actual page navigation buttons */
@@ -2646,7 +2648,7 @@ div.btn.films-reset-filters-btn svg {
 }
 
 :root {
-  --next-and-previous-pagination-btns-distance-from-top: 263px;
+  --next-and-previous-pagination-btns-distance-from-top: -40px;
 }
 
 /* Previous page button */
@@ -2662,6 +2664,7 @@ div.btn.films-reset-filters-btn svg {
   margin-top: var(--next-and-previous-pagination-btns-distance-from-top);
   margin-left: 175px;
 }
+
 
 /* #endregion */
 

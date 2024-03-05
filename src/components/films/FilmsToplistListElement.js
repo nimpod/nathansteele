@@ -30,6 +30,7 @@ class FilmsToplistListElement extends Component {
     }
 
     render() {
+        console.log(this.props.film);
         let temp_screenshot = "https://m.media-amazon.com/images/M/MV5BNjUxYTkxYzgtYzU5OC00NDVmLWExYTAtYmY0NDBiZWRhY2E0XkEyXkFqcGdeQXVyNzEzMzA1MTQ@._V1_.jpg"
         let screenshot1 = temp_screenshot;
         let screenshot2 = temp_screenshot;
@@ -48,6 +49,7 @@ class FilmsToplistListElement extends Component {
                             <div className='film-dataContainer myData'>
                                 <span className='film-myPos' title='Position in my toplist'>#{this.props.film.position}</span>
                                 <span className="film-myRating" title="My rating">{this.props.film.my_rating}</span>
+                                <span className={`film-imdbDiffScore ${this.props.diff_score_classname}`} title='Difference between my rating and IMDb avg rating'>{this.props.diff_score_str}</span>
 
                                 {/*}
                                 <span className={`film-imdbDiffScore ${this.props.diffScoreClassname}`} title='Difference between my rating and IMDb avg rating'>{this.props.diffScoreStr}</span>
