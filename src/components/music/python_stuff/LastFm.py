@@ -42,6 +42,8 @@ class LastFM:
         """
         Execute GET request on the LastFM API
         """
+        #print(payload)
+        
         # define headers and URL
         headers = {'user-agent': self.user_agent}
         url = 'https://ws.audioscrobbler.com/2.0/'
@@ -65,11 +67,11 @@ class LastFM:
             _type_: JSON response from API
         """
         r = self.GET({ 
-            'method': LASTFM_API_METHODS.GET_ALBUM_INFO.value,
-            'artist': artist_name,
-            'album': album_name
+            "method": LASTFM_API_METHODS.GET_ALBUM_INFO.value,
+            "artist": artist_name,
+            "album": album_name
         })
-        # pretty_print_json(r.json())
+        #pretty_print_json(r.json())
         return r.json()
     
     def GET_track_info(self, artist_name="", track_name="", mbid=""):

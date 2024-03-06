@@ -78,7 +78,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 print(f"{pos_padded}: {review_id}")
                 
                 # get more data via LastFM API...
-                data = lastfm.GET_album_info(artist_name=artist_name, album_name=album_name)                
+                data = lastfm.GET_album_info(artist_name=artist_name, album_name=album_name)
                 lastfm_url = ""
                 album_cover_url = ""
                 duration = 0
@@ -214,4 +214,7 @@ def get_top_tracks_all_data(limit=10):
 
 # call my functions...
 get_top_albums_via_musicbee_m3u_exported_file()
-get_top_tracks_all_data(limit=100)
+#get_top_tracks_all_data(limit=100)
+
+#test = lastfm.GET_album_info(artist_name='Joe Hisaishi', album_name="A Scene at the Sea (Takeshi Kitano's Original Motion Picture Soundtrack)")
+#print(test)
