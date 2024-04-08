@@ -2350,6 +2350,16 @@ const database = {
 	},
 
 	T: {
+		"telegraph__mir": {
+			lastfm_url: "https://www.last.fm/music/Telegraph/Mir",
+			rym_url: "https://rateyourmusic.com/release/album/telegraph/mir/",
+			year_of_release: "2018",
+			genres: ["Progressive rock; Space rock; Psychedelic Rock; Post-rock; Radio broadcast recordings; Electronic"],
+			my_rating: 9.0,
+			my_review: "",
+			year_of_discovery: "2024",
+		},
+
 		"takashi_kako__ritual_ost": {
 			lastfm_url: "https://www.last.fm/music/Takashi+Kako/Shiki+Jitsu+(be+happy.+be+happy.+be+happy)",
 			rym_url: "https://rateyourmusic.com/release/album/takashi-kako/be-happy_be-happy_be-happy/",

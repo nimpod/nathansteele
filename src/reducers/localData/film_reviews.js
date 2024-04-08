@@ -124,6 +124,18 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
  */
 const screenshots = {
+    ANGEL_A: [
+        require('../websiteContent/films/angel_a/screenshot6.PNG'),
+        require('../websiteContent/films/angel_a/screenshot11.PNG'),
+        require('../websiteContent/films/angel_a/screenshot5.PNG'),
+    ],
+
+    HOW_TO_TALK_TO_GIRLS_AT_PARTIES: [
+        require('../websiteContent/films/how_to_talk_to_girls_at_parties/screenshot2.PNG'),
+        require('../websiteContent/films/how_to_talk_to_girls_at_parties/screenshot5.PNG'),
+        require('../websiteContent/films/how_to_talk_to_girls_at_parties/screenshot8.PNG'),
+    ],
+
     THE_LIVING_AND_THE_DEAD: [
         require('../websiteContent/films/the_living_and_the_dead/screenshot3.PNG'),
         require('../websiteContent/films/the_living_and_the_dead/screenshot2.PNG'),
@@ -1414,6 +1426,17 @@ const database = {
     },
 
     A: {
+        "angel_a": {
+            "letterboxd_url": "https://boxd.it/1UjO",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/n9YW4zuXI0YOsIzNBKOZqTXrrfZ.jpg",
+            "my_rating": 9.0,
+            "my_tags": [
+            ],
+            "gradual_interest": [7, 6, 8, 8, 9, 9, 9, 9, 9],
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.ANGEL_A)),
+            "screenshots": screenshots.ANGEL_A
+        },
+
         "await_further_instructions": {
             "letterboxd_url": "https://boxd.it/ifti",
             "my_rating": 8.0,
@@ -1489,7 +1512,7 @@ const database = {
             "my_rating": 8.5,
             "letterboxd_url": "https://boxd.it/2b1i",
             "my_review": "",
-            "custom_poster_url": "https://www.themoviedb.org/t/p/original/b6icR6m7WlKhZfEumeNQ181yDDg.jpg",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/oVc2I0WBRaVCmnL3DO0LaPQuEqh.jpg",
             "my_tags": [
                 "End of the world", 
                 "Profound", 
@@ -2235,6 +2258,15 @@ const database = {
     },
 
     E: {
+        "elephant": {
+            "letterboxd_url": "https://boxd.it/287i",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/1a4VU9z2hxEvugHMK7VsobB9xTX.jpg",
+            "my_rating": 8.0,
+            "my_tags": [
+            ],
+            "my_review": "",
+        },
+
         "exte_hair_extensions": {
             "letterboxd_url": "https://boxd.it/1Bn8",
             "my_rating": 8.5,
@@ -2537,6 +2569,21 @@ const database = {
     },
 
     H: {
+        "how_to_talk_to_girls_at_parties": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/bo80",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/6ptptArgBGPVQsbrIGtuGthuMDq.jpg",
+            "screenshots": screenshots.HOW_TO_TALK_TO_GIRLS_AT_PARTIES,
+            "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.HOW_TO_TALK_TO_GIRLS_AT_PARTIES)),
+            "my_tags": [
+                "Weird",
+                "Quirky",
+                "Punk rock",
+                "Authentic",
+                "Peaceful aliens",
+            ],
+        },
+
         "house_of_flying_daggers": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/1YoI",
@@ -3611,6 +3658,15 @@ const database = {
     },
 
     R: {
+        "red_post_on_escher_street": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/pdpi",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/q40rJy9i1GLMUDOiqFzTH6X7Xo8.jpg",
+            "my_review": "",
+            "my_tags": [
+            ],
+        },
+
         "royal_space_force_the_wings_of_honneamise": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/1E9S",
@@ -4266,6 +4322,14 @@ const database = {
     },
 
     Z: {
+        "zatoichi": {
+            "letterboxd_url": "https://boxd.it/2aMs",
+            "my_rating": 8.0,
+            "my_tags": [""],
+            "gradual_interest": [7, 7, 8, 8, 8, 7, 7, 8, 8, 9],
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/iCIycswWbX1EDS6PYYBcR9ohrC.jpg",
+        },
+
         "zombieland": {
             "letterboxd_url": "https://boxd.it/1En6",
             "my_rating": 8.0,
