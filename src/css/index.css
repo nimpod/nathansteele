@@ -265,6 +265,8 @@
   --film-review-section-subtitle-text-color: rgb(85, 87, 90);
   --films-controls-container-bg-color: rgb(187, 189, 190);
 
+  /* */
+  --theme-tag-bg-color: rgb(191, 195, 201);
 
   /* Messiahs handbook */
   --messiahshandbook-grid-border-color: rgba(209, 209, 221, 0.882);
@@ -475,6 +477,9 @@
   --film-review-section-btnToggler-border-color: rgb(51, 51, 55);
   --film-review-section-btnToggler-border-color-active: rgb(38, 64, 69);
   --film-review-section-subtitle-text-color: rgb(85, 87, 90);
+  
+  /* */
+  --theme-tag-bg-color: rgb(57, 58, 61);
 
   
   /* Messiahs handbook */
@@ -2832,7 +2837,7 @@ div.btn.films-reset-filters-btn svg {
 
 .album-review .genre-tag,
 .album-review .theme-tag {
-  background-color: rgb(57, 58, 61);
+  background-color: var(--theme-tag-bg-color);
   font-size: 0.70rem;
 }
 .album-review .genre-tag:hover,
@@ -3035,6 +3040,7 @@ div.btn.films-reset-filters-btn svg {
   position: fixed;
   font-size: 3rem;
   color: var(--text) !important;
+  user-select: none;
 }
 .film-review .review-displayed > div.next-review-link > a > p,
 .film-review .review-displayed > div.prev-review-link > a > p {
@@ -3067,15 +3073,16 @@ div.btn.films-reset-filters-btn svg {
 
 /* A review is splt into several sections */
 .review-content-container .review-content > div {
-  border: 1px solid transparent;
-  padding: 5px;
+  /* border: 1px solid transparent;*/
   border-radius: 5px;
   margin-bottom: 35px;
   color: var(--intro-text);
   font-size: 0.8rem;
 }
 .review-content-container .review-content > div:hover {
+  /*
   border: 1px solid var(--film-review-section-border-color);
+  */
 }
 
 /* Section of a review has a subtitle that should appear when user hovers over it */
@@ -3452,20 +3459,18 @@ div.albumInfoContainer > div.myRating {
 
 /* #region -----------------------------------<12: MUSIC REVIEW PAGE>---------------------------------- */
 
-/* 
-.album-displayed
-  .album-header-container
-    .back-to-previous-page
-    .album-header
-      .album-cover-container
-      .album-info
-  .tracks
-  .review-content-container
-*/
-
 :root {
+  --album-info-header-bg-color: rgb(218, 221, 225);
+}
+[data-theme="dark"] {
   --album-info-header-bg-color: rgb(37, 38, 39);
 }
+
+:root {
+  --album-cover-width: 300px;
+}
+
+/* #region ---------- 12.1) Album header ---------- */
 
 .album-header-container {
   width: 57%;
@@ -3481,104 +3486,93 @@ div.albumInfoContainer > div.myRating {
   flex-direction: row;
   background-color: var(--album-info-header-bg-color);
   border-radius: 10px;
-  padding: 10px;
   color: var(--text);
   font-family: 'Roboto';
+  padding: 10px;
+  margin-bottom: 10px;
 }
 .album-header > * {
   margin-right: 15px;
 }
 
-.album-review .back-to-previous-page {
-  position: absolute;
-  margin-left: -40px;
-  bottom: 50%;
-}
+/* #endregion */
 
-.album-info > .year-of-release {
-  font-size: 0.9rem;
-  color: var(--text-much-darker);
-}
+/* #region ---------- 12.2) Album metadata ---------- */
 
 .album-info {
   width: calc(66%);
 }
 
+/* Album cover */
+.album-cover-container img {
+  width: var(--album-cover-width);
+  border-radius: 10px;
+}
+
+/* Album name */
 .album-info > .album-name {
   font-size: 1.8rem;
   font-weight: bold;
-
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* Artist name */
 .album-info > .artist-name {
   display: block;
   font-size: 1.1rem;
   color: var(--text-darker);
 }
+
+/* Album year */
+.album-info > .year-of-release {
+  font-size: 0.9rem;
+  color: var(--text-much-darker);
+}
+
+/* More stuff */
 .album-info > .genres,
 .album-info > .themes,
 .album-info > .links {
   margin-top: 5px;
 }
 
-
-.album-dataContainer {
-  display: flex;
-  flex-direction: row;
-  float: right;
+/* Go back to prev page btn */
+.album-review .back-to-previous-page {
+  position: absolute;
+  margin-left: -40px;
+  bottom: 50%;
 }
 
-.album-dataContainer > * {
-  cursor: pointer;
-  border: 3px solid transparent;
-  user-select: none;
-}
-.album-dataContainer > *:hover {
-}
+/* #endregion */
 
-.album-dataContainer > .my-rating {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: #28d551;
-  color: black;
-  font-weight: bold;
-  font-size: 1.4rem;
-  text-align: center;
-  width: 100px;
-  padding: 2px 10px;
-}
-:root {
-  --col: rgba(35, 141, 40, 0.615);
-}
+/* #region ---------- 12.3) Album review content ---------- */
 
-.album-dataContainer > .my-pos {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background-color: #6f7df8;
-  color: black;
-  font-weight: bold;
-  font-size: 1.4rem;
-  text-align: center;
-  width: 80px;
-  padding: 2px 10px;
-}
-
-/* Album cover */
-:root {
-  --album-cover-width: 300px;
-}
-.album-cover-container img {
-  width: var(--album-cover-width);
+/* review content */
+.album-review .review-content-container {
+  width: 100%;
+  padding-top: 20px;
   border-radius: 10px;
+  background-color: var(--album-info-header-bg-color);
 }
 
-.album-header {
-  margin-bottom: 10px;
+.album-review .review-content-container > .review-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
 }
 
+.review-content-and-tracklist {
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 25%;
+}
+
+/* #region --------------- Prev & Next review links --------------- */
 .prev-and-next-review-links {
   display: flex;
   flex-direction: row;
@@ -3608,57 +3602,144 @@ div.albumInfoContainer > div.myRating {
   margin-bottom: 0px;
 }
 
-/* review content */
-.album-review .review-content-container {
-  width: 100%;
-  padding-top: 20px;
-  border-radius: 10px;
-  background-color: var(--album-info-header-bg-color);
+/* #endregion */
+
+/* #region --------------- Tracklist --------------- */
+
+.review-fullTracklist  {
+  border: 1px solid var(--film-review-section-border-color);
 }
 
-.album-review .review-content-container > .review-content {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 30px;
-}
-
-.review-content-and-tracklist {
-  width: 57%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: 25%;
-}
-
-.album-review .tracklist {
-  position: relative;
-  width: 260px;
-  margin-left: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 10px;
-  background-color: var(--album-info-header-bg-color);
-}
-.album-review .tracklist > .track {
+/* 1) Tracklist table */
+.review-fullTracklist .track-item,
+.review-fullTracklist .tracklist-header {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 5% 75% 20%;
+  padding: 5px 7px;
+  user-select: none;
+}
+
+/* 1.1) Tracklist header */
+.review-fullTracklist .tracklist-header {
+  border-bottom: 1px solid rgb(56, 56, 59);
+  color: var(--text-much-darker);
   font-size: 0.9rem;
-  color: var(--text);
-  padding: 2px 16px;
-  color: var(--text) !important;
+  margin-bottom: 10px;
 }
-.album-review .tracklist > .track > .track-index {
-  color: var(--text-darker);
+/* 1.2) Each track in table */
+.review-fullTracklist .track-item {
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 0px;
 }
-.album-review .tracklist > .track > .track-name {
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.review-fullTracklist .track-item:hover {
+  background-color: rgb(53, 54, 56);
+}
+
+/* 2) Number in tracklist */
+.review-fullTracklist .track-num {
+  font-weight: bold;
+}
+
+/* 3) Track title */
+.review-fullTracklist .track-title {
+  display: inline-block;
+  max-width: fit-content;
   overflow: hidden;
-  max-width: 210px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 20px;
 }
-.album-review .tracklist > .track:hover {
-  background-color: #2b2c2e;
+
+/* 4) My rating */
+.review-fullTracklist .track-myRating { 
+  color: var(--text);
+  width: fit-content;
+  border-radius: 50px;
+  padding: 2px 4px;
+  width: 25px;
+  font-size: 0.8rem;
+  text-align: center;
 }
+.review-fullTracklist .track-myRating.r11 {
+  background-image: linear-gradient(to bottom right, rgb(205, 156, 238), rgb(22, 128, 82));
+}
+.review-fullTracklist .track-myRating.r10 { background-color: rgb(21, 119, 74);  }
+.review-fullTracklist .track-myRating.r9  { background-color: rgb(24, 153, 121);  }
+.review-fullTracklist .track-myRating.r8  { background-color: rgb(51, 127, 177);  }
+
+
+/* 5) My feelings on the track... */
+:root {
+  /* Wrapper (contains the text and the line) */
+  --myFeelingsWrapper-ypos: -120px;
+  --myFeelingsWrapper-xpos: -245px;
+
+  /* The text */
+  --myFeelingsText-ypos: -50px;
+  --myFeelingsText-xpos: -80px;
+
+  /* The curvy line */
+  --curvy-line-height: 135px;
+  --curvy-line-length: 266px;
+  --curvy-line-color: rgb(108, 109, 111);
+  --curvy-line-thickness: 3px;
+}
+
+.review-fullTracklist .track-item:hover .track-myFeelings-wrapper {
+  display: block;
+  position: absolute;
+  left: var(--myFeelingsWrapper-xpos);
+  margin-top: var(--myFeelingsWrapper-ypos);
+}
+.review-fullTracklist .track-myFeelings-wrapper {
+  display: none;
+}
+
+/* the actual feelings */
+.review-fullTracklist .track-myFeelings {
+  background-color: rgba(38, 40, 44, 0.915);
+  border: 2px solid rgb(75, 76, 83);
+  border-radius: 6px;
+  padding: 3px 8px;
+  width: fit-content;
+  font-size: 0.9rem;
+  position: absolute;
+  top: var(--myFeelingsText-ypos);
+  left: var(--myFeelingsText-xpos);
+}
+
+/* curvy line */
+.curvy-line {
+  /* this is the line */
+  border: solid var(--curvy-line-thickness) var(--curvy-line-color);
+  border-top:none;
+  border-right:none;
+  background: transparent;
+  margin: 0px;
+
+  height: var(--curvy-line-height);
+  width: var(--curvy-line-length);
+  border-radius: 0px 0px 0px 370px/225px;
+}
+.curvy-line:before {
+  /* this is the arrowhead */
+  border: solid var(--curvy-line-thickness) var(--curvy-line-color);
+  display: block;
+  content: "";
+  border-bottom: none;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border-radius: 30px 30px 0px 0px /75px 75px 0px 0px ; 
+
+  top: -9px;    /* y pos of arrowhead */
+  left: -12px;  /* x pos of arrowhead */
+}
+
+/* #endregion */
+
+/* #endregion */
 
 /* #endregion */
 

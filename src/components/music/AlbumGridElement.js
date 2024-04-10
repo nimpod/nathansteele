@@ -7,6 +7,7 @@ import { ReactComponent as ToplistRatingIcon } from "../../icons/toplistRating.s
 class AlbumGridElement extends Component {
     render() {
         let album_cover_url = ""
+        let album_title = "";
         let artist_name = this.props.album.artist_name;
         //console.log(this.props.album);
 
@@ -18,7 +19,7 @@ class AlbumGridElement extends Component {
         if (this.props.album.custom_cover_url === undefined) {
             album_cover_url = this.props.album.album_cover_url;
         }
-        
+
         // use English name if it exists...
         if (this.props.album.artist_name_English) {
             artist_name = this.props.album.artist_name_displayed;

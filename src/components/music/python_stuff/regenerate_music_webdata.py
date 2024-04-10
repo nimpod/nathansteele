@@ -214,7 +214,7 @@ def get_top_tracks_all_data(limit=10):
 
 # call my functions...
 get_top_albums_via_musicbee_m3u_exported_file()
-#get_top_tracks_all_data(limit=100)
+get_top_tracks_all_data(limit=100)
 
 #test = lastfm.GET_album_info(artist_name='Joe Hisaishi', album_name="A Scene at the Sea (Takeshi Kitano's Original Motion Picture Soundtrack)")
 #print(test)

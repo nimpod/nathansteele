@@ -1,4 +1,43 @@
 import React from 'react';
+import TemplateTracklist from '../templateTracklist';
+
+const tracklist = [
+    {
+        "title": "The First Movement (Ferry To Shamisen) 第一楽章 （渡来三味)",
+        "my_rating": 8,
+        "my_feelings": "",
+    },
+    {
+        "title": "The Second Movement (Echizen Flow Nodes)] 第二楽章 （越前流れ節）",
+        "my_rating": 9,
+        "my_feelings": "",
+    },
+    {
+        "title": "The Third Movement (Collar People a Shallow Premier Lai Ishikawa) 第三楽章 （領民一揆浅瀬石川)",
+        "my_rating": 11,
+        "my_feelings": "",
+    },
+    {
+        "title": "The Fourth Movement (In Indigenous Kamigawara Fushitamashi Forever) 第四楽章 （土着上河原節魂永遠に)",
+        "my_rating": 11,
+        "my_feelings": "The greatest song of all time?",
+    },
+    {
+        "title": "Tsugaru Spring Song 津軽春唄",
+        "my_rating": 11,
+        "my_feelings": "Insane vibes",
+    },
+    {
+        "title": "Tsugaru Autumn Song 津軽秋唄",
+        "my_rating": 10,
+        "my_feelings": "",
+    },
+    {
+        "title": "Tsugaru Winter Song 津軽冬唄",
+        "my_rating": 10,
+        "my_feelings": "",
+    },
+]
 
 export const review = () => (
     <div className='review-content'>
@@ -22,5 +61,6 @@ export const review = () => (
                 Honestly the only song I'm a bit meh on is The First Movement, the intro to the album. But this is because the album develops at its own pace, gradually introducing new layers of instrumentation and production, which is part of its charm in my opinion. 
             </p>
         </div>
+        <TemplateTracklist tracklist={tracklist} />
     </div>
 )

@@ -47,18 +47,9 @@ class Music extends Component {
      * @param {*} play_count 
      */
     generate_bg_colour_of_play_count(play_count, max) {
-        /*
-        //value from 0 to 1
-        var hue = ((play_count) * max).toString(10);
-        return ["hsl(", hue, ",100%,", 50, "%)"].join("");
-        */
-
-        // calculte colour...
         let Red = 255 - (255 * (play_count / max));
         let Green = 255 * (play_count / max);
         let Blue = 100;
-
-        // format to CSS value and return
         return 'rgb(' + Red + ',' + Green + ',' + Blue + ')'; 
     }
 
@@ -84,7 +75,6 @@ class Music extends Component {
             play_count_div.style.backgroundColor = this.generate_bg_colour_of_play_count(play_count, highest_play_count);
         }
     }
-
     
     /**
      * 
@@ -102,6 +92,18 @@ class Music extends Component {
     render() {
         // console.log(this.props.albumReviewsData);
         console.log(this.props);
+
+        // generate list of all the genres...
+        const unique_genres = new Set();
+        for (let i = 0; i < this.props.top_albums.length; i++) {
+            let album = this.props.top_albums[i];
+            if (album.genres !== undefined) {
+                let genres = album.genres.split(";");
+                genres.forEach((g) => {
+                    unique_genres.add(g.trim());
+                })
+            }
+        }
 
         // top tracks list (default to overall time period)
         let top_tracks_list = this.props.top_tracks.overall;
