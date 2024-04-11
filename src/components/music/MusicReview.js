@@ -35,7 +35,7 @@ class MusicReview extends React.Component {
             themes = this.props.album_data.themes;
         }
         if (this.props.album_data.genres !== undefined) {
-            genres = this.props.album_data.genres.split(";");
+            genres = this.props.album_data.genres;
         }
         if (this.props.album_data.review_id_of_next_album !== undefined) {
             review_id_of_next_album = this.props.album_data.review_id_of_next_album;

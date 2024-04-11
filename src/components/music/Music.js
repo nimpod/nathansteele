@@ -4,8 +4,9 @@ import { connect }  from 'react-redux';
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import AlbumGridElement from './AlbumGridElement';
 import {
-    // handle_filter_button_toggling_stuff,
+    handle_filter_button_toggling_stuff,
     toggle_dropdown_list,
+    remove_genre_duplicates,
     // toggle_dropdown_list_arrow_icon,
     // remove_class_from_item_when_user_clicks_outside_of_item
 } from '../../js/helpers.js';
@@ -41,6 +42,22 @@ const time_period_options = [
 
 
 class Music extends Component {
+    state = {
+        // state representation of data that is displayed/filtered/sorted
+        __filtered_data: Array.from(this.props.top_albums)
+            .sort((a,b) => { return a['position'] - b['position'] }),
+
+        // filters...
+        __current_genre_filter: "All Genres",
+
+        // search stuff...
+        __search_box_contains_text: false,
+        __search_box_was_clicked: false,
+        __search_text: "",
+
+        // defaults...
+        __default_genre_filter: "All Genres",
+    }
 
     /**
      * Generate colour based on play count
@@ -86,24 +103,86 @@ class Music extends Component {
     }
 
     /**
+     * Given a list of duplicate genres, return a new list only stating each genre once.
+     * In other words, remove all duplicates.
+     */
+    remove_genre_duplicates() {
+        let no_duplicates = new Set();
+        this.props.top_albums.forEach((a) => {
+            if (a.genres !== undefined) {
+                a.genres.forEach((g) => {
+                    no_duplicates.add(g.trim());
+                })
+            }
+        })
+
+        // convert set to array...
+        let no_duplicates_arr = Array.from(no_duplicates);
+
+        // add default genre to top of array...
+        no_duplicates_arr.unshift(this.state.__default_genre_filter);
+
+        return no_duplicates_arr;
+    }
+
+    /**
+     * Filter list by specified genre
+     * @param {*} e 
+     * @param {*} genre_selected 
+     */
+    filter_by_genre = (e, genre_selected) => {
+        // do nothing if the language selected is already selected...
+        if (genre_selected !== this.state.__current_genre_filter) {
+            // update the 'current_genre_filter' state...
+            this.setState({__current_genre_filter: genre_selected})
+
+            this.setState(prevState => {
+                return {
+                    __filtered_data: Array.from(this.props.top_albums)
+                        .filter((a) => {
+                            // console.log(a.artist_name);
+                            // console.log(a.album_name);
+
+                            if (genre_selected === this.state.__default_genre_filter) {
+                                // show all albums...
+                                return true;
+                            }
+                            if (a.genres !== undefined) {
+                                // only show albums that contain the requested genre...
+                                return a.genres_lowercase.includes(genre_selected.toLowerCase());
+                            }
+                        })
+                }
+            })
+
+            // deal with button stuff...
+            let actual_button = handle_filter_button_toggling_stuff(e.target, '.filter-list-by-genre-btn');
+            
+            // toggle the .active class
+            if (!actual_button.classList.contains('active')) {
+                // enable filter...
+                actual_button.classList.add('active');
+            } else {
+                // disable filter...
+                actual_button.classList.remove('active');
+                this.setState({__current_genre_filter: ""})
+               // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
+            }
+        }
+    }
+
+    /**
      * Render function
      * @returns 
      */
     render() {
-        // console.log(this.props.albumReviewsData);
-        console.log(this.props);
+        // console.log(this.props);
 
+        // get items for current page...
+        const albums_displayed = this.state.__filtered_data;
+        
         // generate list of all the genres...
-        const unique_genres = new Set();
-        for (let i = 0; i < this.props.top_albums.length; i++) {
-            let album = this.props.top_albums[i];
-            if (album.genres !== undefined) {
-                let genres = album.genres.split(";");
-                genres.forEach((g) => {
-                    unique_genres.add(g.trim());
-                })
-            }
-        }
+        const all_genres = this.remove_genre_duplicates();
 
         // top tracks list (default to overall time period)
         let top_tracks_list = this.props.top_tracks.overall;
@@ -185,12 +264,52 @@ class Music extends Component {
                         </div>
 
                         <div className='top-albums-list-container custom-card'>
+                            {/* Title */}
                             <span className='page-title'>My top {this.props.top_albums.length} favourite albums of all time</span>
+
+                            {/* Header */}
+                            <div className='top-albums-list-header'>
+                                <div className='filter-by-genre-btns filter-by-something-container'>
+                                    <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-genres')}>
+                                        <span>{this.state.__current_genre_filter}</span>
+                                        <ArrowDownIcon className='invertable-icon' />
+                                    </div>
+                                    <div className='dropdown-list-genres dropdown-list'>
+                                        <div className='dropdown-list-title'>Filter by genre...</div>
+                                        {
+                                            // iterate over all genres...
+                                            all_genres.map((genre => {
+                                                return <div className="btn filter-list-by-genre-btn" key={genre} onClick={(e) => this.filter_by_genre(e, genre)}>
+                                                    <span className='genre-text'>
+                                                        {genre}
+                                                    </span>
+                                                    <span className='genre-count'>
+                                                        {
+                                                            Array.from(this.props.top_albums).filter(a => {
+                                                                let genre_lowercase = genre.toLowerCase();
+
+                                                                if (a.genres_lowercase !== undefined) {
+                                                                    if (genre === this.state.__default_genre_filter) {
+                                                                        return Array.from(a.genres_lowercase)
+                                                                    }
+                                                                    return a.genres_lowercase.includes(genre_lowercase);
+                                                                }
+                                                            }).length
+                                                        }
+                                                    </span>
+                                                </div>
+                                            }))
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Top albums list */}
                             <div className='top-albums-list'>
-                                {this.props.top_albums.map(a => {
+                                {albums_displayed.map(a => {
                                     return <AlbumGridElement
                                         album={a}
-                                        albumsList={this.props.top_albums}
+                                        albumsList={albums_displayed}
                                     />
                                 })}
                             </div>

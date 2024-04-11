@@ -274,24 +274,25 @@ export function remove_duplicates_from_array(arr) {
  * Get set of genres (set meaning there should be no duplicates)
  * @returns 
  */
-export function remove_genre_duplicates(films_list, default_genre) {
-    const unique_genres = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
+export function remove_genre_duplicates(my_list, default_genre) {
+    const genres = new Set();        // a set to store 1 of each type of tag that exists across the entire blog archive
 
     // store each genre once...
-    films_list.map((film => {
-        film.genres.map((g => {
-            unique_genres.add(g);
+    my_list.map((item => {
+        console.log(item);
+        item.genres.map((g => {
+            genres.add(g);
         }));
         return null;
     }));
 
     // sort the set alphabetically, cause why not.
-    const unique_genres_sorted = Array.from(unique_genres).sort();
+    const genres_sorted = Array.from(genres).sort();
 
     // add default...
-    unique_genres_sorted.unshift(default_genre);
+    genres_sorted.unshift(default_genre);
 
-    return unique_genres_sorted;
+    return genres_sorted;
 }
 
 /**

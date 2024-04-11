@@ -30,7 +30,7 @@ class FilmsToplistListElement extends Component {
     }
 
     render() {
-        console.log(this.props.film);
+        // console.log(this.props.film);
         let temp_screenshot = "https://m.media-amazon.com/images/M/MV5BNjUxYTkxYzgtYzU5OC00NDVmLWExYTAtYmY0NDBiZWRhY2E0XkEyXkFqcGdeQXVyNzEzMzA1MTQ@._V1_.jpg"
         let screenshot1 = temp_screenshot;
         let screenshot2 = temp_screenshot;

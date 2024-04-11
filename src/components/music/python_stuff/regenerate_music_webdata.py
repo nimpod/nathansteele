@@ -20,7 +20,7 @@ lastfm = LastFM(API_KEY='641be1ed643c913edb609208c24efad7', USERNAME='gutash')
 def get_top_albums_via_musicbee_m3u_exported_file():
     # find the .m3u export...
     dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
-    musicbee_export_filename = 'All time best albums.m3u'
+    musicbee_export_filename = 'FAVOURITE ALBUMS.m3u'
     fullpath_to_musicbee_export = f"{dir_export}\\{musicbee_export_filename}"
     
     # define full path to json file...
@@ -213,7 +213,7 @@ def get_top_tracks_all_data(limit=10):
 
 
 # call my functions...
-get_top_albums_via_musicbee_m3u_exported_file()
+#get_top_albums_via_musicbee_m3u_exported_file()
 get_top_tracks_all_data(limit=100)
 
 #test = lastfm.GET_album_info(artist_name='Joe Hisaishi', album_name="A Scene at the Sea (Takeshi Kitano's Original Motion Picture Soundtrack)")

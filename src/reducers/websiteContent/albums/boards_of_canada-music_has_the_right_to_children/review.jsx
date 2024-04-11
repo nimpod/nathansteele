@@ -109,7 +109,7 @@ export const review = () => (
                 </ul>
             </p>
             <p>
-                I first heard of BoC in 2017 on a YouTube trip-hop mix that included the song "Julie and Candy", one of my favourite songs ever on their 2002 album "Geogaddi". 
+                I first discovered BoC in 2017 on a YouTube trip-hop mix that included the song "Julie and Candy", one of my favourite songs ever on their 2002 album "Geogaddi". 
                 Upon listening to the mix many times, this one song stood out to me. It was different from any other style of music I'd heard it before.
                 Pretty quickly I started going through their discography, and while all of their albums are very special, something about this 1998 album was and still is the most unique/engaging/otherworldly album I have ever experienced.
             </p>

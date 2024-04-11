@@ -2295,15 +2295,18 @@ span.film-imdbDiffScore:active {
 }
 
 /* Button inside films-controls */
-.films-controls div.btn {
+.films-controls div.btn,
+.top-albums-list-header div.btn {
   outline: none !important;
   transition: all 100ms ease;
   color: var(--text);
 }
-.films-controls div.btn:not(.active):hover {
+.films-controls div.btn:not(.active):hover,
+.top-albums-list-header div.btn:not(.active):hover {
   background-color: var(--films-controls-btn-bg-color-hover);
 }
-.films-controls div.btn.active {
+.films-controls div.btn.active,
+.top-albums-list-header div.btn.active {
   color: var(--films-controls-btn-text-color-active) !important;
   background-color: var(--films-pagination-btn-bg-color-active);
 }
@@ -2316,7 +2319,7 @@ span.film-imdbDiffScore:active {
   position: absolute;
   z-index: 9999999999;
   background-color: var(--films-controls-dropdown-list-bg-color);
-  width: 180px;
+  /* width: 200px; */
   border-radius: 5px;
   padding: 6px 0;
   margin-top: 42px;
@@ -2326,7 +2329,7 @@ span.film-imdbDiffScore:active {
   font-size: 0.9rem;
   border: 3px solid transparent;
   background-color: var(--films-controls-btn-bg-color);
-  width: 180px;
+  width: 200px; 
   padding: 5px;
   margin-bottom: 4px;
   text-align: left;
@@ -2359,11 +2362,11 @@ span.film-imdbDiffScore:active {
 }
 
 .dropdown-list > div.btn {
-  width: 170px;
+  width: 190px;
   background-color: var(--films-controls-dropdown-list-btn-bg-color);
   padding: 3px 10px;
   margin-bottom: 3px;
-  margin-right: 1px;
+  margin-right: 6px;
   margin-left: 5px;
   border-radius: 5px;
   display: block;
@@ -2402,7 +2405,7 @@ span.film-imdbDiffScore:active {
 
 /* Why the fuck is the languages dropdown not in the right place!?! */
 .dropdown-list-languages {
-  margin-left: 200px;
+  margin-left: 220px;
 }
 /* #endregion */
 
@@ -3338,6 +3341,9 @@ div.btn.films-reset-filters-btn svg {
 .top-albums-list-container {
   margin-left: 30px;
   padding: 10px 30px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .top-albums-list {

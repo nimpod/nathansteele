@@ -106,16 +106,16 @@ const merge_albums_data = (init_state) => {
         let prevAlbum = mergedData[v["position"] - 2];
         let nextAlbum = mergedData[v["position"]];
 
-        let reviewIdOfNextAlbum = "";
-        let reviewIdOfPrevAlbum = "";
+        let review_id_of_next_album = "";
+        let review_id_of_prev_album = "";
         if (nextAlbum !== undefined) {
-            reviewIdOfNextAlbum = get_album_review_id(nextAlbum.artist_name, nextAlbum.album_name);
+            review_id_of_next_album = get_album_review_id(nextAlbum.artist_name, nextAlbum.album_name);
         }
         if (prevAlbum !== undefined) {
-            reviewIdOfPrevAlbum = get_album_review_id(prevAlbum.artist_name, prevAlbum.album_name)
+            review_id_of_prev_album = get_album_review_id(prevAlbum.artist_name, prevAlbum.album_name)
         }
-        v["review_id_of_next_album"] = reviewIdOfNextAlbum;
-        v["review_id_of_prev_album"] = reviewIdOfPrevAlbum;
+        v["review_id_of_next_album"] = review_id_of_next_album;
+        v["review_id_of_prev_album"] = review_id_of_prev_album;
 
         if (v["artist_name_English"]) {
             v["artist_name_displayed"] = v["artist_name_English"] + " [" + v["artist_name"] + "]";
@@ -123,6 +123,21 @@ const merge_albums_data = (init_state) => {
         
         if (v["artist_name_Japanese"]) {
             v["artist_name_displayed"] = v["artist_name"] + " [" + v["artist_name_Japanese"] + "]";
+        }
+
+        if (v["genres"] !== undefined) {
+            // convert from string representation to an actual list (because I'm storing the list of genres as a copy-and-pasted string from musicbee...)
+            let arr = v["genres"].split(';');
+
+            // it's helpful to have two versions of the genres list...
+            // 1) Displayed in the UI
+            let genres = arr.map(el => { return el.trim() });
+            // 2) For filtering/sorting, otherwise filtered data doesn't work since album names & artist names are case sensitive
+            let genres_lowercase = arr.map(el => { return el.trim().toLowerCase() })
+
+            // replace string version of the list, with an actual list!
+            v["genres"] = genres;
+            v["genres_lowercase"] = genres_lowercase;
         }
     });
 
