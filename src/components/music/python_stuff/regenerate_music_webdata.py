@@ -148,6 +148,29 @@ def check_if_the_album_name_in_the_folder_name_wont_match_with_lastfm(folder_nam
         # leave as normal...
         return album_name
 
+def update_mismatching_lastfm_urls():
+    """
+    Maybe do it this way instead...
+    Although it would be more complicated than this...
+    """
+    
+    with open(fullpath_to_json_output, "r") as jsonFile:
+        data = json.load(jsonFile)
+
+    # iterate over json...
+    for d in data:
+        artist = d['artist_name']
+        album = d['album_name']
+        
+        # manually change lastfm url's
+        if 'Revocation' in artist and 'Scion' in album:
+            d['lastfm_url'] = "https://www.last.fm/music/Revocation/Scion+Av+Presents:+Revocation+%22Teratogensis%22"
+        elif 'Kawaguchi' in artist and 'Cider' in album:
+            d['lastfm_url'] = "https://www.last.fm/music/Senri+Kawaguchi/CIDER+~Hard+&+Sweet~"
+
+    # update content...
+    with open(fullpath_to_json_output, 'w') as f:
+        json.dump(d, f, indent=4)
 
 def get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.ALL_TIME, limit=10):
     """
