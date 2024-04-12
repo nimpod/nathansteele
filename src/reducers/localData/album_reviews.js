@@ -891,6 +891,16 @@ const database = {
 		},
 
 
+		"gladde_palling__dansmuziek": {
+			lastfm_url: "https://www.last.fm/music/gladde+paling/dansmuziek",
+			rym_url: "https://rateyourmusic.com/release/album/gladde-paling/dansmuziek/",
+			spotify_url: "https://open.spotify.com/album/3Csw1X9NEWvp8JGXaqZcjy?si=AnRfdP-1R1CwQRitnE1fOQ",
+			year_of_release: "2022",
+			year_of_discovery: "2023",
+			genres: "EDM; Hybrid trap; Bass house; Breakbeat; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"guy_farley__cashback_ost": {
 			lastfm_url: "https://www.last.fm/music/Guy+Farley/Cashback",
 			rym_url: "https://rateyourmusic.com/release/album/guy_farley/cashback/",
@@ -1095,18 +1105,17 @@ const database = {
 
 	J: {
 		//
-		"joe_hisaishi__kids_return_ost": {
+		"joe_hisaishi__kids_return_OST": {
 			lastfm_url: "https://www.last.fm/music/Joe+Hisaishi/Kids+Return+(%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%BB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF)",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/kids_return/",
 			spotify_url: "https://open.spotify.com/album/32TaUR88QyqMkXT4h7ffm0?si=OSTF7MkaSriZfrGzvFcj6g",
 			year_of_release: "1996",
 			year_of_discovery: "2024",
-			artist_name_English: "Joe Hisaishi",
 			genres: "Film soundtrack; Neoclassical New Age; New age; Electronic",
 			my_rating: 9.0,
 			my_review: "",
 		},
-		"joe_hisaishi__the_wind_rises": {
+		"joe_hisaishi__the_wind_rises_OST": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/The+Wind+Rises+Soundtrack",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/%E9%A2%A8%E7%AB%8B%E3%81%A1%E3%81%AC_%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF__kaze_tachinu_soundtrack_/",
 			spotify_url: "https://open.spotify.com/album/59U5FQ4kDEt11Q2UcFu1dK?si=nA7B5VZLTYe8Y9Q-ul-yxg",
@@ -1128,7 +1137,7 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
-		"joe_hisaishi__kikis_delivery_service": {
+		"joe_hisaishi__kikis_delivery_service_OST": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/Kiki%27s+Delivery+Service+Soundtrack+Music+Collection",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/kikis-delivery-service-original-soundtrack/",
 			spotify_url: "https://open.spotify.com/album/2NO5lYWs4aWpsmHOjF4JHk?si=eitK7DgpTYWtnaV3aQ0E6g",
@@ -1140,7 +1149,7 @@ const database = {
 			my_rating: 9.5,
 			my_review: "",
 		},
-		"joe_hisaishi__dolls_ost": {
+		"joe_hisaishi__dolls_OST": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/Dolls",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/dolls/",
 			year_of_release: "1989",
@@ -1150,6 +1159,19 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
+		"joe_hisaishi__my_neighbour_totoro_OST": {
+			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/My+Neighbor+Totoro+Image+Song+Collection",
+			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/%E3%81%A8%E3%81%AA%E3%82%8A%E3%81%AE%E3%83%88%E3%83%88%E3%83%AD-tonari-no-totoro-2/",
+			spotify_url: "https://open.spotify.com/album/2Dn4ABFUYJbrlMF7K12RT3?si=fn_UieBZQYWnaWsX-aKMfQ",
+			year_of_release: "1988",
+			year_of_discovery: "2021",
+			artist_name_English: "Joe Hisaishi",
+			album_name_English: "My Neighbour Totoro OST",
+			genres: "Film soundtrack; Anime soundtrack; Japanese anime soundtrack",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
 
 		//
 		"jessie_ware__whats_your_pleasure": {
@@ -1303,7 +1325,17 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
-	
+		"kero_kero_bonito__bonito_generation": {
+			lastfm_url: "https://www.last.fm/music/Kero+Kero+Bonito/Bonito+Generation",
+			rym_url: "https://rateyourmusic.com/release/album/kero-kero-bonito/bonito-generation/",
+			spotify_url: "https://open.spotify.com/album/5vDVFuzV8aAIymXSkpyJoe?si=FGAh4VfTTyaRObwm-fKtew",
+			year_of_release: "2016",
+			year_of_discovery: "2017",
+			genres: "Hyperpop; Electropop; J-pop; J-electropop",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		
 		
 		"katzenjammer__le_pop": {
 			lastfm_url: "https://www.last.fm/music/Katzenjammer/Le+Pop",
@@ -1548,6 +1580,16 @@ const database = {
 		},
 
 
+		"miho_hazama__m_unit_beyond_orbits": {
+			lastfm_url: "https://www.last.fm/music/Miho+Hazama/m_unit:+Beyond+Orbits",
+			rym_url: "https://rateyourmusic.com/release/album/miho-hazama/beyond-orbits/",
+			spotify_url: "https://open.spotify.com/album/2s1XgcAEXuBkKqEgVX5C4F?si=mhaG0H3uQESS9NZOvno0cA",
+			year_of_release: "2023",
+			year_of_discovery: "2023",
+			genres: "Jazz fusion; Progressive big band; Jazz; J-jazz",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"metamatics__mind_mushing_git": {
 			lastfm_url: "https://www.last.fm/music/Metamatics/Mind+Mushing+Git",
 			rym_url: "https://rateyourmusic.com/release/album/metamatics/mind_mushing_git/",
@@ -1861,7 +1903,17 @@ const database = {
 			my_review: "",
 		},
 
-	
+
+		"ocoeur__nouveau_depart": {
+			lastfm_url: "https://www.last.fm/music/Ocoeur/Nouveau+D%C3%A9part",
+			rym_url: "https://rateyourmusic.com/release/album/ocoeur/nouveau-de%CC%81part/",
+			spotify_url: "https://open.spotify.com/album/0gfd01ctJ25707fzSqu5g4?si=U2Iu9sqmQIONLxIWKR99uQ",
+			year_of_release: "2023",
+			year_of_discovery: "2023",
+			genres: "Ambient; Post-minimalism",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"ozric_tentacles__spirals_in_hyperspace": {
 			lastfm_url: "https://www.last.fm/music/Ozric+Tentacles/Spirals+in+Hyperspace",
 			rym_url: "https://rateyourmusic.com/release/album/ozric-tentacles/spirals-in-hyperspace/",
@@ -2237,6 +2289,47 @@ const database = {
 		},
 
 
+		"senri_kawaguchi__cider_hard_and_sweet": {
+			lastfm_url: "https://www.last.fm/music/Senri+Kawaguchi/CIDER+~Hard+&+Sweet~",
+			rym_url: "https://rateyourmusic.com/release/album/senri-kawaguchi/cider-%EF%BD%9Ehard-and-sweet%EF%BD%9E/",
+			spotify_url: "https://open.spotify.com/album/1zZBmo76gGqWxKCSnMrnkS?si=O8mZsMpbRvKJAOzgd9sOgg",
+			year_of_release: "2016",
+			year_of_discovery: "2023",
+			genres: "Jazz fusion; Jazz; Japanese jazz fusion; J-jazz; Japanese",
+			custom_cover_url: "https://e.snmc.io/i/600/w/573f43e12ff81fc44416d9e4c3281d19/6344120/senri-kawaguchi-cider-%EF%BD%9Ehard-and-sweet%EF%BD%9E-Cover-Art.jpg",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"scott_walker__scott3": {
+			lastfm_url: "https://www.last.fm/music/Scott+Walker/Scott+3",
+			rym_url: "https://rateyourmusic.com/release/album/scott-walker/scott-3/",
+			spotify_url: "https://open.spotify.com/album/5ofQcOqaopFUp7VO5UYzpI?si=9mYs_ZAFRX25Tp7BEe46Lg",
+			year_of_release: "1969",
+			year_of_discovery: "2021",
+			genres: "Baroque pop; Art pop; Art rock",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"sven_wunder__wabi_sabi": {
+			lastfm_url: "https://www.last.fm/music/Sven+Wunder/Wabi+Sabi",
+			rym_url: "https://rateyourmusic.com/release/album/sven-wunder/wabi-sabi/",
+			spotify_url: "https://open.spotify.com/album/67C5pm8q9S2Q4O6BjTZuHC?si=b5EOGE0yTYWNtHBzMifm7Q",
+			year_of_release: "2020",
+			year_of_discovery: "2024",
+			genres: "Jazz fusion; Jazz funk; Min'yō Music; Neo-Psychedelia; J-folk; Turkish folk; Anatolian rock",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"stereolab__dots_and_loops": {
+			lastfm_url: "https://www.last.fm/music/Stereolab/Dots+and+Loops",
+			rym_url: "https://rateyourmusic.com/release/album/stereolab/dots-and-loops/",
+			spotify_url: "https://open.spotify.com/album/151mT9g0fDHVfpmWeYk4Wx?si=2-5deGAYSEa0uAS8mLZp_w",
+			year_of_release: "1997",
+			year_of_discovery: "2021",
+			genres: "Art pop; Art rock; Alternative rock; Downtempo",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"sleepwave__broken_compass": {
 			lastfm_url: "https://www.last.fm/music/Sleepwave/Broken+Compass",
 			rym_url: "",
@@ -2366,20 +2459,34 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
+		
+
+		//
+		"the_strokes__machu_picchu": {
+			lastfm_url: "https://www.last.fm/music/The+Strokes/Angles",
+			rym_url: "https://rateyourmusic.com/release/album/the-strokes/angles-2/",
+			spotify_url: "https://open.spotify.com/album/6Jx4cGhWHewTcfKDJKguBQ?si=ouKSaom-QsWew-vfwgnANw",
+			year_of_release: "2011",
+			year_of_discovery: "2014",			
+			genres: "Progressive rock; Space rock; Psychedelic Rock; Post-rock; Radio broadcast recordings; Electronic",
+			my_rating: 9.0,
+			my_review: "",
+		},
 
 
 		"telegraph__mir": {
 			lastfm_url: "https://www.last.fm/music/Telegraph/Mir",
 			rym_url: "https://rateyourmusic.com/release/album/telegraph/mir/",
+			spotify_url: "https://open.spotify.com/album/1KNsbSJqFpzu32rTzgfLgq?si=JbPScPIqTpOcLtPbRZPcKQ",
 			year_of_release: "2018",
+			year_of_discovery: "2024",
 			genres: "Progressive rock; Space rock; Psychedelic Rock; Post-rock; Radio broadcast recordings; Electronic",
 			my_rating: 9.0,
 			my_review: "",
-			year_of_discovery: "2024",
 		},
 		"thom_yorke__suspiria": {
 			lastfm_url: "https://www.last.fm/music/Thom+Yorke/Suspiria",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/thom-yorke/suspiria-4/",
 			spotify_url: "https://open.spotify.com/album/2UehMLybYgLuuNHRNJpbCB?si=T7o80JKFRGCkDuw82c7d0Q",
 			year_of_release: "2012",
 			year_of_discovery: "2021",
@@ -2389,7 +2496,7 @@ const database = {
 		},
 		"twenty_one_pilots__vessel": {
 			lastfm_url: "https://www.last.fm/music/twenty+one+pilots/Vessel+(Bonus+Tracks+Version)",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/twenty-one-pilots/vessel/",
 			spotify_url: "https://open.spotify.com/album/14onjcwGXJFQnTmmCnTUfQ?si=n6974t5pTvyloWzgWzWVPg",
 			year_of_release: "2013",
 			year_of_discovery: "2015",
@@ -2432,17 +2539,6 @@ const database = {
 	},
 
 	W: {
-		"worlds_end_girlfriend__hurtbreak_wonderland": {
-			custom_cover_url: require('../websiteContent/albums/worlds_end_girlfriend__hurtbreak_wonderland/album_cover.jpg'),
-			lastfm_url: "https://www.last.fm/music/World%27s+End+Girlfriend/Hurtbreak+Wonderland",
-			rym_url: "",
-			spotify_url: "https://open.spotify.com/album/7KtBhRWitpnHoma8UWiDgz?si=dhQ99k1YT3-tdBWS46M7GA",
-			year_of_release: "2007",
-			genres: "Post-Rock; Modern Classical; IDM; Breakcore; Glitch; Chamber jazz; Electronic",
-			my_rating: 8.0,
-			my_review: "",
-			year_of_discovery: "2023",
-		},
 		"ween__the_mollusk": {
 			lastfm_url: "https://www.last.fm/music/Ween/The+Mollusk",
 			rym_url: "",
@@ -2453,6 +2549,29 @@ const database = {
 			themes: ["Weird", "Quirky"],
 			my_rating: 8.0,
 			my_review: "",
+		},
+		"ween__shinola": {
+			lastfm_url: "https://www.last.fm/music/Ween/Shinola+(Vol.+1)",
+			rym_url: "https://rateyourmusic.com/release/album/ween/shinola-vol-1/",
+			spotify_url: "https://open.spotify.com/album/2aplhoOcX4UjbxrUdxGEiH?si=It4r3oFbT7KFJ_SP9tb4oA",
+			year_of_release: "2005",
+			year_of_discovery: "2013",
+			genres: "Psychedelic Pop; Psychedelic Rock; Art rock",
+			themes: ["Weird", "Quirky"],
+			my_rating: 8.0,
+			my_review: "",
+		},
+
+		"worlds_end_girlfriend__hurtbreak_wonderland": {
+			custom_cover_url: require('../websiteContent/albums/worlds_end_girlfriend__hurtbreak_wonderland/album_cover.jpg'),
+			lastfm_url: "https://www.last.fm/music/World%27s+End+Girlfriend/Hurtbreak+Wonderland",
+			rym_url: "",
+			spotify_url: "https://open.spotify.com/album/7KtBhRWitpnHoma8UWiDgz?si=dhQ99k1YT3-tdBWS46M7GA",
+			year_of_release: "2007",
+			genres: "Post-Rock; Modern Classical; IDM; Breakcore; Glitch; Chamber jazz; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			year_of_discovery: "2023",
 		},
 	},
 

@@ -1,4 +1,27 @@
 
+from enum import Enum
+
+class OriginalStrings(Enum):
+    COLON = ":",
+    SEMI_COLON = ";",
+    QUESTION_MARK = "?",
+    FULL_STOP = ".",
+    FORWARD_SLASH = "\"",
+    BACK_SLASH = "/"
+
+class ReplacementStrings(Enum):
+    """
+    Certain characters can't be used in folder names
+    For example : ; \ / . ?
+    This aims to get around that issue, by having an "identical string clone" for each one of those.
+    This is a bit annoying, because it means I have to change the names of my folders. 
+    """
+    
+    COLON = (OriginalStrings.COLON, "~")
+    SEMI_COLON = (OriginalStrings.SEMI_COLON, "")
+
+    
+
 class MusicbeeHelpers:
     """ Useful functions related to the Musicbee m3u export file """
     

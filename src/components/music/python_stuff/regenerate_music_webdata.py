@@ -1,4 +1,5 @@
 import os
+import json
 
 from LastFm import LastFM
 from LastFm import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
@@ -13,22 +14,18 @@ disable_warnings(InsecurePlatformWarning)
 disable_warnings(InsecureRequestWarning)
 
 
+# find the .m3u export...
+dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
+musicbee_export_filename = 'FAVOURITE ALBUMS.m3u'
+fullpath_to_musicbee_export = f"{dir_export}\\{musicbee_export_filename}"
+
+# define full path to json file...
+json_output_filename = 'webdata_top_albums_list.json'
+fullpath_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\{json_output_filename}'
+
 # create instance of my class that communicates with LastFM API...
 lastfm = LastFM(API_KEY='641be1ed643c913edb609208c24efad7', USERNAME='gutash')
 
-
-def get_top_albums_via_musicbee_m3u_exported_file():
-    # find the .m3u export...
-    dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
-    musicbee_export_filename = 'FAVOURITE ALBUMS.m3u'
-    fullpath_to_musicbee_export = f"{dir_export}\\{musicbee_export_filename}"
-    
-    # define full path to json file...
-    json_output_filename = 'webdata_top_albums_list.json'
-    fullpath_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\{json_output_filename}'
-    
-    # convert .m3u file to .json file...
-    convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output)
 
 def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
     """
@@ -44,7 +41,6 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
             # convert str to list
             toplist = content.split('D:\\Music\\Music files\\')
             toplist = toplist[1:]   # dunno why there's a blank item at front of list
-            ##print(toplist)
             
             # number of albums in toplist
             num_of_albums = len(toplist)
@@ -63,6 +59,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 
                 # essentially the name of the folder containing the songs from the album
                 folder_name = elem.split('\\')[0]
+                
                 # but the symbols need to be replaced...
                 folder_name_fixed = MusicbeeHelpers.fix_symbols_on_album_filenames(folder_name=folder_name)
                 
@@ -75,14 +72,16 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 artist_name_v2 = MusicbeeHelpers.remove_special_characters_based_on_musicbee_export(artist_name)
                 album_name_v2 = MusicbeeHelpers.remove_special_characters_based_on_musicbee_export(album_name)
                 review_id = f"{artist_name_v2}-{album_name_v2}"
-                print(f"{pos_padded}: {review_id}")
+                
+                # check if we need to manually override album name...
+                album_name = check_if_the_album_name_in_the_folder_name_wont_match_with_lastfm(folder_name=folder_name, album_name=album_name)
                 
                 # get more data via LastFM API...
                 data = lastfm.GET_album_info(artist_name=artist_name, album_name=album_name)
                 lastfm_url = ""
                 album_cover_url = ""
-                duration = 0
-                tracks = []
+                duration = 0    # mostly useless, lastfm rarely provides this statistic per album, I wish they did
+                tracks = []     # also useless, lastfm is shit when it comes to tracklists for albums, sometimes it's not there, sometimes the tracks are spelt wrong, not translated properly, etc...
 
                 # some albums dont work...
                 if 'album' in data:
@@ -94,6 +93,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                         print('not url found :(')
                 
                     # get tracks...
+                    """
                     if 'tracks' in data['album']:
                         for track in data['album']['tracks']['track']:
                             tracks.append(track)
@@ -103,14 +103,18 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                             #    print('no duration info :(')
                     else:
                         print('no tracks info :(')
-                
+                    """
+                    
                     # get album cover (if it was in response)...
                     if 'image' in data['album']:
                         album_cover_url = data['album']['image'][-1]['#text']
                         # print(album_cover_url)
                     else:
                         print('no album cover found :(')
-                
+                                
+                # show progress...
+                print(f"{pos_padded}: {review_id} {lastfm_url}")
+
                 # append to list...
                 albums_list.append({
                     'position': pos,
@@ -119,15 +123,30 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     'artist_name': artist_name,
                     'album_name': album_name,
                     'duration': duration,
-                    'tracks': tracks,
                     'album_cover_url': album_cover_url,
                     'review_id': review_id,
                 })
-            
-            
+                        
             # export list to json...
             export_list_to_json(fullpath_to_json_output, albums_list)
 
+
+def check_if_the_album_name_in_the_folder_name_wont_match_with_lastfm(folder_name, album_name):
+    """
+    Occasionally, album names contain characters that Windows prevents us from putting in folder names.
+    For example : ; / \ ?
+    This is a bit annoying, because when lastfm trys to find the album, it will say it can't find it, because the folder name I chose won't match what it really is.
+    So here I am manually providing the "correct" album name, so that lastfm can find the correct album info (most notably, automate the retrieval of the album cover).
+    The alternative is to use replacement strings in the folder names, but this becomes a bit of a maintaince nightmare, and makes my library look ugly.
+    So this will do for now...
+    """
+    if 'Senri Kawaguchi - Cider (Hard & Sweet)' in folder_name:
+        return "CIDER ~Hard & Sweet~"
+    elif 'Revocation - Scion' in folder_name:
+        return "Scion Av Presents: Revocation \"Teratogensis\""
+    else:
+        # leave as normal...
+        return album_name
 
 
 def get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.ALL_TIME, limit=10):
@@ -213,7 +232,7 @@ def get_top_tracks_all_data(limit=10):
 
 
 # call my functions...
-#get_top_albums_via_musicbee_m3u_exported_file()
+convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output)
 get_top_tracks_all_data(limit=100)
 
 #test = lastfm.GET_album_info(artist_name='Joe Hisaishi', album_name="A Scene at the Sea (Takeshi Kitano's Original Motion Picture Soundtrack)")
