@@ -50,6 +50,26 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
+		"the_strokes__machu_picchu": {
+			lastfm_url: "https://www.last.fm/music/The+Strokes/Angles",
+			rym_url: "https://rateyourmusic.com/release/album/the-strokes/angles-2/",
+			spotify_url: "https://open.spotify.com/album/6Jx4cGhWHewTcfKDJKguBQ?si=ouKSaom-QsWew-vfwgnANw",
+			year_of_release: "2011",
+			year_of_discovery: "2014",			
+			genres: "Progressive rock; Space rock; Psychedelic Rock; Post-rock; Radio broadcast recordings; Electronic",
+			my_rating: 9.0,
+			my_review: "",
+		},
+		"the_strokes__first_impressions_of_earth": {
+			lastfm_url: "https://www.last.fm/music/The+Strokes/First+Impressions+of+Earth",
+			rym_url: "https://rateyourmusic.com/release/album/the-strokes/first-impressions-of-earth/",
+			spotify_url: "https://open.spotify.com/album/1HQ61my1h3VWp2EBWKlp0n?si=aCYEoPhKR3S3LaDj4S0elA",
+			year_of_release: "2006",
+			year_of_discovery: "2013",			
+			genres: "Alternative rock; Garage rock; Indie rock",
+			my_rating: 8.0,
+			my_review: "",
+		},
 
 		//
 		"the_drums__the_drums": {
@@ -101,6 +121,16 @@ const database = {
 			year_of_discovery: "2020",
 			genres: "Ambient; Dark ambient; Hauntology; Experimental",
 			my_rating: 9.0,
+			my_review: "",
+		},
+		"the_hoosiers__the_trick_to_life": {
+			lastfm_url: "https://www.last.fm/music/The+Hoosiers/The+Trick+To+Life",
+			rym_url: "https://rateyourmusic.com/release/album/the-hoosiers/the-trick-to-life/",
+			spotify_url: "https://open.spotify.com/album/7waAeYL7CSFMNJGHxV4oKS?si=7RzfL3w_S5OF7GQsFPPtDA",
+			year_of_release: "2007",
+			year_of_discovery: "2010",
+			genres: "Indie rock; Pop rock; Indie pop; Power pop",
+			my_rating: 8.0,
 			my_review: "",
 		},
 	},
@@ -290,6 +320,16 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
+		"alice_longyu_gao__lets_hope_heteros_fail_learn_and_retire": {
+			lastfm_url: "https://www.last.fm/music/Alice+Longyu+Gao/Let%27s+Hope+Heteros+Fail,+Learn+and+Retire",
+			rym_url: "https://rateyourmusic.com/release/ep/alice-longyu-gao/lets-hope-heteros-fail-learn-and-retire/",
+			spotify_url: "https://open.spotify.com/album/5YjuPPmMZy5VGjlesAPbHG?si=wvitwDIOQoKaoxEQ4OMogg",
+			year_of_release: "2023",
+			year_of_discovery: "2023",
+			genres: "Alternative metal; Hyperpop; Trap metal; Pop rap; Industrial Hip Hop",
+			my_rating: 9.0,
+			my_review: "",
+		},
 	},
 
 	B: {
@@ -457,6 +497,16 @@ const database = {
 			my_rating: 9.5,
 			my_review: "",
 		},
+		"beach_house__bloom": {
+			lastfm_url: "https://www.last.fm/music/Beach+House/Bloom",
+			rym_url: "https://rateyourmusic.com/release/album/beach-house/bloom/",
+			spotify_url: "https://open.spotify.com/album/600BVck2XflTAsEo0KhIfm?si=RI5Z0C_GTu6ULvaqQ51uDg",
+			year_of_release: "2012",
+			year_of_discovery: "2023",
+			genres: "Dream pop; Indie pop; Neo-psychedelia",
+			my_rating: 8.0,
+			my_review: "",
+		},
 
 		//
 		"bring_me_the_horizon__thats_the_spirit": {
@@ -620,6 +670,16 @@ const database = {
 			year_of_discovery: "2018",
 			genres: "Disco; French house; Progressive pop; Electropop; Synthpop; Electronic",
 			my_rating: 9.0,
+			my_review: "",
+		},
+		"daft_punk__human_after_all": {
+			lastfm_url: "https://www.last.fm/music/Daft+Punk/Human+After+All",
+			rym_url: "https://rateyourmusic.com/release/album/daft-punk/human-after-all/",
+			spotify_url: "https://open.spotify.com/album/2T7DdrOvsqOqU9bGTkjBYu?si=Q55NNau6TDelxXNp8sa2bQ",
+			year_of_release: "2005",
+			year_of_discovery: "2020",
+			genres: "Electro-house; Synthpunk; Post-Industrial; House; Electronic; Electro-industrial",
+			my_rating: 8.0,
 			my_review: "",
 		},
 
@@ -1171,6 +1231,18 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
+		"joe_hisaishi__a_scene_at_the_sea_OST": {
+			lastfm_url: "https://www.last.fm/music/Joe+Hisaishi/A+Scene+at+the+Sea+(Takeshi+Kitano%27s+Original+Motion+Picture+Soundtrack)",
+			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/%E3%81%82%E3%81%AE%E5%A4%8F%E3%80%81%E3%81%84%E3%81%A1%E3%81%B0%E3%82%93%E9%9D%99%E3%81%8B%E3%81%AA%E6%B5%B7-ano-natsu-ichiban-shizukana-umi/",
+			spotify_url: "https://open.spotify.com/album/7g9uud3w9A6uVuT7krdRU7?si=qy8Lc6fkQEObi1Gdf6V0oQ",
+			year_of_release: "1991",
+			year_of_discovery: "2024",
+			artist_name_English: "Joe Hisaishi",
+			album_name_English: "A Scene At The Sea OST",
+			genres: "Film soundtrack; New age; Neoclassical New Age; Impressionism",
+			my_rating: 8.0,
+			my_review: "",
+		},
 
 
 		//
@@ -1489,6 +1561,16 @@ const database = {
 			year_of_discovery: "2020",
 			genres: "Ambient pop; Ambient; Electronic",
 			my_rating: 9.0,
+			my_review: "",
+		},
+		"lealani__fantastic_planet": {
+			lastfm_url: "https://www.last.fm/music/Lealani/Fantastic+Planet",
+			rym_url: "https://rateyourmusic.com/release/album/lealani/fantastic-planet/",
+			spotify_url: "https://open.spotify.com/album/7bkPyT3AJXIUXCunkA0xun?si=Iq2XfLxYTp2hlD8eBTeVaw",
+			year_of_release: "2019",
+			year_of_discovery: "2021",
+			genres: "Indie garage rock; Lo-Fi; Lo-Fi indie; Synthpunk; Hyperpop; Experimental indie; Indie pop; Digital hardcore; Electronic",
+			my_rating: 8.0,
 			my_review: "",
 		},
 	},
@@ -1825,6 +1907,16 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
+		"nina_simone__wild_is_the_wind": {
+			lastfm_url: "https://www.last.fm/music/Nina+Simone/Wild+Is+The+Wind",
+			rym_url: "https://rateyourmusic.com/release/album/nina-simone/wild-is-the-wind/",
+			spotify_url: "https://open.spotify.com/album/2EYVXfypcucR62WMKJl6Mr?si=3tGMrLYcQMStTkH_kDfwGQ",
+			year_of_release: "1966",
+			year_of_discovery: "2021",
+			genres: "Soul; Jazz; Soul jazz; Jazz blues; Blues",
+			my_rating: 8.0,
+			my_review: "",
+		},
 	},
 
 	O: {
@@ -1941,6 +2033,16 @@ const database = {
 			year_of_release: "2009",
 			year_of_discovery: "2009",
 			genres: "Alternative rock",
+			my_rating: 8.5,
+			my_review: "",
+		},
+		"orange_blossom__everything_must_change": {
+			lastfm_url: "https://www.last.fm/music/Orange+Blossom/Everything+Must+Change",
+			rym_url: "https://rateyourmusic.com/release/album/orange_blossom/everything_must_change/",
+			spotify_url: "https://open.spotify.com/album/4j35vp3nvyPvp9lm439ept?si=Ec8ANDVnQYOu1d-TdikFNg",
+			year_of_release: "2004",
+			year_of_discovery: "2023",
+			genres: "Trip hop; Arabic music; Novo dub; South Asian music; Alternative dance",
 			my_rating: 8.5,
 			my_review: "",
 		},
@@ -2459,20 +2561,30 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
-		
 
 		//
-		"the_strokes__machu_picchu": {
-			lastfm_url: "https://www.last.fm/music/The+Strokes/Angles",
-			rym_url: "https://rateyourmusic.com/release/album/the-strokes/angles-2/",
-			spotify_url: "https://open.spotify.com/album/6Jx4cGhWHewTcfKDJKguBQ?si=ouKSaom-QsWew-vfwgnANw",
-			year_of_release: "2011",
-			year_of_discovery: "2014",			
-			genres: "Progressive rock; Space rock; Psychedelic Rock; Post-rock; Radio broadcast recordings; Electronic",
+		"twenty_one_pilots__vessel": {
+			lastfm_url: "https://www.last.fm/music/twenty+one+pilots/Vessel+(Bonus+Tracks+Version)",
+			rym_url: "https://rateyourmusic.com/release/album/twenty-one-pilots/vessel/",
+			spotify_url: "https://open.spotify.com/album/14onjcwGXJFQnTmmCnTUfQ?si=n6974t5pTvyloWzgWzWVPg",
+			year_of_release: "2013",
+			year_of_discovery: "2015",
+			genres: "Pop; Hip-Hop; Pop rap; Alternative pop; Emo",
+			themes: ["Upbeat"],
+			album_name_displayed: "Vessel",
 			my_rating: 9.0,
 			my_review: "",
 		},
-
+		"twenty_one_pilots__blurryface": {
+			lastfm_url: "https://www.last.fm/music/twenty+one+pilots/Blurryface",
+			rym_url: "https://rateyourmusic.com/release/album/twenty-one-pilots/blurryface/",
+			spotify_url: "https://open.spotify.com/album/3cQO7jp5S9qLBoIVtbkSM1?si=PtRCjeiyRbWVU2_v3ZxAqA",
+			year_of_release: "2013",
+			year_of_discovery: "2015",
+			genres: "Indie pop; Pop rap; Indietronica; Electropop",
+			my_rating: 8.0,
+			my_review: "",
+		},
 
 		"telegraph__mir": {
 			lastfm_url: "https://www.last.fm/music/Telegraph/Mir",
@@ -2492,18 +2604,6 @@ const database = {
 			year_of_discovery: "2021",
 			genres: "Ambient; Ambient pop; Alternative folk; Chamber pop",
 			my_rating: 9.5,
-			my_review: "",
-		},
-		"twenty_one_pilots__vessel": {
-			lastfm_url: "https://www.last.fm/music/twenty+one+pilots/Vessel+(Bonus+Tracks+Version)",
-			rym_url: "https://rateyourmusic.com/release/album/twenty-one-pilots/vessel/",
-			spotify_url: "https://open.spotify.com/album/14onjcwGXJFQnTmmCnTUfQ?si=n6974t5pTvyloWzgWzWVPg",
-			year_of_release: "2013",
-			year_of_discovery: "2015",
-			genres: "Pop; Hip-Hop; Pop rap; Alternative pop; Emo",
-			themes: ["Upbeat"],
-			album_name_displayed: "Vessel",
-			my_rating: 9.0,
 			my_review: "",
 		},
 		"tkay_maidza__last_year_was_weird_vol_2": {
@@ -2562,6 +2662,7 @@ const database = {
 			my_review: "",
 		},
 
+		//
 		"worlds_end_girlfriend__hurtbreak_wonderland": {
 			custom_cover_url: require('../websiteContent/albums/worlds_end_girlfriend__hurtbreak_wonderland/album_cover.jpg'),
 			lastfm_url: "https://www.last.fm/music/World%27s+End+Girlfriend/Hurtbreak+Wonderland",
@@ -2569,6 +2670,16 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/7KtBhRWitpnHoma8UWiDgz?si=dhQ99k1YT3-tdBWS46M7GA",
 			year_of_release: "2007",
 			genres: "Post-Rock; Modern Classical; IDM; Breakcore; Glitch; Chamber jazz; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			year_of_discovery: "2023",
+		},
+		"worlds_end_girlfriend__starry_starry_night_OST": {
+			lastfm_url: "https://www.last.fm/music/World%27s+End+Girlfriend/Starry+Starry+Night+Soundtrack",
+			rym_url: "https://rateyourmusic.com/release/album/worlds-end-girlfriend/starry-starry-night/",
+			spotify_url: "https://open.spotify.com/album/4gUdhgxsi86BdVq8EfcZYl?si=plKQ7qxVRcmv7NdKOx4Yyg",
+			year_of_release: "2012",
+			genres: "Film soundtrack; Modern classical; Impressionism",
 			my_rating: 8.0,
 			my_review: "",
 			year_of_discovery: "2023",
@@ -2674,6 +2785,7 @@ const database = {
 			rym_url: "https://rateyourmusic.com/release/comp/the-dukes-of-stratosphear/chips-from-the-chocolate-fireball/",
 			spotify_url: "https://open.spotify.com/album/46ZRujqytRXcbgloCKA9Q7?si=gOZzfJVORiWtrjWrtb1Lug",
 			year_of_release: "1987",
+			artist_name_displayed: "XTC",
 			genres: "Psychedelic Rock; Psychedelic Pop; Jangle pop; New wave",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/42a3dd8c1dea4f35b3c0711eb02c1a9d.jpg#42a3dd8c1dea4f35b3c0711eb02c1a9d",
 			my_rating: 10,

@@ -4,7 +4,7 @@
 
 import ReactDomServer from 'react-dom/server';
 import React from 'react';
-import { get_album_review_id, get_film_review_id } from '../js/helpers.js';
+import { get_album_review_id, get_film_review_id, remove_special_characters_for_musicbee_export } from '../js/helpers.js';
 
 // import local data json files...
 import { film_reviews as localdata_film_reviews } from './localData/film_reviews.js';
@@ -139,6 +139,9 @@ const merge_albums_data = (init_state) => {
             v["genres"] = genres;
             v["genres_lowercase"] = genres_lowercase;
         }
+
+        v["artist_name_backend"] = remove_special_characters_for_musicbee_export(v["artist_name"]);
+        v["album_name_backend"] = remove_special_characters_for_musicbee_export(v["album_name"]);
     });
 
     return mergedData;

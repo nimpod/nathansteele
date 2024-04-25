@@ -45,6 +45,7 @@ export function remove_special_characters(title) {
 export function remove_special_characters_for_musicbee_export(str_to_edit) {
     return str_to_edit.replaceAll(" ", "_")
                     .replaceAll(".", "")
+                    .replaceAll("-", "")
                     .replaceAll("/", "")
                     .replaceAll("(", "")
                     .replaceAll(")", "")

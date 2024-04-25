@@ -49,6 +49,7 @@ class Music extends Component {
 
         // filters...
         __current_genre_filter: "All Genres",
+        __current_artist_filter: "All artists",
 
         // search stuff...
         __search_box_contains_text: false,
@@ -57,6 +58,7 @@ class Music extends Component {
 
         // defaults...
         __default_genre_filter: "All Genres",
+        __default_artist_filter: "All Artists",
     }
 
     /**
@@ -125,6 +127,23 @@ class Music extends Component {
         return no_duplicates_arr;
     }
 
+    remove_artist_duplicates() {
+        let no_duplicates = new Set();
+        this.props.top_albums.forEach((a) => {
+            if (a.artist_name !== undefined) {
+                no_duplicates.add(a.artist_name.trim());
+            }
+        })
+
+        // convert set to array...
+        let no_duplicates_arr = Array.from(no_duplicates);
+
+        // add default genre to top of array...
+        no_duplicates_arr.unshift(this.state.__default_artist_filter);
+
+        return no_duplicates_arr;
+    }
+
     /**
      * Filter list by specified genre
      * @param {*} e 
@@ -171,6 +190,44 @@ class Music extends Component {
         }
     }
 
+    filter_by_artist = (e, artist_selected) => {
+        // do nothing if the language selected is already selected...
+        if (artist_selected !== this.state.__current_artist_filter) {
+            // update the 'current_genre_filter' state...
+            this.setState({__current_artist_filter: artist_selected})
+
+            this.setState(prevState => {
+                return {
+                    __filtered_data: Array.from(this.props.top_albums)
+                        .filter((a) => {
+                            // console.log(a.artist_name);
+                            // console.log(a.album_name);
+
+                            if (artist_selected === this.state.__default_artist_filter) {
+                                // show all albums...
+                                return true;
+                            }
+                            return a.artist_name.includes(artist_selected);
+                        })
+                }
+            })
+
+            // deal with button stuff...
+            let actual_button = handle_filter_button_toggling_stuff(e.target, '.filter-list-by-artist-btn');
+            
+            // toggle the .active class
+            if (!actual_button.classList.contains('active')) {
+                // enable filter...
+                actual_button.classList.add('active');
+            } else {
+                // disable filter...
+                actual_button.classList.remove('active');
+                this.setState({__current_artist_filter: ""})
+               // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
+            }
+        }
+    }
+
     /**
      * Render function
      * @returns 
@@ -183,6 +240,8 @@ class Music extends Component {
         
         // generate list of all the genres...
         const all_genres = this.remove_genre_duplicates();
+        const all_artists = this.remove_artist_duplicates();
+        console.log(all_artists);
 
         // top tracks list (default to overall time period)
         let top_tracks_list = this.props.top_tracks.overall;
@@ -269,6 +328,7 @@ class Music extends Component {
 
                             {/* Header */}
                             <div className='top-albums-list-header'>
+                                {/* Filter by genre button */}
                                 <div className='filter-by-genre-btns filter-by-something-container'>
                                     <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-genres')}>
                                         <span>{this.state.__current_genre_filter}</span>
@@ -294,6 +354,37 @@ class Music extends Component {
                                                                     }
                                                                     return a.genres_lowercase.includes(genre_lowercase);
                                                                 }
+                                                            }).length
+                                                        }
+                                                    </span>
+                                                </div>
+                                            }))
+                                        }
+                                    </div>
+                                </div>
+                                
+                                {/* Filter by artist button */}
+                                <div className='filter-by-artist-btns filter-by-something-container'>
+                                    <div className='dropdown-list-artists-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-artists')}>
+                                        <span>{this.state.__current_artist_filter}</span>
+                                        <ArrowDownIcon className='invertable-icon' />
+                                    </div>
+                                    <div className='dropdown-list-artists dropdown-list'>
+                                        <div className='dropdown-list-title'>Filter by artist...</div>
+                                        {
+                                            // iterate over all artists...
+                                            all_artists.map((artist => {
+                                                return <div className="btn filter-list-by-artist-btn" key={artist} onClick={(e) => this.filter_by_artist(e, artist)}>
+                                                    <span className='artist-text'>
+                                                        {artist}
+                                                    </span>
+                                                    <span className='artist-count'>
+                                                        {
+                                                            Array.from(this.props.top_albums).filter(a => {
+                                                                if (artist === this.state.__default_artist_filter) {
+                                                                    return Array.from(a.artist_name);
+                                                                }
+                                                                return a.artist_name == artist;
                                                             }).length
                                                         }
                                                     </span>

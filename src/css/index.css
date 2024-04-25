@@ -3136,7 +3136,6 @@ div.btn.films-reset-filters-btn svg {
 #music-page .section-inner {
   padding: 30px;
 }
-
 .music-page-container {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -3147,7 +3146,6 @@ div.btn.films-reset-filters-btn svg {
   box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.411);
   border-radius: 10px;
 }
-
 .custom-card .card-divider {
   border: 1px solid rgba(51, 51, 55, 0.816);
   padding-left: 0 !important;
@@ -3155,7 +3153,6 @@ div.btn.films-reset-filters-btn svg {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-
 .custom-card .card-title {
   padding-left: 20px;
   padding-top: 10px;
@@ -3163,11 +3160,164 @@ div.btn.films-reset-filters-btn svg {
   font-weight: bold;
   color: var(--text-slightly-darker);
 }
-
 .custom-card .card-title .more-info {
   color: var(--text-much-darker);
   font-size: 0.65rem;
 }
+
+/* #region ------------< 11.1) Top Albums List >------------ */
+:root {
+  --albums-displayed-per-row: 5;
+  --album-cover-border-radius: 0.5rem;
+}
+
+/* Top albums list */
+.top-albums-list-container {
+  margin-left: 30px;
+  padding: 10px 30px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.top-albums-list-header {
+  display: flex;
+  flex-direction: row;
+}
+.top-albums-list-header > * {
+  padding-right: 20px;
+}
+
+div.btn.filter-list-by-artist-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+div.btn.filter-list-by-artist-btn > span.artist-count {
+  
+}
+
+
+.top-albums-list {
+  display: grid;
+  grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
+  padding-top: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .top-albums-list {
+    padding: 50px 10px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 1100px) {
+  .top-albums-list {
+    padding: 0px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 800px) {
+  .top-albums-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 600px) {
+  .top-albums-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 400px) {
+  .top-albums-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* #endregion */
+
+/* #region ------------< 11.2) Each album in the list (Grid view) >------------ */
+
+div.albumInfoContainer {
+  margin: 0.25rem;
+  position: relative;
+}
+div.albumInfoContainer:hover > img.albumCover {
+  opacity: 0.4;
+  transition: all 200ms ease;
+}
+
+div.albumInfoContainer > img.albumCover {
+  display: block;
+  border-top-left-radius: var(--album-cover-border-radius);
+  border-top-right-radius: var(--album-cover-border-radius);
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+}
+
+div.albumInfoContainer > div.albumInfo {
+  border-bottom-left-radius: var(--album-cover-border-radius);
+  border-bottom-right-radius: var(--album-cover-border-radius);
+  border-collapse: separate;
+  overflow: hidden;
+}
+
+div.albumInfoContainer > div.albumInfo > div  {
+  background-color: rgb(49, 49, 51);
+  color: var(--text);
+  font-size: 0.83rem;
+  padding: 2px 5px;
+}
+div.albumInfoContainer > div.albumInfo > div > p {
+  margin: 0;
+}
+
+div.albumInfoContainer > div.albumInfo > div > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+}
+
+.dataInCircle {
+  position: absolute;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  color: var(--text);
+  padding: 0.25rem;
+  border-radius: 9999px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 1/1;
+}
+.dataInCircle p {
+  font-size: 0.85rem;
+  font-weight: 200;
+  margin-top: -10px;
+}
+.dataInCircle svg {
+  width: 0.95em;
+  height: 0.95em;
+  margin: 0 auto;
+  margin-top: -13px;
+  margin-left: -3px;
+}
+
+div.albumInfoContainer > div.pos {
+  top: 0;
+  left: 0;
+  background-color: rgba(35, 37, 41, 0.897);
+}
+
+div.albumInfoContainer > div.myRating {
+  top: 0;
+  right: 0;
+  background-color: rgba(206, 181, 19, 0.897);
+}
+/* #endregion */
+
+
 
 /* #region ------------< Top Tracks List >------------ */
 
@@ -3330,135 +3480,6 @@ div.btn.films-reset-filters-btn svg {
 
 /* #endregion */
 
-/* #region ------------< Top Albums List >------------ */
-
-:root {
-  --albums-displayed-per-row: 5;
-  --album-cover-border-radius: 0.5rem;
-}
-
-/* Top albums list */
-.top-albums-list-container {
-  margin-left: 30px;
-  padding: 10px 30px;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.top-albums-list {
-  display: grid;
-  grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
-  padding-top: 10px;
-}
-@media screen and (max-width: 1200px) {
-  .top-albums-list {
-    padding: 50px 10px;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-}
-@media screen and (max-width: 1100px) {
-  .top-albums-list {
-    padding: 0px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-@media screen and (max-width: 800px) {
-  .top-albums-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-@media screen and (max-width: 600px) {
-  .top-albums-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media screen and (max-width: 400px) {
-  .top-albums-list {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-}
-
-div.albumInfoContainer {
-  margin: 0.25rem;
-  position: relative;
-}
-div.albumInfoContainer:hover > img.albumCover {
-  opacity: 0.4;
-  transition: all 200ms ease;
-}
-
-div.albumInfoContainer > img.albumCover {
-  display: block;
-  border-top-left-radius: var(--album-cover-border-radius);
-  border-top-right-radius: var(--album-cover-border-radius);
-  object-fit: cover;
-  width: 100%;
-  max-width: 100%;
-}
-
-div.albumInfoContainer > div.albumInfo {
-  border-bottom-left-radius: var(--album-cover-border-radius);
-  border-bottom-right-radius: var(--album-cover-border-radius);
-  border-collapse: separate;
-  overflow: hidden;
-}
-
-div.albumInfoContainer > div.albumInfo > div  {
-  background-color: rgb(49, 49, 51);
-  color: var(--text);
-  font-size: 0.83rem;
-  padding: 2px 5px;
-}
-div.albumInfoContainer > div.albumInfo > div > p {
-  margin: 0;
-}
-
-div.albumInfoContainer > div.albumInfo > div > p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 300px;
-}
-
-.dataInCircle {
-  position: absolute;
-  margin: 5px;
-  width: 40px;
-  height: 40px;
-  color: var(--text);
-  padding: 0.25rem;
-  border-radius: 9999px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  aspect-ratio: 1/1;
-}
-.dataInCircle p {
-  font-size: 0.85rem;
-  font-weight: 200;
-  margin-top: -10px;
-}
-.dataInCircle svg {
-  width: 0.95em;
-  height: 0.95em;
-  margin: 0 auto;
-  margin-top: -13px;
-  margin-left: -3px;
-}
-
-div.albumInfoContainer > div.pos {
-  top: 0;
-  left: 0;
-  background-color: rgba(35, 37, 41, 0.897);
-}
-
-div.albumInfoContainer > div.myRating {
-  top: 0;
-  right: 0;
-  background-color: rgba(206, 181, 19, 0.897);
-}
-/* #endregion */
 
 /* #endregion */
 
