@@ -3643,6 +3643,8 @@ div.albumInfoContainer > div.myRating {
 
 .review-fullTracklist  {
   border: 1px solid var(--film-review-section-border-color);
+  width: 55%;
+  margin: 0 auto;
 }
 
 /* 1) Tracklist table */
@@ -3666,9 +3668,14 @@ div.albumInfoContainer > div.myRating {
   font-size: 0.9rem;
   cursor: pointer;
   border-radius: 0px;
+  color: var(--text-slightly-darker) !important;
+  transition: all 100ms ease-in-out;
 }
 .review-fullTracklist .track-item:hover {
-  background-color: rgb(53, 54, 56);
+  background-color: rgb(53, 54, 56) !important;
+}
+.review-fullTracklist .track-item.iHaveFeelings {
+  background-color: #1c1d1e;
 }
 
 /* 2) Number in tracklist */
@@ -3697,7 +3704,8 @@ div.albumInfoContainer > div.myRating {
   text-align: center;
 }
 .review-fullTracklist .track-myRating.r11 {
-  background-image: linear-gradient(to bottom right, rgb(205, 156, 238), rgb(22, 128, 82));
+  background-image: linear-gradient(to bottom right, rgb(163, 255, 58), rgb(72, 249, 249));
+  color: black;
 }
 .review-fullTracklist .track-myRating.r10 { background-color: rgb(21, 119, 74);  }
 .review-fullTracklist .track-myRating.r9  { background-color: rgb(24, 153, 121);  }
@@ -3708,10 +3716,10 @@ div.albumInfoContainer > div.myRating {
 :root {
   /* Wrapper (contains the text and the line) */
   --myFeelingsWrapper-ypos: -120px;
-  --myFeelingsWrapper-xpos: -245px;
+  --myFeelingsWrapper-xpos: -20px;
 
   /* The text */
-  --myFeelingsText-ypos: -50px;
+  --myFeelingsText-ypos: -100px;
   --myFeelingsText-xpos: -80px;
 
   /* The curvy line */
@@ -3733,8 +3741,9 @@ div.albumInfoContainer > div.myRating {
 
 /* the actual feelings */
 .review-fullTracklist .track-myFeelings {
-  background-color: rgba(38, 40, 44, 0.915);
-  border: 2px solid rgb(75, 76, 83);
+  background-color: rgb(38, 40, 44);
+  border: 2px solid rgb(60, 61, 65);
+  box-shadow: 0 0 15px rgb(0, 0, 0);
   border-radius: 6px;
   padding: 3px 8px;
   width: fit-content;

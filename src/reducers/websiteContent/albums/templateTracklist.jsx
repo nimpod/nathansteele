@@ -16,28 +16,48 @@ function TemplateTracklist(props) {
             </div>
             
             {props.tracklist.map((track, i) => {
+                let i_have_feelings = (track.my_feelings.length > 0);
+                let i_have_feelings_str = (i_have_feelings == true) ? "iHaveFeelings" : "";
+                let embed_spotify = (track.spotify_track_id !== undefined);
+
                 // automate the tracklist num, rather than manually inserting 
                 i++;
 
-                // add a 'my feelings' section, if we actually wrote something...
-                if (track.my_feelings.length > 0) {
-                    return <div className='track-item' id={`track-${i}`}>
-                        <span className='track-num'>{i}</span>
-                        <span className='track-title'>{track.title}</span>
-                        <span className={`track-myRating r${track.my_rating}`}>{track.my_rating}</span>
+                return <div className={`track-item ${i_have_feelings_str}`} id={`track-${i}`}>
+                    {/* Num in tracklist */}
+                    <span className='track-num'>{i}</span>
+
+                    {/* Track title */}
+                    <span className='track-title'>{track.title}</span>
+
+                    {/* My rating */}
+                    <span className={`track-myRating r${track.my_rating}`}>{track.my_rating}</span>
+
+                    {/* My feelings */}
+                    {
+                        (i_have_feelings) ? 
                         <div className='track-myFeelings-wrapper'>
                             <div class='curvy-line'></div>
                             <div className='track-myFeelings'>
                                 {track.my_feelings}
-                            </div>
-                        </div>
-                    </div>
-                }
 
-                return <div className='track-item' id={`track-${i}`}>
-                    <span className='track-num'>{i}</span>
-                    <span className='track-title'>{track.title}</span>
-                    <span className={`track-myRating r${track.my_rating}`}>{track.my_rating}</span>
+                                {/* Spotify link */}
+                                {
+                                    (embed_spotify) ? 
+                                        <iframe src={`https://open.spotify.com/embed/track/${track.spotify_track_id}?utm_source=generator&theme=0`} 
+                                                width="100%"
+                                                height="152"
+                                                frameBorder="0"
+                                                allowfullscreen=""
+                                                loading="lazy"
+                                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                                                :
+                                                ""
+                                }
+                            </div>
+                        </div> :
+                        ""
+                    }
                 </div>
             })}
         </div>

@@ -6,6 +6,8 @@ const tracklist = [
         "title": "Wildlife Analysis",
         "my_rating": 10,
         "my_feelings": "Great intro, great vibes.",
+        "spotify_track_id": "1XZdwzd8DTDvkjVc0eJ9BI",
+        "track_url": "https://open.spotify.com/track/1XZdwzd8DTDvkjVc0eJ9BI?si=fcd3409fe49940a6",
     },
     {
         "title": "An Eagle In Your Mind",
@@ -21,6 +23,8 @@ const tracklist = [
         "title": "Telepathic Workshop",
         "my_rating": 11,
         "my_feelings": "The greatest song of all time?",
+        "spotify_track_id": "7AfbtT8GN1iv3Crb11NaVI",
+        "track_url": "https://open.spotify.com/track/7AfbtT8GN1iv3Crb11NaVI?si=d054a4bc1fc64c42",
     },
     {
         "title": "Triangles & Rhombuses",
