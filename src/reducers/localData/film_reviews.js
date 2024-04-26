@@ -617,6 +617,19 @@ const database = {
     },
 
     THE: {
+        "the_great_yokai_war": {
+            "letterboxd_url": "https://boxd.it/XZm",
+            "my_rating": 8.0,
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/q3LkdQwYRjqFr1jPJRyEwwAkGX3.jpg",
+            "my_tags": [
+                "Amazing creature designs",
+                "Weird",
+                "Absurd",
+                "Post-apocalyptic Tokyo vibes",
+                "Non-serious action film",
+            ],
+        },
+
         "the_bow": {
             "letterboxd_url": "https://boxd.it/27Ky",
             "my_rating": 8.0,
@@ -2367,6 +2380,23 @@ const database = {
     },
 
     F: {
+        "FLCL": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/bWtG",
+            "my_tags": [
+                "Maximalist anime",
+                "Wide variety of different art styles",
+                "Chaotic",
+                "Strange",
+                "Weird",
+                "Charming",
+                "Overwhelming",
+                "Full of dysfunctional perverted situations",
+                "Quite long",
+                "J-rock"
+            ],
+        },
+
         "funuke_show_me_some_love_you_losers": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/9Gu",
@@ -3179,6 +3209,31 @@ const database = {
     },
 
     M: {
+        "memories_of_matsuko": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/1iVU",
+            "my_review": "",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/5jDuEBUbeDva1VFZ0dlgLwY5XgK.jpg",
+            "my_tags": [
+                "Sad",
+                "Uplifting",
+                "Great soundtrack",
+            ],
+        },
+
+        "my_tommorow_your_yesterday": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/fajw",
+            "my_review": "",
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/d08esTPg1N7xEn86wf5GD4yfkLI.jpg",
+            "my_tags": [
+                "Intriguing",
+                "Sad",
+                "Calm",
+                "Mellow",
+            ],
+        },
+
         "mind_game": {
             "my_rating": 9.5,
             "letterboxd_url": "https://boxd.it/1Bv2",
@@ -3792,6 +3847,18 @@ const database = {
     },
 
     S: {
+        "saint_ange": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/1Chg",
+            "title_displayed": "Saint Ange",
+            "my_tags": [
+                "Atmospheric",
+                "Spooky",
+                "Suspensful",
+                "Insane ending",
+            ],
+        },
+
         "serial_experiments_lain": {
             "my_rating": 8.5,
             "letterboxd_url": "https://boxd.it/hYQE",
@@ -4187,6 +4254,19 @@ const database = {
     },
 
     V: {
+        "vanshing_on_7th_street": {
+            "letterboxd_url": "https://boxd.it/Uby",
+            "my_rating": 8.0,
+            "my_tags": [
+                "Atmospheric",
+                "Creepy",
+                "Dark",
+                "Mysterious",
+                "Compelling"
+            ],
+            "my_review": "",
+        },
+
         "victoria": {
             "my_rating": 8.5,
             "letterboxd_url": "https://boxd.it/amSe",

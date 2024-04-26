@@ -2894,16 +2894,17 @@ div.btn.films-reset-filters-btn svg {
 .links > a {
   border-radius: 5px;
   font-size: 0.65rem;
-  padding: 0px 4px;
+  padding: 0px 6px;
   margin-right: 4px;
   border: 2px solid rgb(159, 159, 159);
-  background-color: rgb(43, 46, 49);
+  background-color: var(--tags-bg-color);
   color: var(--text) !important;
   display: inline-block;
 }
 .links > a:hover,
 .links > a:focus-within {
-  background-color: rgb(85, 85, 94);
+  border-color: rgb(85, 85, 94);
+  background-color: var(--tags-bg-color-hover);
   color: var(--text) !important;
 }
 .links > a.film-imdb-link {
@@ -2916,13 +2917,20 @@ div.btn.films-reset-filters-btn svg {
   border-color: rgba(242, 150, 250, 0.668) !important;
 }
 .links > a.album-lastfm-link {
-  border-color: rgba(249, 77, 77, 0.778) !important;
+  border-color: rgba(255, 111, 111, 0.87) !important;
 }
 .links > a.album-rym-link {
   border-color: rgba(72, 182, 255, 0.718) !important;
 }
 .links > a.album-spotify-link {
   border-color: rgba(21, 201, 90, 0.718) !important;
+}
+.links > a.album-spotify-link.notOnSpotify {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+.links > a.album-youtube-link {
+  border-color: rgba(251, 45, 45, 0.718) !important;
 }
 
 /* My data */
