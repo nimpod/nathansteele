@@ -133,6 +133,16 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
+		"the_prodigy__experience": {
+			lastfm_url: "https://www.last.fm/music/The+Prodigy/Experience",
+			rym_url: "https://rateyourmusic.com/release/album/the-prodigy/experience/",
+			spotify_url: "https://open.spotify.com/album/0M6LHXO4ozsi0OOCCk6vWE?si=XJ8JUQUQQjeVhol3PlWRYg",
+			year_of_release: "1992",
+			year_of_discovery: "2024",
+			genres: "Breakbeat; Jungle; Electronic",
+			my_rating: 9.0,
+			my_review: "",
+		},
 	},
 
 	A: {
@@ -212,6 +222,16 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
+		"air__10000_hz_legend": {
+			lastfm_url:"https://www.last.fm/music/Air/10+000+Hz+Legend",
+			rym_url: "https://rateyourmusic.com/release/album/air/10-000-hz-legend/",
+			spotify_url: "https://open.spotify.com/album/2WNI378JH55k63eXBHbjbI?si=MBg-bHYaT6-LcgItU7QhFw",
+			year_of_release: "2001",
+			year_of_discovery: "2018",
+			genres: "Downtempo; Ambient pop; Electronic",
+			my_rating: 8.5,
+			my_review: "",
+		},
 
 		//
 		"a_tribe_called_quest__the_low_end_theory": {
@@ -274,7 +294,7 @@ const database = {
 			year_of_release: "1963",
 			year_of_discovery: "2023",
 			genres: "Jazz; Bossa nova; MBP; Latin jazz; Brazilian jazz",
-			themes: "Brazilian",
+			themes: ["Brazilian"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -1299,6 +1319,16 @@ const database = {
 			my_rating: 8.5,
 			my_review: "",
 		},
+		"janelle_monae__the_archandroid": {
+			lastfm_url: "https://rateyourmusic.com/release/album/janelle-monae/the-archandroid/",
+			rym_url: "https://www.last.fm/music/Janelle+Mon%C3%A1e/The+ArchAndroid",
+			spotify_url: "https://open.spotify.com/album/7MvSB0JTdtl1pSwZcgvYQX?si=FotlQ_jdQEO-7vrUVzVDSQ",
+			year_of_release: "2010",
+			year_of_discovery: "2022",
+			genres: "R&B; Neo-Soul; Funk; Psychedelic Soul; Afrofuturism",
+			my_rating: 8.0,
+			my_review: "",
+		},
 	},
 
 	K: {
@@ -1570,6 +1600,16 @@ const database = {
 			year_of_release: "2019",
 			year_of_discovery: "2021",
 			genres: "Indie garage rock; Lo-Fi; Lo-Fi indie; Synthpunk; Hyperpop; Experimental indie; Indie pop; Digital hardcore; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"lee_jin_ah__random": {
+			lastfm_url: "https://www.last.fm/music/Lee+Jin+Ah/Random",
+			rym_url: "https://rateyourmusic.com/release/ep/%EC%9D%B4%EC%A7%84%EC%95%84/random/",
+			spotify_url: "https://open.spotify.com/album/5wJXqivocLBCjk1ibe6QYP?si=gJWF-UaBQ4mL2ZKyFr3m4A",
+			year_of_release: "2017",
+			year_of_discovery: "2023",
+			genres: "K-pop; Jazz; Jazz pop; Vocal jazz",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -2075,8 +2115,8 @@ const database = {
 		//
 		"pendulum__hold_your_colour": {
 			lastfm_url: "https://www.last.fm/music/Pendulum/Hold+Your+Colour",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/pendulum/hold-your-colour/",
+			spotify_url: "https://open.spotify.com/album/5wHNla8BT8KcqMhAbvqoPU?si=efeSxBsRTZq69oXpr4eYaA",
 			year_of_release: "2005",
 			year_of_discovery: "2010",
 			genres: "Drum and bass; Breakbeat; Electronic",
@@ -2532,6 +2572,16 @@ const database = {
 			year_of_discovery: "2019",
 			genres: "Art pop; Dance pop; Deconstructed club; Hyperpop; Electronic",
 			custom_cover_url: "https://m.media-amazon.com/images/I/71I2m3bOLVL._UF894,1000_QL80_.jpg",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"shakti__this_moment": {
+			lastfm_url: "https://www.last.fm/music/Shakti/This+Moment",
+			rym_url: "https://rateyourmusic.com/release/album/shakti/this-moment/",
+			spotify_url: "https://open.spotify.com/album/283JCZJcJLqUYohOHMFuyI?si=kS-YB5L-TRqPglT9DxSsXg",
+			year_of_release: "2023",
+			year_of_discovery: "2024",
+			genres: "Jazz; Indo jazz; Hindustani Classical Music",
 			my_rating: 8.0,
 			my_review: "",
 		},

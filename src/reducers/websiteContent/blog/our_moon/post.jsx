@@ -198,7 +198,7 @@ export const Post = () => {
             <div className='blog-subsection' id='section12'>
                 <h3 className='subgroup-title'>Chandrayaan missions (India)</h3>
                 <picture className="img">
-                    <img width="400" height="200" src={IMAGES.cave} alt="" />
+                    <img width="400" height="200" src={IMAGES.apollo11_panorama} alt="" />
                 </picture>
             </div>
     

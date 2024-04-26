@@ -75,10 +75,11 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 review_id = f"{artist_name_v2}-{album_name_v2}"
                 
                 # check if we need to manually override album name...
-                album_name = check_if_the_album_name_in_the_folder_name_wont_match_with_lastfm(folder_name=folder_name, album_name=album_name)
+                artist_name_lastfm_version = artist_name_doesnt_match_with_lastfm(folder_name=folder_name, artist_name=artist_name)
+                album_name_lastfm_version = album_name_doesnt_match_with_lastfm(folder_name=folder_name, album_name=album_name)
                 
                 # get more data via LastFM API...
-                data = lastfm.GET_album_info(artist_name=artist_name, album_name=album_name)
+                data = lastfm.GET_album_info(artist_name=artist_name_lastfm_version, album_name=album_name_lastfm_version)
                 lastfm_url = ""
                 album_cover_url = ""
                 duration = 0    # mostly useless, lastfm rarely provides this statistic per album, I wish they did
@@ -123,7 +124,6 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     'lastfm_url': lastfm_url,
                     'artist_name': artist_name,
                     'album_name': album_name,
-                    'duration': duration,
                     'album_cover_url': album_cover_url,
                     'review_id': review_id,
                 })
@@ -132,22 +132,36 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
             export_list_to_json(fullpath_to_json_output, albums_list)
 
 
-def check_if_the_album_name_in_the_folder_name_wont_match_with_lastfm(folder_name, album_name):
+def album_name_doesnt_match_with_lastfm(folder_name, album_name):
     """
     Occasionally, album names contain characters that Windows prevents us from putting in folder names.
     For example : ; / \ ?
     This is a bit annoying, because when lastfm trys to find the album, it will say it can't find it, because the folder name I chose won't match what it really is.
     So here I am manually providing the "correct" album name, so that lastfm can find the correct album info (most notably, automate the retrieval of the album cover).
-    The alternative is to use replacement strings in the folder names, but this becomes a bit of a maintaince nightmare, and makes my library look ugly.
-    So this will do for now...
+    The alternative is to use replacement strings in the folder names, but this becomes a bit of a maintaince nightmare, and makes my library look ugly, as I discovered.
+    So for now I prefer just replacing the album names with the one that will link it to the "right" lastfm page.
+    What a palava.
     """
     if 'Senri Kawaguchi - Cider (Hard & Sweet)' in folder_name:
         return "CIDER ~Hard & Sweet~"
     elif 'Revocation - Scion' in folder_name:
         return "Scion Av Presents: Revocation \"Teratogensis\""
+    elif 'Hz Legend' in folder_name:
+        return '10 000 Hz Legend'
+    #elif 'Penguin Cafe - Rain Before Seven':
+    #    return 'Rain Before Seven...'
+    #elif 'Opposite Day - What Is Is':
+    #    return 'What Is Is?'
     else:
         # leave as normal...
         return album_name
+
+
+def artist_name_doesnt_match_with_lastfm(folder_name, artist_name):
+    if 'Portico Quartet - Portico Quartet' in folder_name:
+        return 'Portico'
+    else:
+        return artist_name
 
 def update_mismatching_lastfm_urls():
     """

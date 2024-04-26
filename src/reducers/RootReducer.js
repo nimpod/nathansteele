@@ -105,14 +105,21 @@ const merge_albums_data = (init_state) => {
         let currentAlbum = mergedData[v["position"] - 1];  // remember, arrays start at 0.... so current film is N-1
         let prevAlbum = mergedData[v["position"] - 2];
         let nextAlbum = mergedData[v["position"]];
+        
+        v["artist_name_backend"] = remove_special_characters_for_musicbee_export(v["artist_name"]);
+        v["album_name_backend"] = remove_special_characters_for_musicbee_export(v["album_name"]);
 
         let review_id_of_next_album = "";
         let review_id_of_prev_album = "";
         if (nextAlbum !== undefined) {
-            review_id_of_next_album = get_album_review_id(nextAlbum.artist_name, nextAlbum.album_name);
+            let __next_artist_name = remove_special_characters_for_musicbee_export(nextAlbum.artist_name);
+            let __next_album_name = remove_special_characters_for_musicbee_export(nextAlbum.album_name);
+            review_id_of_next_album = get_album_review_id(__next_artist_name, __next_album_name);
         }
         if (prevAlbum !== undefined) {
-            review_id_of_prev_album = get_album_review_id(prevAlbum.artist_name, prevAlbum.album_name)
+            let __prev_artist_name = remove_special_characters_for_musicbee_export(prevAlbum.artist_name);
+            let __prev_album_name = remove_special_characters_for_musicbee_export(prevAlbum.album_name);
+            review_id_of_prev_album = get_album_review_id(__prev_artist_name, __prev_album_name)
         }
         v["review_id_of_next_album"] = review_id_of_next_album;
         v["review_id_of_prev_album"] = review_id_of_prev_album;
@@ -139,9 +146,6 @@ const merge_albums_data = (init_state) => {
             v["genres"] = genres;
             v["genres_lowercase"] = genres_lowercase;
         }
-
-        v["artist_name_backend"] = remove_special_characters_for_musicbee_export(v["artist_name"]);
-        v["album_name_backend"] = remove_special_characters_for_musicbee_export(v["album_name"]);
     });
 
     return mergedData;

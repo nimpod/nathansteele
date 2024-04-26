@@ -9,7 +9,7 @@ class AlbumGridElement extends Component {
         let album_cover_url = ""
         let album_title = "";
         let artist_name = this.props.album.artist_name;
-        //console.log(this.props.album);
+        // console.log(this.props.album);
 
         // use custom album cover url if it exists...
         if (this.props.album.custom_cover_url !== undefined) {

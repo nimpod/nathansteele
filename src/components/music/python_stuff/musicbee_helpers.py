@@ -49,26 +49,28 @@ class MusicbeeHelpers:
         Musicbee exports are annoying
         """
         return str_to_edit.replace(" ", "_")\
-                          .replace(".", "")\
-                          .replace("/", "")\
-                          .replace("(", "")\
-                          .replace(")", "")\
-                          .replace("[", "")\
-                          .replace("]", "")\
-                          .replace("!", "")\
-                          .replace("%", "")\
-                          .replace("?", "")\
-                          .replace("'", "")\
-                          .replace("\"", "")\
-                          .replace(":", "")\
-                          .replace(";", "")\
-                          .replace(",", "")\
-                          .replace("·", "")\
-                          .replace("&", "and")\
-                          .replace("Ã¸", "o")\
-                          .replace("Ã", "a")\
-                          .replace("Â", "")\
-                          .replace("¤", "")\
-                          .replace("ã", "a")\
-                          .replace("¸", "")\
-                          .lower()
+                        .replace(".", "")\
+                        .replace("-", "")\
+                        .replace("/", "")\
+                        .replace("(", "")\
+                        .replace(")", "")\
+                        .replace("[", "")\
+                        .replace("]", "")\
+                        .replace("!", "")\
+                        .replace("%", "")\
+                        .replace("?", "")\
+                        .replace("'", "")\
+                        .replace("\"", "")\
+                        .replace(":", "")\
+                        .replace(";", "")\
+                        .replace(",", "")\
+                        .replace("·", "")\
+                        .replace("ô", "o")\
+                        .replace("&", "and")\
+                        .replace("Ã¸", "o")\
+                        .replace("Ã", "a")\
+                        .replace("Â", "")\
+                        .replace("¤", "")\
+                        .replace("ã", "a")\
+                        .replace("¸", "")\
+                        .lower()

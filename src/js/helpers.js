@@ -60,6 +60,7 @@ export function remove_special_characters_for_musicbee_export(str_to_edit) {
                     .replaceAll(";", "")
                     .replaceAll(",", "")
                     .replaceAll("·", "")
+                    .replaceAll("ô", "o")
                     .replaceAll("&", "and")
                     .replaceAll("Ã¸", "o")
                     .replaceAll("Ã", "a")

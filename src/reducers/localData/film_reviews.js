@@ -3793,7 +3793,7 @@ const database = {
 
     S: {
         "serial_experiments_lain": {
-            "my_rating": 7.5,
+            "my_rating": 8.5,
             "letterboxd_url": "https://boxd.it/hYQE",
             "my_tags": [
                 "Surreal",
