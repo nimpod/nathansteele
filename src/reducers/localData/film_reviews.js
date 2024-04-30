@@ -119,6 +119,8 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
 //const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.png|.PNG|.jpeg|.webp)$")    
 
 
+// [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut in this context!
+
 /**
  * References to screenshots.
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
@@ -1853,6 +1855,26 @@ const database = {
     },
 
     C: {
+        "crank": {
+            "letterboxd_url": "https://boxd.it/27MY",
+            "my_rating": 8.0,
+            "my_tags": [
+                "Insane",
+                "Stimulating",
+                "Amazing editing"
+            ],
+        },
+
+        "crank_high_voltage": {
+            "letterboxd_url": "https://boxd.it/1MPs",
+            "my_rating": 8.5,
+            "my_tags": [
+                "Insane",
+                "Stimulating",
+                "Amazing editing"
+            ],
+        },
+
         "children_of_the_sea": {
             "letterboxd_url": "https://boxd.it/lwe6",
             "my_rating": 10.0,

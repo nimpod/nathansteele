@@ -3196,6 +3196,20 @@ div.btn.films-reset-filters-btn svg {
   padding-right: 20px;
 }
 
+div.btn.filter-list-by-artist-btn,
+div.btn.filter-list-by-genre-btn {
+  padding: 0 4px;
+  background-color: rgb(54, 54, 58);
+  border-radius: 81px;
+  margin: 0 4px;
+  font-size: 10px;
+}
+div.btn.filter-list-by-artist-btn > .artist-text,
+div.btn.filter-list-by-genre-btn > .genre-text {
+  margin-right: 6px;
+}
+
+/*
 div.btn.filter-list-by-artist-btn {
   display: flex;
   flex-direction: row;
@@ -3205,6 +3219,7 @@ div.btn.filter-list-by-artist-btn {
 div.btn.filter-list-by-artist-btn > span.artist-count {
   
 }
+*/
 
 
 .top-albums-list {

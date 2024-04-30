@@ -296,7 +296,7 @@ def regenerate_json_file():
                     'year': year,
                     'duration': duration,
                     'language': language,
-                    'directors': directors,
+                    'directors': directors,''
                     'genres': genres,
                     'IMDB_film_id': imdb_film_id,
                     'IMDB_url': imdb_url,

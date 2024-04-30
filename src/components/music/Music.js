@@ -127,6 +127,10 @@ class Music extends Component {
         return no_duplicates_arr;
     }
 
+    /**
+     * Remove duplicate artists
+     * @returns 
+     */
     remove_artist_duplicates() {
         let no_duplicates = new Set();
         this.props.top_albums.forEach((a) => {
@@ -190,6 +194,12 @@ class Music extends Component {
         }
     }
 
+
+    /**
+     * Filter list by specified artist
+     * @param {*} e 
+     * @param {*} artist_selected 
+     */
     filter_by_artist = (e, artist_selected) => {
         // do nothing if the language selected is already selected...
         if (artist_selected !== this.state.__current_artist_filter) {
@@ -229,6 +239,68 @@ class Music extends Component {
     }
 
     /**
+     * 
+     * @param {*} all_artists 
+     * @returns 
+     */
+    find_num_of_albums_per_artist(all_artists) {
+        let copyOfThis = this;
+
+        const all_artists_album_count = [];
+        
+        all_artists.forEach(function(artist) {
+            let album_count = Array.from(copyOfThis.props.top_albums).filter(a => {
+                if (artist === copyOfThis.state.__default_artist_filter) {
+                    return Array.from(a.artist_name);
+                }
+                return a.artist_name == artist;
+            }).length;
+
+            all_artists_album_count.push({
+                "artist": artist,
+                "count": album_count
+            });
+        })
+
+        all_artists_album_count.sort((a, b) => a.count - b.count).reverse();
+        
+        return all_artists_album_count;
+    }
+
+    /**
+     * 
+     * @param {*} all_genres 
+     * @returns 
+     */
+    find_num_of_albums_per_genre(all_genres) {
+        let copyOfThis = this;
+
+        const all_genres_album_count = [];
+        
+        all_genres.forEach(function(genre) {
+            let album_count = Array.from(copyOfThis.props.top_albums).filter(a => {
+                let genre_lowercase = genre.toLowerCase();
+
+                if (a.genres_lowercase !== undefined) {
+                    if (genre === copyOfThis.state.__default_genre_filter) {
+                        return Array.from(a.genres_lowercase)
+                    }
+                    return a.genres_lowercase.includes(genre_lowercase);
+                }
+            }).length
+
+            all_genres_album_count.push({
+                "genre": genre,
+                "count": album_count
+            });
+        })
+
+        all_genres_album_count.sort((a, b) => a.count - b.count).reverse();
+        
+        return all_genres_album_count;
+    }
+
+    /**
      * Render function
      * @returns 
      */
@@ -237,11 +309,17 @@ class Music extends Component {
 
         // get items for current page...
         const albums_displayed = this.state.__filtered_data;
+        //console.log(albums_displayed);
         
-        // generate list of all the genres...
-        const all_genres = this.remove_genre_duplicates();
+        // generate artists lists...
         const all_artists = this.remove_artist_duplicates();
-        console.log(all_artists);
+        const all_artists_album_count_highest_to_lowest = this.find_num_of_albums_per_artist(all_artists);
+
+        // generate genres lists...
+        const all_genres = this.remove_genre_duplicates();
+        console.log(all_genres);
+        const all_genres_album_count_highest_to_lowest = this.find_num_of_albums_per_genre(all_genres);
+        console.log(all_genres_album_count_highest_to_lowest);
 
         // top tracks list (default to overall time period)
         let top_tracks_list = this.props.top_tracks.overall;
@@ -329,6 +407,7 @@ class Music extends Component {
                             {/* Header */}
                             <div className='top-albums-list-header'>
                                 {/* Filter by genre button */}
+                                {/*
                                 <div className='filter-by-genre-btns filter-by-something-container'>
                                     <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-genres')}>
                                         <span>{this.state.__current_genre_filter}</span>
@@ -362,8 +441,28 @@ class Music extends Component {
                                         }
                                     </div>
                                 </div>
+                                */}
+                                <div>
+                                    {
+                                        all_genres_album_count_highest_to_lowest.map((obj => {
+                                            if (obj.count > 3) {
+                                                return <div className="btn filter-list-by-genre-btn" key={obj.genre} onClick={(e) => this.filter_by_genre(e, obj.genre)}>
+                                                    <span className='genre-text'>
+                                                        {obj.genre}
+                                                    </span>
+                                                    <span className='genre-count'>
+                                                        {
+                                                            obj.count
+                                                        }
+                                                    </span>
+                                                </div>
+                                            }
+                                        }))
+                                    }
+                                </div>
                                 
                                 {/* Filter by artist button */}
+                                {/*
                                 <div className='filter-by-artist-btns filter-by-something-container'>
                                     <div className='dropdown-list-artists-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-artists')}>
                                         <span>{this.state.__current_artist_filter}</span>
@@ -392,6 +491,25 @@ class Music extends Component {
                                             }))
                                         }
                                     </div>
+                                </div>
+                                */}
+                                <div>
+                                    {
+                                        all_artists_album_count_highest_to_lowest.map((obj => {
+                                            if (obj.count > 1) {
+                                                return <div className="btn filter-list-by-artist-btn" key={obj.artist} onClick={(e) => this.filter_by_artist(e, obj.artist)}>
+                                                    <span className='artist-text'>
+                                                        {obj.artist}
+                                                    </span>
+                                                    <span className='artist-count'>
+                                                        {
+                                                            obj.count
+                                                        }
+                                                    </span>
+                                                </div>
+                                            }
+                                        }))
+                                    }
                                 </div>
                             </div>
 
