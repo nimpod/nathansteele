@@ -2124,7 +2124,7 @@ div.blog-post
 .films-toplist.view-as-list span.film-myRating::after,
 .myRating::after {
   content: "/10";
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 100;
 }
 
@@ -3206,23 +3206,21 @@ div.btn.films-reset-filters-btn svg {
 }
 
 .top-albums-list-header {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 35% 45% 20%;
 }
 .top-albums-list-header > * {
   padding-right: 20px;
 }
 
-div.btn.filter-list-by-artist-btn,
-div.btn.filter-list-by-genre-btn {
+div.btn.filter-list-by-album-property {
   padding: 0 4px;
   background-color: rgb(54, 54, 58);
   border-radius: 81px;
   margin: 0 4px;
   font-size: 10px;
 }
-div.btn.filter-list-by-artist-btn > .artist-text,
-div.btn.filter-list-by-genre-btn > .genre-text {
+div.btn.filter-list-by-album-property > .item-text {
   margin-right: 6px;
 }
 
@@ -3322,9 +3320,10 @@ div.albumInfoContainer > div.albumInfo > div > p {
   position: absolute;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 7px;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   color: var(--text);
   border-radius: 50px;
   align-items: center;
@@ -3332,13 +3331,12 @@ div.albumInfoContainer > div.albumInfo > div > p {
   aspect-ratio: 1/1;
 }
 .dataInCircle p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-top: 15px;
-  margin-left: 1px;
 }
 .dataInCircle.myRating p {
-  margin-left: 5px;
+
 }
 .dataInCircle svg {
   width: 0.95em;

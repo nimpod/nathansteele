@@ -148,6 +148,8 @@ def album_name_doesnt_match_with_lastfm(folder_name, album_name):
         return "Scion Av Presents: Revocation \"Teratogensis\""
     elif 'Hz Legend' in folder_name:
         return '10 000 Hz Legend'
+    elif 'Bring Me The Horizon - Sempiternal' in folder_name:
+        return 'Sempiternal (Expanded Edition)'
     #elif 'Penguin Cafe - Rain Before Seven':
     #    return 'Rain Before Seven...'
     #elif 'Opposite Day - What Is Is':
@@ -160,6 +162,10 @@ def album_name_doesnt_match_with_lastfm(folder_name, album_name):
 def artist_name_doesnt_match_with_lastfm(folder_name, artist_name):
     if 'Portico Quartet - Portico Quartet' in folder_name:
         return 'Portico'
+    elif 'Janelle Monae - The ArchAndroid' in folder_name:
+        return 'Janelle Monáe'
+    elif 'Casualties of Cool - Casualties of Cool' in folder_name:
+        return 'Devin Townsend'
     else:
         return artist_name
 

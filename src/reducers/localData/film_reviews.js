@@ -119,8 +119,6 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
 //const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.png|.PNG|.jpeg|.webp)$")    
 
 
-// [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut in this context!
-
 /**
  * References to screenshots.
  * I need to reference them twice (screenshots list, and passing the screenshots list into the review)
@@ -517,6 +515,7 @@ const screenshots = {
     ],
 }
 
+// [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut for this particular file!
 
 /**
  * My database of film reviews
