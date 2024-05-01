@@ -121,7 +121,7 @@ class FilmsReview extends React.Component {
                                                 <span>in my toplist</span>
                                             </Link>
                                         </div>
-                                        <div className='myRating' title='My rating'>
+                                        <div className={`myRating r${this.props.film.my_rating_nodp}`} title='My rating'>
                                             <span>{this.props.film.my_rating}</span>
                                         </div>
                                     </div>

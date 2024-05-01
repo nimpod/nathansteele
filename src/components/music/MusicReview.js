@@ -29,6 +29,7 @@ class MusicReview extends React.Component {
         let review_id_of_next_album = "";
         let review_id_of_prev_album = "";
         let no_spotify_str = "";
+        let my_rating_nodp = "";
 
         custom_album_cover_url = (this.props.album_data.custom_cover_url !== undefined) ? this.props.album_data.custom_cover_url : this.props.album_data.album_cover_url;
         album_name = (this.props.album_data.album_name_displayed !== undefined) ? this.props.album_data.album_name_displayed : this.props.album_data.album_name;
@@ -50,6 +51,9 @@ class MusicReview extends React.Component {
 
         if (this.props.album_data.spotify_url == undefined) {
             no_spotify_str = "notOnSpotify";
+        }
+        if (this.props.album_data.my_rating_nodp !== undefined) {
+            my_rating_nodp = this.props.album_data.my_rating_nodp;
         }
 
         return(
@@ -109,7 +113,7 @@ class MusicReview extends React.Component {
                                                 <span>in my toplist</span>
                                             </Link>
                                         </div>
-                                        <div className='myRating'>
+                                        <div className={`myRating r${my_rating_nodp}`}>
                                             <span>{this.props.album_data.my_rating}</span>
                                         </div>
                                     </div>

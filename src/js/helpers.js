@@ -1,6 +1,9 @@
 // import { act } from "@testing-library/react";
 // import { event } from "jquery";
 
+console.log('HELLO');
+
+
 /**
  * [Get value of a specified CSS variable]
  * @param  {[str]} variable_name [Name of the CSS variable]

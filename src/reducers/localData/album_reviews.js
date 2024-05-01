@@ -350,7 +350,7 @@ const database = {
 			year_of_release: "2023",
 			year_of_discovery: "2023",
 			genres: "Alternative metal; Hyperpop; Trap metal; Pop rap; Industrial Hip Hop",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 	},
@@ -435,8 +435,8 @@ const database = {
 		//
 		"bruno_sanfilippo__ver_sacrum": {
 			lastfm_url: "https://www.last.fm/music/Bruno+Sanfilippo/Ver+Sacrum",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/bruno-sanfilippo/ver-sacrum/",
+			spotify_url: "https://open.spotify.com/album/24L8oeb5PczT6YTS3Edq1U?si=btGVLCniQLCIpGPyS0ZFnQ",
 			year_of_release: "2023",
 			year_of_discovery: "2023",
 			genres: "Ambient; Post-minimalism; Neo-classical new age; Electronic",
@@ -445,8 +445,8 @@ const database = {
 		},
 		"bruno_sanfilippo__unity": {
 			lastfm_url: "https://www.last.fm/music/Bruno+Sanfilippo/Unity",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/bruno-sanfilippo/unity/",
+			spotify_url: "https://open.spotify.com/album/0ol5IXILkcvI1VUOfXYrPY?si=wAr9G8_DRz2N-Nowmu8Dtg",
 			year_of_release: "2018",
 			year_of_discovery: "2023",
 			genres: "Ambient; Post-minimalism",
@@ -706,18 +706,29 @@ const database = {
 			my_review: "",
 		},
 
-
+		//
 		"dead_can_dance__within_the_realm_of_a_dying_sun": {
 			lastfm_url: "https://www.last.fm/music/Dead+Can+Dance/Within+the+Realm+of+a+Dying+Sun",
 			rym_url: "https://rateyourmusic.com/release/album/dead-can-dance/within-the-realm-of-a-dying-sun/",
 			spotify_url: "https://open.spotify.com/album/4WGpRBfDu7OJ4Rimkzu9jp?si=WIUEm_yvQrmBcYM3D1QhwQ",
 			year_of_release: "1987",
 			year_of_discovery: "2022",
-			genres: "Neo-classical darkwave; Gothic rock; Ambient; Neo-classical",
+			genres: "Neoclassical darkwave; Gothic rock; Ambient; Neo-classical",
 			themes: ["Atmospheric"],
 			my_rating: 9.5,
 			my_review: "",
 		},
+		"dead_can_dance__dionysus": {
+			lastfm_url: "https://www.last.fm/music/Dead+Can+Dance/Dionysus",
+			rym_url: "https://rateyourmusic.com/release/album/dead-can-dance/dionysus/",
+			spotify_url: "https://open.spotify.com/album/1l2ZBaHPhtAd5HE4n2LpRf?si=j2y3G1I1SJOZNi074Gg5JA",
+			year_of_release: "2018",
+			year_of_discovery: "2023",
+			genres: "Tribal ambient; Turkish folk; Balkan folk; Darkwave; Neoclassical darkwave; Neo-classical",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
 		"dominique_guiot__l_univers_de_la_mer": {
 			lastfm_url: "https://www.last.fm/music/Dominique+Guiot/L%27univers+De+La+Mer",
 			rym_url: "https://rateyourmusic.com/release/album/dominique-guiot/lunivers-de-la-mer/",
@@ -2436,6 +2447,16 @@ const database = {
 		},
 
 
+		"sababa5__aspan": {
+			lastfm_url: "https://www.last.fm/music/Sababa+5/Aspan",
+			rym_url: "https://rateyourmusic.com/release/album/sababa-5/aspan/",
+			spotify_url: "https://open.spotify.com/album/4zjyUOyKrxHSqeMEc45j5E?si=6aBe6tCxRWCvm4t5teLEAA",
+			year_of_release: "2023",
+			year_of_discovery: "2024",
+			genres: "Space rock; Neo-Psychedelia; Anatolian rock",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"senri_kawaguchi__cider_hard_and_sweet": {
 			lastfm_url: "https://www.last.fm/music/Senri+Kawaguchi/CIDER+~Hard+&+Sweet~",
 			rym_url: "https://rateyourmusic.com/release/album/senri-kawaguchi/cider-%EF%BD%9Ehard-and-sweet%EF%BD%9E/",

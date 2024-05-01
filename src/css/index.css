@@ -2121,7 +2121,8 @@ div.blog-post
 .films-toplist.view-as-list span.film-myRating {
   background-color: var(--film-mydata-rating-bg-color);
 }
-.films-toplist.view-as-list span.film-myRating::after {
+.films-toplist.view-as-list span.film-myRating::after,
+.myRating::after {
   content: "/10";
   font-size: 10px;
   font-weight: 100;
@@ -2944,16 +2945,26 @@ div.btn.films-reset-filters-btn svg {
   margin-right: 10px;
 }
 
+:root {
+  --my-rating-colour-r10: linear-gradient(100deg, rgb(174, 25, 166), rgb(11, 119, 26), rgb(248, 248, 101));
+  --my-rating-colour-r95: linear-gradient(100deg, rgb(46, 85, 143), rgb(115, 48, 186), rgb(101, 248, 182));
+  --my-rating-colour-r9: linear-gradient(100deg, rgb(56, 35, 177), rgb(48, 110, 186), rgb(13, 138, 34));
+  --my-rating-colour-r85: linear-gradient(100deg, rgb(226, 125, 217), rgb(80, 192, 224), rgb(164, 207, 34));
+  --my-rating-colour-r8: linear-gradient(100deg, rgb(23, 152, 98), rgb(7, 142, 65), rgb(160, 195, 23));
+  --my-rating-colour-r75: linear-gradient(100deg, rgb(23, 152, 98), rgb(7, 142, 65), rgb(160, 195, 23));
+
+  --my-pos-colour: rgb(47, 137, 104);
+}
+
 /* My rating */
 .review-displayed .myRating {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   border-radius: 100%;
-  background-color: rgb(100, 29, 151);
-  border: 3px solid transparent;
   width: 70px;
   height: 70px;
   text-align: center;
-  padding-top: 12px;
+  padding-top: 17px;
+  opacity: 0.9;
   position: absolute;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -2961,15 +2972,21 @@ div.btn.films-reset-filters-btn svg {
   user-select: none;
 }
 .review-displayed .myRating:hover {
-  background-color: rgb(147, 63, 208);
+  filter: brightness(1.2);
 }
+.myRating.r10 { background: var(--my-rating-colour-r10); }
+.myRating.r95 { background: var(--my-rating-colour-r95); }
+.myRating.r9 { background: var(--my-rating-colour-r9); }
+.myRating.r85 { background: var(--my-rating-colour-r85); }
+.myRating.r8 { background: var(--my-rating-colour-r8); }
+.myRating.r75 { background: var(--my-rating-colour-r75); }
 
 
 /* My position in toplist */
 .review-displayed .myPosition {
   width: fit-content;
   border-radius: 5px;
-  background-color: rgb(47, 137, 104);
+  background-color: var(--my-pos-colour);
   border: 3px solid transparent;
   padding: 0px 5px;
   cursor: pointer;
@@ -3303,21 +3320,25 @@ div.albumInfoContainer > div.albumInfo > div > p {
 
 .dataInCircle {
   position: absolute;
-  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  margin: 7px;
   width: 40px;
   height: 40px;
   color: var(--text);
-  padding: 0.25rem;
-  border-radius: 9999px;
+  border-radius: 50px;
   align-items: center;
-  justify-content: center;
   text-align: center;
   aspect-ratio: 1/1;
 }
 .dataInCircle p {
-  font-size: 0.85rem;
-  font-weight: 200;
-  margin-top: -10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-left: 1px;
+}
+.dataInCircle.myRating p {
+  margin-left: 5px;
 }
 .dataInCircle svg {
   width: 0.95em;
@@ -3327,16 +3348,17 @@ div.albumInfoContainer > div.albumInfo > div > p {
   margin-left: -3px;
 }
 
+
 div.albumInfoContainer > div.pos {
   top: 0;
   left: 0;
-  background-color: rgba(35, 37, 41, 0.897);
+  background-color: rgba(37, 38, 41, 0.88);
 }
 
 div.albumInfoContainer > div.myRating {
   top: 0;
   right: 0;
-  background-color: rgba(206, 181, 19, 0.897);
+  background-color: rgba(62, 135, 17, 0.88);
 }
 /* #endregion */
 

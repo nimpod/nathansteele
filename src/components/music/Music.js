@@ -309,7 +309,6 @@ class Music extends Component {
 
         // get items for current page...
         const albums_displayed = this.state.__filtered_data;
-        //console.log(albums_displayed);
         
         // generate artists lists...
         const all_artists = this.remove_artist_duplicates();
@@ -317,9 +316,7 @@ class Music extends Component {
 
         // generate genres lists...
         const all_genres = this.remove_genre_duplicates();
-        console.log(all_genres);
         const all_genres_album_count_highest_to_lowest = this.find_num_of_albums_per_genre(all_genres);
-        console.log(all_genres_album_count_highest_to_lowest);
 
         // top tracks list (default to overall time period)
         let top_tracks_list = this.props.top_tracks.overall;
@@ -406,42 +403,7 @@ class Music extends Component {
 
                             {/* Header */}
                             <div className='top-albums-list-header'>
-                                {/* Filter by genre button */}
-                                {/*
-                                <div className='filter-by-genre-btns filter-by-something-container'>
-                                    <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-genres')}>
-                                        <span>{this.state.__current_genre_filter}</span>
-                                        <ArrowDownIcon className='invertable-icon' />
-                                    </div>
-                                    <div className='dropdown-list-genres dropdown-list'>
-                                        <div className='dropdown-list-title'>Filter by genre...</div>
-                                        {
-                                            // iterate over all genres...
-                                            all_genres.map((genre => {
-                                                return <div className="btn filter-list-by-genre-btn" key={genre} onClick={(e) => this.filter_by_genre(e, genre)}>
-                                                    <span className='genre-text'>
-                                                        {genre}
-                                                    </span>
-                                                    <span className='genre-count'>
-                                                        {
-                                                            Array.from(this.props.top_albums).filter(a => {
-                                                                let genre_lowercase = genre.toLowerCase();
-
-                                                                if (a.genres_lowercase !== undefined) {
-                                                                    if (genre === this.state.__default_genre_filter) {
-                                                                        return Array.from(a.genres_lowercase)
-                                                                    }
-                                                                    return a.genres_lowercase.includes(genre_lowercase);
-                                                                }
-                                                            }).length
-                                                        }
-                                                    </span>
-                                                </div>
-                                            }))
-                                        }
-                                    </div>
-                                </div>
-                                */}
+                                {/* Filter by genre buttons */}
                                 <div>
                                     {
                                         all_genres_album_count_highest_to_lowest.map((obj => {
@@ -461,38 +423,7 @@ class Music extends Component {
                                     }
                                 </div>
                                 
-                                {/* Filter by artist button */}
-                                {/*
-                                <div className='filter-by-artist-btns filter-by-something-container'>
-                                    <div className='dropdown-list-artists-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-artists')}>
-                                        <span>{this.state.__current_artist_filter}</span>
-                                        <ArrowDownIcon className='invertable-icon' />
-                                    </div>
-                                    <div className='dropdown-list-artists dropdown-list'>
-                                        <div className='dropdown-list-title'>Filter by artist...</div>
-                                        {
-                                            // iterate over all artists...
-                                            all_artists.map((artist => {
-                                                return <div className="btn filter-list-by-artist-btn" key={artist} onClick={(e) => this.filter_by_artist(e, artist)}>
-                                                    <span className='artist-text'>
-                                                        {artist}
-                                                    </span>
-                                                    <span className='artist-count'>
-                                                        {
-                                                            Array.from(this.props.top_albums).filter(a => {
-                                                                if (artist === this.state.__default_artist_filter) {
-                                                                    return Array.from(a.artist_name);
-                                                                }
-                                                                return a.artist_name == artist;
-                                                            }).length
-                                                        }
-                                                    </span>
-                                                </div>
-                                            }))
-                                        }
-                                    </div>
-                                </div>
-                                */}
+                                {/* Filter by artist buttons */}
                                 <div>
                                     {
                                         all_artists_album_count_highest_to_lowest.map((obj => {

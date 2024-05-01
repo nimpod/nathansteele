@@ -64,6 +64,11 @@ const merge_films_data = (init_state) => {
             let arr = v["gradual_interest"];
             v["gradual_interest_average"] = (arr.reduce((x,y) => x+y) / arr.length).toFixed(1);
         }
+
+        // my rating but without the decimal point (e.g. 9.5 -> 95)
+        if (v["my_rating"]) {
+            v["my_rating_nodp"] = v["my_rating"].toString().replace(".", "");
+        }
         
         // find id of next/previous films
         let currentFilm = mergedData[v["position"] - 1];  // remember, arrays start at 0.... so current film is N-1
@@ -108,6 +113,10 @@ const merge_albums_data = (init_state) => {
         
         v["artist_name_backend"] = remove_special_characters_for_musicbee_export(v["artist_name"]);
         v["album_name_backend"] = remove_special_characters_for_musicbee_export(v["album_name"]);
+
+        if (v["my_rating"]) {
+            v["my_rating_nodp"] = v["my_rating"].toString().replace(".", "");
+        }
 
         let review_id_of_next_album = "";
         let review_id_of_prev_album = "";

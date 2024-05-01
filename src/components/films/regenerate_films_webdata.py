@@ -245,8 +245,8 @@ def regenerate_json_file():
                 imdb_film_id = imdb_url.split('/')[-2]
                 url = f'http://www.omdbapi.com/?i={imdb_film_id}&apikey={omdb_api_key}'
                 imdb = requests.get(url=url, verify=False)
-                print(imdb.text)
-                
+                print(f" > {pos}: {imdb.text}")
+
                 try:
                     imdb_json = json.loads(imdb.text)
                 except JSONDecodeError:
@@ -281,7 +281,7 @@ def regenerate_json_file():
                 review_id = f"{titlev2}-{letterboxd_film_id}-review"
             
                 # DEBUGGING....
-                print(f" > {pos}: {title} (imdb_avg_rating={imdb_avg_rating})")
+                #print(f" > {pos}: {title} (imdb_avg_rating={imdb_avg_rating})")
                 #print(f' > Title = ({title})')
                 #print(f' > IMDB url = ({imdb_url})')
                 #print(f' > Language = ({language})')

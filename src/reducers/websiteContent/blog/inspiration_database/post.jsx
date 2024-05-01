@@ -16,14 +16,32 @@ export const post = (screenshots) => (
         <div className='blog-subsection'>
             <h3 className='subgroup-title'>Music reviewers</h3>
             <ul>
-                <li><a href='https://www.youtube.com/@TheWonkyAngle'>The Wonky Angle</a></li>
+                <li><a href='https://www.youtube.com/@TheWonkyAngle'>The Wonky Angle</a> (Electronic)</li>
+                <li><a href='https://rateyourmusic.com/~Alphawellenreiter'>Alphawellenreiter</a> (Ambient/Post-minimalism/Space rock/Psychdelic rock)</li>
+                <li><a href='https://rateyourmusic.com/~logstar100'>logstar100</a> (K-pop)</li>
+                <li><a href='https://rateyourmusic.com/~Takashi_Hafuza'>Takashi Hafuza</a> (Breakbeat)</li>
+                <li><a href='https://www.youtube.com/@SpectrumPulseKMG'>Spectrum Pulse</a> (Country)</li>
+                <li><a href='https://rateyourmusic.com/~cultjake'>CultJake</a> (Jazz)</li>
+                <li><a href='https://rateyourmusic.com/~GeorgeX'>GeorgeX</a> (Jazz)</li>
+                <li><a href='https://rateyourmusic.com/~Tone_Zone'>ToneZone</a> (Metal)</li>
+                <li><a href='https://www.youtube.com/@freetobewhoibe/featured'>freetobewhoibe</a> (Metal)</li>
                 <li><a href='https://www.youtube.com/@theneedledrop'>The Needle Drop</a></li>
-                <li><a href='https://rateyourmusic.com/~logstar100'>logstar100</a></li>
-                <li><a href='https://rateyourmusic.com/~Takashi_Hafuza'>Takashi_Hafuza</a></li>
-                <li><a href='https://www.youtube.com/@SpectrumPulseKMG'>Spectrum Pulse</a></li>
                 <li><a href='https://www.youtube.com/@deepcuts'>Deep Cuts</a></li>
-                <li><a href='https://www.youtube.com/@freetobewhoibe/featured'>freetobewhoibe</a></li>
                 <li><a href='https://www.youtube.com/@ShawnCee'>Shawn Cee</a></li>
+            </ul>
+        </div>
+        <div className='blog-subsection'>
+            <h3 className='subgroup-title'>Music discovery</h3>
+            <ul>
+                <li><a href='https://www.youtube.com/@TerminalPassage'>Terminal Passage</a></li>
+                <li><a href='https://www.youtube.com/@SaturnArchives'>Saturn Archives</a></li>
+                <li><a href='https://www.youtube.com/@VaporMemory'>Vapor Memory</a></li>
+                <li><a href='https://www.youtube.com/@QuoteCaveStory'>OnAScaleof1to10</a></li>
+                <li><a href='https://www.youtube.com/@PsychedelicAngel'>Psychedlic Angel</a></li>
+                <li><a href='https://www.youtube.com/@CubensisRecords'>Cubensis Records</a></li>
+                <li><a href='https://www.youtube.com/@should_be_asleep'>should be asleep</a></li>
+                <li><a href='https://www.youtube.com/@imcyborgbutthatsok'>i'm cyborg but that's ok</a></li>
+                <li><a href='https://www.youtube.com/@yumyam'>yum yam</a></li>
             </ul>
         </div>
         <div className='blog-subsection'>
@@ -60,20 +78,6 @@ export const post = (screenshots) => (
                 <li><a href='https://www.youtube.com/@StrangeMysteries'>Strange Mysteries</a></li>
                 <li><a href='https://www.youtube.com/@StarTalk'>Star Talk</a></li>
                 <li><a href='https://youtube.com/@V101SPACE'>V101 Space</a></li>
-            </ul>
-        </div>
-        <div className='blog-subsection'>
-            <h3 className='subgroup-title'>Music discovery</h3>
-            <ul>
-                <li><a href='https://www.youtube.com/@TerminalPassage'>Terminal Passage</a></li>
-                <li><a href='https://www.youtube.com/@SaturnArchives'>Terminal Passage</a></li>
-                <li><a href='https://www.youtube.com/@VaporMemory'>Vapor Memory</a></li>
-                <li><a href='https://www.youtube.com/@QuoteCaveStory'>OnAScaleof1to10</a></li>
-                <li><a href='https://www.youtube.com/@PsychedelicAngel'>Psychedlic Angel</a></li>
-                <li><a href='https://www.youtube.com/@CubensisRecords'>Cubensis Records</a></li>
-                <li><a href='https://www.youtube.com/@should_be_asleep'>should be asleep</a></li>
-                <li><a href='https://www.youtube.com/@imcyborgbutthatsok'>i'm cyborg but that's ok</a></li>
-                <li><a href='https://www.youtube.com/@yumyam'>yum yam</a></li>
             </ul>
         </div>
         <div className='blog-subsection'>

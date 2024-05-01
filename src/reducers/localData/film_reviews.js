@@ -619,6 +619,17 @@ const database = {
     },
 
     THE: {
+        "the_flowers_of_war": {
+            "letterboxd_url": "https://boxd.it/2Evc",
+            "my_rating": 8.0,
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/cUIirEWA9ug8AWN85xbTLnMS9Ip.jpg",
+            "my_tags": [
+                "Poignant",
+                "Tragic",
+                "Sad"
+            ]
+        },
+
         "the_great_yokai_war": {
             "letterboxd_url": "https://boxd.it/XZm",
             "my_rating": 8.0,
@@ -3723,8 +3734,14 @@ const database = {
         
         "parasite_in_love": {
             "letterboxd_url": "https://boxd.it/qyhw",
-            "my_rating": 8.0,
-            "my_tags": ["Another life-form trying to take control of a human mind", "Soulmate", "Social anxiety", "Scopophobia", "Study of unorthodox people who are outcasts from societal norms"],
+            "my_rating": 8.5,
+            "my_tags": [
+                "Another life-form trying to take control of a human mind", 
+                "Soulmate", 
+                "Social anxiety", 
+                "Scopophobia", 
+                "Study of unorthodox people who are outcasts from societal norms"
+            ],
             "my_review": "",
             "gradual_interest": [7, 7, 7, 8, 8, 8, 8, 7, 8, 8]
         },

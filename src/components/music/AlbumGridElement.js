@@ -6,10 +6,12 @@ import { ReactComponent as ToplistRatingIcon } from "../../icons/toplistRating.s
 
 class AlbumGridElement extends Component {
     render() {
+        // console.log(this.props.album);
+
         let album_cover_url = ""
         let album_title = "";
         let artist_name = this.props.album.artist_name;
-        // console.log(this.props.album);
+        let my_rating_nodp = "";
 
         // use custom album cover url if it exists...
         if (this.props.album.custom_cover_url !== undefined) {
@@ -28,6 +30,10 @@ class AlbumGridElement extends Component {
             artist_name = this.props.album.artist_name_displayed;
         }
 
+        if (this.props.album.my_rating_nodp !== undefined) {
+            my_rating_nodp = this.props.album.my_rating_nodp;
+        }
+
         // console.log(this.props);
         return(
             <Link to={'/music/' + this.props.album.review_id}>
@@ -42,11 +48,12 @@ class AlbumGridElement extends Component {
                         </div>
                     </div>
                     <div className='pos dataInCircle'>
-                        <ToplistPosIcon className="invertable-icon" />
-                        <p>{this.props.album.position_str}</p>
+                        {/* <ToplistPosIcon className="invertable-icon" /> */}
+                        {/* <p>{this.props.album.position_str}</p> */}
+                        <p>#{this.props.album.position_str}</p>
                     </div>
-                    <div className='myRating dataInCircle'>
-                        <ToplistRatingIcon className="invertable-icon" />
+                    <div className={`myRating dataInCircle r${my_rating_nodp}`}>
+                        {/* <ToplistRatingIcon className="invertable-icon" /> */}
                         <p>{this.props.album.my_rating}</p>
                     </div>
                 </div>
