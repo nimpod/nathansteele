@@ -9,9 +9,11 @@ class AlbumGridElement extends Component {
         // console.log(this.props.album);
 
         let album_cover_url = ""
-        let album_title = "";
+        let album_name = "";
         let artist_name = this.props.album.artist_name;
         let my_rating_nodp = "";
+
+        album_name = (this.props.album.album_name_displayed !== undefined) ? this.props.album.album_name_displayed : this.props.album.album_name;
 
         // use custom album cover url if it exists...
         if (this.props.album.custom_cover_url !== undefined) {
@@ -44,7 +46,7 @@ class AlbumGridElement extends Component {
                             <p>{artist_name}</p>
                         </div>
                         <div className='albumName'>
-                            <p>{this.props.album.album_name}</p>
+                            <p>{album_name}</p>
                         </div>
                     </div>
                     <div className='pos dataInCircle'>

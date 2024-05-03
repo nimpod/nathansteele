@@ -150,6 +150,10 @@ def album_name_doesnt_match_with_lastfm(folder_name, album_name):
         return '10 000 Hz Legend'
     elif 'Bring Me The Horizon - Sempiternal' in folder_name:
         return 'Sempiternal (Expanded Edition)'
+    elif 'Jeremy Soule - The Elder Scrolls V' in folder_name:
+        return 'The Elder Scrolls V: Skyrim: Original Game Soundtrack'
+    elif 'Kenji Kawai - Patlabor 2 - The Movie (Original Soundtrack)' in folder_name:
+        return 'Patlabor 2 the Movie'
     #elif 'Penguin Cafe - Rain Before Seven':
     #    return 'Rain Before Seven...'
     #elif 'Opposite Day - What Is Is':

@@ -491,7 +491,7 @@ const database = {
 			year_of_release: "2023",
 			year_of_discovery: "2023",
 			genres: "Ambient; Post-minimalism; Neo-classical new age; Electronic",
-			my_rating: 9.0,
+			my_rating: 10.0,
 			my_review: "",
 		},
 		"bruno_sanfilippo__unity": {
@@ -1228,7 +1228,7 @@ const database = {
 			year_of_discovery: "2019",
 			genres: "J-folk; J-acoustic; Folk",
 			themes: ["Japanese"],
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 
@@ -1326,8 +1326,8 @@ const database = {
 		},
 		"joe_hisaishi__a_symphonic_celebration": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/A+Symphonic+Celebration+(Music+from+the+Studio+Ghibli+Films+of+Hayao+Miyazaki)",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2-royal-philharmonic-orchestra/a-symphonic-celebration-music-from-the-studio-ghibli-films-of-hayao-miyazaki/",
+			spotify_url: "https://open.spotify.com/album/561qUZZO6f2sILHUMlXmlM?si=P6gAV3ZPQlWF9BwzQeaeZw",
 			year_of_release: "2023",
 			year_of_discovery: "2023",
 			artist_name_English: "Joe Hisaishi",
@@ -1350,7 +1350,8 @@ const database = {
 		"joe_hisaishi__dolls_OST": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/Dolls",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/dolls/",
-			year_of_release: "1989",
+			youtube_url: "https://youtu.be/pUkWsPKmto8?si=mCvOVQzXeX3AI5yl",
+			year_of_release: "2002",
 			year_of_discovery: "2022",
 			artist_name_English: "Joe Hisaishi",
 			genres: "Film soundtrack; Ambient; Not on spotify",
@@ -1419,6 +1420,30 @@ const database = {
 		},
 
 
+		//
+		"jeremy_soule__the_elder_scrolls_v_skyrim_OST": {
+			lastfm_url: "https://www.last.fm/music/Jeremy+Soule/The+Elder+Scrolls+V:+Skyrim:+Original+Game+Soundtrack",
+			rym_url: "https://rateyourmusic.com/release/album/jeremy-soule/the-elder-scrolls-v-skyrim-3/",
+			spotify_url: "https://open.spotify.com/album/25r7pEf31viAbsoVHC6bQ4?si=fleQjLJZQGOkGqZ5B6RqQg",
+			year_of_release: "2013",
+			year_of_discovery: "2013",
+			album_name_displayed: "The Elder Scrolls V: Skyrim: Original Game Soundtrack",
+			genres: "Video game soundtrack; Modern classical; Cinematic classical; Ambient; Celtic folk; Nordic folk; Choral",
+			my_rating: 9.0,
+			my_review: "",
+		},
+		"jeremy_soule__the_northener_diaries_symphonic_sketches": {
+			lastfm_url: "https://www.last.fm/music/Jeremy+Soule/The+Northerner+Diaries+Symphonic+Sketches",
+			rym_url: "https://rateyourmusic.com/release/album/jeremy-soule/the-northerner-diaries/",
+			spotify_url: "https://open.spotify.com/album/1hufHkRXl1TvVwPlfI1XLb?si=94LRaiGpQ_uWZwcTvheJKg",
+			year_of_release: "2017",
+			year_of_discovery: "2023",
+			genres: "Modern classical; Ambient; Cinematic clasical; Choral",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
+
 		"jon_hopkins__contact_note": {
 			lastfm_url: "https://www.last.fm/music/Jon+Hopkins/Contact+Note",
 			rym_url: "",
@@ -1480,7 +1505,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/1bkN9nIkkCnXeG4yitVS1J?si=JDTcdWdDRHuUaI-8amHgIw",
 			year_of_release: "2011",
 			year_of_discovery: "2016",
-			genres: "Hip-Hop; Rap",
+			genres: "Hip-Hop; Rap; Jazz rap",
 			my_rating: 9.5,
 			my_review: "",
 		},
@@ -1574,7 +1599,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/5vDVFuzV8aAIymXSkpyJoe?si=FGAh4VfTTyaRObwm-fKtew",
 			year_of_release: "2016",
 			year_of_discovery: "2017",
-			genres: "Hyperpop; Electropop; J-pop; J-electropop",
+			genres: "Electropop; Bubblegum bass; Synthpop; Pop rap; Indietronica; J-pop; J-hip-hop",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -2214,7 +2239,7 @@ const database = {
 			year_of_release: "2009",
 			year_of_discovery: "2009",
 			genres: "Alternative rock",
-			my_rating: 8.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 		"orange_blossom__everything_must_change": {
@@ -2343,6 +2368,16 @@ const database = {
 			year_of_release: "1981",
 			year_of_discovery: "2024",
 			genres: "Jazz; ECM style jazz; New age; Ambient; Jazz fusion",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"plantoid__terrapath": {
+			lastfm_url: "https://www.last.fm/music/Plantoid/Terrapath",
+			rym_url: "https://rateyourmusic.com/release/album/plantoid/terrapath/",
+			spotify_url: "https://open.spotify.com/album/5cwz5vi4rPL0nErSTrdn6z?si=YQyPH88-RByI96bYEkSEfA",
+			year_of_release: "2023",
+			year_of_discovery: "2024",
+			genres: "Progressive Rock; Psychedelic rock; Jazz rock; Space rock",
 			my_rating: 8.0,
 			my_review: "",
 		},
