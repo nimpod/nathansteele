@@ -14,9 +14,17 @@ import { post as MyMostListenedSongsOf2021Post } from '../websiteContent/blog/my
 import { post as MyMostListenedSongsOf2020Post } from '../websiteContent/blog/my_most_listened_songs_of_2020/post';
 import { post as MyMostListenedSongsOf2016Post } from '../websiteContent/blog/my_most_listened_songs_of_2014_2015_2016/post';
 import { Post as OurMoon } from '../websiteContent/blog/our_moon/post';
+import { post as Top25FavouriteChillstepSongs } from '../websiteContent/blog/top_25_favourite_chillstep_songs/post';
 
 
 export const blog_posts = [
+    {
+        id: "30",
+        date: "6 May 2024",
+        title: "Top 25 favourite chillstep songs",
+        content: ReactDomServer.renderToString(Top25FavouriteChillstepSongs()),
+        tags: ["Music"]
+    },
     {
         id: "29",
         date: "23 Jan 2024",

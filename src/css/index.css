@@ -1727,22 +1727,22 @@ div.blog-post
 
 /* #region -----------------------< 8.3) Specific blog posts >------------------------ */
 
-.my-most-listened-songs-of-this-year h3.subgroup-title {
+.blog-post h3.subgroup-title {
   display: flex;
   align-items: center;
 }
 
-.my-most-listened-songs-of-this-year h3.subgroup-title > span {
+.blog-post h3.subgroup-title > span {
   margin-right: 10px;
   border-radius: 6px;
   padding: 0 6px;
 }
 
-.my-most-listened-songs-of-this-year h3.subgroup-title > span.track-pos {
+.blog-post h3.subgroup-title > span.track-pos {
   background-color: rgb(9, 95, 51);
 }
 
-.my-most-listened-songs-of-this-year h3.subgroup-title > span.track-artist-and-title {
+.blog-post h3.subgroup-title > span.track-artist-and-title {
   background-color: #32333b;
   white-space: nowrap;
   overflow: hidden;
@@ -1750,14 +1750,21 @@ div.blog-post
   max-width: calc(80%);
 }
 
-.my-most-listened-songs-of-this-year h3.subgroup-title > span.track-scrobbles {
+.blog-post h3.subgroup-title > span.track-scrobbles {
   background-color: rgb(114, 80, 182);
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.my-most-listened-songs-of-this-year img.scrobbles-per-month-graph {
+.blog-post h3.subgroup-title > span.track-rating {
+  background-color: rgb(12, 150, 127);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.blog-post img.scrobbles-per-month-graph {
   width: 370px;
   margin-top: 80px;
   padding-left: 15px;
@@ -1772,20 +1779,20 @@ div.blog-post
   .display-img-beside-text {
     grid-template-columns: 100%;
   }
-  .my-most-listened-songs-of-this-year img.scrobbles-per-month-graph {
+  .blog-post img.scrobbles-per-month-graph {
     margin-top: 0px;
   }
-  .my-most-listened-songs-of-this-year h3.subgroup-title > span.track-pos {
+  .blog-post h3.subgroup-title > span.track-pos {
     font-size: 1.6rem;
   }
-  .my-most-listened-songs-of-this-year h3.subgroup-title > span.track-scrobbles {
+  .blog-post h3.subgroup-title > span.track-scrobbles {
     font-size: 1.3rem;
   }
 
-  .my-most-listened-songs-of-this-year h3.subgroup-title {
+  .blog-post h3.subgroup-title {
     display: block;
   }
-  .my-most-listened-songs-of-this-year h3.subgroup-title > span.track-artist-and-title {
+  .blog-post h3.subgroup-title > span.track-artist-and-title {
     display: block;
     max-width: fit-content;
     font-size: 1rem;
@@ -1795,10 +1802,10 @@ div.blog-post
     border-radius: 3px;
   }
 
-  .my-most-listened-songs-of-this-year h3.subgroup-title > span {
+  .blog-post h3.subgroup-title > span {
   }
 
-  .my-most-listened-songs-of-this-year iframe {
+  .blog-post iframe {
     width: calc(100%);
   }
 }
