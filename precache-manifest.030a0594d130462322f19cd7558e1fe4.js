@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2ee236408d74019b1d65eb6ce5445990",
+    "revision": "f9ff780c6f6d07726be9be50b22641f2",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "6b47b667e6ca220c10a0",
-    "url": "/nathansteele/static/css/main.cb6b45af.chunk.css"
+    "revision": "8f0ca1efd06bebcaab22",
+    "url": "/nathansteele/static/css/main.405f4a60.chunk.css"
   },
   {
     "revision": "48517f2b0b427068ce13",
@@ -20,12 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.207dc2c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6b47b667e6ca220c10a0",
-    "url": "/nathansteele/static/js/main.0b03e9c4.chunk.js"
+    "revision": "8f0ca1efd06bebcaab22",
+    "url": "/nathansteele/static/js/main.308b4361.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
     "url": "/nathansteele/static/js/runtime-main.a2f3e498.js"
+  },
+  {
+    "revision": "0219f3669a1f5f4480598f2e76ad5b29",
+    "url": "/nathansteele/static/media/2024_auroras.0219f366.jpg"
   },
   {
     "revision": "f203ce3b492a7f4978672bb332775af9",
@@ -118,6 +122,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9928733a5fdfe45e9f2ea126812d44aa",
     "url": "/nathansteele/static/media/arrowUp.9928733a.svg"
+  },
+  {
+    "revision": "7fd4bd9925bc05b1f42dab9632c4fc84",
+    "url": "/nathansteele/static/media/artist_rendition_of_carrington_event.7fd4bd99.jpeg"
   },
   {
     "revision": "9533dabb82761e4e0974f87d653c0b63",
@@ -462,6 +470,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cf6ec5b1689c58ba6ae9c5f22a9ab292",
     "url": "/nathansteele/static/media/screenshot1.cf6ec5b1.PNG"
+  },
+  {
+    "revision": "e1bc48265690b52f5a3d3e8743bc9057",
+    "url": "/nathansteele/static/media/screenshot1.e1bc4826.PNG"
   },
   {
     "revision": "e1f38192af6c92fc1563992464097b96",
@@ -1000,10 +1012,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/screenshot6.445f7ae5.PNG"
   },
   {
-    "revision": "4f12c61bb6f0c506d906f61630d31fb5",
-    "url": "/nathansteele/static/media/screenshot6.4f12c61b.PNG"
-  },
-  {
     "revision": "6feee8048e4c536eaead632f27dd5859",
     "url": "/nathansteele/static/media/screenshot6.6feee804.PNG"
   },
@@ -1116,6 +1124,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/media/showList.0926f19d.svg"
   },
   {
+    "revision": "a976ecb43312a33d172ccb67d0dd6717",
+    "url": "/nathansteele/static/media/solar_flare_classification_chart.a976ecb4.jpg"
+  },
+  {
     "revision": "34d1bb602d60548f51faefd3473941e5",
     "url": "/nathansteele/static/media/sortAscending.34d1bb60.svg"
   },
@@ -1162,6 +1174,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "078d361ae9a1017d35c54b1561c533fb",
     "url": "/nathansteele/static/media/toplistRating.078d361a.svg"
+  },
+  {
+    "revision": "f61b075bb37ec5e0be4e99a9ca3c23cf",
+    "url": "/nathansteele/static/media/tree_rings.f61b075b.jpg"
   },
   {
     "revision": "334c25f3e55e7e10308a9e30bcb82e74",
