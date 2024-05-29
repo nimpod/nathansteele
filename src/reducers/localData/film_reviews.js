@@ -186,8 +186,8 @@ const screenshots = {
 
     HUMAN_SPACE_TIME_AND_HUMAN: [
         require('../websiteContent/films/human_space_time_and_human/screenshot8.PNG'),
-        require('../websiteContent/films/human_space_time_and_human/screenshot6.PNG'),
         require('../websiteContent/films/human_space_time_and_human/screenshot5.PNG'),
+        require('../websiteContent/films/human_space_time_and_human/screenshot1.PNG'),
     ],
     
     THE_BOW: [
@@ -1707,14 +1707,31 @@ const database = {
     },
 
     B: {
+        "better_days": {
+            "my_rating": 7.5,
+            "letterboxd_url": "https://boxd.it/l9Ke",
+            "my_tags": [
+                "Hong Kong",
+                "Bullying",
+                "Sad",
+                "Bleak",
+                "Great soundtrack"
+            ],
+        },
+
         "barefoot_gen": {
-            "my_rating": 9.0,
+            "my_rating": 9.5,
             "letterboxd_url": "https://boxd.it/1OMK",
             "custom_poster_url": "https://www.themoviedb.org/t/p/original/lQ6Leu6UDIvN6nrVoOgICFm6mdL.jpg",
             "screenshots": screenshots.BAREFOOT_GEN,
             "my_review": ReactDomServer.renderToString(TemplateReview(screenshots.BAREFOOT_GEN)),
             "my_tags": [
-
+                "Japanese anime",
+                "Sad",
+                "Depressing",
+                "Bleak",
+                "Profound",
+                "Effects of the Hiroshima atomic bombing"
             ],
         },
 
@@ -2817,6 +2834,22 @@ const database = {
     },
 
     I: {
+        "island_etude": {
+            "letterboxd_url": "https://boxd.it/42L6",
+            "my_rating": 8.0,
+            "my_tags": [
+                "Taiwan", 
+                "Cycling", 
+                "Travelling", 
+                "Seeking purpose in your life",
+                "Humble character",
+                "Poignant",
+                "Quiet",
+                "Reference to Jonathan Livingston Seagull"
+            ],
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/3zZjPtQaxBFMksf1XKKOALRbQGS.jpg"
+        },
+
         "in_the_mouth_of_madness": {
             "letterboxd_url": "https://boxd.it/26vi",
             "my_rating": 8.5,
@@ -3470,6 +3503,19 @@ const database = {
     },
     
     N: {
+        "not_one_less": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/1b58",
+            "my_tags": [
+                "Rural China",
+                "Uplifting",
+                "Perspective enhancing",
+                "Natural/authentic/raw filmmaking style",
+            ],
+            "gradual_interest": [8, 8, 7, 6, 6, 6, 6, 6, 7, 8, 8],
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/7m3OXTCJQprqVRYx2HjMH7lYJty.jpg",
+        },
+
         "nasu_a_migratory_bird_with_suitcase": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/bfA",
@@ -3751,6 +3797,17 @@ const database = {
     },
 
     R: {
+        "ribbon": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/v2Gk",
+            "my_tags": [
+                "Quiet",
+                "Poignant",
+                "Art class nostalgia",
+                "Set during COVID-19 pandemic",
+            ],
+        },
+
         "red_post_on_escher_street": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/pdpi",
@@ -3885,6 +3942,20 @@ const database = {
     },
 
     S: {
+        "sleepless_beauty": {
+            "my_rating": 8.0,
+            "letterboxd_url": "https://boxd.it/peIU",
+            "my_tags": [
+                "Disturbing",
+                "Bleak",
+                "Virtual Reality",
+                "Dark web",
+                "Incredible animation sequences",
+                "Challenging to watch at times",
+            ],
+            "custom_poster_url": "https://image.tmdb.org/t/p/original/61NiqfO7i5eUBQANHuaqUoBMy1S.jpg",
+        },
+
         "saint_ange": {
             "my_rating": 8.0,
             "letterboxd_url": "https://boxd.it/1Chg",

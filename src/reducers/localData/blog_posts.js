@@ -15,9 +15,16 @@ import { post as MyMostListenedSongsOf2020Post } from '../websiteContent/blog/my
 import { post as MyMostListenedSongsOf2016Post } from '../websiteContent/blog/my_most_listened_songs_of_2014_2015_2016/post';
 import { Post as OurMoon } from '../websiteContent/blog/our_moon/post';
 import { post as Top25FavouriteChillstepSongs } from '../websiteContent/blog/top_25_favourite_chillstep_songs/post';
-
+import { post as SolarFlares } from '../websiteContent/blog/solar_flares/post';
 
 export const blog_posts = [
+    {
+        id: "31",
+        date: "29 May 2024",
+        title: "Solar Flares",
+        content: ReactDomServer.renderToString(SolarFlares()),
+        tags: ["Astronomy"]
+    },
     {
         id: "30",
         date: "6 May 2024",

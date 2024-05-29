@@ -175,6 +175,7 @@ def artist_name_doesnt_match_with_lastfm(folder_name, artist_name):
     else:
         return artist_name
 
+
 def update_mismatching_lastfm_urls():
     """
     Maybe do it this way instead...

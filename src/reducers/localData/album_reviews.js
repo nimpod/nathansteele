@@ -1712,7 +1712,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/6PFPjumGRpZnBzqnDci6qJ?si=zgoR-iP-TrS-WshQFRO52g",
 			year_of_release: "2000",
 			year_of_discovery: "2016",
-			genres: "Nu metal; Alternative rock; Industrial rock; Electronic",
+			genres: "Nu metal",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/cc15ebc58ec625979776cabaaaa282fa.jpg#cc15ebc58ec625979776cabaaaa282fa",
 			my_rating: 10,
 			my_review: "",
