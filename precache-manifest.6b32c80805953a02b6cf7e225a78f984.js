@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f9ff780c6f6d07726be9be50b22641f2",
+    "revision": "728db91bb5fce224d4d10b4a0b3cc165",
     "url": "/nathansteele/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "8f0ca1efd06bebcaab22",
+    "revision": "c3398420f25f757a9e6c",
     "url": "/nathansteele/static/css/main.405f4a60.chunk.css"
   },
   {
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nathansteele/static/js/2.207dc2c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8f0ca1efd06bebcaab22",
-    "url": "/nathansteele/static/js/main.308b4361.chunk.js"
+    "revision": "c3398420f25f757a9e6c",
+    "url": "/nathansteele/static/js/main.160d7a83.chunk.js"
   },
   {
     "revision": "c3b9415d4bffb4365030",
     "url": "/nathansteele/static/js/runtime-main.a2f3e498.js"
   },
   {
-    "revision": "0219f3669a1f5f4480598f2e76ad5b29",
-    "url": "/nathansteele/static/media/2024_auroras.0219f366.jpg"
+    "revision": "c3e8249bc1df7d3d25ac73e0730fcfad",
+    "url": "/nathansteele/static/media/2024_auroras.c3e8249b.jpg"
   },
   {
     "revision": "f203ce3b492a7f4978672bb332775af9",
