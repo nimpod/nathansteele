@@ -5,10 +5,24 @@ export const post = () => (
     <div className='top-25-favourite-chillstep-songs'>
         <div className='intro-text blog-subsection' id='section1'>
             <h3 className='subgroup-title'></h3>
-            <p>Chillstep is a beautiful genre of electronic music. Specifically, a sub-genre of dubstep, but also exists somewhere between ambient, future garage, deep house, liquid D&B, and EDM.</p>
-            <p>I started listening to these types of songs around 2011, when I was 14 years old, beginning my own exploration of electronic music. It was probably the first type of music that ever resonated with me. Naturally I have a lot of nostalgia associated with those songs. Some haven't passed the test of time, but many have!</p>
+            <p>
+                Chillstep is a beautiful genre of electronic music. 
+                Specifically, a sub-genre of dubstep, but also exists somewhere between ambient, future garage, deep house, downtempo, liquid D&B, and EDM.
+            </p>
+            <p>
+                I started listening to these types of songs around 2011, when I was 14 years old, beginning my own exploration of electronic music. 
+                It was probably the first type of music that ever resonated with me. 
+                Naturally I have a lot of nostalgia associated with those songs. 
+                Some haven't passed the test of time, but many have! Only 25 of the best, most timeless tracks made it into this list.
+            </p>
             <p>I discovered most of these songs from compilations uploaded to youtube around 2011-2015 by channels like 'MrRevillz',' MrSuicideSheep', 'Liquicity', '17Tumba', and 'UKF'.</p>
-            <p>You can find the full list <a href="https://www.youtube.com/playlist?list=PL_m58L0UBc3XUhrKFistJAfysZatPRFW6">here</a> via a youtube playlist. The full list contains 200+ songs, however in this blog post I'll just cover my top 25.</p>
+            <p>
+                You can find the full list via <a href="https://www.youtube.com/playlist?list=PL_m58L0UBc3XUhrKFistJAfysZatPRFW6">my YouTube playlist</a>, or via <a href="https://open.spotify.com/playlist/4YVasZ9zl4YjNi0kndvC2L?si=83da3ad7fd1846a7">my Spotify playlist</a>. 
+                The YouTube playlist is better because a lot of my personal favourites are remixes that I can't find on Spotify, and only exist on YouTube.
+                But Spotify has it benefits too.
+                The full list contains 400+ songs, however in this blog post I'll just cover my top 25.
+            </p>
+            <iframe src="https://open.spotify.com/embed/playlist/4YVasZ9zl4YjNi0kndvC2L?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         <div className='blog-subsection' id='track1'>
             <h3 className='subgroup-title'>
