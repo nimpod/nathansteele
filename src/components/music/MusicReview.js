@@ -29,6 +29,7 @@ class MusicReview extends React.Component {
         let review_id_of_next_album = "";
         let review_id_of_prev_album = "";
         let no_spotify_str = "";
+        let no_rym_str = "";
         let my_rating_nodp = "";
 
         custom_album_cover_url = (this.props.album_data.custom_cover_url !== undefined) ? this.props.album_data.custom_cover_url : this.props.album_data.album_cover_url;
@@ -51,6 +52,9 @@ class MusicReview extends React.Component {
 
         if (this.props.album_data.spotify_url == undefined) {
             no_spotify_str = "notOnSpotify";
+        }
+        if (this.props.album_data.rym_url == undefined) {
+            no_rym_str = "notOnRYM";
         }
         if (this.props.album_data.my_rating_nodp !== undefined) {
             my_rating_nodp = this.props.album_data.my_rating_nodp;
@@ -98,7 +102,7 @@ class MusicReview extends React.Component {
                                     {/* Links */}
                                     <div className='links' title="Links">
                                         <a className='album-lastfm-link' href={this.props.album_data.lastfm_url} target='_blank'>LastFM</a>
-                                        <a className='album-rym-link' href={this.props.album_data.rym_url} target='_blank'>RYM</a>
+                                        <a className={`album-rym-link ${no_rym_str}`} href={this.props.album_data.rym_url} target='_blank'>RYM</a>
                                         <a className={`album-spotify-link ${no_spotify_str}`} href={this.props.album_data.spotify_url} target='_blank'>Spotify</a>
                                         {
                                             (no_spotify_str.length > 1) ? <a className={`album-youtube-link`} href={this.props.album_data.youtube_url} target='_blank'>YouTube</a> : null

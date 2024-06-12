@@ -156,6 +156,10 @@ def album_name_doesnt_match_with_lastfm(folder_name, album_name):
         return 'Patlabor 2 the Movie'
     elif 'Brad Mehldau - Taming The Dragon' in folder_name:
         return 'Mehliana: Taming the Dragon'
+    elif 'Karl Jenkins - Motets' in folder_name:
+        return 'Karl Jenkins: Motets'
+    elif "death's dynamic shroud - Reality 2 Archive of Fading Mist (Part ii)" in folder_name:
+        return "Reality 2 : Archive of Fading Mist (part ii)"
     #elif 'Penguin Cafe - Rain Before Seven':
     #    return 'Rain Before Seven...'
     #elif 'Opposite Day - What Is Is':

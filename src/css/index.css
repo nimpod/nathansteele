@@ -2946,8 +2946,9 @@ div.btn.films-reset-filters-btn svg {
 .links > a.album-spotify-link {
   border-color: rgba(21, 201, 90, 0.718) !important;
 }
-.links > a.album-spotify-link.notOnSpotify {
-  opacity: 0.2;
+.links > a.album-spotify-link.notOnSpotify,
+.links > a.album-rym-link.notOnRYM {
+  opacity: 0.4;
   cursor: not-allowed;
 }
 .links > a.album-youtube-link {
