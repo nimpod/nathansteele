@@ -2946,8 +2946,9 @@ div.btn.films-reset-filters-btn svg {
 .links > a.album-spotify-link {
   border-color: rgba(21, 201, 90, 0.718) !important;
 }
-.links > a.album-spotify-link.notOnSpotify,
-.links > a.album-rym-link.notOnRYM {
+
+.links > a.noLink {
+  /* applies to any anchor tag with this classname (before I was typing this out for each type of link) */
   opacity: 0.4;
   cursor: not-allowed;
 }
@@ -3183,8 +3184,10 @@ div.btn.films-reset-filters-btn svg {
   padding: 30px;
 }
 .music-page-container {
+  /*
   display: grid;
   grid-template-columns: 20% 80%;
+  */
 }
 
 .custom-card {
@@ -3213,7 +3216,7 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region ------------< 11.1) Top Albums List >------------ */
 :root {
-  --albums-displayed-per-row: 5;
+  --albums-displayed-per-row: 6;
   --album-cover-border-radius: 0.5rem;
 }
 
@@ -3244,6 +3247,30 @@ div.btn.filter-list-by-album-property {
 div.btn.filter-list-by-album-property > .item-text {
   margin-right: 6px;
 }
+
+#filtered-albums-list-info:not(.filters-active) {
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+#filtered-albums-list-info.filters-active {
+  color: var(--text);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+#filtered-albums-list-info p {
+  margin-right: 20px;
+  color: var(--text-much-darker);
+}
+#filtered-albums-list-info p span {
+  color: var(--text);
+  background-color: rgb(53, 53, 55);
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+
 
 /*
 div.btn.filter-list-by-artist-btn {

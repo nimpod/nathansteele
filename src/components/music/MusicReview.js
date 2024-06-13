@@ -30,6 +30,7 @@ class MusicReview extends React.Component {
         let review_id_of_prev_album = "";
         let no_spotify_str = "";
         let no_rym_str = "";
+        let no_youtube_str = "";
         let my_rating_nodp = "";
 
         custom_album_cover_url = (this.props.album_data.custom_cover_url !== undefined) ? this.props.album_data.custom_cover_url : this.props.album_data.album_cover_url;
@@ -50,12 +51,18 @@ class MusicReview extends React.Component {
             artist_name = this.props.album_data.artist_name_displayed;
         }
 
-        if (this.props.album_data.spotify_url == undefined) {
-            no_spotify_str = "notOnSpotify";
+        // check if I put any links in...
+        if (this.props.album_data.spotify_url == undefined || this.props.album_data.spotify_url.length == 0) {
+            no_spotify_str = "noSpotifyLink noLink";
         }
-        if (this.props.album_data.rym_url == undefined) {
-            no_rym_str = "notOnRYM";
+        if (this.props.album_data.rym_url == undefined || this.props.album_data.rym_url.length == 0) {
+            no_rym_str = "noRYMLink noLink";
         }
+        if (this.props.album_data.youtube_url == undefined) {
+            no_youtube_str = "noYoutubeLink noLink";
+        }
+
+        // my rating without any decimal places...
         if (this.props.album_data.my_rating_nodp !== undefined) {
             my_rating_nodp = this.props.album_data.my_rating_nodp;
         }
@@ -105,7 +112,7 @@ class MusicReview extends React.Component {
                                         <a className={`album-rym-link ${no_rym_str}`} href={this.props.album_data.rym_url} target='_blank'>RYM</a>
                                         <a className={`album-spotify-link ${no_spotify_str}`} href={this.props.album_data.spotify_url} target='_blank'>Spotify</a>
                                         {
-                                            (no_spotify_str.length > 1) ? <a className={`album-youtube-link`} href={this.props.album_data.youtube_url} target='_blank'>YouTube</a> : null
+                                            (no_spotify_str.length > 1) ? <a className={`album-youtube-link ${no_youtube_str}`} href={this.props.album_data.youtube_url} target='_blank'>YouTube</a> : null
                                         }
                                     </div>
 

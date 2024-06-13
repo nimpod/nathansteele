@@ -2,54 +2,17 @@ import React, { Component } from 'react';
 import { connect }  from 'react-redux';
 
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
+import { AlbumProperties } from '../../js/enums.js';
+import TopTracksList from './TopTracksList.js';
 import AlbumGridElement from './AlbumGridElement';
 import {
     handle_filter_button_toggling_stuff,
-    toggle_dropdown_list,
-    remove_genre_duplicates,
+    // toggle_dropdown_list,
+    // remove_genre_duplicates,
     // toggle_dropdown_list_arrow_icon,
     // remove_class_from_item_when_user_clicks_outside_of_item
 } from '../../js/helpers.js';
 
-
-const enumValue = (name) => Object.freeze({toString: () => name});
-
-/**
- * Time period options for top 100 tracks (this is nothing to do with top albums list)
- */
-const TimePeriodOptions = Object.freeze({
-    ALL_TIME: enumValue("all_time"),
-    LAST_12_MONTHS: enumValue("last_12_months"),
-    LAST_6_MONTHS: enumValue("last_6_months"),
-    LAST_3_MONTHS: enumValue("last_3_months"),
-    LAST_MONTH: enumValue("last_month"),
-    LAST_7_DAYS: enumValue("last_7_days"),
-});
-const TimePeriodOptionsStr = Object.freeze({
-    ALL_TIME: "All Time",
-    LAST_12_MONTHS: "Last 12 months",
-    LAST_6_MONTHS: "Last 6 months",
-    LAST_3_MONTHS:"Last 3 months",
-    LAST_MONTH: "Last month",
-    LAST_7_DAYS: "Last 7 days",
-})
-const time_period_options = [
-    TimePeriodOptions.ALL_TIME.toString(),
-    TimePeriodOptions.LAST_12_MONTHS.toString(),
-    TimePeriodOptions.LAST_6_MONTHS.toString(),
-    TimePeriodOptions.LAST_3_MONTHS.toString(),
-    TimePeriodOptions.LAST_MONTH.toString(),
-    TimePeriodOptions.LAST_7_DAYS.toString(),
-]
-
-/**
- * Properties of an album, useful for filtering the list.
- */
-const AlbumProperties = Object.freeze({
-    ARTIST_NAME: enumValue("artist_name"),
-    GENRES: enumValue("genres"),
-    YEAR: enumValue("year_of_release"),
-})
 
 const MIN_GENRE_COUNT_TO_BE_DISPLAYED = 4;
 const MIN_ARTIST_COUNT_TO_BE_DISPLAYED = 2;
@@ -79,13 +42,34 @@ class Music extends Component {
     }
 
     /**
-     * Generate colour based on play count
-     * @param {*} play_count 
+     * Low numbers = Bad
+     * High numbers = Good
+     * 
+     * For example...
+     *  A play_count (the higher the number the more you've played the song)
+     *  An album rating out of 10 (the higher the number the better the album)
+     * @param {*} num 
      */
-    generate_bg_colour_of_play_count(play_count, max) {
-        let Red = 255 - (255 * (play_count / max));
-        let Green = 255 * (play_count / max);
+    generate_colour_v1(num, max) {
+        let Red = 255 - (255 * (num / max));
+        let Green = 255 * (num / max);
         let Blue = 100;
+        return 'rgb(' + Red + ',' + Green + ',' + Blue + ')'; 
+    }
+
+    /**
+     * Low numbers = Good
+     * High numbers = Bad
+     * 
+     * For example...
+     *  A position in a list (the lower the number the better, because you want to be #1)
+     * @param {*} num 
+     * @param {*} max 
+     */
+    generate_colour_v2(num, max) {
+        let Red = 255 - (255 * (num / max));
+        let Green = 255 * (num / max);
+        let Blue = 250;
         return 'rgb(' + Red + ',' + Green + ',' + Blue + ')'; 
     }
 
@@ -108,7 +92,7 @@ class Music extends Component {
             let track = tracks[i];
             let play_count = Number(track.getAttribute('data-playcount'));
             let play_count_div = track.children[2];
-            play_count_div.style.backgroundColor = this.generate_bg_colour_of_play_count(play_count, highest_play_count);
+            play_count_div.style.backgroundColor = this.generate_colour_v1(play_count, highest_play_count);
         }
     }
     
@@ -376,6 +360,122 @@ class Music extends Component {
     }
 
     /**
+     * 
+     * @param {*} albums_displayed 
+     * @param {*} filter_info_div 
+     * @returns 
+     */
+    calculate_avgs(albums_displayed, filter_info_div) {
+        let positions = [];
+        let ratings = [];
+        let num_of_albums = 0;
+        let avg_pos = 0;
+        let avg_rating = 0;
+
+        // extract list of ratings, and list of positions...
+        for (let i = 0; i < albums_displayed.length; i++) {
+            // get all details about this current album...
+            let album = albums_displayed[i];
+            
+            // list of all this artist's album positions...
+            positions.push(album['position']);
+
+            // list of all this artist's album ratings...
+            if (album['my_rating'] !== undefined) { ratings.push(album['my_rating']); }
+
+            // keep track of total number of album's this artist is associated with...
+            num_of_albums += 1;
+        }
+        
+        // calculate averages...
+        avg_pos = positions.reduce((a, b) => a + b, 0) / positions.length;
+        avg_rating = ratings.reduce((a, b) => a + b, 0) / ratings.length;
+
+        // round to 2 dp...
+        avg_pos = avg_pos.toFixed(0);
+        avg_rating = avg_rating.toFixed(2);
+
+        // make numbers colourful...
+        let DOM_avg_pos = filter_info_div.children[0].children[0];
+        let DOM_avg_rating = filter_info_div.children[1].children[0];
+        DOM_avg_pos.style.color = this.generate_colour_v2(avg_pos, this.props.top_albums.length);
+        DOM_avg_rating.style.color = this.generate_colour_v1(avg_rating, 10.0);
+
+        return {
+            "avg_pos": avg_pos,
+            "avg_rating": avg_rating,
+            "num_of_albums": num_of_albums
+        }
+    }
+
+    /**
+     * 
+     * @param {*} albums_displayed 
+     * @param {*} current_filter 
+     * @param {*} default_filter 
+     * @returns 
+     */
+    show_filter_info(albums_displayed) {
+        let num_of_albums = 0;
+        let avg_pos = 0;
+        let avg_rating = 0;
+        let filter_criteria = "";
+
+        if (this.state.__current_artist_filter !== this.state.__default_artist_filter) {
+            // Filtering by ARTIST
+            let filter_info_div = document.getElementById('filtered-albums-list-info');
+            if (filter_info_div !== null) {
+                filter_info_div.classList.add('filters-active');
+                filter_criteria = this.state.__current_artist_filter;
+
+                let obj = this.calculate_avgs(albums_displayed, filter_info_div);
+                avg_pos = obj['avg_pos'];
+                avg_rating = obj['avg_rating'];
+                num_of_albums = obj['num_of_albums'];
+            }
+        } else if (this.state.__current_genre_filter !== this.state.__default_genre_filter) {
+            // Filtering by GENRE
+            let filter_info_div = document.getElementById('filtered-albums-list-info');
+            if (filter_info_div !== null) {
+                filter_info_div.classList.add('filters-active');
+                filter_criteria = this.state.__current_genre_filter;
+
+                let obj = this.calculate_avgs(albums_displayed, filter_info_div);
+                avg_pos = obj['avg_pos'];
+                avg_rating = obj['avg_rating'];
+                num_of_albums = obj['num_of_albums'];
+            }
+        } else if (this.state.__current_year_filter !== this.state.__default_year_filter) {
+            // Filtering by YEAR
+            let filter_info_div = document.getElementById('filtered-albums-list-info');
+            if (filter_info_div !== null) {
+                filter_info_div.classList.add('filters-active');
+                filter_criteria = this.state.__current_year_filter;
+
+                let obj = this.calculate_avgs(albums_displayed, filter_info_div);
+                avg_pos = obj['avg_pos'];
+                avg_rating = obj['avg_rating'];
+                num_of_albums = obj['num_of_albums'];
+            }
+        } else {
+            let filter_info_div = document.getElementById('filtered-albums-list-info');
+            if (filter_info_div !== null) {
+                filter_info_div.classList.remove('filters-active');
+            }
+        }
+
+        const info = {
+            "filter_criteria": filter_criteria,
+            "num_of_albums": num_of_albums,
+            "avg_pos": avg_pos,
+            "avg_rating": avg_rating,
+        }
+
+        console.log(info);
+        return info;
+    }
+
+    /**
      * Render function
      * @returns 
      */
@@ -384,7 +484,8 @@ class Music extends Component {
 
         // get items for current page...
         const albums_displayed = this.state.__filtered_data;
-        
+        const filter = this.show_filter_info(albums_displayed, this.state.__current_artist_filter, this.state.__default_artist_filter);
+
         // generate lists...
         const all_artists_album_count = this.find_num_of_albums(AlbumProperties.ARTIST_NAME.toString(), this.state.__default_artist_filter);
         const all_genres_album_count = this.find_num_of_albums(AlbumProperties.GENRES.toString(), this.state.__default_genre_filter);
@@ -397,77 +498,12 @@ class Music extends Component {
             <div className='page-wrapper' id="music-page">
                 <div className='section-inner'>
                     <div className='music-page-container'>
-                        <div className='top-tracks-list-container custom-card'>
-                            {/* Title */}
-                            <div className='card-title'>
-                                <span>My {Object.keys(this.props.top_tracks.overall).length} most listened songs</span>
-                                <div className='more-info'>
-                                    <span>*since October 2020</span>
-                                </div>
-                            </div>
-
-                            {/* filter buttons */}
-                            <div className='btns'>
-                                {/* Time period */}
-                                <div className='filter-by-timePeriod-btn filter-by-something-container'>
-                                    <div className='dropdown-list-timePeriod-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-timePeriod')}>
-                                        <span>All time</span>
-                                        <ArrowDownIcon className='invertable-icon' />
-                                    </div>
-                                    <div className='dropdown-list-timePeriod dropdown-list'>
-                                        <div className='dropdown-list-title'>Filter by time period</div>
-                                        {
-                                            time_period_options.map((time_period => {
-                                                return <div className="btn tracks-filter-by-timePeriod-btn" key={time_period} onClick={(e) => this.filter_by_time_period(e, time_period)}>
-                                                    <span className='timePeriod-text'>{time_period}</span>
-                                                </div>
-                                            }))
-                                        }
-                                    </div>
-                                </div>
-
-                                {/* Genres */}
-                                {/*}
-                                <div className='filter-by-genre-btn filter-by-something-container'>
-                                    <div className='dropdown-list-btn filter-btn filter-genre'>
-                                        <span>All genres</span>
-                                        <ArrowDownIcon className='invertable-icon' />
-                                    </div>
-                                </div>
-                                */}
-                            </div>
-                            
-                            {/* Divider */}
-                            <div className='card-divider'></div>
-
-                            {/* Column names */}
-                            <div className='top-tracks-list-columnNames'>
-                                <div className='col position-th'>#</div>
-                                <div className='col'></div>
-                                <div className='col play-count-th'>Scrobbles</div>
-                            </div>
-
-                            {/* Actual list */}
-                            <div className='top-tracks-list'>
-                                {top_tracks_list.map(t => {
-                                    return <a className='track-container' href={t.lastfm_track_url} target="_blank" id={`track-${t.position}`} data-playcount={t.play_count} key={t.lastfm_track_url}>
-                                        <div className='col position'>{t.position}</div>
-                                        <div className='col track-info'>
-                                            {/*}
-                                            <img className='album-cover' src={t.album_cover} width={30} height={30} />
-                                            */}
-                                            <div className='artist-and-track-name-container'>
-                                                <span className='track-name'>{t.track_name}</span>
-                                                <span className='artist-name'>{t.artist_name}</span>
-                                            </div>
-                                        </div>
-                                        <div className='col play-count'>
-                                            <span>{t.play_count}</span>
-                                        </div>
-                                    </a>
-                                })}
-                            </div>
-                        </div>
+                        {/*
+                        <TopTracksList
+                            list={this.props.top_tracks.overall} 
+                            filter_by_time_period={this.filter_by_time_period}
+                        />
+                        */}
 
                         <div className='top-albums-list-container custom-card'>
                             {/* Title */}
@@ -513,6 +549,14 @@ class Music extends Component {
                                         }))
                                     }
                                 </div>
+                            </div>
+
+                            {/* Information about what is currently being filtered (if anything) */}
+                            <div id="filtered-albums-list-info">
+                                <p className={`avgPos_`+filter['avg_pos']}>Average position: <span>{filter['avg_pos']}</span></p>
+                                <p className={`avgRating_`+filter['avg_rating']}>Average rating: <span>{filter['avg_rating']}</span></p>
+                                <p className={`numOfAlbums_`+filter['num_of_albums']}>Num of albums: <span>{filter['num_of_albums']}</span></p>
+                                <p>Filtered by <span>{filter['filter_criteria']}</span></p>
                             </div>
 
                             {/* Top albums list */}
