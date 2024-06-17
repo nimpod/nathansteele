@@ -7,9 +7,9 @@ import React from 'react';
 import { get_album_review_id, get_film_review_id, remove_special_characters_for_musicbee_export } from '../js/helpers.js';
 
 // import local data json files...
-import { film_reviews as localdata_film_reviews } from './localData/film_reviews.js';
-import { album_reviews as localdata_album_reviews } from './localData/album_reviews.js';
-import { blog_posts as localdata_blog_posts } from './localData/blog_posts.js';
+import { film_reviews as localdata_film_reviews } from './localData/films/film_reviews.js';
+import { album_reviews as localdata_album_reviews } from './localData/albums/album_reviews.js';
+import { blog_posts as localdata_blog_posts } from './localData/blog/blog_posts.js';
 
 // import webdata...
 let webdata_top_tracks = require('../components/music/webdata_top_tracks_list.json');
@@ -111,6 +111,7 @@ const merge_albums_data = (init_state) => {
         let prevAlbum = mergedData[v["position"] - 2];
         let nextAlbum = mergedData[v["position"]];
         
+        console.log(mergedData);
         v["artist_name_backend"] = remove_special_characters_for_musicbee_export(v["artist_name"]);
         v["album_name_backend"] = remove_special_characters_for_musicbee_export(v["album_name"]);
 

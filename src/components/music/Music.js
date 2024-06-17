@@ -487,7 +487,7 @@ class Music extends Component {
         const filter = this.show_filter_info(albums_displayed, this.state.__current_artist_filter, this.state.__default_artist_filter);
 
         // generate lists...
-        const all_artists_album_count = this.find_num_of_albums(AlbumProperties.ARTIST_NAME.toString(), this.state.__default_artist_filter);
+        const all_artists_album_count = this.find_num_of_albums(AlbumProperties.ARTIST_NAME.toString(), this.state.__default_artist_filter.toLowerCase());
         const all_genres_album_count = this.find_num_of_albums(AlbumProperties.GENRES.toString(), this.state.__default_genre_filter);
         const all_years_album_count = this.find_num_of_albums(AlbumProperties.YEAR.toString(), this.state.__default_year_filter);
 

@@ -4,11 +4,11 @@
  */
 
 import ReactDomServer from 'react-dom/server';
-import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../js/helpers.js';
+import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../../js/helpers.js';
 
-import { review as YesFlyFromHereReview } from '../websiteContent/albums/yes-fly_from_here/review.jsx';
-import { review as BocMHTRTCReview } from '../websiteContent/albums/boards_of_canada-music_has_the_right_to_children/review.jsx';
-import { review as ChisatoYamadaReview } from '../websiteContent/albums/chisato_yamada-suite_nihonkai/review.jsx';
+import { review as YesFlyFromHereReview } from './content/yes-fly_from_here/review.jsx';
+import { review as BocMHTRTCReview } from './content/boards_of_canada-music_has_the_right_to_children/review.jsx';
+import { review as ChisatoYamadaReview } from './content/chisato_yamada-suite_nihonkai/review.jsx';
 
 
 // [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut for this particular file!
@@ -192,7 +192,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/6sSb8m6MPGJIEMKH8FWCS0?si=CzLBMszvQKyoLvS-8YRJ5g",
 			year_of_release: "1968",
 			year_of_discovery: "2021",
-			genres: "Sunshine Pop; Psychedelic Pop; Baroque pop",
+			genres: "Sunshine Pop; Psychedelic pop; Baroque pop",
 			my_rating: 8.5,
 			my_review: "",
 		},
@@ -245,8 +245,8 @@ const database = {
 		},
 		"altJ__this_is_all_yours": {
 			lastfm_url: "https://www.last.fm/music/alt-J/This+Is+All+Yours",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/alt-j/this-is-all-yours/",
+			spotify_url: "https://open.spotify.com/album/5GijmnuzQJgJOiL5BpL9Tu?si=dMRpwTImQPWG_P9eOUd_Ow",
 			year_of_release: "2014",
 			year_of_discovery: "2014",
 			genres: "Indie pop; Indie rock; Indietronica",
@@ -2812,6 +2812,30 @@ const database = {
 			my_review: "",
 		},
 
+		//
+		"sounds_from_the_ground__mosaic": {
+			lastfm_url: "https://www.last.fm/music/Sounds+from+the+Ground/Mosaic",
+			rym_url: "https://rateyourmusic.com/release/album/sounds-from-the-ground/mosaic/",
+			spotify_url: "https://open.spotify.com/album/1qiHm61y08CpA4QNL3XaPp?si=Zm6V-DLrTSOHZ2oYkBeTaQ",
+			year_of_release: "1999",
+			year_of_discovery: "2024",
+			genres: "Ambient; Ambient dub; Downtempo; Electronic",
+			custom_cover_url: "https://f4.bcbits.com/img/a1960581482_65",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"sounds_from_the_ground__luminal": {
+			lastfm_url: "https://www.last.fm/music/Sounds+from+the+Ground/Luminal",
+			rym_url: "https://rateyourmusic.com/release/album/sounds-from-the-ground/luminal/",
+			spotify_url: "https://open.spotify.com/album/7AvcYCmovzkI2Xtt28y5w9?si=CzpdkOBpSZ-lsqcYUTafCA",
+			year_of_release: "2005",
+			year_of_discovery: "2024",
+			genres: "Ambient; Ambient dub; Downtempo; Trip hop; Electronic",
+			custom_cover_url: "https://f4.bcbits.com/img/a3859474998_65",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
 
 		"silverstein__i_am_alive_in_everything_i_touch": {
 			lastfm_url: "https://www.last.fm/music/Silverstein/I+Am+Alive+in+Everything+I+Touch",
@@ -2850,7 +2874,7 @@ const database = {
 			year_of_release: "2020",
 			year_of_discovery: "2020",
 			genres: "Drill and bass; Breakcore; Glitch; IDM; Jungle; Electronic",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"senri_kawaguchi__cider_hard_and_sweet": {
@@ -2973,17 +2997,6 @@ const database = {
 			year_of_discovery: "2022",
 			genres: "Post-rock; Ambient; Minimalism",
 			my_rating: 8.5,
-			my_review: "",
-		},
-		"sounds_from_the_ground__mosaic": {
-			lastfm_url: "https://www.last.fm/music/Sounds+from+the+Ground/Mosaic",
-			rym_url: "https://rateyourmusic.com/release/album/sounds-from-the-ground/mosaic/",
-			spotify_url: "https://open.spotify.com/album/1qiHm61y08CpA4QNL3XaPp?si=Zm6V-DLrTSOHZ2oYkBeTaQ",
-			year_of_release: "1999",
-			year_of_discovery: "2024",
-			genres: "Ambient; Ambient dub; Downtempo; Electronic",
-			custom_cover_url: "https://f4.bcbits.com/img/a1960581482_65",
-			my_rating: 8.0,
 			my_review: "",
 		},
 		"sophie__oil_of_every_pearls_un_insides": {
@@ -3136,7 +3149,7 @@ const database = {
 
 		//
 		"worlds_end_girlfriend__hurtbreak_wonderland": {
-			custom_cover_url: require('../websiteContent/albums/worlds_end_girlfriend__hurtbreak_wonderland/album_cover.jpg'),
+			custom_cover_url: require('./content/worlds_end_girlfriend__hurtbreak_wonderland/album_cover.jpg'),
 			lastfm_url: "https://www.last.fm/music/World%27s+End+Girlfriend/Hurtbreak+Wonderland",
 			rym_url: "",
 			spotify_url: "https://open.spotify.com/album/7KtBhRWitpnHoma8UWiDgz?si=dhQ99k1YT3-tdBWS46M7GA",
@@ -3348,7 +3361,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Yes/Fly+From+Here",
 			rym_url: "https://rateyourmusic.com/release/album/yes/fly-from-here/",
 			youtube_url: "https://www.youtube.com/watch?v=SEs-i9kMpKg",
-			custom_cover_url: require('../websiteContent/albums/yes-fly_from_here/custom_album_cover.jpg'),
+			custom_cover_url: require('./content/yes-fly_from_here/custom_album_cover.jpg'),
 			year_of_release: "2011",
 			genres: "Progressive rock; Symphonic prog; Progressive pop",
 			my_rating: 10,

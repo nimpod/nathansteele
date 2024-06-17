@@ -4,110 +4,110 @@
  */
 
 import ReactDomServer from 'react-dom/server';
-import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../js/helpers.js';
+import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../../js/helpers.js';
 
-import { review as TemplateReview } from '../websiteContent/films/template_review.jsx';
-import { review as AGhostStoryReview } from '../websiteContent/films/a_ghost_story/review.jsx';
-import { review as ChildrenOfTheSeaReview } from '../websiteContent/films/children_of_the_sea/review.jsx';
-import { review as ArriettyReview } from '../websiteContent/films/the_secret_world_of_arrietty/review.jsx';
-import { review as PoupelleOfChimmneyTownReview } from '../websiteContent/films/poupelle_of_chimmney_town/review.jsx';
-import { review as WhiteGodReview } from '../websiteContent/films/white_god/review.jsx';
-import { review as TetsuoTheBulletManReview } from '../websiteContent/films/tetsuo_the_bullet_man/review.jsx';
-import { review as FlatlandReview } from '../websiteContent/films/flatland/review.jsx';
-import { review as FeastReview } from '../websiteContent/films/feast/review.jsx';
-import { review as BigFishAndBegoniaReview } from '../websiteContent/films/big_fish_and_begonia/review.jsx';
-import { review as WeMadeABeautifulBouquet } from '../websiteContent/films/we_made_a_beautiful_bouquet/review.jsx';
+import { review as TemplateReview } from './content/template_review.jsx';
+import { review as AGhostStoryReview } from './content/a_ghost_story/review.jsx';
+import { review as ChildrenOfTheSeaReview } from './content/children_of_the_sea/review.jsx';
+import { review as ArriettyReview } from './content/the_secret_world_of_arrietty/review.jsx';
+import { review as PoupelleOfChimmneyTownReview } from './content/poupelle_of_chimmney_town/review.jsx';
+import { review as WhiteGodReview } from './content/white_god/review.jsx';
+import { review as TetsuoTheBulletManReview } from './content/tetsuo_the_bullet_man/review.jsx';
+import { review as FlatlandReview } from './content/flatland/review.jsx';
+import { review as FeastReview } from './content/feast/review.jsx';
+import { review as BigFishAndBegoniaReview } from './content/big_fish_and_begonia/review.jsx';
+import { review as WeMadeABeautifulBouquet } from './content/we_made_a_beautiful_bouquet/review.jsx';
 /*
-import { review as AliensReview } from './websiteContent/films/aliens/review';
-import { review as ArrivalReview } from './websiteContent/films/arrival/review';
-import { review as BatmanReturnsReview } from './websiteContent/films/batman_returns/review';
-import { review as BelleReview } from './websiteContent/films/belle/review';
-import { review as BirdmanReview } from './websiteContent/films/birdman/review';
-import { review as BlackSheepReview } from './websiteContent/films/black_sheep/review';
-import { review as BoyhoodReview } from './websiteContent/films/boyhood/review';
-import { review as CadaverReview } from './websiteContent/films/cadaver/review';
-import { review as CarrieReview } from './websiteContent/films/carrie/review';
-import { review as CastawayOnTheMoonReview } from './websiteContent/films/castaway_on_the_moon/review';
-import { review as ChildrenOfMenReview } from './websiteContent/films/children_of_men/review';
-import { review as CloudAtlasReview } from './websiteContent/films/cloud_atlas/review';
-import { review as CocoReview } from './websiteContent/films/coco/review';
-import { review as ConfessionsReview } from './websiteContent/films/confessions/review';
-import { review as CoralineReview } from './websiteContent/films/coraline/review';
-import { review as CrawlReview } from './websiteContent/films/crawl/review';
-import { review as District9Review } from './websiteContent/films/district_9/review';
-import { review as DogvilleReview } from './websiteContent/films/dogville/review';
-import { review as EddieTheEagleReview } from './websiteContent/films/eadie_the_eagle/review';
-import { review as EuropaReportReview } from './websiteContent/films/europa_report/review';
-import { review as EvilDeadReview } from './websiteContent/films/evil_dead/review';
-import { review as EvilDeadRiseReview } from './websiteContent/films/evil_dead_rise/review';
-import { review as ExMachinaReview } from './websiteContent/films/ex_machina/review';
-import { review as ExteHairExtensionsReview } from './websiteContent/films/exte_hair_extensions/review';
-import { review as FantasticMrFoxReview } from './websiteContent/films/fantastic_mr_fox/review';
-import { review as FantasticPlanetReview } from './websiteContent/films/fantastic_planet/review';
-import { review as GremlinsReview } from './websiteContent/films/gremlins/review';
-import { review as HacksawRidgeReview } from './websiteContent/films/hacksaw_ridge/review';
-import { review as HellbenderReview } from './websiteContent/films/hellbender/review';
-import { review as HelterSkelterReview } from './websiteContent/films/helter_skelter/review';
-import { review as HerReview } from './websiteContent/films/her/review';
-import { review as HereditaryReview } from './websiteContent/films/hereditary/review';
-import { review as HowlsMovingCastleReview } from './websiteContent/films/howls_moving_castle/review';
-import { review as ImThinkingOfEndingThingsReview } from './websiteContent/films/im_thinking_of_ending_things/review';
-import { review as InfinityPoolReview } from './websiteContent/films/infinity_pool/review';
-import { review as KikisDeliveryServiceReview } from './websiteContent/films/kikis_delivery_service/review';
-import { review as LastSunriseReview } from './websiteContent/films/last_sunrise/review';
-import { review as LeaveNoTraceReview } from './websiteContent/films/leave_no_trace/review';
-import { review as LifeIsBeautifulReview } from './websiteContent/films/life_is_beautiful/review';
-import { review as LifeOfPiReview } from './websiteContent/films/life_of_pi/review';
-import { review as LionReview } from './websiteContent/films/lion/review';
-import { review as LoveExposureReview } from './websiteContent/films/love_exposure/review';
-import { review as MarcelTheShellWithShoesOnReview } from './websiteContent/films/marcel_the_shell_with_shoes_on/review';
-import { review as MissZombieReview } from './websiteContent/films/miss_zombie/review';
-import { review as MonstersReview } from './websiteContent/films/monsters/review';
-import { review as MonstersIncReview } from './websiteContent/films/monsters_inc/review';
-import { review as MotherReview } from './websiteContent/films/mother/review';
-import { review as MulhollandDriveReview } from './websiteContent/films/mulholland_drive/review';
-import { review as MyNeighbourTotoroReview } from './websiteContent/films/my_neighbour_totoro/review';
-import { review as NausicaaReview } from './websiteContent/films/nausicaa/review';
-import { review as NocturnalAnimalsReview } from './websiteContent/films/nocturnal_animals/review';
-import { review as NotesOnBlindnessReview } from './websiteContent/films/notes_on_blindness/review';
-import { review as OculusReview } from './websiteContent/films/oculus/review';
-import { review as ParasiteReview } from './websiteContent/films/parasite/review';
-import { review as PleasantvilleReview } from './websiteContent/films/pleasantville/review';
-import { review as PossessionReview } from './websiteContent/films/possession/review';
-import { review as PredestinationReview } from './websiteContent/films/predestination/review';
-import { review as PrincessMononokeReview } from './websiteContent/films/princess_mononoke/review';
-import { review as RevengeReview } from './websiteContent/films/revenge/review';
-import { review as RiseRoarRevoltReview } from './websiteContent/films/rise_roar_revolt/review';
-import { review as RockyReview } from './websiteContent/films/rocky/review';
-import { review as SevenYearsInTibetReview } from './websiteContent/films/seven_years_in_tibet/review';
-import { review as SlitherReview } from './websiteContent/films/slither/review';
-import { review as SnowpiercerReview } from './websiteContent/films/snowpiecer/review';
-import { review as SolarisReview } from './websiteContent/films/solaris/review';
-import { review as SoundOfMetalReview } from './websiteContent/films/sound_of_metal/review';
-import { review as SpiritedAwayReview } from './websiteContent/films/spirited_away/review';
-import { review as SplitReview } from './websiteContent/films/split/review';
-import { review as StarmanReview } from './websiteContent/films/starman/review';
-import { review as TagReview } from './websiteContent/films/tag/review';
-import { review as TheAgeOfAdalineReview } from './websiteContent/films/the_age_of_adaline/review';
-import { review as TheCuriousCaseOfBenjaminButtonReview } from './websiteContent/films/the_curious_case_of_benjamin_button/review';
-import { review as TheGirlWithTheDragonTattooReview } from './websiteContent/films/the_girl_with_the_dragon_tattoo/review';
-import { review as TheInvisibleManReview } from './websiteContent/films/the_invisible_man/review';
-import { review as TheLandOfCardsReview } from './websiteContent/films/the_land_of_cards/review';
-import { review as TheMapOfTinyPerfectThingsReview } from './websiteContent/films/the_map_of_tiny_perfect_things/review';
-import { review as TheMatrixReview } from './websiteContent/films/the_matrix/review';
-import { review as ThePerksOfBeingAWallflowerReview } from './websiteContent/films/the_perks_of_being_a_wallflower/review';
-import { review as TheShapeOfWaterReview } from './websiteContent/films/the_shape_of_water/review';
-import { review as TheStrangersReview } from './websiteContent/films/the_strangers/review';
-import { review as TheTagAlongReview } from './websiteContent/films/the_tag_along/review';
-import { review as TheWindRisesReview } from './websiteContent/films/the_wind_rises/review';
-import { review as ThemReview } from './websiteContent/films/them/review';
-import { review as VictoriaReview } from './websiteContent/films/victoria/review';
-import { review as WalleReview } from './websiteContent/films/walle/review';
-import { review as WavesReview } from './websiteContent/films/waves/review';
-import { review as WeNeedToTalkAboutKevinReview } from './websiteContent/films/we_need_to_talk_about_kevin/review';
-import { review as WolfChildrenReview } from './websiteContent/films/wolf_childrem/review';
-import { review as WrongReview } from './websiteContent/films/wrong/review';
-import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review';
+import { review as AliensReview } from './content/aliens/review';
+import { review as ArrivalReview } from './content/arrival/review';
+import { review as BatmanReturnsReview } from './content/batman_returns/review';
+import { review as BelleReview } from './content/belle/review';
+import { review as BirdmanReview } from './content/birdman/review';
+import { review as BlackSheepReview } from './content/black_sheep/review';
+import { review as BoyhoodReview } from './content/boyhood/review';
+import { review as CadaverReview } from './content/cadaver/review';
+import { review as CarrieReview } from './content/carrie/review';
+import { review as CastawayOnTheMoonReview } from './content/castaway_on_the_moon/review';
+import { review as ChildrenOfMenReview } from './content/children_of_men/review';
+import { review as CloudAtlasReview } from './content/cloud_atlas/review';
+import { review as CocoReview } from './content/coco/review';
+import { review as ConfessionsReview } from './content/confessions/review';
+import { review as CoralineReview } from './content/coraline/review';
+import { review as CrawlReview } from './content/crawl/review';
+import { review as District9Review } from './content/district_9/review';
+import { review as DogvilleReview } from './content/dogville/review';
+import { review as EddieTheEagleReview } from './content/eadie_the_eagle/review';
+import { review as EuropaReportReview } from './content/europa_report/review';
+import { review as EvilDeadReview } from './content/evil_dead/review';
+import { review as EvilDeadRiseReview } from './content/evil_dead_rise/review';
+import { review as ExMachinaReview } from './content/ex_machina/review';
+import { review as ExteHairExtensionsReview } from './content/exte_hair_extensions/review';
+import { review as FantasticMrFoxReview } from './content/fantastic_mr_fox/review';
+import { review as FantasticPlanetReview } from './content/fantastic_planet/review';
+import { review as GremlinsReview } from './content/gremlins/review';
+import { review as HacksawRidgeReview } from './content/hacksaw_ridge/review';
+import { review as HellbenderReview } from './content/hellbender/review';
+import { review as HelterSkelterReview } from './content/helter_skelter/review';
+import { review as HerReview } from './content/her/review';
+import { review as HereditaryReview } from './content/hereditary/review';
+import { review as HowlsMovingCastleReview } from './content/howls_moving_castle/review';
+import { review as ImThinkingOfEndingThingsReview } from './content/im_thinking_of_ending_things/review';
+import { review as InfinityPoolReview } from './content/infinity_pool/review';
+import { review as KikisDeliveryServiceReview } from './content/kikis_delivery_service/review';
+import { review as LastSunriseReview } from './content/last_sunrise/review';
+import { review as LeaveNoTraceReview } from './content/leave_no_trace/review';
+import { review as LifeIsBeautifulReview } from './content/life_is_beautiful/review';
+import { review as LifeOfPiReview } from './content/life_of_pi/review';
+import { review as LionReview } from './content/lion/review';
+import { review as LoveExposureReview } from './content/love_exposure/review';
+import { review as MarcelTheShellWithShoesOnReview } from './content/marcel_the_shell_with_shoes_on/review';
+import { review as MissZombieReview } from './content/miss_zombie/review';
+import { review as MonstersReview } from './content/monsters/review';
+import { review as MonstersIncReview } from './content/monsters_inc/review';
+import { review as MotherReview } from './content/mother/review';
+import { review as MulhollandDriveReview } from './content/mulholland_drive/review';
+import { review as MyNeighbourTotoroReview } from './content/my_neighbour_totoro/review';
+import { review as NausicaaReview } from './content/nausicaa/review';
+import { review as NocturnalAnimalsReview } from './content/nocturnal_animals/review';
+import { review as NotesOnBlindnessReview } from './content/notes_on_blindness/review';
+import { review as OculusReview } from './content/oculus/review';
+import { review as ParasiteReview } from './content/parasite/review';
+import { review as PleasantvilleReview } from './content/pleasantville/review';
+import { review as PossessionReview } from './content/possession/review';
+import { review as PredestinationReview } from './content/predestination/review';
+import { review as PrincessMononokeReview } from './content/princess_mononoke/review';
+import { review as RevengeReview } from './content/revenge/review';
+import { review as RiseRoarRevoltReview } from './content/rise_roar_revolt/review';
+import { review as RockyReview } from './content/rocky/review';
+import { review as SevenYearsInTibetReview } from './content/seven_years_in_tibet/review';
+import { review as SlitherReview } from './content/slither/review';
+import { review as SnowpiercerReview } from './content/snowpiecer/review';
+import { review as SolarisReview } from './content/solaris/review';
+import { review as SoundOfMetalReview } from './content/sound_of_metal/review';
+import { review as SpiritedAwayReview } from './content/spirited_away/review';
+import { review as SplitReview } from './content/split/review';
+import { review as StarmanReview } from './content/starman/review';
+import { review as TagReview } from './content/tag/review';
+import { review as TheAgeOfAdalineReview } from './content/the_age_of_adaline/review';
+import { review as TheCuriousCaseOfBenjaminButtonReview } from './content/the_curious_case_of_benjamin_button/review';
+import { review as TheGirlWithTheDragonTattooReview } from './content/the_girl_with_the_dragon_tattoo/review';
+import { review as TheInvisibleManReview } from './content/the_invisible_man/review';
+import { review as TheLandOfCardsReview } from './content/the_land_of_cards/review';
+import { review as TheMapOfTinyPerfectThingsReview } from './content/the_map_of_tiny_perfect_things/review';
+import { review as TheMatrixReview } from './content/the_matrix/review';
+import { review as ThePerksOfBeingAWallflowerReview } from './content/the_perks_of_being_a_wallflower/review';
+import { review as TheShapeOfWaterReview } from './content/the_shape_of_water/review';
+import { review as TheStrangersReview } from './content/the_strangers/review';
+import { review as TheTagAlongReview } from './content/the_tag_along/review';
+import { review as TheWindRisesReview } from './content/the_wind_rises/review';
+import { review as ThemReview } from './content/them/review';
+import { review as VictoriaReview } from './content/victoria/review';
+import { review as WalleReview } from './content/walle/review';
+import { review as WavesReview } from './content/waves/review';
+import { review as WeNeedToTalkAboutKevinReview } from './content/we_need_to_talk_about_kevin/review';
+import { review as WolfChildrenReview } from './content/wolf_childrem/review';
+import { review as WrongReview } from './content/wrong/review';
+import { review as XxxHolicReview } from './content/xxxholic/review';
 */
 
 
@@ -115,7 +115,7 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
 // (e.g. detect any file with the name 'screenshot.{}' where the {} could be jpg, jpeg, png, PNG, or webp
 // but currently I have no idea how to make this work.
 // this is a bit annoying because it means I have to 'hardcode' paths to screenshots.
-// (e.g. require('../websiteContent/films/white_god/screenshot1.webp'))
+// (e.g. require('./content/white_god/screenshot1.webp'))
 //const regex  = new RegExp("^.\/websiteContent\/films\/(.*?)\/screenshot(.jpg|.png|.PNG|.jpeg|.webp)$")    
 
 
@@ -125,321 +125,321 @@ import { review as XxxHolicReview } from './websiteContent/films/xxxholic/review
  */
 const screenshots = {
     ANGEL_A: [
-        require('../websiteContent/films/angel_a/screenshot6.PNG'),
-        require('../websiteContent/films/angel_a/screenshot11.PNG'),
-        require('../websiteContent/films/angel_a/screenshot5.PNG'),
+        require('./content/angel_a/screenshot6.PNG'),
+        require('./content/angel_a/screenshot11.PNG'),
+        require('./content/angel_a/screenshot5.PNG'),
     ],
 
     HOW_TO_TALK_TO_GIRLS_AT_PARTIES: [
-        require('../websiteContent/films/how_to_talk_to_girls_at_parties/screenshot2.PNG'),
-        require('../websiteContent/films/how_to_talk_to_girls_at_parties/screenshot5.PNG'),
-        require('../websiteContent/films/how_to_talk_to_girls_at_parties/screenshot8.PNG'),
+        require('./content/how_to_talk_to_girls_at_parties/screenshot2.PNG'),
+        require('./content/how_to_talk_to_girls_at_parties/screenshot5.PNG'),
+        require('./content/how_to_talk_to_girls_at_parties/screenshot8.PNG'),
     ],
 
     THE_LIVING_AND_THE_DEAD: [
-        require('../websiteContent/films/the_living_and_the_dead/screenshot3.PNG'),
-        require('../websiteContent/films/the_living_and_the_dead/screenshot2.PNG'),
-        require('../websiteContent/films/the_living_and_the_dead/screenshot1.PNG'),
+        require('./content/the_living_and_the_dead/screenshot3.PNG'),
+        require('./content/the_living_and_the_dead/screenshot2.PNG'),
+        require('./content/the_living_and_the_dead/screenshot1.PNG'),
     ],
 
     A_BANQUET: [
-        require('../websiteContent/films/a_banquet/screenshot1.PNG'),
-        require('../websiteContent/films/a_banquet/screenshot3.PNG'),
-        require('../websiteContent/films/a_banquet/screenshot6.PNG'),
+        require('./content/a_banquet/screenshot1.PNG'),
+        require('./content/a_banquet/screenshot3.PNG'),
+        require('./content/a_banquet/screenshot6.PNG'),
     ],
 
     ROYAL_SPACE_FORCE_THE_WINGS_OF_HONNEAMISE: [
-        require('../websiteContent/films/royal_space_force_the_wings_of_honneamise/screenshot1.PNG'),
-        require('../websiteContent/films/royal_space_force_the_wings_of_honneamise/screenshot2.PNG'),
-        require('../websiteContent/films/royal_space_force_the_wings_of_honneamise/screenshot3.PNG'),
+        require('./content/royal_space_force_the_wings_of_honneamise/screenshot1.PNG'),
+        require('./content/royal_space_force_the_wings_of_honneamise/screenshot2.PNG'),
+        require('./content/royal_space_force_the_wings_of_honneamise/screenshot3.PNG'),
     ],
 
     LANDSCAPE_WITH_INVISIBLE_HAND: [
-        require('../websiteContent/films/landscape_with_invisible_hand/screenshot1.PNG'),
-        require('../websiteContent/films/landscape_with_invisible_hand/screenshot6.PNG'),
-        require('../websiteContent/films/landscape_with_invisible_hand/screenshot10.PNG'),
+        require('./content/landscape_with_invisible_hand/screenshot1.PNG'),
+        require('./content/landscape_with_invisible_hand/screenshot6.PNG'),
+        require('./content/landscape_with_invisible_hand/screenshot10.PNG'),
     ],
 
     MEET_CUTE: [
-        require('../websiteContent/films/meet_cute/screenshot1.PNG'),
-        require('../websiteContent/films/meet_cute/screenshot3.PNG'),
-        require('../websiteContent/films/meet_cute/screenshot5.PNG'),
+        require('./content/meet_cute/screenshot1.PNG'),
+        require('./content/meet_cute/screenshot3.PNG'),
+        require('./content/meet_cute/screenshot5.PNG'),
     ],
 
     THE_BLIND_MAN_WHO_DID_NOT_WANT_TO_SEE_TITANIC: [
-        require('../websiteContent/films/the_blind_man_who_did_not_want_to_see_titanic/screenshot1.PNG'),
-        require('../websiteContent/films/the_blind_man_who_did_not_want_to_see_titanic/screenshot2.PNG'),
-        require('../websiteContent/films/the_blind_man_who_did_not_want_to_see_titanic/screenshot4.PNG'),
+        require('./content/the_blind_man_who_did_not_want_to_see_titanic/screenshot1.PNG'),
+        require('./content/the_blind_man_who_did_not_want_to_see_titanic/screenshot2.PNG'),
+        require('./content/the_blind_man_who_did_not_want_to_see_titanic/screenshot4.PNG'),
     ],
 
     THE_CRANES_ARE_FLYING: [
-        require('../websiteContent/films/the_cranes_are_flying/screenshot14.PNG'),
-        require('../websiteContent/films/the_cranes_are_flying/screenshot5.PNG'),
-        require('../websiteContent/films/the_cranes_are_flying/screenshot1.PNG'),
+        require('./content/the_cranes_are_flying/screenshot14.PNG'),
+        require('./content/the_cranes_are_flying/screenshot5.PNG'),
+        require('./content/the_cranes_are_flying/screenshot1.PNG'),
     ],
 
     MIND_GAME: [
-        require('../websiteContent/films/mind_game/screenshot23.jpg'),
-        require('../websiteContent/films/mind_game/screenshot2.jpg'),
-        require('../websiteContent/films/mind_game/screenshot14.jpg'),
+        require('./content/mind_game/screenshot23.jpg'),
+        require('./content/mind_game/screenshot2.jpg'),
+        require('./content/mind_game/screenshot14.jpg'),
     ],
 
     HUMAN_SPACE_TIME_AND_HUMAN: [
-        require('../websiteContent/films/human_space_time_and_human/screenshot8.PNG'),
-        require('../websiteContent/films/human_space_time_and_human/screenshot5.PNG'),
-        require('../websiteContent/films/human_space_time_and_human/screenshot1.PNG'),
+        require('./content/human_space_time_and_human/screenshot8.PNG'),
+        require('./content/human_space_time_and_human/screenshot5.PNG'),
+        require('./content/human_space_time_and_human/screenshot1.PNG'),
     ],
     
     THE_BOW: [
-        require('../websiteContent/films/the_bow/screenshot8.PNG'),
-        require('../websiteContent/films/the_bow/screenshot9.PNG'),
-        require('../websiteContent/films/the_bow/screenshot11.PNG'),
+        require('./content/the_bow/screenshot8.PNG'),
+        require('./content/the_bow/screenshot9.PNG'),
+        require('./content/the_bow/screenshot11.PNG'),
     ],
 
     POOR_THINGS: [
-        require('../websiteContent/films/poor_things/screenshot17.PNG'),
-        require('../websiteContent/films/poor_things/screenshot16.PNG'),
-        require('../websiteContent/films/poor_things/screenshot3.PNG'),
+        require('./content/poor_things/screenshot17.PNG'),
+        require('./content/poor_things/screenshot16.PNG'),
+        require('./content/poor_things/screenshot3.PNG'),
     ],
 
     FUNUKE_SHOW_SOME_LOVE_YOU_LOSERS: [
-        require('../websiteContent/films/funuke_show_some_love_you_losers/screenshot5.jpg'),
-        require('../websiteContent/films/funuke_show_some_love_you_losers/screenshot8.jpg'),
-        require('../websiteContent/films/funuke_show_some_love_you_losers/screenshot6.jpg'),
+        require('./content/funuke_show_some_love_you_losers/screenshot5.jpg'),
+        require('./content/funuke_show_some_love_you_losers/screenshot8.jpg'),
+        require('./content/funuke_show_some_love_you_losers/screenshot6.jpg'),
     ],
 
     THREE_IRON: [
-        require('../websiteContent/films/3iron/screenshot1.jpg'),
-        require('../websiteContent/films/3iron/screenshot4.jpg'),
-        require('../websiteContent/films/3iron/screenshot3.jpg'),
+        require('./content/3iron/screenshot1.jpg'),
+        require('./content/3iron/screenshot4.jpg'),
+        require('./content/3iron/screenshot3.jpg'),
     ],
 
     KIDS_RETURN: [
-        require('../websiteContent/films/kids_return/screenshot5.jpg'),
-        require('../websiteContent/films/kids_return/screenshot7.jpg'),
-        require('../websiteContent/films/kids_return/screenshot12.jpg'),
+        require('./content/kids_return/screenshot5.jpg'),
+        require('./content/kids_return/screenshot7.jpg'),
+        require('./content/kids_return/screenshot12.jpg'),
     ],
 
     PERFECT: [
-        require('../websiteContent/films/perfect/screenshot10.jpg'),
-        require('../websiteContent/films/perfect/screenshot4.jpg'),
-        require('../websiteContent/films/perfect/screenshot13.jpg'),
+        require('./content/perfect/screenshot10.jpg'),
+        require('./content/perfect/screenshot4.jpg'),
+        require('./content/perfect/screenshot13.jpg'),
     ],
 
     A_SCENE_AT_THE_SEA: [
-        require('../websiteContent/films/a_scene_at_the_sea/screenshot3.jpg'),
-        require('../websiteContent/films/a_scene_at_the_sea/screenshot9.jpg'),
-        require('../websiteContent/films/a_scene_at_the_sea/screenshot5.jpg'),
+        require('./content/a_scene_at_the_sea/screenshot3.jpg'),
+        require('./content/a_scene_at_the_sea/screenshot9.jpg'),
+        require('./content/a_scene_at_the_sea/screenshot5.jpg'),
     ],
 
     HOUSE_OF_FLYING_DAGGERS: [
-        require('../websiteContent/films/house_of_flying_daggers/screenshot13.jpg'),
-        require('../websiteContent/films/house_of_flying_daggers/screenshot36.jpg'),
-        require('../websiteContent/films/house_of_flying_daggers/screenshot5.jpg'),
+        require('./content/house_of_flying_daggers/screenshot13.jpg'),
+        require('./content/house_of_flying_daggers/screenshot36.jpg'),
+        require('./content/house_of_flying_daggers/screenshot5.jpg'),
     ],
 
     LIKE_FATHER_LIKE_SON: [
-        require('../websiteContent/films/like_father_like_son/screenshot1.PNG'),
-        require('../websiteContent/films/like_father_like_son/screenshot11.PNG'),
-        require('../websiteContent/films/like_father_like_son/screenshot10.PNG'),
+        require('./content/like_father_like_son/screenshot1.PNG'),
+        require('./content/like_father_like_son/screenshot11.PNG'),
+        require('./content/like_father_like_son/screenshot10.PNG'),
     ],
 
     MR_JONES: [
-        require('../websiteContent/films/mr_jones/screenshot3.PNG'),
-        require('../websiteContent/films/mr_jones/screenshot11.PNG'),
-        require('../websiteContent/films/mr_jones/screenshot2.PNG'),
+        require('./content/mr_jones/screenshot3.PNG'),
+        require('./content/mr_jones/screenshot11.PNG'),
+        require('./content/mr_jones/screenshot2.PNG'),
     ],
 
     THE_BRAND_NEW_TESTAMENT: [
-        require('../websiteContent/films/the_brand_new_testament/screenshot3.PNG'),
-        require('../websiteContent/films/the_brand_new_testament/screenshot13.PNG'),
-        require('../websiteContent/films/the_brand_new_testament/screenshot14.PNG'),
+        require('./content/the_brand_new_testament/screenshot3.PNG'),
+        require('./content/the_brand_new_testament/screenshot13.PNG'),
+        require('./content/the_brand_new_testament/screenshot14.PNG'),
     ],
 
     INCREDIBLE_BUT_TRUE: [
-        require('../websiteContent/films/incredible_but_true/screenshot1.PNG'),
-        require('../websiteContent/films/incredible_but_true/screenshot2.PNG'),
-        require('../websiteContent/films/incredible_but_true/screenshot6.PNG'),
+        require('./content/incredible_but_true/screenshot1.PNG'),
+        require('./content/incredible_but_true/screenshot2.PNG'),
+        require('./content/incredible_but_true/screenshot6.PNG'),
     ],
 
     OBLIVION_ISLAND: [
-        require('../websiteContent/films/oblivion_island/screenshot1.PNG'),
-        require('../websiteContent/films/oblivion_island/screenshot5.PNG'),
-        require('../websiteContent/films/oblivion_island/screenshot8.PNG'),
+        require('./content/oblivion_island/screenshot1.PNG'),
+        require('./content/oblivion_island/screenshot5.PNG'),
+        require('./content/oblivion_island/screenshot8.PNG'),
     ],
 
     LEON_THE_PROFESSIONAL: [
-        require('../websiteContent/films/leon_the_professional/screenshot1.PNG'),
-        require('../websiteContent/films/leon_the_professional/screenshot2.PNG'),
-        require('../websiteContent/films/leon_the_professional/screenshot3.PNG'),
+        require('./content/leon_the_professional/screenshot1.PNG'),
+        require('./content/leon_the_professional/screenshot2.PNG'),
+        require('./content/leon_the_professional/screenshot3.PNG'),
     ],
 
     DEEP_SEA: [
-        require('../websiteContent/films/deep_sea/screenshot1.PNG'),
-        require('../websiteContent/films/deep_sea/screenshot10.PNG'),
-        require('../websiteContent/films/deep_sea/screenshot12.PNG'),
+        require('./content/deep_sea/screenshot1.PNG'),
+        require('./content/deep_sea/screenshot10.PNG'),
+        require('./content/deep_sea/screenshot12.PNG'),
     ],
 
     BAREFOOT_GEN: [
-        require('../websiteContent/films/barefoot_gen/screenshot4.PNG'),
-        require('../websiteContent/films/barefoot_gen/screenshot8.PNG'),
-        require('../websiteContent/films/barefoot_gen/screenshot11.PNG'),
+        require('./content/barefoot_gen/screenshot4.PNG'),
+        require('./content/barefoot_gen/screenshot8.PNG'),
+        require('./content/barefoot_gen/screenshot11.PNG'),
     ],
 
     LITTLE_SHOP_OF_HORRORS: [
-        require('../websiteContent/films/little_shop_of_horrors/screenshot2.PNG'),
-        require('../websiteContent/films/little_shop_of_horrors/screenshot3.PNG'),
-        require('../websiteContent/films/little_shop_of_horrors/screenshot4.PNG'),
+        require('./content/little_shop_of_horrors/screenshot2.PNG'),
+        require('./content/little_shop_of_horrors/screenshot3.PNG'),
+        require('./content/little_shop_of_horrors/screenshot4.PNG'),
     ],
     
     SPRING_AND_CHAOS: [
-        require('../websiteContent/films/spring_and_chaos/screenshot1.PNG'),
-        require('../websiteContent/films/spring_and_chaos/screenshot2.PNG'),
-        require('../websiteContent/films/spring_and_chaos/screenshot12.PNG'),
+        require('./content/spring_and_chaos/screenshot1.PNG'),
+        require('./content/spring_and_chaos/screenshot2.PNG'),
+        require('./content/spring_and_chaos/screenshot12.PNG'),
     ],
 
     THE_DOG_OF_FLANDERS: [
-        require('../websiteContent/films/the_dog_of_flanders/screenshot1.PNG'),
-        require('../websiteContent/films/the_dog_of_flanders/screenshot6.PNG'),
-        require('../websiteContent/films/the_dog_of_flanders/screenshot24.PNG'),
+        require('./content/the_dog_of_flanders/screenshot1.PNG'),
+        require('./content/the_dog_of_flanders/screenshot6.PNG'),
+        require('./content/the_dog_of_flanders/screenshot24.PNG'),
     ],
 
     TONY_TAKITANI: [
-        require('../websiteContent/films/tony_takitani/screenshot1.PNG'),
-        require('../websiteContent/films/tony_takitani/screenshot3.PNG'),
-        require('../websiteContent/films/tony_takitani/screenshot6.PNG'),
+        require('./content/tony_takitani/screenshot1.PNG'),
+        require('./content/tony_takitani/screenshot3.PNG'),
+        require('./content/tony_takitani/screenshot6.PNG'),
     ],
 
     LUPIN_THE_THIRD: [
-        require('../websiteContent/films/lupin_the_third/screenshot14.PNG'),
-        require('../websiteContent/films/lupin_the_third/screenshot7.PNG'),
-        require('../websiteContent/films/lupin_the_third/screenshot3.PNG'),
+        require('./content/lupin_the_third/screenshot14.PNG'),
+        require('./content/lupin_the_third/screenshot7.PNG'),
+        require('./content/lupin_the_third/screenshot3.PNG'),
     ],
 
     CONVENIENCE_STORY: [
-        require('../websiteContent/films/convenience_story/screenshot2.PNG'),
-        require('../websiteContent/films/convenience_story/screenshot6.PNG'),
-        require('../websiteContent/films/convenience_story/screenshot13.PNG'),
+        require('./content/convenience_story/screenshot2.PNG'),
+        require('./content/convenience_story/screenshot6.PNG'),
+        require('./content/convenience_story/screenshot13.PNG'),
     ],
 
     PORTALS: [
-        require('../websiteContent/films/portals/screenshot3.PNG'),
-        require('../websiteContent/films/portals/screenshot8.PNG'),
-        require('../websiteContent/films/portals/screenshot1.PNG'),
+        require('./content/portals/screenshot3.PNG'),
+        require('./content/portals/screenshot8.PNG'),
+        require('./content/portals/screenshot1.PNG'),
     ],
 
     SPONTANEOUS: [
-        require('../websiteContent/films/spontaneous/screenshot5.PNG'),
-        require('../websiteContent/films/spontaneous/screenshot7.PNG'),
-        require('../websiteContent/films/spontaneous/screenshot1.PNG'),
+        require('./content/spontaneous/screenshot5.PNG'),
+        require('./content/spontaneous/screenshot7.PNG'),
+        require('./content/spontaneous/screenshot1.PNG'),
     ],
 
     CASHBACK: [
-        require('../websiteContent/films/cashback/screenshot1.PNG'),
-        require('../websiteContent/films/cashback/screenshot5.PNG'),
-        require('../websiteContent/films/cashback/screenshot4.PNG'),
+        require('./content/cashback/screenshot1.PNG'),
+        require('./content/cashback/screenshot5.PNG'),
+        require('./content/cashback/screenshot4.PNG'),
     ],
 
     MALIGNANT: [
-        require('../websiteContent/films/malignant/screenshot5.PNG'),
-        require('../websiteContent/films/malignant/screenshot2.PNG'),
-        require('../websiteContent/films/malignant/screenshot7.PNG'),
+        require('./content/malignant/screenshot5.PNG'),
+        require('./content/malignant/screenshot2.PNG'),
+        require('./content/malignant/screenshot7.PNG'),
     ],
 
     CJ7: [
-        require('../websiteContent/films/cj7/screenshot1.PNG'),
-        require('../websiteContent/films/cj7/screenshot3.PNG'),
-        require('../websiteContent/films/cj7/screenshot2.PNG'),
+        require('./content/cj7/screenshot1.PNG'),
+        require('./content/cj7/screenshot3.PNG'),
+        require('./content/cj7/screenshot2.PNG'),
     ],
     
     A_BRIDGE_FOR_RIP_VAN_WINKLE: [
-        require('../websiteContent/films/a_bride_for_rip_van_winkle/screenshot11.PNG'),
-        require('../websiteContent/films/a_bride_for_rip_van_winkle/screenshot6.PNG'),
-        require('../websiteContent/films/a_bride_for_rip_van_winkle/screenshot10.PNG'),
+        require('./content/a_bride_for_rip_van_winkle/screenshot11.PNG'),
+        require('./content/a_bride_for_rip_van_winkle/screenshot6.PNG'),
+        require('./content/a_bride_for_rip_van_winkle/screenshot10.PNG'),
     ],
 
     GET_DUKED: [
-        require('../websiteContent/films/get_duked/screenshot1.PNG'),
-        require('../websiteContent/films/get_duked/screenshot3.PNG'),
-        require('../websiteContent/films/get_duked/screenshot4.PNG'),
+        require('./content/get_duked/screenshot1.PNG'),
+        require('./content/get_duked/screenshot3.PNG'),
+        require('./content/get_duked/screenshot4.PNG'),
     ],
 
     PULSE: [
-        require('../websiteContent/films/pulse/screenshot1.PNG'),
-        require('../websiteContent/films/pulse/screenshot2.PNG'),
-        require('../websiteContent/films/pulse/screenshot8.PNG'),
+        require('./content/pulse/screenshot1.PNG'),
+        require('./content/pulse/screenshot2.PNG'),
+        require('./content/pulse/screenshot8.PNG'),
     ],
 
     MEANDER: [
-        require('../websiteContent/films/meander/screenshot3.PNG'),
-        require('../websiteContent/films/meander/screenshot4.PNG'),
-        require('../websiteContent/films/meander/screenshot2.PNG'),
+        require('./content/meander/screenshot3.PNG'),
+        require('./content/meander/screenshot4.PNG'),
+        require('./content/meander/screenshot2.PNG'),
     ],
 
     SHADOW_IN_THE_CLOUD: [
-        require('../websiteContent/films/shadow_in_the_cloud/screenshot1.PNG'),
-        require('../websiteContent/films/shadow_in_the_cloud/screenshot2.PNG'),
-        require('../websiteContent/films/shadow_in_the_cloud/screenshot8.PNG'),
+        require('./content/shadow_in_the_cloud/screenshot1.PNG'),
+        require('./content/shadow_in_the_cloud/screenshot2.PNG'),
+        require('./content/shadow_in_the_cloud/screenshot8.PNG'),
     ],
 
     AWAIT_FURTHER_INSTRUCTIONS: [
-        require('../websiteContent/films/await_further_instructions/screenshot4.PNG'),
-        require('../websiteContent/films/await_further_instructions/screenshot13.PNG'),
-        require('../websiteContent/films/await_further_instructions/screenshot11.PNG'),
+        require('./content/await_further_instructions/screenshot4.PNG'),
+        require('./content/await_further_instructions/screenshot13.PNG'),
+        require('./content/await_further_instructions/screenshot11.PNG'),
     ],
 
     CHILDREN_OF_THE_SEA: [
-        require('../websiteContent/films/children_of_the_sea/screenshot30.webp'),
-        require('../websiteContent/films/children_of_the_sea/screenshot31.webp'),
-        require('../websiteContent/films/children_of_the_sea/screenshot33.webp'),
+        require('./content/children_of_the_sea/screenshot30.webp'),
+        require('./content/children_of_the_sea/screenshot31.webp'),
+        require('./content/children_of_the_sea/screenshot33.webp'),
         /*
-        require('../websiteContent/films/children_of_the_sea/screenshot2.webp'),
-        require('../websiteContent/films/children_of_the_sea/screenshot5.webp'),
-        require('../websiteContent/films/children_of_the_sea/screenshot3.webp'),
-        require('../websiteContent/films/children_of_the_sea/screenshot17.webp')
+        require('./content/children_of_the_sea/screenshot2.webp'),
+        require('./content/children_of_the_sea/screenshot5.webp'),
+        require('./content/children_of_the_sea/screenshot3.webp'),
+        require('./content/children_of_the_sea/screenshot17.webp')
         */
     ],
 
     WHITE_GOD: [
-        require('../websiteContent/films/white_god/screenshot1.webp'),
-        require('../websiteContent/films/white_god/screenshot2.webp'),
-        require('../websiteContent/films/white_god/screenshot3.webp'),
+        require('./content/white_god/screenshot1.webp'),
+        require('./content/white_god/screenshot2.webp'),
+        require('./content/white_god/screenshot3.webp'),
     ],
 
     FLATLAND: [
-        require('../websiteContent/films/flatland/screenshot1.webp'),
-        require('../websiteContent/films/flatland/screenshot2.webp'),
-        require('../websiteContent/films/flatland/screenshot3.webp'),
+        require('./content/flatland/screenshot1.webp'),
+        require('./content/flatland/screenshot2.webp'),
+        require('./content/flatland/screenshot3.webp'),
     ],
 
     FEAST: [
-        require('../websiteContent/films/feast/screenshot1.webp'),
-        require('../websiteContent/films/feast/screenshot2.webp'),
-        require('../websiteContent/films/feast/screenshot5.webp'),
+        require('./content/feast/screenshot1.webp'),
+        require('./content/feast/screenshot2.webp'),
+        require('./content/feast/screenshot5.webp'),
     ],
 
     THE_SECRET_WORLD_OF_ARRIETTY: [
-        require('../websiteContent/films/the_secret_world_of_arrietty/screenshot1.webp'),
-        require('../websiteContent/films/the_secret_world_of_arrietty/screenshot2.webp'),
-        require('../websiteContent/films/the_secret_world_of_arrietty/screenshot3.webp'),
+        require('./content/the_secret_world_of_arrietty/screenshot1.webp'),
+        require('./content/the_secret_world_of_arrietty/screenshot2.webp'),
+        require('./content/the_secret_world_of_arrietty/screenshot3.webp'),
     ],
 
     A_GHOST_STORY: [
-        require('../websiteContent/films/a_ghost_story/screenshot1.webp'),
-        require('../websiteContent/films/a_ghost_story/screenshot2.webp'),
-        require('../websiteContent/films/a_ghost_story/screenshot3.webp'),
+        require('./content/a_ghost_story/screenshot1.webp'),
+        require('./content/a_ghost_story/screenshot2.webp'),
+        require('./content/a_ghost_story/screenshot3.webp'),
     ],
 
     POUPELLE_OF_CHIMMNEY_TOWN: [
-        require('../websiteContent/films/poupelle_of_chimmney_town/screenshot1.webp'),
-        require('../websiteContent/films/poupelle_of_chimmney_town/screenshot2.webp'),
-        require('../websiteContent/films/poupelle_of_chimmney_town/screenshot3.webp'),
+        require('./content/poupelle_of_chimmney_town/screenshot1.webp'),
+        require('./content/poupelle_of_chimmney_town/screenshot2.webp'),
+        require('./content/poupelle_of_chimmney_town/screenshot3.webp'),
     ],
 
     WOLF_CHILDREN: [
-        require('../websiteContent/films/wolf_children/screenshot7.webp'),
-        require('../websiteContent/films/wolf_children/screenshot4.webp'),
-        require('../websiteContent/films/wolf_children/screenshot1.webp'),
+        require('./content/wolf_children/screenshot7.webp'),
+        require('./content/wolf_children/screenshot4.webp'),
+        require('./content/wolf_children/screenshot1.webp'),
     ],
 
     SPIRITED_AWAY: [
@@ -449,69 +449,69 @@ const screenshots = {
     ],
 
     TETSUO_THE_BULLET_MAN: [
-        require('../websiteContent/films/tetsuo_the_bullet_man/screenshot1.webp'),
-        require('../websiteContent/films/tetsuo_the_bullet_man/screenshot2.webp'),
-        require('../websiteContent/films/tetsuo_the_bullet_man/screenshot3.webp')
+        require('./content/tetsuo_the_bullet_man/screenshot1.webp'),
+        require('./content/tetsuo_the_bullet_man/screenshot2.webp'),
+        require('./content/tetsuo_the_bullet_man/screenshot3.webp')
     ],
 
     BIG_FISH_AND_BEGONIA: [
-        require('../websiteContent/films/big_fish_and_begonia/screenshot1.webp'),
-        require('../websiteContent/films/big_fish_and_begonia/screenshot5.webp'),
-        require('../websiteContent/films/big_fish_and_begonia/screenshot37.webp'),
+        require('./content/big_fish_and_begonia/screenshot1.webp'),
+        require('./content/big_fish_and_begonia/screenshot5.webp'),
+        require('./content/big_fish_and_begonia/screenshot37.webp'),
     ],
 
     THE_TAG_ALONG: [
-        require('../websiteContent/films/the_tag_along/screenshot2.webp'),
-        require('../websiteContent/films/the_tag_along/screenshot5.webp'),
-        require('../websiteContent/films/the_tag_along/screenshot15.webp')
+        require('./content/the_tag_along/screenshot2.webp'),
+        require('./content/the_tag_along/screenshot5.webp'),
+        require('./content/the_tag_along/screenshot15.webp')
     ],
 
     TURTLES_ARE_SUPRISINGLY_GOOD_SWIMMERS: [
-        require('../websiteContent/films/turtles_are_suprisingly_good_swimmers/screenshot2.webp'),
-        require('../websiteContent/films/turtles_are_suprisingly_good_swimmers/screenshot8.webp'),
-        require('../websiteContent/films/turtles_are_suprisingly_good_swimmers/screenshot4.webp'),
+        require('./content/turtles_are_suprisingly_good_swimmers/screenshot2.webp'),
+        require('./content/turtles_are_suprisingly_good_swimmers/screenshot8.webp'),
+        require('./content/turtles_are_suprisingly_good_swimmers/screenshot4.webp'),
     ],
 
     ANGELS_EGG: [
-        require('../websiteContent/films/angels_egg/screenshot1.webp'),
-        require('../websiteContent/films/angels_egg/screenshot2.webp'),
-        require('../websiteContent/films/angels_egg/screenshot3.webp'),
+        require('./content/angels_egg/screenshot1.webp'),
+        require('./content/angels_egg/screenshot2.webp'),
+        require('./content/angels_egg/screenshot3.webp'),
     ],
 
     LIMBO: [
-        require('../websiteContent/films/limbo/screenshot3.webp'),
-        require('../websiteContent/films/limbo/screenshot2.webp'),
-        require('../websiteContent/films/limbo/screenshot6.webp'),
+        require('./content/limbo/screenshot3.webp'),
+        require('./content/limbo/screenshot2.webp'),
+        require('./content/limbo/screenshot6.webp'),
     ],
 
     CLIMAX: [
-        require('../websiteContent/films/climax/screenshot5.webp'),
-        require('../websiteContent/films/climax/screenshot3.webp'),
-        require('../websiteContent/films/climax/screenshot7.webp'),
+        require('./content/climax/screenshot5.webp'),
+        require('./content/climax/screenshot3.webp'),
+        require('./content/climax/screenshot7.webp'),
     ],
 
     STARRY_STARRY_NIGHT: [
-        require('../websiteContent/films/starry_starry_night/screenshot4.webp'),
-        require('../websiteContent/films/starry_starry_night/screenshot11.webp'),
-        require('../websiteContent/films/starry_starry_night/screenshot13.webp'),
+        require('./content/starry_starry_night/screenshot4.webp'),
+        require('./content/starry_starry_night/screenshot11.webp'),
+        require('./content/starry_starry_night/screenshot13.webp'),
     ],
 
     CHILDREN_WHO_CHASE_LOST_VOICES: [
-        require('../websiteContent/films/children_who_chase_lost_voices/screenshot1.webp'),
-        require('../websiteContent/films/children_who_chase_lost_voices/screenshot2.webp'),
-        require('../websiteContent/films/children_who_chase_lost_voices/screenshot3.webp'),
+        require('./content/children_who_chase_lost_voices/screenshot1.webp'),
+        require('./content/children_who_chase_lost_voices/screenshot2.webp'),
+        require('./content/children_who_chase_lost_voices/screenshot3.webp'),
     ],
 
     ZOE: [
-        require('../websiteContent/films/zoe/screenshot5.webp'),
-        require('../websiteContent/films/zoe/screenshot2.webp'),
-        require('../websiteContent/films/zoe/screenshot4.webp'),
+        require('./content/zoe/screenshot5.webp'),
+        require('./content/zoe/screenshot2.webp'),
+        require('./content/zoe/screenshot4.webp'),
     ],
 
     WE_MADE_A_BEAUTIFUL_BOUQUET: [
-        require('../websiteContent/films/we_made_a_beautiful_bouquet/screenshot1.webp'),
-        require('../websiteContent/films/we_made_a_beautiful_bouquet/screenshot2.webp'),
-        require('../websiteContent/films/we_made_a_beautiful_bouquet/screenshot3.webp'),
+        require('./content/we_made_a_beautiful_bouquet/screenshot1.webp'),
+        require('./content/we_made_a_beautiful_bouquet/screenshot2.webp'),
+        require('./content/we_made_a_beautiful_bouquet/screenshot3.webp'),
     ],
 }
 
@@ -1142,7 +1142,7 @@ const database = {
             "my_rating": 10.0,
             "my_tags": ["A slice of life", "Death", "Humanity", "Friendship", "Profound"],
             "my_review": "",
-            "custom_poster_url": require('../websiteContent/films/the_curious_case_of_benjamin_button/custom_poster.jpg')
+            "custom_poster_url": require('./content/the_curious_case_of_benjamin_button/custom_poster.jpg')
         },
     
         "the_strangers": {
@@ -1190,7 +1190,7 @@ const database = {
             "my_tags": ["Searching for freedom", "Starting a revolution", "Dictatorship", "Politics", "Poems"],
             "my_review": "",
             "gradual_interest": [6, 6, 5, 6, 6, 7, 9, 8, 8, 8, 8],
-            "custom_poster_url": require('../websiteContent/films/the_land_of_cards/custom_poster.jpg')
+            "custom_poster_url": require('./content/the_land_of_cards/custom_poster.jpg')
         },
     
         "the_broken": {
@@ -1797,7 +1797,7 @@ const database = {
             "my_rating": 9.5,
             "my_tags": ["Disturbing", "Weird", "Conspiracy", "Neogothic", "Neogothic architecture", "Great soundtrack"],
             "my_review": "",
-            "custom_poster_url": require('../websiteContent/films/batman_returns/custom_poster.png'),
+            "custom_poster_url": require('./content/batman_returns/custom_poster.png'),
         },
     
         "birdman": {
@@ -3269,7 +3269,7 @@ const database = {
             "my_tags": ["Astronomy", "Night skies", "End of the world", "Contemplative sci-fi", "Not giving up despite being in a shitty situation"],
             "my_review": "",
             "gradual_interest": [7, 7, 8, 8, 8, 7, 8, 9, 9, 9],
-            "custom_poster_url": require('../websiteContent/films/last_sunrise/custom_poster.jpg')
+            "custom_poster_url": require('./content/last_sunrise/custom_poster.jpg')
         },
     },
 
@@ -3532,7 +3532,7 @@ const database = {
             "letterboxd_url": "https://boxd.it/2bc6",
             "title_displayed": "Nausica\u00e4 of the Valley of the Wind",
             "my_review": "",
-            "custom_poster_url": require('../websiteContent/films/nausicaa/custom_poster.png'),
+            "custom_poster_url": require('./content/nausicaa/custom_poster.png'),
             "my_tags": [
                 "Humanity and nature coexisting", 
                 "Embrace mother nature", 
@@ -3557,7 +3557,7 @@ const database = {
             "my_rating": 9.0,
             "my_tags": ["Poetic", "Contemplative", "Based on true events", "Turning negatives into positives", "Not giving up despite being in a shitty situation"],
             "my_review": "",
-            "custom_poster_url": require('../websiteContent/films/notes_on_blindness/custom_poster.jpg'),
+            "custom_poster_url": require('./content/notes_on_blindness/custom_poster.jpg'),
         },
     
         "no_one_gets_out_alive": {
@@ -4042,7 +4042,7 @@ const database = {
             "my_rating": 9.5,
             "my_tags": ["A slice of life", "Metal", "Finding yourself", "Stoicism", "Not giving up despite being in a shitty situation"],
             "my_review": "",
-            "custom_poster_url": require('../websiteContent/films/sound_of_metal/custom_poster.jpg')
+            "custom_poster_url": require('./content/sound_of_metal/custom_poster.jpg')
         },
     
         "seeking_a_friend_for_the_end_of_the_world": {
@@ -4104,7 +4104,7 @@ const database = {
             "my_rating": 7.5,
             "my_tags": ["Death",  "Alien visitor disguised as human", "Melancholic", "Mysterious", "Quirky", "Forgiveness", "Soulmate", "Aliens", "Not a shit John Carpenter film", "Great soundtrack"],
             "my_review": "",
-            "custom_poster_url": require('../websiteContent/films/starman/custom_poster.png')
+            "custom_poster_url": require('./content/starman/custom_poster.png')
         },
     
         "society": {
