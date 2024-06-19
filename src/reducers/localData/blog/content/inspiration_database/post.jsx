@@ -18,7 +18,7 @@ export const post = (screenshots) => (
                 <li><a href='https://rateyourmusic.com/~Alphawellenreiter'>Alphawellenreiter</a> (Ambient/Post-minimalism/Space rock/Psychdelic rock)</li>
                 <li><a href='https://rateyourmusic.com/~logstar100'>logstar100</a> (K-pop)</li>
                 <li><a href='https://rateyourmusic.com/~Takashi_Hafuza'>Takashi Hafuza</a> (Breakbeat)</li>
-                <li><a href='https://www.youtube.com/@SpectrumPulseKMG'>Spectrum Pulse</a> (Country)</li>
+                <li><a href='https://www.youtube.com/@SpectrumPulse'>Spectrum Pulse</a> (Country)</li>
                 <li><a href='https://rateyourmusic.com/~cultjake'>CultJake</a> (Jazz)</li>
                 <li><a href='https://rateyourmusic.com/~GeorgeX'>GeorgeX</a> (Jazz)</li>
                 <li><a href='https://rateyourmusic.com/~Tone_Zone'>ToneZone</a> (Metal)</li>

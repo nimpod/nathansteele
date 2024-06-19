@@ -393,9 +393,11 @@ class Blog extends Component {
                                     </div>
                                 </div>
                                 <div className='tag-filter-options-list-container'>
+                                    {/*}
                                     <div className='btn-move-left scroll-through-tag-filters-btn' onClick={() => this.moveFiltersContainer(-80)}>
                                         <ArrowRightIcon className='invertable-icon' />
                                     </div>
+                                    */}
                                     <ul className='tag-filter-options-list'>
                                         <SearchBoxTagFilterListElement
                                             clickedTagFilter={this.clickedTagFilter}
@@ -403,9 +405,11 @@ class Blog extends Component {
                                             tags={uniqueTagCategories}
                                         />
                                     </ul>
+                                    {/*}
                                     <div className='btn-move-right scroll-through-tag-filters-btn active' onClick={() => this.moveFiltersContainer(80)}>
                                         <ArrowRightIcon className='invertable-icon' />
                                     </div>
+                                    */}
                                 </div>
                             </div>
                         </div>

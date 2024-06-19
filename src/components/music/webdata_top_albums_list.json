@@ -983,6 +983,15 @@
     {
         "position": 110,
         "position_str": "110",
+        "lastfm_url": "https://www.last.fm/music/311/Music",
+        "artist_name": "311",
+        "album_name": "Music",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/df68dbc7de9fb54606c5738baa0a3ad0.jpg",
+        "review_id": "311-music"
+    },
+    {
+        "position": 111,
+        "position_str": "111",
         "lastfm_url": "https://www.last.fm/music/Clown+Core/Van",
         "artist_name": "Clown Core",
         "album_name": "Van",
@@ -990,8 +999,8 @@
         "review_id": "clown_core-van"
     },
     {
-        "position": 111,
-        "position_str": "111",
+        "position": 112,
+        "position_str": "112",
         "lastfm_url": "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Paper+M%C3%A2ch%C3%A9+Dream+Balloon",
         "artist_name": "King Gizzard & The Lizard Wizard",
         "album_name": "Paper M\u00e2ch\u00e9 Dream Balloon",
@@ -999,8 +1008,8 @@
         "review_id": "king_gizzard_and_the_lizard_wizard-paper_m\u00e2ch\u00e9_dream_balloon"
     },
     {
-        "position": 112,
-        "position_str": "112",
+        "position": 113,
+        "position_str": "113",
         "lastfm_url": "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/A+Symphonic+Celebration+(Music+from+the+Studio+Ghibli+Films+of+Hayao+Miyazaki)",
         "artist_name": "Joe Hisaishi",
         "album_name": "A Symphonic Celebration (Music from the Studio Ghibli Films of Hayao Miyazaki)",
@@ -1008,8 +1017,8 @@
         "review_id": "\u4e45\u77f3\u8b72-a_symphonic_celebration_music_from_the_studio_ghibli_films_of_hayao_miyazaki"
     },
     {
-        "position": 113,
-        "position_str": "113",
+        "position": 114,
+        "position_str": "114",
         "lastfm_url": "https://www.last.fm/music/Sing+Street/Sing+Street+(Original+Motion+Picture+Soundtrack)",
         "artist_name": "Sing Street",
         "album_name": "Sing Street (Original Motion Picture Soundtrack)",
@@ -1017,8 +1026,8 @@
         "review_id": "sing_street-sing_street_original_motion_picture_soundtrack"
     },
     {
-        "position": 114,
-        "position_str": "114",
+        "position": 115,
+        "position_str": "115",
         "lastfm_url": "https://www.last.fm/music/Kendrick+Lamar/To+Pimp+a+Butterfly",
         "artist_name": "Kendrick Lamar",
         "album_name": "To Pimp a Butterfly",
@@ -1026,8 +1035,8 @@
         "review_id": "kendrick_lamar-to_pimp_a_butterfly"
     },
     {
-        "position": 115,
-        "position_str": "115",
+        "position": 116,
+        "position_str": "116",
         "lastfm_url": "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/The+Wind+Rises+Soundtrack",
         "artist_name": "Joe Hisaishi",
         "album_name": "The Wind Rises Soundtrack",
@@ -1035,8 +1044,8 @@
         "review_id": "\u4e45\u77f3\u8b72-the_wind_rises_soundtrack"
     },
     {
-        "position": 116,
-        "position_str": "116",
+        "position": 117,
+        "position_str": "117",
         "lastfm_url": "https://www.last.fm/music/scntfc/Oxenfree",
         "artist_name": "scntfc",
         "album_name": "Oxenfree",
@@ -1044,8 +1053,8 @@
         "review_id": "scntfc-oxenfree"
     },
     {
-        "position": 117,
-        "position_str": "117",
+        "position": 118,
+        "position_str": "118",
         "lastfm_url": "https://www.last.fm/music/A+Tribe+Called+Quest/The+Low+End+Theory",
         "artist_name": "A Tribe Called Quest",
         "album_name": "The Low End Theory",
@@ -1053,8 +1062,8 @@
         "review_id": "a_tribe_called_quest-the_low_end_theory"
     },
     {
-        "position": 118,
-        "position_str": "118",
+        "position": 119,
+        "position_str": "119",
         "lastfm_url": "https://www.last.fm/music/4hero/Two+Pages",
         "artist_name": "4hero",
         "album_name": "Two Pages",
@@ -1062,8 +1071,8 @@
         "review_id": "4hero-two_pages"
     },
     {
-        "position": 119,
-        "position_str": "119",
+        "position": 120,
+        "position_str": "120",
         "lastfm_url": "https://www.last.fm/music/Revocation/Scion+Av+Presents:+Revocation+%22Teratogensis%22",
         "artist_name": "Revocation",
         "album_name": "Scion Av Presents Revocation Teratogensis",
@@ -1071,8 +1080,8 @@
         "review_id": "revocation-scion_av_presents_revocation_teratogensis"
     },
     {
-        "position": 120,
-        "position_str": "120",
+        "position": 121,
+        "position_str": "121",
         "lastfm_url": "https://www.last.fm/music/Enter+Shikari/A+Flash+Flood+of+Colour",
         "artist_name": "Enter Shikari",
         "album_name": "A Flash Flood Of Colour",
@@ -1080,8 +1089,8 @@
         "review_id": "enter_shikari-a_flash_flood_of_colour"
     },
     {
-        "position": 121,
-        "position_str": "121",
+        "position": 122,
+        "position_str": "122",
         "lastfm_url": "https://www.last.fm/music/Joyce+Moreno/Natureza",
         "artist_name": "Joyce Moreno",
         "album_name": "Natureza",
@@ -1089,8 +1098,8 @@
         "review_id": "joyce_moreno-natureza"
     },
     {
-        "position": 122,
-        "position_str": "122",
+        "position": 123,
+        "position_str": "123",
         "lastfm_url": "https://www.last.fm/music/Mohini+Dey/Mohini+Dey",
         "artist_name": "Mohini Dey",
         "album_name": "Mohini Dey",
@@ -1098,22 +1107,13 @@
         "review_id": "mohini_dey-mohini_dey"
     },
     {
-        "position": 123,
-        "position_str": "123",
+        "position": 124,
+        "position_str": "124",
         "lastfm_url": "https://www.last.fm/music/Queens+of+the+Stone+Age/Songs+for+the+Deaf",
         "artist_name": "Queens of the Stone Age",
         "album_name": "Songs For The Deaf",
         "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/1319ef46e1da47f5c7dd7afdfb11aa53.jpg",
         "review_id": "queens_of_the_stone_age-songs_for_the_deaf"
-    },
-    {
-        "position": 124,
-        "position_str": "124",
-        "lastfm_url": "https://www.last.fm/music/311/Music",
-        "artist_name": "311",
-        "album_name": "Music",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/df68dbc7de9fb54606c5738baa0a3ad0.jpg",
-        "review_id": "311-music"
     },
     {
         "position": 125,
@@ -1193,7 +1193,7 @@
         "lastfm_url": "https://www.last.fm/music/The+Caretaker/Everywhere+at+the+end+of+time",
         "artist_name": "The Caretaker",
         "album_name": "Everywhere At The End Of Time",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/3924e3070a41a10e998f391d3526f923.jpg",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/9c49ac9cc6ca67a858d8d84e0674d168.gif",
         "review_id": "the_caretaker-everywhere_at_the_end_of_time"
     },
     {
@@ -1634,7 +1634,7 @@
         "lastfm_url": "https://www.last.fm/music/Slipknot/Slipknot",
         "artist_name": "Slipknot",
         "album_name": "Slipknot",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/1100ccaf7d52da1e921bc99f5f7b2352.jpg",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/9274398d6314cb5882bf4fe8dfd084f8.jpg",
         "review_id": "slipknot-slipknot"
     },
     {
@@ -2189,10 +2189,10 @@
     {
         "position": 244,
         "position_str": "244",
-        "lastfm_url": "https://www.last.fm/music/Ocoeur/Nouveau+D%C3%A9part",
+        "lastfm_url": "",
         "artist_name": "Ocoeur",
         "album_name": "Nouveau D\u00e9part",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/9f1ee1ca3d7985c8877c23047e4aa17f.jpg",
+        "album_cover_url": "",
         "review_id": "ocoeur-nouveau_d\u00e9part"
     },
     {
@@ -2748,7 +2748,7 @@
         "position": 306,
         "position_str": "306",
         "lastfm_url": "https://www.last.fm/music/twenty+one+pilots/Trench",
-        "artist_name": "Twenty One Pilots",
+        "artist_name": "twenty one pilots",
         "album_name": "Trench",
         "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/9efc2181a3c5643cde2441c79451d1bc.jpg",
         "review_id": "twenty_one_pilots-trench"
@@ -3785,7 +3785,7 @@
         "lastfm_url": "https://www.last.fm/music/Charli+XCX/Vroom+Vroom+EP",
         "artist_name": "Charli XCX",
         "album_name": "Vroom Vroom EP",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/e276581998b711812f146b39402d0ec3.jpg",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/d6112fa3af3b6d27faf0a8174bfaef5d.jpg",
         "review_id": "charli_xcx-vroom_vroom_ep"
     },
     {
@@ -4811,7 +4811,7 @@
         "lastfm_url": "https://www.last.fm/music/Gorillaz/Gorillaz",
         "artist_name": "Gorillaz",
         "album_name": "Gorillaz",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/487131c63dafa5ca8c8d4cdf7e490c7a.gif",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/86fc45f14a789e9fee32a99ea9036d3d.png",
         "review_id": "gorillaz-gorillaz"
     },
     {

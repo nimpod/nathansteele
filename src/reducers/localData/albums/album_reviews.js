@@ -5,6 +5,7 @@
 
 import ReactDomServer from 'react-dom/server';
 import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../../js/helpers.js';
+import { TrustworthyMusicReviewers } from '../../../js/enums.js';
 
 import { review as YesFlyFromHereReview } from './content/yes-fly_from_here/review.jsx';
 import { review as BocMHTRTCReview } from './content/boards_of_canada-music_has_the_right_to_children/review.jsx';
@@ -27,6 +28,7 @@ const database = {
 			genres: "Acid house; Drum and bass; Trip hop; Jungle; Breakbeat; Electronic",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"4hero__two_pages": {
 			lastfm_url: "https://www.last.fm/music/4hero/Two+Pages",
@@ -47,6 +49,7 @@ const database = {
 			genres: "Rap rock; Alternative rock; Funk rock; Reggae rock; Reggae; Funk metal; Nu metal",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 	},
 
@@ -135,6 +138,7 @@ const database = {
 			genres: "Ambient; Ambient techno; Techno; IDM; Electronic",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"the_field__looping_state_of_mind": {
 			lastfm_url: "https://www.last.fm/music/The+Field/Looping+State+of+Mind",
@@ -145,6 +149,7 @@ const database = {
 			genres: "Minimal techno; Ambient techno; Tech house; Electronic",
 			my_rating: 8.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.DEEP_CUTS
 		},
 		"the_bug__london_zoo": {
 			lastfm_url: "https://www.last.fm/music/The+Bug/London+Zoo",
@@ -155,6 +160,7 @@ const database = {
 			genres: "Dubstep; Ragga; Industrial Hip-Hop",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.DEEP_CUTS
 		},
 		"the_caretaker__everywhere_at_the_end_of_time": {
 			lastfm_url: "https://www.last.fm/music/The+Caretaker/Everywhere+at+the+end+of+time",
@@ -185,6 +191,7 @@ const database = {
 			genres: "Breakbeat; Jungle; Electronic",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"the_millennium__begin": {
 			lastfm_url: "https://www.last.fm/music/The+Millennium/Begin",
@@ -209,6 +216,7 @@ const database = {
 			genres: "New age; Ambient; Progressive pop; Electronic",
 			my_rating: 9.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"andreas_vollenweider__dancing_with_the_lion": {
 			lastfm_url: "https://www.last.fm/music/Andreas+Vollenweider/Dancing+With+The+Lion",
@@ -274,6 +282,7 @@ const database = {
 			genres: "Downtempo; Ambient; Electronic",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"air__10000_hz_legend": {
 			lastfm_url:"https://www.last.fm/music/Air/10+000+Hz+Legend",
@@ -284,6 +293,7 @@ const database = {
 			genres: "Downtempo; Ambient pop; Electronic",
 			my_rating: 8.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 
 		//
@@ -544,6 +554,7 @@ const database = {
 			genres: "Ambient; Post-minimalism; Neo-classical new age; Electronic",
 			my_rating: 10.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"bruno_sanfilippo__unity": {
 			lastfm_url: "https://www.last.fm/music/Bruno+Sanfilippo/Unity",
@@ -566,6 +577,7 @@ const database = {
 			genres: "Jazz; Jazz fusion; Nu jazz; Instrumental Hip-Hop",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
 		},	
 		"badbadnotgood__IV": {
 			lastfm_url: "https://www.last.fm/music/BADBADNOTGOOD/IV",
@@ -675,6 +687,7 @@ const database = {
 			genres: "Drill and bass; Breakcore; IDM; Chiptune; Drum and bass; Electronic",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.NIELS
 		},
 		"brockhampton__saturation_iii": {
 			lastfm_url: "https://www.last.fm/music/BROCKHAMPTON/SATURATION+III",
@@ -715,6 +728,7 @@ const database = {
 			genres: "Downtempo; Electronic",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"brad_mehldau__taming_the_dragon": {
 			lastfm_url: "https://www.last.fm/music/Brad+Mehldau/Mehliana:+Taming+the+Dragon",
@@ -751,6 +765,7 @@ const database = {
 			my_review: "",
 		},
 
+
 		"ceephax_acid_crew__box_steady": {
 			lastfm_url: "https://www.last.fm/music/Ceephax+Acid+Crew/Box+Steady",
 			rym_url: "https://rateyourmusic.com/release/album/ceephax-acid-crew/box-steady/",
@@ -760,6 +775,7 @@ const database = {
 			genres: "Acid techno; Acid house; Acid trance; Breakbeat; Acid breaks; Chiptune; Electronic",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},	
 		"chisato_yamada__suite_nihonkai": {
 			lastfm_url: "https://www.last.fm/music/Chisato+Yamada/Suite+Nihonkai+%E7%B5%84%E6%9B%B2%E3%80%8C%E6%97%A5%E6%9C%AC%E6%B5%B7%E3%80%8D%E6%B4%A5%E8%BB%BD%E3%81%98%E3%82%87%E3%82%93%E3%81%8B%E3%82%89%E6%B5%81%E3%82%8C%E7%AF%80",
@@ -820,7 +836,7 @@ const database = {
 			year_of_release: "2014",
 			year_of_discovery: "2021",
 			genres: "Gothic country; Alternative country; Ambient; Ambient pop; Americana; Country; Ambient americana; Blues rock",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 	},
@@ -902,7 +918,7 @@ const database = {
 			genres: "Progressive electronic; Progressive rock; Electronic",
 			my_rating: 9.0,
 			my_review: "",
-		},		
+		},
 		"daniel_hart__a_ghost_story_soundtrack": {
 			lastfm_url: "https://www.last.fm/music/Daniel+Hart/A+Ghost+Story",
 			rym_url: "",
@@ -943,6 +959,7 @@ const database = {
 			themes: ["Chill", "Conscious lyricism"],
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.DEEP_CUTS
 		},
 	},
 
@@ -1035,6 +1052,7 @@ const database = {
 			genres: "Modern classical; Choral; New age",
 			my_rating: 8,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.XENOPHILE
 		},
 		"elliott_smith__figure_8": {
 			lastfm_url: "https://www.last.fm/music/Elliott+Smith/Figure+8",
@@ -1065,6 +1083,7 @@ const database = {
 			genres: "Country; Americana; Folk; Bluegrass",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.SPECTRUM_PULSE
 		},
 		"egberto_gismonti__egberto_gismonti": {
 			lastfm_url: "https://www.last.fm/music/Egberto+Gismonti/Egberto+Gismonti",
@@ -1121,6 +1140,7 @@ const database = {
 			genres: "Indie rock; Alternative folk; Piano blues; Jazz pop; Piano rock; Dark cabaret",
 			my_rating: 9.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
 		},
 		"frank_ocean__blonde": {
 			lastfm_url: "https://www.last.fm/music/Frank+Ocean/Blonde",
@@ -1142,6 +1162,7 @@ const database = {
 			themes: ["Contemplative", "Existential", "Peaceful"],
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
 		},
 		"fightstar__one_day_son_this_will_all_be_yours": {
 			lastfm_url: "https://www.last.fm/music/Fightstar/One+Day+Son,+This+Will+All+Be+Yours",
@@ -1577,6 +1598,7 @@ const database = {
 			genres: "Jazz; Jazz fusion",
 			my_rating: 8,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},	
 		"jon_hopkins__contact_note": {
 			lastfm_url: "https://www.last.fm/music/Jon+Hopkins/Contact+Note",
@@ -1748,6 +1770,7 @@ const database = {
 			themes: [""],
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.XENOPHILE
 		},
 		"katzenjammer__le_pop": {
 			lastfm_url: "https://www.last.fm/music/Katzenjammer/Le+Pop",
@@ -1952,6 +1975,7 @@ const database = {
 			genres: "K-pop; Jazz; Jazz pop; Vocal jazz",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.LOGSTAR_100
 		},
 	},
 
@@ -2043,6 +2067,17 @@ const database = {
 		},
 
 
+		"mazie__the_rainbow_cassette": {
+			lastfm_url: "https://www.last.fm/music/Mazie/the+rainbow+cassette",
+			rym_url: "https://rateyourmusic.com/release/ep/mazie/the-rainbow-cassette/",
+			spotify_url: "https://open.spotify.com/album/7uzmNefPoRgc5Pi9DS00CC?si=r2_HfmOCTZemHmcg0DrnDQ",
+			year_of_release: "2021",
+			year_of_discovery: "2023",
+			genres: "Bedroom pop; Psychedelic Pop; Indietronica; EDM Trap; Baroque pop; Alternative pop",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.LOGSTAR_100
+		},
 		"miho_hazama__m_unit_beyond_orbits": {
 			lastfm_url: "https://www.last.fm/music/Miho+Hazama/m_unit:+Beyond+Orbits",
 			rym_url: "https://rateyourmusic.com/release/album/miho-hazama/beyond-orbits/",
@@ -2062,6 +2097,7 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 			year_of_discovery: "2023",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"minseo__the_diary_of_youth": {
 			lastfm_url: "https://www.last.fm/music/Minseo/The+Diary+of+Youth",
@@ -2072,6 +2108,7 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 			year_of_discovery: "2023",
+			recommended_by: TrustworthyMusicReviewers.LOGSTAR_100
 		},
 		"massive_attack__mezzanine": {
 			lastfm_url: "https://www.last.fm/music/Massive+Attack/Mezzanine",
@@ -2092,6 +2129,7 @@ const database = {
 			genres: "Progressive rock; Symphonic rock; Pop rock",
 			my_rating: 9.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.SPECTRUM_PULSE
 		},		
 		"maximum_the_hormone__yoshu_fukushu": {
 			lastfm_url: "https://www.last.fm/music/Maximum+the+Hormone/Yoshu+Fukushu",
@@ -2112,6 +2150,7 @@ const database = {
 			genres: "Jazz fusion; Jazz; Djent; Progressive metal; Funk; Funk metal",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"misun__superstitions": {
 			lastfm_url: "https://www.last.fm/music/MISUN/Superstitions",
@@ -2322,6 +2361,7 @@ const database = {
 			my_review: "",
 			year_of_discovery: "2017",
 			custom_cover_url: "https://f4.bcbits.com/img/a1871008282_10.jpg",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"orbital__snivilization": {
 			lastfm_url: "https://www.last.fm/music/Orbital/Snivilization",
@@ -2386,6 +2426,7 @@ const database = {
 			genres: "Ambient; Post-minimalism",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"ozric_tentacles__spirals_in_hyperspace": {
 			lastfm_url: "https://www.last.fm/music/Ozric+Tentacles/Spirals+in+Hyperspace",
@@ -2396,6 +2437,7 @@ const database = {
 			genres: "Space rock; Progressive rock; Jazz fusion; Psychedelic rock; Livetronica",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"open_mike_eagle__brick_body_kids_still_daydream": {
 			lastfm_url: "https://www.last.fm/music/Open+Mike+Eagle/Brick+Body+Kids+Still+Daydream",
@@ -2485,6 +2527,7 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 			year_of_discovery: "2022",
+			recommended_by: TrustworthyMusicReviewers.DEEP_CUTS
 		},
 		"plus_crier__sounds_for_the_supermarket": {
 			lastfm_url: "https://www.last.fm/music/Plus+Crier/At+the+Mall",
@@ -2554,6 +2597,7 @@ const database = {
 			genres: "Progressive rock; Psychedelic rock; Jazz rock; Space rock",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 	},
 
@@ -2601,7 +2645,7 @@ const database = {
 			year_of_release: "1997",
 			year_of_discovery: "2016",
 			genres: "Alternative rock; Post-britpop",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 
@@ -2691,6 +2735,7 @@ const database = {
 			genres: "Technical death metal; Death metal; Thrash metal",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
 		},
 		"run_the_jewels__rtj4": {
 			lastfm_url: "https://www.last.fm/music/Run+the+Jewels/RTJ4",
@@ -2725,6 +2770,7 @@ const database = {
 			my_rating: 8.5,
 			my_review: "",
 			year_of_discovery: "2023",
+			recommended_by: TrustworthyMusicReviewers.TONE_ZONE
 		},
 		"steven_wilson__harmony_codex": {
 			lastfm_url: "https://www.last.fm/music/Steven+Wilson/The+Harmony+Codex",
@@ -2735,6 +2781,7 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 			year_of_discovery: "2024",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 
 		// 
@@ -2823,6 +2870,7 @@ const database = {
 			custom_cover_url: "https://f4.bcbits.com/img/a1960581482_65",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"sounds_from_the_ground__luminal": {
 			lastfm_url: "https://www.last.fm/music/Sounds+from+the+Ground/Luminal",
@@ -2834,6 +2882,7 @@ const database = {
 			custom_cover_url: "https://f4.bcbits.com/img/a3859474998_65",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 
 
@@ -2856,6 +2905,7 @@ const database = {
 			genres: "Space rock; Neo-Psychedelia; Anatolian rock",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"shakti__this_moment": {
 			lastfm_url: "https://www.last.fm/music/Shakti/This+Moment",
@@ -2907,6 +2957,7 @@ const database = {
 			genres: "Jazz fusion; Jazz funk; Min'yō Music; Neo-Psychedelia; J-folk; Turkish folk; Anatolian rock",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"stereolab__dots_and_loops": {
 			lastfm_url: "https://www.last.fm/music/Stereolab/Dots+and+Loops",
@@ -3071,6 +3122,7 @@ const database = {
 			my_review: "",
 		},
 
+
 		"telegraph__mir": {
 			lastfm_url: "https://www.last.fm/music/Telegraph/Mir",
 			rym_url: "https://rateyourmusic.com/release/album/telegraph/mir/",
@@ -3080,6 +3132,7 @@ const database = {
 			genres: "Progressive rock; Space rock; Psychedelic rock; Post-rock; Radio broadcast recordings; Electronic",
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"thom_yorke__suspiria": {
 			lastfm_url: "https://www.last.fm/music/Thom+Yorke/Suspiria",
@@ -3181,6 +3234,7 @@ const database = {
 			genres: "Future bass; EDM Trap; EDM; IDM; Wonky; Glitch pop; Electronic",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"vampire_weekend__vampire_weekend": {
 			lastfm_url: "https://www.last.fm/music/Vampire+Weekend/Vampire+Weekend",

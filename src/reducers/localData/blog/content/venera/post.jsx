@@ -89,7 +89,7 @@ export const post = () => (
             <p>Launched in <b>June 1975</b>, <a href='https://en.wikipedia.org/wiki/Venera_9' target='_blank'>Venera 9</a> successfully landed and became the first human-made probe to take <b>a picture from another planet!!!!</b></p>
             <p>The engineers made many adjustments to the spacecraft design, most notably a camera, also liquid cooling to help withstand the extreme surface temperatures, and also removing the parachutes
                 favoring a hard landing instead of a soft landing. The probe lasted for <b>53 minutes</b> before succumbing to the extreme surface temperatures. This was a huge improvement and allowed much more time
-                to collect data and obviously take a photograph! The lander measured a light level of <a href='https://www.infinity-energy.co.uk/led-lighting/what-does-lux-mean/' target='_blank'>14,000 lux</a> similar to that of Earth in full daylight but no direct sunshine.</p>\
+                to collect data and obviously take a photograph! The lander measured a light level of <a href='https://www.infinity-energy.co.uk/led-lighting/what-does-lux-mean/' target='_blank'>14,000 lux</a> similar to that of Earth in full daylight but no direct sunshine.</p>
             <p>The image revealed a <b>rocky uneven surface with <a href='https://www.bgs.ac.uk/discovering-geology/geological-processes/weathering/' target='_blank'>weatherd rocks</a></b> and our <b>first glimpse of the hazy Venusian sky</b>.</p>
             <picture className="img">
                 <img className='larger-image' src="https://planetary.s3.amazonaws.com/web/assets/pictures/_1200x248_crop_center-center_82_line/venus-surface-venera-9.jpg.webp" title='' />

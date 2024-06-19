@@ -32,6 +32,7 @@ class MusicReview extends React.Component {
         let no_rym_str = "";
         let no_youtube_str = "";
         let my_rating_nodp = "";
+        let recommened_by = "";
 
         custom_album_cover_url = (this.props.album_data.custom_cover_url !== undefined) ? this.props.album_data.custom_cover_url : this.props.album_data.album_cover_url;
         album_name = (this.props.album_data.album_name_displayed !== undefined) ? this.props.album_data.album_name_displayed : this.props.album_data.album_name;
@@ -65,6 +66,10 @@ class MusicReview extends React.Component {
         // my rating without any decimal places...
         if (this.props.album_data.my_rating_nodp !== undefined) {
             my_rating_nodp = this.props.album_data.my_rating_nodp;
+        }
+
+        if (this.props.album_data.recommened_by !== undefined) {
+            
         }
 
         return(

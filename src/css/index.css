@@ -488,10 +488,10 @@
 
 
   /* Searchbox */
-  --searchbox-bg-color: rgb(43, 43, 46);
-  --searchbox-hover-bg-color: rgb(56, 56, 61);
-  --searchbox-active-bg-color: rgb(66, 68, 71);
-  --searchbox-border-color: rgba(8, 93, 149, 0.293);
+  --searchbox-bg-color: rgb(47, 47, 50);
+  --searchbox-hover-bg-color: rgb(59, 59, 62);
+  --searchbox-active-bg-color: rgb(73, 73, 77);
+  --searchbox-border-color: rgba(255, 255, 255, 0.246);
   --searchbox-text-color: rgb(38, 220, 144);
   --searchbox-text-placeholder-color: rgb(98, 98, 98);
 
@@ -631,7 +631,7 @@ body > div#root > div.App {
   min-height: 100vh;
 }
 .section-inner > div.frontpage {
-  padding: 10px 100px;
+  padding: 10px 0px;
 }
 
 /* Accomodate for sidebar... */
@@ -1035,7 +1035,12 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 
 .blog > .section-inner,
 .blog-post > .section-inner {
+  /*
   padding: 20px 300px;
+  */
+  width: 55%;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .posts-container {
@@ -1048,7 +1053,7 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
   position: fixed;
   top: 0px;
   z-index: 999999;
-  width: 100%;
+  width: 50%;
   /* box-shadow: 0 21px 8px -4px var(--blog-table-header-bottom-shadow-color); */
 }
 .posts-container > .posts-header-container > .posts-header {
@@ -1059,7 +1064,7 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 
 .posts-header .container-intro {
   display: grid;
-  grid-template-columns: 1fr 9fr;
+  grid-template-columns: 3fr 9fr;
 }
 .posts-header .container-intro-text > h6 {
   margin-left: 3px;
@@ -1198,7 +1203,6 @@ div.tags {
   background-color: var(--tags-bg-color);
   color: var(--blog-table-tag-text);
   border-color: transparent;
-  
 }
 
 .tag span,
@@ -1209,8 +1213,27 @@ ul.tag-filter-options-list li span {
   border-width: 1px;
   border-style: solid;
 }
+/*
 ul.tag-filter-options-list li span  {  padding: 2px 5px 2px 10px; }
 .tag span                           {  padding: 2px 0px 2px 5px;  }
+*/
+ul.tag-filter-options-list li span,
+.tag span {
+  padding: 1px 3px 1px 8px;
+  user-select: none;
+}
+
+@media screen and (max-width: 1000px) {
+  ul.tag-filter-options-list li span,
+  .tag span {
+    padding: 1px 3px 1px 6px;
+    font-size: 0.6rem;
+    font-weight: 700 !important;
+  }
+  .section-inner > div.frontpage {
+    margin-top: 165px;
+  }
+}
 
 /* lower opacity when hovering over tag */
 .blog-post-tags .tag span:hover,
@@ -1262,20 +1285,29 @@ ul.tag-filter-options-list li.selectedThisCategory span {
 
 /* -------------< Dropdown list for available tag categories to filter by >----------------- */
 .tag-filter-options-list-container {
+  /*
   display: block;
   overflow-y: hidden;
   overflow-x: hidden;
   width: var(--blog-post-tag-filters-container-width);
   margin: 0rem 0rem;
+  */
+  width: var(--blog-post-tag-filters-container-width);
 }
 ul.tag-filter-options-list {
+  /*
   padding: 0.6rem 0.5rem;
+  */
+  padding: 0;
 }
 ul.tag-filter-options-list li {
+  /*
   display: inline;
   list-style-type: none;
   min-width: auto;
   user-select: none;
+  */
+  display: inline-block;
 }
 ul.tag-filter-options-list li span {
   line-height: 1.5rem;
@@ -1360,29 +1392,33 @@ div.searchbox {
   display: flex;
 }
 
+:root {
+  --searchbox-border-width: 2px;
+}
+
 /* the input box within div.searchbox */
 div.searchbox input {
   background-color: var(--searchbox-bg-color);
   color: var(--searchbox-text-color);
   width: 600px;
-  padding: 0.6rem 1.1rem;
-  border-radius: 1rem;
+  padding: 1.3rem 0.9rem;
+  border-radius: 15px;
   caret-color: var(--caret-color);
-  border: 2px solid transparent;
+  border: var(--searchbox-border-width) solid transparent;
 }
 div.searchbox input {
-  transition: all 200ms ease;
+  transition: all 150ms ease;
 }
 
 div.searchbox input:hover {
   background-color: var(--searchbox-hover-bg-color);
 }
+div.searchbox input:focus,
 div.searchbox input:active,
 div.searchbox input.activated {
   box-shadow: 0 1px 1px 0 var(--general-box-shadow-color-1), 0 1px 3px 1px var(--general-box-shadow-color-2);
   background-color: var(--searchbox-active-bg-color);
-  border: 2px solid transparent;
-  /* border: 2px solid var(--searchbox-border-color); */
+  border: var(--searchbox-border-width) solid var(--searchbox-border-color);
 }
 div.searchbox input::placeholder {
   color: var(--searchbox-text-placeholder-color);
@@ -1418,7 +1454,7 @@ div.blog-post
       div.blog-post-tags
 */
 .blog-post-info {
-  padding-bottom: 0.5em;  
+  padding-top: 1em;
 }
 .blog-post-title {
   color: var(--blog-post-title-text);
@@ -1569,6 +1605,9 @@ div.blog-post
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
+.blog-post-content h3 {
+  font-size: 1.8rem;
+}
 .blog-post-content h1,
 .blog-post-content h2, 
 .blog-post-content h3, 
@@ -1583,7 +1622,7 @@ div.blog-post
 .blog-post-content p,
 .blog-post-content ul li,
 .blog-post-content ol li {
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   color: var(--blog-post-text);
   margin-left: 5px;
 }
@@ -2968,12 +3007,12 @@ div.btn.films-reset-filters-btn svg {
 }
 
 :root {
-  --my-rating-colour-r10: linear-gradient(100deg, rgb(174, 25, 166), rgb(11, 119, 26), rgb(248, 248, 101));
-  --my-rating-colour-r95: linear-gradient(100deg, rgb(46, 85, 143), rgb(115, 48, 186), rgb(101, 248, 182));
-  --my-rating-colour-r9: linear-gradient(100deg, rgb(56, 35, 177), rgb(48, 110, 186), rgb(13, 138, 34));
-  --my-rating-colour-r85: linear-gradient(100deg, rgb(226, 125, 217), rgb(80, 192, 224), rgb(164, 207, 34));
-  --my-rating-colour-r8: linear-gradient(100deg, rgb(23, 152, 98), rgb(7, 142, 65), rgb(160, 195, 23));
-  --my-rating-colour-r75: linear-gradient(100deg, rgb(23, 152, 98), rgb(7, 142, 65), rgb(160, 195, 23));
+  --my-rating-colour-r10: linear-gradient(100deg, rgb(77, 202, 152), rgb(33, 133, 38), rgb(43, 108, 89));
+  --my-rating-colour-r95: linear-gradient(100deg, rgb(159, 124, 240), rgb(179, 80, 216), rgb(212, 30, 187));
+  --my-rating-colour-r9: linear-gradient(100deg, rgb(85, 198, 246), rgb(71, 150, 193), rgb(41, 101, 190));
+  --my-rating-colour-r85: linear-gradient(100deg, rgb(218, 211, 95), rgb(104, 113, 19), rgb(111, 106, 13));
+  --my-rating-colour-r8: linear-gradient(100deg, rgb(248, 165, 106), rgb(154, 82, 18), rgb(128, 81, 21));
+  --my-rating-colour-r75: linear-gradient(100deg, rgb(119, 119, 119), rgb(176, 178, 177), rgb(143, 143, 143));
 
   --my-pos-colour: rgb(47, 137, 104);
 }
@@ -3180,6 +3219,25 @@ div.btn.films-reset-filters-btn svg {
 
 /* #region -----------------------------------<11: MUSIC PAGE>---------------------------------- */
 
+:root {
+  --albums-displayed-per-row: 6;
+  --album-cover-border-radius: 0.5rem;
+}
+
+:root {
+  --topAlbumsList-sidebar-bg-color: rgba(92, 92, 101, 0.627);
+
+  /* */
+  --filtered-albums-list-info-bg-color: var(--topAlbumsList-sidebar-bg-color);
+  --filtered-albums-list-info-text-bg-color: rgba(38, 43, 50, 0.594);
+
+  /* */
+  --album-info-grid-item-bg-color: rgb(60, 60, 67);
+
+  /* */
+  --topAlbumsList-navItem-bg-color: var(--topAlbumsList-sidebar-bg-color);
+}
+
 #music-page .section-inner {
   padding: 30px;
 }
@@ -3190,6 +3248,7 @@ div.btn.films-reset-filters-btn svg {
   */
 }
 
+/* #region -----< Custom Card >-------- */
 .custom-card {
   background-color: rgb(32, 37, 43);
   box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.411);
@@ -3213,25 +3272,24 @@ div.btn.films-reset-filters-btn svg {
   color: var(--text-much-darker);
   font-size: 0.65rem;
 }
+/* #endregion */
+
 
 /* #region ------------< 11.1) Top Albums List >------------ */
-:root {
-  --albums-displayed-per-row: 6;
-  --album-cover-border-radius: 0.5rem;
-}
 
-/* Top albums list */
 .top-albums-list-container {
+  /*
+  When I had .custom-card attached to the class
   margin-left: 30px;
   padding: 10px 30px;
-
+  */
   display: flex;
   flex-direction: column;
 }
 
 .top-albums-list-header {
   display: grid;
-  grid-template-columns: 35% 45% 20%;
+  grid-template-columns: 30% 40% 20% 10%;
 }
 .top-albums-list-header > * {
   padding-right: 20px;
@@ -3240,37 +3298,13 @@ div.btn.films-reset-filters-btn svg {
 div.btn.filter-list-by-album-property {
   padding: 0 4px;
   background-color: rgb(54, 54, 58);
-  border-radius: 81px;
-  margin: 0 4px;
-  font-size: 10px;
+  border-radius: 100px;
+  margin: 0 3px;
+  font-size: 9px;
 }
 div.btn.filter-list-by-album-property > .item-text {
-  margin-right: 6px;
+  margin-right: 4px;
 }
-
-#filtered-albums-list-info:not(.filters-active) {
-  visibility: hidden;
-  display: flex;
-  flex-direction: row;
-}
-
-#filtered-albums-list-info.filters-active {
-  color: var(--text);
-  padding-top: 20px;
-  display: flex;
-  flex-direction: row;
-}
-#filtered-albums-list-info p {
-  margin-right: 20px;
-  color: var(--text-much-darker);
-}
-#filtered-albums-list-info p span {
-  color: var(--text);
-  background-color: rgb(53, 53, 55);
-  border-radius: 5px;
-  padding: 2px 4px;
-}
-
 
 /*
 div.btn.filter-list-by-artist-btn {
@@ -3279,17 +3313,19 @@ div.btn.filter-list-by-artist-btn {
   justify-content: space-between;
   align-items: center;
 }
-div.btn.filter-list-by-artist-btn > span.artist-count {
-  
-}
 */
-
 
 .top-albums-list {
   display: grid;
   grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
-  padding-top: 10px;
+  padding-top: 4px;
 }
+/*
+#filtered-albums-list-info.filters-active + .top-albums-list {
+  padding-top: 40px;
+}
+*/
+
 @media screen and (max-width: 1200px) {
   .top-albums-list {
     padding: 50px 10px;
@@ -3320,15 +3356,96 @@ div.btn.filter-list-by-artist-btn > span.artist-count {
 
 /* #endregion */
 
-/* #region ------------< 11.2) Each album in the list (Grid view) >------------ */
+/* #region ------------< 11.2) Filtered albums list info >------------ */
+
+#filtered-albums-list-info:not(.filters-active) {
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  height: 0px;
+}
+
+#filtered-albums-list-info.filters-active {
+  color: var(--text);
+  background-color: var(--filtered-albums-list-info-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.672);
+  padding-left: 10px;
+  border-radius: 6px;
+  padding-top: 12px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+#filtered-albums-list-info p {
+  margin-right: 20px;
+  color: var(--text-darker);
+}
+
+#filtered-albums-list-info p span {
+  color: var(--text);
+  background-color: var(--filtered-albums-list-info-text-bg-color);
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+
+/* #endregion */
+
+/* #region ------------< Navigation for albums list >------------- */
+
+#top-albums-list-navigation {
+  position: fixed;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 0px;
+  grid-column-gap: 6px;
+}
+.top-albums-list {
+  margin-left: 100px;
+}
+
+#top-albums-list-navigation .navItem {
+  background-color: var(--topAlbumsList-navItem-bg-color);
+  border-radius: 6px;
+  color: var(--text);
+  padding: 3px 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+#top-albums-list-navigation .navItem:hover {
+  background-color: rgba(122, 125, 131, 0.838);
+  transition: all 100ms ease;
+}
+#top-albums-list-navigation .navItem p {
+  vertical-align: middle;
+  margin: 0 auto;
+  color: var(--text);
+}
+#top-albums-list-navigation .navItem.active:nth-child(1) {
+  background-color: #12525d;
+}
+
+/* #endregion */
+
+/* #region ------------< 11.3) Each album in the list (Grid view) >------------ */
 
 div.albumInfoContainer {
-  margin: 0.25rem;
+  margin: 0.3rem;
   position: relative;
 }
-div.albumInfoContainer:hover > img.albumCover {
-  opacity: 0.4;
-  transition: all 200ms ease;
+div.albumInfoContainer > img.albumCover {
+  filter: brightness(1.1);
+}
+div.albumInfoContainer:hover {
+  border: 3px solid rgba(166, 170, 180, 0.153);
+  transition: border-width 50ms ease;
+  border-radius: 11px;
+  filter: brightness(1.2);
 }
 
 div.albumInfoContainer > img.albumCover {
@@ -3348,10 +3465,10 @@ div.albumInfoContainer > div.albumInfo {
 }
 
 div.albumInfoContainer > div.albumInfo > div  {
-  background-color: rgb(49, 49, 51);
+  background-color: var(--album-info-grid-item-bg-color);
   color: var(--text);
   font-size: 0.83rem;
-  padding: 2px 5px;
+  padding: 0px 5px;
 }
 div.albumInfoContainer > div.albumInfo > div > p {
   margin: 0;
@@ -3362,6 +3479,23 @@ div.albumInfoContainer > div.albumInfo > div > p {
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 300px;
+}
+
+div.albumInfoContainer > div.albumInfo div.albumMoreInfo {
+  display: flex;
+  flex-direction: row;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+div.albumInfoContainer > div.albumInfo div.albumMoreInfo > p {
+  margin-right: 8px;
+}
+div.albumInfoContainer p {
+  border-radius: 50px;
+  padding: 1px 5px;
+}
+div.albumInfoContainer p.myPosition {
+  background-color: var(--my-pos-colour);
 }
 
 .dataInCircle {
@@ -3407,8 +3541,6 @@ div.albumInfoContainer > div.myRating {
   background-color: rgba(62, 135, 17, 0.88);
 }
 /* #endregion */
-
-
 
 /* #region ------------< Top Tracks List >------------ */
 
@@ -3625,6 +3757,7 @@ div.albumInfoContainer > div.myRating {
 .album-cover-container img {
   width: var(--album-cover-width);
   border-radius: 10px;
+  filter: brightness(1.06);
 }
 
 /* Album name */
@@ -4604,7 +4737,12 @@ div.albumInfoContainer > div.myRating {
   }
 }
 
-
+@media screen and (max-width: 1500px) {
+  .blog > .section-inner,
+  .blog-post > .section-inner {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 725px) {
   /* move content down a bit to make room for button */
@@ -4625,8 +4763,9 @@ div.albumInfoContainer > div.myRating {
   .blog > .section-inner,
   .blog-post > .section-inner {
     /*
-    padding: 15px 4px;
+    padding: 20px 300px;
     */
+    width: 100%;
   }
   .blog-post-info,
   .blog-post-content {

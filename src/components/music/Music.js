@@ -5,6 +5,7 @@ import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { AlbumProperties } from '../../js/enums.js';
 import TopTracksList from './TopTracksList.js';
 import AlbumGridElement from './AlbumGridElement';
+import { event_listener_for_top_albums_list_nav_item } from "../../js/main.js";
 import {
     handle_filter_button_toggling_stuff,
     // toggle_dropdown_list,
@@ -29,6 +30,7 @@ class Music extends Component {
         __current_genre_filter: "All genres",
         __current_artist_filter: "All artists",
         __current_year_filter: "All years",
+        __current_reviewer_filter: "All reviewers",
 
         // search stuff...
         __search_box_contains_text: false,
@@ -39,6 +41,7 @@ class Music extends Component {
         __default_genre_filter: "All genres",
         __default_artist_filter: "All artists",
         __default_year_filter: "All years",
+        __default_reviewer_filter: "All reviewers",
     }
 
     /**
@@ -238,6 +241,46 @@ class Music extends Component {
     }
 
     /**
+     * 
+     * @param {*} e 
+     * @param {*} reviewer_selected 
+     */
+    filter_by_reviewer = (e, reviewer_selected) => {
+        // do nothing if the language selected is already selected...
+        if (reviewer_selected !== this.state.__current_reviewer_filter) {
+            // update the 'current_genre_filter' state...
+            this.setState({__current_reviewer_filter: reviewer_selected})
+
+            this.setState(prevState => {
+                return {
+                    __filtered_data: Array.from(this.props.top_albums)
+                        .filter((a) => {
+                            if (reviewer_selected === this.state.__default_reviewer_filter) {
+                                // show all albums...
+                                return true;
+                            }
+                            return a.recommended_by == reviewer_selected;
+                        })
+                }
+            })
+
+            // deal with button stuff...
+            let actual_button = handle_filter_button_toggling_stuff(e.target, '.filter-list-by-reviewer-btn');
+            
+            // toggle the .active class
+            if (!actual_button.classList.contains('active')) {
+                // enable filter...
+                actual_button.classList.add('active');
+            } else {
+                // disable filter...
+                actual_button.classList.remove('active');
+                this.setState({__current_reviewer_filter: ""})
+               // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
+            }
+        }
+    }
+
+    /**
      * Remove duplicate values from my albums toplist
      * Useful if you want to, for example, simply get a list of artists in my toplist, but each artist only referenced once.
      * 
@@ -345,6 +388,16 @@ class Music extends Component {
                         return album.year_of_release === item;
                     }
                 }
+
+                // how many albums per 'Recommened by' ?
+                else if (property == "recommended_by") {
+                    if (album.recommended_by !== undefined) {
+                        if (item === default_property) {
+                             return Array.from(album.recommended_by);
+                        }
+                        return album.recommended_by === item;
+                    }
+                }
             }).length;
 
             album_count_list.push({
@@ -420,6 +473,8 @@ class Music extends Component {
         let avg_pos = 0;
         let avg_rating = 0;
         let filter_criteria = "";
+        let filter_type = "";
+        let filter_url = "";
 
         if (this.state.__current_artist_filter !== this.state.__default_artist_filter) {
             // Filtering by ARTIST
@@ -432,6 +487,8 @@ class Music extends Component {
                 avg_pos = obj['avg_pos'];
                 avg_rating = obj['avg_rating'];
                 num_of_albums = obj['num_of_albums'];
+
+                filter_type = "Artist:";
             }
         } else if (this.state.__current_genre_filter !== this.state.__default_genre_filter) {
             // Filtering by GENRE
@@ -444,6 +501,8 @@ class Music extends Component {
                 avg_pos = obj['avg_pos'];
                 avg_rating = obj['avg_rating'];
                 num_of_albums = obj['num_of_albums'];
+
+                filter_type = "Genre:";
             }
         } else if (this.state.__current_year_filter !== this.state.__default_year_filter) {
             // Filtering by YEAR
@@ -456,6 +515,23 @@ class Music extends Component {
                 avg_pos = obj['avg_pos'];
                 avg_rating = obj['avg_rating'];
                 num_of_albums = obj['num_of_albums'];
+
+                filter_type = "Year:";
+            }
+        } else if (this.state.__current_reviewer_filter !== this.state.__default_reviewer_filter) {
+            // Filtering by REVIEWER
+            let filter_info_div = document.getElementById('filtered-albums-list-info');
+            if (filter_info_div !== null) {
+                filter_info_div.classList.add('filters-active');
+                filter_criteria = (this.state.__current_reviewer_filter).name;
+
+                let obj = this.calculate_avgs(albums_displayed, filter_info_div);
+                avg_pos = obj['avg_pos'];
+                avg_rating = obj['avg_rating'];
+                num_of_albums = obj['num_of_albums'];
+
+                filter_type = "Recommened by...";
+                filter_url = (this.state.__current_reviewer_filter).url;
             }
         } else {
             let filter_info_div = document.getElementById('filtered-albums-list-info');
@@ -465,13 +541,15 @@ class Music extends Component {
         }
 
         const info = {
+            "filter_type": filter_type,
             "filter_criteria": filter_criteria,
+            "filter_url": filter_url,
             "num_of_albums": num_of_albums,
             "avg_pos": avg_pos,
             "avg_rating": avg_rating,
         }
 
-        console.log(info);
+        //console.log(info);
         return info;
     }
 
@@ -484,12 +562,18 @@ class Music extends Component {
 
         // get items for current page...
         const albums_displayed = this.state.__filtered_data;
-        const filter = this.show_filter_info(albums_displayed, this.state.__current_artist_filter, this.state.__default_artist_filter);
+
+        // filtering...
+        const filter = this.show_filter_info(albums_displayed);
+        const filter_url = filter['filter_url'];
+        const filter_type = filter['filter_type'];
+        const filter_criteria = filter['filter_criteria'];
 
         // generate lists...
-        const all_artists_album_count = this.find_num_of_albums(AlbumProperties.ARTIST_NAME.toString(), this.state.__default_artist_filter.toLowerCase());
+        const all_artists_album_count = this.find_num_of_albums(AlbumProperties.ARTIST_NAME.toString(), this.state.__default_artist_filter);
         const all_genres_album_count = this.find_num_of_albums(AlbumProperties.GENRES.toString(), this.state.__default_genre_filter);
         const all_years_album_count = this.find_num_of_albums(AlbumProperties.YEAR.toString(), this.state.__default_year_filter);
+        const all_reviewers_album_count = this.find_num_of_albums(AlbumProperties.RECOMMENDED_BY.toString(), this.state.__default_reviewer_filter);
 
         // top tracks list (default to overall time period)
         let top_tracks_list = this.props.top_tracks.overall;
@@ -505,12 +589,13 @@ class Music extends Component {
                         />
                         */}
 
-                        <div className='top-albums-list-container custom-card'>
+                        <div className='top-albums-list-container'>
                             {/* Title */}
                             <span className='page-title'>My top {this.props.top_albums.length} favourite albums of all time</span>
 
                             {/* Header */}
                             <div className='top-albums-list-header'>
+                                {/* Genres */}
                                 <div id='filter-by-genre-btns'>
                                     {
                                         all_genres_album_count.map((obj => {
@@ -524,6 +609,7 @@ class Music extends Component {
                                     }
                                 </div>
                                 
+                                {/* Artists */}
                                 <div id='filter-by-artist-btns'>
                                     {
                                         all_artists_album_count.map((obj => {
@@ -536,7 +622,8 @@ class Music extends Component {
                                         }))
                                     }
                                 </div>
-
+                                
+                                {/* Years */}
                                 <div id='filter-by-year-btns'>
                                     {
                                         all_years_album_count.map((obj => {
@@ -549,24 +636,69 @@ class Music extends Component {
                                         }))
                                     }
                                 </div>
+                                
+                                {/* Recommened by... */}
+                                <div id='filter-by-RecommendedBy-btns'>
+                                    {
+                                        all_reviewers_album_count.map((obj => {
+                                            // for the 'All artists' button
+                                            let artist_name = (obj.item.name !== undefined) ? obj.item.name : obj.item;
+                                            
+                                            return <div className="btn filter-list-by-album-property filter-list-by-reviewer-btn" key={obj.item} onClick={(e) => this.filter_by_reviewer(e, obj.item)}>
+                                                    <span className='item-text'>{artist_name}</span>
+                                                    <span className='item-count'>{obj.count}</span>
+                                                </div>
+                                        }))
+                                    }
+                                </div>
                             </div>
 
                             {/* Information about what is currently being filtered (if anything) */}
                             <div id="filtered-albums-list-info">
-                                <p className={`avgPos_`+filter['avg_pos']}>Average position: <span>{filter['avg_pos']}</span></p>
-                                <p className={`avgRating_`+filter['avg_rating']}>Average rating: <span>{filter['avg_rating']}</span></p>
+                                <p className={`avgPos avgPos_`+filter['avg_pos']}>Average position: <span>#{filter['avg_pos']}</span></p>
+                                <p className={`avgRating avgRating_`+filter['avg_rating']}>Average rating: <span>{filter['avg_rating']}/10</span></p>
                                 <p className={`numOfAlbums_`+filter['num_of_albums']}>Num of albums: <span>{filter['num_of_albums']}</span></p>
-                                <p>Filtered by <span>{filter['filter_criteria']}</span></p>
+                                <p>Filtered by <span>{filter_type} {(filter_url.length > 0) ? <a href={filter_url} target='_blank'>{filter_criteria}</a> : filter_criteria}</span></p>
                             </div>
 
                             {/* Top albums list */}
-                            <div className='top-albums-list'>
-                                {albums_displayed.map(a => {
-                                    return <AlbumGridElement
-                                        album={a}
-                                        albumsList={albums_displayed}
-                                    />
-                                })}
+                            <div className='top-albums-list-container'>
+                                {/* Navigation for list */}
+                                <div id='top-albums-list-navigation'>
+                                    <div id='link-to-album-25' className='navItem active'><p>25</p></div>
+                                    <div id='link-to-album-50' className='navItem'><p>50</p></div>
+                                    <div id='link-to-album-75' className='navItem'><p>75</p></div>
+                                    <div id='link-to-album-100' className='navItem'><p>100</p></div>
+                                    <div id='link-to-album-125' className='navItem'><p>125</p></div>
+                                    <div id='link-to-album-150' className='navItem'><p>150</p></div>
+                                    <div id='link-to-album-175' className='navItem'><p>175</p></div>
+                                    <div id='link-to-album-200' className='navItem'><p>200</p></div>
+                                    <div id='link-to-album-225' className='navItem'><p>225</p></div>
+                                    <div id='link-to-album-250' className='navItem'><p>250</p></div>
+                                    <div id='link-to-album-275' className='navItem'><p>275</p></div>
+                                    <div id='link-to-album-300' className='navItem'><p>300</p></div>
+                                    <div id='link-to-album-325' className='navItem'><p>325</p></div>
+                                    <div id='link-to-album-350' className='navItem'><p>350</p></div>
+                                    <div id='link-to-album-375' className='navItem'><p>375</p></div>
+                                    <div id='link-to-album-400' className='navItem'><p>400</p></div>
+                                    <div id='link-to-album-425' className='navItem'><p>425</p></div>
+                                    <div id='link-to-album-450' className='navItem'><p>450</p></div>
+                                    <div id='link-to-album-475' className='navItem'><p>475</p></div>
+                                    <div id='link-to-album-500' className='navItem'><p>500</p></div>
+                                    <div id='link-to-album-525' className='navItem'><p>525</p></div>
+                                    <div id='link-to-album-550' className='navItem'><p>550</p></div>
+                                    <div id='link-to-album-575' className='navItem'><p>575</p></div>
+                                    <div id='link-to-album-600' className='navItem'><p>600</p></div>
+                                </div>
+                                
+                                <div className='top-albums-list'>
+                                    {albums_displayed.map(a => {
+                                        return <AlbumGridElement
+                                            album={a}
+                                            albumsList={albums_displayed}
+                                        />
+                                    })}
+                                </div>
                             </div>
                         </div>
                     </div>

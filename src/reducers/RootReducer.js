@@ -111,7 +111,7 @@ const merge_albums_data = (init_state) => {
         let prevAlbum = mergedData[v["position"] - 2];
         let nextAlbum = mergedData[v["position"]];
         
-        console.log(mergedData);
+        //console.log(mergedData);
         v["artist_name_backend"] = remove_special_characters_for_musicbee_export(v["artist_name"]);
         v["album_name_backend"] = remove_special_characters_for_musicbee_export(v["album_name"]);
 

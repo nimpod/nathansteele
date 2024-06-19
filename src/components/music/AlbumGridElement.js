@@ -38,7 +38,7 @@ class AlbumGridElement extends Component {
 
         // console.log(this.props);
         return(
-            <Link to={'/music/' + this.props.album.review_id}>
+            <Link id={`album-${this.props.album.position}`} to={'/music/' + this.props.album.review_id}>
                 <div className='albumInfoContainer'>
                     <img className='albumCover' src={album_cover_url} alt="Album cover"></img>
                     <div className='albumInfo'>
@@ -48,16 +48,19 @@ class AlbumGridElement extends Component {
                         <div className='albumName'>
                             <p>{album_name}</p>
                         </div>
+                        <div className='albumMoreInfo'>
+                            <p className='myPosition'>#{this.props.album.position_str}</p>
+                            <p className={`myRating r${this.props.album.my_rating_nodp}`}>{this.props.album.my_rating}</p>
+                        </div>
                     </div>
+                    {/*}
                     <div className='pos dataInCircle'>
-                        {/* <ToplistPosIcon className="invertable-icon" /> */}
-                        {/* <p>{this.props.album.position_str}</p> */}
                         <p>#{this.props.album.position_str}</p>
                     </div>
                     <div className={`myRating dataInCircle r${my_rating_nodp}`}>
-                        {/* <ToplistRatingIcon className="invertable-icon" /> */}
                         <p>{this.props.album.my_rating}</p>
                     </div>
+                    */}
                 </div>
             </Link>
         )

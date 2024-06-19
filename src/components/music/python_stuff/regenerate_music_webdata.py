@@ -119,6 +119,8 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     artist_name = 'alt-J'
                 if artist_name == '久石譲':
                     artist_name = 'Joe Hisaishi'
+                if artist_name == 'Twenty One Pilots':
+                    artist_name = 'twenty one pilots'
                 
                 # show progress...
                 print(f"{pos_padded}: {review_id} {lastfm_url}")
