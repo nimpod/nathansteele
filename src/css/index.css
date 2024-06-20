@@ -488,12 +488,15 @@
 
 
   /* Searchbox */
-  --searchbox-bg-color: rgb(47, 47, 50);
-  --searchbox-hover-bg-color: rgb(59, 59, 62);
-  --searchbox-active-bg-color: rgb(73, 73, 77);
-  --searchbox-border-color: rgba(255, 255, 255, 0.246);
-  --searchbox-text-color: rgb(38, 220, 144);
-  --searchbox-text-placeholder-color: rgb(98, 98, 98);
+  --searchbox-border-width: 2px;
+  --searchbox-width: 700px;
+  --searchbox-bg-color: rgb(0, 0, 0);
+  --searchbox-hover-bg-color: rgb(39, 40, 42);
+  --searchbox-active-bg-color: rgb(43, 45, 46);
+  --searchbox-border-color: rgb(45, 47, 49);
+  --searchbox-border-color-active: rgba(48, 197, 231, 0.59);
+  --searchbox-text-color: rgb(234, 241, 243);
+  --searchbox-text-placeholder-color: rgb(126, 136, 144);
 
   /* Box shadow */
   --general-box-shadow-color-1: rgba(0, 0, 0, 0.415);
@@ -1399,22 +1402,19 @@ div.searchbox {
   display: flex;
 }
 
-:root {
-  --searchbox-border-width: 2px;
-}
 
 /* the input box within div.searchbox */
 div.searchbox input {
   background-color: var(--searchbox-bg-color);
   color: var(--searchbox-text-color);
-  width: 600px;
-  padding: 1.3rem 0.9rem;
-  border-radius: 15px;
+  width: var(--searchbox-width);
+  padding: 1.2rem 0.9rem;
+  border-radius: 100px;
   caret-color: var(--caret-color);
-  border: var(--searchbox-border-width) solid transparent;
+  border: var(--searchbox-border-width) solid var(--searchbox-border-color);
 }
 div.searchbox input {
-  transition: all 150ms ease;
+  transition: all 100ms ease;
 }
 
 div.searchbox input:hover {
@@ -1425,7 +1425,7 @@ div.searchbox input:active,
 div.searchbox input.activated {
   box-shadow: 0 1px 1px 0 var(--general-box-shadow-color-1), 0 1px 3px 1px var(--general-box-shadow-color-2);
   background-color: var(--searchbox-active-bg-color);
-  border: var(--searchbox-border-width) solid var(--searchbox-border-color);
+  border: var(--searchbox-border-width) solid var(--searchbox-border-color-active);
 }
 div.searchbox input::placeholder {
   color: var(--searchbox-text-placeholder-color);
@@ -1718,7 +1718,9 @@ div.blog-post
 
 .blog-post picture > p.external-link-container,
 .blog-post picture > p.external-link-container a {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-darker);
 }
 
 .blog-post picture > p.external-link-container a {

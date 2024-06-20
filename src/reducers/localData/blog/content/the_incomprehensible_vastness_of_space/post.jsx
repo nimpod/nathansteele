@@ -80,6 +80,7 @@ export const post = () => (
             <p>However it is due to pass within 1.6 lightyears (9.3 trillion miles) of an obscure star in the constellation Ursa Minor (aka. the little dipper) called AC+79 3888, in the year 40,272 AD (more than 38,200 years from now)...</p>
             <picture className="img">
                 <img className='larger-image' width="400" height="200" src={IMAGES.map_of_spacecrafts_that_have_reached_interstellar_space} alt="Not to scale illustration of spacecrafts venturing beyond the solar system" />
+                <p className='external-link-container'>Map of most distant spacecrafts  - [<a href="https://www.space.com/most-distant-spacecraft-voyagers-new-horizons/">source of image</a>]</p>
             </picture>
         </div>
     </div>

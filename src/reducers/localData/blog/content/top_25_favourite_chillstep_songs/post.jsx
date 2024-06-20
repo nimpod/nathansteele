@@ -15,12 +15,12 @@ export const post = () => (
                 Naturally I have a lot of nostalgia associated with those songs. 
                 Some haven't passed the test of time, but many have! Only 25 of the best, most timeless tracks made it into this list.
             </p>
-            <p>I discovered most of these songs from compilations uploaded to youtube around 2011-2015 by channels like 'MrRevillz',' MrSuicideSheep', 'Liquicity', '17Tumba', and 'UKF'.</p>
+            <p>I discovered most of these songs from compilations uploaded to youtube around 2011-2015 by channels like <a href="https://www.youtube.com/@MrRevillz">MrRevillz</a>, <a href="https://www.youtube.com/@MrSuicideSheep">MrSuicideSheep</a>, <a href="https://www.youtube.com/@Liquicity">Liquicity</a>, <a href="https://www.youtube.com/@17tumbaOfficial">17Tumba</a>, and <a href="https://www.youtube.com/@UKFDrumandBass">UKF</a>.</p>
             <p>
                 You can find the full list via <a href="https://www.youtube.com/playlist?list=PL_m58L0UBc3XUhrKFistJAfysZatPRFW6">my YouTube playlist</a>, or via <a href="https://open.spotify.com/playlist/4YVasZ9zl4YjNi0kndvC2L?si=83da3ad7fd1846a7">my Spotify playlist</a>. 
                 The YouTube playlist is better because a lot of my personal favourites are remixes that I can't find on Spotify, and only exist on YouTube.
                 But Spotify has it benefits too.
-                The full list contains 400+ songs, however in this blog post I'll just cover my top 25.
+                The Spotify list contains 400+ songs, however in this blog post I'll just cover my top 25.
             </p>
             <iframe src="https://open.spotify.com/embed/playlist/4YVasZ9zl4YjNi0kndvC2L?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
