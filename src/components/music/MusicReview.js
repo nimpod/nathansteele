@@ -63,7 +63,7 @@ class MusicReview extends React.Component {
         // check if I put any links in...
         if (this.props.album_data.spotify_url == undefined || this.props.album_data.spotify_url.length == 0) {
             no_spotify_str = "noSpotifyLink noLink";
-            spotify_hover_text = "This album is not available on Spotify :("
+            spotify_hover_text = "This album is not available on Spotify..."
         }
         if (this.props.album_data.rym_url == undefined || this.props.album_data.rym_url.length == 0) {
             no_rym_str = "noRYMLink noLink";

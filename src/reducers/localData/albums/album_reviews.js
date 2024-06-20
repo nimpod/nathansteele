@@ -19,10 +19,11 @@ import { review as ChisatoYamadaReview } from './content/chisato_yamada-suite_ni
  */
 const database = {
 	123: {
+		//
 		"808_state__don_solaris": {
 			lastfm_url: "https://www.last.fm/music/808+State/Don+Solaris",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/808-state/don-solaris/",
+			spotify_url: "https://open.spotify.com/album/5cfkvzD1MzHt03tXPOolEZ?si=AUhSN6DKR2S0evFY71kTfQ",
 			year_of_release: "1996",
 			year_of_discovery: "2023",
 			genres: "Acid house; Drum and bass; Trip hop; Jungle; Breakbeat; Electronic",
@@ -30,6 +31,28 @@ const database = {
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
+		"808_state__ninety": {
+			lastfm_url: "https://www.last.fm/music/808+State/Ninety",
+			rym_url: "https://rateyourmusic.com/release/album/808-state/90/",
+			spotify_url: "https://open.spotify.com/album/1Wn9vV02wDeOvMJkaXfQJM?si=AC4luxVvRYmBb_AJJtGOvg",
+			year_of_release: "1989",
+			year_of_discovery: "2023",
+			genres: "Breakbeat; Techno; Acid house; Acid techno; Rave; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"808_state__exel": {
+			lastfm_url: "https://www.last.fm/music/808+State/ex:el",
+			rym_url: "https://rateyourmusic.com/release/album/808-state/ex_el/",
+			spotify_url: "https://open.spotify.com/album/1Wn9vV02wDeOvMJkaXfQJM?si=AC4luxVvRYmBb_AJJtGOvg",
+			year_of_release: "1991",
+			year_of_discovery: "2023",
+			genres: "Breakbeat; Techno; Acid house; Acid techno; Rave; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
+
 		"4hero__two_pages": {
 			lastfm_url: "https://www.last.fm/music/4hero/Two+Pages",
 			rym_url: "https://rateyourmusic.com/release/album/4hero/two-pages/",
@@ -452,7 +475,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/5YjuPPmMZy5VGjlesAPbHG?si=wvitwDIOQoKaoxEQ4OMogg",
 			year_of_release: "2023",
 			year_of_discovery: "2023",
-			genres: "Alternative metal; Hyperpop; Trap metal; Pop rap; Industrial Hip Hop",
+			genres: "Alternative metal; Hyperpop; Trap metal; Pop rap; Industrial Hip-Hop",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -552,6 +575,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/24L8oeb5PczT6YTS3Edq1U?si=btGVLCniQLCIpGPyS0ZFnQ",
 			year_of_release: "2023",
 			year_of_discovery: "2023",
+			custom_cover_url: "https://e.snmc.io/i/600/s/725e18c10366f8a310be88f561223db9/10834079/bruno-sanfilippo-ver-sacrum-Cover-Art.jpg",
 			genres: "Ambient; Post-minimalism; Neo-classical new age; Electronic",
 			my_rating: 10.0,
 			my_review: "",
@@ -663,6 +687,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0e1WaSNDZnoPixaxDNdWo4?si=SKRn8GwCQfqlcDlEMysY3w",
 			year_of_release: "2020",
 			year_of_discovery: "2020",
+			custom_cover_url: "https://e.snmc.io/i/600/s/91bc5427fbd8ab7b73e1b00a667a9d5d/8509675/bring-me-the-horizon-post-human-survival-horror-Cover-Art.jpg",
 			genres: "Alternative metal; Metalcore; Heavy metal; Nu metal",
 			my_rating: 10,
 			my_review: "",
@@ -1003,6 +1028,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/76IXbZGBiE2TuvUTceDmaL?si=LkNa6y5ET_SLHXsycT4i2A",
 			year_of_release: "2014",
 			year_of_discovery: "2015",
+			custom_cover_url: "https://m.media-amazon.com/images/I/517mRQndYyL._UF894,1000_QL80_.jpg",
 			genres: "Metalcore; Post-hardcore; Alternative rock; Trancecore; Electronic",
 			themes: ["Rave", "Political"],
 			my_rating: 9.0,
@@ -1557,7 +1583,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/3u20OXh03DjCUzbf8XcGTq?si=Dt_8DHxBS1iA9mKiGynKfQ",
 			year_of_release: "2023",
 			year_of_discovery: "2023",
-			genres: "Hip-Hop; Experimental Hip Hop; Glitch hop; Jazz rap",
+			genres: "Hip-Hop; Experimental Hip-Hop; Glitch hop; Jazz rap",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -1657,7 +1683,7 @@ const database = {
 		//
 		"kendrick_lamar__section_80": {
 			lastfm_url: "https://www.last.fm/music/Kendrick+Lamar/Section.80",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/kendrick-lamar/section_80/",
 			spotify_url: "https://open.spotify.com/album/1bkN9nIkkCnXeG4yitVS1J?si=JDTcdWdDRHuUaI-8amHgIw",
 			year_of_release: "2011",
 			year_of_discovery: "2016",
@@ -1667,7 +1693,7 @@ const database = {
 		},
 		"kendrick_lamar__to_pimp_a_butterfly": {
 			lastfm_url: "https://www.last.fm/music/Kendrick+Lamar/To+Pimp+a+Butterfly",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/kendrick-lamar/to-pimp-a-butterfly/",
 			spotify_url: "https://open.spotify.com/album/7ycBtnsMtyVbbwTfJwRjSP?si=AEpJhbLTShq-Qg1vAUlvSQ",
 			year_of_release: "2015",
 			year_of_discovery: "2016",
@@ -1677,7 +1703,7 @@ const database = {
 		},
 		"kendrick_lamar__untitled_unmastered": {
 			lastfm_url: "https://www.last.fm/music/Kendrick+Lamar/Untitled+Unmastered",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/additional/kendrick-lamar/untitled-unmastered/",
 			spotify_url: "https://open.spotify.com/album/0kL3TYRsSXnu0iJvFO3rud?si=DhXStEWJRJK1NZnRIwJovQ",
 			year_of_release: "2016",
 			year_of_discovery: "2016",
@@ -1687,7 +1713,7 @@ const database = {
 		},
 		"kendrick_lamar__good_kid_maad_city": {
 			lastfm_url: "https://www.last.fm/music/Kendrick+Lamar/good+kid,+m.A.A.d+city+(Deluxe)",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/kendrick-lamar/good-kid-m_a_a_d-city/",
 			spotify_url: "",
 			year_of_release: "2012",
 			year_of_discovery: "2016",
@@ -1699,17 +1725,17 @@ const database = {
 		//
 		"king_gizzard_and_the_lizard_wizard__nonagon_infinity": {
 			lastfm_url: "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Nonagon+Infinity",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/king-gizzard-and-the-lizard-wizard/nonagon-infinity/",
 			spotify_url: "",
 			year_of_release: "2016",
 			year_of_discovery: "2018",
-			genres: "Psychedlic rock; Australian psychedlic rock",
+			genres: "Psychedelic rock; Garage punk",
 			my_rating: 9.0,
 			my_review: "",
 		},
 		"king_gizzard_and_the_lizard_wizard__paper_mache_dream_balloon": {
 			lastfm_url: "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Paper+M%C3%A2ch%C3%A9+Dream+Balloon",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/king-gizzard-and-the-lizard-wizard/paper-mache-dream-balloon/",
 			spotify_url: "",
 			year_of_release: "2015",
 			year_of_discovery: "2018",
@@ -1719,7 +1745,7 @@ const database = {
 		},
 		"king_gizzard_and_the_lizard_wizard__sketches_of_brunswick_east": {
 			lastfm_url: "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Sketches+of+Brunswick+East",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/king-gizzard-and-the-lizard-wizard-with-mild-high-club/sketches-of-brunswick-east/",
 			spotify_url: "",
 			year_of_release: "2017",
 			year_of_discovery: "2018",
@@ -1731,7 +1757,7 @@ const database = {
 		//
 		"kero_kero_bonito__intro_bonito": {
 			lastfm_url: "https://www.last.fm/music/Kero+Kero+Bonito/Intro+Bonito",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/mixtape/kero-kero-bonito/intro-bonito/",
 			spotify_url: "",
 			year_of_release: "2013",
 			year_of_discovery: "2022",
@@ -1741,7 +1767,7 @@ const database = {
 		},
 		"kero_kero_bonito__time_and_place": {
 			lastfm_url: "https://www.last.fm/music/Kero+Kero+Bonito/Time+%27n%27+Place",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/kero-kero-bonito/time-n-place/",
 			spotify_url: "",
 			year_of_release: "2018",
 			year_of_discovery: "2019",
@@ -1855,7 +1881,7 @@ const database = {
 			youtube_url: "https://www.youtube.com/playlist?list=PLPRWtKgY2MOsssQIpCArbDRAS_80zem1M",
 			year_of_release: "2013",
 			year_of_discovery: "2016",
-			genres: "Hip hop; Boom bap; Jazz rap; Pop rap",
+			genres: "Hip-Hop; Boom bap; Jazz rap; Pop rap",
 			my_rating: 8.5,
 			my_review: "",
 		},
@@ -2009,6 +2035,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/1HBTigeKszgy2KJPna3hND?si=NeIcr6-hRRqYCLsqdBOZgw",
 			year_of_release: "2013",
 			year_of_discovery: "2013",
+			custom_cover_url: "https://e.snmc.io/i/600/s/0da2e7fc126fc5eb9dce55951b99b031/4692322/marika-hackman-that-iron-taste-Cover-Art.png",
 			genres: "Folk; Indie folk; Singer-songwritter",
 			my_rating: 9.5,
 			my_review: "",
@@ -2073,7 +2100,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/7uzmNefPoRgc5Pi9DS00CC?si=r2_HfmOCTZemHmcg0DrnDQ",
 			year_of_release: "2021",
 			year_of_discovery: "2023",
-			genres: "Bedroom pop; Psychedelic Pop; Indietronica; EDM Trap; Baroque pop; Alternative pop",
+			genres: "Bedroom pop; Psychedelic pop; Indietronica; EDM Trap; Baroque pop; Alternative pop",
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.LOGSTAR_100
@@ -2344,8 +2371,8 @@ const database = {
 		//
 		"orbital__octane_soundtrack": {
 			lastfm_url: "https://www.last.fm/music/Orbital/Octane+Original+Soundtrack",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/orbital/octane/",
+			spotify_url: "https://open.spotify.com/album/4RAIZHAkdmzR8awlPKH7Xh",
 			year_of_release: "2003",
 			year_of_discovery: "2019",
 			genres: "Film soundtrack; Ambient; Ambient techno",
@@ -2366,7 +2393,7 @@ const database = {
 		},
 		"orbital__snivilization": {
 			lastfm_url: "https://www.last.fm/music/Orbital/Snivilization",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/orbital/snivilisation/",
 			spotify_url: "https://open.spotify.com/album/2biXiNkJXdREKZwx4HrhZE?si=CTCPAaamQKiaePEZ6Ux3QQ",
 			year_of_release: "1994",
 			year_of_discovery: "2018",
@@ -2376,7 +2403,7 @@ const database = {
 		},
 		"orbital__the_middle_of_nowhere": {
 			lastfm_url: "https://www.last.fm/music/Orbital/The+Middle+of+Nowhere",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/orbital/the-middle-of-nowhere/",
 			spotify_url: "https://open.spotify.com/album/6xCIBKlELMK5cUSsjWJzG6?si=4qrTD0V5R56gGkx-hXXRNw",
 			year_of_release: "1999",
 			year_of_discovery: "2018",
@@ -2509,10 +2536,11 @@ const database = {
 		},
 		"pendulum__in_silico": {
 			lastfm_url: "https://www.last.fm/music/Pendulum/In+Silico",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/pendulum/in-silico/",
+			spotify_url: "https://open.spotify.com/album/6eRDE48ttoLqN2VfkEpPOJ?si=1kND_whvQ1q73Zp_--aLoA",
 			year_of_release: "2008",
 			year_of_discovery: "2009",
+			custom_cover_url: "https://e.snmc.io/i/600/s/1e0367a32ecd0c3c0c0ad8c0db753960/2273844/pendulum-in-silico-Cover-Art.jpg",
 			genres: "Drum and bass; Electronic rock; Alternative dance; Electronic",
 			my_rating: 9.0,
 			my_review: "",
@@ -3267,6 +3295,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/3suXBde2fATz1UzA6f7UoA?si=WuZJk8R6T_WLHBzehng56w",
 			year_of_release: "1989",
 			year_of_discovery: "2013",
+			custom_cover_url: "https://e.snmc.io/i/600/s/256c73d61902419a62436ec420ff3e11/10426369/xtc-oranges-and-lemons-Cover-Art.jpg",
 			genres: "New wave; Psychedelic pop; Baroque pop; Art pop; Art rock; Chamber pop",
 			my_rating: 9.5,
 			my_review: "",
@@ -3294,7 +3323,7 @@ const database = {
 		"xtc__go_2": {
 			lastfm_url: "https://www.last.fm/music/XTC/Go+2",
 			rym_url: "https://rateyourmusic.com/release/album/xtc/go-2/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/4HWzj6tf8nXvH7GzXAl1ld?si=GL8B57-wQh-KkUSH2nrcWg",
 			year_of_release: "1978",
 			year_of_discovery: "2013",
 			genres: "New wave; Post-punk; Art punk",

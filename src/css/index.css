@@ -83,7 +83,7 @@
   --sidebar-width: 4.2rem;
 
   /* Blog page */
-  --posts-header-height: 150px;
+  --posts-header-height: 170px;
   --posts-table-item-border-radius: 10px;
   --blog-post-tag-filters-container-width: 1000px;
 }
@@ -636,7 +636,9 @@ body > div#root > div.App {
   min-height: 100vh;
 }
 .section-inner > div.frontpage {
+  /*
   padding: 10px 0px;
+  */
 }
 
 /* Accomodate for sidebar... */
@@ -2155,9 +2157,9 @@ div.blog-post
 
 /* A bit of data... */
 .films-toplist.view-as-list div.film-dataContainer.myData > span {
-  padding: 3px 8px;
+  padding: 3px 5px;
   font-weight: bold;
-  font-size: 2.0rem;
+  font-size: 1.5rem;
   border: 2px solid var(--page-wrapper-bg);
   cursor: pointer;
 }
@@ -2369,11 +2371,13 @@ span.film-imdbDiffScore:active {
   color: var(--text);
 }
 .films-controls div.btn:not(.active):hover,
-.top-albums-list-header div.btn:not(.active):hover {
+.top-albums-list-header div.btn:not(.active):hover,
+#top-albums-list-sidebar div.btn:not(.active):hover {
   background-color: var(--films-controls-btn-bg-color-hover);
 }
 .films-controls div.btn.active,
-.top-albums-list-header div.btn.active {
+.top-albums-list-header div.btn.active,
+#top-albums-list-sidebar div.btn.active {
   color: var(--films-controls-btn-text-color-active) !important;
   background-color: var(--films-pagination-btn-bg-color-active);
 }
@@ -3021,7 +3025,7 @@ div.btn.films-reset-filters-btn svg {
 }
 
 :root {
-  --my-rating-colour-r10: linear-gradient(100deg, rgb(77, 202, 152), rgb(33, 133, 38), rgb(43, 108, 89));
+  --my-rating-colour-r10: linear-gradient(100deg, rgb(175, 226, 65), rgb(82, 124, 33), rgb(66, 94, 52));
   --my-rating-colour-r95: linear-gradient(100deg, rgb(159, 124, 240), rgb(179, 80, 216), rgb(212, 30, 187));
   --my-rating-colour-r9: linear-gradient(100deg, rgb(85, 198, 246), rgb(71, 150, 193), rgb(41, 101, 190));
   --my-rating-colour-r85: linear-gradient(100deg, rgb(218, 211, 95), rgb(104, 113, 19), rgb(111, 106, 13));
@@ -3239,7 +3243,31 @@ div.btn.films-reset-filters-btn svg {
 }
 
 :root {
-  --topAlbumsList-sidebar-bg-color: rgba(92, 92, 101, 0.627);
+  --topAlbumsList-sidebar-bg-color: var(--films-pagination-btn-bg-color);
+
+  /* */
+  --filtered-albums-list-info-bg-color: var(--topAlbumsList-sidebar-bg-color);
+  --filtered-albums-list-info-text-bg-color: rgba(38, 43, 50, 0.594);
+
+  /* */
+  --album-info-grid-item-bg-color: rgb(216, 219, 223);
+
+  /* */
+  --topAlbumsList-navItem-bg-color: var(--topAlbumsList-sidebar-bg-color);
+
+  /* */
+  --topAlbumsList-filterBtn-albumProperty-bg-color: rgb(54, 54, 58);
+
+  /* bg colour of top level button */
+  --topAlbumsList-topLevelfilterBtn-bg-color: var(--topAlbumsList-sidebar-bg-color);
+  --topAlbumsList-topLevelfilterBtn-bg-color-hover: rgb(89, 91, 93);
+  
+  /* the 'modal' that appears on hover, containing all the actual buttons to filter by... */
+  --topAlbumsList-filters-border-color: rgb(110, 112, 120);
+  --topAlbumsList-filters-bg-color: rgba(89, 93, 95, 0.85);
+}
+[data-theme="dark"] {
+  --topAlbumsList-sidebar-bg-color: var(--films-pagination-btn-bg-color);
 
   /* */
   --filtered-albums-list-info-bg-color: var(--topAlbumsList-sidebar-bg-color);
@@ -3250,10 +3278,22 @@ div.btn.films-reset-filters-btn svg {
 
   /* */
   --topAlbumsList-navItem-bg-color: var(--topAlbumsList-sidebar-bg-color);
+
+  /* */
+  --topAlbumsList-filterBtn-albumProperty-bg-color: rgb(54, 54, 58);
+
+  /* bg colour of top level button */
+  --topAlbumsList-topLevelfilterBtn-bg-color: var(--topAlbumsList-sidebar-bg-color);
+  --topAlbumsList-topLevelfilterBtn-bg-color-hover: rgb(89, 91, 93);
+  
+  /* the 'modal' that appears on hover, containing all the actual buttons to filter by... */
+  --topAlbumsList-filters-border-color: rgb(110, 112, 120);
+  --topAlbumsList-filters-bg-color: rgba(89, 93, 95, 0.88);
 }
 
-#music-page .section-inner {
-  padding: 30px;
+
+.section-inner {
+  padding: 5px 30px;
 }
 .music-page-container {
   /*
@@ -3297,8 +3337,12 @@ div.btn.films-reset-filters-btn svg {
   margin-left: 30px;
   padding: 10px 30px;
   */
-  display: flex;
-  flex-direction: column;
+
+}
+.top-albums-list-innerContainer {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: auto 1fr;
 }
 
 .top-albums-list-header {
@@ -3309,15 +3353,71 @@ div.btn.films-reset-filters-btn svg {
   padding-right: 20px;
 }
 
+.sidebar-subsection-title {
+  font-size: 14px;
+  color: var(--text-much-darker);
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+#top-albums-list-navigation {
+  margin-bottom: 30px;
+}
+
 div.btn.filter-list-by-album-property {
   padding: 0 4px;
-  background-color: rgb(54, 54, 58);
+  background-color: var(--topAlbumsList-filterBtn-albumProperty-bg-color);
+  color: var(--text);
   border-radius: 100px;
-  margin: 0 3px;
-  font-size: 9px;
+  margin: 0 5px;
+  font-size: 0.7rem;
 }
 div.btn.filter-list-by-album-property > .item-text {
-  margin-right: 4px;
+  margin-right: 5px;
+}
+
+.albums-filterBtnsContainer {
+  /* each one of the (top level) filter buttons */
+  display: flex;
+  flex-direction: row;
+  background-color: var(--topAlbumsList-topLevelfilterBtn-bg-color);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 7px 0;
+}
+#top-albums-list-sidebar .albums-filterBtnsContainer:hover,
+#top-albums-list-sidebar .albums-filterBtnsContainer:active {
+  background-color: var(--topAlbumsList-topLevelfilterBtn-bg-color-hover);
+}
+#top-albums-list-sidebar .albums-filterBtnsContainer:hover .albums-filterBtns {
+  display: block;
+  position: absolute;
+  margin-left: 170px;
+  margin-top: -7px;
+  z-index: 9999;
+  width: 60%;
+  border-radius: 8px;
+  border-top-left-radius: 0px;
+  padding: 10px 10px 18px 10px;
+  border: 2px solid var(--topAlbumsList-filters-border-color);
+}
+
+.albums-filterBtnsContainer.active {
+  background-color: var(--films-pagination-btn-bg-color-active) !important;
+}
+
+#top-albums-list-sidebar .albums-filterBtnsContainer p.current-filter {
+  color: var(--text);
+  margin: 0 auto;
+  font-size: 0.9rem;
+}
+#top-albums-list-sidebar .albums-filterBtnsContainer .albums-filterBtns {
+  display: none;
+}
+
+
+.albums-filterBtns {
+  background-color: var(--topAlbumsList-filters-bg-color);
 }
 
 /*
@@ -3332,14 +3432,20 @@ div.btn.filter-list-by-artist-btn {
 .top-albums-list {
   display: grid;
   grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
+  grid-gap: 10px;
   padding-top: 4px;
-  grid-gap: 12px;
+  overflow-y: scroll;
+  height: 88vh;
 }
 /*
 #filtered-albums-list-info.filters-active + .top-albums-list {
   padding-top: 40px;
 }
 */
+
+#top-albums-list-sidebar {
+  padding-top: 6px;
+}
 
 @media screen and (max-width: 1200px) {
   .top-albums-list {
@@ -3377,7 +3483,7 @@ div.btn.filter-list-by-artist-btn {
   visibility: hidden;
   display: flex;
   flex-direction: row;
-  height: 0px;
+  margin-top: -10px;
 }
 
 #filtered-albums-list-info.filters-active {
@@ -3387,7 +3493,9 @@ div.btn.filter-list-by-artist-btn {
   padding-left: 10px;
   border-radius: 6px;
   padding-top: 12px;
+  /*
   margin-top: 20px;
+  */
   font-size: 1.1rem;
   display: flex;
   flex-direction: row;
@@ -3410,14 +3518,16 @@ div.btn.filter-list-by-artist-btn {
 /* #region ------------< Navigation for albums list >------------- */
 
 #top-albums-list-navigation {
+  /*
   position: fixed;
+  */
   display: grid;
   grid-template-columns: 50% 50%;
   grid-row-gap: 0px;
   grid-column-gap: 6px;
 }
 .top-albums-list {
-  margin-left: 100px;
+  margin-left: 30px;
 }
 
 #top-albums-list-navigation .navItem {
@@ -3441,7 +3551,7 @@ div.btn.filter-list-by-artist-btn {
   color: var(--text);
 }
 #top-albums-list-navigation .navItem.active:nth-child(1) {
-  background-color: #12525d;
+  background-color: var(--films-pagination-btn-bg-color-active);
 }
 
 /* #endregion */
@@ -3749,7 +3859,6 @@ div.albumInfoContainer > div.myRating {
   display: flex;
   flex-direction: column;
   position: relative;
-  left: 445px;
   top: 20px;
 }
 
@@ -3842,7 +3951,11 @@ div.albumInfoContainer > div.myRating {
   display: flex;
   flex-direction: column;
   position: relative;
-  left: 25%;
+}
+
+.album-header-container,
+.review-content-and-tracklist {
+  margin: 0 auto;
 }
 
 /* #region --------------- Prev & Next review links --------------- */

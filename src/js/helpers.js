@@ -240,6 +240,38 @@ export function get_list_of_poster_urls(filterd_data) {
 }
 
 /**
+ * Low numbers = Bad
+ * High numbers = Good
+ * 
+ * For example...
+ *  A play_count (the higher the number the more you've played the song)
+ *  An album rating out of 10 (the higher the number the better the album)
+ * @param {*} num 
+ */
+export function generate_colour_v1(num, max) {
+    let Red = 255 - (255 * (num / max));
+    let Green = 255 * (num / max);
+    let Blue = 100;
+    return 'rgb(' + Red + ',' + Green + ',' + Blue + ')'; 
+}
+
+/**
+ * Low numbers = Good
+ * High numbers = Bad
+ * 
+ * For example...
+ *  A position in a list (the lower the number the better, because you want to be #1)
+ * @param {*} num 
+ * @param {*} max 
+ */
+export function generate_colour_v2(num, max) {
+    let Red = 255 - (255 * (num / max));
+    let Green = 255 * (num / max);
+    let Blue = 250;
+    return 'rgb(' + Red + ',' + Green + ',' + Blue + ')'; 
+}
+
+/**
  * 
  * @param {*} str 
  * @returns 
