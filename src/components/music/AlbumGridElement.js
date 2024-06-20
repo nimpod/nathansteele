@@ -49,6 +49,7 @@ class AlbumGridElement extends Component {
                             <p>{album_name}</p>
                         </div>
                         <div className='albumMoreInfo'>
+                            <p>{this.props.album.year_of_release}</p>
                             <p className='myPosition'>#{this.props.album.position_str}</p>
                             <p className={`myRating r${this.props.album.my_rating_nodp}`}>{this.props.album.my_rating}</p>
                         </div>

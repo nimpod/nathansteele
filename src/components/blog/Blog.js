@@ -353,8 +353,6 @@ class Blog extends Component {
      * The Render() function, content rendered to screen
      */
     render() {
-        console.log(this.props);
-
         // this is how the searching function actually works...
         let filteredPostsBySearch = this.state.__filtered_posts.filter((p) => {
             const arrayOfTags = Array.from(this.state.__tag_categories_selected);

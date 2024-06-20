@@ -117,8 +117,8 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 # Annoying.... Sometimes Lastfm automatically gives me slightly different versions of artist names... This will have to do for now...
                 if artist_name == 'alt-J' or artist_name == 'Alt-J':
                     artist_name = 'alt-J'
-                if artist_name == '久石譲':
-                    artist_name = 'Joe Hisaishi'
+                #if artist_name == '久石譲':
+                #    artist_name = 'Joe Hisaishi'
                 if artist_name == 'Twenty One Pilots':
                     artist_name = 'twenty one pilots'
                 

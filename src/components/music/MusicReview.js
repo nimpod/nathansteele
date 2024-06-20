@@ -28,11 +28,19 @@ class MusicReview extends React.Component {
         let custom_album_cover_url = "";
         let review_id_of_next_album = "";
         let review_id_of_prev_album = "";
-        let no_spotify_str = "";
-        let no_rym_str = "";
-        let no_youtube_str = "";
         let my_rating_nodp = "";
-        let recommened_by = "";
+        let recommended_by = "";
+        //
+        let no_spotify_str = "";
+        let spotify_hover_text = "Click to listen on Spotify";
+        //
+        let no_rym_str = "";
+        let rym_hover_text = "Click to view on RYM";
+        //
+        let no_youtube_str = "";
+        let youtube_hover_text = "Click to listen on YouTube";
+        //
+        let lastfm_hover_text = "Click to view on LastFM"
 
         custom_album_cover_url = (this.props.album_data.custom_cover_url !== undefined) ? this.props.album_data.custom_cover_url : this.props.album_data.album_cover_url;
         album_name = (this.props.album_data.album_name_displayed !== undefined) ? this.props.album_data.album_name_displayed : this.props.album_data.album_name;
@@ -55,12 +63,15 @@ class MusicReview extends React.Component {
         // check if I put any links in...
         if (this.props.album_data.spotify_url == undefined || this.props.album_data.spotify_url.length == 0) {
             no_spotify_str = "noSpotifyLink noLink";
+            spotify_hover_text = "This album is not available on Spotify :("
         }
         if (this.props.album_data.rym_url == undefined || this.props.album_data.rym_url.length == 0) {
             no_rym_str = "noRYMLink noLink";
+            rym_hover_text = "I probably haven't inserted the RYM url yet..."
         }
         if (this.props.album_data.youtube_url == undefined) {
             no_youtube_str = "noYoutubeLink noLink";
+            youtube_hover_text = "I probably haven't inserted the YouTube url yet..."
         }
 
         // my rating without any decimal places...
@@ -68,9 +79,10 @@ class MusicReview extends React.Component {
             my_rating_nodp = this.props.album_data.my_rating_nodp;
         }
 
-        if (this.props.album_data.recommened_by !== undefined) {
-            
+        if (this.props.album_data.recommended_by !== undefined) {
+            recommended_by = this.props.album_data.recommended_by;
         }
+        console.log(recommended_by);
 
         return(
             <div className="page-wrapper album-review">
@@ -112,12 +124,12 @@ class MusicReview extends React.Component {
                                     </div>
 
                                     {/* Links */}
-                                    <div className='links' title="Links">
-                                        <a className='album-lastfm-link' href={this.props.album_data.lastfm_url} target='_blank'>LastFM</a>
-                                        <a className={`album-rym-link ${no_rym_str}`} href={this.props.album_data.rym_url} target='_blank'>RYM</a>
-                                        <a className={`album-spotify-link ${no_spotify_str}`} href={this.props.album_data.spotify_url} target='_blank'>Spotify</a>
+                                    <div className='links'>
+                                        <a className='album-lastfm-link' href={this.props.album_data.lastfm_url} target='_blank' title={lastfm_hover_text}>LastFM</a>
+                                        <a className={`album-rym-link ${no_rym_str}`} href={this.props.album_data.rym_url} target='_blank' title={rym_hover_text}>RYM</a>
+                                        <a className={`album-spotify-link ${no_spotify_str}`} href={this.props.album_data.spotify_url} target='_blank' title={spotify_hover_text}>Spotify</a>
                                         {
-                                            (no_spotify_str.length > 1) ? <a className={`album-youtube-link ${no_youtube_str}`} href={this.props.album_data.youtube_url} target='_blank'>YouTube</a> : null
+                                            (no_spotify_str.length > 1) ? <a className={`album-youtube-link ${no_youtube_str}`} href={this.props.album_data.youtube_url} target='_blank' title={youtube_hover_text}>YouTube</a> : null
                                         }
                                     </div>
 
@@ -142,6 +154,19 @@ class MusicReview extends React.Component {
                                             </span>
                                         })}
                                     </div>
+
+                                    {/* Reviewer who recommened it to me */}
+                                    {
+                                        (this.props.album_data.recommended_by !== undefined) ? 
+                                        <div className='recommenedBy list-of-tags' title='Recommened to me by...'>
+                                            <span className='title'>Recommened to me by... </span>
+                                            <span className='theme-tag'>
+                                                <a target='_blank' href={`${recommended_by.url}`}>{recommended_by.name}</a>
+                                            </span>
+                                        </div>
+                                        :
+                                        null
+                                    }
                                 </div>
                             </div>
                             

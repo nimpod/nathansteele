@@ -588,6 +588,7 @@ body {
   /* font-family: Helvetica !important; */
   padding: 0;
   margin: 0;
+  /*
   background: linear-gradient(
     -170deg,
     var(--bg1),
@@ -596,9 +597,11 @@ body {
     var(--bg4),
     var(--bg5)
   ) fixed;
-  animation: background_gradient_animation 11s ease infinite;    /* lasts 30s, eases in, and is infinite */
-  height: 100%;
+  animation: background_gradient_animation 11s ease infinite;
   background-size: 800% 800%;
+  */
+  
+  background: var(--section-inner-bg-color) !important;
   /*
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -627,7 +630,9 @@ body > div#root > div.App {
 .section-inner {
   background-color: var(--section-inner-bg-color);
   padding: 0px 0px;
+  /*
   box-shadow: 0 1px 12px 0 var(--section-inner-card-box-shadow);
+  */
   min-height: 100vh;
 }
 .section-inner > div.frontpage {
@@ -2183,8 +2188,10 @@ div.blog-post
 .films-toplist.view-as-list span.film-myRating::after,
 .myRating::after {
   content: "/10";
-  font-size: 9px;
   font-weight: 100;
+}
+.myRating::after {
+  font-size: 9px;
 }
 
 /* IMDB diff score */
@@ -2922,6 +2929,13 @@ div.btn.films-reset-filters-btn svg {
   font-size: 0.8rem;
 }
 
+.list-of-tags > span.title {
+  font-size: 0.65rem;
+  color: var(--text-much-darker);
+}
+
+
+
 .film-review .review-displayed .film-details-more > div {
   display: inline-block;
 }
@@ -2988,7 +3002,7 @@ div.btn.films-reset-filters-btn svg {
 
 .links > a.noLink {
   /* applies to any anchor tag with this classname (before I was typing this out for each type of link) */
-  opacity: 0.4;
+  opacity: 0.25;
   cursor: not-allowed;
 }
 .links > a.album-youtube-link {
@@ -3319,6 +3333,7 @@ div.btn.filter-list-by-artist-btn {
   display: grid;
   grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
   padding-top: 4px;
+  grid-gap: 12px;
 }
 /*
 #filtered-albums-list-info.filters-active + .top-albums-list {
@@ -3396,7 +3411,6 @@ div.btn.filter-list-by-artist-btn {
 
 #top-albums-list-navigation {
   position: fixed;
-  margin-top: 10px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-row-gap: 0px;
@@ -3434,18 +3448,26 @@ div.btn.filter-list-by-artist-btn {
 
 /* #region ------------< 11.3) Each album in the list (Grid view) >------------ */
 
+div.top-albums-list > a {
+  text-decoration: none !important;
+}
+
 div.albumInfoContainer {
-  margin: 0.3rem;
+  margin: 0.0rem;
   position: relative;
+  transition: all 200ms ease;
+  border-radius: 10px;
+  border: 2px solid rgba(243, 246, 253, 0.079);
 }
 div.albumInfoContainer > img.albumCover {
   filter: brightness(1.1);
 }
 div.albumInfoContainer:hover {
-  border: 3px solid rgba(166, 170, 180, 0.153);
-  transition: border-width 50ms ease;
-  border-radius: 11px;
-  filter: brightness(1.2);
+  border-color: rgba(181, 186, 193, 0.545);
+}
+div.albumInfoContainer:active div.albumInfo {
+  filter: brightness(1.3);
+  transition: all 200ms ease;
 }
 
 div.albumInfoContainer > img.albumCover {
@@ -3468,7 +3490,7 @@ div.albumInfoContainer > div.albumInfo > div  {
   background-color: var(--album-info-grid-item-bg-color);
   color: var(--text);
   font-size: 0.83rem;
-  padding: 0px 5px;
+  padding: 0px 0px;
 }
 div.albumInfoContainer > div.albumInfo > div > p {
   margin: 0;
@@ -3717,7 +3739,7 @@ div.albumInfoContainer > div.myRating {
 }
 
 :root {
-  --album-cover-width: 300px;
+  --album-cover-width: 350px;
 }
 
 /* #region ---------- 12.1) Album header ---------- */

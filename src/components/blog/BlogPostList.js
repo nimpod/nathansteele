@@ -11,6 +11,7 @@ class BlogPostList extends Component {
             this.props.filteredPosts.map((p => {
                 // reconstruct review id from title
                 let postId = get_blog_post_id(p.title)
+                
                 return (
                     <tr key={p.id} data-filter='visible'>
                         <Link to={'/blog/' + postId}>
