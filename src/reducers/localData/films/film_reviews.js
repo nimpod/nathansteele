@@ -413,9 +413,9 @@ const screenshots = {
     ],
 
     FLATLAND: [
-        require('./content/flatland/screenshot1.webp'),
-        require('./content/flatland/screenshot2.webp'),
-        require('./content/flatland/screenshot3.webp'),
+        require('./content/flatland/screenshot1.jpg'),
+        require('./content/flatland/screenshot5.jpg'),
+        require('./content/flatland/screenshot14.jpg'),
     ],
 
     FEAST: [
