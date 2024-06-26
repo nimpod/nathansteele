@@ -166,8 +166,7 @@ class FilmsReview extends React.Component {
  */
 const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.film_id;     // the id of the review being displayed in the UI
-    console.log(id);
-
+    
     return {
         film: state.top_films.find(film => get_film_review_id(film.title, film.letterboxd_url) === id),
     }

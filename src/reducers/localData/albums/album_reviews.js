@@ -4,18 +4,34 @@
  */
 
 import ReactDomServer from 'react-dom/server';
+
 import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../../js/helpers.js';
 import { TrustworthyMusicReviewers } from '../../../js/enums.js';
 
-import { review as YesFlyFromHereReview } from './content/yes-fly_from_here/review.jsx';
-import { review as BocMHTRTCReview } from './content/boards_of_canada-music_has_the_right_to_children/review.jsx';
-import { review as ChisatoYamadaReview } from './content/chisato_yamada-suite_nihonkai/review.jsx';
+/**
+ * Import individual reviews as .jsx files here...
+ * For example...
+ * 	my_review: ReactDomServer.renderToString(Lucrecia_Dalt__Syzygy__Review()),
+ */
+import { review as Yes__Fly_From_Here__Review } 				from './content/Yes__Fly_From_Here.jsx';
+import { review as BoC__MHTRTC__Review } 						from './content/BoC__MHTRTC.jsx';
+import { review as Chisato_Yamada__Suite_Nihonkai__Review } 	from './content/Chisato_Yamada__Suite_Nihonkai.jsx';
+import { review as Lucrecia_Dalt__Syzygy__Review }				from './content/Lucrecia_Dalt__Syzygy.jsx';
+import { review as Nanoray__Digimaiden__Review }				from './content/Nanoray__Digimaiden.jsx';
 
 
 // [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut for this particular file!
 
+
+const custom_covers = {
+    Yes__Fly_From_Here:							"https://s3.eu-west-2.amazonaws.com/nathansteele.com/music/Yes__Fly_From_Here/custom_album_cover.jpg",
+	Worlds_End_Girlfriend__Hurtbreak_Wonderland: 	"https://s3.eu-west-2.amazonaws.com/nathansteele.com/music/Worlds_End_Girlfriend__Hurtbreak_Wonderland/custom_album_cover.jpg",
+}
+
 /**
  * Album reviews database
+ * The lastfm URL is compulsory to include for each album, as it links this local data to the webdata.
+ * This doesn't include album covers (unless I decide to override it) as the retrievel of the album cover is automated from the lastfm API.
  */
 const database = {
 	123: {
@@ -493,7 +509,7 @@ const database = {
 			genres: "IDM; Ambient; Downtempo; Electronic",
 			themes: ["Atmospheric", "Otherworldy", "Mysterious", "Vast", "Dark", "Nostalgic", "Ethereal", "Creepy", "Weird", "Surreal"],
 			my_rating: 10,
-			my_review: ReactDomServer.renderToString(BocMHTRTCReview()),
+			my_review: ReactDomServer.renderToString(BoC__MHTRTC__Review()),
 		},
 		"boards_of_canada__geogaddi": {
 			lastfm_url: "https://www.last.fm/music/Boards+of+Canada/Geogaddi",
@@ -813,7 +829,7 @@ const database = {
 			genres: "Tsugaru shamisen; Min'yō Music; J-acoustic; J-funk; Funk",
 			my_rating: 9.5,
 			year_of_discovery: "2021",
-			my_review: ReactDomServer.renderToString(ChisatoYamadaReview()),
+			my_review: ReactDomServer.renderToString(Chisato_Yamada__Suite_Nihonkai__Review()),
 		},
 		"cavern_of_anti_matter__in_fabric_ost": {
 			lastfm_url: "https://www.last.fm/music/Cavern+of+Anti-Matter/In+Fabric+OST",
@@ -1980,7 +1996,7 @@ const database = {
 			year_of_discovery: "2020",
 			genres: "Ambient pop; Ambient; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Lucrecia_Dalt__Syzygy__Review()),
 		},
 		"lealani__fantastic_planet": {
 			lastfm_url: "https://www.last.fm/music/Lealani/Fantastic+Planet",
@@ -2323,7 +2339,7 @@ const database = {
 			genres: "Digital hardcore; Jungle; Breakcore; Breakbeat; Drum and bass; Ambient trance; Electronic",
 			themes: ["Rave", "Intense"],
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Nanoray__Digimaiden__Review()),
 		},
 		"nas__illmatic": {
 			lastfm_url: "https://www.last.fm/music/Nas/Illmatic",
@@ -3242,7 +3258,7 @@ const database = {
 
 		//
 		"worlds_end_girlfriend__hurtbreak_wonderland": {
-			custom_cover_url: require('./content/worlds_end_girlfriend__hurtbreak_wonderland/album_cover.jpg'),
+			custom_cover_url: custom_covers.Worlds_End_Girlfriend__Hurtbreak_Wonderland,
 			lastfm_url: "https://www.last.fm/music/World%27s+End+Girlfriend/Hurtbreak+Wonderland",
 			rym_url: "",
 			spotify_url: "https://open.spotify.com/album/7KtBhRWitpnHoma8UWiDgz?si=dhQ99k1YT3-tdBWS46M7GA",
@@ -3436,12 +3452,12 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Yes/Fly+From+Here",
 			rym_url: "https://rateyourmusic.com/release/album/yes/fly-from-here/",
 			youtube_url: "https://www.youtube.com/watch?v=SEs-i9kMpKg",
-			custom_cover_url: require('./content/yes-fly_from_here/custom_album_cover.jpg'),
 			year_of_release: "2011",
+			year_of_discovery: "2013",
 			genres: "Progressive rock; Symphonic prog; Progressive pop",
 			my_rating: 10,
-			my_review: ReactDomServer.renderToString(YesFlyFromHereReview()),
-			year_of_discovery: "2013"
+			my_review: ReactDomServer.renderToString(Yes__Fly_From_Here__Review()),
+			custom_cover_url: custom_covers.Yes__Fly_From_Here,
 		},
 		"yes__close_to_the_edge": {
 			lastfm_url: "https://www.last.fm/music/Yes/Close+To+The+Edge+(Deluxe+Edition)",

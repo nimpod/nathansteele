@@ -99,14 +99,14 @@ def download_letterboxd_data():
     button_sign_in.click()
 
     # wait for website to load properly...
-    time.sleep(10)
+    time.sleep(7)
 
     # click the "EXPORT YOUR DATA" button
     button_export_data_link = driver.find_element(By.CLASS_NAME, 'export-data-link')
     button_export_data_link.click()
 
     # wait for the other window to appear...
-    time.sleep(5)
+    time.sleep(4)
 
     # click the "EXPORT DATA" button
     button_export_data = driver.find_element(By.CLASS_NAME, 'export-data-button')
@@ -257,10 +257,15 @@ def regenerate_json_file():
                 else:
                     # retrieve avg IMDB rating
                     imdb_avg_rating = imdb_json['imdbRating']
-                    if (title == 'Convenience Story'):
-                        # why is the 'imdbRating' property not in the json response for Convenience Story?!?!?
-                        # https://www.imdb.com/title/tt22775702/
-                        imdb_avg_rating = 5.6;
+                    if imdb_avg_rating == "N/A":
+                        print(f'!!!!!!!!!!!!!!!Cannot automatically find the IMDB avg rating for \"{title}\" ({imdb_url})... Very annoying!!!!!!!!!!!!!!!')
+                        if (title == 'Convenience Story' and imdb_url == 'http://www.imdb.com/title/tt22775702/maindetails'):
+                            imdb_avg_rating = 5.7
+                        elif (title == 'The Fifth Thoracic Vertebra' and imdb_url == 'http://www.imdb.com/title/tt23640302/maindetails'):
+                            imdb_avg_rating = 6.4
+                        elif (title == 'Ribbon' and imdb_url == 'http://www.imdb.com/title/tt14703070/maindetails'):
+                            imdb_avg_rating = 6.3
+                        print(f'imdb_avg_rating = {imdb_avg_rating}')
                 
                     # retrieve number of votes on IMDB (we remove the comma, because react is fucking stupid and cant sort numbers when they contain commas)
                     imdb_num_votes = imdb_json['imdbVotes'].replace(',', '')

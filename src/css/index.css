@@ -2832,7 +2832,7 @@ div.btn.films-reset-filters-btn svg {
 /* #region -----------------------------------<10: FILM REVIEW PAGE>---------------------------------- */
 .film-review .review-displayed {
   display: grid;
-  grid-template-columns: 1.67fr 0.1fr 4fr 0.1fr;
+  grid-template-columns: 1.76fr 0.1fr 4fr 0.1fr;
   color: var(--intro-text);
   padding: 0px 0 20px 20px;
 }
@@ -3140,7 +3140,9 @@ div.btn.films-reset-filters-btn svg {
 }
 
 .film-review .review-displayed > div.next-review-link > a {
+  /*
   right: 2px;
+  */
 }
 
 .film-review .review-displayed > div.next-review-link > a,
@@ -3172,7 +3174,7 @@ div.btn.films-reset-filters-btn svg {
 }
 .review-allContent {
   padding-top: 15px;
-  width: 68%;
+  width: 75%;
   margin: 0 auto;
 }
 .review-displayed .filmPoster,
@@ -3208,6 +3210,16 @@ div.btn.films-reset-filters-btn svg {
 .review-content-container div.toggle-section-container > span {
   color: var(--film-review-section-subtitle-text-color);
   font-size: 0.8rem;
+}
+
+.all-screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-column-gap: 2px;
+}
+.all-screenshots img {
+  border-radius: 0px !important;
+  margin-bottom: 0px !important;
 }
 /* #endregion */
 
@@ -3358,6 +3370,8 @@ div.btn.films-reset-filters-btn svg {
 .sidebar-subsection-title {
   font-size: 14px;
   color: var(--text-much-darker);
+  opacity: 0.7;
+  text-align: center;
   margin: 0;
   padding-bottom: 5px;
 }
@@ -3554,6 +3568,14 @@ div.btn.filter-list-by-artist-btn {
 }
 #top-albums-list-navigation .navItem.active:nth-child(1) {
   background-color: var(--films-pagination-btn-bg-color-active);
+}
+
+.top-albums-list-sideSection {
+  padding-bottom: 20px;
+}
+
+.top-albums-list-sideSection .searchbox input {
+  width: 180px;
 }
 
 /* #endregion */
@@ -4761,6 +4783,19 @@ div.albumInfoContainer > div.myRating {
   }
   #music-page .top-albums-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1px;
+    margin-left: 0px;
+  }
+
+  .top-albums-list-innerContainer {
+    grid-template-columns: 100%;
+  }
+  .top-albums-list-innerContainer #top-albums-list-sidebar {
+    display: none;
+  }
+
+  .top-albums-list .albumInfo p {
+    font-size: 0.75rem;
   }
   /* #endregion */
 
