@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect }  from 'react-redux';
+import { HashLink } from 'react-router-hash-link';
+import $ from "jquery";
 
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { AlbumProperties } from '../../js/enums.js';
@@ -547,9 +549,7 @@ class Music extends Component {
             "avg_pos": avg_pos,
             "avg_rating": avg_rating,
         }
-        console.log(info);
-
-        //console.log(info);
+        // console.log(info);
         return info;
     }
 
@@ -570,6 +570,34 @@ class Music extends Component {
         else if (text.length > 0) {
             this.setState({__search_box_contains_text: true});
         }
+    }
+
+    /**
+     * 
+     * @param {*} e 
+     */
+    toggle_navitem = (e) => {
+        // remove .active from all navItems first...
+        $('.navItem').removeClass('active');
+
+        // now add .active to the button just clicked...
+        let nav_item_clicked = e.currentTarget;
+        console.log(nav_item_clicked);
+        nav_item_clicked.classList.add('active');
+
+        // highlight album navigated to...
+        let album_href = nav_item_clicked.href;
+        let album_id = album_href.split('#')[2];
+        let album_selected = document.getElementById(album_id);
+
+        // highlight album...
+        album_selected.classList.add('navigated-to');
+        
+        // unhighlight after certain amount of time...
+        let N = 3 * 1000;
+        setTimeout(() => {
+            album_selected.classList.remove('navigated-to');
+        }, N);
     }
 
     /**
@@ -603,6 +631,8 @@ class Music extends Component {
         // top tracks list (default to overall time period)
         let top_tracks_list = this.props.top_tracks.overall;
 
+        const navigation = [1,25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600];
+
         return (
             <div className='page-wrapper' id="music-page">
                 <div className='section-inner'>
@@ -617,64 +647,6 @@ class Music extends Component {
                         <div className='top-albums-list-container'>
                             {/* Title */}
                             <span className='page-title'>My top {this.props.top_albums.length} favourite albums of all time</span>
-
-                            {/* Header */}
-                            <div className='top-albums-list-header'>
-                                {/*}
-                                <div id='filter-by-genre-btns'>
-                                    {
-                                        all_genres_album_count.map((obj => {
-                                            if (obj.count >= MIN_GENRE_COUNT_TO_BE_DISPLAYED) {
-                                                return <div className="btn filter-list-by-album-property filter-list-by-genre-btn" key={obj.item} onClick={(e) => this.filter_by_genre(e, obj.item)}>
-                                                    <span className='item-text'>{obj.item}</span>
-                                                    <span className='item-count'>{obj.count}</span>
-                                                </div>
-                                            }
-                                        }))
-                                    }
-                                </div>
-                                
-                                <div id='filter-by-artist-btns'>
-                                    {
-                                        all_artists_album_count.map((obj => {
-                                            if (obj.count >= MIN_ARTIST_COUNT_TO_BE_DISPLAYED) {
-                                                return <div className="btn filter-list-by-album-property filter-list-by-artist-btn" key={obj.item} onClick={(e) => this.filter_by_artist(e, obj.item)}>
-                                                    <span className='item-text'>{obj.item}</span>
-                                                    <span className='item-count'>{obj.count}</span>
-                                                </div>
-                                            }
-                                        }))
-                                    }
-                                </div>
-                                
-                                <div id='filter-by-year-btns'>
-                                    {
-                                        all_years_album_count.map((obj => {
-                                            if (obj.count >= MIN_YEAR_COUNT_TO_BE_DISPLAYED) {
-                                                return <div className="btn filter-list-by-album-property filter-list-by-year-btn" key={obj.item} onClick={(e) => this.filter_by_year(e, obj.item)}>
-                                                    <span className='item-text'>{obj.item}</span>
-                                                    <span className='item-count'>{obj.count}</span>
-                                                </div>
-                                            }
-                                        }))
-                                    }
-                                </div>
-                                
-                                <div id='filter-by-RecommendedBy-btns'>
-                                    {
-                                        all_reviewers_album_count.map((obj => {
-                                            // for the 'All artists' button
-                                            let artist_name = (obj.item.name !== undefined) ? obj.item.name : obj.item;
-                                            
-                                            return <div className="btn filter-list-by-album-property filter-list-by-reviewer-btn" key={obj.item} onClick={(e) => this.filter_by_reviewer(e, obj.item)}>
-                                                    <span className='item-text'>{artist_name}</span>
-                                                    <span className='item-count'>{obj.count}</span>
-                                                </div>
-                                        }))
-                                    }
-                                </div>
-                                */}
-                            </div>
 
                             {/* Information about what is currently being filtered (if anything) */}
                             <div id="filtered-albums-list-info">
@@ -773,30 +745,50 @@ class Music extends Component {
                                         <p className='sidebar-subsection-title'>Navigation</p>
 
                                         <div id='top-albums-list-navigation'>
-                                            <a id='link-to-album-25' className='navItem active'><p>25</p></a>
-                                            <a id='link-to-album-50' className='navItem'><p>50</p></a>
-                                            <a id='link-to-album-75' className='navItem'><p>75</p></a>
-                                            <a id='link-to-album-100' className='navItem'><p>100</p></a>
-                                            <a id='link-to-album-125' className='navItem'><p>125</p></a>
-                                            <a id='link-to-album-150' className='navItem'><p>150</p></a>
-                                            <a id='link-to-album-175' className='navItem'><p>175</p></a>
-                                            <a id='link-to-album-200' className='navItem'><p>200</p></a>
-                                            <a id='link-to-album-225' className='navItem'><p>225</p></a>
-                                            <a id='link-to-album-250' className='navItem'><p>250</p></a>
-                                            <a id='link-to-album-275' className='navItem'><p>275</p></a>
-                                            <a id='link-to-album-300' className='navItem'><p>300</p></a>
-                                            <a id='link-to-album-325' className='navItem'><p>325</p></a>
-                                            <a id='link-to-album-350' className='navItem'><p>350</p></a>
-                                            <a id='link-to-album-375' className='navItem'><p>375</p></a>
-                                            <a id='link-to-album-400' className='navItem'><p>400</p></a>
-                                            <a id='link-to-album-425' className='navItem'><p>425</p></a>
-                                            <a id='link-to-album-450' className='navItem'><p>450</p></a>
-                                            <a id='link-to-album-475' className='navItem'><p>475</p></a>
-                                            <a id='link-to-album-500' className='navItem'><p>500</p></a>
-                                            <a id='link-to-album-525' className='navItem'><p>525</p></a>
-                                            <a id='link-to-album-550' className='navItem'><p>550</p></a>
-                                            <a id='link-to-album-575' className='navItem'><p>575</p></a>
-                                            <a id='link-to-album-600' className='navItem'><p>600</p></a>
+                                            {
+                                                navigation.map((num => {
+                                                    let classname = "navItem";
+                                                    if (num == 1) {
+                                                        classname = "navItem active";
+                                                    }
+
+                                                    return <HashLink 
+                                                        key={num}
+                                                        to={`#album-${num}`}
+                                                        id={`link-to-album-${num}`}
+                                                        className={classname}
+                                                        onClick={(e) => this.toggle_navitem(e)}>
+                                                            <p>{num}</p>
+                                                    </HashLink>
+                                                }))
+                                            }
+                                            {/*}
+                                            <Link to='#album-1'   id='link-to-album-1'   className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>1</p></Link>
+                                            <Link to='#album-25'  id='link-to-album-25'  className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>25</p></Link>
+                                            <Link to='#album-50'  id='link-to-album-50'  className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>50</p></Link>
+                                            <Link to='#album-75'  id='link-to-album-75'  className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>75</p></Link>
+                                            <Link to='#album-100' id='link-to-album-100' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>100</p></Link>
+                                            <Link to='#album-125' id='link-to-album-125' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>125</p></Link>
+                                            <Link to='#album-150' id='link-to-album-150' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>150</p></Link>
+                                            <Link to='#album-175' id='link-to-album-175' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>175</p></Link>
+                                            <Link to='#album-200' id='link-to-album-200' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>200</p></Link>
+                                            <Link to='#album-225' id='link-to-album-225' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>225</p></Link>
+                                            <Link to='#album-250' id='link-to-album-250' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>250</p></Link>
+                                            <Link to='#album-275' id='link-to-album-275' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>275</p></Link>
+                                            <Link to='#album-300' id='link-to-album-300' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>300</p></Link>
+                                            <Link to='#album-325' id='link-to-album-325' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>325</p></Link>
+                                            <Link to='#album-350' id='link-to-album-350' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>350</p></Link>
+                                            <Link to='#album-375' id='link-to-album-375' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>375</p></Link>
+                                            <Link to='#album-400' id='link-to-album-400' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>400</p></Link>
+                                            <Link to='#album-425' id='link-to-album-425' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>425</p></Link>
+                                            <Link to='#album-450' id='link-to-album-450' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>450</p></Link>
+                                            <Link to='#album-475' id='link-to-album-475' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>475</p></Link>
+                                            <Link to='#album-500' id='link-to-album-500' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>500</p></Link>
+                                            <Link to='#album-525' id='link-to-album-525' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>525</p></Link>
+                                            <Link to='#album-550' id='link-to-album-550' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>550</p></Link>
+                                            <Link to='#album-575' id='link-to-album-575' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>575</p></Link>
+                                            <Link to='#album-600' id='link-to-album-600' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>600</p></Link>
+                                            */}
                                         </div>
                                     </div>
                                 </div>

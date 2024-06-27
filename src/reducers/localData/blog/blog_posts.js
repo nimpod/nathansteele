@@ -1,26 +1,26 @@
 import ReactDomServer from 'react-dom/server';
 
 // blog posts about astronomy...
-import { post as WhyTheMoonLandingWasNotAHoaxPost } from './content/why_the_moon_landing_was_not_a_hoax/post';
-import { post as CassiniHuygensPost } from './content/cassini_huygens/post';
-import { post as TheIncomprehensibleVastnessOfSpace } from './content/the_incomprehensible_vastness_of_space/post';
-import { post as VeneraPost } from './content/venera/post';
-import { post as TritonPost } from './content/triton/post';
-import { Post as OurMoon } from './content/our_moon/post';
-import { post as SolarFlares } from './content/solar_flares/post';
+import { post as WhyTheMoonLandingWasNotAHoaxPost }     from './content/why_the_moon_landing_was_not_a_hoax.jsx';
+import { post as CassiniHuygensPost }                   from './content/cassini_huygens.jsx';
+import { post as TheIncomprehensibleVastnessOfSpace }   from './content/the_incomprehensible_vastness_of_space.jsx';
+import { post as VeneraPost }                           from './content/venera.jsx';
+import { post as TritonPost }                           from './content/triton.jsx';
+import { Post as OurMoon }                              from './content/our_moon.jsx';
+import { post as SolarFlares }                          from './content/solar_flares.jsx';
 
 // blog posts about music...
-import { post as MyMostListenedSongsOf2023Post } from './content/my_most_listened_songs_of_2023/post';
-import { post as MyMostListenedSongsOf2022Post } from './content/my_most_listened_songs_of_2022/post';
-import { post as MyMostListenedSongsOf2021Post } from './content/my_most_listened_songs_of_2021/post';
-import { post as MyMostListenedSongsOf2020Post } from './content/my_most_listened_songs_of_2020/post';
-import { post as MyMostListenedSongsOf2016Post } from './content/my_most_listened_songs_of_2014_2015_2016/post';
-import { post as Top25FavouriteChillstepSongs } from './content/top_25_favourite_chillstep_songs/post';
+import { post as MyMostListenedSongsOf2023Post }        from './content/my_most_listened_songs_of_2023.jsx';
+import { post as MyMostListenedSongsOf2022Post }        from './content/my_most_listened_songs_of_2022.jsx';
+import { post as MyMostListenedSongsOf2021Post }        from './content/my_most_listened_songs_of_2021.jsx';
+import { post as MyMostListenedSongsOf2020Post }        from './content/my_most_listened_songs_of_2020.jsx';
+import { post as MyMostListenedSongsOf2016Post }        from './content/my_most_listened_songs_of_2014_2015_2016.jsx';
+import { post as Top25FavouriteChillstepSongs }         from './content/top_25_favourite_chillstep_songs.jsx';
 
 // miscellaneous blog posts...
-import { post as HowToDigitizeMiniDvTapesPost } from './content/how_to_digitize_mini_dv_tapes/post';
-import { post as MessiahsHandbookPost } from './content/messiahs_handbook/post';
-import { post as InspirationDatabase } from './content/inspiration_database/post';
+import { post as HowToDigitizeMiniDvTapesPost }         from './content/how_to_digitize_mini_dv_tapes.jsx';
+import { post as MessiahsHandbookPost }                 from './content/messiahs_handbook.jsx';
+import { post as InspirationDatabase }                  from './content/inspiration_database.jsx';
 
 
 export const blog_posts = [

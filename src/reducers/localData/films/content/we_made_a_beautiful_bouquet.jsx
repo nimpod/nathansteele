@@ -1,5 +1,5 @@
 import React  from 'react';
-import AllScreenshotsComponent from '../template_all_screenshots_component.jsx';
+import AllScreenshotsComponent from '../TemplateAllScreenshotsComponent.jsx';
 
 export const review = (screenshots) => (
     <div className='review-content'>

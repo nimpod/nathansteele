@@ -24,8 +24,8 @@ import { review as Nanoray__Digimaiden__Review }				from './content/Nanoray__Dig
 
 
 const custom_covers = {
-    Yes__Fly_From_Here:							"https://s3.eu-west-2.amazonaws.com/nathansteele.com/music/Yes__Fly_From_Here/custom_album_cover.jpg",
-	Worlds_End_Girlfriend__Hurtbreak_Wonderland: 	"https://s3.eu-west-2.amazonaws.com/nathansteele.com/music/Worlds_End_Girlfriend__Hurtbreak_Wonderland/custom_album_cover.jpg",
+    Yes__Fly_From_Here:								"https://s3.eu-west-2.amazonaws.com/nathansteele.com/music/Yes__Fly_From_Here/custom_album_cover.jpg",
+	Worlds_End_Girlfriend__Hurtbreak_Wonderland: 	"https://s3.eu-west-2.amazonaws.com/nathansteele.com/music/Worlds_End_Girlfriend__Hurtbreak_Wonderland/album_cover.jpg",
 }
 
 /**

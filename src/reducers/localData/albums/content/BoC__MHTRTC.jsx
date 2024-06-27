@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateTracklist from '../templateTracklist.jsx';
+import TemplateTracklistComponent from '../TemplateTracklistComponent.jsx';
 
 const tracklist = [
     {
@@ -118,6 +118,6 @@ export const review = () => (
                 Pretty quickly I started going through their discography, and while all of their albums are very special, something about this 1998 album was and still is the most unique/engaging/otherworldly album I have ever experienced.
             </p>
         </div>
-        <TemplateTracklist tracklist={tracklist} />
+        <TemplateTracklistComponent tracklist={tracklist} />
     </div>
 )

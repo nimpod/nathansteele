@@ -40,7 +40,7 @@ class AlbumGridElement extends Component {
         return(
             <Link id={`album-${this.props.album.position}`} to={'/music/' + this.props.album.review_id}>
                 <div className='albumInfoContainer'>
-                    <img className='albumCover' src={album_cover_url} alt="Album cover"></img>
+                    <img className='albumCover' src={album_cover_url} alt="Album cover" loading='lazy'></img>
                     <div className='albumInfo'>
                         <div className='artistName'>
                             <p>{artist_name}</p>

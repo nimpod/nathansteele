@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" class="fix-screen-flashing>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -56,8 +56,9 @@
   </head>
 
   <body>
-    <div id="root">
+    <!-- This CSS is here to prevent the screen from flashing on every refresh - it doesn't work if I place it in the css file -->
+    <style> body{ background-Color : rgb(37, 37, 38) } </style>
 
-    </div>
+    <div id="root"></div>
   </body>
 </html>

@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
-
 import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";
 import { ReactComponent as Calendar } from "../../icons/calendar.svg";
 import { get_random_RGBA, get_blog_post_id } from '../../js/helpers.js';
@@ -81,7 +80,7 @@ class BlogPost extends Component {
         return (
             <div className="page-wrapper blog-post">
                 <div className="section-inner">
-                    <div className="blog-post-info" id={'BlogPost' + this.props.post.id}>
+                    <div className="blog-post-info">
                         <Link to={'#BlogPost' + this.props.post.id} className="custom-btn-1 back-to-top-of-post animated faster slideInUp" title='Click to go back to top of blog post'>
                             <ArrowUp className='invertable-icon' />
                             <span>Back to top</span>

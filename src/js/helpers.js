@@ -1,8 +1,24 @@
 // import { act } from "@testing-library/react";
 // import { event } from "jquery";
 
-console.log('HELLO');
 
+
+/**
+ * 
+ * 
+ * @param {*} src 
+ */
+export function display_fullscreen_image(src) {
+    console.log(src);
+    
+    let full_image = document.getElementById('FullImage');
+    let full_image_view = document.getElementById('FullImageView');
+
+    if (full_image !== null && full_image_view !== null) {
+        full_image.src = src;
+        full_image_view.display = "block";
+    }
+}
 
 /**
  * [Get value of a specified CSS variable]

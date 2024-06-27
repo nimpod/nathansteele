@@ -19,7 +19,7 @@ class MusicReview extends React.Component {
      * The Render() function, content rendered to screen...
      */
     render() {
-        console.log(this.props.album_data);
+        // console.log(this.props.album_data);
 
         let artist_name = this.props.album_data.artist_name;
         let album_name = this.props.album_data.album_name;
@@ -82,7 +82,7 @@ class MusicReview extends React.Component {
         if (this.props.album_data.recommended_by !== undefined) {
             recommended_by = this.props.album_data.recommended_by;
         }
-        console.log(recommended_by);
+        // console.log(recommended_by);
 
         return(
             <div className="page-wrapper album-review">

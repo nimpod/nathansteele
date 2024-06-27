@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateTracklist from '../templateTracklist';
+import TemplateTracklistComponent from '../TemplateTracklistComponent.jsx';
 
 const tracklist = [
     {
@@ -61,6 +61,6 @@ export const review = () => (
                 Honestly the only song I'm a bit meh on is The First Movement, the intro to the album. But this is because the album develops at its own pace, gradually introducing new layers of instrumentation and production, which is part of its charm in my opinion. 
             </p>
         </div>
-        <TemplateTracklist tracklist={tracklist} />
+        <TemplateTracklistComponent tracklist={tracklist} />
     </div>
 )

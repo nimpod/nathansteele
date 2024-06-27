@@ -70,7 +70,7 @@ class FilmsToplistListElement extends Component {
 
                             <div className='film-details-main'>
                                 <span className='film-title' title='Title'>{this.props.title}</span>
-                                <div class='film-details-main-more'>
+                                <div className='film-details-main-more'>
                                     <div className='film-year' title='Year of release'>{this.props.film.year}</div>
                                     <div className='film-duration' title='Duration in mins'>{this.props.film.duration} mins</div>
                                     <div className='film-language' title='Language'>
@@ -94,9 +94,9 @@ class FilmsToplistListElement extends Component {
                             onLoad={this.update_loading}
                         />
                         <div className='film-screenshots'>
-                            <img src={screenshot1} />
-                            <img src={screenshot2} />
-                            <img src={screenshot3} />
+                            <img src={screenshot1} loading='lazy' />
+                            <img src={screenshot2} loading='lazy' />
+                            <img src={screenshot3} loading='lazy' />
                         </div>
                     </div>
                 </Link>
