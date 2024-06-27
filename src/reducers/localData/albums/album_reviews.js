@@ -1062,6 +1062,7 @@ const database = {
 			themes: ["Norwegian"],
 			my_rating: 8.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK,
 		},
 		"eberhard_weber__colors_of_chloe": {
 			lastfm_url: "https://www.last.fm/music/Eberhard+Weber/The+Colours+Of+Chlo%C3%AB",
@@ -1073,6 +1074,7 @@ const database = {
 			themes: ["Norwegian"],
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK,
 		},
 
 
@@ -1625,6 +1627,7 @@ const database = {
 			genres: "Modern classical; Ambient; Cinematic clasical; Choral",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER,
 		},
 
 		//
@@ -2632,6 +2635,7 @@ const database = {
 			genres: "Jazz; ECM style jazz; New age; Ambient; Jazz fusion",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK,
 		},
 		"plantoid__terrapath": {
 			lastfm_url: "https://www.last.fm/music/Plantoid/Terrapath",
@@ -2738,6 +2742,7 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 			year_of_discovery: "2023",
+			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK,
 		},
 		"ralph_towner__anthem": {
 			lastfm_url: "https://www.last.fm/music/Ralph+Towner/Anthem",

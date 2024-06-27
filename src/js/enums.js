@@ -33,17 +33,25 @@ export const ViewType = Object.freeze({
  * For filtering my list by who recommened the album to me
  */
 export const TrustworthyMusicReviewers = Object.freeze({
+    // YouTube
     THE_WONKY_ANGLE: { name: "The Wonky Angle", url: "https://www.youtube.com/@TheWonkyAngle", genres: ["Electronic", "IDM", "Ambient", "Techno", "Breakcore", "Drum and Bass", "Glitch"]},
+    SPECTRUM_PULSE: { name: "Spectrum Pulse", url: "https://www.youtube.com/@SpectrumPulse", genres: ["Country"]},
+    DEEP_CUTS: { name: "Deep Cuts", url: "https://www.youtube.com/@deepcuts", genres: ["Electronic", "Nu jazz"]},
+    THE_NEEDLE_DROP: { name: "The Needle Drop", url: "https://www.youtube.com/@theneedledrop", genres: ["Hip Hop", "Pop"]},
+
+    // RYM
     ALPHAWELLENREITER: { name: "Alphawellenreiter", url: "https://rateyourmusic.com/~Alphawellenreiter", genres: ["Post-minimalism", "Ambient", "Space rock", "Psychedelic rock", "Prog rock"]},
     GEORGE_X: { name: "GeorgeX", url: "https://rateyourmusic.com/~GeorgeX", genres: ["Jazz fusion", "Jazz"]},
     CULT_JAKE: { name: "Cult Jake", url: "https://rateyourmusic.com/~cultjake", genres: ["Jazz fusion", "Jazz"]},
-    SPECTRUM_PULSE: { name: "Spectrum Pulse", url: "https://www.youtube.com/@SpectrumPulse", genres: ["Country"]},
     LOGSTAR_100: { name: "Logstar100", url: "https://rateyourmusic.com/~logstar100", genres: ["K-pop", "Bedroom pop"]},
     TAKASHI_HAFUZA: { name: "Takashi Hafuza", url: "https://rateyourmusic.com/~Takashi_Hafuza", genres: ["Electronic", "Breakbeat", "IDM"]},
-    DEEP_CUTS: { name: "Deep Cuts", url: "https://www.youtube.com/@deepcuts", genres: ["Electronic", "Nu jazz"]},
-    THE_NEEDLE_DROP: { name: "The Needle Drop", url: "https://www.youtube.com/@theneedledrop", genres: ["Art pop", "Nu jazz"]},
     TONE_ZONE: { name: "Tone Zone", url: "https://rateyourmusic.com/~Tone_Zone", genres: ["Metal", "Prog rock"]},
+    ELASTIC_ROCK: { name: "ElasticRock", url: "https://rateyourmusic.com/list/elasticrock/100-favourite-ecm-albums/", genres: ["ECM style jazz", "Jazz"] },
+    
+    // stats.fm
     XENOPHILE: { name: "Xenophile", url: "https://stats.fm/xenophile", genres: ["Choral", "Modern classical"]},
+
+    // lastfm
     NIELS: { name: "Onderhond", url: "https://www.last.fm/user/Onderhond", genres: ["IDM", "Breakcore", "Ambient"]},
 });
 
