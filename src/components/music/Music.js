@@ -590,14 +590,17 @@ class Music extends Component {
         let album_id = album_href.split('#')[2];
         let album_selected = document.getElementById(album_id);
 
-        // highlight album...
-        album_selected.classList.add('navigated-to');
-        
-        // unhighlight after certain amount of time...
-        let N = 3 * 1000;
-        setTimeout(() => {
-            album_selected.classList.remove('navigated-to');
-        }, N);
+        // check if the album was found first...
+        if (album_selected !== null) {
+            // highlight album...
+            album_selected.classList.add('navigated-to');
+            
+            // unhighlight after certain amount of time...
+            let N = 3 * 1000;
+            setTimeout(() => {
+                album_selected.classList.remove('navigated-to');
+            }, N);
+        }
     }
 
     /**
@@ -631,7 +634,14 @@ class Music extends Component {
         // top tracks list (default to overall time period)
         let top_tracks_list = this.props.top_tracks.overall;
 
-        const navigation = [1,25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600];
+        // generate array of intervals (e.g. [1,25,50,75,100,...,600])
+        const navigation = [1];
+        const gap = 25;
+        const max = 600;
+        const num_of_sections = max / gap;
+        for (let i = 1; i < num_of_sections+1; i++) {
+            navigation.push(gap*i);
+        }
 
         return (
             <div className='page-wrapper' id="music-page">

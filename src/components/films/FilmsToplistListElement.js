@@ -32,9 +32,9 @@ class FilmsToplistListElement extends Component {
     render() {
         // console.log(this.props.film);
         let temp_screenshot = "https://m.media-amazon.com/images/M/MV5BNjUxYTkxYzgtYzU5OC00NDVmLWExYTAtYmY0NDBiZWRhY2E0XkEyXkFqcGdeQXVyNzEzMzA1MTQ@._V1_.jpg"
-        let screenshot1 = null;
-        let screenshot2 = null;
-        let screenshot3 = null;
+        let screenshot1 = temp_screenshot;
+        let screenshot2 = temp_screenshot;
+        let screenshot3 = temp_screenshot;
         if (this.props.film.screenshots !== undefined) {
             screenshot1 = this.props.film.screenshots[0];
             screenshot2 = this.props.film.screenshots[1];

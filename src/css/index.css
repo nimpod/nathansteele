@@ -372,7 +372,7 @@
   --blog-table-bg: var(--page-wrapper-bg);
   --blog-table-thead-bg: rgb(45, 51, 58);
   --blog-table-border: rgba(180, 180, 186, 0.189);
-  --blog-td-divider-color: rgba(166, 166, 193, 0.183);
+  --blog-td-divider-color: rgba(166, 166, 193, 0.261);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
   --blog-table-row-bg-hover: rgb(38, 38, 40);
@@ -3588,21 +3588,29 @@ div.btn.filter-list-by-artist-btn {
 }
 .top-albums-list {
   margin-left: 30px;
+  padding-right: 10px;
+  scroll-behavior: smooth;
 }
 .top-albums-list {
   scrollbar-width: auto;
-  scrollbar-color: rgb(135, 255, 43) rgb(78, 85, 90);
+  scrollbar-color: rgb(17, 198, 126) rgb(108, 112, 114);
+}
+@media screen and (max-width: 670px) {
+  .top-albums-list {
+    padding-right: 0px;
+    scrollbar-width: none;
+  }
 }
 
 #top-albums-list-navigation .navItem {
   background-color: var(--topAlbumsList-navItem-bg-color);
-  border-radius: 6px;
+  border-radius: 5px;
   color: var(--text);
-  padding: 3px 5px;
+  padding: 2px 0px;
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   cursor: pointer;
 }
 #top-albums-list-navigation .navItem:hover {
@@ -3636,14 +3644,20 @@ div.top-albums-list > a {
 
 div.top-albums-list > a.navigated-to {
   background-color: transparent;
+  box-shadow: transparent;
   border-radius: 7px;
   animation-name: example;
-  animation-duration: 3s;
+  animation-duration: 6s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+:root {
+  --box-shadow-navigated: rgb(27, 173, 100);
 }
 
 @keyframes example {
-  0%   {filter: brightness(1.0); background-color: rgb(250, 237, 52); }
-  20%  {filter: brightness(2.0); background-color: rgb(250, 237, 52); }
+  0%   {filter: brightness(1.0); background-color: var(--films-pagination-btn-bg-color-active); box-shadow: 0 0 30px var(--box-shadow-navigated); }
+  20%  {filter: brightness(1.8); background-color: var(--films-pagination-btn-bg-color-active); box-shadow: 0 0 30px var(--box-shadow-navigated); }
 }
 
 div.albumInfoContainer {
@@ -3680,17 +3694,23 @@ div.albumInfoContainer > div.albumInfo {
   overflow: hidden;
 }
 
-div.albumInfoContainer > div.albumInfo > div  {
+div.albumInfoContainer > div.albumInfo > div {
   background-color: var(--album-info-grid-item-bg-color);
   color: var(--text);
   font-size: 0.83rem;
   padding: 0px 0px;
 }
+
 div.albumInfoContainer > div.albumInfo > div > p {
   margin: 0;
 }
 
-div.albumInfoContainer > div.albumInfo > div > p {
+p.myPosition-mobileView {
+  display: none;
+}
+
+div.albumInfoContainer > div.albumInfo p.artistNameText,
+div.albumInfoContainer > div.albumInfo p.albumNameText {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3706,9 +3726,42 @@ div.albumInfoContainer > div.albumInfo div.albumMoreInfo {
 div.albumInfoContainer > div.albumInfo div.albumMoreInfo > p {
   margin-right: 8px;
 }
+
+
+div.albumInfoContainer div.artistName {
+  display: flex;
+  flex-direction: row;
+}
+div.albumInfoContainer div.artistName p::after {
+  content: "•";
+  padding-left: 4px;
+  margin-left: 0px;
+}
+@media screen and (max-width: 670px) {
+  div.albumInfoContainer div.artistName p::after {
+    padding-left: 2px;
+  }
+
+  div.albumInfoContainer div.albumName p {
+    filter: brightness(2.5);
+    font-size: 0.7rem !important;
+  }
+
+  div.albumInfoContainer div.artistName p {
+    font-size: 0.65rem;
+  }
+}
+
+div.albumInfoContainer div.artistName p {
+  color: var(--text-darker);
+}
+div.albumInfoContainer div.albumName p {
+  filter: brightness(2.5);
+  font-size: 1rem;
+}
 div.albumInfoContainer p {
   border-radius: 50px;
-  padding: 1px 5px;
+  padding: 0px 4px;
 }
 div.albumInfoContainer p.myPosition {
   background-color: var(--my-pos-colour);
@@ -4452,7 +4505,7 @@ div.albumInfoContainer > div.myRating {
   }
 
   .posts-container > table {
-    margin-top: calc(var(--posts-header-height) - 18px);
+    margin-top: calc(var(--posts-header-height) + 15px);
     width: 100%;
   }
 
@@ -4839,7 +4892,10 @@ div.albumInfoContainer > div.myRating {
   }
   #music-page .top-albums-list-container {
     margin-left: 0px;
+    /*
     padding: 4px 8px;
+    */
+    padding: 0px;
   }
   #music-page .top-albums-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -4855,7 +4911,7 @@ div.albumInfoContainer > div.myRating {
   }
 
   .top-albums-list .albumInfo p {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
   /* #endregion */
 
@@ -4913,22 +4969,16 @@ div.albumInfoContainer > div.myRating {
   /* #endregion */
 }
 
+/* keep pushing blog post table further down... */
+@media screen and (max-width: 1250px) { .posts-container > table {  margin-top: calc(var(--posts-header-height) + 30px); } }
+@media screen and (max-width: 550px)  { .posts-container > table {  margin-top: calc(var(--posts-header-height) + 35px); } }
+@media screen and (max-width: 450px)  { .posts-container > table {  margin-top: calc(var(--posts-header-height) + 45px); } }
 
-@media screen and (max-width: 900px) {
-  #music-page .top-albums-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-@media screen and (max-width: 500px) {
-  #music-page .top-albums-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-@media screen and (max-width: 400px) {
-  #music-page .top-albums-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+/* albums list grid view as screen gets smaller... */
+@media screen and (max-width: 900px) { #music-page .top-albums-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media screen and (max-width: 500px) { #music-page .top-albums-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media screen and (max-width: 400px) { #music-page .top-albums-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
 
 /* bigger than mobile but smaller than pc */
 @media screen and (max-width: 1083px) {

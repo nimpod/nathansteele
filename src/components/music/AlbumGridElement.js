@@ -42,14 +42,15 @@ class AlbumGridElement extends Component {
                 <div className='albumInfoContainer'>
                     <img className='albumCover' src={album_cover_url} alt="Album cover" loading='lazy'></img>
                     <div className='albumInfo'>
-                        <div className='artistName'>
-                            <p>{artist_name}</p>
-                        </div>
                         <div className='albumName'>
-                            <p>{album_name}</p>
+                            <p className='myPosition-mobileView'>{this.props.album.position_str}</p>
+                            <p className='albumNameText'>{album_name}</p>
+                        </div>
+                        <div className='artistName'>
+                            <p className='albumYearText'>{this.props.album.year_of_release}</p>
+                            <p className='artistNameText'>{artist_name}</p>
                         </div>
                         <div className='albumMoreInfo'>
-                            <p>{this.props.album.year_of_release}</p>
                             <p className='myPosition'>#{this.props.album.position_str}</p>
                             <p className={`myRating r${this.props.album.my_rating_nodp}`}>{this.props.album.my_rating}</p>
                         </div>
