@@ -115,12 +115,17 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                         print('no album cover found :(')
                 
                 # Annoying.... Sometimes Lastfm automatically gives me slightly different versions of artist names... This will have to do for now...
+                artist_name = fix_artist_name_to_make_filtering_easier_in_javascript_world(artist_name=artist_name)
+                """
                 if artist_name == 'alt-J' or artist_name == 'Alt-J':
                     artist_name = 'alt-J'
-                #if artist_name == '久石譲':
-                #    artist_name = 'Joe Hisaishi'
-                if artist_name == 'Twenty One Pilots':
+                elif artist_name == 'Twenty One Pilots':
                     artist_name = 'twenty one pilots'
+                elif artist_name == 'Kiyo Sen':
+                    artist_name = 'KIYO * SEN'
+                elif artist_name == '久石譲':
+                    artist_name = 'Joe Hisaishi'
+                """
                 
                 # show progress...
                 print(f"{pos_padded}: {review_id} {lastfm_url}")
@@ -178,12 +183,37 @@ def album_name_doesnt_match_with_lastfm(folder_name, album_name):
 
 
 def artist_name_doesnt_match_with_lastfm(folder_name, artist_name):
+    """
+    Fix artist name before API call
+    """
+    
     if 'Portico Quartet - Portico Quartet' in folder_name:
         return 'Portico'
     elif 'Janelle Monae - The ArchAndroid' in folder_name:
         return 'Janelle Monáe'
     elif 'Casualties of Cool - Casualties of Cool' in folder_name:
         return 'Devin Townsend'
+    elif 'Kiyo Sen - Trick or Treat' in folder_name:
+        return ' KIYO＊SEN '
+    else:
+        return artist_name
+
+
+def fix_artist_name_to_make_filtering_easier_in_javascript_world(artist_name):
+    """
+    Sometimes Lastfm automatically gives me slightly different versions of artist names... 
+    This is annoying because it means the filtering on the UI won't work for some artists
+    So fix this here...
+    """
+    
+    if artist_name == 'alt-J' or artist_name == 'Alt-J':
+        return 'alt-J'
+    elif artist_name == 'Twenty One Pilots':
+        return 'twenty one pilots'
+    elif artist_name == 'Kiyo Sen':
+        return 'KIYO * SEN'
+    elif artist_name == '久石譲':
+        return 'Joe Hisaishi'
     else:
         return artist_name
 
@@ -211,6 +241,7 @@ def update_mismatching_lastfm_urls():
     # update content...
     with open(fullpath_to_json_output, 'w') as f:
         json.dump(d, f, indent=4)
+
 
 def get_top_tracks(period=GET_TOP_TRACKS_TIME_PERIOD_OPTIONS.ALL_TIME, limit=10):
     """

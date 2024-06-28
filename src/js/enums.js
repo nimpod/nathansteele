@@ -52,7 +52,7 @@ export const TrustworthyMusicReviewers = Object.freeze({
     XENOPHILE: { name: "Xenophile", url: "https://stats.fm/xenophile", genres: ["Choral", "Modern classical"]},
 
     // lastfm
-    NIELS: { name: "Onderhond", url: "https://www.last.fm/user/Onderhond", genres: ["IDM", "Breakcore", "Ambient"]},
+    NIELS: { name: "Onderhond", url: "https://www.last.fm/user/Onderhond/library/albums?date_preset=ALL", genres: ["IDM", "Breakcore", "Ambient"]},
 });
 
 

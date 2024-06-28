@@ -2262,6 +2262,7 @@ const database = {
 			themes: ["Colombia", "Latin rhythms"],
 			my_rating: 8.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP,
 		},
 		"mort_garson__plantasia": {
 			lastfm_url: "https://www.last.fm/music/Mort+Garson/Plantasia",
@@ -2333,6 +2334,17 @@ const database = {
 		},
 
 
+		"native_construct__quiet_world": {
+			lastfm_url: "https://www.last.fm/music/Native+Construct/Quiet+World",
+			rym_url: "https://rateyourmusic.com/release/album/native-construct/quiet-world/",
+			spotify_url: "https://open.spotify.com/album/2xMLC2kZe4aMMbupatoDZy?si=-RX0ZoA-QOqNwVXzdcFhDg",
+			year_of_release: "2015",
+			year_of_discovery: "2024",
+			genres: "Progressive metal; Symphonic metal; Progressive rock; Rock opera",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.TONE_ZONE,
+		},
 		"nanoray__digimaiden": {
 			lastfm_url: "https://www.last.fm/music/NANORAY/DIGIMAIDEN",
 			rym_url: "https://rateyourmusic.com/release/album/nanoray/digimaiden/",
@@ -2730,6 +2742,7 @@ const database = {
 			themes: ["Newcastle", "Geordie dialect"],
 			my_rating: 9.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP,
 		},
 
 		//
