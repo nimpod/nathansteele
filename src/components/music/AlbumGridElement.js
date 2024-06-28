@@ -12,6 +12,7 @@ class AlbumGridElement extends Component {
         let album_name = "";
         let artist_name = this.props.album.artist_name;
         let my_rating_nodp = "";
+        let first_genre = "";
 
         album_name = (this.props.album.album_name_displayed !== undefined) ? this.props.album.album_name_displayed : this.props.album.album_name;
 
@@ -32,9 +33,18 @@ class AlbumGridElement extends Component {
             artist_name = this.props.album.artist_name_displayed;
         }
 
+        // get rating without decimal place (so I can add it to the classname)
         if (this.props.album.my_rating_nodp !== undefined) {
             my_rating_nodp = this.props.album.my_rating_nodp;
         }
+
+        // get 1st genre from genres list
+        /*
+        if (this.props.album.genres !== undefined) {
+            if (this.props.album.genres.length > 0) {
+                first_genre = this.props.album.genres[0];
+            }
+        }*/
 
         // console.log(this.props);
         return(
@@ -43,12 +53,13 @@ class AlbumGridElement extends Component {
                     <img className='albumCover' src={album_cover_url} alt="Album cover" loading='lazy'></img>
                     <div className='albumInfo'>
                         <div className='albumName'>
-                            <p className='myPosition-mobileView'>{this.props.album.position_str}</p>
+                            <p className='myPosition-mobileView'>{this.props.album.position}.</p>
                             <p className='albumNameText'>{album_name}</p>
                         </div>
                         <div className='artistName'>
-                            <p className='albumYearText'>{this.props.album.year_of_release}</p>
                             <p className='artistNameText'>{artist_name}</p>
+                            <p className='albumYearText'>{this.props.album.year_of_release}</p>
+                            {/*}  <p className='firstGenreText'>{first_genre}</p> */}
                         </div>
                         <div className='albumMoreInfo'>
                             <p className='myPosition'>#{this.props.album.position_str}</p>

@@ -30,7 +30,7 @@ import {
 
 
 let STARTING_PAGE_NUM = 0;
-let MAX_FILMS_PER_PAGE = 25;
+let MAX_FILMS_PER_PAGE = 20;
 
 const enumValue = (name) => Object.freeze({toString: () => name});
 const SortableType = Object.freeze({
@@ -243,7 +243,8 @@ class Films extends React.Component {
                 for (let j = 0; j < this.state.__total_num_of_pages; j++) {
                     let upper_bound = (this.state.__filtered_data.length - ((i-1)*MAX_FILMS_PER_PAGE));
                     let lower_bound = upper_bound - MAX_FILMS_PER_PAGE + 1;
-                    let text_content = (upper_bound + " - " + lower_bound);
+                    let text_content = upper_bound;
+                    // let text_content = (upper_bound + " - " + lower_bound);
                     // let textContent = "Top " + upperBound;
                     anchor_tag.textContent = text_content;
                     break;
