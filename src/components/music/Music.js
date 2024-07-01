@@ -619,6 +619,11 @@ class Music extends Component {
                 return album_name_included || artist_name_included;
             });
         
+        let less_than_12_albums_on_display = "";
+        if (albums_displayed.length <= 12) {
+            less_than_12_albums_on_display = `there-are-less-than-12-albums-on-display`;
+        }
+
         // filtering...
         const filter = this.show_filter_info(albums_displayed);
         const filter_url = filter['filter_url'];
@@ -803,7 +808,7 @@ class Music extends Component {
                                     </div>
                                 </div>
 
-                                <div className='top-albums-list'>
+                                <div className={`top-albums-list ${less_than_12_albums_on_display}`}>
                                     {albums_displayed.map(a => {
                                         return <AlbumGridElement
                                             album={a}
