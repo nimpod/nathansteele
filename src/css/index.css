@@ -301,7 +301,7 @@
 [data-theme="dark"] {
 
   /* Main stuff */
-  --section-inner-bg-color: rgb(26, 27, 29);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
+  --section-inner-bg-color: rgb(13, 13, 14);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
   --page-wrapper-bg: rgb(34, 40, 42);
   /*
   --bg1: rgb(153, 145, 70);
@@ -1891,7 +1891,7 @@ div.blog-post
 /* #region -----------------------------------<9: FILMS PAGE>------------------------------------------ */
 
 :root {
-  --films-toplist-grid-items-per-row: 10;
+  --films-toplist-grid-items-per-row: 8;
   --film-grid-item-width: 160px;
 }
 
@@ -3266,7 +3266,7 @@ div.btn.films-reset-filters-btn svg {
 
 :root {
   --albums-displayed-per-row: 6;
-  --album-cover-border-radius: 0.5rem;
+  --album-cover-border-radius: 0.3rem;
 }
 
 :root {
@@ -3491,7 +3491,7 @@ div.btn.filter-list-by-artist-btn {
 .top-albums-list {
   display: grid;
   grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
-  grid-gap: 15px;
+  grid-gap: 3px;
   padding-top: 4px;
   overflow-y: scroll;
   overflow: auto;
@@ -3668,7 +3668,7 @@ div.albumInfoContainer {
   margin: 0.0rem;
   position: relative;
   transition: all 200ms ease;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 2px solid rgba(243, 246, 253, 0.079);
 }
 div.albumInfoContainer > img.albumCover {
