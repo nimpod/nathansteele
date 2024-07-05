@@ -3398,7 +3398,7 @@ picture:hover .img-content {
 }
 .top-albums-list-innerContainer {
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 11% auto;
   grid-template-rows: auto 1fr;
 }
 
@@ -3495,7 +3495,9 @@ div.btn.filter-list-by-artist-btn {
   padding-top: 4px;
   overflow-y: scroll;
   overflow: auto;
-  height: 88vh;
+
+  /* when always displaying filters... */
+  height: 93vh;
 }
 .top-albums-list.there-are-less-than-12-albums-on-display {
   grid-template-rows: repeat(2, 38%);
@@ -3542,6 +3544,11 @@ div.btn.filter-list-by-artist-btn {
 /* #endregion */
 
 /* #region ------------< 11.2) Filtered albums list info >------------ */
+
+.top-albums-list-header {
+  display: flex;
+  flex-direction: row;
+}
 
 #filtered-albums-list-info:not(.filters-active) {
   visibility: hidden;
@@ -4020,7 +4027,7 @@ div.albumInfoContainer > div.myRating {
 }
 
 :root {
-  --album-cover-width: 350px;
+  --album-cover-width: 300px;
 }
 
 /* #region ---------- 12.1) Album header ---------- */
@@ -4052,7 +4059,7 @@ div.albumInfoContainer > div.myRating {
 /* #region ---------- 12.2) Album metadata ---------- */
 
 .album-info {
-  width: calc(66%);
+  width: calc(63%);
 }
 
 /* Album cover */
@@ -4070,6 +4077,7 @@ div.albumInfoContainer > div.myRating {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: help;
 }
 
 /* Artist name */
@@ -4077,12 +4085,14 @@ div.albumInfoContainer > div.myRating {
   display: block;
   font-size: 1.1rem;
   color: var(--text-darker);
+  cursor: help;
 }
 
 /* Album year */
 .album-info > .year-of-release {
   font-size: 0.9rem;
   color: var(--text-much-darker);
+  cursor: help;
 }
 
 /* More stuff */
@@ -4095,7 +4105,10 @@ div.albumInfoContainer > div.myRating {
 /* Go back to prev page btn */
 .album-review .back-to-previous-page {
   position: absolute;
+  /*
   margin-left: -40px;
+  */
+  left: -140px;
   bottom: 50%;
 }
 

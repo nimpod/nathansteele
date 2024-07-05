@@ -661,14 +661,16 @@ class Music extends Component {
 
                         <div className='top-albums-list-container'>
                             {/* Title */}
-                            <span className='page-title'>My top {this.props.top_albums.length} favourite albums of all time</span>
-
-                            {/* Information about what is currently being filtered (if anything) */}
-                            <div id="filtered-albums-list-info">
-                                <p className={`avgPos avgPos_`+filter['avg_pos']}>Average position: <span>#{filter['avg_pos']}</span></p>
-                                <p className={`avgRating avgRating_`+filter['avg_rating']}>Average rating: <span>{filter['avg_rating']}/10</span></p>
-                                <p className={`numOfAlbums_`+filter['num_of_albums']}>Num of albums: <span>{filter['num_of_albums']}</span></p>
-                                <p>Filtered by <span>{filter_type} {(filter_url.length > 0) ? <a href={filter_url} target='_blank'>{filter_criteria}</a> : filter_criteria}</span></p>
+                            <div className='top-albums-list-header'>
+                                <span className='page-title'>My top {this.props.top_albums.length} favourite albums of all time</span>
+                                
+                                {/* Information about what is currently being filtered (if anything) */}
+                                <div id="filtered-albums-list-info">
+                                    <p className={`avgPos avgPos_`+filter['avg_pos']}>Average position: <span>#{filter['avg_pos']}</span></p>
+                                    <p className={`avgRating avgRating_`+filter['avg_rating']}>Average rating: <span>{filter['avg_rating']}/10</span></p>
+                                    <p className={`numOfAlbums_`+filter['num_of_albums']}>Num of albums: <span>{filter['num_of_albums']}</span></p>
+                                    <p>Filtered by <span>{filter_type} {(filter_url.length > 0) ? <a href={filter_url} target='_blank'>{filter_criteria}</a> : filter_criteria}</span></p>
+                                </div>
                             </div>
 
                             {/* Top albums list */}

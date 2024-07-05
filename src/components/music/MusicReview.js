@@ -94,9 +94,7 @@ class MusicReview extends React.Component {
                             {/* Back to previous page button */}
                             <Link to='/music' className="custom-btn-1 back-to-previous-page" title="Back to toplist">
                                 <ArrowLeftV2 className="invertable-icon" />
-                                {/*}
-                                <span>Back to toplist</span>
-                                */}
+                                <span>Back to list</span>
                             </Link>
                             
                             {/* Album header */}
@@ -110,9 +108,9 @@ class MusicReview extends React.Component {
 
                                 {/* Album info */}
                                 <div className='album-info'>
-                                    <span className='album-name'>{album_name}</span>
-                                    <span className='artist-name'>{artist_name}</span>
-                                    <span className='year-of-release'>{this.props.album_data.year_of_release}</span>
+                                    <span className='album-name' title='Album name'>{album_name}</span>
+                                    <span className='artist-name' title='Artist name'>{artist_name}</span>
+                                    <span className='year-of-release' title='Year this album was released'>{this.props.album_data.year_of_release}</span>
                                     
                                     {/* Genres */}
                                     <div className='genres list-of-tags'>

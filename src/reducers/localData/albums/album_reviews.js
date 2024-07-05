@@ -316,7 +316,7 @@ const database = {
 		"air__moon_safari": {
 			lastfm_url:"https://www.last.fm/music/Air/Moon+Safari",
 			rym_url: "https://rateyourmusic.com/release/album/air/moon-safari/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/5dmYtZVJ1bG9RyrZBRrkOA?si=BZrvUqlYQvi9Brz2TdUVmw",
 			year_of_release: "1998",
 			year_of_discovery: "2018",
 			genres: "Downtempo; Ambient; Electronic",
@@ -367,6 +367,16 @@ const database = {
 			year_of_discovery: "2019",
 			genres: "Ambient; Dark ambient; Minimalism; Electronic",
 			my_rating: 9.0,
+			my_review: "",
+		},
+		"aphex_twin__selected_ambient_works_85_92": {
+			lastfm_url: "https://www.last.fm/music/Aphex+Twin/Selected+Ambient+Works+85-92",
+			rym_url: "https://rateyourmusic.com/release/album/aphex-twin/selected-ambient-works-85-92/",
+			spotify_url: "https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k?si=5g_ussmkTXWwU5S5eztXdw",
+			year_of_release: "1992",
+			year_of_discovery: "2017",
+			genres: "Ambient techno; IDM; Ambient; Electronic",
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"aphex_twin__come_to_daddy": {
@@ -445,12 +455,12 @@ const database = {
 		},
 		"all_time_low__future_hearts": {
 			lastfm_url: "https://www.last.fm/music/All+Time+Low/Future+Hearts",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/all-time-low/future-hearts/",
+			spotify_url: "https://open.spotify.com/album/712X8QUI6uWg1JxHmz0l4I?si=iGqtHwYFTj-uAWJ6se2hIg",
 			year_of_release: "2015",
 			year_of_discovery: "2015",
-			genres: "Pop-punk",
-			my_rating: 8.5,
+			genres: "Pop punk; Pop rock; Power pop",
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"arca__kick_ii": {
@@ -492,6 +502,16 @@ const database = {
 			year_of_release: "2023",
 			year_of_discovery: "2023",
 			genres: "Alternative metal; Hyperpop; Trap metal; Pop rap; Industrial Hip-Hop",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"anunaku__063": {
+			lastfm_url: "https://www.last.fm/music/Anunaku/063",
+			rym_url: "https://rateyourmusic.com/release/ep/anunaku/063/",
+			spotify_url: "https://open.spotify.com/album/6ipPsxdz9GqLy2Ehy6b49i?si=gtBf9iU7QxS47XNZVtr13A",
+			year_of_release: "2023",
+			year_of_discovery: "2023",
+			genres: "Minimal techno; Techno; Acid techno; Trance; Electronic",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -720,6 +740,16 @@ const database = {
 		},
 
 
+		"bon_iver__for_emma_forever_ago": {
+			lastfm_url: "https://www.last.fm/music/Bon+Iver/For+Emma,+Forever+Ago",
+			rym_url: "https://rateyourmusic.com/release/album/bon-iver/for-emma-forever-ago/",
+			spotify_url: "https://open.spotify.com/album/7EJ0OT5ZqybXxcYRa6mccM?si=Gu2fO5VeSD6zOBkWaoJeCQ",
+			year_of_release: "2008",
+			year_of_discovery: "2022",
+			genres: "Indie folk; Folk",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"bogdan_raczynski__samurai_math_beats": {
 			lastfm_url: "https://www.last.fm/music/Bogdan+Raczynski/Samurai+Math+Beats",
 			rym_url: "https://rateyourmusic.com/release/album/bogdan-raczynski/samurai-math-beats/",
@@ -749,16 +779,6 @@ const database = {
 			year_of_discovery: "2021",
 			genres: "Trip hop; Alternative pop; Electronic",
 			my_rating: 9.0,
-			my_review: "",
-		},
-		"bon_iver__for_emma_forever_ago": {
-			lastfm_url: "https://www.last.fm/music/Bon+Iver/For+Emma,+Forever+Ago",
-			rym_url: "",
-			spotify_url: "",
-			year_of_release: "2007",
-			year_of_discovery: "2022",
-			genres: "Indie folk; Folk; Alternative country; Chamber folk",
-			my_rating: 8.5,
 			my_review: "",
 		},
 		"bent__programmed_to_love": {
@@ -811,7 +831,7 @@ const database = {
 		"ceephax_acid_crew__box_steady": {
 			lastfm_url: "https://www.last.fm/music/Ceephax+Acid+Crew/Box+Steady",
 			rym_url: "https://rateyourmusic.com/release/album/ceephax-acid-crew/box-steady/",
-			spotify_url: "https://open.spotify.com/album/56h30DA2RokyYVDobT2U5a?si=aLA2-KZuQAqetrxduGaClw",
+			spotify_url: "https://open.spotify.com/album/5QQIeWvt99okBNyLhlLAQx?si=lkWVNnRWQqaKkTFNdMa9DA",
 			year_of_release: "2021",
 			year_of_discovery: "2022",
 			genres: "Acid techno; Acid house; Acid trance; Breakbeat; Acid breaks; Chiptune; Electronic",
@@ -1401,6 +1421,18 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
+		"hajime_mizoguchi__jin_roh_soundtrack": {
+			lastfm_url: "https://www.last.fm/music/%E6%BA%9D%E5%8F%A3%E8%82%87/Jin-Roh",
+			rym_url: "https://rateyourmusic.com/release/album/%E6%BA%9D%E5%8F%A3%E8%82%87/jin-roh-original-motion-picture-soundtrack/",
+			youtube_url: "https://www.youtube.com/playlist?list=PL0PirOM_guf7KOeO7Lcivffd904Cimyp-",
+			year_of_release: "1999",
+			year_of_discovery: "2023",
+			artist_name_English: "Hajime Mizoguchi",
+			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/83701bec39cfa8159ba42940125a31ce.jpg#83701bec39cfa8159ba42940125a31ce",
+			genres: "Film soundtrack",
+			my_rating: 8.0,
+			my_review: "",
+		},
 	},
 
 	I: {
@@ -1420,8 +1452,8 @@ const database = {
 		},
 		"ichiko_aoba__qp": {
 			lastfm_url: "https://www.last.fm/music/Ichiko+Aoba/qp",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/%E9%9D%92%E8%91%89%E5%B8%82%E5%AD%90/qp/",
+			spotify_url: "https://open.spotify.com/album/60JwRRKU6wsdJex2cbq974?si=0VK1jFhvQTi7vHcCwpfpRw",
 			year_of_release: "2018",
 			year_of_discovery: "2021",
 			genres: "J-folk; J-acoustic; Folk",
@@ -1661,7 +1693,28 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
-		
+
+		//
+		"jean_jacques_perrey__moog_indigo": {
+			lastfm_url: "https://www.last.fm/music/Jean-Jacques+Perrey/Moog+Indigo",
+			rym_url: "https://rateyourmusic.com/release/album/jean-jacques-perrey/moog-indigo/",
+			spotify_url: "https://open.spotify.com/album/6ByFx8BCQBpLVk3GiMkPx9?si=w50ANHfHRqmxeqOp7ATvwg",
+			year_of_release: "1970",
+			year_of_discovery: "2020",
+			genres: "Exotica; Space age pop; Moogsploitation; Psychedelic pop; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"jean_jacques_perrey__amazing_electronic_pop_sound_of": {
+			lastfm_url: "https://www.last.fm/music/Jean-Jacques+Perrey/Amazing+Electronic+Pop+Sound+Of",
+			rym_url: "https://rateyourmusic.com/release/album/jean-jacques-perrey/the-amazing-new-electronic-pop-sound-of-jean-jacques-perrey/",
+			spotify_url: "https://open.spotify.com/album/2UUEIw8gSaVGnG4eyJoPnm?si=c_r9NfFrQUqEvdGC032-kw",
+			year_of_release: "1968",
+			year_of_discovery: "2020",
+			genres: "Exotica; Space age pop; Moogsploitation; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
 
 		"jesus_molina__agape": {
 			lastfm_url: "https://www.last.fm/music/Jesus+Molina/Agape",
@@ -1713,6 +1766,16 @@ const database = {
 			year_of_release: "2010",
 			year_of_discovery: "2022",
 			genres: "R&B; Neo-Soul; Funk; Psychedelic soul; Afrofuturism",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"jamie_cullum__twentysomething": {
+			lastfm_url: "https://www.last.fm/music/Jamie+Cullum/Twentysomething",
+			rym_url: "https://rateyourmusic.com/release/album/jamie-cullum/twentysomething/",
+			spotify_url: "https://open.spotify.com/album/6FbhvZweI6o9Szb2j9ls9o?si=gfy9CrUcTD2j1QrwvTD6WA",
+			year_of_release: "2003",
+			year_of_discovery: "2010",
+			genres: "Jazz; Piano; Jazz pop; Lounge",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -1797,7 +1860,7 @@ const database = {
 		"kero_kero_bonito__intro_bonito": {
 			lastfm_url: "https://www.last.fm/music/Kero+Kero+Bonito/Intro+Bonito",
 			rym_url: "https://rateyourmusic.com/release/mixtape/kero-kero-bonito/intro-bonito/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/3RNP9iHMJpFkGbMB2OAnJn?si=KM6cwMh5RrSWgr4bqNaHgQ",
 			year_of_release: "2013",
 			year_of_discovery: "2022",
 			genres: "Dance pop; Pop; Glitch pop; Hip-Hop",
@@ -2365,6 +2428,38 @@ const database = {
 		},
 
 
+		//
+		"nick_drake__pink_moon": {
+			lastfm_url: "https://www.last.fm/music/Nick+Drake/Pink+Moon",
+			rym_url: "https://rateyourmusic.com/release/album/nick-drake/pink-moon/",
+			spotify_url: "https://open.spotify.com/album/5mwOo1zikswhmfHvtqVSXg?si=vEe8Op5YSNyCSD11mvpIqw",
+			year_of_release: "1972",
+			year_of_discovery: "2021",
+			genres: "Folk; Baroque folk",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"nick_drake__bryter_layer": {
+			lastfm_url: "https://www.last.fm/music/Nick+Drake/Bryter+Layter",
+			rym_url: "https://rateyourmusic.com/release/album/nick-drake/bryter-layter/",
+			spotify_url: "https://open.spotify.com/album/0B2E1w5T7PEbZIctZnnt9K?si=VlTrvjE1QLG0lhE6bCvV6w",
+			year_of_release: "1971",
+			year_of_discovery: "2021",
+			genres: "Art rock; Folk; Folk rock; Baroque folk",
+			my_rating: 9.0,
+			my_review: "",
+		},
+		"nick_drake__five_leaves_left": {
+			lastfm_url: "https://www.last.fm/music/Nick+Drake/Five+Leaves+Left",
+			rym_url: "https://rateyourmusic.com/release/album/nick-drake/five-leaves-left/",
+			spotify_url: "https://open.spotify.com/album/7IpcJbVxLLEfW0KXB7ndE2?si=di14GQrRTpG1fHG-bVt8Yw",
+			year_of_release: "1969",
+			year_of_discovery: "2021",
+			genres: "Chamber folk; Folk; Baroque folk",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
 		"native_construct__quiet_world": {
 			lastfm_url: "https://www.last.fm/music/Native+Construct/Quiet+World",
 			rym_url: "https://rateyourmusic.com/release/album/native-construct/quiet-world/",
@@ -2407,16 +2502,6 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
-		"nick_drake__bryter_layer": {
-			lastfm_url: "https://www.last.fm/music/Nick+Drake/Bryter+Layter",
-			rym_url: "",
-			spotify_url: "",
-			year_of_release: "1971",
-			year_of_discovery: "2021",
-			genres: "Folk",
-			my_rating: 9.0,
-			my_review: "",
-		},
 		"nina_simone__wild_is_the_wind": {
 			lastfm_url: "https://www.last.fm/music/Nina+Simone/Wild+Is+The+Wind",
 			rym_url: "https://rateyourmusic.com/release/album/nina-simone/wild-is-the-wind/",
@@ -2434,6 +2519,16 @@ const database = {
 			year_of_release: "1999",
 			year_of_discovery: "2022",
 			genres: "Nu jazz; Trip hop; Indian fusion; Indian music; Downtempo",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"nit__big_bang_puzzle": {
+			lastfm_url: "https://www.last.fm/music/nit/Big+Bang+Puzzle",
+			rym_url: "https://rateyourmusic.com/release/album/nit/big-bang-puzzle/",
+			spotify_url: "https://open.spotify.com/album/1rGlDPcZwcDjDgB4MvjgkX?si=aDDukKOHTuSw6wSXmKcW6w",
+			year_of_release: "2024",
+			year_of_discovery: "2024",
+			genres: "Electronic; Alternative disco; Italian downtempo; Downtempo",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -3047,6 +3142,7 @@ const database = {
 		"sa_dingding__harmony": {
 			lastfm_url: "https://www.last.fm/music/Sa+Dingding/Harmony",
 			rym_url: "https://rateyourmusic.com/release/album/%E8%90%A8%E9%A1%B6%E9%A1%B6/%E5%A4%A9%E5%9C%B0%E5%90%88-harmony/",
+			youtube_url: "https://youtube.com/playlist?list=PL_m58L0UBc3UdAHunu6zUKZXh2gjXjtR5&si=mj5BS9HFLk2oWbSu",
 			year_of_release: "2009",
 			year_of_discovery: "2023",
 			genres: "Trip hop; Folk pop; Folktronica; Chinese folk music; Dance pop; Not on spotify",
@@ -3322,11 +3418,27 @@ const database = {
 		},	
 	},
 
+	U: {
+		"understatement__small_circle": {
+			lastfm_url: "https://www.last.fm/music/%E8%BC%95%E6%8F%8F%E6%B7%A1%E5%AF%AB/%E5%B0%8F%E5%9C%88%E5%AD%90",
+			rym_url: "https://rateyourmusic.com/artist/%E8%BC%95%E6%8F%8F%E6%B7%A1%E5%AF%AB",
+			spotify_url: "https://open.spotify.com/album/6Obf8MKmo6a0WcswmPTptl?si=mgvErUnvSz29IYYdB-iClw",
+			year_of_release: "2017",
+			year_of_discovery: "2023",
+			artist_name_English: "Understatement",
+			album_name_English: "Small Circle",
+			genres: "Ambient; Dreampunk; Drone; Nature recordings",
+			custom_cover_url: "https://e.snmc.io/i/600/s/e6a0be53e057533440d39fa9630a0620/10101442/%E8%BC%95%E6%8F%8F%E6%B7%A1%E5%AF%AB-understatement-%E5%B0%8F%E5%9C%88%E5%AD%90-Cover-Art.png",
+			my_rating: 8.0,
+			my_review: "",
+		}
+	},
+
 	W: {
 		"ween__the_mollusk": {
 			lastfm_url: "https://www.last.fm/music/Ween/The+Mollusk",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/ween/the-mollusk/",
+			spotify_url: "https://open.spotify.com/album/1yfJqxKKXG320vhqLfUEeC?si=QlCj2aK2QMCWTpjtqeaRyA",
 			year_of_release: "1997",
 			year_of_discovery: "2013",
 			genres: "Psychedelic rock; Psychedelic pop; Neo-Psychedelia; Comedy rock; Art rock",
@@ -3364,6 +3476,18 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/4gUdhgxsi86BdVq8EfcZYl?si=plKQ7qxVRcmv7NdKOx4Yyg",
 			year_of_release: "2012",
 			genres: "Film soundtrack; Modern classical; Impressionism",
+			my_rating: 8.0,
+			my_review: "",
+			year_of_discovery: "2023",
+		},
+
+
+		"woob__woob_1994": {
+			lastfm_url: "https://www.last.fm/music/Woob/Woob+1194",
+			rym_url: "https://rateyourmusic.com/release/album/woob/woob-1194/",
+			youtube_url: "https://youtu.be/0S3owK3pN64?si=_7bQ4lyo0aAVM96Z",
+			year_of_release: "1994",
+			genres: "Ambient dub; Downtempo; Ambient techno; Not on spotify; Electronic",
 			my_rating: 8.0,
 			my_review: "",
 			year_of_discovery: "2023",
@@ -3602,6 +3726,17 @@ const database = {
 			year_of_release: "1987",
 			year_of_discovery: "2023",
 			genres: "New age; Ambient; Neoclassical new age; Piano",
+			my_rating: 8.5,
+			my_review: "",
+		},
+		"yuji_ohno__lupin_the_third_soundtrack": {
+			lastfm_url: "https://www.last.fm/music/Yuji+Ohno/%E3%83%AB%E3%83%91%E3%83%B3%E4%B8%89%E4%B8%96+%E3%82%AB%E3%83%AA%E3%82%AA%E3%82%B9%E3%83%88%E3%83%AD%E3%81%AE%E5%9F%8E+%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%BB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF+BGM%E9%9B%86",
+			rym_url: "https://rateyourmusic.com/release/album/%E5%A4%A7%E9%87%8E%E9%9B%84%E4%BA%8C/lupin-the-3rd-%E3%83%AB%E3%83%91%E3%83%B3%E4%B8%89%E4%B8%96-%E3%82%AB%E3%83%AA%E3%82%AA%E3%82%B9%E3%83%88%E3%83%AD%E3%81%AE%E5%9F%8E-%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%BB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AFbgm%E9%9B%86/",
+			spotify_url: "https://open.spotify.com/album/0UCBCrOKGE3ppguBmgx4vR?si=hM0Gv4XbQDiZZEcGzbnfLA",
+			year_of_release: "1983",
+			year_of_discovery: "2023",
+			album_name_English: "Lupin the 3rd: The Castle of Cagliostro OST",
+			genres: "Film soundtrack; Anime soundtrack; Jazz; Jazz fusion; Samba jazz; Samba; Cool jazz",
 			my_rating: 8.5,
 			my_review: "",
 		},
