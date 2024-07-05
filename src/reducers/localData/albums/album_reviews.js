@@ -1078,6 +1078,16 @@ const database = {
 		},
 
 
+		"elvin_jones__on_the_mountain": {
+			lastfm_url: "https://www.last.fm/music/Elvin+Jones/On+the+Mountain",
+			rym_url: "https://rateyourmusic.com/release/album/elvin-jones/on-the-mountain/",
+			spotify_url: "https://open.spotify.com/album/7DwNg5AkuHEk4Of10oxrkZ?si=g6SnAvAXSG66NmGtEfAKeA",
+			year_of_release: "1975",
+			year_of_discovery: "2024",
+			genres: "Jazz fusion; Jazz; Post-Bop",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"eprom__from_a_vein": {
 			lastfm_url: "https://www.last.fm/music/Shades/From+a+Vein",
 			rym_url: "https://rateyourmusic.com/release/album/shades/from-a-vein/",
@@ -1255,6 +1265,16 @@ const database = {
 		},
 
 
+		"garaj_mahal__woot": {
+			lastfm_url: "https://www.last.fm/music/Garaj+Mahal/wOOt",
+			rym_url: "https://rateyourmusic.com/release/album/garaj-mahal/w00t/",
+			spotify_url: "https://open.spotify.com/album/0AEPd4r1TJOwR0qH17BxS6?si=4AivQUX-Qx-FOObl9f07vg",
+			year_of_release: "2008",
+			year_of_discovery: "2024",
+			genres: "Jazz fusion; Jazz; Funk; Jazz funk",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"gladde_paling__dansmuziek": {
 			lastfm_url: "https://www.last.fm/music/gladde+paling/dansmuziek",
 			rym_url: "https://rateyourmusic.com/release/album/gladde-paling/dansmuziek/",
@@ -1806,6 +1826,17 @@ const database = {
 		},
 		
 
+		"kiyo_sen__trick_or_treat": {
+			lastfm_url: "https://www.last.fm/music/KIYO%EF%BC%8ASEN/Trick+or+Treat",
+			rym_url: "https://rateyourmusic.com/release/album/kiyo_sen/trick-or-treat/",
+			spotify_url: "https://open.spotify.com/album/0uiDE56P3BsCclvh53bNpU?si=zPbxIjRYRsWYV3Do5_bjQw",
+			year_of_release: "2017",
+			year_of_discovery: "2024",
+			genres: "Jazz fusion; Jazz; Progressive rock",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
+		},
 		"karl_jenkins__motets": {
 			lastfm_url: "https://www.last.fm/music/Karl+Jenkins/Karl+Jenkins:+Motets",
 			spotify_url: "https://open.spotify.com/album/5RLRyOKImXIUHpdVdAOuO9?si=1icIJDq3TvKajyPiq0ZPLw",
@@ -2396,6 +2427,16 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
+		"nitin_sawhney__beyond_skin": {
+			lastfm_url: "https://www.last.fm/music/Nitin+Sawhney/Beyond+Skin",
+			rym_url: "https://rateyourmusic.com/release/album/nitin-sawhney/beyond-skin/",
+			spotify_url: "https://open.spotify.com/album/41qn4oxd4WFgz4JSBI9Ips?si=3SesRqpwSKCaOq94lIdCsA",
+			year_of_release: "1999",
+			year_of_discovery: "2022",
+			genres: "Nu jazz; Trip hop; Indian fusion; Indian music; Downtempo",
+			my_rating: 8.0,
+			my_review: "",
+		},
 	},
 
 	O: {
@@ -2476,6 +2517,17 @@ const database = {
 		},
 
 
+		"ola_gjeilo__voices_piano_strings": {
+			lastfm_url: "https://www.last.fm/music/Ola+Gjeilo/Ola+Gjeilo",
+			rym_url: "https://rateyourmusic.com/release/album/ola-gjeilo/ola-gjeilo/",
+			spotify_url: "https://open.spotify.com/album/4IOXEu8EgItKI8J9JDaEr4?si=-LH5R0Y5SjKm_mSXkUk0qw",
+			year_of_release: "2016",
+			year_of_discovery: "2024",
+			genres: "Choral; Modern classical",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.XENOPHILE
+		},
 		"ocoeur__nouveau_depart": {
 			lastfm_url: "https://www.last.fm/music/Ocoeur/Nouveau+D%C3%A9part",
 			rym_url: "https://rateyourmusic.com/release/album/ocoeur/nouveau-de%CC%81part/",
@@ -2578,6 +2630,28 @@ const database = {
 		},
 
 
+		"plantoid__terrapath": {
+			lastfm_url: "https://www.last.fm/music/Plantoid/Terrapath",
+			rym_url: "https://rateyourmusic.com/release/album/plantoid/terrapath/",
+			spotify_url: "https://open.spotify.com/album/5cwz5vi4rPL0nErSTrdn6z?si=YQyPH88-RByI96bYEkSEfA",
+			year_of_release: "2023",
+			year_of_discovery: "2024",
+			genres: "Progressive rock; Psychedelic rock; Jazz rock; Space rock",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
+		"patrick_ohearn__so_flows_the_current": {
+			lastfm_url: "https://www.last.fm/music/Patrick+O%27Hearn/So+Flows+The+Current",
+			rym_url: "https://rateyourmusic.com/release/album/patrick-ohearn/so-flows-the-current/",
+			spotify_url: "https://open.spotify.com/album/2G7NJdUQxp6vAO0arTebvj?si=GXsPwZxdR5648KeOUPT2EA",
+			year_of_release: "2001",
+			year_of_discovery: "2024",
+			genres: "Ambient; New age; Downtempo",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.XENOPHILE
+		},
 		"portico_quartet__portico_quartet": {
 			lastfm_url: "https://www.last.fm/music/Portico/Portico+Quartet",
 			rym_url: "https://rateyourmusic.com/release/album/portico-quartet/portico-quartet/",
@@ -2648,17 +2722,6 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK,
-		},
-		"plantoid__terrapath": {
-			lastfm_url: "https://www.last.fm/music/Plantoid/Terrapath",
-			rym_url: "https://rateyourmusic.com/release/album/plantoid/terrapath/",
-			spotify_url: "https://open.spotify.com/album/5cwz5vi4rPL0nErSTrdn6z?si=YQyPH88-RByI96bYEkSEfA",
-			year_of_release: "2023",
-			year_of_discovery: "2024",
-			genres: "Progressive rock; Psychedelic rock; Jazz rock; Space rock",
-			my_rating: 8.0,
-			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 	},
 
@@ -2960,16 +3023,6 @@ const database = {
 		},
 
 
-		"silverstein__i_am_alive_in_everything_i_touch": {
-			lastfm_url: "https://www.last.fm/music/Silverstein/I+Am+Alive+in+Everything+I+Touch",
-			rym_url: "https://rateyourmusic.com/release/album/silverstein/i-am-alive-in-everything-i-touch/",
-			spotify_url: "https://open.spotify.com/album/0tHIcupbdglY8EF57UUdJb?si=f3x6o-ReSBylghuOaFuf4A",
-			year_of_release: "2015",
-			year_of_discovery: "2015",
-			genres: "Post-hardcore; Pop punk; Screamo; Emo pop",
-			my_rating: 8.0,
-			my_review: "",
-		},
 		"sababa5__aspan": {
 			lastfm_url: "https://www.last.fm/music/Sababa+5/Aspan",
 			rym_url: "https://rateyourmusic.com/release/album/sababa-5/aspan/",
@@ -2988,6 +3041,15 @@ const database = {
 			year_of_release: "2023",
 			year_of_discovery: "2024",
 			genres: "Jazz; Indo jazz; Hindustani Classical Music",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"sa_dingding__harmony": {
+			lastfm_url: "https://www.last.fm/music/Sa+Dingding/Harmony",
+			rym_url: "https://rateyourmusic.com/release/album/%E8%90%A8%E9%A1%B6%E9%A1%B6/%E5%A4%A9%E5%9C%B0%E5%90%88-harmony/",
+			year_of_release: "2009",
+			year_of_discovery: "2023",
+			genres: "Trip hop; Folk pop; Folktronica; Chinese folk music; Dance pop; Not on spotify",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -3132,6 +3194,16 @@ const database = {
 			year_of_discovery: "2019",
 			genres: "Art pop; Dance pop; Deconstructed club; Hyperpop; Electronic",
 			custom_cover_url: "https://m.media-amazon.com/images/I/71I2m3bOLVL._UF894,1000_QL80_.jpg",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"silverstein__i_am_alive_in_everything_i_touch": {
+			lastfm_url: "https://www.last.fm/music/Silverstein/I+Am+Alive+in+Everything+I+Touch",
+			rym_url: "https://rateyourmusic.com/release/album/silverstein/i-am-alive-in-everything-i-touch/",
+			spotify_url: "https://open.spotify.com/album/0tHIcupbdglY8EF57UUdJb?si=f3x6o-ReSBylghuOaFuf4A",
+			year_of_release: "2015",
+			year_of_discovery: "2015",
+			genres: "Post-hardcore; Pop punk; Screamo; Emo pop",
 			my_rating: 8.0,
 			my_review: "",
 		},

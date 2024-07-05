@@ -111,7 +111,6 @@ const merge_albums_data = (init_state) => {
         let prevAlbum = mergedData[v["position"] - 2];
         let nextAlbum = mergedData[v["position"]];
         
-        //console.log(mergedData);
         v["artist_name_backend"] = remove_special_characters_for_musicbee_export(v["artist_name"]);
         v["album_name_backend"] = remove_special_characters_for_musicbee_export(v["album_name"]);
 
@@ -119,20 +118,12 @@ const merge_albums_data = (init_state) => {
             v["my_rating_nodp"] = v["my_rating"].toString().replace(".", "");
         }
 
-        let review_id_of_next_album = "";
-        let review_id_of_prev_album = "";
         if (nextAlbum !== undefined) {
-            let __next_artist_name = remove_special_characters_for_musicbee_export(nextAlbum.artist_name);
-            let __next_album_name = remove_special_characters_for_musicbee_export(nextAlbum.album_name);
-            review_id_of_next_album = get_album_review_id(__next_artist_name, __next_album_name);
+            v["review_id_of_next_album"] = get_album_review_id(nextAlbum.artist_name, nextAlbum.album_name);
         }
         if (prevAlbum !== undefined) {
-            let __prev_artist_name = remove_special_characters_for_musicbee_export(prevAlbum.artist_name);
-            let __prev_album_name = remove_special_characters_for_musicbee_export(prevAlbum.album_name);
-            review_id_of_prev_album = get_album_review_id(__prev_artist_name, __prev_album_name)
+            v["review_id_of_prev_album"] = get_album_review_id(prevAlbum.artist_name, prevAlbum.album_name)
         }
-        v["review_id_of_next_album"] = review_id_of_next_album;
-        v["review_id_of_prev_album"] = review_id_of_prev_album;
 
         if (v["artist_name_English"]) {
             v["artist_name_displayed"] = v["artist_name_English"] + " [" + v["artist_name"] + "]";
@@ -157,6 +148,7 @@ const merge_albums_data = (init_state) => {
             v["genres_lowercase"] = genres_lowercase;
         }
     });
+    console.log(mergedData);
 
     return mergedData;
 }

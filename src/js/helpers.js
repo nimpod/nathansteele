@@ -63,6 +63,7 @@ export function remove_special_characters(title) {
  */
 export function remove_special_characters_for_musicbee_export(str_to_edit) {
     return str_to_edit.replaceAll(" ", "_")
+                    .replaceAll("*_", "")   // not ideal... but it's because of this album (https://www.last.fm/music/KIYO%EF%BC%8ASEN/Trick+or+Treat)
                     .replaceAll(".", "")
                     .replaceAll("-", "")
                     .replaceAll("/", "")
