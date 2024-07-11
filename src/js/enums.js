@@ -47,7 +47,8 @@ export const TrustworthyMusicReviewers = Object.freeze({
     TAKASHI_HAFUZA: { name: "Takashi Hafuza", url: "https://rateyourmusic.com/~Takashi_Hafuza", genres: ["Electronic", "Breakbeat", "IDM"]},
     TONE_ZONE: { name: "Tone Zone", url: "https://rateyourmusic.com/~Tone_Zone", genres: ["Metal", "Prog rock"]},
     ELASTIC_ROCK: { name: "ElasticRock", url: "https://rateyourmusic.com/list/elasticrock/100-favourite-ecm-albums/", genres: ["ECM style jazz", "Jazz"] },
-    
+    TAIWAN_MANIAC: { name: "TaiwanManiac", url: "https://rateyourmusic.com/~taiwanmaniac", genres: ["Jazz", "Pop"] },
+
     // stats.fm
     XENOPHILE: { name: "Xenophile", url: "https://stats.fm/xenophile", genres: ["Choral", "Modern classical"]},
 

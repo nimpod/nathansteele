@@ -1175,11 +1175,13 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Egberto+Gismonti/Egberto+Gismonti",
 			rym_url: "https://rateyourmusic.com/release/album/egberto-gismonti/egberto-gismonti-1/",
 			spotify_url: "https://open.spotify.com/album/5CBG5a00B7YeXYrPIXolv1?si=V8x2yLQ3Q2eIeqtAkLF_YQ",
+			custom_cover_url: "https://e.snmc.io/i/600/s/79c3f25352c564bb6342ca7fb6b8ddda/5663936/egberto-gismonti-egberto-gismonti-Cover-Art.jpg",
 			year_of_release: "1973",
 			year_of_discovery: "2024",
 			genres: "Jazz; Jazz fusion; Chamber jazz; MPB; Third stream; Modern classical; Chamber folk",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.TAIWAN_MANIAC,
 		},
 	},
 
