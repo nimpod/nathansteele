@@ -740,6 +740,17 @@ const database = {
 		},
 
 
+		"Biréli_Lagrène__electric_side": {
+			lastfm_url: "https://www.last.fm/music/Bir%C3%A9li+Lagr%C3%A8ne/Electric+Side",
+			rym_url: "https://rateyourmusic.com/release/album/bireli-lagrene/electric-side/",
+			spotify_url: "https://open.spotify.com/album/51PpDluO6szODwOrt7ByOm?si=i-CexHcHRRW9r-tGhOj04Q",
+			year_of_release: "2008",
+			year_of_discovery: "2024",
+			genres: "Jazz fusion; Jazz",
+			my_rating: 9.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
+		},
 		"bon_iver__for_emma_forever_ago": {
 			lastfm_url: "https://www.last.fm/music/Bon+Iver/For+Emma,+Forever+Ago",
 			rym_url: "https://rateyourmusic.com/release/album/bon-iver/for-emma-forever-ago/",
@@ -2207,6 +2218,17 @@ const database = {
 		},
 
 
+		"masal__ahora": {
+			lastfm_url: "https://www.last.fm/music/Masal/Ahora",
+			rym_url: "https://rateyourmusic.com/release/album/masal/ahora/",
+			spotify_url: "https://open.spotify.com/album/0CGZh1gIOJAUVRDLDksbfC?si=G7czW_pVSEWNSqrosCrtkA",
+			year_of_release: "2022",
+			year_of_discovery: "2024",
+			genres: "Jazz fusion; Jazz; Jazz rock; Avant-Prog",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
+		},
 		"mazie__the_rainbow_cassette": {
 			lastfm_url: "https://www.last.fm/music/Mazie/the+rainbow+cassette",
 			rym_url: "https://rateyourmusic.com/release/ep/mazie/the-rainbow-cassette/",
@@ -2288,7 +2310,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0JO8dpHTSkyYs7XpNCT04D?si=1Xu7k-_VQNyC3pK0eo4jPQ",
 			year_of_release: "2023",
 			year_of_discovery: "2023",
-			genres: "Jazz fusion; Jazz; Djent; Progressive metal; Funk; Funk metal",
+			genres: "Jazz fusion; Jazz rock; Progressive rock; Progressive metal; Djent; Funk metal; Jazz",
 			my_rating: 9.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X

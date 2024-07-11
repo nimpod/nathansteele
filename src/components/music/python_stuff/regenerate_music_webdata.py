@@ -212,8 +212,8 @@ def fix_artist_name_to_make_filtering_easier_in_javascript_world(artist_name):
         return 'twenty one pilots'
     elif artist_name == 'Kiyo Sen':
         return 'KIYO * SEN'
-    elif artist_name == '久石譲':
-        return 'Joe Hisaishi'
+    #elif artist_name == '久石譲':
+    #    return 'Joe Hisaishi'
     else:
         return artist_name
 
