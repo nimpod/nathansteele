@@ -19,7 +19,7 @@ import { review as WeMadeABeautifulBouquetReview }      from './content/we_made_
 
 // [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut for this particular file!
 
-const screenshots = {
+export const screenshots = {
     /**
      * [TODO]:
      * It would be nice if I could use this regex to automatically detect any file.

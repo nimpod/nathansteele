@@ -17,6 +17,9 @@ import { post as MyMostListenedSongsOf2020Post }        from './content/my_most_
 import { post as MyMostListenedSongsOf2016Post }        from './content/my_most_listened_songs_of_2014_2015_2016.jsx';
 import { post as Top25FavouriteChillstepSongs }         from './content/top_25_favourite_chillstep_songs.jsx';
 
+// blog posts about films...
+import { post as BestFilmsIWatchedIn2023Post }        from './content/blog_posts_about_films/best_films_i_watched_in_2023.jsx';
+
 // miscellaneous blog posts...
 import { post as HowToDigitizeMiniDvTapesPost }         from './content/how_to_digitize_mini_dv_tapes.jsx';
 import { post as MessiahsHandbookPost }                 from './content/messiahs_handbook.jsx';
@@ -24,6 +27,12 @@ import { post as InspirationDatabase }                  from './content/inspirat
 
 
 export const blog_posts = [
+    {
+        date: "31 Dec 2023",
+        title: "Best films I watched in 2023",
+        content: ReactDomServer.renderToString(BestFilmsIWatchedIn2023Post()),
+        tags: ["Films"]
+    },
     {
         date: "29 May 2024",
         title: "Solar Flares",

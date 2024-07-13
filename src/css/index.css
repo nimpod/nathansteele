@@ -1885,6 +1885,90 @@ div.blog-post
 
 /* #endregion */
 
+
+.best-films-i-watched-this-year img {
+  object-fit: cover;
+  max-width: 100% !important;
+  height: 200px;
+}
+
+.best-films-i-watched-this-year div.blog-subsection .details {
+  display: flex;
+  flex-direction: row;
+  margin-top: 6px;
+}
+
+.best-films-i-watched-this-year div.blog-subsection .details div p {
+  background-color: rgb(50, 52, 55);
+  border-radius: 5px;
+  padding: 0px 6px;
+  cursor: help;
+}
+.best-films-i-watched-this-year div.blog-subsection .details div p::before {
+  /*
+  content: "●";
+  color: #53545b;
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 0.6rem;
+  */
+}
+
+.all-screenshots-together {
+  display: flex;
+  flex-direction: row;
+}
+.all-screenshots-together img {
+  width: 95px !important;
+  height: 300px;
+  border-radius: 0;
+}
+.all-screenshots-together img:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.all-screenshots-together img:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.custom-btn-link {
+  border-radius: 4px;
+  background-color: rgb(55, 56, 58);
+  padding: 5px;
+}
+
+.rating-distributions {
+  display: grid;
+  grid-template-columns: 5% 4%;
+  margin-bottom: 15px;
+}
+.rating-distributions > div {
+  background-color: #2a2b2e;
+  padding: 10px 35px 0px 10px;
+}
+
+.rating-distributions > div p.r10s {
+  color: rgb(39, 188, 108);
+}
+.rating-distributions > div p.r9s {
+  color: rgb(37, 172, 167);
+}
+.rating-distributions > div p.r8s {
+  color: rgb(177, 124, 255);
+}
+:root {
+  --blah-br: 8px;
+}
+.rating-distributions > div:nth-child(1) {
+  border-top-left-radius: var(--blah-br);
+  border-bottom-left-radius: var(--blah-br);
+}
+.rating-distributions > div:nth-child(2) {
+  border-top-right-radius: var(--blah-br);
+  border-bottom-right-radius: var(--blah-br);
+}
+
 /* #endregion */
 
 
