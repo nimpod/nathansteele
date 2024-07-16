@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
+
+import { ReactComponent as Logo } from "../../icons/logoNew.svg";
 import { ReactComponent as HamburgerMenuIcon } from "../../icons/hamburgerMenu.svg";
+import { ReactComponent as DarkThemeIcon } from "../../icons/moon.svg";
+import { ReactComponent as LightThemeIcon } from "../../icons/sun.svg";
+import { ReactComponent as AboutMeIcon } from "../../icons/navIconAboutMe.svg";
+import { ReactComponent as FilmsIcon } from "../../icons/navIconFilms.svg";
+import { ReactComponent as MusicIcon } from "../../icons/navIconMusic.svg";
+import { ReactComponent as BlogIcon } from "../../icons/navIconBlog.svg";
+import { ReactComponent as ArtIcon } from "../../icons/navIconArt.svg";
+
 import { remove_class_from_item_when_user_clicks_outside_of_item } from '../../js/helpers';
+
 
 
 class NavbarTop extends Component {
@@ -79,9 +90,50 @@ class NavbarTop extends Component {
     }
 
     /**
+     * Component did mount function
+     */
+    componentDidMount() {
+        // toggle navbar whilst scrolling in mobile view
+        let nav = document.getElementById("nav-top");
+        let lastScrollTop = 0;
+        if (nav !== null) {
+            window.addEventListener('scroll', function(e) {
+                // only do this if current screen size is wide enough...
+                if (this.window.innerWidth > 1000) {
+                    var st = window.pageYOffset || document.documentElement.scrollTop;
+                    // console.log('DEBUGGING: ', st, lastScrollTop);
+                    if (st > lastScrollTop) {
+                      nav.classList.add('slideOutDown');
+                      nav.classList.remove('slideInUp');
+                    } else {
+                      nav.classList.add('slideInUp');
+                      nav.classList.remove('slideOutDown');
+                    }
+                    lastScrollTop = st <= 0 ? 0 : st;
+                }
+              })
+        }
+
+        /*
+        // set navbar item icons when in mobile view...
+        let navbarSpanTags = document.getElementsByClassName('mobile-view-title');
+        let icons = ['🏠', '📽️', '🎵', '📚', '🏫', '👨‍💻', '📙'];
+        ///let icons = ['▘', '▙', '▚', '▛', '▜', '▝', '▞'];
+        for (let i = 0; i < navbarSpanTags.length; i++) {
+            navbarSpanTags[i].innerHTML = icons[i];
+        }
+
+        // by default set the 'About me' button to be active...
+        let navlinks = document.getElementsByClassName('navlink');
+        // console.log(navlinks);
+        //navlinks[1].classList.add('active');
+        */
+    }
+
+    /**
      * content rendered to page
      */
-    render() {
+    render_old() {
         return (
             <header id="nav-top">
                 <div className="nav-right">
@@ -94,6 +146,65 @@ class NavbarTop extends Component {
             </header>
         )
     }
+
+    /**
+     * content rendered to page
+     */
+    render() {
+        return (
+            <header id="nav-top" className="animated faster slideInUp">
+                <div className="nav-left">
+                    <nav className="website-links">
+                        <div className="website-logo-container">
+                            <NavLink to="/aboutme" className="navlink website-logo">
+                                <Logo className="logo" />
+                            </NavLink>
+                        </div>
+                        <NavLink to="/films" title='Films' className="navlink">
+                            <span>Films</span>
+                            <span className='mobile-view-title'>Films</span>
+                        </NavLink>
+                        <NavLink to="/music" title='Music' className="navlink">
+                            <span>Music</span>
+                            <span className='mobile-view-title'>Music</span>
+                        </NavLink>
+                        <NavLink to="/blog" title='Blog' className="navlink">
+                            <span>Blog</span>
+                            <span className='mobile-view-title'>Blog</span>
+                        </NavLink>
+                        <NavLink to="/art" title='Art' className="navlink">
+                            <span>Art</span>
+                            <span className='mobile-view-title'>Art</span>
+                        </NavLink>
+                    </nav>
+                    {/*
+                    <div className='secret-buttons'>
+                        <NavLink to="/messiahshandbook" title='Messiahs Handbook' className="navlink" onClick={this.clickedNavbarItem}>
+                            <span>🞾</span>
+                        </NavLink>
+                    </div>
+                    */}
+                </div>
+                
+                <div className="nav-right">
+                    <div className="theme-toggle inline-svg-wrapper" onClick={this.switchTheme} aria-label="Click to toggle theme" title="Click to toggle theme">
+                        <span className="inline-svg dark">
+                            <DarkThemeIcon />
+                        </span>
+                        <span className="inline-svg light" hidden={true}>
+                            <LightThemeIcon />
+                        </span>
+                    </div>
+                    <div className="hamburger-menu inline-svg-wrapper" onClick={this.toggleMenu}>
+                        <span className="inline-svg">
+                            <HamburgerMenuIcon />
+                        </span>
+                    </div>
+                </div>
+            </header>
+        )
+    }
+
 }
 
 export default withRouter(NavbarTop)

@@ -148,7 +148,7 @@ const merge_albums_data = (init_state) => {
             v["genres_lowercase"] = genres_lowercase;
         }
     });
-    console.log(mergedData);
+    // console.log(mergedData);
 
     return mergedData;
 }

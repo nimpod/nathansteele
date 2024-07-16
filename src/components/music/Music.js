@@ -662,8 +662,8 @@ class Music extends Component {
                         <div className='top-albums-list-container'>
                             {/* Title */}
                             <div className='top-albums-list-header'>
-                                <span className='page-title'>My top {this.props.top_albums.length} favourite albums of all time</span>
-                                
+                                <h3 className='page-title'>My top {this.props.top_albums.length} favourite albums of all time</h3>
+
                                 {/* Information about what is currently being filtered (if anything) */}
                                 <div id="filtered-albums-list-info">
                                     <p className={`avgPos avgPos_`+filter['avg_pos']}>Average position: <span>#{filter['avg_pos']}</span></p>

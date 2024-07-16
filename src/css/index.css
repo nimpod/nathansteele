@@ -29,22 +29,23 @@
 /* #region ----------------------------------<0: VARIABLES>---------------------------------- */
 
 /* particlejs variables */
-:root {  --particle-count: 800;
-  --particle-density: 1500;
-  --particle-opacity: 0.5;
+:root {  
+  --particle-count: 50;
+  --particle-density: 100;
+  --particle-opacity: 0.22;
   --particle-opacity-min: 0.3;
-  --particle-size: 1.7;
+  --particle-size: 2.7;
   --particle-speed: 0.5;
   --line-count: 60;
   --line-opacity: 0.0;
   --line-width: 1.00;
-  --linked-line-opacity: 1.6;
-  --linked-line-radius: 200;
-  --particle-color-1: rgb(255, 255, 255);
-  --particle-color-2: rgb(255, 255, 255);
+  --linked-line-opacity: 1.1;
+  --linked-line-radius: 100;
+  --particle-color-1: rgb(255, 53, 53);
+  --particle-color-2: rgb(252, 201, 17);
   --particle-color-3: rgb(255, 255, 255);
-  --particle-color-4: rgb(255, 255, 255);
-  --particle-line-color: rgba(18, 90, 43, 0.105);
+  --particle-color-4: rgb(88, 255, 91);
+  --particle-line-color: rgba(97, 99, 98, 0.105);
   --num-of-particles-to-spawn-on-push: 10;
   --particle-animation-speed: 3;
 }
@@ -129,11 +130,15 @@
   /* Topbar */
   --topnav-bg-color: rgba(253, 252, 251, 0);
   --topnav-btn-bg-color: rgba(253, 252, 251, 0);
-  --topnav-btn-bg-color-hover: rgb(210, 212, 221);
-  --topnav-btn-bg-color-active: rgb(90, 89, 119);
+  --topnav-btn-bg-color-hover: rgb(229, 230, 237);
+  --topnav-btn-bg-color-active: rgb(210, 210, 216);
+  --topnav-btn-border-bottom-hover: rgb(24, 186, 129);
   --topnav-btn-text-color: rgb(4, 3, 3);
   --topnav-btn-text-color-hover: rgb(0, 0, 0);
-  --topnav-btn-text-color-active: rgb(129, 213, 101);
+  --topnav-btn-text-color-active: rgb(43, 45, 44);
+  --topnav-bottom-border-color: rgb(208, 210, 212);
+  --topnav-bottom-shadow: rgba(0, 0, 0, 0.097);
+
   --topnav-collapsed-shadow-color: rgba(0, 0, 0, 0.331);
   --topnav-collapsed-bg-color: rgb(245, 245, 245);
   --topnav-collapsed-btn-bg-color: rgb(245, 245, 245);
@@ -141,6 +146,9 @@
   --topnav-collapsed-btn-bg-color-active: rgb(144, 144, 158);
   --topnav-collapsed-border-color: rgba(63, 63, 65, 0.7);
   --button-border-color-onclick: rgb(126, 120, 120);
+  
+  --topnav-bg-color-mobileView: rgb(29, 34, 36);
+
 
   /* Logo */
   --topnav-logo-bg-color: rgb(233, 233, 234);
@@ -155,7 +163,7 @@
 
   /* ----------------< BLOG >---------------- */
   /* Blog page */
-  --blog-table-bg: var(--page-wrapper-bg);
+  --blog-table-bg: rgb(255, 255, 255);
   --blog-table-thead-bg: rgb(229, 229, 229);
   --blog-table-border: rgba(0, 0, 0, 0.202);
   --blog-td-divider-color: rgba(52, 49, 49, 0.192);
@@ -342,13 +350,17 @@
   --sidenav-item-border-color-active: rgb(157, 160, 163);
 
   /* Topbar */
-  --topnav-bg-color: rgba(0, 0, 0, 0.676);
+  --topnav-bg-color: rgba(0, 0, 0, 0.822);
   --topnav-btn-bg-color: rgba(0, 0, 0, 0.711);
-  --topnav-btn-bg-color-hover: rgb(41, 40, 44);
-  --topnav-btn-bg-color-active: rgb(83, 80, 80);
+  --topnav-btn-bg-color-hover: rgb(20, 20, 21);
+  --topnav-btn-bg-color-active: rgb(43, 43, 45);
+  --topnav-btn-border-bottom-hover: rgb(3, 170, 140);
   --topnav-btn-text-color: rgb(189, 188, 188);
   --topnav-btn-text-color-hover: rgb(255, 255, 255);
   --topnav-btn-text-color-active: rgb(0, 255, 208);
+  --topnav-bottom-border-color: rgb(31, 32, 33);
+  --topnav-bottom-shadow: rgb(0, 0, 0);
+
   --topnav-logo-bg-color: rgb(37, 37, 39);
   --topnav-collapsed-bg-color: rgb(12, 12, 12);
   --topnav-collapsed-btn-bg-color: rgb(12, 12, 12);
@@ -356,22 +368,24 @@
   --topnav-collapsed-btn-bg-color-active: rgb(53, 53, 57);
   --topnav-collapsed-border-color: rgba(50, 48, 57, 0.941);
   --button-border-color-onclick: rgb(153, 149, 149);
+  
+  --topnav-bg-color-mobileView: rgb(35, 37, 46);
 
   /* Logo */
   --logo-path-color: rgb(115, 220, 140);
   --logo-path-color-onclick: rgba(236, 255, 230, 0.897);
   --logo-stroke-color: rgb(0, 0, 0);
   --logo-stroke-color-hover: rgb(0, 0, 0);
-  --logo-box-shadow-color: rgba(7, 7, 7, 0.971);
+  --logo-box-shadow-color: rgb(0, 0, 0);
   --logo-border-color: rgb(0, 0, 0);
   --logo-inversion-number: 0;
 
 
   /* -----------------< BLOG >----------------- */
   /* Blog list */
-  --blog-table-bg: var(--page-wrapper-bg);
+  --blog-table-bg: rgb(20, 21, 22);
   --blog-table-thead-bg: rgb(45, 51, 58);
-  --blog-table-border: rgba(180, 180, 186, 0.189);
+  --blog-table-border: rgba(181, 181, 195, 0.389);
   --blog-td-divider-color: rgba(166, 166, 193, 0.261);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
@@ -661,7 +675,14 @@ body > div#root > div.App {
 .page-wrapper {
   width: 100vw;
   top: 0;
+
+  /* with topbar... */
+  margin-top: 60px;
+
+  /* with sidebar... */
+  /*
   margin-left: var(--sidebar-width);
+  */
 
   /*
   margin-left: var(--sidebar-width);
@@ -710,6 +731,7 @@ Proposed structure of top navbar
     .nav-right
       .theme-toggle
 */
+
 #nav-top {
   display: flex;
   position: fixed;
@@ -718,6 +740,8 @@ Proposed structure of top navbar
   align-items: center;
   font-size: 1.05rem;
   background-color: var(--topnav-bg-color);
+  border-bottom: 1px solid var(--topnav-bottom-border-color);
+  box-shadow: 0 0 20px 10px var(--topnav-bottom-shadow);
 }
 
 /* target every link in the entire #nav */
@@ -727,7 +751,8 @@ Proposed structure of top navbar
   padding: 0.5rem 0.7rem;
   background-color: var(--topnav-btn-bg-color);
   font-weight: 500;
-  border-radius: 0.5rem;
+  border-radius: 4px;
+  transition: all 100ms ease;
   /*
   display: inline-block;
   min-width: 70px;
@@ -736,20 +761,22 @@ Proposed structure of top navbar
 #nav-top > .nav-left > .website-links > a.navlink:hover {
   background-color: var(--topnav-btn-bg-color-hover);
   color: var(--topnav-btn-text-color-hover) !important;
+  border-bottom: 3px solid var(--topnav-btn-border-bottom-hover);
 }
 #nav-top > .nav-left > .website-links > a.navlink.active {
-  color: var(--topnav-btn-text-color-active) !important;
+  color: var(--topnav-btn-text-color-active);
   opacity: 1;
   background-color: var(--topnav-btn-bg-color-active);
+  border-bottom: 3px solid var(--topnav-btn-border-bottom-hover);
 }
 
 /* target the div container .website-links */
 #nav-top .website-links {
   display: inline-block;
-  font-size: 0.83rem;
+  font-size: 1.2rem;
 }
 #nav-top .website-links a {
-  margin-left: 0.9em;
+  margin-left: 0.4em;
   opacity: 1;
 }
 #nav-top .website-links a > span.mobile-view-title {
@@ -759,8 +786,38 @@ Proposed structure of top navbar
 /* target the div container .website-logo-container */
 #nav-top .website-logo-container {
   display: inline-block;
-  margin-right: 0.9em;
+  margin-right: 0.4em;
   font-size: 1.2em;
+}
+#nav-top .website-logo-container:hover {
+  filter: brightness(1.1);
+}
+#nav-top .website-logo-container:hover a.navlink {
+  border-bottom: 3px solid var(--topnav-btn-border-bottom-hover);
+  border-radius: 5px;
+  background-color: var(--topnav-btn-bg-color-hover);
+}
+#nav-top .website-logo-container.active {
+  background-color: var(--topnav-bottom-border-color);
+}
+
+#nav-top a.navlink.website-logo {
+  padding: 12px 10px;
+  border-bottom: 3px solid transparent;
+}
+#nav-top a.navlink.website-logo.active {
+  background-color: rgba(149, 150, 150, 0.401);
+  border-radius: 4px;
+  border-bottom: 3px solid var(--topnav-btn-border-bottom-hover);
+}
+
+#nav-top svg.logo {
+  margin-bottom: 5px;
+}
+
+#nav-top svg.logo path {
+  fill: rgb(255, 255, 255);
+  transition: all 150ms ease-in-out;
 }
 
 #nav-top .nav-left {
@@ -907,11 +964,15 @@ Proposed structure of sidebar
 /* styling the svg logo */
 a.website-logo {
   border-radius: 0.75rem;
+  margin-right: 8px;
   /*
   background-color: var(--topnav-logo-bg-color);
   border: 2px solid var(--logo-border-color);
   box-shadow: 0px 2px 4px var(--logo-box-shadow-color);
   */
+}
+#nav-side .website-logo-container:hover {
+  background-color: var(--topnav-btn-bg-color-active) !important;
 }
 a.website-logo:hover svg path {
   transition: background-color 350ms ease;
@@ -924,6 +985,7 @@ svg.logo {
 }
 svg.logo > g {
   border-radius: 50%;
+  margin-left: 5px;
 }
 svg.logo path {
   fill: var(--logo-path-color);
@@ -937,59 +999,33 @@ svg.logo:hover path {
   transition: fill 350ms ease;
   stroke: var(--logo-stroke-color-hover);
 }*/
-svg.logo path:hover {
-  fill: rgb(255, 27, 80) !important;
-  transition: fill 50ms ease-in-out;
-}
+
 
 /* #region -------------< Svg colours >--------------- */
-svg.logo path:nth-child(1) { fill: rgb(255, 113, 113); }
-svg.logo path:nth-child(2) { fill: rgb(98, 172, 250);  }
-svg.logo path:nth-child(3) { fill: rgb(250, 237, 98);  }
-svg.logo path:nth-child(4) { fill: rgb(98, 250, 159);  }
-svg.logo path:nth-child(5) { fill: rgb(255, 142, 242); }
-svg.logo path:nth-child(6) { fill: rgb(41, 136, 245);  }
-svg.logo path:nth-child(7) { fill: rgb(255, 77, 77);   }
-svg.logo path:nth-child(8) { fill: rgb(72, 255, 173);  }
-svg.logo path:nth-child(9) { fill: rgb(55, 125, 255);  }
-svg.logo path:nth-child(10) { fill: rgb(144, 255, 142);}
-svg.logo path:nth-child(11) { fill: rgb(255, 188, 81); }
-svg.logo path:nth-child(12) { fill: rgb(156, 99, 255); }
-svg.logo path:nth-child(13) { fill: rgb(255, 142, 153);}
-svg.logo path:nth-child(14) { fill: rgb(69, 91, 255); }
-svg.logo path:nth-child(15) { fill: rgb(255, 230, 41); }
-svg.logo path:nth-child(16) { fill: rgb(255, 255, 255); }
-svg.logo path:nth-child(17) { fill: rgb(255, 255, 255); }
-svg.logo path:nth-child(18) { fill: rgb(255, 255, 255); }
-svg.logo path:nth-child(19) { fill: rgb(255, 255, 255); }
-svg.logo path:nth-child(20) { fill: rgb(81, 243, 255); }
-svg.logo path:nth-child(21) { fill: rgb(255, 255, 255); }
-svg.logo path:nth-child(22) { fill: rgb(255, 255, 255); }
-svg.logo path:nth-child(23) { fill: rgb(253, 52, 52);  }
+svg.logo:hover path:nth-child(1) { fill: rgb(255, 113, 113); }
+svg.logo:hover path:nth-child(2) { fill: rgb(98, 172, 250);  }
+svg.logo:hover path:nth-child(3) { fill: rgb(250, 237, 98);  }
+svg.logo:hover path:nth-child(4) { fill: rgb(98, 250, 159);  }
+svg.logo:hover path:nth-child(5) { fill: rgb(255, 142, 242); }
+svg.logo:hover path:nth-child(6) { fill: rgb(41, 136, 245);  }
+svg.logo:hover path:nth-child(7) { fill: rgb(255, 77, 77);   }
+svg.logo:hover path:nth-child(8) { fill: rgb(72, 255, 173);  }
+svg.logo:hover path:nth-child(9) { fill: rgb(55, 125, 255);  }
+svg.logo:hover path:nth-child(10) { fill: rgb(144, 255, 142);}
+svg.logo:hover path:nth-child(11) { fill: rgb(255, 188, 81); }
+svg.logo:hover path:nth-child(12) { fill: rgb(156, 99, 255); }
+svg.logo:hover path:nth-child(13) { fill: rgb(255, 142, 153);}
+svg.logo:hover path:nth-child(14) { fill: rgb(69, 91, 255); }
+svg.logo:hover path:nth-child(15) { fill: rgb(255, 230, 41); }
+svg.logo:hover path:nth-child(16) { fill: rgb(255, 255, 255); }
+svg.logo:hover path:nth-child(17) { fill: rgb(255, 255, 255); }
+svg.logo:hover path:nth-child(18) { fill: rgb(255, 255, 255); }
+svg.logo:hover path:nth-child(19) { fill: rgb(255, 255, 255); }
+svg.logo:hover path:nth-child(20) { fill: rgb(81, 243, 255); }
+svg.logo:hover path:nth-child(21) { fill: rgb(255, 255, 255); }
+svg.logo:hover path:nth-child(22) { fill: rgb(255, 255, 255); }
+svg.logo:hover path:nth-child(23) { fill: rgb(253, 52, 52);  }
 
-svg.logo:hover path:nth-child(1) { fill: var(--logo-path-color); transition: fill 0ms ease-in-out; }
-svg.logo:hover path:nth-child(2) { fill: var(--logo-path-color);  transition: fill 100ms ease-in-out;}
-svg.logo:hover path:nth-child(3) { fill: var(--logo-path-color);  transition: fill 200ms ease-in-out; }
-svg.logo:hover path:nth-child(4) { fill: var(--logo-path-color);  transition: fill 300ms ease-in-out; }
-svg.logo:hover path:nth-child(5) { fill: var(--logo-path-color); transition: fill 400ms ease-in-out; }
-svg.logo:hover path:nth-child(6) { fill: var(--logo-path-color);  transition: fill 500ms ease-in-out;}
-svg.logo:hover path:nth-child(7) { fill: var(--logo-path-color);  transition: fill 600ms ease-in-out;}
-svg.logo:hover path:nth-child(8) { fill: var(--logo-path-color);  transition: fill 650ms ease-in-out; }
-svg.logo:hover path:nth-child(9) { fill: var(--logo-path-color);  transition: fill 700ms ease-in-out;}
-svg.logo:hover path:nth-child(10) { fill: var(--logo-path-color); transition: fill 750ms ease-in-out; }
-svg.logo:hover path:nth-child(11) { fill: var(--logo-path-color); transition: fill 800ms ease-in-out;}
-svg.logo:hover path:nth-child(12) { fill: var(--logo-path-color); transition: fill 860ms ease-in-out; }
-svg.logo:hover path:nth-child(13) { fill: var(--logo-path-color); transition: fill 880ms ease-in-out; }
-svg.logo:hover path:nth-child(14) { fill: var(--logo-path-color); transition: fill 900ms ease-in-out; }
-svg.logo:hover path:nth-child(15) { fill: var(--logo-path-color); transition: fill 950ms ease-in-out; }
-svg.logo:hover path:nth-child(16) { fill: var(--logo-path-color); transition: fill 1000ms ease-in-out; }
-svg.logo:hover path:nth-child(17) { fill: var(--logo-path-color); transition: fill 1220ms ease-in-out; }
-svg.logo:hover path:nth-child(18) { fill: var(--logo-path-color); transition: fill 1440ms ease-in-out; }
-svg.logo:hover path:nth-child(19) { fill: var(--logo-path-color); transition: fill 1660ms ease-in-out; }
-svg.logo:hover path:nth-child(20) { fill: var(--logo-path-color);  transition: fill 1780ms ease-in-out;}
-svg.logo:hover path:nth-child(21) { fill: var(--logo-path-color);  transition: fill 1800ms ease-in-out;}
-svg.logo:hover path:nth-child(22) { fill: var(--logo-path-color); transition: fill 1920ms ease-in-out;}
-svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fill 1950ms ease-in-out;}
 /* #endregion */
 
 
@@ -1046,11 +1082,10 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 .blog > .section-inner,
 .blog-post > .section-inner {
   /*
-  padding: 20px 300px;
-  */
   width: 55%;
   padding: 0 10px;
   margin: 0 auto;
+  */
 }
 
 .posts-container {
@@ -1060,32 +1095,41 @@ svg.logo:hover path:nth-child(23) { fill: var(--logo-path-color); transition: fi
 /* #region -------------------------< 7.1) Blog posts table >-------------------------- */
 
 .posts-container > .posts-header-container {
+  /*
   position: fixed;
   top: 0px;
   z-index: 999999;
   width: 50%;
-  /* box-shadow: 0 21px 8px -4px var(--blog-table-header-bottom-shadow-color); */
+  box-shadow: 0 21px 8px -4px var(--blog-table-header-bottom-shadow-color); 
+  */
 }
 .posts-container > .posts-header-container > .posts-header {
   background-color: var(--section-inner-bg-color);
-  padding-top: 20px;
   border-bottom: 0.1rem dashed var(--blog-table-border);
 }
 
 .posts-header .container-intro {
-  display: grid;
-  grid-template-columns: 3fr 9fr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.posts-header h3 {
+  margin-right: 20px;
 }
 .posts-header .container-intro-text > h6 {
   margin-left: 3px;
 }
 
 .posts-container table {
+  /*
   margin-top: var(--posts-header-height);
-  width: 88%;
+  */
+  width: 50%;
+  margin: 0 auto;
   font-size: 400 12px / 1.14 "Roboto", sans-serif;
   color: var(--blog-table-text);
   overflow-y: scroll;
+  background-color: var(--blog-table-bg);
 }
 
 /* Styles for a table row... */
@@ -1302,7 +1346,10 @@ ul.tag-filter-options-list li.selectedThisCategory span {
   width: var(--blog-post-tag-filters-container-width);
   margin: 0rem 0rem;
   */
+
+  /*
   width: var(--blog-post-tag-filters-container-width);
+  */
 }
 ul.tag-filter-options-list {
   /*
@@ -1441,6 +1488,9 @@ div.searchbox input::placeholder {
 
 .blog-post {
   /* max-width: 80vw; */
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 50px;
   min-height: 100vh;
   border-radius: 0px;
   letter-spacing: 0px;
@@ -1469,20 +1519,39 @@ div.blog-post
   font-weight: 900;
   display: block;
 }
-.blog-post-date {
+.blog-post-date,
+.blog-post-author {
   font-size: 0.9rem;
   color: var(--blog-post-date-text);
   display: inline-block;
   margin-left: 5px;
 }
+
+.blog-post-info > span {
+  margin-right: 14px;
+}
+
+.blog-post-info > span > svg {
+  opacity: 0.5;
+  margin-right: 3px;
+  margin-bottom: 4px;
+}
 .blog-post-date > svg {
   /* calendar icon next to date */
   width: 17px;
   height: 17px;
-  opacity: 0.5;
-  margin-right: 7px;
-  margin-bottom: 4px;
 }
+.blog-post-author > svg {
+  /* user icon next to author */
+  width: 21px;
+  height: 21px;
+}
+.blog-post-tags > svg {
+  width: 23px;
+  height: 23px;
+  opacity: 0.5;
+}
+
 .blog-post-date, .blog-post-tags {
   margin-right: 15px;
 }
@@ -1490,7 +1559,6 @@ div.blog-post
   /* the tags for a blog post */
   display: inline-block;
 }
-
 
 .custom-btn-1 {
   background-color: var(--custom-btn-1-bg-color);
@@ -1522,13 +1590,28 @@ div.blog-post
   background-color: var(--custom-btn-1-bg-color-hover) !important;
 }
 
-/* button to go back to list of blogs */
 .blog-post .back-to-previous-page {
-  margin-top: 20px;
-}
-.blog-post .back-to-previous-page {
+  margin-top: 12px;
   margin-left: -180px;
 }
+.back-to-previous-page > span {
+  display: none;
+}
+.back-to-previous-page:hover {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+.back-to-previous-page:hover > span {
+  display: flex;
+  align-items: center;
+}
+
+.back-to-previous-page:hover {
+  margin-left: -166px;
+  transition-duration: 0ms;
+}
+
 .back-to-previous-page {
   display: inline-block;
   position: fixed;
@@ -1536,16 +1619,13 @@ div.blog-post
   border: 2px solid transparent;
   border-radius: 10px;
   padding: 0;
-}
-.back-to-previous-page:hover {
   cursor: pointer;
 }
 .back-to-previous-page svg.invertable-icon {
   /* the arrow icon */
-  width: 31px;
-  height: 31px;
-  padding: 8px;
-  transition: all 100ms ease-in;
+  width: 30px;
+  height: 30px;
+  padding: 7px;
 }
 
 /* Button to back to top of blog post */
@@ -3404,7 +3484,7 @@ div.btn.films-reset-filters-btn svg {
 
 
 .section-inner {
-  padding: 5px 30px;
+  padding: 25px 20px;
 }
 .music-page-container {
   /*
@@ -3581,7 +3661,7 @@ div.btn.filter-list-by-artist-btn {
   overflow: auto;
 
   /* when always displaying filters... */
-  height: 93vh;
+  height: 90vh;
 }
 .top-albums-list.there-are-less-than-12-albums-on-display {
   grid-template-rows: repeat(2, 38%);
@@ -3726,7 +3806,7 @@ div.btn.filter-list-by-artist-btn {
 }
 
 .top-albums-list-sideSection .searchbox input {
-  width: 180px;
+  width: 100%;
 }
 
 /* #endregion */
@@ -4410,7 +4490,7 @@ div.albumInfoContainer > div.myRating {
 /* #region -----------------------------------<13: MOBILE VIEW>---------------------------------- */
 :root {
   --mobile-navbar-topborder-color: rgba(70, 77, 81, 0.497);
-  --mobile-navbar-height: 55px;
+  --mobile-navbar-height: 50px;
 }
 /* anything that should be hidden in mobile goes here... */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
@@ -4427,7 +4507,7 @@ div.albumInfoContainer > div.myRating {
 @media screen and (max-width: 670px) {
   /* #region --------------------< Top level containers >-------------------- */
   .page-wrapper {
-    padding-top: 0em;
+    margin-top: 10px;
   }
   .section-inner {
     margin: 0 !important;
@@ -4445,9 +4525,6 @@ div.albumInfoContainer > div.myRating {
   }
   .page-text-small {
     font-size: 0.63rem;
-  }
-  .website-logo {
-    display: none;
   }
   .section-inner .controls,
   .section-inner .container-intro {
@@ -4531,29 +4608,90 @@ div.albumInfoContainer > div.myRating {
   /* #endregion */
   
   /* #region --------------------< Top navigation bar >-------------------- */
+  .hamburger-menu {
+    display: none;
+  }
+  #nav-top {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    height: var(--mobile-navbar-height);
+    opacity: 1.0;
+    border-top: 2px solid var(--mobile-navbar-topborder-color);
+    background-color: var(--topnav-bg-color-mobileView);
+    box-shadow: none;
+  }
+  #nav-top .website-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  #nav-top a:not(.website-logo).navlink {
+    /*
+    margin-top: 11px;
+    */
+    vertical-align: middle;
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+  #nav-top a.navlink {
+    background-color: transparent !important;
+  }
+  #nav-top .website-links a {
+    margin-left: 0;
+  }
+  #nav-top a.navlink {
+    padding: 0 !important;
+  }
+  #nav-top a:not(.website-logo).navlink.active {
+    /*
+    margin-top: 0px;
+    */
+    transition: all 50ms ease-in;
+  }
+  #nav-top a:not(.website-logo).navlink:not(.active) > span {
+    /*
+    display: none;
+    */
+  }
+  #nav-top .website-links a.navlink svg {
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 0px;
+    margin: 0 auto;
+  }
+  .page-wrapper {
+    margin-left: 0px;
+  }
+  
+  #nav-top > .nav-left > .website-links > a.navlink {
+    color: white !important;
+  }
+
+  /*
+  .website-logo {
+    display: none;
+  }
+  */
+
+  #nav-top .website-links a.navlink:nth-child(1) svg { padding: 1px 1px 1px 2px; fill: var(--sidenav-films-bg-color); }
+  #nav-top .website-links a.navlink:nth-child(2) svg { padding: 1px 1px 1px 4px; fill: var(--sidenav-films-bg-color); }
+  #nav-top .website-links a.navlink:nth-child(3) svg { padding: 0px 2px 0px 0px; fill: var(--sidenav-music-bg-color);  }
+  #nav-top .website-links a.navlink:nth-child(4) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-blog-bg-color);  }
+  #nav-top .website-links a.navlink:nth-child(5) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-art-bg-color);  }
+  
+  #nav-top .website-links a.navlink svg {
+    border: 0px !important;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  #nav-top .website-links a.navlink.active svg {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  /*
   #nav-top {
     top: 5px;
     right: 10px;
-  }
-  #nav-top {
-    /*
-    position: fixed;
-    bottom: 0;
-    background-color: var(--topnav-collapsed-bg-color);
-    box-shadow: 0 4px 8px var(--general-box-shadow-color-1);
-    border-radius: 30px;
-    padding: 0.35rem 0.7rem 0.35rem 0rem;
-    border: 2px solid var(--topnav-collapsed-border-color);
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    max-width: 90%;
-    min-width: 400px;
-    display: flex;
-    justify-content: center;
-    */
-  }
-  #nav-top > .nav-left {
-
   }
   #nav-top > .nav-right {
     margin-left: 7px;
@@ -4591,6 +4729,7 @@ div.albumInfoContainer > div.myRating {
   .website-logo-container {
     z-index: 1000;
   }
+  */
   /* #endregion */
   
   /* #region --------------------< About me >-------------------- */
@@ -4636,7 +4775,9 @@ div.albumInfoContainer > div.myRating {
   }
 
   .posts-container > table {
+    /*
     margin-top: calc(var(--posts-header-height) + 15px);
+    */
     width: 100%;
   }
 
@@ -4697,7 +4838,11 @@ div.albumInfoContainer > div.myRating {
   /* #endregion */
 
   /* #region --------------------< Blog post >-------------------- */
-  
+  .blog-post {
+    width: 100%;
+    padding-top: 0px;
+  }
+
   /* Button that appears at top to take user back to beginning of post... */
   .back-to-top-of-post {
     z-index: 1000;
@@ -5012,6 +5157,14 @@ div.albumInfoContainer > div.myRating {
   .album-review-displayed {
     display: block;
   }
+  
+  .top-albums-list-header {
+    display: block;
+  }
+  #filtered-albums-list-info {
+    display: none !important;
+  }
+
   #music-page .section-inner {
     padding: 0px;
   }
@@ -5096,10 +5249,6 @@ div.albumInfoContainer > div.myRating {
   /* #endregion */
 }
 
-/* keep pushing blog post table further down... */
-@media screen and (max-width: 1250px) { .posts-container > table {  margin-top: calc(var(--posts-header-height) + 30px); } }
-@media screen and (max-width: 550px)  { .posts-container > table {  margin-top: calc(var(--posts-header-height) + 35px); } }
-@media screen and (max-width: 450px)  { .posts-container > table {  margin-top: calc(var(--posts-header-height) + 45px); } }
 
 /* albums list grid view as screen gets smaller... */
 @media screen and (max-width: 900px) { #music-page .top-albums-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
@@ -5116,6 +5265,12 @@ div.albumInfoContainer > div.myRating {
     background-color: transparent;
     box-shadow: none;
   }
+  .blog-post-info .tag span {
+
+  }
+  .blog-post-info.notAtTop .back-to-previous-page {
+    margin-left: -180px;
+  }
   .blog-post-info .back-to-previous-page svg {
     width: 30px;
     height: 30px;
@@ -5123,6 +5278,7 @@ div.albumInfoContainer > div.myRating {
   .blog-post-info .back-to-previous-page:hover {
     opacity: 1;
     background-color: transparent !important;
+    margin-left: -180px;
   }
   .blog-post-info .back-to-previous-page:focus {
     background-color: var(--custom-btn-1-bg-color-hover);
@@ -5193,25 +5349,45 @@ div.albumInfoContainer > div.myRating {
     padding-top: 150px;
     padding-bottom: 100px;
   }
-  .blog-post-info.notAtTop,
-  .nav-right {
+  .blog-post-info.notAtTop {
     background-color: var(--blog-post-mobile-header-bg-color);
   }
   .blog-post-info.notAtTop > .back-to-previous-page {
     margin-top: 20px;
-    margin-right: 180px;
+    margin-right: 170px;
+  }
+  .blog-post-info > .back-to-previous-page span {
+    display: none;
   }
   .blog-post-info.notAtTop > h3.blog-post-title {
     font-size: 1.1rem;
     position: absolute;
     top: 0;
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 5px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(90%);
   }
-  .blog-post-info.notAtTop > span.blog-post-date,
-  .blog-post-info.notAtTop > span.blog-post-tags {
-    font-size: 0.8rem;
+  .blog-post-info > span,
+  .blog-post-info > div {
+    margin-right: 4px;
+  }
+  .blog-post-info > .blog-post-date,
+  .blog-post-info > .blog-post-tags,
+  .blog-post-info > .blog-post-author {
+    font-size: 0.7rem;
+  }
+  .blog-post-info.notAtTop > span {
     padding-top: 30px;
+  }
+  .blog-post-info.notAtTop > .blog-post-date svg,
+  .blog-post-info.notAtTop > .blog-post-tags svg,
+  .blog-post-info.notAtTop > .blog-post-author svg {
+    width: 14px;
+    height: 14px;
   }
   .blog-post-info.notAtTop > span.blog-post-date {
     padding-left: 6px;
@@ -5429,6 +5605,22 @@ body::-webkit-scrollbar-corner {
 ::-moz-selection {
   background: var(--text-highlight-color); /* Gecko Browsers */
 }
+
+.art-page {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-row-gap: 20px;
+}
+.art-page img {
+  max-width: 350px;
+}
+
+@media screen and (max-width: 725px) {
+  .art-page {
+    grid-template-columns: 100%;
+  }
+}
+
 /* #endregion */
 
 

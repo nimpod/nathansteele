@@ -1,9 +1,13 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
+
 import { ReactComponent as ArrowLeftV2 } from "../../icons/arrowLeftV2.svg";
 import { ReactComponent as ArrowUp } from "../../icons/arrowUp.svg";
-import { ReactComponent as Calendar } from "../../icons/calendar.svg";
+import { ReactComponent as CalendarIcon } from "../../icons/calendar.svg";
+import { ReactComponent as UserIcon } from "../../icons/userV2.svg";
+import { ReactComponent as TagIcon } from "../../icons/tag.svg";
+
 import { get_random_RGBA, get_blog_post_id } from '../../js/helpers.js';
 
 // Remove the annoying video recomendations that appear on the embedded youtube video
@@ -81,20 +85,36 @@ class BlogPost extends Component {
             <div className="page-wrapper blog-post">
                 <div className="section-inner">
                     <div className="blog-post-info">
+                        {/* Back to top button */}
                         <Link to={'#BlogPost' + this.props.post.id} className="custom-btn-1 back-to-top-of-post animated faster slideInUp" title='Click to go back to top of blog post'>
                             <ArrowUp className='invertable-icon' />
                             <span>Back to top</span>
                         </Link>
-                        <Link to='/blog' className="custom-btn-1 back-to-previous-page" title="Back to blog">
-                            <ArrowLeftV2 className="invertable-icon" />
+
+                        {/* Back to previous page button */}
+                        <Link to='/blog' className="custom-btn-1 back-to-previous-page" title="Click to go back to blog list">
                             <span>Back to blog list</span>
+                            <ArrowLeftV2 className="invertable-icon" />
                         </Link>
-                        <h3 className="blog-post-title">{this.props.post.title}</h3>
-                        <span className="blog-post-date">
-                            <Calendar className='invertable-icon' />
+
+                        {/* Title */}
+                        <h3 className="blog-post-title" title="Blog post title">{this.props.post.title}</h3>
+
+                        {/* Author */}
+                        <span className="blog-post-author" title="Author of blog post">
+                            <UserIcon className='invertable-icon' />
+                            <span>Nathan Steele</span>
+                        </span>
+
+                        {/* Date */}
+                        <span className="blog-post-date" title="Date of blog post">
+                            <CalendarIcon className='invertable-icon' />
                             <span>{this.props.post.date}</span>
                         </span>
-                        <div className="blog-post-tags">
+
+                        {/* Tags */}
+                        <div className="blog-post-tags" title="Tags related to this blog post">
+                            <TagIcon className='invertable-icon' />
                             {
                                 this.props.post.tags.map((t => {
                                     return <div className="tag">

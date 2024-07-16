@@ -27,11 +27,33 @@ import { post as InspirationDatabase }                  from './content/inspirat
 
 
 export const blog_posts = [
+    /*
     {
         date: "31 Dec 2023",
         title: "Best films I watched in 2023",
         content: ReactDomServer.renderToString(BestFilmsIWatchedIn2023Post()),
         tags: ["Films"]
+    },
+    {
+        date: "08 Sep 2016",
+        title: "Why the moon landing was not a hoax",
+        content: ReactDomServer.renderToString(WhyTheMoonLandingWasNotAHoaxPost()),
+        tags: ["Astronomy"]
+    },
+    */
+
+    // ASTRONOMY POSTS
+    {
+        date: "16 Jan 2023",
+        title: "The incomprehensible vastness of space",
+        content: ReactDomServer.renderToString(TheIncomprehensibleVastnessOfSpace()),
+        tags: ["Life", "Astronomy"]
+    },
+    {
+        date: "27 Apr 2017",
+        title: "Cassini-Huygens",
+        content: ReactDomServer.renderToString(CassiniHuygensPost()),
+        tags: ["Astronomy"]
     },
     {
         date: "29 May 2024",
@@ -40,16 +62,30 @@ export const blog_posts = [
         tags: ["Astronomy"]
     },
     {
-        date: "6 May 2024",
-        title: "Top 25 favourite chillstep songs",
-        content: ReactDomServer.renderToString(Top25FavouriteChillstepSongs()),
-        tags: ["Music"]
+        date: "14 Mar 2023",
+        title: "The Venera space probes",
+        content: ReactDomServer.renderToString(VeneraPost()),
+        tags: ["Astronomy"]
+    },
+    {
+        date: "21 Mar 2023",
+        title: "Neptune's amazing moon Triton",
+        content: ReactDomServer.renderToString(TritonPost()),
+        tags: ["Astronomy"]
     },
     {
         date: "23 Jan 2024",
         title: "Our wonderful Moon",
         content: ReactDomServer.renderToString(OurMoon()),
         tags: ["Astronomy"]
+    },
+
+    // MUSIC POSTS
+    {
+        date: "6 May 2024",
+        title: "Top 25 favourite chillstep songs",
+        content: ReactDomServer.renderToString(Top25FavouriteChillstepSongs()),
+        tags: ["Music"]
     },
     {
         date: "31 Dec 2023",
@@ -81,29 +117,13 @@ export const blog_posts = [
         content: ReactDomServer.renderToString(MyMostListenedSongsOf2016Post()),
         tags: ["Music"]
     },
-    {
-        date: "27 Apr 2017",
-        title: "Cassini-Huygens",
-        content: ReactDomServer.renderToString(CassiniHuygensPost()),
-        tags: ["Astronomy"]
-    },
-    {
-        date: "08 Sep 2016",
-        title: "Why the moon landing was not a hoax",
-        content: ReactDomServer.renderToString(WhyTheMoonLandingWasNotAHoaxPost()),
-        tags: ["Astronomy"]
-    },
+
+
     {
         date: "23 Aug 2019",
         title: "How to digitize Mini DV tapes",
         content: ReactDomServer.renderToString(HowToDigitizeMiniDvTapesPost()),
         tags: ["Hardware"]
-    },
-    {
-        date: "16 Jan 2023",
-        title: "The incomprehensible vastness of space",
-        content: ReactDomServer.renderToString(TheIncomprehensibleVastnessOfSpace()),
-        tags: ["Life", "Astronomy"]
     },
     {
         date: "10 Sep 2017",
@@ -167,31 +187,17 @@ export const blog_posts = [
         tags: ["Entomology"]
     },
     {
-        date: "14 Mar 2023",
-        title: "The Venera space probes",
-        content: ReactDomServer.renderToString(VeneraPost()),
-        tags: ["Astronomy"]
-    },
-    {
-        date: "21 Mar 2023",
-        title: "Neptune's amazing moon Triton",
-        content: ReactDomServer.renderToString(TritonPost()),
-        tags: ["Astronomy"]
-    },
-    {
         date: "30 Sep 2022",
         title: "Running form",
         content: "blah",
         tags: ["Running"]
     },
-    /*
     {
         date: "30 Sep 2022",
         title: "Flagematics",
         content: "blah",
         tags: ["Vexilology", "Mathematics"]
     },
-    */
     {
         date: "16 Jan 2022",
         title: "Johannes Kepler",

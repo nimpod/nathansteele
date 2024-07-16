@@ -560,7 +560,7 @@ class Films extends React.Component {
             <div className="page-wrapper film-reviews-homepage">
                 <div className="section-inner">
                     <div className='frontpage films-container'>
-                        <span className='page-title'>My top {this.props.top_films.length} favourite films of all time</span>
+                        <h3 className='page-title'>My top {this.props.top_films.length} favourite films of all time</h3>
                         <div className='films-controls'>
                             <div className='films-controls-subgroup searching-container'>
                                 <div className="searchbox">

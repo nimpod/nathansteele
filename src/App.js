@@ -9,6 +9,9 @@ import NavbarSide from './components/navbars/NavbarSide';
 // Portfolio page
 import Portfolio from './components/portfolio/Portfolio';
 
+// Art page
+import Art from './components/art/Art';
+
 // About page
 import AboutMe from './components/aboutme/AboutMe';
 import MessiahsHandbook from './components/messiahshandbook/MessiahsHandbook';
@@ -41,7 +44,9 @@ export default class App extends Component {
                 <div className="App">
                   <ScrollToTop />
                   <NavbarTop />
+                  {/*}
                   <NavbarSide />
+                  */}
 
                   <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
                   <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
@@ -65,6 +70,8 @@ export default class App extends Component {
                       
                       <Route path='/notes' component={Notes} exact />
                       <Route path='/notes/casio_basic' component={CasioBasic} exact />
+
+                      <Route path='/art' component={Art} exact />
 
                       <Route path='/messiahshandbook' component={MessiahsHandbook} exact />
                   </Switch>
