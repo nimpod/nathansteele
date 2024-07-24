@@ -110,7 +110,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     # get album cover (if it was in response)...
                     if 'image' in data['album']:
                         album_cover_url = data['album']['image'][-1]['#text']
-                        # print(album_cover_url)
+                        print(album_cover_url)
                     else:
                         print('no album cover found :(')
                 

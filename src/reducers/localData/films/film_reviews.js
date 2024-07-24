@@ -2472,7 +2472,15 @@ const database = {
             gradual_interest: [7, 7, 7, 7, 8, 8, 8, 8, 8],
             custom_poster_url: "https://www.themoviedb.org/t/p/original/pVpQHtGsGFGRxaq2Fh3LrA5QJiN.jpg"
         },
-    
+        "black_kiss": {
+            letterboxd_url: "https://boxd.it/KYU",
+            my_rating: 8.0,
+            my_tags: ["Creepy"],
+            my_review: "",
+            gradual_interest: [7, 8, 8, 9, 8, 7, 7, 8, 8],
+            custom_poster_url: "https://image.tmdb.org/t/p/original/1XDNIeQS6T3jxptmzvHzOx0w1W1.jpg",
+        },
+
         //
         "boyhood": {
             letterboxd_url: "https://boxd.it/3178",
@@ -5016,6 +5024,13 @@ const database = {
             my_rating: 8.5,
             my_tags: ["Terrifying", "War", "Spirits", "Possession", "Iran conflict", "Living in flats"],
             my_review: ""
+        },
+        "under_the_hawthorn_tree": {
+            letterboxd_url: "https://boxd.it/Dp4",
+            my_rating: 8.0,
+            my_tags: ["Sad"],
+            my_review: "",
+            custom_poster_url: "https://image.tmdb.org/t/p/original/axtJ3Ze9L2dgTLYtQmOsZXwTFmA.jpg",
         },
     },
 

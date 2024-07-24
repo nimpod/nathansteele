@@ -1037,7 +1037,9 @@ svg.logo:hover path:nth-child(23) { fill: rgb(253, 52, 52);  }
 .aboutme-intro {
   position: absolute;
   color: var(--page-text-color);
-  padding: 2rem 5rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  max-width: 50%;
 }
 
 .aboutme-intro p {

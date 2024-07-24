@@ -374,7 +374,7 @@
         "lastfm_url": "https://www.last.fm/music/Elliott+Smith/Figure+8",
         "artist_name": "Elliott Smith",
         "album_name": "Figure 8",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/e2d20acfb7689f26edf180a1800db895.png",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/120386f2880f47dfc71873cda716683c.png",
         "review_id": "elliott_smith-figure_8"
     },
     {
@@ -3569,7 +3569,7 @@
         "lastfm_url": "https://www.last.fm/music/The+Hoosiers/The+Trick+To+Life",
         "artist_name": "The Hoosiers",
         "album_name": "The Trick To Life",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/52d8875813cd4e2385c0764818872abd.png",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/7f8315990fbd4f2482dbdee4f96dec96.jpg",
         "review_id": "the_hoosiers-the_trick_to_life"
     },
     {
@@ -3944,10 +3944,10 @@
     {
         "position": 439,
         "position_str": "439",
-        "lastfm_url": "https://www.last.fm/music/Vampire+Weekend/Contra",
+        "lastfm_url": "",
         "artist_name": "Vampire Weekend",
         "album_name": "Contra",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/f60b0691b7294dbd8c300b36276576e7.png",
+        "album_cover_url": "",
         "review_id": "vampire_weekend-contra"
     },
     {
@@ -4316,7 +4316,7 @@
         "lastfm_url": "https://www.last.fm/music/Hybrid/Wide+Angle",
         "artist_name": "Hybrid",
         "album_name": "Wide Angle",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/7eb32f0387764c36945354e30cdbe7ab.jpg",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/14e7dd7aaafa240e84040657c23ae552.jpg",
         "review_id": "hybrid-wide_angle"
     },
     {
@@ -5279,7 +5279,7 @@
         "lastfm_url": "https://www.last.fm/music/Paramore/Paramore",
         "artist_name": "Paramore",
         "album_name": "Paramore",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/f3fab54395c7929363622eff2b3b7de6.png",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/61bdec6a07af2a650611a618cd2a037f.jpg",
         "review_id": "paramore-paramore"
     },
     {
@@ -5609,20 +5609,20 @@
     {
         "position": 624,
         "position_str": "624",
-        "lastfm_url": "https://www.last.fm/music/Chick+Corea+Elektric+Band+II/Paint+The+World",
-        "artist_name": "Chick Corea Elektric Band II",
-        "album_name": "Paint The World",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/d7fce5958ff0493caa38b65df1271de5.jpg",
-        "review_id": "chick_corea_elektric_band_ii-paint_the_world"
-    },
-    {
-        "position": 625,
-        "position_str": "625",
         "lastfm_url": "https://www.last.fm/music/Hiromi/Another+Mind",
         "artist_name": "Hiromi",
         "album_name": "Another Mind",
         "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/156e38fa3c5046899eb1c7f7b1681d0e.jpg",
         "review_id": "hiromi-another_mind"
+    },
+    {
+        "position": 625,
+        "position_str": "625",
+        "lastfm_url": "https://www.last.fm/music/Chick+Corea+Elektric+Band+II/Paint+The+World",
+        "artist_name": "Chick Corea Elektric Band II",
+        "album_name": "Paint The World",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/d7fce5958ff0493caa38b65df1271de5.jpg",
+        "review_id": "chick_corea_elektric_band_ii-paint_the_world"
     },
     {
         "position": 626,
