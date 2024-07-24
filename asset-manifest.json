@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/nathansteele/static/css/main.c17341fe.chunk.css",
-    "main.js": "/nathansteele/static/js/main.96f838d1.chunk.js",
-    "main.js.map": "/nathansteele/static/js/main.96f838d1.chunk.js.map",
+    "main.css": "/nathansteele/static/css/main.db241471.chunk.css",
+    "main.js": "/nathansteele/static/js/main.5129beca.chunk.js",
+    "main.js.map": "/nathansteele/static/js/main.5129beca.chunk.js.map",
     "runtime-main.js": "/nathansteele/static/js/runtime-main.a2f3e498.js",
     "runtime-main.js.map": "/nathansteele/static/js/runtime-main.a2f3e498.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/nathansteele/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.27bd04ea.chunk.js": "/nathansteele/static/js/2.27bd04ea.chunk.js",
-    "static/js/2.27bd04ea.chunk.js.map": "/nathansteele/static/js/2.27bd04ea.chunk.js.map",
+    "static/js/2.49111301.chunk.js": "/nathansteele/static/js/2.49111301.chunk.js",
+    "static/js/2.49111301.chunk.js.map": "/nathansteele/static/js/2.49111301.chunk.js.map",
     "index.html": "/nathansteele/index.html",
-    "precache-manifest.5d3aa1862a988fa8e98b994295d045fd.js": "/nathansteele/precache-manifest.5d3aa1862a988fa8e98b994295d045fd.js",
+    "precache-manifest.e6be15ed4b431b79e271720dd8ec1785.js": "/nathansteele/precache-manifest.e6be15ed4b431b79e271720dd8ec1785.js",
     "service-worker.js": "/nathansteele/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/nathansteele/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.c17341fe.chunk.css.map": "/nathansteele/static/css/main.c17341fe.chunk.css.map",
-    "static/js/2.27bd04ea.chunk.js.LICENSE.txt": "/nathansteele/static/js/2.27bd04ea.chunk.js.LICENSE.txt",
+    "static/css/main.db241471.chunk.css.map": "/nathansteele/static/css/main.db241471.chunk.css.map",
+    "static/js/2.49111301.chunk.js.LICENSE.txt": "/nathansteele/static/js/2.49111301.chunk.js.LICENSE.txt",
     "static/media/3D_insects.jpg": "/nathansteele/static/media/3D_insects.64cc8122.jpg",
     "static/media/The Metamorphosis of King William III.png": "/nathansteele/static/media/The Metamorphosis of King William III.d26ffae2.png",
     "static/media/arrowDown.99634c62.svg": "/nathansteele/static/media/arrowDown.99634c62.svg",
@@ -75,8 +75,8 @@
   "entrypoints": [
     "static/js/runtime-main.a2f3e498.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.27bd04ea.chunk.js",
-    "static/css/main.c17341fe.chunk.css",
-    "static/js/main.96f838d1.chunk.js"
+    "static/js/2.49111301.chunk.js",
+    "static/css/main.db241471.chunk.css",
+    "static/js/main.5129beca.chunk.js"
   ]
 }
