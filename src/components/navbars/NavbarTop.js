@@ -156,10 +156,14 @@ class NavbarTop extends Component {
                 <div className="nav-left">
                     <nav className="website-links">
                         <div className="website-logo-container">
-                            <NavLink to="/aboutme" className="navlink website-logo">
-                                <Logo className="logo" />
-                            </NavLink>
+                        <NavLink to="/" className="navlink website-logo">
+                            <Logo className="logo" />
+                        </NavLink>
                         </div>
+                        <NavLink to="/aboutme" title='About' className="navlink">
+                            <span>About Me</span>
+                            <span className='mobile-view-title'>About me</span>
+                        </NavLink>
                         <NavLink to="/films" title='Films' className="navlink">
                             <span>Films</span>
                             <span className='mobile-view-title'>Films</span>

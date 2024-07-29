@@ -6,15 +6,16 @@ import ScrollToTop from './js/ScrollToTop';
 import NavbarTop from './components/navbars/NavbarTop';
 import NavbarSide from './components/navbars/NavbarSide';
 
-// Portfolio page
+// Old stuff
 import Portfolio from './components/portfolio/Portfolio';
+import MessiahsHandbook from './components/messiahshandbook/MessiahsHandbook';
 
 // Art page
 import Art from './components/art/Art';
 
 // About page
+import LandingPage from './components/landingpage/LandingPage';
 import AboutMe from './components/aboutme/AboutMe';
-import MessiahsHandbook from './components/messiahshandbook/MessiahsHandbook';
 
 // Notes page
 import Notes from './components/notes/Notes';
@@ -52,7 +53,7 @@ export default class App extends Component {
                   <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
 
                   <Switch>
-                      <Route path='/' component={AboutMe} exact />
+                      <Route path='/' component={LandingPage} exact />
                       <Route path='/aboutme' component={AboutMe} exact />
                       <Route path='/portfolio' component={Portfolio} exact />
 

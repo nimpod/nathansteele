@@ -805,11 +805,13 @@ Proposed structure of top navbar
   padding: 12px 10px;
   border-bottom: 3px solid transparent;
 }
+/*
 #nav-top a.navlink.website-logo.active {
   background-color: rgba(149, 150, 150, 0.401);
   border-radius: 4px;
   border-bottom: 3px solid var(--topnav-btn-border-bottom-hover);
 }
+*/
 
 #nav-top svg.logo {
   margin-bottom: 5px;
@@ -1034,17 +1036,33 @@ svg.logo:hover path:nth-child(23) { fill: rgb(253, 52, 52);  }
 
 
 /* #region ----------------------------------<6: ABOUT ME PAGE >----------------------------------------- */
+.landingpage-intro {
+  position: absolute;
+  color: var(--page-text-color);
+  top: 35vh;
+  padding-left: 5rem;
+  max-width: 80%;
+}
+
+.landingpage-intro h1 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+.landingpage-intro p {
+  margin: 0;
+  font-size: 2rem;
+}
+
 .aboutme-intro {
   position: absolute;
   color: var(--page-text-color);
-  padding-top: 2rem;
-  padding-left: 1rem;
-  max-width: 50%;
+  padding-left: 5rem;
+  max-width: 60%;
 }
 
 .aboutme-intro p {
-  padding: 4px 0;
   margin: 0;
+  font-size: 2rem;
 }
 
 .aboutme-intro p.text-v1 { font-size: 1.0rem; }
