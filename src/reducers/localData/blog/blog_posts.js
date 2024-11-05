@@ -24,7 +24,7 @@ import { post as BestFilmsIWatchedIn2023Post }        from './content/blog_posts
 import { post as HowToDigitizeMiniDvTapesPost }         from './content/how_to_digitize_mini_dv_tapes.jsx';
 import { post as MessiahsHandbookPost }                 from './content/messiahs_handbook.jsx';
 import { post as InspirationDatabase }                  from './content/inspiration_database.jsx';
-import { post as LanguageNotes }                        from './content/languages.jsx';
+import { post as LanguageNotes }                        from './content/language_notes/language_notes.jsx';
 
 
 export const blog_posts = [

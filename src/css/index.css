@@ -5445,7 +5445,11 @@ div.albumInfoContainer > div.myRating {
 
 
 /* remove padding from a blog post as screen gets smaller */
-@media only screen and (max-width: 1300px) { .blog-post { padding-left: 300px; padding-right: 300px; } .blog-post-title { font-size: 3.2rem; } }
+/* 
+- Commenting this line out, because when developing on my laptop whilst travelling, it fucks up the width of the blog post 
+- Obviously this code is shit and needs to be rewritten.
+*/
+/* @media only screen and (max-width: 1500px) { .blog-post { padding-left: 300px; padding-right: 300px; } .blog-post-title { font-size: 3.2rem; } } */
 @media only screen and (max-width: 1200px) { .blog-post { padding-left: 200px; padding-right: 200px; } .blog-post-title { font-size: 2.9rem; } }
 @media only screen and (max-width: 1100px) { .blog-post { padding-left: 100px; padding-right: 100px; } .blog-post-title { font-size: 2.6rem; } }
 @media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } .blog-post-title { font-size: 2.5rem; } }
@@ -5706,26 +5710,7 @@ ul.messiahs-handbook p.quote-person {
 /* #endregion */
 
 /* #region ----------< Language notes >---------- */
-.Language-notes-blogpost .toggle-btns-container {
-  display: flex;
-  flex-direction: column;
-}
 
-.Language-notes-blogpost .toggle-btns-container .toggle-btn {
-  
-}
-
-.Language-notes-blogpost .language-container {
-  display: none;
-}
-.Language-notes-blogpost .language-container.active {
-  display: block;
-}
-
-.Language-notes-blogpost .language-container .language-phrase {
-  display: grid;
-  grid-template-columns: 20% 20% 20% 20%;
-}
 
 /* #endregion */
 

@@ -4,6 +4,10 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 import './css/index.css';
+
+// import each individual .scss file here...
+import './css/compiled_scss/language_notes.min.css';
+
 import App from './App';
 import RootReducer from './reducers/RootReducer';
 
