@@ -24,6 +24,7 @@ import { post as BestFilmsIWatchedIn2023Post }        from './content/blog_posts
 import { post as HowToDigitizeMiniDvTapesPost }         from './content/how_to_digitize_mini_dv_tapes.jsx';
 import { post as MessiahsHandbookPost }                 from './content/messiahs_handbook.jsx';
 import { post as InspirationDatabase }                  from './content/inspiration_database.jsx';
+import { post as LanguageNotes }                        from './content/languages.jsx';
 
 
 export const blog_posts = [
@@ -41,6 +42,13 @@ export const blog_posts = [
         tags: ["Astronomy"]
     },
     */
+
+    {
+        date: "05 Nov 2024",
+        title: "Language notes",
+        content: ReactDomServer.renderToString(LanguageNotes()),
+        tags: ["Travelling", "Languages"]
+    },
 
     // ASTRONOMY POSTS
     {

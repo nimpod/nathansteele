@@ -5445,7 +5445,7 @@ div.albumInfoContainer > div.myRating {
 
 
 /* remove padding from a blog post as screen gets smaller */
-@media only screen and (max-width: 1500px) { .blog-post { padding-left: 300px; padding-right: 300px; } .blog-post-title { font-size: 3.2rem; } }
+@media only screen and (max-width: 1300px) { .blog-post { padding-left: 300px; padding-right: 300px; } .blog-post-title { font-size: 3.2rem; } }
 @media only screen and (max-width: 1200px) { .blog-post { padding-left: 200px; padding-right: 200px; } .blog-post-title { font-size: 2.9rem; } }
 @media only screen and (max-width: 1100px) { .blog-post { padding-left: 100px; padding-right: 100px; } .blog-post-title { font-size: 2.6rem; } }
 @media only screen and (max-width: 1000px) { .blog-post { padding-left: 50px; padding-right: 50px; } .blog-post-title { font-size: 2.5rem; } }
@@ -5644,7 +5644,10 @@ body::-webkit-scrollbar-corner {
 /* #endregion */
 
 
-/* #region ------------------------------------<17: Favourite quotes page>------------------------------------------ */
+/* #region ------------------------------------<17: Specific blog posts...>------------------------------------------ */
+
+/* #region ----------< Messiahs handbook >---------- */
+
 ul.messiahs-handbook {
   list-style-type: none;
   display: grid;
@@ -5699,5 +5702,31 @@ ul.messiahs-handbook p.quote-person {
   font-size: 0.75rem;
   border: 1px dashed var(--topnav-btn-bg-color-active);
 }
+
+/* #endregion */
+
+/* #region ----------< Language notes >---------- */
+.Language-notes-blogpost .toggle-btns-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Language-notes-blogpost .toggle-btns-container .toggle-btn {
+  
+}
+
+.Language-notes-blogpost .language-container {
+  display: none;
+}
+.Language-notes-blogpost .language-container.active {
+  display: block;
+}
+
+.Language-notes-blogpost .language-container .language-phrase {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+}
+
+/* #endregion */
 
 /* #endregion */
