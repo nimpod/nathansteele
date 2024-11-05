@@ -11,5 +11,3 @@ function event_listener_for_top_albums_list_nav_item() {
         el.scrollIntoView(true);
     })   
 }
-
-

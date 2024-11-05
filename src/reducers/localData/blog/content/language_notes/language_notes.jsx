@@ -1,7 +1,17 @@
 import React  from 'react';
 import $ from "jquery";
+import {json_to_arr} from '../../../../../js/helpers.js';
+
+// import json files...
 let nepali_json = require('./nepali.json');
-console.log(nepali_json);
+let tibetan_json = require('./tibetan.json');
+
+// iterate over sections in json file, and create dictionary equivilant...
+let nepali = json_to_arr(nepali_json);
+let tibetan = json_to_arr(tibetan_json);
+
+let btns = ["Nepali", "Tibetan", "Japanese", "Chinese", "French", "Hindi", "Hebrew"]
+
 /**
  * TODO: move this to another file. How can I make this global?
  * Whenever I put it in 'toggle_btns.js' and then in App.js insert the following <script> tag...
@@ -10,7 +20,7 @@ console.log(nepali_json);
  * But when I put the event listener here, it works...
  * How can I make this event listener global?
  */
-$(".toggle-btn").on('click', function() {
+$(".toggle-btn").click(function() {
     // user clicked on a toggle btn...
     let btn = this;
     // console.log(btn);
@@ -18,8 +28,8 @@ $(".toggle-btn").on('click', function() {
     // 1) find out which screen should be displayed
     let screen_to_show = btn.id.toString().split('-')[2];
     let screen = document.getElementById(screen_to_show);
-    console.log(screen_to_show);
-    console.log(screen);
+    // console.log(screen_to_show);
+    // console.log(screen);
 
     // 2) make sure no buttons or screens are selected
     let btns = document.getElementsByClassName('toggle-btn');
@@ -42,55 +52,70 @@ $(".toggle-btn").on('click', function() {
 export const post = () => (
     <div id="Language-notes-blogpost" className="btns-and-screens">
         <div className="toggle-btns-container">
-            <div className="toggle-btn selected" id="Btn-ToggleSection-Nepali">Nepali</div>
-            <div className="toggle-btn" id="Btn-ToggleSection-Tibetan">Tibetan</div>
-            <div className="toggle-btn" id="Btn-ToggleSection-Japanese">Japanese</div>
-            <div className="toggle-btn" id="Btn-ToggleSection-Chinese">Chinese</div>
-            <div className="toggle-btn" id="Btn-ToggleSection-French">French</div>
-            <div className="toggle-btn" id="Btn-ToggleSection-Hindi">Hindi</div>
-            <div className="toggle-btn" id="Btn-ToggleSection-Hebrew">Hebrew</div>
+            {btns.map(language => {
+                let selected = (language == 'Nepali') ? "selected" : "";
+                return <div className={`toggle-btn ${selected}`} id={`Btn-ToggleSection-${language}`}>{language}</div>
+            })}
         </div>
 
-        <div id="Nepali" className="screen language-container selected">
-            <div id="Nepali-Greetings" class='language-section'>
-                <p class='lanuguage-section-title'>Basic greetings</p>
-                
-                <div className="language-container-1st-row">
-                    <span className='th-td'>English</span>
-                    <span className='th-td'>Nepali</span>
-                    <span className='th-td'>Pronounciation</span>
-                    <span className='th-td'>More info...</span>
-                </div>
+        {/* Nepali */}
+        <div id="Nepali" className='screen language-container selected'>
+            {nepali.map(section => {
+                let language = 'Nepali';
+                let title = section['Title'];
+                let id = `${language}-${title}`;
+                let content = section['Content'];
 
-                {
-                    <div className={``}>
-                        {nepali_json['Basic greetings'].map(phrase => {
-                            console.log(phrase);
-                            return <div className="language-phrase">
-                                <span>{phrase["English"]}</span>
-                                <span>{phrase["Translation"]}</span>
-                                <span>{phrase["Pronunciation"]}</span>
-                                <span>{phrase["More info"]}</span>
-                            </div>
-                        })}
-                    </div>
-                }
-                
-                
-            </div>
-        </div>
-
-        <div id="Tibetan" className="screen language-container">
-            <div id="Tibetan-Greetings" className='langauge-section'>
-                <span class='lanuguage-section-title'>Greetings</span>
+                return <div className='language-section' id={id}>
+                    <p className='lanuguage-section-title'>{title}</p>
                     
-                <div className="language-phrase">
-                    <p>Alright m8</p>
-                    <p>Tashi delai</p>
-                    <p>Tashi deelay</p>
-                    <p>Used when greeting 1 person</p>
+                    <div className="language-container-1st-row">
+                        <span className='th-td'>English</span>
+                        <span className='th-td'>{language}</span>
+                        <span className='th-td'>Pronounciation</span>
+                        <span className='th-td'>More info...</span>
+                    </div>
+
+                    {content.map(phrase => {
+                        return <div className="language-phrase">
+                            <span className='english-td'>{phrase["English"]}</span>
+                            <span className='translation-td'>{phrase["Translation"]}</span>
+                            <span className='pronunciation-td'>{phrase["Pronunciation"]}</span>
+                            <span className='moreInfo-td'>{phrase["More info"]}</span>
+                        </div>
+                    })}
                 </div>
-            </div>
+            })}
+        </div>
+
+        {/* Tibetan */}
+        <div id="Tibetan" className="screen language-container">
+            {tibetan.map(section => {
+                let language = 'Tibetan'
+                let title = section['Title'];
+                let id = `${tibetan}-${title}`;
+                let content = section['Content'];
+                
+                return <div className='language-section' id={id}>
+                    <p className='lanuguage-section-title'>{title}</p>
+                    
+                    <div className="language-container-1st-row">
+                        <span className='th-td'>English</span>
+                        <span className='th-td'>{language}</span>
+                        <span className='th-td'>Pronounciation</span>
+                        <span className='th-td'>More info...</span>
+                    </div>
+
+                    {content.map(phrase => {
+                        return <div className="language-phrase">
+                            <span className='english-td'>{phrase["English"]}</span>
+                            <span className='translation-td'>{phrase["Translation"]}</span>
+                            <span className='pronunciation-td'>{phrase["Pronunciation"]}</span>
+                            <span className='moreInfo-td'>{phrase["More info"]}</span>
+                        </div>
+                    })}
+                </div>
+            })}
         </div>
 
         <div id="Japanese" className="screen language-container">

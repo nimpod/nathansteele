@@ -13,7 +13,7 @@
             "More info": "General greeting to multiple people"
         },
         {
-            "English": "Good Morning",
+            "English": "Good morning",
             "Translation": "Subha bihani",
             "Pronunciation": "Subha beehani",
             "More info": ""
@@ -195,7 +195,7 @@
             "Translation": "Barsha ko voye",
             "Pronunciation": "",
             "More info": ""
-        },
+        }
     ],
     "Numbers": [
         {
@@ -281,7 +281,7 @@
             "Translation": "Ek hazzar",
             "Pronunciation": "",
             "More info": "For thousands, add 'hazzar' on the end"
-        },
+        }
     ],
     "Relation": [
         {
@@ -383,7 +383,7 @@
             "Translation": "Suntala rang",
             "Pronunciation": "",
             "More info": ""
-        },
+        }
     ],
     "Animals (janwar)": [
         {

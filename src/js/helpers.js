@@ -164,6 +164,18 @@ export function get_actual_button(element_clicked, tag_name) {
 
 /**
  * 
+ */
+export function json_to_arr(json) {
+    let language = [];
+    for (let key in json) {
+        let content = json[key];
+        language.push({ "Title": key, "Content": content} );
+    }
+    return language;
+}
+
+/**
+ * 
  * @param {*} IMDB_diff_score 
  * @returns 
  */
