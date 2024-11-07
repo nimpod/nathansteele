@@ -162,7 +162,7 @@ class AboutMe extends Component {
                         <p>Hey there!</p>
                         <p>Welcome to my website - this is a place where I can talk about the things that make me most excited about life (art, music, films, travelling, walking, running, cycling, astronomy, web dev, the origins of life, vexilology, surrealism).</p>
                         <p>I graduated from Newcastle University in 2021 (BSc Computer Science). I worked in web development (react, d3, asp.net, mvc) and test automation (python) until 2024.</p>
-                        <p>Currently I am taking a break from work, spending some time travelling in India and Nepal.</p>
+                        <p>As of August 2024, I have been taking a sabbatical, spending some time travelling in India and Nepal.</p>
                         <div className='social-medias'>
                             <a className='strava' href='https://www.strava.com/athletes/45999759'>
                                 <img src='https://seeklogo.com/images/S/strava-logo-C419D1A461-seeklogo.com.png' alt='Strava logo'></img>

@@ -3,8 +3,8 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 
 // importing components for site
 import ScrollToTop from './js/ScrollToTop';
-import NavbarTop from './components/navbars/NavbarTop';
-import NavbarSide from './components/navbars/NavbarSide';
+import NavbarTop from './components/navbars/topbar/NavbarTop';
+import NavbarSide from './components/navbars/sidebar/NavbarSide';
 
 // Old stuff
 import Portfolio from './components/portfolio/Portfolio';

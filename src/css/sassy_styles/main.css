@@ -1,0 +1,62 @@
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+
+body {
+  /* font-family: "Karla", sans-serif !important; */
+  /* font-family: Helvetica !important; */
+  padding: 0;
+  margin: 0;
+  /*
+  background: linear-gradient(
+    -170deg,
+    var(--bg1),
+    var(--bg2),
+    var(--bg3),
+    var(--bg4),
+    var(--bg5)
+  ) fixed;
+  animation: background_gradient_animation 11s ease infinite;
+  background-size: 800% 800%;
+  */
+  background: var(--section-inner-bg-color) !important;
+  /*
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  */
+}
+
+@keyframes background_gradient_animation {
+  /*                          (x,  y) */
+  0% {
+    background-position: 36% 0%;
+  }
+  50% {
+    background-position: 65% 100%;
+  }
+  100% {
+    background-position: 36% 0%;
+  }
+}
+body > div#root > div.App {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  /*
+  height: 100vh;
+  max-height: 100vh;
+  */
+}
+
+/* ---------------< styles for .section-inner >----------------- */
+.section-inner {
+  background-color: var(--section-inner-bg-color);
+  padding: 0px 0px;
+  /*
+  box-shadow: 0 1px 12px 0 var(--section-inner-card-box-shadow);
+  */
+  min-height: 100vh;
+}/*# sourceMappingURL=main.css.map */

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
-import { ReactComponent as Logo } from "../../icons/logoNew.svg";
-import { ReactComponent as DarkThemeIcon } from "../../icons/moon.svg";
-import { ReactComponent as LightThemeIcon } from "../../icons/sun.svg";
-import { ReactComponent as AboutMeIcon } from "../../icons/navIconAboutMe.svg";
-import { ReactComponent as FilmsIcon } from "../../icons/navIconFilms.svg";
-import { ReactComponent as MusicIcon } from "../../icons/navIconMusic.svg";
-import { ReactComponent as BlogIcon } from "../../icons/navIconBlog.svg";
-import { ReactComponent as ArtIcon } from "../../icons/navIconArt.svg";
-import { remove_class_from_item_when_user_clicks_outside_of_item } from '../../js/helpers';
+import { ReactComponent as Logo } from "../../../icons/logoNew.svg";
+import { ReactComponent as DarkThemeIcon } from "../../../icons/moon.svg";
+import { ReactComponent as LightThemeIcon } from "../../../icons/sun.svg";
+import { ReactComponent as AboutMeIcon } from "../../../icons/navIconAboutMe.svg";
+import { ReactComponent as FilmsIcon } from "../../../icons/navIconFilms.svg";
+import { ReactComponent as MusicIcon } from "../../../icons/navIconMusic.svg";
+import { ReactComponent as BlogIcon } from "../../../icons/navIconBlog.svg";
+import { ReactComponent as ArtIcon } from "../../../icons/navIconArt.svg";
+import { remove_class_from_item_when_user_clicks_outside_of_item } from '../../../js/helpers';
 
 class NavbarSide extends Component {
 

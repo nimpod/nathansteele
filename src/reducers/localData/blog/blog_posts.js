@@ -20,6 +20,9 @@ import { post as Top25FavouriteChillstepSongs }         from './content/top_25_f
 // blog posts about films...
 import { post as BestFilmsIWatchedIn2023Post }        from './content/blog_posts_about_films/best_films_i_watched_in_2023.jsx';
 
+// blog posts about trekking...
+import { post as ManasluCircuit } from './content/trekking/manaslu_circuit.jsx';
+
 // miscellaneous blog posts...
 import { post as HowToDigitizeMiniDvTapesPost }         from './content/how_to_digitize_mini_dv_tapes.jsx';
 import { post as MessiahsHandbookPost }                 from './content/messiahs_handbook.jsx';
@@ -49,6 +52,25 @@ export const blog_posts = [
         content: ReactDomServer.renderToString(LanguageNotes()),
         tags: ["Travelling", "Languages"]
     },
+    {
+        date: "04 Nov 2024",
+        title: "Manaslu circuit trek (Nepal)",
+        content: ReactDomServer.renderToString(ManasluCircuit()),
+        tags: ["Travelling", "Trekking"]
+    },
+    {
+        date: "24 Aug 2024",
+        title: "Kang Yatze II trek (North India)",
+        content: ReactDomServer.renderToString(ManasluCircuit()),
+        tags: ["Travelling", "Trekking"]
+    },
+    {
+        date: "07 July 2023",
+        title: "Mount Toubkal trek (Morocco)",
+        content: ReactDomServer.renderToString(ManasluCircuit()),
+        tags: ["Travelling", "Trekking"]
+    },
+
 
     // ASTRONOMY POSTS
     {
