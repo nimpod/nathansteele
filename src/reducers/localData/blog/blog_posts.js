@@ -22,6 +22,8 @@ import { post as BestFilmsIWatchedIn2023Post }        from './content/blog_posts
 
 // blog posts about trekking...
 import { post as ManasluCircuit } from './content/trekking/manaslu_circuit.jsx';
+import { post as KangYatze2 } from './content/trekking/kang_yatze_2.jsx';
+
 
 // miscellaneous blog posts...
 import { post as HowToDigitizeMiniDvTapesPost }         from './content/how_to_digitize_mini_dv_tapes.jsx';
@@ -54,20 +56,14 @@ export const blog_posts = [
     },
     {
         date: "04 Nov 2024",
-        title: "Manaslu circuit trek (Nepal)",
+        title: "Manaslu circuit trek",
         content: ReactDomServer.renderToString(ManasluCircuit()),
         tags: ["Travelling", "Trekking"]
     },
     {
         date: "24 Aug 2024",
-        title: "Kang Yatze II trek (North India)",
-        content: ReactDomServer.renderToString(ManasluCircuit()),
-        tags: ["Travelling", "Trekking"]
-    },
-    {
-        date: "07 July 2023",
-        title: "Mount Toubkal trek (Morocco)",
-        content: ReactDomServer.renderToString(ManasluCircuit()),
+        title: "Kang Yatze II trek",
+        content: ReactDomServer.renderToString(KangYatze2()),
         tags: ["Travelling", "Trekking"]
     },
 

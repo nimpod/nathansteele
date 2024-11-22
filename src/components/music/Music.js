@@ -480,8 +480,12 @@ class Music extends Component {
         if (this.state.__current_artist_filter !== this.state.__default_artist_filter) {
             // Filtering by ARTIST
             let filter_info_div = document.getElementById('filtered-albums-list-info');
+            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
+
             if (filter_info_div !== null) {
-                filter_info_div.classList.add('filters-active');
+                // filter_info_div.classList.add('filters-active');
+                albums_list_container.classList.add('filters-active');
+
                 filter_criteria = this.state.__current_artist_filter;
 
                 let obj = this.calculate_avgs(albums_displayed, filter_info_div);
@@ -494,8 +498,12 @@ class Music extends Component {
         } else if (this.state.__current_genre_filter !== this.state.__default_genre_filter) {
             // Filtering by GENRE
             let filter_info_div = document.getElementById('filtered-albums-list-info');
+            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
+
             if (filter_info_div !== null) {
-                filter_info_div.classList.add('filters-active');
+                //filter_info_div.classList.add('filters-active');
+                albums_list_container.classList.add('filters-active');
+
                 filter_criteria = this.state.__current_genre_filter;
 
                 let obj = this.calculate_avgs(albums_displayed, filter_info_div);
@@ -508,8 +516,12 @@ class Music extends Component {
         } else if (this.state.__current_year_filter !== this.state.__default_year_filter) {
             // Filtering by YEAR
             let filter_info_div = document.getElementById('filtered-albums-list-info');
+            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
+
             if (filter_info_div !== null) {
-                filter_info_div.classList.add('filters-active');
+                //filter_info_div.classList.add('filters-active');
+                albums_list_container.classList.add('filters-active');
+
                 filter_criteria = this.state.__current_year_filter;
 
                 let obj = this.calculate_avgs(albums_displayed, filter_info_div);
@@ -522,8 +534,12 @@ class Music extends Component {
         } else if (this.state.__current_reviewer_filter !== this.state.__default_reviewer_filter) {
             // Filtering by REVIEWER
             let filter_info_div = document.getElementById('filtered-albums-list-info');
+            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
+
             if (filter_info_div !== null) {
-                filter_info_div.classList.add('filters-active');
+                //filter_info_div.classList.add('filters-active');
+                albums_list_container.classList.add('filters-active');
+
                 filter_criteria = (this.state.__current_reviewer_filter);
 
                 let obj = this.calculate_avgs(albums_displayed, filter_info_div);
@@ -536,8 +552,11 @@ class Music extends Component {
             }
         } else {
             let filter_info_div = document.getElementById('filtered-albums-list-info');
+            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
+
             if (filter_info_div !== null) {
-                filter_info_div.classList.remove('filters-active');
+                //filter_info_div.classList.remove('filters-active');
+                albums_list_container.classList.remove('filters-active');
             }
         }
 
@@ -662,7 +681,9 @@ class Music extends Component {
                         <div className='top-albums-list-container'>
                             {/* Title */}
                             <div className='top-albums-list-header'>
-                                <h3 className='page-title'>My top {this.props.top_albums.length} favourite albums of all time</h3>
+                                <h3 className='page-title'>
+                                    My top {this.props.top_albums.length} favourite albums of all time
+                                </h3>
 
                                 {/* Information about what is currently being filtered (if anything) */}
                                 <div id="filtered-albums-list-info">

@@ -13,6 +13,7 @@ class AlbumGridElement extends Component {
         let artist_name = this.props.album.artist_name;
         let my_rating_nodp = "";
         let first_genre = "";
+        let genres_text = "";
 
         album_name = (this.props.album.album_name_displayed !== undefined) ? this.props.album.album_name_displayed : this.props.album.album_name;
 
@@ -39,12 +40,19 @@ class AlbumGridElement extends Component {
         }
 
         // get 1st genre from genres list
-        /*
         if (this.props.album.genres !== undefined) {
             if (this.props.album.genres.length > 0) {
                 first_genre = this.props.album.genres[0];
             }
-        }*/
+        }
+
+        if (this.props.album.genres !== undefined) {
+            if (this.props.album.genres.length > 0) {
+                for (let i = 0; i < this.props.album.genres.length; i++) {
+                    genres_text += this.props.album.genres[i] + ", ";
+                }
+            }
+        }
 
         // console.log(this.props);
         return(
@@ -58,10 +66,13 @@ class AlbumGridElement extends Component {
                         </div>
                         <div className='artistName'>
                             <p className='artistNameText'>{artist_name}</p>
-                            <p className='albumYearText'>{this.props.album.year_of_release}</p>
-                            {/*}  <p className='firstGenreText'>{first_genre}</p> */}
                         </div>
-                        <div className='albumMoreInfo'>
+                        <div className='albumMoreInfo'> 
+                            <p className='albumYearText'>{this.props.album.year_of_release}</p>
+                            <p className='genresText'>{genres_text}</p>
+                            {/* <p className='firstGenreText'>{first_genre}</p> */}
+                        </div>
+                        <div className='albumRatingInfo'>
                             <p className='myPosition'>#{this.props.album.position_str}</p>
                             <p className={`myRating r${this.props.album.my_rating_nodp}`}>{this.props.album.my_rating}</p>
                         </div>
