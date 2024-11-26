@@ -1,10 +1,10 @@
 
-// CSS code related to the 'About Me' page
+// CSS code related to the 'Landing Page'
 
 .landingpage-intro {
     position: absolute;
     color: var(--page-text-color);
-    top: 35vh;
+    top: 25%;
     padding-left: 5rem;
     max-width: 80%;
 
@@ -13,9 +13,19 @@
         font-weight: bold;        
     }
 
-    p {
+    > p {
         margin: 0;
         font-size: 2rem;     
+    }
+
+    div.landingpage-moreText {
+        margin-top: 20px;
+        p {
+            line-height: 1;
+            margin: 9px;
+            margin-left: 0px;
+            font-size: 0.8rem;
+        }
     }
 }
 
@@ -43,11 +53,14 @@
   
 .social-medias {
     display: grid;
-    grid-template-columns: repeat(6, 50px);
-    padding-top: 12px;
+    grid-template-columns: repeat(6, 45px);
+    padding-top: 10px;
 
     img {
-        width: 50px;
+        width: 45px;
     }
 }
 
+.wtf {
+    color: blue;
+}

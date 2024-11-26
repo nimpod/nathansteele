@@ -1,7 +1,7 @@
 .landingpage-intro {
   position: absolute;
   color: var(--page-text-color);
-  top: 35vh;
+  top: 25%;
   padding-left: 5rem;
   max-width: 80%;
 }
@@ -9,9 +9,18 @@
   font-size: 6rem;
   font-weight: bold;
 }
-.landingpage-intro p {
+.landingpage-intro > p {
   margin: 0;
   font-size: 2rem;
+}
+.landingpage-intro div.landingpage-moreText {
+  margin-top: 20px;
+}
+.landingpage-intro div.landingpage-moreText p {
+  line-height: 1;
+  margin: 9px;
+  margin-left: 0px;
+  font-size: 0.8rem;
 }
 
 .aboutme-intro {
@@ -50,9 +59,13 @@
 
 .social-medias {
   display: grid;
-  grid-template-columns: repeat(6, 50px);
-  padding-top: 12px;
+  grid-template-columns: repeat(6, 45px);
+  padding-top: 10px;
 }
 .social-medias img {
-  width: 50px;
-}/*# sourceMappingURL=aboutme.css.map */
+  width: 45px;
+}
+
+.wtf {
+  color: blue;
+}/*# sourceMappingURL=LandingPage.css.map */

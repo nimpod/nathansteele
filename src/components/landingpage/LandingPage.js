@@ -160,6 +160,31 @@ class LandingPage extends Component {
                         <p>Hi, I'm</p>
                         <h1>Nayaflob Davidson</h1>
                         <p>I write code, think about data, and create digital experiences.</p>
+                        <div className="landingpage-moreText">
+                          <p>This is a place where I can talk about the things that make me most excited about life (<Link to='/art'>art</Link>, <Link to='/music'>music</Link>, <Link to='/astronomy'>astronomy</Link>, <Link to='/films'>films</Link>, travelling, walking, running, cycling, web dev, the origins of life, vexilology, surrealism).</p>
+                          <p>I graduated from Newcastle University in 2021 (BSc Computer Science). I worked in web development (react, d3, asp.net, mvc) and test automation (python) until 2024.</p>
+                          <p>As of August 2024, I have been taking a sabbatical, spending some time travelling in India and Nepal.</p>
+                          <div className='social-medias'>
+                            <a className='strava' href='https://www.strava.com/athletes/45999759'>
+                                <img src='https://seeklogo.com/images/S/strava-logo-C419D1A461-seeklogo.com.png' alt='Strava logo'></img>
+                            </a>
+                            <a className='letterboxd' href='https://letterboxd.com/nbofni/'>
+                                <img src='https://a.ltrbxd.com/logos/letterboxd-logo-alt-v-neg-rgb-1000px.png' alt='Letterboxd logo'></img>
+                            </a>
+                            <a className='Lastfm' href='https://www.last.fm/user/gutash'>
+                                <img src='https://www.last.fm/static/images/lastfm_avatar_twitter.52a5d69a85ac.png' alt='lastfm logo'></img>
+                            </a>
+                            <a className='twitter' href='https://twitter.com/cozminski_katax'>
+                                <img src='https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png' alt='twitter logo'></img>
+                            </a>
+                            <a className='github' href='https://github.com/nimpod'>
+                                <img src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' alt='github logo'></img>
+                            </a>
+                            <a className='linkedin' href='https://www.linkedin.com/in/nathan-steele-1564a3183/'>
+                                <img src='https://cdn-icons-png.flaticon.com/512/174/174857.png' alt='linkedin logo'></img>
+                            </a>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -68,7 +68,13 @@ Proposed structure of top navbar
       .theme-toggle
 */
 #nav-top {
+  display: none;
+}
+
+#nav-top {
+  /*
   display: flex;
+  */
   position: fixed;
   z-index: 1000;
   width: 100vw;
@@ -187,34 +193,6 @@ Proposed structure of top navbar
 .hamburger-menu {
   display: none !important;
   padding: 2px 6px;
-}
-
-/* this div container wraps around any svg */
-.inline-svg-wrapper {
-  color: var(--svg-color);
-  border: 1px solid transparent;
-  background-color: transparent;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 150ms ease;
-  display: inline-block;
-}
-
-.inline-svg-wrapper:active {
-  border: 1px solid var(--button-border-color-onclick);
-}
-
-.inline-svg-wrapper:hover {
-  color: var(--svg-color-hover);
-}
-
-/* toggle theme button */
-.theme-toggle {
-  user-select: none;
-}
-
-.theme-toggle .inline-svg {
-  width: 33px;
 }
 
 .hamburger-menu .inline-svg {

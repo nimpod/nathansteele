@@ -81,7 +81,7 @@
   --sidenav-music-bg-color: rgb(223, 253, 72); 
   --sidenav-blog-bg-color: rgb(54, 220, 245);
   --sidenav-art-bg-color: rgb(255, 79, 158);
-  --sidebar-width: 4.2rem;
+  --sidebar-width: 4.0rem;
 
   /* Blog page */
   --posts-header-height: 170px;
@@ -266,7 +266,7 @@
 [data-theme="dark"] {
 
   /* Main stuff */
-  --section-inner-bg-color: rgb(13, 13, 14);    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
+  --section-inner-bg-color: rgb(17, 27, 33); /* rgb(13, 13, 14);*/    /* rgb(32, 33, 37) rgb(34, 40, 42); */ 
   --page-wrapper-bg: rgb(34, 40, 42);
   /*
   --bg1: rgb(153, 145, 70);
@@ -299,14 +299,14 @@
 
   /* -----------------< BLOG >----------------- */
   /* Blog list */
-  --blog-table-bg: rgb(20, 21, 22);
+  --blog-table-bg: rgb(26, 41, 51); /*rgb(20, 21, 22);*/
   --blog-table-thead-bg: rgb(45, 51, 58);
   --blog-table-border: rgba(181, 181, 195, 0.389);
   --blog-td-divider-color: rgba(166, 166, 193, 0.261);
   --blog-table-text: var(--intro-text);
   --blog-table-text-hover: var(--intro-text);
-  --blog-table-row-bg-hover: rgb(38, 38, 40);
-  --blog-table-row-bg-selected: rgb(49, 51, 52);
+  --blog-table-row-bg-hover: rgb(37, 56, 68); /* rgb(38, 38, 40); */
+  --blog-table-row-bg-selected: rgb(50, 73, 88);
   --blog-table-tag-text: rgb(189, 189, 189);
   --blog-post-subgroup-border-color: rgb(49, 48, 50);
   --blog-table-header-bottom-shadow-color: rgba(0, 0, 0, 0.304);
@@ -594,12 +594,12 @@ body > div#root > div.App {
   top: 0;
 
   /* with topbar... */
+  /*
   margin-top: 60px;
+  */
 
   /* with sidebar... */
-  /*
   margin-left: var(--sidebar-width);
-  */
 
   /*
   margin-left: var(--sidebar-width);
@@ -1060,7 +1060,6 @@ div.searchbox input::placeholder {
   /* max-width: 80vw; */
   width: 60%;
   margin: 0 auto;
-  padding-top: 50px;
   min-height: 100vh;
   border-radius: 0px;
   letter-spacing: 0px;
@@ -1199,6 +1198,8 @@ div.blog-post
   border-radius: 10px;
   padding: 0;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
 }
 .back-to-previous-page svg.invertable-icon {
   /* the arrow icon */
@@ -1683,6 +1684,8 @@ div.blog-post
   display: grid;
   grid-template-columns: repeat(var(--films-toplist-grid-items-per-row), minmax(0, var(--film-grid-item-width)));
   grid-gap: 95px 0;
+  width: 90%;
+  margin: 1em auto;
   /*
   margin-left: var(--films-list-margin-left);
   padding-top: var(--vertical-gap-at-top-of-films-page-gridView);
@@ -1690,12 +1693,23 @@ div.blog-post
   margin-left: 10px;
   padding-bottom: 120px;
 }
-
+@media screen and (max-width: 1400px) {
+  .films-toplist.view-as-grid {
+    grid-template-columns: repeat(6, minmax(0, var(--film-grid-item-width)));
+  }
+}
+@media screen and (max-width: 1200px) {
+  .films-toplist.view-as-grid {
+    grid-template-columns: repeat(5, minmax(0, var(--film-grid-item-width)));
+  }
+}
+@media screen and (max-width: 1100px) {
+  .films-toplist.view-as-grid {
+    grid-template-columns: repeat(4, minmax(0, var(--film-grid-item-width)));
+  }
+}
 @media screen and (max-width: 700px) {
   .films-toplist.view-as-grid {
-    /*
-    padding-top: calc(var(--vertical-gap-at-top-of-films-page-gridView) + 60px);
-    */
     padding-left: 5px;
     grid-template-columns: repeat(3, minmax(0, var(--film-grid-item-width))) !important;
     grid-gap: 80px 0px;
@@ -2588,9 +2602,11 @@ div.btn.films-reset-filters-btn svg {
 /* #region -----------------------------------<10: FILM REVIEW PAGE>---------------------------------- */
 .film-review .review-displayed {
   display: grid;
-  grid-template-columns: 1.76fr 0.1fr 4fr 0.1fr;
+  grid-template-columns: 2.2fr 0.1fr 4.0fr 0.1fr;
   color: var(--intro-text);
+  /*
   padding: 0px 0 20px 20px;
+  */
 }
 
 /*
@@ -2608,7 +2624,7 @@ div.btn.films-reset-filters-btn svg {
 }
 
 .film-review .review-displayed .filmPoster img {
-  width: 500px;
+  width: 400px;
 }
 
 /* #endregion */
@@ -2929,13 +2945,17 @@ div.btn.films-reset-filters-btn svg {
   
 }
 .review-allContent {
+  /*
   padding-top: 15px;
+  */
   width: 75%;
   margin: 0 auto;
 }
 .review-displayed .filmPoster,
 .review-displayed .review-content {
+  /*
   padding-top: 20px;
+  */
 }
 
 /* A review is splt into several sections */
@@ -3063,7 +3083,7 @@ div.btn.films-reset-filters-btn svg {
 
 
 .section-inner {
-  padding: 25px 20px;
+  padding: 20px 20px;
 }
 .music-page-container {
   /*
@@ -3312,7 +3332,7 @@ div.btn.filter-list-by-artist-btn {
 
 .top-albums-list-container.filters-active .top-albums-list-header {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 55% 45%;
 }
 
 .top-albums-list-container:not(.filters-active) #filtered-albums-list-info {
@@ -3571,15 +3591,14 @@ div.albumMoreInfo p::after {
 }
 
 div.albumInfoContainer div.artistName p {
-  color: var(--text-darker);
+  color: var(--text-slightly-darker);
 }
 div.albumInfoContainer div.albumName p {
   filter: brightness(2.5);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 div.albumInfoContainer div.albumMoreInfo p {
   color: var(--text-darker);
-  filter: brightness(3.0);
 }
 div.albumInfoContainer p {
   border-radius: 4px;
@@ -3833,7 +3852,7 @@ div.albumInfoContainer > div.myRating {
   background-color: var(--album-info-header-bg-color);
   border-radius: 10px;
   color: var(--text);
-  font-family: 'Roboto';
+  /*font-family: 'Roboto';*/
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -4113,7 +4132,7 @@ div.albumInfoContainer > div.myRating {
 /* #region -----------------------------------<13: MOBILE VIEW>---------------------------------- */
 :root {
   --mobile-navbar-topborder-color: rgba(70, 77, 81, 0.497);
-  --mobile-navbar-height: 50px;
+  --mobile-navbar-height: 56px;
 }
 /* anything that should be hidden in mobile goes here... */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
@@ -4165,6 +4184,7 @@ div.albumInfoContainer > div.myRating {
   /* #endregion */
 
   /* #region --------------------< Sidebar >-------------------- */
+  /*
   .hamburger-menu {
     display: none;
   }
@@ -4204,11 +4224,11 @@ div.albumInfoContainer > div.myRating {
     margin-left: 0px;
   }
 
-  #nav-side .website-links a.navlink:nth-child(2) svg { padding: 1px 1px 1px 2px; fill: var(--sidenav-films-bg-color); }
-  #nav-side .website-links a.navlink:nth-child(3) svg { padding: 1px 1px 1px 4px; fill: var(--sidenav-films-bg-color); }
-  #nav-side .website-links a.navlink:nth-child(4) svg { padding: 0px 2px 0px 0px; fill: var(--sidenav-music-bg-color);  }
-  #nav-side .website-links a.navlink:nth-child(5) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-blog-bg-color);  }
-  #nav-side .website-links a.navlink:nth-child(6) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-art-bg-color);  }
+  #nav-side .website-links a.navlink:nth-child(1) svg { padding: 1px 1px 1px 2px; fill: var(--sidenav-films-bg-color); }
+  #nav-side .website-links a.navlink:nth-child(2) svg { padding: 1px 1px 1px 4px; fill: var(--sidenav-films-bg-color); }
+  #nav-side .website-links a.navlink:nth-child(3) svg { padding: 0px 2px 0px 0px; fill: var(--sidenav-music-bg-color);  }
+  #nav-side .website-links a.navlink:nth-child(4) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-blog-bg-color);  }
+  #nav-side .website-links a.navlink:nth-child(5) svg { padding: 3px 0px 5px 0px; fill: var(--sidenav-art-bg-color);  }
   
   #nav-side .website-links a.navlink svg {
     border: 0px !important;
@@ -4217,17 +4237,7 @@ div.albumInfoContainer > div.myRating {
   #nav-side .website-links a.navlink.active svg {
     background-color: rgba(0, 0, 0, 0);
   }
-
-  /*
-  .hamburger-menu {
-    display: block !important;
-    position: absolute;
-    right: 0;
-    top: 10px;
-    z-index: 99999999999999999999999999999999;
-  }
   */
-
   /* #endregion */
   
   /* #region --------------------< Top navigation bar >-------------------- */
@@ -4235,6 +4245,7 @@ div.albumInfoContainer > div.myRating {
     display: none;
   }
   #nav-top {
+    display: flex !important;
     position: fixed;
     width: 100vw;
     bottom: 0;
@@ -4362,9 +4373,14 @@ div.albumInfoContainer > div.myRating {
     padding: 0;
   }
   .aboutme-intro {
-    padding: 0rem 2rem;
-    margin-top: 10rem;
-    text-align: center;
+    padding: 0rem;
+    margin-top: 0rem;
+    font-size: 0.8rem;
+    max-width: 100% !important;
+    padding-left: 4px !important;
+    padding-right: 4px;
+    padding-top: 4px !important;
+    padding-bottom: 4px;
   }
   .aboutme-intro h1, .aboutme-intro h2, .aboutme-intro h3, .aboutme-intro h4, .aboutme-intro h5, .aboutme-intro h6, .aboutme-intro p {
     padding-bottom: 15px;
@@ -5235,7 +5251,7 @@ body::-webkit-scrollbar-corner {
 
 .art-page {
   display: grid;
-  grid-template-columns: repeat(5, 20%);
+  grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 20px;
 }
 .art-page img {

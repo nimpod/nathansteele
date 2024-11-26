@@ -44,17 +44,19 @@ export default class App extends Component {
             <HashRouter>
                 <div className="App">
                   <ScrollToTop />
-                  <NavbarTop />
                   {/*}
-                  <NavbarSide />
+                  <NavbarTop />
                   */}
+                  <NavbarSide />
 
                   <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
                   <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
 
                   <Switch>
                       <Route path='/' component={LandingPage} exact />
+                      {/*}
                       <Route path='/aboutme' component={AboutMe} exact />
+                      */}
                       <Route path='/portfolio' component={Portfolio} exact />
 
                       <Route path='/blog' component={Blog} exact />

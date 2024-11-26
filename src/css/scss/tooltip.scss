@@ -1,0 +1,58 @@
+/*
+My custom tooltip CSS code.
+
+Example usage:
+    <div className="tooltip tooltip-right">
+        <span class="tooltip-text">My blog</span>
+    </div>
+*/
+
+// tooltip container
+.tooltip {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+
+    .tooltip-text {
+        visibility: hidden;
+        width: 140px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 4px 0;
+        border-radius: 2px;
+        // font-size: 0.7rem !important;
+        font-weight: bold;
+        user-select: none;
+    
+        // Position the tooltip text
+        position: absolute;
+        z-index: 1;
+    }
+    
+    // Show the text on hover
+    &:hover .tooltip-text {
+        visibility: visible;
+    }
+
+    // right align the tooltip
+    &.tooltip-right {
+        .tooltip-text {
+            top: 5px;
+            left: 115%;            
+            &::after {
+                content: " ";
+                position: absolute;
+        
+                top: 50%;           // position halfway vertically
+                margin-top: -5px;   // detemines vertcal position of arrow
+                right: 100%;        // To the left of the tooltip
+        
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent rgb(255, 255, 255) transparent transparent;
+            }
+        }
+    }
+}
+

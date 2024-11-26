@@ -204,8 +204,8 @@ const database = {
 		},
 		"the_caretaker__everywhere_at_the_end_of_time": {
 			lastfm_url: "https://www.last.fm/music/The+Caretaker/Everywhere+at+the+end+of+time",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/the-caretaker/everywhere-at-the-end-of-time-stage-1/",
+			spotify_url: "https://open.spotify.com/album/0BE7TLLZoUhr9M8RlmFY3T?si=bO4DmOLeTzW0FCBQKedtcw",
 			year_of_release: "2016",
 			year_of_discovery: "2020",
 			genres: "Ambient; Dark ambient; Hauntology; Experimental",
@@ -339,8 +339,8 @@ const database = {
 		//
 		"a_tribe_called_quest__the_low_end_theory": {
 			lastfm_url: "https://www.last.fm/music/A+Tribe+Called+Quest/The+Low+End+Theory",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/a-tribe-called-quest/the-low-end-theory/",
+			spotify_url: "https://open.spotify.com/album/1p12OAWwudgMqfMzjMvl2a?si=rA19V7XTQM6Bg0wQESVDxQ",
 			year_of_release: "1991",
 			year_of_discovery: "2017",
 			genres: "Hip-Hop; Rap; Jazz rap; Old-school Hip-Hop",
@@ -361,8 +361,8 @@ const database = {
 		//
 		"aphex_twin__selected_ambient_works_volume_ii": {
 			lastfm_url: "https://www.last.fm/music/Aphex+Twin/Selected+Ambient+Works,+Volume+II",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/aphex-twin/selected-ambient-works-volume-ii/",
+			spotify_url: "https://open.spotify.com/album/17vHPMmoxN5B8cdhCDeMTe?si=ooGHiCpzSJasXrkkarvRaQ",
 			year_of_release: "1994",
 			year_of_discovery: "2019",
 			genres: "Ambient; Dark ambient; Minimalism; Electronic",
@@ -434,7 +434,7 @@ const database = {
 		},
 		"anna_meridith__varmints": {
 			lastfm_url: "https://www.last.fm/music/Anna+Meredith/Varmints",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/anna-meredith/varmints/",
 			spotify_url: "https://open.spotify.com/album/7IjNWdNec6pdPRU5aW5FI0?si=poySdx5qTGS2Ir-FyRrQiA",
 			year_of_release: "2004",
 			year_of_discovery: "2018",
@@ -774,7 +774,7 @@ const database = {
 		},
 		"brockhampton__saturation_iii": {
 			lastfm_url: "https://www.last.fm/music/BROCKHAMPTON/SATURATION+III",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/brockhampton/saturation-iii/",
 			spotify_url: "https://open.spotify.com/album/5c2AzoNyr46fCQM5d8mxE0?si=lcsioOPXSKebGjw75Ii7uw",
 			year_of_release: "2017",
 			year_of_discovery: "2017",
@@ -784,7 +784,7 @@ const database = {
 		},
 		"bjork__post": {
 			lastfm_url: "https://www.last.fm/music/Bj%C3%B6rk/Post",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/bjork/post/",
 			spotify_url: "https://open.spotify.com/album/3p7WXDBxhC5KS9IFXnwae7?si=GAhYw43FROKgEjtY7l5p4w",
 			year_of_release: "1995",
 			year_of_discovery: "2021",
@@ -794,8 +794,8 @@ const database = {
 		},
 		"bent__programmed_to_love": {
 			lastfm_url: "https://www.last.fm/music/Bent/Programmed+to+Love",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/bent/programmed-to-love/",
+			spotify_url: "https://open.spotify.com/album/7s1mNBomY7f09JPZKc6KCi?si=0ZWrF4IxR1CQsy1irKjcoA",
 			year_of_release: "2000",
 			year_of_discovery: "2023",
 			genres: "Downtempo; Electronic",
@@ -819,7 +819,7 @@ const database = {
 		//
 		"crumb__locket": {
 			lastfm_url: "https://www.last.fm/music/Crumb/Locket",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/ep/crumb/locket/",
 			spotify_url: "https://open.spotify.com/album/4pKJ14jcQKqko0cVBYoeWR?si=bDMB7rMHTiqoDERIvxyFkA",
 			year_of_release: "2017",
 			year_of_discovery: "2017",
@@ -874,8 +874,8 @@ const database = {
 		},	
 		"charli_xcx__how_im_feeling_now": {
 			lastfm_url: "https://www.last.fm/music/Charli+XCX/how+i%27m+feeling+now",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/charli-xcx/how-im-feeling-now/",
+			spotify_url: "https://open.spotify.com/album/3a9qH2VEsSiOZvMrjaS0Nu?si=rfrmprHdSpO_YrbZqOfrGA",
 			year_of_release: "2020",
 			year_of_discovery: "2020",
 			genres: "Hyperpop; Pop; Dance pop; Electropop; Alternative pop; Electronic",
@@ -884,8 +884,8 @@ const database = {
 		},	
 		"clown_core__van": {
 			lastfm_url: "https://www.last.fm/music/Clown+Core/Van",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/clown-core/van/",
+			spotify_url: "https://open.spotify.com/album/7f5AP647DfTSWf0OmZRrPe?si=ZDIH7yqCRx-XfSggnSRdpQ",
 			year_of_release: "1996",
 			year_of_discovery: "2023",
 			genres: "Avant-garde metal; Experimental rock; Jazz; Jazz fusion; Noise; Breakbeat; Grindcore; Electronic",
@@ -894,7 +894,7 @@ const database = {
 		},	
 		"c418__minecraft_volume_alpha": {
 			lastfm_url: "https://www.last.fm/music/C418/Minecraft+Volume+Alpha",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/c418/minecraft-volume-alpha/",
 			spotify_url: "https://open.spotify.com/album/3Gt7rOjcZQoHCfnKl5AkK7?si=ouGhtOopT6iRPCEEoz7oKw",
 			year_of_release: "2011",
 			year_of_discovery: "2011",
@@ -1737,15 +1737,15 @@ const database = {
 			year_of_release: "2022",
 			year_of_discovery: "2024",
 			genres: "Jazz; Jazz fusion",
-			my_rating: 8.5,
+			my_rating: 9.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"joyce_moreno__natureza": {
 			lastfm_url: "https://www.last.fm/music/Joyce+Moreno/Natureza",
-			rym_url: "",
-			spotify_url: "",
-			year_of_release: "1980",
+			rym_url: "https://rateyourmusic.com/release/album/joyce-with-mauricio-maestro/natureza/",
+			spotify_url: "https://open.spotify.com/album/51fnVZZp0xvSYWMju9O04s?si=pq3nNJdKSQuBxdK74xYBhw",
+			year_of_release: "1977",
 			year_of_discovery: "2022",
 			genres: "Jazz; Bossa nova; MPB; Latin jazz",
 			themes: ["Brazilian"],
@@ -1841,7 +1841,7 @@ const database = {
 		"king_gizzard_and_the_lizard_wizard__nonagon_infinity": {
 			lastfm_url: "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Nonagon+Infinity",
 			rym_url: "https://rateyourmusic.com/release/album/king-gizzard-and-the-lizard-wizard/nonagon-infinity/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/438JijxKCWYrtvpB5A5071?si=VOBho1bTR7eN2Po5i---iQ",
 			year_of_release: "2016",
 			year_of_discovery: "2018",
 			genres: "Psychedelic rock; Garage punk",
@@ -1851,7 +1851,7 @@ const database = {
 		"king_gizzard_and_the_lizard_wizard__paper_mache_dream_balloon": {
 			lastfm_url: "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Paper+M%C3%A2ch%C3%A9+Dream+Balloon",
 			rym_url: "https://rateyourmusic.com/release/album/king-gizzard-and-the-lizard-wizard/paper-mache-dream-balloon/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/6upVMLoNWxRF5Ahrd8YGF2?si=3KuUN9uIQe2rv7lwhYe2JA",
 			year_of_release: "2015",
 			year_of_discovery: "2018",
 			genres: "Psychedelic folk; Psychdelic pop; Dream pop; Folk rock; Folk",
@@ -1861,7 +1861,7 @@ const database = {
 		"king_gizzard_and_the_lizard_wizard__sketches_of_brunswick_east": {
 			lastfm_url: "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Sketches+of+Brunswick+East",
 			rym_url: "https://rateyourmusic.com/release/album/king-gizzard-and-the-lizard-wizard-with-mild-high-club/sketches-of-brunswick-east/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/5rvkoNlufp1WUV5pnGuKOQ?si=ie0-BxRbRH-xZWbb_WnpNw",
 			year_of_release: "2017",
 			year_of_discovery: "2018",
 			genres: "Neo-Psychedelia; Psychedelic pop; Australian psych",
@@ -1926,8 +1926,8 @@ const database = {
 		},
 		"katzenjammer__le_pop": {
 			lastfm_url: "https://www.last.fm/music/Katzenjammer/Le+Pop",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/katzenjammer/le-pop/",
+			spotify_url: "https://open.spotify.com/album/3asYFsj32ShtkeapGMQVAo?si=mexK4fvPSvm0qC07SvZtpw",
 			year_of_release: "2008",
 			year_of_discovery: "2021",
 			genres: "Klezmer; Alternative rock; Punk rock",
@@ -2408,8 +2408,8 @@ const database = {
 		//
 		"nothing_but_thieves__broken_machine": {
 			lastfm_url: "https://www.last.fm/music/Nothing+But+Thieves/Broken+Machine+(Deluxe)",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/nothing-but-thieves/broken-machine/",
+			spotify_url: "https://open.spotify.com/album/0r7wrRVD77lNrD9t2QgZrq?si=oN5ZBdRwQYymVXNXYTAihQ",
 			year_of_release: "2017",
 			year_of_discovery: "2017",
 			genres: "Alternative rock; Indie rock",
@@ -2418,7 +2418,7 @@ const database = {
 		},	
 		"nothing_but_thieves__nothing_but_thieves": {
 			lastfm_url: "https://www.last.fm/music/Nothing+But+Thieves/Nothing+But+Thieves+(Deluxe)",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/nothing-but-thieves/nothing-but-thieves-2/",
 			spotify_url: "https://open.spotify.com/album/3q4BkDV5B7sczFcfrIl2a2?si=szGhGRH5R46M4feRo2oaSg",
 			year_of_release: "2015",
 			year_of_discovery: "2015",
@@ -2508,7 +2508,7 @@ const database = {
 		},
 		"nas__illmatic": {
 			lastfm_url: "https://www.last.fm/music/Nas/Illmatic",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/nas/illmatic/",
 			spotify_url: "https://open.spotify.com/album/3kEtdS2pH6hKcMU9Wioob1?si=M09PbYNTRRONyz1noGGSWw",
 			year_of_release: "1994",
 			year_of_discovery: "2018",
@@ -2671,8 +2671,8 @@ const database = {
 		},
 		"open_mike_eagle__brick_body_kids_still_daydream": {
 			lastfm_url: "https://www.last.fm/music/Open+Mike+Eagle/Brick+Body+Kids+Still+Daydream",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/open-mike-eagle/brick-body-kids-still-daydream/",
+			spotify_url: "https://open.spotify.com/album/1VDnqZVFSg0xVF104kaIix?si=WoD0l1K-SP-Tl-ZPQkNinw",
 			year_of_release: "2017",
 			year_of_discovery: "2019",
 			genres: "Hip-Hop; Rap",
@@ -2705,7 +2705,7 @@ const database = {
 		//
 		"poppy__i_disagree": {
 			lastfm_url: "https://www.last.fm/music/Poppy/I+Disagree",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/poppy/i-disagree/",
 			spotify_url: "https://open.spotify.com/album/4uTce2w80loIu3oLnW0irN?si=YRKDBaE5QB-HzZ-1XiUV2A",
 			year_of_release: "2020",
 			year_of_discovery: "2021",
@@ -2803,7 +2803,7 @@ const database = {
 		},
 		"pvris__white_noise": {
 			lastfm_url: "https://www.last.fm/music/PVRIS/White+Noise",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/pvris/white-noise/",
 			spotify_url: "https://open.spotify.com/album/2POgZTMa9HwsbqB3spYCQZ?si=OHvaus_6SJSK_pIY58ZaoQ",
 			year_of_release: "2014",
 			year_of_discovery: "2015",
@@ -2847,8 +2847,8 @@ const database = {
 	Q: {
 		"queens_of_the_stone_age__songs_for_the_deaf": {
 			lastfm_url: "https://www.last.fm/music/Queens+of+the+Stone+Age/Songs+for+the+Deaf",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/queens-of-the-stone-age/songs-for-the-deaf/",
+			spotify_url: "https://open.spotify.com/album/4w3NeXtywU398NYW4903rY?si=rEk7jpT6RMWLrwUm_m4Prg",
 			year_of_release: "2002",
 			year_of_discovery: "2022",
 			genres: "Stoner rock; Alternative metal; Alternative rock",
@@ -2963,8 +2963,8 @@ const database = {
 		},
 		"rumpistol__isola": {
 			lastfm_url: "https://www.last.fm/music/Rumpistol/Isola",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/rumpistol/isola/",
+			spotify_url: "https://open.spotify.com/album/3ba4E9NJcmPzgxcP6SeggA?si=B0JdBdroScuQZcqaARqEKQ",
 			year_of_release: "2022",
 			year_of_discovery: "2022",
 			genres: "Downtempo; Modern classical; Post-minimalism; Piano; Electronic",
@@ -2984,8 +2984,8 @@ const database = {
 		},
 		"revocation__teratogensis": {
 			lastfm_url: "https://www.last.fm/music/Revocation/Scion+Av+Presents:+Revocation+%22Teratogensis%22",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/ep/revocation/teratogenesis/",
+			spotify_url: "https://open.spotify.com/album/0QUqpxgNwOq2aD0aSqJhqN?si=4pr1CfZDRKSEYHHVtT3_GQ",
 			year_of_release: "2012",
 			year_of_discovery: "2021",
 			genres: "Technical death metal; Death metal; Thrash metal",
@@ -3054,7 +3054,7 @@ const database = {
 		},
 		"system_of_a_down__system_of_a_down": {
 			lastfm_url: "https://www.last.fm/music/System+of+a+Down/System+of+a+Down",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/system-of-a-down/system-of-a-down/",
 			spotify_url: "https://open.spotify.com/album/3sSfjX4fhZonjyZ10x0l0f?si=B_JycSCqTjeFojwTn6Ar7Q",
 			year_of_release: "1998",
 			year_of_discovery: "2011",
@@ -3064,7 +3064,7 @@ const database = {
 		},
 		"system_of_a_down__steal_this_album": {
 			lastfm_url: "https://www.last.fm/music/System+of+a+Down/Steal+This+Album!",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/system-of-a-down/steal-this-album/",
 			spotify_url: "https://open.spotify.com/album/6lA1sGw7eCv27bcpd5E0wT?si=NLItOA19RuGI9ePvq09Q4g",
 			year_of_release: "2002",
 			year_of_discovery: "2011",
@@ -3084,7 +3084,7 @@ const database = {
 		},
 		"system_of_a_down__toxicity": {
 			lastfm_url: "https://www.last.fm/music/System+of+a+Down/Toxicity",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/system-of-a-down/toxicity/",
 			spotify_url: "https://open.spotify.com/album/6jWde94ln40epKIQCd8XUh?si=NPvbrcRHTNW4Ic_9f3xS0Q",
 			year_of_release: "2001",
 			year_of_discovery: "2011",
@@ -3160,7 +3160,7 @@ const database = {
 			year_of_release: "2023",
 			year_of_discovery: "2024",
 			genres: "Jazz; Indo jazz; Hindustani Classical Music",
-			my_rating: 8.0,
+			my_rating: 9.0,
 			my_review: "",
 		},
 		"sa_dingding__harmony": {
@@ -3237,8 +3237,8 @@ const database = {
 		},
 		"sing_street__sing_street_soundtrack": {
 			lastfm_url: "https://www.last.fm/music/Sing+Street/Sing+Street+(Original+Motion+Picture+Soundtrack)",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/various-artists/sing-street/",
+			spotify_url: "https://open.spotify.com/album/7ubvuN0J0CPRUa2JUE2pxM?si=M3t03PzRSm68P3mbaeU1eA",
 			year_of_release: "2016",
 			year_of_discovery: "2022",
 			genres: "Film soundtrack; New wave; Synthpop; Indie pop; Pop",
@@ -3247,8 +3247,8 @@ const database = {
 		},
 		"scntfc__oxenfree": {
 			lastfm_url: "https://www.last.fm/music/scntfc/Oxenfree",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/scntfc/oxenfree/",
+			spotify_url: "https://open.spotify.com/album/3MsVFdknU6YMOcwo21SrIK?si=xuJWC5AKQym0xYxpxZzzlw",
 			year_of_release: "2016",
 			year_of_discovery: "2017",
 			genres: "Video game soundtrack; Ambient; Downtempo",
@@ -3257,8 +3257,9 @@ const database = {
 		},
 		"sheena_ringo__shoso_strip": {
 			lastfm_url: "https://www.last.fm/music/%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E/%E5%8B%9D%E8%A8%B4%E3%82%B9%E3%83%88%E3%83%AA%E3%83%83%E3%83%97",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E/%E5%8B%9D%E8%A8%B4%E3%82%B9%E3%83%88%E3%83%AA%E3%83%83%E3%83%97-shoso-strip/",
 			spotify_url: "https://open.spotify.com/album/0QWI6wd3QBiQscVpBu6kUE?si=6uF4Y50sRVWVsA3p8ZALSw",
+			artist_name_English: "Sheena Ringo",
 			year_of_release: "2000",
 			year_of_discovery: "2022",
 			genres: "J-rock; Alternative rock; J-pop; Kayokyoku",
@@ -3345,7 +3346,7 @@ const database = {
 		"takashi_kako__wind_waltz": {
 			lastfm_url: "https://www.last.fm/music/Takashi+Kako/%E9%A2%A8%E3%81%AE%E3%83%AF%E3%83%AB%E3%83%84",
 			rym_url: "",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/7LGWojAe9BrC9auLAMB2yX?si=OqsyEzMPS4WU_FHuTK7-Zg",
 			artist_name_Japanese: "加古隆",
 			year_of_release: "2002",
 			year_of_discovery: "2023",
@@ -3422,8 +3423,8 @@ const database = {
 		},
 		"tyler_the_creator__flower_boy": {
 			lastfm_url: "https://www.last.fm/music/Tyler,+the+Creator/Flower+Boy",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/tyler-the-creator/flower-boy/",
+			spotify_url: "https://open.spotify.com/album/2nkto6YNI4rUYTLqEwWJ3o?si=rdm_phjZQH6DixPOoVRhNg",
 			year_of_release: "2017",
 			year_of_discovery: "2018",
 			genres: "Hip-Hop; Rap; Neo-soul; Soul; Pop rap",
@@ -3453,7 +3454,7 @@ const database = {
 			album_name_English: "Small Circle",
 			genres: "Ambient; Dreampunk; Drone; Nature recordings",
 			custom_cover_url: "https://e.snmc.io/i/600/s/2972bfc4c823bbb73aab43a40ded5319/10101442/%E8%BC%95%E6%8F%8F%E6%B7%A1%E5%AF%AB-understatement-%E5%B0%8F%E5%9C%88%E5%AD%90-Cover-Art.png",
-			my_rating: 8.0,
+			my_rating: 9.0,
 			my_review: "",
 		}
 	},
@@ -3699,7 +3700,7 @@ const database = {
 		},
 		"yes__close_to_the_edge": {
 			lastfm_url: "https://www.last.fm/music/Yes/Close+To+The+Edge+(Deluxe+Edition)",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/yes/close-to-the-edge/",
 			spotify_url: "https://open.spotify.com/album/6344rkGqCBDenGoS7eJlBN?si=mgSZFJRdT-K2ehLiwK91tQ",
 			year_of_release: "1972",
 			year_of_discovery: "2013",
@@ -3713,7 +3714,7 @@ const database = {
 		//
 		"yellow_magic_orchestra__solid_state_survivor": {
 			lastfm_url: "https://www.last.fm/music/Yellow+Magic+Orchestra/Solid+State+Survivor",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/yellow-magic-orchestra/solid-state-survivor/",
 			spotify_url: "https://open.spotify.com/album/5TmpFE7Xus70ko1QYGxFIe?si=Vhnh4CGMSmGTUQSAtz8Mew",
 			year_of_release: "1979",
 			year_of_discovery: "2018",

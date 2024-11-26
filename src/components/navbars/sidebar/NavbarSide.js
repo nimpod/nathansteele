@@ -75,6 +75,7 @@ class NavbarSide extends Component {
               })
         }
 
+        /*
         // set navbar item icons when in mobile view...
         let navbarSpanTags = document.getElementsByClassName('mobile-view-title');
         let icons = ['🏠', '📽️', '🎵', '📚', '🏫', '👨‍💻', '📙'];
@@ -87,9 +88,9 @@ class NavbarSide extends Component {
         let navlinks = document.getElementsByClassName('navlink');
         //console.log(navlinks);
         //navlinks[1].classList.add('active');
+        */
     }
 
-    
     /**
      * Onclick event listener for navbar buttons
      * @param {*} e 
@@ -111,44 +112,67 @@ class NavbarSide extends Component {
         return (
             <aside id="nav-side">
                 <nav className='website-links'>
-                    <div className="website-logo-container">                            
+                    {/*}
+                    <div className="website-logo-container">
                         <NavLink to="/aboutme" className="navlink website-logo">
                             <Logo className="logo" />
                         </NavLink>
                     </div>
+                    */}
+                    {/*
                     <NavLink to="/aboutme" title='About Me' className="navlink">
                         <AboutMeIcon />
-                        <span>About</span>
                         <span className='mobile-view-title'>About</span>
                     </NavLink>
-                    <NavLink to="/films" title='Films' className="navlink" onClick={this.clickedNavbarItem}>
+                    */}
+                    <NavLink id='navlink-films' to="/films" className="navlink tooltip tooltip-right" onClick={this.clickedNavbarItem}>
                         <FilmsIcon />
-                        <span>Films</span>
+                        <span class="tooltip-text">My favourite films</span>
+                        {/* <span>Films</span> */}
                         <span className='mobile-view-title'>Films</span>
                     </NavLink>
-                    <NavLink to="/music" title='Music' className="navlink" onClick={this.clickedNavbarItem}>
+                    <NavLink id='navlink-music' to="/music" className="navlink tooltip tooltip-right" onClick={this.clickedNavbarItem}>
                         <MusicIcon />
-                        <span>Music</span>
+                        <span class="tooltip-text">My favourite music</span>
+                        {/* <span>Music</span> */}
                         <span className='mobile-view-title'>Music</span>
                     </NavLink>
-                    <NavLink to="/blog" title='Blog' className="navlink" onClick={this.clickedNavbarItem}>
+                    <NavLink id='navlink-blog' to="/blog" className="navlink tooltip tooltip-right" onClick={this.clickedNavbarItem}>
                         <BlogIcon />
-                        <span>Blog</span>
+                        <span class="tooltip-text">My blog</span>
+                        {/* <span>Blog</span> */}
                         <span className='mobile-view-title'>Blog</span>
                     </NavLink>
-                    <NavLink to="/art" title='Art' className="navlink" onClick={this.clickedNavbarItem}>
+                    <NavLink id='navlink-art' to="/art" className="navlink tooltip tooltip-right" onClick={this.clickedNavbarItem}>
                         <ArtIcon />
-                        <span>Art</span>
+                        <span class="tooltip-text">My art</span>
+                        {/* <span>Art</span> */}
                         <span className='mobile-view-title'>Art</span>
                     </NavLink>
                 </nav>
-                <div className="theme-toggle inline-svg-wrapper" onClick={this.switchTheme} aria-label="Click to toggle theme" title="Click to toggle theme">
-                    <span className="inline-svg dark">
-                        <DarkThemeIcon />
-                    </span>
-                    <span className="inline-svg light" hidden={true}>
-                        <LightThemeIcon />
-                    </span>
+                <div className='website-links-lowerSection'>
+                    {/*
+                    <div className="website-logo-container">
+                        <NavLink to="/aboutme" className="navlink website-logo">
+                            <Logo className="logo" />
+                        </NavLink>
+                    </div>
+                    */}
+                    <div className="theme-toggle inline-svg-wrapper" onClick={this.switchTheme} aria-label="Click to toggle theme" title="Click to toggle theme">
+                        <span className="inline-svg dark">
+                            <DarkThemeIcon />
+                        </span>
+                        <span className="inline-svg light" hidden={true}>
+                            <LightThemeIcon />
+                        </span>
+                    </div>
+
+                    <NavLink id='navlink-aboutme' to="/" className="navlink tooltip tooltip-right">
+                        <img src="https://s3.eu-west-2.amazonaws.com/nathansteele.com/me.jpg" alt='me'/>
+                        <span class="tooltip-text">About me</span>
+                        {/* <span>About</span> */}
+                        <span className='mobile-view-title'>About</span>
+                    </NavLink>
                 </div>
             </aside>
         )
