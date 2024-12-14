@@ -10,19 +10,20 @@ import { Post as OurMoon }                              from './content/our_moon
 import { post as SolarFlares }                          from './content/solar_flares.jsx';
 
 // blog posts about music...
-import { post as MyMostListenedSongsOf2023Post }        from './content/my_most_listened_songs_of_2023.jsx';
-import { post as MyMostListenedSongsOf2022Post }        from './content/my_most_listened_songs_of_2022.jsx';
-import { post as MyMostListenedSongsOf2021Post }        from './content/my_most_listened_songs_of_2021.jsx';
-import { post as MyMostListenedSongsOf2020Post }        from './content/my_most_listened_songs_of_2020.jsx';
-import { post as MyMostListenedSongsOf2016Post }        from './content/my_most_listened_songs_of_2014_2015_2016.jsx';
-import { post as Top25FavouriteChillstepSongs }         from './content/top_25_favourite_chillstep_songs.jsx';
+import { post as MyMostListenedSongsOf2024Post }        from './content/music/my_most_listened_songs_of_2024.jsx';
+import { post as MyMostListenedSongsOf2023Post }        from './content/music/my_most_listened_songs_of_2023.jsx';
+import { post as MyMostListenedSongsOf2022Post }        from './content/music/my_most_listened_songs_of_2022.jsx';
+import { post as MyMostListenedSongsOf2021Post }        from './content/music/my_most_listened_songs_of_2021.jsx';
+import { post as MyMostListenedSongsOf2020Post }        from './content/music/my_most_listened_songs_of_2020.jsx';
+import { post as MyMostListenedSongsOf2016Post }        from './content/music/my_most_listened_songs_of_2014_2015_2016.jsx';
+import { post as Top25FavouriteChillstepSongs }         from './content/music/top_25_favourite_chillstep_songs.jsx';
 
 // blog posts about films...
-import { post as BestFilmsIWatchedIn2023Post }        from './content/blog_posts_about_films/best_films_i_watched_in_2023.jsx';
+import { post as BestFilmsIWatchedIn2023Post }        from './content/films/best_films_i_watched_in_2023.jsx';
 
 // blog posts about trekking...
-import { post as ManasluCircuit } from './content/trekking/manaslu_circuit.jsx';
-import { post as KangYatze2 } from './content/trekking/kang_yatze_2.jsx';
+import { post as ManasluCircuit }   from './content/trekking/manaslu_circuit.jsx';
+import { post as KangYatze2 }       from './content/trekking/kang_yatze_2.jsx';
 
 
 // miscellaneous blog posts...
@@ -111,6 +112,12 @@ export const blog_posts = [
         date: "6 May 2024",
         title: "Top 25 favourite chillstep songs",
         content: ReactDomServer.renderToString(Top25FavouriteChillstepSongs()),
+        tags: ["Music"]
+    },
+    {
+        date: "31 Dec 2024",
+        title: "My most listened songs of 2024",
+        content: ReactDomServer.renderToString(MyMostListenedSongsOf2024Post()),
         tags: ["Music"]
     },
     {

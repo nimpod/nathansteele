@@ -1464,32 +1464,36 @@ div.blog-post
 }
 
 .blog-post h3.subgroup-title > span {
-  margin-right: 10px;
-  border-radius: 6px;
-  padding: 0 6px;
+  margin-right: 0px;
+  border-radius: 0px;
+  padding: 0 8px;
+  font-size: 1.1rem;
 }
 
 .blog-post h3.subgroup-title > span.track-pos {
   background-color: rgb(9, 95, 51);
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  font-size: 1.4rem;
 }
 
 .blog-post h3.subgroup-title > span.track-artist-and-title {
-  background-color: #32333b;
+  background-color: rgb(40, 59, 49);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: calc(80%);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .blog-post h3.subgroup-title > span.track-scrobbles {
-  background-color: rgb(114, 80, 182);
+  background-color: rgb(15, 67, 40);
   font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
 .blog-post h3.subgroup-title > span.track-rating {
-  background-color: rgb(12, 150, 127);
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
