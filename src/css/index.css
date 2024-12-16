@@ -1459,14 +1459,15 @@ div.blog-post
 /* #region -----------------------< 8.3) Specific blog posts >------------------------ */
 
 .blog-post h3.subgroup-title {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 7% 20% 90%;
+  text-align: center;
+  width: 100%;
 }
 
 .blog-post h3.subgroup-title > span {
   margin-right: 0px;
   border-radius: 0px;
-  padding: 0 8px;
   font-size: 1.1rem;
 }
 
@@ -1490,13 +1491,31 @@ div.blog-post
 
 .blog-post h3.subgroup-title > span.track-scrobbles {
   background-color: rgb(15, 67, 40);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .blog-post h3.subgroup-title > span.track-rating {
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.blog-post .track-genresList,
+.blog-post .track-albumLink {
+  font-size: 0.9rem;
+  color: var(--text-much-darker);
+  font-style: italic;
+}
+.blog-post .track-genresList::before {
+  content: "Genres: ";
+  color: var(--text-darker);
+  font-style: normal;
+}
+.blog-post .track-albumLink::before {
+  content: "Full album: ";
+  color: var(--text-darker);
+  font-style: normal;
 }
 
 .blog-post img.scrobbles-per-month-graph {

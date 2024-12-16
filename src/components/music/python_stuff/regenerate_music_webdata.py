@@ -4,7 +4,7 @@ import json
 from LastFm import LastFM
 from LastFm import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
 from musicbee_helpers import MusicbeeHelpers
-from helpers import export_list_to_json
+from Helpers import export_list_to_json
 
 from urllib3.exceptions import InsecurePlatformWarning, InsecureRequestWarning
 from urllib3 import disable_warnings
@@ -325,9 +325,14 @@ def get_top_tracks_all_data(limit=10):
 
 
 
-# call my functions...
-convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output)
-get_top_tracks_all_data(limit=100)
+# update json...
+#convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output)
 
+
+# get top tracks...
+#get_top_tracks_all_data(limit=100)
+
+
+# testing the LastFM API...
 #test = lastfm.GET_album_info(artist_name='Joe Hisaishi', album_name="A Scene at the Sea (Takeshi Kitano's Original Motion Picture Soundtrack)")
 #print(test)

@@ -1,7 +1,7 @@
 import requests
 from lastfm_helpers import LASTFM_API_METHODS
 from lastfm_helpers import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
-from helpers import pretty_print_json
+from Helpers import pretty_print_json
 
 
 class LastFM:
