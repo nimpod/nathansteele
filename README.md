@@ -14,3 +14,32 @@ npm run deploy
 ```
 npm start
 ```
+
+## Useful things about React that I've learnt and use consistently...
+### 1) Conditional logic within render method
+#### You can incorporate conditional logic within the rendering of a React component...
+```js
+{this.props.artist == undefined ? (
+    <span className='track-artist-and-title'>
+        {this.props.artist} - {this.props.track}
+    </span>
+) : (
+    <span className='track-artist-and-title'>
+        {this.props.artist} - {this.props.artist_not_english} {this.props.track}
+    </span>
+)}
+```
+
+### 2) Insert variable value within element attribnute
+#### A really useful feature of React, is being able to easily insert the value of a variable within a string, for example in a className attribute. For example...
+```js
+<div className={`films-toplist ${view_type_classname}`}>
+```
+#### or...
+```js
+return <HashLink 
+    key={num}
+    to={`#album-${num}`}
+    id={`link-to-album-${num}`}
+    </HashLink>
+```

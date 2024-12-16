@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter, BrowserRouter } from 'react-router-dom';
 import TrackMetadataComponent from './track_metadata_component.js';
+import ScrobbleDataSummary from './scrobble_data_per_year_summary.js';
 
 let YEAR = "2024";
 
@@ -12,27 +13,12 @@ export const post = () => (
     <div className='my-most-listened-songs-of-this-year'>
         <BrowserRouter>
         <div className='intro-text blog-subsection' id='section1'>
-            <div className='display-img-beside-text'>
-                <div>
-                    <h3 className='subgroup-title'>Intro</h3>
-                    <p>{YEAR} has has been a very interesting year for my musical discoveries. 
-                        According to LastFM, I listened to <b>7,360</b> individual songs, and scrobbled <b>18,138</b> songs overall.</p>
-                    <p>That's a slight increase on last year, which is impressive considering I've been abroad since August, travelling through India and Nepal for the last 4 months!</p>
-                    <p>In this blog post I will go over the 25 songs that I listened to most this year...</p>
-                    <p>I did the same for 
-                        <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2023' target='_blank'> 2023</a>,
-                        <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2022' target='_blank'> 2022</a>, 
-                        <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2021' target='_blank'> 2021</a>, 
-                        <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2020' target='_blank'> 2020</a>, 
-                        and <a href='https://nimpod.github.io/nathansteele/#/blog/my_most_listened_songs_of_2014_2015_2016' target='_blank'>2014/15/16</a>,  too.
-                    </p>
-                    <p>If for some bizzare reason you wish to see more than the top 25 tracks, the <a href="https://www.last.fm/user/gutash/library/tracks?from=2024-01-01&rangetype=year" target="_blank">entire {YEAR} list is here</a> if you want to see that.</p>
-                    <p className='note'>Disclaimer: this is <b>NOT a 'top 25 songs of {YEAR} list'</b>, this is simply <b>a list of the '25 songs that I listened to most throughout {YEAR}'. </b> 
-                        It would be a waste of time messing about with arbitary ordering, when the quantitative measurement of a 'play count' already exists thanks to LastFM scrobbling!
-                        I personally don't see the point of making 'top 25 songs of {YEAR}' lists, or 'top 50 albums of {YEAR}' lists, when you are bound to change your opinion on the arbitary ordering in a few months,
-                        not to mention how much music is out there that you've never heard before and will inevitably discover several years down the line leaving your old lists outdated.</p>
-                </div>
-                <img src={IMAGES.scrobbles_graph} className='scrobbles-per-month-graph beside-text' alt="Srobbles per month graph" />
+            <div>
+                <h3 className='subgroup-title'></h3>
+                <ScrobbleDataSummary></ScrobbleDataSummary>
+                <p>{YEAR} has has been a very interesting year for my musical discoveries. According to LastFM it has been my most active listening year ever, an average of 51 scrobbles per day, That's a slight increase on last year, which is impressive considering I've been abroad since August, travelling through India and Nepal for the last 4 months!</p>
+                <p>In this blog post I will go over the 25 songs that I listened to most this year...</p>
+                <p><a href="https://www.last.fm/user/gutash/library/tracks?from=2024-01-01&rangetype=year" target="_blank">Full {YEAR} list is here</a> if you want to see that.</p>
             </div>
         </div>
 
@@ -42,7 +28,8 @@ export const post = () => (
                 scrobbles='41' 
                 artist="Patrick O'Hearn" 
                 track="A Lovely Place To Be" 
-                youtube="https://www.youtube.com/embed/xkmXAh1dp-A?si=QRsb46zbTLldb7rK" />
+                youtube="https://www.youtube.com/embed/xkmXAh1dp-A?si=QRsb46zbTLldb7rK"
+            />
             <p className='track-genresList'>Ambient</p>
             <p>
             This music reminds me that after the day is over, we all still see the same sunset.
@@ -195,7 +182,7 @@ export const post = () => (
             </p>
         </div>
 
-        <div>
+        <div className='blog-subsection' id='track10'>
             <TrackMetadataComponent 
                 pos='10' 
                 scrobbles='30' 
@@ -206,7 +193,7 @@ export const post = () => (
             <p>Another Hisaishi song! Clearly I listened to this soundtrack a lot this year!</p>
         </div>
 
-        <div>
+        <div className='blog-subsection' id='track11'>
             <TrackMetadataComponent 
                 pos='11' 
                 scrobbles='30' 
@@ -221,7 +208,7 @@ export const post = () => (
             </p>
         </div>
 
-        <div>
+        <div className='blog-subsection' id='track12'>
             <TrackMetadataComponent 
                 pos='12'
                 scrobbles='29' 
@@ -234,9 +221,9 @@ export const post = () => (
             </p>
         </div>
 
-        <div>
+        <div className='blog-subsection' id='track13'>
             <TrackMetadataComponent 
-                pos='14' 
+                pos='13' 
                 scrobbles='27' 
                 artist="Egberto Gismonti" 
                 track="Luzes Da Ribalta" 

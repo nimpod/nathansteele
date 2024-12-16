@@ -1,27 +1,15 @@
 {
     "2024": {
         "total_scrobbles": 18174,
+        "tracks_scrobbled": 7375,
         "scrobbles_per_day_avg": 51,
         "artists_scrobbled": 2306,
         "albums_scrobbled": 3342,
-        "tracks_scrobbled": 7375,
         "scrobbles_per_month": [
             {
-                "january": 1719,
-                "february": 1401,
-                "march": 1744
-            }
-        ],
-        "top_25_tracks": [
-            {
-                "artist": "Patrick O'Hearn",
-                "track": "A Lovely Place To Be",
-                "scrobbles": 41,
-                "pos": 1,
-                "youtube": "https://www.youtube.com/embed/xkmXAh1dp-A?si=QRsb46zbTLldb7rK"
-            },
-            {
-                
+                "jan": 1719,
+                "feb": 1401,
+                "mar": 1744
             }
         ]
     },
@@ -36,18 +24,6 @@
                 "january": 1719,
                 "february": 1401,
                 "march": 1744
-            }
-        ],
-        "top_25_tracks": [
-            {
-                "artist": "Erik Satie",
-                "track": " 3 Gymnopédies: No. 3, Lent et Grave ",
-                "scrobbles": 34,
-                "pos": 1,
-                "youtube": ""
-            },
-            {
-                
             }
         ]
     },

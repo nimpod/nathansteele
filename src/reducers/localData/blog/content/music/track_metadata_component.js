@@ -16,11 +16,7 @@ class TrackMetadataComponent extends Component {
                 <h3 className='subgroup-title'>
                     <span className='track-pos'>#{this.props.pos}</span>
                     <span className='track-scrobbles'>{this.props.scrobbles} scrobbles</span>
-                    {this.props.artst_not_english == undefined ? (
-                        <span className='track-artist-and-title'>{this.props.artist} - {this.props.track}</span>
-                    ) : (
-                        <span className='track-artist-and-title'>{this.props.artist} <span className='artist-name-not-english'>{artist_name_not_english}</span> - {this.props.track}</span>
-                    )}
+                    <span className='track-artist-and-title'>{this.props.artist} - {this.props.track}</span>
                 </h3>
                 <iframe 
                     width="560" 

@@ -1458,6 +1458,19 @@ div.blog-post
 
 /* #region -----------------------< 8.3) Specific blog posts >------------------------ */
 
+.blog-post .my-most-listened-songs-of-this-year table {
+  color: var(--text-darker);
+  font-size: 0.8rem;
+  text-align: center;
+}
+.blog-post .my-most-listened-songs-of-this-year table th {
+  text-align: center;
+}
+.blog-post .my-most-listened-songs-of-this-year table {
+  margin: 10px 0 !important;
+}
+
+
 .blog-post h3.subgroup-title {
   display: grid;
   grid-template-columns: 7% 20% 90%;
