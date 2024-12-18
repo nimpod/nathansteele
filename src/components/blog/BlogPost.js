@@ -13,7 +13,7 @@ import { get_random_RGBA, get_blog_post_id } from '../../js/helpers.js';
 // Remove the annoying video recomendations that appear on the embedded youtube video
 // I can't believe this actually works...
 import $ from "jquery";
-$(".my-most-listened-songs-of-this-year iframe").contents().find(".ytp-pause-overlay").remove();
+$(".top-songs-EOY iframe").contents().find(".ytp-pause-overlay").remove();
 
 
 class BlogPost extends Component {

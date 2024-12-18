@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const post = () => (
-    <div className='my-most-listened-songs-of-this-year'>
+    <div className='top-songs-EOY'>
         <div className='intro-text blog-subsection' id='section1'>
             <h3 className='subgroup-title'>Intro</h3>
             <p>Pre October 2020, I was not using LastFM to get scrobbling stats :(</p>

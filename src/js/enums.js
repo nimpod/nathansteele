@@ -1,3 +1,4 @@
+
 const enumValue = (name) => Object.freeze({toString: () => name});
 
 /**
@@ -103,3 +104,4 @@ export const time_period_options = [
     TimePeriodOptions.LAST_MONTH.toString(),
     TimePeriodOptions.LAST_7_DAYS.toString(),
 ]
+

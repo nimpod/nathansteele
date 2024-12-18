@@ -19,3 +19,5 @@ $(".toggle-btn").on('click', function() {
     screen.classList.add('selected');
     btn.classList.add('selected');
 });
+
+

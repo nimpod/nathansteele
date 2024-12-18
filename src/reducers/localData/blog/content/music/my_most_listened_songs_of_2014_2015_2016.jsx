@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const post = (scrobbles_graph) => (
-    <div className='my-most-listened-songs-of-this-year'>
+    <div className='top-songs-EOY'>
         <div className='intro-text blog-subsection' id='section1'>
             <h3 className='subgroup-title'>Intro</h3>
             <p>This is a 'pre-spotify' time period where I was using my ipod to listen to music for several years. I'm not entirely sure how much music I actually listened to during this period in my life, but based on the play counts that I can see on itunes it looks like <b>a lot</b>... Although ironically my exploration of genres was far more limited back then than it is nowadays.</p>

@@ -5,7 +5,7 @@ const IMAGES = {
 }
 
 export const post = () => (
-    <div className='my-most-listened-songs-of-this-year'>
+    <div className='top-songs-EOY'>
         <div className='intro-text blog-subsection' id='section1'>
             <div className='display-img-beside-text'>
                 <div>
