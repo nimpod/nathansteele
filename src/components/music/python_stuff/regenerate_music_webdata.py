@@ -1,3 +1,9 @@
+# TODO:
+# 1) Make this script faster, I don't why it takes so fucking long
+# 2) At the end, when the json file has been regenerated, iterate over it again, and look for album_cover_url": ""
+#    This is an indication there was a naming mismatch somewhere (album name missing a colon, comma, fullstop, etc...)
+#    And then print out the names of the albums which couldn't find a LastFM match. So I can speed up the process of fixing it.
+
 import os
 import json
 
@@ -14,7 +20,6 @@ disable_warnings(InsecurePlatformWarning)
 disable_warnings(InsecureRequestWarning)
 
 
-
 # find the .m3u export...
 dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
 musicbee_export_filename = 'FAVOURITE ALBUMS.m3u'
@@ -22,7 +27,11 @@ fullpath_to_musicbee_export = f"{dir_export}\\{musicbee_export_filename}"
 
 # define full path to json file...
 json_output_filename = 'webdata_top_albums_list.json'
-fullpath_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\{json_output_filename}'
+rootpath_home = f'D:\\Programming-Projects'
+rootpath_laptop = f'C:\\dev'
+
+# fullpath_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\{json_output_filename}'
+fullpath_to_json_output = f'{rootpath_laptop}\\nathansteele\\src\\components\\music\\{json_output_filename}'
 
 # create instance of my class that communicates with LastFM API...
 lastfm = LastFM(API_KEY='641be1ed643c913edb609208c24efad7', USERNAME='gutash')
@@ -67,17 +76,20 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 # extract artist name & album name...
                 artist_name = folder_name_fixed.split(' - ')[0].strip()
                 album_name = folder_name_fixed.split(' - ')[1].strip()
-                # print(f"{pos_padded}: {artist_name} - {album_name}")
+                #print(f"{pos_padded}: {artist_name} - {album_name}")
                 
                 # construct review ID...
                 artist_name_v2 = MusicbeeHelpers.remove_special_characters_based_on_musicbee_export(artist_name)
                 album_name_v2 = MusicbeeHelpers.remove_special_characters_based_on_musicbee_export(album_name)
                 review_id = f"{artist_name_v2}-{album_name_v2}"
-                
-                # check if we need to manually override album name...
+
+                # get more data from LastFM API...
+                data = lastfm.GET_album_info(artist_name=artist_name_v2, album_name=album_name_v2)
+
+                # TODO: Only do this if the lastfm api call returns nothing... Because most albums don't require this step...
                 artist_name_lastfm_version = artist_name_doesnt_match_with_lastfm(folder_name=folder_name, artist_name=artist_name)
                 album_name_lastfm_version = album_name_doesnt_match_with_lastfm(folder_name=folder_name, album_name=album_name)
-                
+
                 # get more data via LastFM API...
                 data = lastfm.GET_album_info(artist_name=artist_name_lastfm_version, album_name=album_name_lastfm_version)
                 lastfm_url = ""
@@ -93,19 +105,6 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                         # print(lastfm_url)
                     else:
                         print('not url found :(')
-                
-                    # get tracks...
-                    """
-                    if 'tracks' in data['album']:
-                        for track in data['album']['tracks']['track']:
-                            tracks.append(track)
-                            #if (track['duration']):
-                            #    duration += int(track['duration'])
-                            #else:
-                            #    print('no duration info :(')
-                    else:
-                        print('no tracks info :(')
-                    """
                     
                     # get album cover (if it was in response)...
                     if 'image' in data['album']:
@@ -116,16 +115,6 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 
                 # Annoying.... Sometimes Lastfm automatically gives me slightly different versions of artist names... This will have to do for now...
                 artist_name = fix_artist_name_to_make_filtering_easier_in_javascript_world(artist_name=artist_name)
-                """
-                if artist_name == 'alt-J' or artist_name == 'Alt-J':
-                    artist_name = 'alt-J'
-                elif artist_name == 'Twenty One Pilots':
-                    artist_name = 'twenty one pilots'
-                elif artist_name == 'Kiyo Sen':
-                    artist_name = 'KIYO * SEN'
-                elif artist_name == '久石譲':
-                    artist_name = 'Joe Hisaishi'
-                """
                 
                 # show progress...
                 print(f"{pos_padded}: {review_id} {lastfm_url}")
@@ -173,6 +162,10 @@ def album_name_doesnt_match_with_lastfm(folder_name, album_name):
         return 'Karl Jenkins: Motets'
     elif "death's dynamic shroud - Reality 2 Archive of Fading Mist (Part ii)" in folder_name:
         return "Reality 2 : Archive of Fading Mist (part ii)"
+    elif "Global Communication - 7614" in folder_name:
+        return "76:14"
+    elif "Brad Mehldau - Suite April 2020" in folder_name:
+        return "Suite: April 2020"
     #elif 'Penguin Cafe - Rain Before Seven':
     #    return 'Rain Before Seven...'
     #elif 'Opposite Day - What Is Is':
@@ -326,7 +319,7 @@ def get_top_tracks_all_data(limit=10):
 
 
 # update json...
-#convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output)
+convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output)
 
 
 # get top tracks...

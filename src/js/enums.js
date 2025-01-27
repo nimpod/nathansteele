@@ -50,6 +50,9 @@ export const TrustworthyMusicReviewers = Object.freeze({
     ELASTIC_ROCK: { name: "ElasticRock", url: "https://rateyourmusic.com/list/elasticrock/100-favourite-ecm-albums/", genres: ["ECM style jazz", "Jazz"] },
     TAIWAN_MANIAC: { name: "TaiwanManiac", url: "https://rateyourmusic.com/~taiwanmaniac", genres: ["Jazz", "Pop"] },
 
+    // Other review sites
+    STEREOGUM: { name: "StereoGum", url: "https://www.stereogum.com/" },
+
     // stats.fm
     XENOPHILE: { name: "Xenophile", url: "https://stats.fm/xenophile", genres: ["Choral", "Modern classical"]},
 

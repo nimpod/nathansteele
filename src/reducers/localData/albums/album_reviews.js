@@ -91,6 +91,16 @@ const database = {
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
+		"4amkru__incognito_rhythm": {
+			lastfm_url: "https://www.last.fm/music/4am+Kru/Incognito+Rhythm",
+			rym_url: "https://rateyourmusic.com/release/album/4am-kru/incognito-rhythm/",
+			spotify_url: "https://open.spotify.com/album/7t8oxzwG13zdupLmm0Cwix?si=-tvyqb7RSNm2Zgv1pgmn6Q",
+			year_of_release: "2024",
+			year_of_discovery: "2024",
+			genres: "Electronic; Drum and bass; Breakbeat; Jungle; Happy hardcore; Ragga jungle",
+			my_rating: 8.5,
+			my_review: "",
+		}
 	},
 
 	THE: {
@@ -391,6 +401,16 @@ const database = {
 		},
 
 
+		"amorphous_androgynous__tales_of_ephidrina": {
+			lastfm_url: "https://www.last.fm/music/Amorphous+Androgynous/Tales+of+Ephidrina",
+			rym_url: "https://rateyourmusic.com/release/album/amorphous-androgynous/tales-of-ephidrina/",
+			spotify_url: "https://open.spotify.com/album/4SNliyiumphhCLF7mPnAaJ?si=ojSSf7NeQ3uJRy0SgoHIwA",
+			year_of_release: "1994",
+			genres: "IDM; Ambient techno; Techno; Electronic",
+			my_rating: 9.0,
+			my_review: "Electronic; Ambient techno; Ambient dub; Ambient",
+			year_of_discovery: "2024",
+		},
 		"arctic_monkeys__favourite_worst_nightmare": {
 			lastfm_url: "https://www.last.fm/music/Arctic+Monkeys/Favourite+Worst+Nightmare",
 			rym_url: "https://rateyourmusic.com/release/album/arctic-monkeys/favourite-worst-nightmare/",
@@ -740,6 +760,40 @@ const database = {
 		},
 
 
+		//
+		"brad_mehldau__suite_april_2020": {
+			lastfm_url: "https://www.last.fm/music/Brad+Mehldau/Suite:+April+2020",
+			rym_url: "https://rateyourmusic.com/release/album/brad-mehldau/suite-april-2020/",
+			spotify_url: "",
+			year_of_release: "2020",
+			year_of_discovery: "2024",
+			genres: "Jazz; Nu jazz; Jazz fusion",
+			my_rating: 9.0,
+			my_review: "",
+		},
+		"brad_mehldau__taming_the_dragon": {
+			lastfm_url: "https://www.last.fm/music/Brad+Mehldau/Mehliana:+Taming+the+Dragon",
+			rym_url: "https://rateyourmusic.com/release/album/brad-mehldau-mark-guiliana/mehliana-taming-the-dragon/",
+			spotify_url: "https://open.spotify.com/album/7veyvtvK49ca1UMEEmZ00q?si=umUxOr2ARvODaPAw0DqS_g",
+			year_of_release: "2014",
+			year_of_discovery: "2024",
+			genres: "Jazz; Nu jazz; Jazz fusion",
+			my_rating: 9.0,
+			my_review: "",
+		},
+
+
+		"bt__ima": {
+			lastfm_url: "https://www.last.fm/music/BT/Ima",
+			rym_url: "https://rateyourmusic.com/release/album/bt/ima/",
+			spotify_url: "",
+			year_of_release: "1995",
+			year_of_discovery: "2024",
+			genres: "Electronic; Trance; Acid trance",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
 		"Biréli_Lagrène__electric_side": {
 			lastfm_url: "https://www.last.fm/music/Bir%C3%A9li+Lagr%C3%A8ne/Electric+Side",
 			rym_url: "https://rateyourmusic.com/release/album/bireli-lagrene/electric-side/",
@@ -802,16 +856,6 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
-		},
-		"brad_mehldau__taming_the_dragon": {
-			lastfm_url: "https://www.last.fm/music/Brad+Mehldau/Mehliana:+Taming+the+Dragon",
-			rym_url: "https://rateyourmusic.com/release/album/brad-mehldau-mark-guiliana/mehliana-taming-the-dragon/",
-			spotify_url: "https://open.spotify.com/album/7veyvtvK49ca1UMEEmZ00q?si=umUxOr2ARvODaPAw0DqS_g",
-			year_of_release: "2014",
-			year_of_discovery: "2024",
-			genres: "Jazz; Nu jazz; Jazz fusion",
-			my_rating: 9.0,
-			my_review: "",
 		},
 	},
 	
@@ -972,6 +1016,36 @@ const database = {
 		},
 
 
+		"dispirited_spirits__the_redshift_blues": {
+			lastfm_url: "https://www.last.fm/music/Dispirited+Spirits/The+Redshift+Blues",
+			rym_url: "https://rateyourmusic.com/release/album/dispirited-spirits/the-redshift-blues/",
+			spotify_url: "",
+			year_of_release: "2024",
+			year_of_discovery: "2024",
+			genres: "Midwest emo; Progressive rock; Post-rock; Math rock",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"daniel_weiss__the_vortex": {
+			lastfm_url: "https://www.last.fm/music/daniel+weiss/The+Vortex",
+			rym_url: "https://rateyourmusic.com/release/album/daniel-weiss/the-vortex/",
+			spotify_url: "",
+			year_of_release: "2024",
+			year_of_discovery: "2024",
+			genres: "Jazz Fusion; Jazz rock; Progressive metal; Progressive rock",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"doechii__alligator_bites_never_heal": {
+			lastfm_url: "https://www.last.fm/music/Doechii/Alligator+Bites+Never+Heal",
+			rym_url: "https://rateyourmusic.com/release/mixtape/doechii/alligator-bites-never-heal/",
+			spotify_url: "https://open.spotify.com/album/60UzB8mOCMpc7xkuJE6Bwc?si=i3aRVQsWT7GnnnUCzt7SYA",
+			year_of_release: "2024",
+			year_of_discovery: "2024",
+			genres: "Rap; R&B; Boom bap",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"deaths_dynamic_shroud__reality_2_archive_of_fading_mist": { 
 			lastfm_url: "https://www.last.fm/music/death%27s+dynamic+shroud/Reality+2+:+Archive+of+Fading+Mist+(part+ii)",
 			rym_url: "https://rateyourmusic.com/release/album/deaths-dynamic-shroud_wmv/reality-2-archive-of-fading-mist-part-ii/",
@@ -1298,6 +1372,26 @@ const database = {
 		},
 
 
+		"greg_isakov__this_empty_northern_hemisphere": {
+			lastfm_url: " https://rateyourmusic.com/release/album/gregory-alan-isakov/this-empty-northern-hemisphere/",
+			rym_url: " https://rateyourmusic.com/release/album/gregory-alan-isakov/this-empty-northern-hemisphere/",
+			spotify_url: "",
+			year_of_release: "2008",
+			year_of_discovery: "2024",
+			genres: "Indie folk; Americana; Country",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"global_communication__7614": {
+			lastfm_url: "https://www.last.fm/music/Global+Communication/76:14",
+			rym_url: "https://rateyourmusic.com/release/album/global-communication/76_14/",
+			spotify_url: "https://open.spotify.com/album/0CCYU4pfINH3Lt5krDd9JO?si=56BX_twVQxugz7uCZTwwDg",
+			year_of_release: "1994",
+			year_of_discovery: "2024",
+			genres: "Electronic; Ambient; Ambient techno; Downtempo; Drone; Space ambient",
+			my_rating: 10.0,
+			my_review: "",
+		},
 		"garaj_mahal__woot": {
 			lastfm_url: "https://www.last.fm/music/Garaj+Mahal/wOOt",
 			rym_url: "https://rateyourmusic.com/release/album/garaj-mahal/w00t/",
@@ -1494,6 +1588,7 @@ const database = {
 			year_of_release: "2017",
 			year_of_discovery: "2018",
 			genres: "Wonky; Drill and bass; Hybrid trap; Bubblegum bass; Glitch hop; Electronic",
+			custom_cover_url: "https://e.snmc.io/i/600/s/1d1b3a0374c280a392f0f8eed8bdac74/7047365/iglooghost-steel-mogu-Cover-Art.png",
 			my_rating: 9.0,
 			my_review: "",
 		},	
@@ -1729,6 +1824,18 @@ const database = {
 			my_review: "",
 		},
 
+		//
+		"jesus_molina__departing": {
+			lastfm_url: "https://www.last.fm/music/Jesus+Molina/Departing",
+			rym_url: "https://rateyourmusic.com/release/album/jesus-molina/departing/",
+			spotify_url: "",
+			custom_cover_url: "https://i.scdn.co/image/ab67616d0000b273869c2360bb37a1fa34923957",
+			year_of_release: "2020",
+			year_of_discovery: "2024",
+			genres: "Jazz fusion; Jazz; Latin jazz; Post-Bop",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"jesus_molina__agape": {
 			lastfm_url: "https://www.last.fm/music/Jesus+Molina/Agape",
 			rym_url: "https://rateyourmusic.com/release/album/jesus-molina/agape/",
@@ -1740,6 +1847,29 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
+		},
+
+
+		"jessica_pratt__here_in_the_pitch": {
+			lastfm_url: "https://www.last.fm/music/Jessica+Pratt/Here+In+The+Pitch",
+			rym_url: "https://rateyourmusic.com/release/album/jessica-pratt/here-in-the-pitch/",
+			spotify_url: "https://www.last.fm/music/Jessica+Pratt/Here+In+The+Pitch",
+			year_of_release: "2023",
+			year_of_discovery: "2024",
+			genres: "Folk; Bossa nova; Folk pop; Psychedelic folk",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"jason_isbell__weathervanes": {
+			lastfm_url: "https://www.last.fm/music/Jason+Isbell+and+The+400+Unit/Weathervanes",
+			rym_url: "https://rateyourmusic.com/release/album/jason-isbell-and-the-400-unit/weathervanes/",
+			spotify_url: "",
+			year_of_release: "2023",
+			year_of_discovery: "2024",
+			genres: "Country; Americana; Indie folk",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.SPECTRUM_PULSE
 		},
 		"joyce_moreno__natureza": {
 			lastfm_url: "https://www.last.fm/music/Joyce+Moreno/Natureza",
@@ -1902,6 +2032,17 @@ const database = {
 		},
 		
 
+		"kitaro_ki": {
+			lastfm_url: "https://www.last.fm/music/KIYO%EF%BC%8ASEN/Trick+or+Treat",
+			rym_url: "https://rateyourmusic.com/release/album/kiyo_sen/trick-or-treat/",
+			spotify_url: "",
+			year_of_release: "1981",
+			year_of_discovery: "2024",
+			genres: "New Age; Ambient; Progressive rock; Not on spotify",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
 		"kiyo_sen__trick_or_treat": {
 			lastfm_url: "https://www.last.fm/music/KIYO%EF%BC%8ASEN/Trick+or+Treat",
 			rym_url: "https://rateyourmusic.com/release/album/kiyo_sen/trick-or-treat/",
@@ -2078,6 +2219,16 @@ const database = {
 		},
 
 
+		"lisa_gerrard__the_silver_tree": {
+			lastfm_url: "https://www.last.fm/music/Lone/Galaxy+Garden",
+			rym_url: "https://rateyourmusic.com/release/album/lisa-gerrard/the-silver-tree/",
+			spotify_url: "https://open.spotify.com/album/2DFO6AjnwgPAMQ0xYMR8JM?si=EsgAcNWLS1CUaYMhR5i69A",
+			year_of_release: "2006",
+			year_of_discovery: "2024",
+			genres: "Neoclassical darkwave; Ambient",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"lone__galaxy_garden": {
 			lastfm_url: "https://www.last.fm/music/Lone/Galaxy+Garden",
 			rym_url: "https://rateyourmusic.com/release/album/lone/galaxy-garden/",
@@ -2484,6 +2635,18 @@ const database = {
 			my_review: "",
 		},
 
+
+		"niknak__ireti": {
+			lastfm_url: "https://www.last.fm/music/NikNak/Ireti",
+			rym_url: "https://rateyourmusic.com/release/album/niknak/ireti/",
+			spotify_url: "https://open.spotify.com/album/0thxej4SzQ0M6yGnpvseby?si=hj1Yv1MtRO6jGDshwfY1tA",
+			year_of_release: "2024",
+			year_of_discovery: "2024",
+			genres: "Electronic; Breakbeat; Ambient techno; Ambient",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE,
+		},
 		"native_construct__quiet_world": {
 			lastfm_url: "https://www.last.fm/music/Native+Construct/Quiet+World",
 			rym_url: "https://rateyourmusic.com/release/album/native-construct/quiet-world/",
@@ -2749,6 +2912,28 @@ const database = {
 		},
 
 
+		"priest__the_death_of_mishima": {
+			lastfm_url: "https://www.last.fm/music/%E7%A5%AD%E5%8F%B8/Death+of+Mishima",
+			rym_url: "https://rateyourmusic.com/release/album/%E7%A5%AD%E5%8F%B8/death-of-mishima/",
+			spotify_url: "",
+			year_of_release: "2024",
+			year_of_discovery: "2024",
+			genres: "Drone; Ambient; Nature recordings; Not on spotify",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
+		"pangaea__changing_channels": {
+			lastfm_url: "https://www.last.fm/music/Pangaea/Changing+Channels",
+			rym_url: "https://rateyourmusic.com/release/album/plantoid/terrapath/",
+			spotify_url: "",
+			year_of_release: "2023",
+			year_of_discovery: "2024",
+			genres: "",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.STEREOGUM
+		},
 		"plantoid__terrapath": {
 			lastfm_url: "https://www.last.fm/music/Plantoid/Terrapath",
 			rym_url: "https://rateyourmusic.com/release/album/plantoid/terrapath/",
@@ -2767,7 +2952,7 @@ const database = {
 			year_of_release: "2001",
 			year_of_discovery: "2024",
 			genres: "Ambient; New age; Downtempo",
-			my_rating: 8.0,
+			my_rating: 9.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.XENOPHILE
 		},
@@ -2951,6 +3136,17 @@ const database = {
 		},
 	
 
+		"rafael_toral__spectral_evolution": {
+			lastfm_url: "https://www.last.fm/music/Rafael+Toral/Spectral+Evolution",
+			rym_url: "https://rateyourmusic.com/release/album/rafael-toral/spectral-evolution/",
+			spotify_url: "https://open.spotify.com/album/3kbPhX2YtREsebMrmN74fN?si=kDGEu52QTGCzJLvOFkX7vA",
+			year_of_release: "2024",
+			year_of_discovery: "2024",
+			genres: "Ambient; Drone; Electroacoustic; Nature recordings; Experimental",
+			my_rating: 8.0,
+			my_review: "Discovered this wonderful album from this list - https://www.stereogum.com/2290265/the-10-best-experimental-albums-of-2024/lists/album-list/",
+			recommended_by: TrustworthyMusicReviewers.STEREOGUM
+		},
 		"return_to_forever__romantic_warrior": {
 			lastfm_url: "https://www.last.fm/music/Return+to+Forever/Romantic+Warrior",
 			rym_url: "https://rateyourmusic.com/release/album/return-to-forever/romantic-warrior/",
@@ -3142,6 +3338,28 @@ const database = {
 		},
 
 
+		"sean_ashe__flux": {
+			lastfm_url: "https://www.last.fm/music/Sean+Ashe/Flux",
+			rym_url: "https://rateyourmusic.com/release/album/sean_ashe/flux/",
+			spotify_url: "https://open.spotify.com/album/2odt4mTHjguvxz3MDppEFQ?si=uVnbnM8gShiFEwo8GnNy2w",
+			year_of_release: "2016",
+			year_of_discovery: "2024",
+			genres: "Progressive rock; Jazz fusion; Progressive metal",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.TONE_ZONE
+		},
+		"shpongle__ineffable_mysteries_from_shpongleland": {
+			lastfm_url: "https://www.last.fm/music/Shpongle/Ineffable+Mysteries+From+Shpongleland",
+			rym_url: "https://rateyourmusic.com/release/album/shpongle/ineffable-mysteries-from-shpongleland/",
+			spotify_url: "https://open.spotify.com/album/6kXYzl5HwGgFxsX1M8aTKp?si=XFlZ5DVrTma6JpO-QeW_uQ",
+			year_of_release: "2009",
+			year_of_discovery: "2024",
+			genres: "Psybient: Psytrance; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
 		"sababa5__aspan": {
 			lastfm_url: "https://www.last.fm/music/Sababa+5/Aspan",
 			rym_url: "https://rateyourmusic.com/release/album/sababa-5/aspan/",
@@ -3390,6 +3608,17 @@ const database = {
 		},
 
 
+		"takashi_kokubo__music_for_a_cosmic_garden": {
+			lastfm_url: "https://www.last.fm/music/Takashi+Kokubo/Music+for+a+Cosmic+Garden",
+			rym_url: "https://rateyourmusic.com/release/album/%E5%B0%8F%E4%B9%85%E4%BF%9D%E9%9A%86-andrea-esperti/music-for-a-cosmic-garden/",
+			spotify_url: "https://open.spotify.com/album/5IvY4rwLbkVSPbh0eLUoSI?si=HwFDMEBjS3abZyQBdKuA8A",
+			year_of_release: "2023",
+			year_of_discovery: "2024",
+			genres: "Ambient; Drone; New age; Space ambient; Nature recordings",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
 		"telegraph__mir": {
 			lastfm_url: "https://www.last.fm/music/Telegraph/Mir",
 			rym_url: "https://rateyourmusic.com/release/album/telegraph/mir/",
@@ -3734,6 +3963,16 @@ const database = {
 		},
 
 
+		"yosi_horikawa__wandering": {
+			lastfm_url: "https://www.last.fm/music/Yosi+Horikawa/Wandering",
+			rym_url: "https://rateyourmusic.com/release/ep/yosi-horikawa/wandering/",
+			spotify_url: "https://open.spotify.com/album/0otC2s8AupBtfGUe0UUhYg?si=uBD0WCehSk2XxJIJyJut6A",
+			year_of_release: "2012",
+			year_of_discovery: "2024",
+			genres: "Electroacoustic; IDM; Ambient",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"yu_mikaye__katamari_damacy_soundtrack": {
 			lastfm_url: "https://www.last.fm/music/Yu+Miyake/Katamari+Damacy+Soundtrack+%22Katamari+Fortissimo+Damacy%22",
 			rym_url: "",
