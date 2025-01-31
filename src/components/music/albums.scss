@@ -1,0 +1,76 @@
+
+#music-page {
+    /*
+    overflow-y: hidden;
+    height: 97vh;
+    */
+}
+
+#top-albums-list-sidebar .changeViewOfToplist-btns {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.top-albums-list.view-as-list {
+    grid-template-columns: 1fr;
+
+    .albumInfoContainer {
+        display: flex;
+        flex-direction: row;
+        // background-color: var(--album-info-grid-item-bg-color);
+        background-color: rgba(38, 38, 44, 0.422);
+
+        p.albumNameText {
+            font-size: 1.6rem;
+            color: var(--text);
+            margin: 0;
+        }
+        p.artistNameText {
+            font-size: 1.3em;
+            color: var(--text-slightly-darker);
+            margin: 0;
+        }
+        p.albumYearText {
+            font-size: 1.1rem;
+            color: var(--text-darker);
+            margin: 0;
+        }
+
+        .genres {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            max-width: fit-content !important;
+        }
+
+        .albumRatingInfo p {
+            font-size: 1.5rem;
+        }
+    }
+
+    img.albumCover {
+        width: 20%;
+        padding-right: 18px;
+        filter: brightness(1.0);
+    }
+
+    .albumInfo {
+
+    }
+
+    div.albumInfoContainer div.albumInfo > div {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    span.review-summary {
+        color: var(--text) !important;
+        font-size: 0.9rem;
+    }
+    
+    a {
+        margin-bottom: 35px;
+    }
+}

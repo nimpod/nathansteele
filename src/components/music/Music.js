@@ -3,20 +3,26 @@ import { connect }  from 'react-redux';
 import { HashLink } from 'react-router-hash-link';
 import $ from "jquery";
 
-import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
-import { AlbumProperties } from '../../js/enums.js';
 import TopTracksList from './TopTracksList.js';
 import AlbumGridElement from './AlbumGridElement';
+import AlbumListElement from './AlbumListElement.js';
 import { event_listener_for_top_albums_list_nav_item } from "../../js/main.js";
 import {
     handle_filter_button_toggling_stuff,
     generate_colour_v2,
     generate_colour_v1,
+    get_actual_button
     // toggle_dropdown_list,
     // remove_genre_duplicates,
     // toggle_dropdown_list_arrow_icon,
     // remove_class_from_item_when_user_clicks_outside_of_item
 } from '../../js/helpers.js';
+
+import { ViewType, AlbumProperties } from '../../js/enums.js';
+
+import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
+import { ReactComponent as ViewAsListIcon } from "../../icons/showList.svg";
+import { ReactComponent as ViewAsGridIcon } from "../../icons/showGrid.svg";
 
 
 const MIN_GENRE_COUNT_TO_BE_DISPLAYED = 4;
@@ -40,6 +46,9 @@ class Music extends Component {
         __search_box_contains_text: false,
         __search_box_was_clicked: false,
         __search_text: "",
+
+        // view stuff...
+        __view_type: ViewType.GRID,
 
         // defaults...
         __default_genre_filter: "All genres",
@@ -592,6 +601,39 @@ class Music extends Component {
     }
 
     /**
+     * Change view type
+     * @param {*} selected_view_type 
+     */
+    change_view = (e, selected_view_type) => {
+        let toplist = document.getElementsByClassName('top-albums-list')[0];
+
+        // find the actual button...
+        let tag_name = (e.target.tagName).toString();
+        let actual_button = get_actual_button(e.target, tag_name);
+
+        // change view type in state and html...
+        if (selected_view_type === ViewType.LIST) {
+            this.setState({__view_type: ViewType.LIST});
+            toplist.classList.add('view-as-list');
+            toplist.classList.remove('view-as-grid');
+        } else if (selected_view_type === ViewType.GRID) {
+            this.setState({__view_type: ViewType.GRID});
+            toplist.classList.remove('view-as-list');
+            toplist.classList.add('view-as-grid');
+        }
+        
+        // toggle .active class on buttons
+        var by_type_classname = "albums-change-view-btn";
+        if (actual_button.classList.contains(by_type_classname)) {
+            var active_btns = document.getElementsByClassName(by_type_classname + ' active');
+            while (active_btns.length > 0) {
+                active_btns[0].classList.remove('active');
+            }
+            actual_button.classList.add('active');
+        }
+    }
+
+    /**
      * 
      * @param {*} e 
      */
@@ -627,7 +669,7 @@ class Music extends Component {
      * @returns 
      */
     render() {
-        //console.log(this.props);
+        // console.log(this.props);
 
         // get items for current page...
         const albums_displayed = this.state.__filtered_data
@@ -637,7 +679,8 @@ class Music extends Component {
                 let artist_name_included = album.artist_name.toLowerCase().includes(search_text);
                 return album_name_included || artist_name_included;
             });
-        
+        console.log(albums_displayed);
+
         let less_than_12_albums_on_display = "";
         if (albums_displayed.length <= 12) {
             less_than_12_albums_on_display = `there-are-less-than-12-albums-on-display`;
@@ -655,6 +698,9 @@ class Music extends Component {
         const all_years_album_count = this.find_num_of_albums(AlbumProperties.YEAR.toString(), this.state.__default_year_filter);
         const all_reviewers_album_count = this.find_num_of_albums(AlbumProperties.RECOMMENDED_BY.toString(), this.state.__default_reviewer_filter);
 
+        // view type...
+        const view_type_classname = (this.state.__view_type === ViewType.GRID) ? "view-as-grid" : "view-as-list";
+        
         // top tracks list (default to overall time period)
         let top_tracks_list = this.props.top_tracks.overall;
 
@@ -701,6 +747,23 @@ class Music extends Component {
                                     <div id='albums-searchbox' className='top-albums-list-sideSection'>
                                         <div className="searchbox">
                                             <input onChange={this.handle_searchbox_input} placeholder="search..." type="text" />
+                                        </div>
+                                    </div>
+
+                                    {/* Change view */}
+                                    <div id='top-albums-changeView' className='top-albums-list-sideSection changeViewOfToplist-container'>
+                                        <p className='sidebar-subsection-title'>Change view</p>
+                                        <div className='changeViewOfToplist-btns'>
+                                            <div className={this.state.__view_type === ViewType.LIST ? 'btn albums-change-view-btn active' : 'btn albums-change-view-btn'}
+                                                onClick={(e) => this.change_view(e, ViewType.LIST)}
+                                                title="View as list">
+                                                <ViewAsListIcon className='invertable-icon' />
+                                            </div>
+                                            <div className={this.state.__view_type === ViewType.GRID ? 'btn albums-change-view-btn active' : 'btn albums-change-view-btn'}
+                                                onClick={(e) => this.change_view(e, ViewType.GRID)}
+                                                title="View as grid">
+                                                <ViewAsGridIcon className='invertable-icon' />
+                                            </div>
                                         </div>
                                     </div>
 
@@ -831,12 +894,12 @@ class Music extends Component {
                                     </div>
                                 </div>
 
-                                <div className={`top-albums-list ${less_than_12_albums_on_display}`}>
+                                <div className={`top-albums-list ${less_than_12_albums_on_display} ${view_type_classname}`}>
                                     {albums_displayed.map(a => {
-                                        return <AlbumGridElement
-                                            album={a}
-                                            albumsList={albums_displayed}
-                                        />
+                                        if (this.state.__view_type === ViewType.LIST)
+                                            return <AlbumListElement album={a} />
+                                        else if (this.state.__view_type === ViewType.GRID)
+                                            return <AlbumGridElement album={a} />
                                     })}
                                 </div>
                             </div>

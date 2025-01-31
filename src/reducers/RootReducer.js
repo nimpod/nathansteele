@@ -132,7 +132,7 @@ const merge_albums_data = (init_state) => {
         if (v["artist_name_Japanese"]) {
             v["artist_name_displayed"] = v["artist_name"] + " [" + v["artist_name_Japanese"] + "]";
         }
-
+        
         if (v["genres"] !== undefined) {
             // convert from string representation to an actual list (because I'm storing the list of genres as a copy-and-pasted string from musicbee...)
             let arr = v["genres"].split(';');

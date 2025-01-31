@@ -3242,7 +3242,7 @@ picture:hover .img-content {
   */
 }
 :root {
-  --filters-section-width: 140px;
+  --filters-section-width: 170px;
 }
 .top-albums-list-innerContainer {
   display: grid;
@@ -3263,7 +3263,7 @@ picture:hover .img-content {
 }
 
 .sidebar-subsection-title {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-much-darker);
   opacity: 0.7;
   text-align: center;
@@ -3464,12 +3464,12 @@ div.btn.filter-list-by-artist-btn {
   position: fixed;
   */
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-row-gap: 0px;
   grid-column-gap: 6px;
 }
 .top-albums-list {
-  margin-left: 30px;
+  margin-left: 10px;
   padding-right: 10px;
   scroll-behavior: smooth;
 }
@@ -3502,6 +3502,7 @@ div.btn.filter-list-by-artist-btn {
 #top-albums-list-navigation .navItem p {
   vertical-align: middle;
   margin: 0 auto;
+  font-size: 0.65rem;
   color: var(--text);
 }
 #top-albums-list-navigation .navItem.active {

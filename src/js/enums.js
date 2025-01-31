@@ -24,6 +24,22 @@ export const SortableDirection = Object.freeze({
     ASC: enumValue("ascending"),
     DESC: enumValue("descending"),
 })
+export const SortableType = Object.freeze({
+    IMDB_AVG: enumValue("IMDB_avg_rating"),
+    IMDB_VOTES: enumValue("IMDB_num_votes"),
+    IMDB_DIFF: enumValue("IMDB_diff_score"),
+    MY_POS: enumValue("position"),
+    DURATION: enumValue("duration"),
+    YEAR: enumValue("year")
+});
+export const SortableTypeStr = Object.freeze({
+    MY_POS: "My order",
+    IMDB_AVG: "IMDB avg rating",
+    IMDB_VOTES: "IMDB popularity",
+    IMDB_DIFF: "IMDB diff score",
+    DURATION: "Duration",
+    YEAR: "Year of release"
+})
 export const ViewType = Object.freeze({
     LIST: "View as list",
     GRID: "View as grid",

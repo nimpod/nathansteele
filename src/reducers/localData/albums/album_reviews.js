@@ -285,7 +285,7 @@ const database = {
 			year_of_release: "1984",
 			year_of_discovery: "2023",
 			genres: "New age; Ambient; Neoclassical new age",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 
@@ -768,7 +768,7 @@ const database = {
 			year_of_release: "2020",
 			year_of_discovery: "2024",
 			genres: "Jazz; Nu jazz; Jazz fusion",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"brad_mehldau__taming_the_dragon": {
@@ -783,6 +783,17 @@ const database = {
 		},
 
 
+		"banco_de_gaia__last_train_to_lhasa": {
+			lastfm_url: "https://www.last.fm/music/Banco+De+Gaia/Last+Train+to+Lhasa+(Special+Edition)",
+			rym_url: "httphttps://rateyourmusic.com/release/album/banco-de-gaia/last-train-to-lhasa/",
+			spotify_url: "",
+			year_of_release: "1995",
+			year_of_discovery: "2024",
+			genres: "Electronic; Ambient techno; Ambient trance; Ambient dub; Psybient; New age; Tribal house",
+			my_rating: 8.5,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
 		"bt__ima": {
 			lastfm_url: "https://www.last.fm/music/BT/Ima",
 			rym_url: "https://rateyourmusic.com/release/album/bt/ima/",
@@ -1011,7 +1022,7 @@ const database = {
 			year_of_release: "2018",
 			year_of_discovery: "2023",
 			genres: "Tribal ambient; Turkish folk; Balkan folk; Darkwave; Neoclassical darkwave; Neo-classical",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 
@@ -1177,7 +1188,7 @@ const database = {
 			year_of_discovery: "2023",
 			genres: "ECM style jazz; Chamber jazz; Jazz fusion; Minimalism; Third stream; Jazz; Norwegian jazz",
 			themes: ["Norwegian"],
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK,
 		},
@@ -1373,7 +1384,7 @@ const database = {
 
 
 		"greg_isakov__this_empty_northern_hemisphere": {
-			lastfm_url: " https://rateyourmusic.com/release/album/gregory-alan-isakov/this-empty-northern-hemisphere/",
+			lastfm_url: " https://www.last.fm/music/Gregory+Alan+Isakov/This+Empty+Northern+Hemisphere",
 			rym_url: " https://rateyourmusic.com/release/album/gregory-alan-isakov/this-empty-northern-hemisphere/",
 			spotify_url: "",
 			year_of_release: "2008",
@@ -1409,7 +1420,7 @@ const database = {
 			year_of_release: "2022",
 			year_of_discovery: "2023",
 			genres: "EDM; Hybrid trap; Bass house; Breakbeat; Electronic",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"guy_farley__cashback_ost": {
@@ -1483,7 +1494,7 @@ const database = {
 			year_of_release: "2012",
 			year_of_discovery: "2023",
 			genres: "Jazz; Jazz fusion; Third stream jazz",
-			my_rating: 8.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 		"hiromi__brain": {
@@ -1513,13 +1524,13 @@ const database = {
 			year_of_release: "2016",
 			year_of_discovery: "2023",
 			genres: "Jazz fusion; Jazz; Post-Bop",
-			my_rating: 8.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 
 
 		"hakushi_hasegawa__somoku_hodo": {
-			lastfm_url: "https://www.last.fm/music/hakushi+hasegawa/Somoku+Hodo",
+			lastfm_url: "https://www.last.fm/music/Hakushi+Hasegawa/Somoku+Hodo",
 			rym_url: "https://rateyourmusic.com/release/ep/%E9%95%B7%E8%B0%B7%E5%B7%9D%E7%99%BD%E7%B4%99/%E8%8D%89%E6%9C%A8%E8%90%8C%E5%8B%95-somoku-hodo/",
 			spotify_url: "https://open.spotify.com/album/3RRuuRZr2mQT0WoyNHNoBd?si=IULOKUyNTK-_QvRSxgvErA",
 			year_of_release: "2018",
@@ -1828,12 +1839,11 @@ const database = {
 		"jesus_molina__departing": {
 			lastfm_url: "https://www.last.fm/music/Jesus+Molina/Departing",
 			rym_url: "https://rateyourmusic.com/release/album/jesus-molina/departing/",
-			spotify_url: "",
-			custom_cover_url: "https://i.scdn.co/image/ab67616d0000b273869c2360bb37a1fa34923957",
+			spotify_url: "https://open.spotify.com/album/0qwe5VPmlFIDkXACdSWXw2?si=-oVm7Ny3TDy-b0g3T1lMRg",
 			year_of_release: "2020",
 			year_of_discovery: "2024",
 			genres: "Jazz fusion; Jazz; Latin jazz; Post-Bop",
-			my_rating: 8.0,
+			my_rating: 9.0,
 			my_review: "",
 		},
 		"jesus_molina__agape": {
@@ -2400,7 +2410,7 @@ const database = {
 			year_of_release: "2023",
 			year_of_discovery: "2023",
 			genres: "Jazz fusion; Progressive big band; Jazz; J-jazz",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"metamatics__mind_mushing_git": {
@@ -2518,7 +2528,7 @@ const database = {
 			year_of_release: "2021",
 			year_of_discovery: "2021",
 			genres: "Art pop; Electropop; Synthpop; Electronic",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"meridian_brothers__el_grupo_renacimiento": {
@@ -2962,7 +2972,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/6JmTEwuDRW986lE6RM6G7j?si=wv-xv-O7ROGRmPfOhBAIvg",
 			year_of_release: "2012",
 			genres: "Chamber jazz; Nu jazz; Downtempo; Jazz",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			year_of_discovery: "2022",
 			recommended_by: TrustworthyMusicReviewers.DEEP_CUTS
@@ -3003,7 +3013,7 @@ const database = {
 			year_of_release: "1994",
 			year_of_discovery: "2021",
 			genres: "Trip hop; Chillout; Dark cabaret",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"plaid__not_for_threes": {
@@ -3522,7 +3532,7 @@ const database = {
 			year_of_release: "1999",
 			year_of_discovery: "2022",
 			genres: "Post-rock; Ambient; Minimalism",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"sophie__oil_of_every_pearls_un_insides": {

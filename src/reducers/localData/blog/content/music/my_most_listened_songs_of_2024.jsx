@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter, BrowserRouter } from 'react-router-dom';
 import TrackMetadataComponent from './track_metadata_component.js';
+import SongFooterComponent from './song_footer_component.js';
 import ScrobbleDataSummary from './scrobble_data_per_year_summary.js';
 import $ from "jquery";
 
@@ -47,7 +48,12 @@ export const post = () => (
                 Patrick O'Hearn wasn't an artist I even knew about until June 2024. 
                 This song, and the album it's from have gradually become some of my favourite ambient music of all time. Can't believe I was missing out for so long!
                 </p>
-                <p className='track-albumLink'><Link to='/music/patrick_ohearn-so_flows_the_current'>Patrick O'Hearn - So Flows The Current</Link></p>
+                <SongFooterComponent
+                    review_id='patrick_ohearn-so_flows_the_current'
+                    album_artist="Patrick O'Hearn"
+                    album_name="So Flows The Current"
+                    youtube="https://www.youtube.com/embed/xkmXAh1dp-A?si=QRsb46zbTLldb7rK"
+                />
             </div>
         </div>
 

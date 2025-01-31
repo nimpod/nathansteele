@@ -18,35 +18,35 @@ class ScrobbleDataSummary extends Component {
                 <tbody>
                     <tr>
                         <td>2024</td>
-                        <td data-totalScrobbles={SCD["2024"]["total_scrobbles"]}>{SCD["2024"]["total_scrobbles"]}</td>
-                        <td data-tracksScrobbled={SCD["2024"]["tracks_scrobbled"]}>{SCD["2024"]["tracks_scrobbled"]}</td>
-                        <td data-scrobblesPerDayAvg={SCD["2024"]["scrobbles_per_day_avg"]}>{SCD["2024"]["scrobbles_per_day_avg"]}</td>
-                        <td data-artistsScrobbled={SCD["2024"]["artists_scrobbled"]}>{SCD["2024"]["artists_scrobbled"]}</td>
-                        <td data-albumsScrobbled={SCD["2024"]["albums_scrobbled"]}>{SCD["2024"]["albums_scrobbled"]}</td>
+                        <td data-totalscrobbles={SCD["2024"]["total_scrobbles"]}>{SCD["2024"]["total_scrobbles"]}</td>
+                        <td data-tracksscrobbled={SCD["2024"]["tracks_scrobbled"]}>{SCD["2024"]["tracks_scrobbled"]}</td>
+                        <td data-scrobblesperday={SCD["2024"]["scrobbles_per_day_avg"]}>{SCD["2024"]["scrobbles_per_day_avg"]}</td>
+                        <td data-artistsscrobbled={SCD["2024"]["artists_scrobbled"]}>{SCD["2024"]["artists_scrobbled"]}</td>
+                        <td data-albumsscrobbled={SCD["2024"]["albums_scrobbled"]}>{SCD["2024"]["albums_scrobbled"]}</td>
                     </tr>
                     <tr>
                         <td>2023</td>
-                        <td data-totalScrobbles={SCD["2023"]["total_scrobbles"]}>{SCD["2023"]["total_scrobbles"]}</td>
-                        <td data-tracksScrobbled={SCD["2023"]["tracks_scrobbled"]}>{SCD["2023"]["tracks_scrobbled"]}</td>
-                        <td data-scrobblesPerDayAvg={SCD["2023"]["scrobbles_per_day_avg"]}>{SCD["2023"]["scrobbles_per_day_avg"]}</td>
-                        <td data-artistsScrobbled={SCD["2023"]["artists_scrobbled"]}>{SCD["2023"]["artists_scrobbled"]}</td>
-                        <td data-albumsScrobbled={SCD["2023"]["albums_scrobbled"]}>{SCD["2023"]["albums_scrobbled"]}</td>
+                        <td data-totalscrobbles={SCD["2023"]["total_scrobbles"]}>{SCD["2023"]["total_scrobbles"]}</td>
+                        <td data-tracksscrobbled={SCD["2023"]["tracks_scrobbled"]}>{SCD["2023"]["tracks_scrobbled"]}</td>
+                        <td data-scrobblesperday={SCD["2023"]["scrobbles_per_day_avg"]}>{SCD["2023"]["scrobbles_per_day_avg"]}</td>
+                        <td data-artistsscrobbled={SCD["2023"]["artists_scrobbled"]}>{SCD["2023"]["artists_scrobbled"]}</td>
+                        <td data-albumsscrobbled={SCD["2023"]["albums_scrobbled"]}>{SCD["2023"]["albums_scrobbled"]}</td>
                     </tr>
                     <tr>
                         <td>2022</td>
-                        <td data-totalScrobbles={SCD["2022"]["total_scrobbles"]}>{SCD["2022"]["total_scrobbles"]}</td>
-                        <td data-tracksScrobbled={SCD["2022"]["tracks_scrobbled"]}>{SCD["2022"]["tracks_scrobbled"]}</td>
-                        <td data-scrobblesPerDayAvg={SCD["2022"]["scrobbles_per_day_avg"]}>{SCD["2022"]["scrobbles_per_day_avg"]}</td>
-                        <td data-artistsScrobbled={SCD["2022"]["artists_scrobbled"]}>{SCD["2022"]["artists_scrobbled"]}</td>
-                        <td data-albumsScrobbled={SCD["2022"]["albums_scrobbled"]}>{SCD["2022"]["albums_scrobbled"]}</td>
+                        <td data-totalscrobbles={SCD["2022"]["total_scrobbles"]}>{SCD["2022"]["total_scrobbles"]}</td>
+                        <td data-tracksscrobbled={SCD["2022"]["tracks_scrobbled"]}>{SCD["2022"]["tracks_scrobbled"]}</td>
+                        <td data-scrobblesperday={SCD["2022"]["scrobbles_per_day_avg"]}>{SCD["2022"]["scrobbles_per_day_avg"]}</td>
+                        <td data-artistsscrobbled={SCD["2022"]["artists_scrobbled"]}>{SCD["2022"]["artists_scrobbled"]}</td>
+                        <td data-albumsscrobbled={SCD["2022"]["albums_scrobbled"]}>{SCD["2022"]["albums_scrobbled"]}</td>
                     </tr>
                     <tr>
                         <td>2021</td>
-                        <td data-totalScrobbles={SCD["2022"]["total_scrobbles"]}>{SCD["2021"]["total_scrobbles"]}</td>
-                        <td data-tracksScrobbled={SCD["2021"]["tracks_scrobbled"]}>{SCD["2021"]["tracks_scrobbled"]}</td>
-                        <td data-scrobblesPerDayAvg={SCD["2021"]["scrobbles_per_day_avg"]}>{SCD["2021"]["scrobbles_per_day_avg"]}</td>
-                        <td data-artistsScrobbled={SCD["2021"]["artists_scrobbled"]}>{SCD["2021"]["artists_scrobbled"]}</td>
-                        <td data-albumsScrobbled={SCD["2021"]["albums_scrobbled"]}>{SCD["2021"]["albums_scrobbled"]}</td>
+                        <td data-totalscrobbles={SCD["2022"]["total_scrobbles"]}>{SCD["2021"]["total_scrobbles"]}</td>
+                        <td data-tracksscrobbled={SCD["2021"]["tracks_scrobbled"]}>{SCD["2021"]["tracks_scrobbled"]}</td>
+                        <td data-scrobblesperday={SCD["2021"]["scrobbles_per_day_avg"]}>{SCD["2021"]["scrobbles_per_day_avg"]}</td>
+                        <td data-artistsscrobbled={SCD["2021"]["artists_scrobbled"]}>{SCD["2021"]["artists_scrobbled"]}</td>
+                        <td data-albumsscrobbled={SCD["2021"]["albums_scrobbled"]}>{SCD["2021"]["albums_scrobbled"]}</td>
                     </tr>
                 </tbody>
             </table>

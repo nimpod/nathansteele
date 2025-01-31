@@ -11,6 +11,7 @@ import './css/sassy_styles/LandingPage.min.css';
 import './css/sassy_styles/topbar.min.css';
 import './css/sassy_styles/sidebar.min.css';
 import './css/sassy_styles/tooltip.min.css';
+import './css/sassy_styles/albums.min.css';
 
 import App from './App';
 import RootReducer from './reducers/RootReducer';

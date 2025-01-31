@@ -13,6 +13,7 @@ import { ReactComponent as SortDescendingIcon } from "../../icons/sortDescending
 import { ReactComponent as ViewAsListIcon } from "../../icons/showList.svg";
 import { ReactComponent as ViewAsGridIcon } from "../../icons/showGrid.svg";
 import { ReactComponent as ResetFiltersIcon } from "../../icons/reset.svg";
+import { ViewType, SortableType, SortableDirection, SortableTypeStr } from '../../js/enums.js';
 import FilmsToplistGridElement from './FilmsToplistGridElement.js';
 import FilmsToplistListElement from './FilmsToplistListElement.js';
 import { 
@@ -32,40 +33,13 @@ import {
 let STARTING_PAGE_NUM = 0;
 let MAX_FILMS_PER_PAGE = 20;
 
-const enumValue = (name) => Object.freeze({toString: () => name});
-const SortableType = Object.freeze({
-    IMDB_AVG: enumValue("IMDB_avg_rating"),
-    IMDB_VOTES: enumValue("IMDB_num_votes"),
-    IMDB_DIFF: enumValue("IMDB_diff_score"),
-    MY_POS: enumValue("position"),
-    DURATION: enumValue("duration"),
-    YEAR: enumValue("year")
-});
-const SortableTypeStr = Object.freeze({
-    MY_POS: "My order",
-    IMDB_AVG: "IMDB avg rating",
-    IMDB_VOTES: "IMDB popularity",
-    IMDB_DIFF: "IMDB diff score",
-    DURATION: "Duration",
-    YEAR: "Year of release"
-})
-const SortableDirection = Object.freeze({
-    ASC: enumValue("ascending"),
-    DESC: enumValue("descending"),
-})
-const ViewType = Object.freeze({
-    LIST: "View as list",
-    GRID: "View as grid",
-})
-
 
 class Films extends React.Component {
     
     state = {
         // state representation of data that is displayed/filtered/sorted
         __filtered_data: Array.from(this.props.top_films)
-            .sort((a,b) => { return a['position'] - b['position'] })
-            .reverse(),
+            .sort((a,b) => { return a['position'] - b['position'] }),
 
         // state representation of number of pages
         __total_num_of_pages: Math.ceil(this.props.top_films.length / MAX_FILMS_PER_PAGE),
@@ -241,7 +215,8 @@ class Films extends React.Component {
             } else {
                 let anchor_tag = btn.childNodes[0];
                 for (let j = 0; j < this.state.__total_num_of_pages; j++) {
-                    let upper_bound = (this.state.__filtered_data.length - ((i-1)*MAX_FILMS_PER_PAGE));
+                    // let upper_bound = (this.state.__filtered_data.length - ((i-1)*MAX_FILMS_PER_PAGE));
+                    let upper_bound = (1 + ((i-1)*MAX_FILMS_PER_PAGE))
                     let lower_bound = upper_bound - MAX_FILMS_PER_PAGE + 1;
                     let text_content = upper_bound;
                     // let text_content = (upper_bound + " - " + lower_bound);
@@ -561,7 +536,9 @@ class Films extends React.Component {
                 <div className="section-inner">
                     <div className='frontpage films-container'>
                         <h3 className='page-title'>My top {this.props.top_films.length} favourite films of all time</h3>
+
                         <div className='films-controls'>
+                            {/* Search box */}
                             <div className='films-controls-subgroup searching-container'>
                                 <div className="searchbox">
                                     <input
@@ -571,6 +548,8 @@ class Films extends React.Component {
                                     />
                                 </div>
                             </div>
+
+                            {/* Change view */}
                             <div className='films-controls-subgroup changeViewOfToplist-container'>
                                 <div className='changeViewOfToplist-btns'>
                                     <div className={this.state.__view_type === ViewType.LIST ? 'btn films-change-view-btn active' : 'btn films-change-view-btn'}
@@ -585,6 +564,8 @@ class Films extends React.Component {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Sorting */}
                             <div className='films-controls-subgroup sorting-container'>
                                 <div className='sort-type-btns'>
                                     <div className='dropdown-list-sorting-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-sorting')}>
@@ -626,6 +607,8 @@ class Films extends React.Component {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Filtering */}
                             <div className='films-controls-subgroup filtering-container'>
                                 <div className='filter-by-genre-btns filter-by-something-container'>
                                     <div className='dropdown-list-genres-btn dropdown-list-btn' onClick={(e) => toggle_dropdown_list(e, 'dropdown-list-genres')}>
@@ -685,6 +668,8 @@ class Films extends React.Component {
                                     <ResetFiltersIcon className='invertable-icon' />
                                 </div>
                             </div>
+
+                            {/* For mobile view */}
                             <div className='toggle-controls-btn' onClick={this.toggle_controls}>
                                 <ControlsIcon className='invertable-icon' />
                             </div>

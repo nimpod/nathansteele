@@ -11,6 +11,7 @@ from LastFm import LastFM
 from LastFm import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
 from musicbee_helpers import MusicbeeHelpers
 from Helpers import export_list_to_json
+from Helpers import append_list_to_existing_json
 
 from urllib3.exceptions import InsecurePlatformWarning, InsecureRequestWarning
 from urllib3 import disable_warnings
@@ -55,13 +56,33 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
             # number of albums in toplist
             num_of_albums = len(toplist)
             print(f"There are {num_of_albums} albums in my toplist")
+
+            # keeps track of current position in list
+            pos = 0
+
+            # NOTE: Temporary code, that allows me to append to the existing json so I don't have to reiterate the whole list
+            #       I might not always want this... Because when I add new albums, this will be triggered
+            #       But in that situation I would rather regenerate the whole list...
+            append = False
+            with open(fullpath_to_json_output) as f:
+                data = json.load(f)
+                num_of_albums_already_in_list = len(data)
+                # if there are still more albums missing from the list...
+                if num_of_albums_already_in_list < num_of_albums:
+                    # tell my program that I want to append to the existing list (not create a new one)
+                    append = True
+                    # update current position in list
+                    pos = num_of_albums_already_in_list
+                    # modify the array so it starts from where we left off before
+                    toplist = toplist[pos:]
+                    # inform the user pos has been changed...
+                    print(f"You have changed to 'Append' mode, restarting from pos {pos}")
             
             # local version of list
-            albums_list = []
-            
-            # iterate over list...
+            albums_list = []            
             print('==================================================')
-            pos = 0
+
+            # iterate over list...
             for elem in toplist:
                 # position in toplist is just a counter
                 pos += 1
@@ -84,14 +105,21 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 review_id = f"{artist_name_v2}-{album_name_v2}"
 
                 # get more data from LastFM API...
-                data = lastfm.GET_album_info(artist_name=artist_name_v2, album_name=album_name_v2)
+                try:
+                    data = lastfm.GET_album_info(artist_name=artist_name_v2, album_name=album_name_v2)
+                    # print(data)
 
-                # TODO: Only do this if the lastfm api call returns nothing... Because most albums don't require this step...
-                artist_name_lastfm_version = artist_name_doesnt_match_with_lastfm(folder_name=folder_name, artist_name=artist_name)
-                album_name_lastfm_version = album_name_doesnt_match_with_lastfm(folder_name=folder_name, album_name=album_name)
+                    # TODO: Only do this if the lastfm api call returns nothing... Because most albums don't require this step...
+                    artist_name_lastfm_version = artist_name_doesnt_match_with_lastfm(folder_name=folder_name, artist_name=artist_name)
+                    album_name_lastfm_version = album_name_doesnt_match_with_lastfm(folder_name=folder_name, album_name=album_name)
 
-                # get more data via LastFM API...
-                data = lastfm.GET_album_info(artist_name=artist_name_lastfm_version, album_name=album_name_lastfm_version)
+                    # get more data via LastFM API...
+                    data = lastfm.GET_album_info(artist_name=artist_name_lastfm_version, album_name=album_name_lastfm_version)
+                except Exception as err:
+                    # something went wrong... Break out of loop before we loose all the data we've gathered so far
+                    print(err)
+                    break
+                
                 lastfm_url = ""
                 album_cover_url = ""
                 duration = 0    # mostly useless, lastfm rarely provides this statistic per album, I wish they did
@@ -102,7 +130,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     # get lastfm url...
                     if 'url' in data['album']:
                         lastfm_url = data['album']['url']
-                        # print(lastfm_url)
+                        print(lastfm_url)
                     else:
                         print('not url found :(')
                     
@@ -117,7 +145,9 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 artist_name = fix_artist_name_to_make_filtering_easier_in_javascript_world(artist_name=artist_name)
                 
                 # show progress...
-                print(f"{pos_padded}: {review_id} {lastfm_url}")
+                # print(f"{pos_padded}: {artist_name} - {album_name} - {lastfm_url} - {album_cover_url}")
+                print(f"{pos_padded}: {artist_name} - {album_name}")
+                print("")
 
                 # append to list...
                 albums_list.append({
@@ -129,9 +159,11 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     'album_cover_url': album_cover_url,
                     'review_id': review_id,
                 })
-                        
-            # export list to json...
-            export_list_to_json(fullpath_to_json_output, albums_list)
+            
+            if append:
+                append_list_to_existing_json(fullpath_to_json_output, albums_list)
+            else:
+                export_list_to_json(fullpath_to_json_output, albums_list)
 
 
 def album_name_doesnt_match_with_lastfm(folder_name, album_name):

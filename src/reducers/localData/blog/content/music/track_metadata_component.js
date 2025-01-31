@@ -9,14 +9,14 @@ class TrackMetadataComponent extends React.Component {
 
     render() {
         return (
-            <div className='track-info-header' onClick={(e) => this.handleOnClick(e)}>
+            <div className='track-info-header'>
                 <div className='track-pos'>{this.props.pos}</div>
                 <div className='track-scrobbles'>
                     <div className="track-scrobbles-inner" style={{width: ((this.props.scrobbles)/this.props.max_scrobbles)*100 + '%'}}>
                         {this.props.scrobbles} scrobbles
                     </div>
                 </div>
-                <div className='track-artist-and-title'>
+                <div className='track-artist-and-title' onClick={(e) => this.handleOnClick(e)}>
                     <span className='track-artist'>{this.props.artist}</span>
                     <span className='track-title'>{this.props.title}</span>
                 </div>
