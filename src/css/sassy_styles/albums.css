@@ -18,10 +18,25 @@
   flex-direction: row;
   background-color: rgba(38, 38, 44, 0.422);
 }
-.top-albums-list.view-as-list .albumInfoContainer p.albumNameText {
-  font-size: 1.6rem;
+.top-albums-list.view-as-list .albumInfoContainer .albumInfo {
+  width: 100%;
+}
+.top-albums-list.view-as-list .albumInfoContainer .albumInfoHeader {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+.top-albums-list.view-as-list .albumInfoContainer .albumRatingInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  align-content: flex-end;
+}
+.top-albums-list.view-as-list .albumInfoContainer div.albumInfo p.albumNameText {
+  font-size: 1.5rem;
   color: var(--text);
   margin: 0;
+  max-width: fit-content;
 }
 .top-albums-list.view-as-list .albumInfoContainer p.artistNameText {
   font-size: 1.3em;
@@ -29,9 +44,19 @@
   margin: 0;
 }
 .top-albums-list.view-as-list .albumInfoContainer p.albumYearText {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-darker);
   margin: 0;
+}
+.top-albums-list.view-as-list .albumInfoContainer div.artistName_inOtherLanguage {
+  display: flex;
+  flex-direction: row;
+}
+.top-albums-list.view-as-list .albumInfoContainer div.artistName_inOtherLanguage .artistNameText_inOtherLanguage {
+  color: var(--text-much-darker);
+  font-size: 0.8rem;
+  margin-left: 6px;
+  margin-top: 3px;
 }
 .top-albums-list.view-as-list .albumInfoContainer .genres {
   margin-top: 10px;
@@ -40,12 +65,17 @@
 .top-albums-list.view-as-list .albumInfoContainer p {
   max-width: fit-content !important;
 }
+.top-albums-list.view-as-list .albumInfoContainer .albumRatingInfo {
+  padding-top: 0px;
+}
 .top-albums-list.view-as-list .albumInfoContainer .albumRatingInfo p {
-  font-size: 1.5rem;
+  font-size: 2.1rem;
+  margin-right: 0px;
 }
 .top-albums-list.view-as-list img.albumCover {
+  min-width: 240px;
   width: 20%;
-  padding-right: 18px;
+  padding-right: 13px;
   filter: brightness(1);
 }
 .top-albums-list.view-as-list div.albumInfoContainer div.albumInfo > div {
@@ -58,4 +88,13 @@
 }
 .top-albums-list.view-as-list a {
   margin-bottom: 35px;
+}
+
+.top-albums-list.view-as-grid div.albumInfoContainer > div.albumInfo p.artistNameText,
+.top-albums-list.view-as-grid div.albumInfoContainer > div.albumInfo p.albumNameText,
+.top-albums-list.view-as-grid div.albumInfoContainer > div.albumInfo p.genresText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
 }/*# sourceMappingURL=albums.css.map */

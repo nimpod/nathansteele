@@ -1,6 +1,6 @@
 import requests
 from lastfm_helpers import LASTFM_API_METHODS
-from lastfm_helpers import GET_TOP_TRACKS_TIME_PERIOD_OPTIONS
+from lastfm_helpers import TIME_PERIOD_OPTIONS
 from Helpers import pretty_print_json
 
 
@@ -113,3 +113,21 @@ class LastFM:
         # pretty_print_json(r.json())
         return r.json()
 
+    def GET_my_top_albums(self, period, limit):
+        """Get my top tracks
+
+        Args:
+            period (str, optional): Time period to query. Defaults to "overall".
+            limit (int, optional): Limit. Defaults to 50, but you can give it whatever you want (e.g. top 5, top 10, top 100, top 500, etc...)
+
+        Returns:
+            _type_: JSON response from API
+        """
+        r = self.GET({
+            'method': LASTFM_API_METHODS.GET_MY_TOP_ALBUMS.value,
+            'user': self.user_agent,
+            'period': period,
+            'limit': limit,
+        })
+        # pretty_print_json(r.json())
+        return r.json()

@@ -6,7 +6,7 @@ import { ReactComponent as ToplistRatingIcon } from "../../icons/toplistRating.s
 
 class AlbumListElement extends Component {
     render() {
-        // console.log(this.props.album);
+        console.log(this.props.album);
 
         let album_cover_url = ""
         let album_name = "";
@@ -28,12 +28,13 @@ class AlbumListElement extends Component {
         }
 
         // use English name if it exists...
+        /*
         if (this.props.album.artist_name_English) {
             artist_name = this.props.album.artist_name_displayed;
         }
         if (this.props.album.artist_name_Japanese) {
             artist_name = this.props.album.artist_name_displayed;
-        }
+        }*/
 
         // get rating without decimal place (so I can add it to the classname)
         if (this.props.album.my_rating_nodp !== undefined) {
@@ -55,7 +56,7 @@ class AlbumListElement extends Component {
             }
         }
         if (this.props.album.genres == undefined) {
-            this.props.album.genres = ["no genre found :("];
+            this.props.album.genres = [""];
         }
 
         if (this.props.album.my_review !== undefined) {
@@ -79,24 +80,42 @@ class AlbumListElement extends Component {
                     <img className='albumCover' src={album_cover_url} alt="Album cover" loading='lazy'></img>
 
                     <div className='albumInfo'>
-                        <div className='albumName'>
-                            <p className='myPosition-mobileView'>{this.props.album.position}.</p>
-                            <p className='albumNameText'>{album_name}</p>
-                        </div>
+                        <div className='albumInfoHeader'>
+                            <div className='albumName'>
+                                {/* Pos of album for mobile view */}
+                                <p className='myPosition-mobileView'>{this.props.album.position}.</p>
 
-                        <p className='artistNameText'>{artist_name}</p>
-                        <p className='albumYearText'>{this.props.album.year_of_release}</p>
-                        <div className='genres list-of-tags'>
-                            {this.props.album.genres.map(g => {
-                                return <span className='genre-tag' key={g}>
-                                    {g}
-                                </span>
-                            })}
-                        </div>
-                        
-                        <div className='albumRatingInfo'>
-                            <p className='myPosition'>#{this.props.album.position_str}</p>
-                            <p className={`myRating r${this.props.album.my_rating_nodp}`}>{this.props.album.my_rating}</p>
+                                {/* Album name */}
+                                <p className='albumNameText'>{album_name}</p>
+
+                                {/* Artist name 
+                                <p className='artistNameText'>{artist_name}</p>*/}
+
+                                {this.props.album.artist_name !== undefined && this.props.album.artist_name_English == undefined ? (
+                                    <p className='artistNameText'>{this.props.album.artist_name}</p>
+                                ) : (
+                                    <div className='artistName_inOtherLanguage'>
+                                        <p className='artistNameText'>{this.props.album.artist_name_English}</p>
+                                        <p className='artistNameText_inOtherLanguage'>{this.props.album.artist_name}</p>
+                                    </div>
+                                )}
+
+                                {/* Year */}
+                                <p className='albumYearText'>{this.props.album.year_of_release}</p>
+
+                                {/* Genres */}
+                                <div className='genres list-of-tags'>
+                                    {this.props.album.genres.map(g => {
+                                        return <span className='genre-tag' key={g}>
+                                            {g}
+                                        </span>
+                                    })}
+                                </div>
+                            </div>
+                            <div className='albumRatingInfo'>
+                                <p className='myPosition'>{this.props.album.position_str}</p>
+                                <p className={`myRating r${this.props.album.my_rating_nodp}`}>{this.props.album.my_rating_1dp}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

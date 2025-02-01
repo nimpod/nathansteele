@@ -30,6 +30,9 @@ class MusicReview extends React.Component {
         let review_id_of_prev_album = "";
         let my_rating_nodp = "";
         let recommended_by = "";
+        let scrobbles = "";
+        let scrobbles_pos = "";
+        let year_of_discovery = "";
         //
         let no_spotify_str = "";
         let spotify_hover_text = "Click to listen on Spotify";
@@ -58,6 +61,17 @@ class MusicReview extends React.Component {
         }
         if (this.props.album_data.artist_name_displayed) {
             artist_name = this.props.album_data.artist_name_displayed;
+        }
+
+        // get scrobble data if it's there...
+        if (this.props.album_data.scrobble_data !== undefined) {
+            scrobbles = this.props.album_data.scrobble_data.play_count;
+            scrobbles_pos = this.props.album_data.scrobble_data.pos;
+        }
+
+        // get year of discovery if it's there...
+        if (this.props.album_data.year_of_discovery !== undefined) {
+            year_of_discovery = this.props.album_data.year_of_discovery;
         }
 
         // check if I put any links in...
@@ -110,10 +124,35 @@ class MusicReview extends React.Component {
                                 <div className='album-info'>
                                     <span className='album-name' title='Album name'>{album_name}</span>
                                     <span className='artist-name' title='Artist name'>{artist_name}</span>
-                                    <span className='year-of-release' title='Year this album was released'>{this.props.album_data.year_of_release}</span>
                                     
+                                    {/* Year */}
+                                    <div className='year-of-release album-info-item' title="Year this album was released">
+                                        <span>Year of release: </span>
+                                        <span>{this.props.album_data.year_of_release}</span>
+                                    </div>
+
+                                    {/* Year of discovery */}
+                                    <div className='year-of-discovery album-info-item' title={`The approximate year that I started listening to this album`}>
+                                        <span>Year of discovery: </span>
+                                        <span>{year_of_discovery}</span>
+                                    </div>
+
+                                    {/* My rating */}
+                                    <div className={`my-rating album-info-item`}>
+                                        <span>Rating: </span>
+                                        <span className={`r${my_rating_nodp}`}>{this.props.album_data.my_rating}</span>
+                                    </div>
+
+                                    {/* Scrobbles */}
+                                    <div className='scrobbles album-info-item' title={`A scrobble is a play count. I have ${scrobbles} scrobbles for this particular album.`}>
+                                        <span>Scrobbles: </span>
+                                        <span>{scrobbles} <span>(#{scrobbles_pos})</span></span>
+                                    </div>
+
                                     {/* Genres */}
-                                    <div className='genres list-of-tags'>
+                                    <div className='genres list-of-tags album-info-item'>
+                                        <span>Genres: </span>
+
                                         {genres.map(g => {
                                             return <span className='genre-tag' key={g}>
                                                 {g}
@@ -121,27 +160,29 @@ class MusicReview extends React.Component {
                                         })}
                                     </div>
 
+                                    {/* Reviewer who recommened it to me */}
+                                    {
+                                        (this.props.album_data.recommended_by !== undefined) ? 
+                                        <div className='album-info-item recommenedBy list-of-tags' title='How did I discover this album?'>
+                                            <span className='title'>Recommened to me by... </span>
+                                            <span className='theme-tag'>
+                                                <a target='_blank' href={`${recommended_by.url}`}>{recommended_by.name}</a>
+                                            </span>
+                                        </div>
+                                        :
+                                        null
+                                    }
+
                                     {/* Links */}
-                                    <div className='links'>
+                                    <div className='links album-info-item'>
+                                        <span>Links: </span>
+
                                         <a className='album-lastfm-link' href={this.props.album_data.lastfm_url} target='_blank' title={lastfm_hover_text}>LastFM</a>
                                         <a className={`album-rym-link ${no_rym_str}`} href={this.props.album_data.rym_url} target='_blank' title={rym_hover_text}>RYM</a>
                                         <a className={`album-spotify-link ${no_spotify_str}`} href={this.props.album_data.spotify_url} target='_blank' title={spotify_hover_text}>Spotify</a>
                                         {
                                             (no_spotify_str.length > 1) ? <a className={`album-youtube-link ${no_youtube_str}`} href={this.props.album_data.youtube_url} target='_blank' title={youtube_hover_text}>YouTube</a> : null
                                         }
-                                    </div>
-
-                                    {/* My data */}
-                                    <div className='album-details-myData'>                                        
-                                        <div className='myPosition generic-hover' title='Position in my toplist'>
-                                            <Link to='/music'>
-                                                <span>#{this.props.album_data.position_str}</span>
-                                                <span>in my toplist</span>
-                                            </Link>
-                                        </div>
-                                        <div className={`myRating r${my_rating_nodp}`}>
-                                            <span>{this.props.album_data.my_rating}</span>
-                                        </div>
                                     </div>
 
                                     {/* Themes */}
@@ -153,39 +194,49 @@ class MusicReview extends React.Component {
                                         })}
                                     </div>
 
-                                    {/* Reviewer who recommened it to me */}
-                                    {
-                                        (this.props.album_data.recommended_by !== undefined) ? 
-                                        <div className='recommenedBy list-of-tags' title='Recommened to me by...'>
-                                            <span className='title'>Recommened to me by... </span>
-                                            <span className='theme-tag'>
-                                                <a target='_blank' href={`${recommended_by.url}`}>{recommended_by.name}</a>
-                                            </span>
+                                    {/* My data */}
+                                    <div className='album-details-myData'>
+
+                                        {/* Position in list */}
+                                        <div className='myPosition generic-hover' title='Position in my toplist'>
+                                            <Link to='/music'>
+                                                <span>#{this.props.album_data.position_str}</span>
+                                                <span>in my toplist</span>
+                                            </Link>
                                         </div>
-                                        :
-                                        null
-                                    }
+
+                                        {/* My rating */}
+                                        {/*}
+                                        <div className={`myRating r${my_rating_nodp}`}>
+                                            <span>{this.props.album_data.my_rating}</span>
+                                        </div>
+                                        */}
+                                    </div>
+
                                 </div>
                             </div>
                             
                             <div className='prev-and-next-review-links'>
+
                                 <div className='prev-review-link' title="Click to go to previous album in toplist">
                                     <Link to={'/music/' + review_id_of_prev_album}>
                                         <p>&lt;</p>
                                     </Link>
                                 </div>
+
                                 <div className='next-review-link' title="Click to go to next album in toplist">
                                     <Link to={'/music/' + review_id_of_next_album}>
                                         <p>&gt;</p>                             
                                     </Link>
                                 </div>
+
                             </div>
                         </div>
 
                         <div className='review-content-and-tracklist'>
                             {/* The actual review content!! */}
                             <div className='review-content-container' dangerouslySetInnerHTML={{__html: this.props.album_data.my_review}}>
-                                
+
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,19 @@
+'album': [
+    {'artist': 
+     {
+        'url': 'https://www.last.fm/music/Ichiko+Aoba',
+        'name': 'Ichiko Aoba', 
+        'mbid': 'fc3ae4dd-dcc5-4f99-a865-6bc1a5c9b705'
+    }, 
+    'image': [
+        { 'size': 'small', '#text': 'https://lastfm.freetls.fastly.net/i/u/34s/3a39fc6acd5c9eb5f5c2ac532c8d69fa.png' }, 
+        { 'size': 'medium', '#text': 'https://lastfm.freetls.fastly.net/i/u/64s/3a39fc6acd5c9eb5f5c2ac532c8d69fa.png' },
+        { 'size': 'large', '#text': 'https://lastfm.freetls.fastly.net/i/u/174s/3a39fc6acd5c9eb5f5c2ac532c8d69fa.png' }, 
+        { 'size': 'extralarge', '#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/3a39fc6acd5c9eb5f5c2ac532c8d69fa.png' }
+    ], 
+    'mbid': '', 
+    'url': 'https://www.last.fm/music/Ichiko+Aoba/Windswept+Adan', 
+    'playcount': '273', 
+    '@attr': {'rank': '1'}, 
+    'name': 'Windswept Adan'
+},

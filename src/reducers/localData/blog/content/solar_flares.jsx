@@ -1,5 +1,6 @@
 import React  from 'react';
 import { useRef } from 'react';
+import WebsiteReferenceComponent from '../../../../reusable_components/website_reference_component/WebsiteReferenceComponent';
 
 
 const IMAGES = {
@@ -95,8 +96,19 @@ export const post = () => {
             <div className='blog-subsection references-text' id='section6'>
                 <h3 className='subgroup-title'>References</h3>
                 <ul>
-                    <li><a href='https://youtu.be/WDFW_-dWT8A?si=2Bgj0lcbAlBKSfzV'>https://youtu.be/WDFW_-dWT8A?si=2Bgj0lcbAlBKSfzV</a></li>
-                    <li><a href='https://solar-center.stanford.edu/SID/activities/flare.html#:~:text=Scientists%20classify%20solar%20flares%20according,M9%2C%20and%20X1%20to%20X9'>https://solar-center.stanford.edu/SID/activities/flare.html#:~:text=Scientists%20classify%20solar%20flares%20according,M9%2C%20and%20X1%20to%20X9</a></li>
+                    <WebsiteReferenceComponent 
+                        url="https://youtu.be/WDFW_-dWT8A?si=2Bgj0lcbAlBKSfzV"
+                        website_name="YouTube" 
+                        webpage_title="Danger from Solar Storms, Observing Planet X, Pink Auroras | Q&A 259"
+                        year="2024"
+                        author="Fraiser Cain" />
+
+                    <WebsiteReferenceComponent 
+                        url="https://solar-center.stanford.edu/SID/activities/flare.html#:~:text=Scientists%20classify%20solar%20flares%20according,M9%2C%20and%20X1%20to%20X9"
+                        website_name="Solar Center Stanford" 
+                        webpage_title="What are the different types, or classes, of flares?"
+                        year=""
+                        author="" />
                 </ul>
             </div>
         </div>

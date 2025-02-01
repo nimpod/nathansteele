@@ -20,10 +20,26 @@
         // background-color: var(--album-info-grid-item-bg-color);
         background-color: rgba(38, 38, 44, 0.422);
 
-        p.albumNameText {
-            font-size: 1.6rem;
+        .albumInfo {
+            width: 100%;
+        }
+        .albumInfoHeader {
+            display: grid;
+            grid-template-columns: 90% 10%;
+        }
+        .albumRatingInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            align-self: flex-end;
+            align-content: flex-end;
+        }
+
+        div.albumInfo p.albumNameText {
+            font-size: 1.5rem;
             color: var(--text);
             margin: 0;
+            max-width: fit-content;
         }
         p.artistNameText {
             font-size: 1.3em;
@@ -31,9 +47,21 @@
             margin: 0;
         }
         p.albumYearText {
-            font-size: 1.1rem;
+            font-size: 1.0rem;
             color: var(--text-darker);
             margin: 0;
+        }
+
+        div.artistName_inOtherLanguage {
+            display: flex;
+            flex-direction: row;
+
+            .artistNameText_inOtherLanguage {
+                color: var(--text-much-darker);
+                font-size: 0.8rem;
+                margin-left: 6px;
+                margin-top: 3px;
+            }
         }
 
         .genres {
@@ -45,14 +73,20 @@
             max-width: fit-content !important;
         }
 
-        .albumRatingInfo p {
-            font-size: 1.5rem;
+        .albumRatingInfo {
+            padding-top: 0px;
+
+            p {
+                font-size: 2.1rem;
+                margin-right: 0px;
+            }
         }
     }
 
     img.albumCover {
+        min-width: 240px;
         width: 20%;
-        padding-right: 18px;
+        padding-right: 13px;
         filter: brightness(1.0);
     }
 
@@ -72,5 +106,16 @@
     
     a {
         margin-bottom: 35px;
+    }
+}
+
+.top-albums-list.view-as-grid {
+    div.albumInfoContainer > div.albumInfo p.artistNameText,
+    div.albumInfoContainer > div.albumInfo p.albumNameText,
+    div.albumInfoContainer > div.albumInfo p.genresText {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 300px;
     }
 }

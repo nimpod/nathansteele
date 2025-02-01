@@ -153,7 +153,9 @@ class LandingPage extends Component {
         return(
             <div className='page-wrapper'>
                 <div id="particles-js">
+                    {/*}
                     <Particles params={particlesConfig} />
+                    */}
                 </div>
                 <div className='landingpage-container'>
                     <div className='landingpage-intro'>

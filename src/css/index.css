@@ -1518,9 +1518,11 @@ div.blog-post
 
 
 .blog-post h3.subgroup-title {
+  /*
   display: grid;
   grid-template-columns: 7% 20% 90%;
   text-align: center;
+  */
   width: 100%;
 }
 
@@ -1572,8 +1574,8 @@ div.blog-post
   font-style: normal;
 }
 .blog-post .track-albumLink::before {
-  content: "Full album: ";
-  color: var(--text-darker);
+  content: "My review of the album --> ";
+  color: var(--text-much-darker);
   font-style: normal;
 }
 
@@ -2871,14 +2873,44 @@ div.btn.films-reset-filters-btn svg {
 
 /* My data */
 .review-displayed .album-details-myData {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
 }
-.review-displayed .film-details-myData > *,
-.review-displayed .album-details-myData > * {
-  display: inline-block;
+
+.review-displayed .album-details-myData > div {
   margin-right: 10px;
 }
+
+.album-info-item > span:not(.genre-tag) {
+  color: var(--text-much-darker);
+  cursor: help;
+  font-size: 0.75rem;
+}
+.album-info-item > span:nth-child(2) {
+  color: rgba(240, 241, 232, 0.871);
+  background-color: rgb(71, 67, 73);
+  border-radius: 4px;
+  padding: 2px;
+}
+.album-info-item > span:nth-child(2):not(.genre-tag):not(.theme-tag) {
+  font-weight: bold;
+}
+
+.album-info-item.my-rating > span:nth-child(2)::after {
+  content: " / 10"
+}
+.album-info-item.scrobbles > span:nth-child(2) > span {
+  font-size: 0.6rem;
+  color: var(--text-darker);
+}
+
+.album-info .list-of-tags.themes {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+  width: 400px;
+}
+
 
 :root {
   --my-rating-colour-r10: linear-gradient(100deg, rgb(17, 137, 91), rgb(82, 127, 30), rgb(45, 83, 26));
@@ -2887,6 +2919,13 @@ div.btn.films-reset-filters-btn svg {
   --my-rating-colour-r85: linear-gradient(100deg, rgb(218, 211, 95), rgb(104, 113, 19), rgb(111, 106, 13));
   --my-rating-colour-r8: linear-gradient(100deg, rgb(248, 165, 106), rgb(154, 82, 18), rgb(128, 81, 21));
   --my-rating-colour-r75: linear-gradient(100deg, rgb(119, 119, 119), rgb(176, 178, 177), rgb(143, 143, 143));
+
+  --my-rating-textColour-r10: rgb(59, 205, 46);
+  --my-rating-textColour-r95: rgb(142, 253, 214);
+  --my-rating-textColour-r9: rgb(249, 185, 255);
+  --my-rating-textColour-r85: rgb(218, 211, 95);
+  --my-rating-textColour-r8: rgb(248, 165, 106);
+  --my-rating-textColour-r75: rgb(119, 119, 119);
 
   --my-pos-colour: rgb(47, 137, 104);
 }
@@ -2900,7 +2939,9 @@ div.btn.films-reset-filters-btn svg {
   text-align: center;
   padding-top: 17px;
   opacity: 0.9;
+  /*
   position: absolute;
+  */
   color: rgb(255, 255, 255);
   font-weight: bold;
   cursor: pointer;
@@ -2916,6 +2957,20 @@ div.btn.films-reset-filters-btn svg {
 .myRating.r8 { background: var(--my-rating-colour-r8); }
 .myRating.r75 { background: var(--my-rating-colour-r75); }
 
+.my-rating span.r100 { color: var(--my-rating-textColour-r10); }
+.my-rating span.r95 { color: var(--my-rating-textColour-r95); }
+.my-rating span.r90 { color: var(--my-rating-textColour-r9); }
+.my-rating span.r85 { color: var(--my-rating-textColour-r85); }
+.my-rating span.r80 { color: var(--my-rating-textColour-r8); }
+.my-rating span.r75 { color: var(--my-rating-textColour-r75); }
+
+.film-details-myData {
+  display: flex;
+  flex-direction: row;
+}
+.film-details-myData > div {
+  margin-right: 10px;
+}
 
 /* My position in toplist */
 .review-displayed .myPosition {
@@ -2926,6 +2981,12 @@ div.btn.films-reset-filters-btn svg {
   padding: 0px 5px;
   cursor: pointer;
   user-select: none;
+  right: 0;
+  bottom: 0;
+}
+.album-review .myPosition {
+  position: absolute;
+  margin-bottom: 45px;
 }
 .review-displayed .myPosition > a {
   color: var(--text) !important;
@@ -3242,7 +3303,7 @@ picture:hover .img-content {
   */
 }
 :root {
-  --filters-section-width: 170px;
+  --filters-section-width: 180px;
 }
 .top-albums-list-innerContainer {
   display: grid;
@@ -3295,6 +3356,7 @@ div.btn.filter-list-by-album-property > .item-text {
   border-radius: 6px;
   margin-bottom: 10px;
   padding: 7px 0;
+  cursor: pointer;
 }
 #top-albums-list-sidebar .albums-filterBtnsContainer:hover,
 #top-albums-list-sidebar .albums-filterBtnsContainer:active {
@@ -3310,7 +3372,7 @@ div.btn.filter-list-by-album-property > .item-text {
   margin-left: calc(var(--filters-section-width) + 1px);
   margin-top: -7px;
   z-index: 9999;
-  width: 60%;
+  width: 70%;
   border-radius: 8px;
   border-top-left-radius: 0px;
   padding: 10px 10px 18px 10px;
@@ -3432,12 +3494,11 @@ div.btn.filter-list-by-artist-btn {
   background-color: var(--filtered-albums-list-info-bg-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.672);
   padding-left: 5px;
-  padding-top: 5px;
   border-radius: 6px;
   /*
   margin-top: 20px;
   */
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   display: flex;
   flex-direction: row;
 }
@@ -3469,7 +3530,7 @@ div.btn.filter-list-by-artist-btn {
   grid-column-gap: 6px;
 }
 .top-albums-list {
-  margin-left: 10px;
+  margin-left: 16px;
   padding-right: 10px;
   scroll-behavior: smooth;
 }
@@ -3595,15 +3656,6 @@ p.myPosition-mobileView {
   display: none;
 }
 
-div.albumInfoContainer > div.albumInfo p.artistNameText,
-div.albumInfoContainer > div.albumInfo p.albumNameText,
-div.albumInfoContainer > div.albumInfo p.genresText {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 300px;
-}
-
 div.albumInfoContainer > div.albumInfo div.albumRatingInfo {
   display: flex;
   flex-direction: row;
@@ -3676,7 +3728,7 @@ div.albumMoreInfo p::after {
 div.albumInfoContainer div.artistName p {
   color: var(--text-slightly-darker);
 }
-div.albumInfoContainer div.albumName p {
+.top-albums-list.view-as-grid div.albumInfoContainer div.albumName p {
   filter: brightness(2.5);
   font-size: 0.9rem;
 }
@@ -3921,8 +3973,8 @@ div.albumInfoContainer > div.myRating {
 
 /* #region ---------- 12.1) Album header ---------- */
 
+
 .album-header-container {
-  width: 57%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -3960,7 +4012,7 @@ div.albumInfoContainer > div.myRating {
 
 /* Album name */
 .album-info > .album-name {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   display: block;
   white-space: nowrap;
@@ -4019,8 +4071,12 @@ div.albumInfoContainer > div.myRating {
   padding-top: 30px;
 }
 
+.album-header-container,
 .review-content-and-tracklist {
-  width: 57%;
+  width: 70%;
+}
+
+.review-content-and-tracklist {
   display: flex;
   flex-direction: column;
   position: relative;

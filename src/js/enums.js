@@ -65,6 +65,7 @@ export const TrustworthyMusicReviewers = Object.freeze({
     TONE_ZONE: { name: "Tone Zone", url: "https://rateyourmusic.com/~Tone_Zone", genres: ["Metal", "Prog rock"]},
     ELASTIC_ROCK: { name: "ElasticRock", url: "https://rateyourmusic.com/list/elasticrock/100-favourite-ecm-albums/", genres: ["ECM style jazz", "Jazz"] },
     TAIWAN_MANIAC: { name: "TaiwanManiac", url: "https://rateyourmusic.com/~taiwanmaniac", genres: ["Jazz", "Pop"] },
+    AJ_COLLINS: { name: "ajcollins", url: "https://rateyourmusic.com/~ajcollins15", genres: ["Prog rock"] },
 
     // Other review sites
     STEREOGUM: { name: "StereoGum", url: "https://www.stereogum.com/" },
@@ -74,6 +75,12 @@ export const TrustworthyMusicReviewers = Object.freeze({
 
     // lastfm
     NIELS: { name: "Onderhond", url: "https://www.last.fm/user/Onderhond/library/albums?date_preset=ALL", genres: ["IDM", "Breakcore", "Ambient"]},
+    SITE_NOISE: { name: "SiteNoise", url: "https://www.last.fm/user/sitenoise", genres: ["Post-rock"] },
+    BELPHEGOR_SATAN: { name: "Belphegor_Satan", url: "https://www.last.fm/user/Belphegor_Satan", genres: ["Dubstep"] },
+
+    // friends in real life
+    ABBOT: { name: "Abbot", url: "#", genres: ["Country"] },
+    LIV: { name: "Liv", url: "#", genres: ["Jazz"]}
 });
 
 

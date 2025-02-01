@@ -233,16 +233,19 @@ class Music extends Component {
         let num_of_albums = 0;
         let avg_pos = 0;
         let avg_rating = 0;
+        let num_of_10s = 0;
+        let num_of_9s = 0;
+        let num_of_8s = 0;
 
         // extract list of ratings, and list of positions...
         for (let i = 0; i < albums_displayed.length; i++) {
             // get all details about this current album...
             let album = albums_displayed[i];
             
-            // list of all this artist's album positions...
+            // list of all positions...
             positions.push(album['position']);
 
-            // list of all this artist's album ratings...
+            // list of all ratings...
             if (album['my_rating'] !== undefined) { ratings.push(album['my_rating']); }
 
             // keep track of total number of album's this artist is associated with...
@@ -252,6 +255,9 @@ class Music extends Component {
         // calculate averages...
         avg_pos = positions.reduce((a, b) => a + b, 0) / positions.length;
         avg_rating = ratings.reduce((a, b) => a + b, 0) / ratings.length;
+        num_of_10s = [...ratings].filter(x => x == 10).length;
+        num_of_9s = [...ratings].filter(x => x == 9.0 || x == 9.5).length;
+        num_of_8s = [...ratings].filter(x => x == 8.0 || x == 8.5).length;
 
         // round to 2 dp...
         avg_pos = avg_pos.toFixed(0);
@@ -266,7 +272,10 @@ class Music extends Component {
         return {
             "avg_pos": avg_pos,
             "avg_rating": avg_rating,
-            "num_of_albums": num_of_albums
+            "num_of_albums": num_of_albums,
+            "num_of_10s": num_of_10s,
+            "num_of_9s": num_of_9s,
+            "num_of_8s": num_of_8s
         }
     }
 
@@ -482,6 +491,9 @@ class Music extends Component {
         let num_of_albums = 0;
         let avg_pos = 0;
         let avg_rating = 0;
+        let num_of_10s = 0;
+        let num_of_9s = 0;
+        let num_of_8s = 0;
         let filter_criteria = "";
         let filter_type = "";
         let filter_url = "";
@@ -501,6 +513,9 @@ class Music extends Component {
                 avg_pos = obj['avg_pos'];
                 avg_rating = obj['avg_rating'];
                 num_of_albums = obj['num_of_albums'];
+                num_of_10s = obj['num_of_10s'];
+                num_of_9s = obj['num_of_9s'];
+                num_of_8s = obj['num_of_8s'];
 
                 filter_type = "Artist:";
             }
@@ -519,6 +534,9 @@ class Music extends Component {
                 avg_pos = obj['avg_pos'];
                 avg_rating = obj['avg_rating'];
                 num_of_albums = obj['num_of_albums'];
+                num_of_10s = obj['num_of_10s'];
+                num_of_9s = obj['num_of_9s'];
+                num_of_8s = obj['num_of_8s'];
 
                 filter_type = "Genre:";
             }
@@ -537,6 +555,9 @@ class Music extends Component {
                 avg_pos = obj['avg_pos'];
                 avg_rating = obj['avg_rating'];
                 num_of_albums = obj['num_of_albums'];
+                num_of_10s = obj['num_of_10s'];
+                num_of_9s = obj['num_of_9s'];
+                num_of_8s = obj['num_of_8s'];
 
                 filter_type = "Year:";
             }
@@ -555,6 +576,9 @@ class Music extends Component {
                 avg_pos = obj['avg_pos'];
                 avg_rating = obj['avg_rating'];
                 num_of_albums = obj['num_of_albums'];
+                num_of_10s = obj['num_of_10s'];
+                num_of_9s = obj['num_of_9s'];
+                num_of_8s = obj['num_of_8s'];
 
                 filter_type = "Recommened by...";
                 //filter_url = (this.state.__current_reviewer_filter).url;
@@ -576,6 +600,9 @@ class Music extends Component {
             "num_of_albums": num_of_albums,
             "avg_pos": avg_pos,
             "avg_rating": avg_rating,
+            "num_of_10s": num_of_10s,
+            "num_of_9s": num_of_9s,
+            "num_of_8s": num_of_8s
         }
         // console.log(info);
         return info;
@@ -669,7 +696,7 @@ class Music extends Component {
      * @returns 
      */
     render() {
-        // console.log(this.props);
+        console.log(this.props);
 
         // get items for current page...
         const albums_displayed = this.state.__filtered_data
@@ -679,7 +706,7 @@ class Music extends Component {
                 let artist_name_included = album.artist_name.toLowerCase().includes(search_text);
                 return album_name_included || artist_name_included;
             });
-        console.log(albums_displayed);
+        // console.log(albums_displayed);
 
         let less_than_12_albums_on_display = "";
         if (albums_displayed.length <= 12) {
@@ -733,9 +760,13 @@ class Music extends Component {
 
                                 {/* Information about what is currently being filtered (if anything) */}
                                 <div id="filtered-albums-list-info">
-                                    <p className={`avgPos avgPos_`+filter['avg_pos']}>avg position: <span>#{filter['avg_pos']}</span></p>
+                                    <p className={`avgPos avgPos_`+filter['avg_pos']}>avg pos: <span>#{filter['avg_pos']}</span></p>
                                     <p className={`avgRating avgRating_`+filter['avg_rating']}>avg rating: <span>{filter['avg_rating']}/10</span></p>
                                     <p className={`numOfAlbums_`+filter['num_of_albums']}>count: <span>{filter['num_of_albums']}</span></p>
+                                    <p className={`numOf10s_`+filter['num_of_10s']}>10s: <span>{filter['num_of_10s']}</span></p>
+                                    <p className={`numOf9s_`+filter['num_of_9s']}>9s: <span>{filter['num_of_9s']}</span></p>
+                                    <p className={`numOf8s_`+filter['num_of_8s']}>8s: <span>{filter['num_of_8s']}</span></p>
+
                                     <p>Filtered by <span>{filter_type} {(filter_url.length > 0) ? <a href={filter_url} target='_blank'>{filter_criteria}</a> : filter_criteria}</span></p>
                                 </div>
                             </div>

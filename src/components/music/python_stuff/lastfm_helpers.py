@@ -13,9 +13,10 @@ class LASTFM_API_METHODS(Enum):
     
     # user data...
     GET_MY_TOP_TRACKS = 'user.gettoptracks'     # https://www.last.fm/api/show/user.getTopTracks
+    GET_MY_TOP_ALBUMS = 'user.gettopalbums'     # https://www.last.fm/api/show/user.getTopAlbums
 
 
-class GET_TOP_TRACKS_TIME_PERIOD_OPTIONS(Enum):
+class TIME_PERIOD_OPTIONS(Enum):
     """ 
     https://www.last.fm/api/show/user.getTopTracks
     """

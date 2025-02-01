@@ -186,7 +186,7 @@ const database = {
 			year_of_release: "1994",
 			year_of_discovery: "2023",
 			genres: "Ambient; Ambient techno; Techno; IDM; Electronic",
-			my_rating: 9.0,
+			my_rating: 9.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
@@ -297,7 +297,7 @@ const database = {
 			year_of_release: "2012",
 			genres: "Indie pop; Art pop; Progressive pop; Folktronica; Indietronica; Post-rock",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/ff6f2fe0511f4d25bf42cb8ab88ed2e2.jpg#ff6f2fe0511f4d25bf42cb8ab88ed2e2",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2013",
 		},
@@ -437,7 +437,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/7EfhvG3RwdhzXrFlkDVxg4?si=9DJNmYSYSdKi2KEPHaK8xQ",
 			year_of_release: "1994",
 			genres: "IDM; Ambient techno; Techno; Electronic",
-			my_rating: 9,
+			my_rating: 9.0,
 			my_review: "",
 			year_of_discovery: "2023",
 		},
@@ -448,7 +448,7 @@ const database = {
 			year_of_release: "2013",
 			genres: "Symphonic rock; Progressive rock; Art rock; AOR",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/fc4273ad9d904206c2776ca005d01e32.jpg#fc4273ad9d904206c2776ca005d01e32",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2014",
 		},
@@ -464,7 +464,7 @@ const database = {
 		},		
 		"antonio_carlos_jobim__the_composer_of_desafinado_plays": {
 			lastfm_url: "https://www.last.fm/music/Ant%C3%B4nio+Carlos+Jobim/The+Composer+of+Desafinado+Plays",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/antonio-carlos-jobim/the-composer-of-desafinado-plays/",
 			spotify_url: "",
 			year_of_release: "1963",
 			year_of_discovery: "2023",
@@ -534,6 +534,7 @@ const database = {
 			genres: "Minimal techno; Techno; Acid techno; Trance; Electronic",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 	},
 
@@ -548,7 +549,7 @@ const database = {
 			year_of_discovery: "2016",
 			genres: "IDM; Ambient; Downtempo; Electronic",
 			themes: ["Atmospheric", "Otherworldy", "Mysterious", "Vast", "Dark", "Nostalgic", "Ethereal", "Creepy", "Weird", "Surreal"],
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: ReactDomServer.renderToString(BoC__MHTRTC__Review()),
 		},
 		"boards_of_canada__geogaddi": {
@@ -558,7 +559,7 @@ const database = {
 			year_of_release: "2002",
 			year_of_discovery: "2016",
 			genres: "IDM; Ambient; Ambient techno; Downtempo; Electronic",
-			my_rating: 9.5,
+			my_rating: 10,
 			my_review: "",
 		},
 		"boards_of_canada__random_30_tracks_tape": {
@@ -568,7 +569,7 @@ const database = {
 			year_of_release: "1996",
 			genres: "IDM; Ambient; Breakbeat; Electronic",
 			custom_cover_url: "https://i1.sndcdn.com/artworks-MCKqEy3UB0Ye9PdD-sI6suA-t500x500.jpg",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2017"
 		},
@@ -745,7 +746,7 @@ const database = {
 			year_of_discovery: "2020",
 			custom_cover_url: "https://e.snmc.io/i/600/s/ea770c5f41025644462a5eda765f0582/8509675/bring-me-the-horizon-post-human-survival-horror-Cover-Art.jpg",
 			genres: "Alternative metal; Metalcore; Heavy metal; Nu metal",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 		},
 		"bring_me_the_horizon__sempiternal": {
@@ -770,6 +771,7 @@ const database = {
 			genres: "Jazz; Nu jazz; Jazz fusion",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.LIV
 		},
 		"brad_mehldau__taming_the_dragon": {
 			lastfm_url: "https://www.last.fm/music/Brad+Mehldau/Mehliana:+Taming+the+Dragon",
@@ -928,9 +930,10 @@ const database = {
 			my_review: "",
 		},	
 		"charli_xcx__how_im_feeling_now": {
-			lastfm_url: "https://www.last.fm/music/Charli+XCX/how+i%27m+feeling+now",
+			lastfm_url: "https://www.last.fm/music/Charli+xcx/how+i%27m+feeling+now",
 			rym_url: "https://rateyourmusic.com/release/album/charli-xcx/how-im-feeling-now/",
 			spotify_url: "https://open.spotify.com/album/3a9qH2VEsSiOZvMrjaS0Nu?si=rfrmprHdSpO_YrbZqOfrGA",
+			custom_cover_url: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e4/92/be/e492be7c-998f-1894-84b4-1a05dc25e215/190295229993.jpg/1200x1200bf-60.jpg",
 			year_of_release: "2020",
 			year_of_discovery: "2020",
 			genres: "Hyperpop; Pop; Dance pop; Electropop; Alternative pop; Electronic",
@@ -978,7 +981,7 @@ const database = {
 			year_of_release: "2001",
 			genres: "French House; Electro-Disco; Funky House; Dance pop; Synth Funk; Nu-disco; Electronic",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/54010ae7c4fa4c96a1e1872a051d9ecc.jpg#54010ae7c4fa4c96a1e1872a051d9ecc",
-			my_rating: 10,
+			my_rating: 9.0,
 			my_review: "",
 			year_of_discovery: "2020",
 		},
@@ -1031,11 +1034,12 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Dispirited+Spirits/The+Redshift+Blues",
 			rym_url: "https://rateyourmusic.com/release/album/dispirited-spirits/the-redshift-blues/",
 			spotify_url: "",
-			year_of_release: "2024",
+			year_of_release: "2023",
 			year_of_discovery: "2024",
 			genres: "Midwest emo; Progressive rock; Post-rock; Math rock",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.AJ_COLLINS
 		},
 		"daniel_weiss__the_vortex": {
 			lastfm_url: "https://www.last.fm/music/daniel+weiss/The+Vortex",
@@ -1043,7 +1047,7 @@ const database = {
 			spotify_url: "",
 			year_of_release: "2024",
 			year_of_discovery: "2024",
-			genres: "Jazz Fusion; Jazz rock; Progressive metal; Progressive rock",
+			genres: "Jazz fusion; Jazz rock; Progressive metal; Progressive rock",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -1130,7 +1134,7 @@ const database = {
 			year_of_release: "2015",
 			genres: "Post-hardcore; Drum and bass; Metalcore; Trancecore; Trance; Electronicore",
 			custom_cover_url: "https://www.nme.com/wp-content/uploads/2016/09/2014EnterShikari_TheMindSweep_081014.jpg",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2015",
 		},
@@ -1193,6 +1197,29 @@ const database = {
 			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK,
 		},
 
+		//
+		"emily_scott_robinson__american_siren": {
+			lastfm_url: "https://www.last.fm/music/Emily+Scott+Robinson/American+Siren",
+			rym_url: "https://rateyourmusic.com/release/album/emily-scott-robinson/american-siren/",
+			spotify_url: "https://open.spotify.com/album/5ZGhlw7RozA6DfbDeV68Bn?si=U80gD7MkSsWmnxlUIkge5g",
+			year_of_release: "2021",
+			year_of_discovery: "2024",
+			genres: "Country; Americana; Folk; Bluegrass",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.SPECTRUM_PULSE
+		},
+		"emily_scott_robinson__travelling_mercies": {
+			lastfm_url: "https://www.last.fm/music/Emily+Scott+Robinson/Traveling+Mercies",
+			rym_url: "https://rateyourmusic.com/release/album/emily-scott-robinson/traveling-mercies/",
+			spotify_url: "https://open.spotify.com/album/66wgNuvxQx8ueOKSPaphz6?si=-NDvyYLBQH29oFVbeZ7IyA",
+			year_of_release: "2019",
+			year_of_discovery: "2021",
+			genres: "Country; Americana; Folk; Bluegrass",
+			my_rating: 9.5,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.SPECTRUM_PULSE
+		},
 
 		"elvin_jones__on_the_mountain": {
 			lastfm_url: "https://www.last.fm/music/Elvin+Jones/On+the+Mountain",
@@ -1213,6 +1240,7 @@ const database = {
 			genres: "Dubstep; Dark ambient; Hybrid trap; Electronic",
 			my_rating: 8.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.BELPHEGOR_SATAN
 		},
 		"eric_whitacre__light_and_gold": {
 			lastfm_url: "https://www.last.fm/music/Eric+Whitacre/Light+&+Gold",
@@ -1221,7 +1249,7 @@ const database = {
 			year_of_release: "2010",
 			year_of_discovery: "2024",
 			genres: "Modern classical; Choral; New age",
-			my_rating: 8,
+			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.XENOPHILE
 		},
@@ -1244,17 +1272,6 @@ const database = {
 			genres: "Piano; Modern classical",
 			my_rating: 9.0,
 			my_review: "",
-		},
-		"emily_scott_robinson__travelling_mercies": {
-			lastfm_url: "https://www.last.fm/music/Emily+Scott+Robinson/Traveling+Mercies",
-			rym_url: "https://rateyourmusic.com/release/album/emily-scott-robinson/traveling-mercies/",
-			spotify_url: "https://open.spotify.com/album/66wgNuvxQx8ueOKSPaphz6?si=-NDvyYLBQH29oFVbeZ7IyA",
-			year_of_release: "2019",
-			year_of_discovery: "2021",
-			genres: "Country; Americana; Folk; Bluegrass",
-			my_rating: 9.0,
-			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.SPECTRUM_PULSE
 		},
 		"egberto_gismonti__egberto_gismonti": {
 			lastfm_url: "https://www.last.fm/music/Egberto+Gismonti/Egberto+Gismonti",
@@ -1289,7 +1306,7 @@ const database = {
 			year_of_release: "2011",
 			year_of_discovery: "2018",
 			genres: "Indie folk; Folk; Folk pop; Chamber folk; Baroque pop",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 
@@ -1384,7 +1401,7 @@ const database = {
 
 
 		"greg_isakov__this_empty_northern_hemisphere": {
-			lastfm_url: " https://www.last.fm/music/Gregory+Alan+Isakov/This+Empty+Northern+Hemisphere",
+			lastfm_url: "https://www.last.fm/music/Gregory+Alan+Isakov/This+Empty+Northern+Hemisphere",
 			rym_url: " https://rateyourmusic.com/release/album/gregory-alan-isakov/this-empty-northern-hemisphere/",
 			spotify_url: "",
 			year_of_release: "2008",
@@ -1392,6 +1409,7 @@ const database = {
 			genres: "Indie folk; Americana; Country",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ABBOT
 		},
 		"global_communication__7614": {
 			lastfm_url: "https://www.last.fm/music/Global+Communication/76:14",
@@ -1422,6 +1440,7 @@ const database = {
 			genres: "EDM; Hybrid trap; Bass house; Breakbeat; Electronic",
 			my_rating: 8.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.BELPHEGOR_SATAN
 		},
 		"guy_farley__cashback_ost": {
 			lastfm_url: "https://www.last.fm/music/Guy+Farley/Cashback",
@@ -1547,9 +1566,10 @@ const database = {
 			year_of_discovery: "2023",
 			artist_name_English: "Hajime Mizoguchi",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/83701bec39cfa8159ba42940125a31ce.jpg#83701bec39cfa8159ba42940125a31ce",
-			genres: "Film soundtrack",
+			genres: "Film soundtrack; New age; Modern classical",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.NIELS
 		},
 	},
 
@@ -1565,7 +1585,7 @@ const database = {
 			genres: "J-folk; Chamber folk; Ambient; New age; Nature recordings; J-acoustic",
 			themes: ["Japanese", "Majestic", "Atmospheric"],
 			custom_cover_url: "https://m.media-amazon.com/images/I/71Q93PPdn0L._UF894,1000_QL80_.jpg",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 		},
 		"ichiko_aoba__qp": {
@@ -1715,7 +1735,7 @@ const database = {
 			year_of_discovery: "2022",
 			artist_name_English: "Joe Hisaishi",
 			genres: "Film soundtrack; Ambient",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"joe_hisaishi__my_neighbour_totoro_OST": {
@@ -2088,7 +2108,7 @@ const database = {
 		},	
 		"klute__no_ones_listening_anymore": {
 			lastfm_url: "https://www.last.fm/music/Klute/No+One%27s+Listening+Anymore",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/klute/no-ones-listening-anymore/",
 			spotify_url: "",
 			year_of_release: "2004",
 			year_of_discovery: "2021",
@@ -2204,7 +2224,7 @@ const database = {
 			year_of_discovery: "2016",
 			genres: "Nu metal",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/cc15ebc58ec625979776cabaaaa282fa.jpg#cc15ebc58ec625979776cabaaaa282fa",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 		},	
 		"linkin_park__a_thousand_suns": {
@@ -2214,7 +2234,7 @@ const database = {
 			year_of_release: "2010",
 			year_of_discovery: "2015",
 			genres: "Nu metal; Alternative rock; Industrial rock; Electronic",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 		},		
 		"linkin_park__meteora": {
@@ -2238,6 +2258,7 @@ const database = {
 			genres: "Neoclassical darkwave; Ambient",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"lone__galaxy_garden": {
 			lastfm_url: "https://www.last.fm/music/Lone/Galaxy+Garden",
@@ -2374,8 +2395,8 @@ const database = {
 			rym_url: "https://rateyourmusic.com/release/album/%E3%83%9F%E3%83%89%E3%83%AA/%E3%81%82%E3%82%89%E3%81%9F%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%81%E3%83%9F%E3%83%89%E3%83%AA%E3%81%A7%E3%81%99%E3%80%82-aratamemashite-hajimemashite-midori-desu/",
 			spotify_url: "https://open.spotify.com/album/5q8Hkakvwmb5Zyk4nUZKyD?si=VDN-gny9RzGP7ApyGEKjjw",
 			year_of_release: "2003",
-			year_of_discovery: "2019",
-			genres: "J-rock; Jazz punk; Jazz fusion; Noise rock; J-pop; Punk;",
+			year_of_discovery: "2022",
+			genres: "J-rock; Jazz punk; Jazz fusion; Noise rock; J-pop; Punk",
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -2444,6 +2465,17 @@ const database = {
 			genres: "Trip hop; Downtempo; Ambient pop; Alternative rock",
 			my_rating: 9.5,
 			my_review: "",
+		},
+		"mild_minds__mood": {
+			lastfm_url: "https://www.last.fm/music/Mild+Minds/MOOD",
+			rym_url: "https://rateyourmusic.com/release/album/mild-minds/mood/",
+			spotify_url: "https://www.last.fm/music/Mild+Minds/MOOD",
+			year_of_release: "2020",
+			year_of_discovery: "2023",
+			genres: "Synthpop; Indie pop; Deep house; Future garage; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.BELPHEGOR_SATAN
 		},
 		"moron_police__a_boat_on_the_sea": {
 			lastfm_url: "https://www.last.fm/music/Moron+Police/A+Boat+on+the+Sea",
@@ -2728,6 +2760,7 @@ const database = {
 			genres: "Electronic; Alternative disco; Italian downtempo; Downtempo",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 	},
 
@@ -2749,7 +2782,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/1wXyzUmlgN6G1DXIY0Sh8l?si=Et6pXDkWSjqYiG1zSAPkuQ",
 			year_of_release: "1997",
 			genres: "Ambient techno; IDM; Breakbeat; Progressive Breaks; Neo-Psychedelia; Electronic",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2017",
 			custom_cover_url: "https://f4.bcbits.com/img/a1871008282_10.jpg",
@@ -2871,6 +2904,7 @@ const database = {
 			genres: "Trip hop; Arabic music; Novo dub; South Asian music; Alternative dance",
 			my_rating: 8.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.SITE_NOISE
 		},
 	},
 
@@ -2883,7 +2917,7 @@ const database = {
 			year_of_release: "2020",
 			year_of_discovery: "2021",
 			genres: "Nu metal; Riot grrrl; Industrial metal; Pop metal; Electropop; Electronic",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 		},
 		"poppy_eat": {
@@ -2935,11 +2969,11 @@ const database = {
 		},
 		"pangaea__changing_channels": {
 			lastfm_url: "https://www.last.fm/music/Pangaea/Changing+Channels",
-			rym_url: "https://rateyourmusic.com/release/album/plantoid/terrapath/",
+			rym_url: "https://rateyourmusic.com/release/album/pangaea/changing-channels/",
 			spotify_url: "",
 			year_of_release: "2023",
 			year_of_discovery: "2024",
-			genres: "",
+			genres: "Electronic; Breakbeat",
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.STEREOGUM
@@ -2951,6 +2985,17 @@ const database = {
 			year_of_release: "2023",
 			year_of_discovery: "2024",
 			genres: "Progressive rock; Psychedelic rock; Jazz rock; Space rock",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
+		"penguin_cafe__rain_before_seven": {
+			lastfm_url: "https://www.last.fm/music/Penguin+Cafe/Rain+Before+Seven...",
+			rym_url: "https://rateyourmusic.com/release/album/penguin-cafe/rain-before-seven/",
+			spotify_url: "https://open.spotify.com/album/4gGmqjw64211B9R3p2ikne",
+			year_of_release: "2023",
+			year_of_discovery: "2023",
+			genres: "Chamber folk; Modern classical; Post-minimalism",
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
@@ -3003,7 +3048,7 @@ const database = {
 			year_of_release: "2014",
 			year_of_discovery: "2015",
 			genres: "Dance punk; Alternative rock; Pop punk; Post-hardcore; Synthpop; Electropop; Electronic",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 		},
 		"portishead__dummy": {
@@ -3061,7 +3106,7 @@ const database = {
 			year_of_release: "2016",
 			genres: "Art rock; Chamber pop; Ambient pop; Art pop",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/28db3fdca036fb53c62754694a89d3fd.jpg#28db3fdca036fb53c62754694a89d3fd",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2016",
 		},
@@ -3072,7 +3117,7 @@ const database = {
 			year_of_release: "2007",
 			genres: "Art rock; Dream pop; Art pop; Alternative rock",
 			custom_cover_url: "https://m.media-amazon.com/images/I/A1MwaIeBpwL._UF894,1000_QL80_.jpg",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2017",
 		},
@@ -3166,6 +3211,7 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 			year_of_discovery: "2023",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"rumpistol__isola": {
 			lastfm_url: "https://www.last.fm/music/Rumpistol/Isola",
@@ -3254,7 +3300,7 @@ const database = {
 			year_of_release: "2005",
 			genres: "Alternative metal; Avant-garde metal",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/a96a0ff1cd9b384659b7edac19dc15b6.jpg#a96a0ff1cd9b384659b7edac19dc15b6",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2010",
 		},
@@ -3284,7 +3330,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0cn6MHyx4YuZauaB7Pb66o?si=QhPBwwzXSaizJVqewya15Q",
 			year_of_release: "2005",
 			genres: "Alternative metal; Avant-garde metal; Heavy metal; Nu metal",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2010",
 		},
@@ -3400,6 +3446,7 @@ const database = {
 			genres: "Trip hop; Folk pop; Folktronica; Chinese folk music; Dance pop; Not on spotify",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.SITE_NOISE
 		},
 		"squarepusher__be_up_a_hello": {
 			lastfm_url: "https://www.last.fm/music/Squarepusher/Be+Up+a+Hello",
@@ -3421,6 +3468,7 @@ const database = {
 			custom_cover_url: "https://e.snmc.io/i/600/s/34ab31eb0b79f74d0c14afef3ffae48e/6344120/senri-kawaguchi-cider-%EF%BD%9Ehard-and-sweet%EF%BD%9E-Cover-Art.jpg",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"scott_walker__scott3": {
 			lastfm_url: "https://www.last.fm/music/Scott+Walker/Scott+3",
@@ -3513,6 +3561,7 @@ const database = {
 			genres: "Dubstep; Future bass; Drum and bass; Electronic",
 			my_rating: 8.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.BELPHEGOR_SATAN
 		},
 		"slipknot__slipknot": {
 			lastfm_url: "https://www.last.fm/music/Slipknot/Slipknot",
@@ -3840,7 +3889,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/7jArveDNywiBbEqax0f2vn?si=H4JmBO3yRkKNHZdt2xQ3PA",
 			year_of_release: "1983",
 			genres: "Art punk; New wave; Art rock; Psychdelic pop; Neo-Psychedelia",
-			my_rating: 10,
+			my_rating: 10.0,
 			custom_cover_url: "https://beatopolis.files.wordpress.com/2019/01/xtc-1.jpg?w=640",
 			year_of_discovery: "2013"
 		},
@@ -3852,7 +3901,7 @@ const database = {
 			artist_name_displayed: "XTC",
 			genres: "Psychedelic rock; Psychedelic pop; Jangle pop; New wave",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/42a3dd8c1dea4f35b3c0711eb02c1a9d.jpg#42a3dd8c1dea4f35b3c0711eb02c1a9d",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2012",
 		},
@@ -3933,7 +3982,7 @@ const database = {
 			year_of_release: "2011",
 			year_of_discovery: "2013",
 			genres: "Progressive rock; Symphonic prog; Progressive pop",
-			my_rating: 10,
+			my_rating: 10.0,
 			my_review: ReactDomServer.renderToString(Yes__Fly_From_Here__Review()),
 			custom_cover_url: custom_covers.Yes__Fly_From_Here,
 		},
