@@ -87,10 +87,17 @@ class AlbumListElement extends Component {
 
                                 {/* Album name */}
                                 <p className='albumNameText'>{album_name}</p>
+                                {this.props.album.album_name !== undefined && this.props.album.album_name_English == undefined ? (
+                                    <p className='artistNameText'>{this.props.album.album_name_displayed}</p>
+                                ) : (
+                                    <div className='artistName_inOtherLanguage'>
+                                        <p className='artistNameText'>{this.props.album.album_name_English}</p>
+                                        <p className='artistNameText_inOtherLanguage'>{this.props.album.album_name}</p>
+                                    </div>
+                                )}
 
                                 {/* Artist name 
                                 <p className='artistNameText'>{artist_name}</p>*/}
-
                                 {this.props.album.artist_name !== undefined && this.props.album.artist_name_English == undefined ? (
                                     <p className='artistNameText'>{this.props.album.artist_name}</p>
                                 ) : (

@@ -198,6 +198,8 @@ def album_name_doesnt_match_with_lastfm(folder_name, album_name):
         return "76:14"
     elif "Brad Mehldau - Suite April 2020" in folder_name:
         return "Suite: April 2020"
+    elif "Jobim - The Composer of Desafinado" in folder_name:
+        return "The Composer Of Desafinado, Plays"
     #elif 'Penguin Cafe - Rain Before Seven':
     #    return 'Rain Before Seven...'
     #elif 'Opposite Day - What Is Is':
