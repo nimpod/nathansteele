@@ -1,0 +1,13 @@
+Can you convert the following text into HTML code?
+Do not apply any CSS code. 
+Please apply the <a> links appropriately to the related text above it.
+
+Divide each section into <div> block elements
+
+I would like you to do the following 6 tasks whilst iterating the HTML content:
+1) Give each div a className of className="blog-subsection"
+2) Give each div incrementing ID's like id="section1", id="section2", id="section3", etc...
+3) Change the first heading in each <div> to be a <h3> element, with className="subgroup-title"
+4) Change any subsequent headings in the same div to a <p> element.
+5) Change the className of the final <div> element to be className="blog-references references-text"
+6) Change any <h2> elements into <p> elements

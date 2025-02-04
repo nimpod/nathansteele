@@ -9,7 +9,10 @@ export const post = () => (
     <div>
         <div className='intro-text blog-subsection' id='section1'>
             <h3 className='subgroup-title'></h3>
-            <p>Kang Yatze II (6250m) (aka. KY2) is a mountain in North India, Ladakh, Hemis national park. It is roughly the <a href="https://en.wikipedia.org/wiki/List_of_mountains_by_elevation">237th highest (named) mountain in the world!</a></p>
+            <p>
+                Kang Yatze II (6250m) (aka. KY2) is a mountain in North India, Ladakh, Hemis national park. 
+                It is roughly the <a href="https://en.wikipedia.org/wiki/List_of_mountains_by_elevation">237th highest (named) mountain in the world!</a>
+            </p>
             {/*
             <p>Kang Yatze I (6400m) (aka. KY1) is the highest, at 6400m altitude. It requires a bit more advanced mounteering experience. 
             */}
