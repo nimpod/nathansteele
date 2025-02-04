@@ -10,8 +10,8 @@ lastfm = LastFM(API_KEY='641be1ed643c913edb609208c24efad7', USERNAME='gutash')
 #json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\top_tracks_scrobble_data.json'
 
 # on laptop...
-top_tracks_json_output = f'src/components/music/scrobble_data/top_tracks.json'
-top_albums_json_output = f'src/components/music/scrobble_data/top_albums.json'
+top_tracks_json_output = f'C:\\dev\\nathansteele\\src\\components\\music\\scrobble_data\\top_tracks.json'
+top_albums_json_output = f'C:\\dev\\nathansteele\\src\\components\\music\\scrobble_data\\top_albums.json'
 
 
 def get_top_tracks(period=TIME_PERIOD_OPTIONS.ALL_TIME, limit=10):
