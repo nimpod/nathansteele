@@ -8,7 +8,9 @@ echo %cd%
 
 python regenerate_scrobbles_data.py
 
-call git add .
-call git commit -m "[...Updating scrobbles data...]"
-call git push origin master
-call npm run deploy
+cd C:\dev\nathansteele
+
+git add .
+git commit -m "[...Updating scrobbles data...]"
+git push origin master
+npm run deploy
