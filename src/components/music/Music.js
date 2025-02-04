@@ -729,7 +729,7 @@ class Music extends Component {
         const view_type_classname = (this.state.__view_type === ViewType.GRID) ? "view-as-grid" : "view-as-list";
         
         // top tracks list (default to overall time period)
-        let top_tracks_list = this.props.top_tracks.overall;
+        let top_tracks_list = this.props.scrobble_data_top_tracks.overall;
 
         // generate array of intervals (e.g. [1,25,50,75,100,...,600])
         const navigation = [1];
@@ -949,7 +949,7 @@ class Music extends Component {
 const mapStateToProps = (state) => {
     return {
         top_albums: state.top_albums,
-        top_tracks: state.top_tracks,
+        scrobble_data_top_tracks: state.scrobble_data_top_tracks,
     }
 }
 
