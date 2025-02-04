@@ -12,22 +12,28 @@ import { album_reviews as localdata_album_reviews } from './localData/albums/alb
 import { blog_posts as localdata_blog_posts } from './localData/blog/blog_posts.js';
 
 // import webdata...
-let webdata_top_tracks = require('../components/music/webdata_top_tracks_list.json');
 let webdata_top_albums = require('../components/music/webdata_top_albums_list.json');
 let webdata_top_films = require('../components/films/webdata_top_films_list.json');
-let top_albums_scrobble_data = require('../components/music/top_albums_scrobble_data.json');
+let webdata_scrobbleData_topTracks = require('../components/music/scrobble_data/top_tracks.json');
+let webdata_scrobbleData_topAlbums = require('../components/music/scrobble_data/top_albums.json');
+
 
 /**
  * Database
  */
 const init_state = {
+    // blog posts list...
     posts: localdata_blog_posts,
 
-    top_albums: localdata_album_reviews,
-    top_albums_scrobble_data: top_albums_scrobble_data,
-    top_tracks: webdata_top_tracks,
-
+    // top films list...
     top_films: localdata_film_reviews,
+
+    // top albums list...
+    top_albums: localdata_album_reviews,
+
+    // scrobble data...
+    scrobble_data_top_tracks: webdata_scrobbleData_topTracks,
+    scrobble_data_top_albums: webdata_scrobbleData_topAlbums,
 }
 
 /**
@@ -39,8 +45,8 @@ const init_state = {
 const RootReducer = (state=init_state, action) => {
     state.top_films = merge_films_data(init_state);
     state.top_albums = merge_albums_data(init_state);
-    state.top_tracks = init_state.top_tracks;
-    state.top_albums_scrobble_data = init_state.top_albums_scrobble_data
+    state.scrobble_data_top_tracks = init_state.scrobble_data_top_tracks;
+    state.scrobble_data_top_albums = init_state.scrobble_data_top_albums
     return state;
 }
 
@@ -141,8 +147,9 @@ const merge_albums_data = (init_state) => {
             v["artist_name_displayed"] = v["artist_name"] + " [" + v["artist_name_Japanese"] + "]";
         }
         
-        // console.log(init_state.top_albums_scrobble_data);
-        let test = init_state.top_albums_scrobble_data.filter(obj => Object.values(obj).some(val => val.includes(v["lastfm_url"])));
+        // add scrobble data to each album...
+        //console.log(init_state.scrobble_data_top_albums);
+        let test = init_state.scrobble_data_top_albums.filter(obj => Object.values(obj).some(val => val.includes(v["lastfm_url"])));
         if (test[0] !== undefined) {
             v["scrobble_data"] = {
                 "play_count": test[0]["play_count"],
