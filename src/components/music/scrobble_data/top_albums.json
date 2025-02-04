@@ -260,7 +260,7 @@
         "lastfm_artist_url": "https://www.last.fm/music/The+Future+Sound+of+London",
         "album_cover": "https://lastfm.freetls.fastly.net/i/u/300x300/4b0316c7ccb67ef73f5163e39b25504a.jpg",
         "play_count": "142",
-        "musicbrainz_artist_id": "a1d77dd4-8728-4a47-bdfa-9663d791139c",
+        "musicbrainz_artist_id": "",
         "musicbrainz_album_id": "1f50cbd4-ea24-41ed-bd56-3c657f061416"
     },
     {
@@ -6893,7 +6893,7 @@
         "lastfm_artist_url": "https://www.last.fm/music/Jedi+Mind+Tricks",
         "album_cover": "https://lastfm.freetls.fastly.net/i/u/300x300/d1571bfc6a5e9c7d9b0fbae5d8c57ed2.jpg",
         "play_count": "31",
-        "musicbrainz_artist_id": "c7732cf8-e9a1-46f1-9133-84d930f3187a",
+        "musicbrainz_artist_id": "",
         "musicbrainz_album_id": "28ff53b1-2831-42dd-9a6e-517efcc6bce5"
     },
     {
@@ -7278,7 +7278,7 @@
         "lastfm_artist_url": "https://www.last.fm/music/The+Future+Sound+of+London",
         "album_cover": "https://lastfm.freetls.fastly.net/i/u/300x300/79f47ac7559f7684401d78a6a999ee86.png",
         "play_count": "30",
-        "musicbrainz_artist_id": "a1d77dd4-8728-4a47-bdfa-9663d791139c",
+        "musicbrainz_artist_id": "",
         "musicbrainz_album_id": "6a24dd33-4eef-44a8-912a-2916a3cec6b4"
     },
     {
