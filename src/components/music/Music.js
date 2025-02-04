@@ -894,33 +894,6 @@ class Music extends Component {
                                                     </HashLink>
                                                 }))
                                             }
-                                            {/*}
-                                            <Link to='#album-1'   id='link-to-album-1'   className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>1</p></Link>
-                                            <Link to='#album-25'  id='link-to-album-25'  className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>25</p></Link>
-                                            <Link to='#album-50'  id='link-to-album-50'  className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>50</p></Link>
-                                            <Link to='#album-75'  id='link-to-album-75'  className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>75</p></Link>
-                                            <Link to='#album-100' id='link-to-album-100' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>100</p></Link>
-                                            <Link to='#album-125' id='link-to-album-125' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>125</p></Link>
-                                            <Link to='#album-150' id='link-to-album-150' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>150</p></Link>
-                                            <Link to='#album-175' id='link-to-album-175' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>175</p></Link>
-                                            <Link to='#album-200' id='link-to-album-200' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>200</p></Link>
-                                            <Link to='#album-225' id='link-to-album-225' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>225</p></Link>
-                                            <Link to='#album-250' id='link-to-album-250' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>250</p></Link>
-                                            <Link to='#album-275' id='link-to-album-275' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>275</p></Link>
-                                            <Link to='#album-300' id='link-to-album-300' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>300</p></Link>
-                                            <Link to='#album-325' id='link-to-album-325' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>325</p></Link>
-                                            <Link to='#album-350' id='link-to-album-350' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>350</p></Link>
-                                            <Link to='#album-375' id='link-to-album-375' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>375</p></Link>
-                                            <Link to='#album-400' id='link-to-album-400' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>400</p></Link>
-                                            <Link to='#album-425' id='link-to-album-425' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>425</p></Link>
-                                            <Link to='#album-450' id='link-to-album-450' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>450</p></Link>
-                                            <Link to='#album-475' id='link-to-album-475' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>475</p></Link>
-                                            <Link to='#album-500' id='link-to-album-500' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>500</p></Link>
-                                            <Link to='#album-525' id='link-to-album-525' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>525</p></Link>
-                                            <Link to='#album-550' id='link-to-album-550' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>550</p></Link>
-                                            <Link to='#album-575' id='link-to-album-575' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>575</p></Link>
-                                            <Link to='#album-600' id='link-to-album-600' className='navItem' onClick={(e) => this.toggle_navitem(e)}><p>600</p></Link>
-                                            */}
                                         </div>
                                     </div>
                                 </div>
@@ -947,7 +920,7 @@ class Music extends Component {
  * @param {*} state 
  */
 const mapStateToProps = (state) => {
-    return {
+    return { 
         top_albums: state.top_albums,
         scrobble_data_top_tracks: state.scrobble_data_top_tracks,
     }

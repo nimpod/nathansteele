@@ -2950,11 +2950,11 @@ div.btn.films-reset-filters-btn svg {
 .review-displayed .myRating:hover {
   filter: brightness(1.2);
 }
-.myRating.r10 { background: var(--my-rating-colour-r10); }
+.myRating.r100 { background: var(--my-rating-colour-r10); }
 .myRating.r95 { background: var(--my-rating-colour-r95); }
-.myRating.r9 { background: var(--my-rating-colour-r9); }
+.myRating.r90 { background: var(--my-rating-colour-r9); }
 .myRating.r85 { background: var(--my-rating-colour-r85); }
-.myRating.r8 { background: var(--my-rating-colour-r8); }
+.myRating.r80 { background: var(--my-rating-colour-r8); }
 .myRating.r75 { background: var(--my-rating-colour-r75); }
 
 .my-rating span.r100 { color: var(--my-rating-textColour-r10); }
