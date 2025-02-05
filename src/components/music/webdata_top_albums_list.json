@@ -356,7 +356,7 @@
         "lastfm_url": "https://www.last.fm/music/Orbital/The+Middle+of+Nowhere",
         "artist_name": "Orbital",
         "album_name": "The Middle Of Nowhere",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/200ea4fbe0eb7f6a1773010d6b7004cb.png",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/e5a68b8f95e04ff0ad1d0534b9efab33.jpg",
         "review_id": "orbital-the_middle_of_nowhere"
     },
     {
@@ -5888,6 +5888,24 @@
     {
         "position": 655,
         "position_str": "655",
+        "lastfm_url": "https://www.last.fm/music/Biosphere/Substrata+%252B+Man+with+a+Movie+Camera",
+        "artist_name": "Biosphere",
+        "album_name": "Substrata + Man with a Movie Camera",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/cc35f4568c7696743401f1937a247f85.jpg",
+        "review_id": "biosphere-substrata_+_man_with_a_movie_camera"
+    },
+    {
+        "position": 656,
+        "position_str": "656",
+        "lastfm_url": "https://www.last.fm/music/The+KLF/Come+Down+Dawn",
+        "artist_name": "The KLF",
+        "album_name": "Come Down Dawn",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/765786f7901fed23acc2a074552800ce.png",
+        "review_id": "the_klf-come_down_dawn"
+    },
+    {
+        "position": 657,
+        "position_str": "657",
         "lastfm_url": "https://www.last.fm/music/2814/%E6%96%B0%E3%81%97%E3%81%84%E6%97%A5%E3%81%AE%E8%AA%95%E7%94%9F",
         "artist_name": "2814",
         "album_name": "\u65b0\u3057\u3044\u65e5\u306e\u8a95\u751f",
@@ -5895,8 +5913,8 @@
         "review_id": "2814-\u65b0\u3057\u3044\u65e5\u306e\u8a95\u751f"
     },
     {
-        "position": 656,
-        "position_str": "656",
+        "position": 658,
+        "position_str": "658",
         "lastfm_url": "https://www.last.fm/music/Linkin+Park/Reanimation",
         "artist_name": "Linkin Park",
         "album_name": "Reanimation",
@@ -5904,8 +5922,8 @@
         "review_id": "linkin_park-reanimation"
     },
     {
-        "position": 657,
-        "position_str": "657",
+        "position": 659,
+        "position_str": "659",
         "lastfm_url": "https://www.last.fm/music/Nintendo/Nintendo+Land+OST",
         "artist_name": "Nintendo",
         "album_name": "Nintendo Land OST",
