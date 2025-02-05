@@ -13,16 +13,6 @@ export const post = () => (
                 Kang Yatze II (6250m) (aka. KY2) is a mountain in North India, Ladakh, Hemis national park. 
                 It is roughly the <a href="https://en.wikipedia.org/wiki/List_of_mountains_by_elevation">237th highest (named) mountain in the world!</a>
             </p>
-            {/*
-            <p>Kang Yatze I (6400m) (aka. KY1) is the highest, at 6400m altitude. It requires a bit more advanced mounteering experience. 
-            */}
-            <p>To summit KY2 no mountaineering experience is required, 
-                and is a perfect high altitude peak for beginners to attempt
-                - enter me! I had never been higher than Mount Toubkal in Morocco before this, 
-                a height of 4167m. 
-                I was ready for a new challenge, 
-                and Ladakh is an area of the world that I had wanted to visit for a long time.
-            </p>
             <p>You can see the <a href="https://www.strava.com/athletes/45999759#interval?interval=202433&interval_type=week&chart_type=miles&year_offset=0">Strava data</a> here.</p>
             <ul>
                 <li>Total distance = 108km</li>

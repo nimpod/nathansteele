@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kang Yatze II Trek</title>
+</head>
+<body>
+    <div className="blog-subsection" id="section1">
+        <h3 className="subgroup-title">Kang Yatze II (6250m) (aka. KY2)</h3>
+        <p>Kang Yatze II is a mountain in North India, Ladakh, Hemis National Park. It is roughly the 237th highest (named) mountain in the world! 
+            <a href="https://en.wikipedia.org/wiki/List_of_mountains_by_elevation">More info</a></p>
+        <p className="subgroup-title">KY2 Difficulty</p>
+        <p>KY2 is classified as an AD+ alpine grade (fairly difficult). At a max altitude of 6,200m this was far beyond my previous experience - but we all have to start somewhere! 
+            <a href="https://www.alpin-ism.com/knowledge-base/news/alpine-grades">Alpine Grades</a></p>
+        <p className="subgroup-title">Summary</p>
+        <p><strong>TLDR:</strong> This was one of the most insane things I’ve ever done in my life. And strangely, I feel compelled to do more 6000m summits in the future.</p>
+    </div>
+    
+    <div className="blog-subsection" id="section2">
+        <h3 className="subgroup-title">Trek Statistics</h3>
+        <ul>
+            <li>Total distance = 108km</li>
+            <li>Total elevation gain = 6000m</li>
+            <li>Max altitude = 6200m (Kang Yatze II summit)</li>
+            <li>Alpine grade = AD+</li>
+            <li>Type = Camping</li>
+            <li>Duration = 10 days</li>
+            <li>Agency: Ju-Leh Adventures</li>
+            <li>Guide: Jit</li>
+            <li>With: Giovanni, Maria, Patrick, Helene</li>
+        </ul>
+    </div>
+    
+    <div className="blog-subsection" id="section3">
+        <h3 className="subgroup-title">Day 1 - 13/08/2024</h3>
+        <p>Zingchen (3402m) – Rumbak (3956m)</p>
+        <ul>
+            <li>Distance = 5.14km</li>
+            <li>Ascent = 397m</li>
+            <li>Duration = 1.5 hours</li>
+        </ul>
+        <p>We met in the Ju-Leh Adventures office in Leh town centre...</p>
+    </div>
+    
+    <div className="blog-subsection" id="section4">
+        <h3 className="subgroup-title">Day 2 - 14/08/2024</h3>
+        <p>Rumbak (3956m) – Stok La base camp (4438m) – Yurutse (4148m)</p>
+        <ul>
+            <li>Distance = 12.89km</li>
+            <li>Ascent = 864m</li>
+            <li>Duration = 4 hours</li>
+        </ul>
+        <p>Today we walked to Stok La base camp...</p>
+    </div>
+    
+    <div className="blog-subsection" id="section5">
+        <h3 className="subgroup-title">Day 3 - 15/08/2024</h3>
+        <p>Yurutse (4148m) – Ganda La pass (4961m) – Skiu (3366m)</p>
+        <ul>
+            <li>Distance = 20.43km</li>
+            <li>Ascent = 916m</li>
+            <li>Duration = 6 hours</li>
+        </ul>
+        <p>Today we departed from our wonderful campsite at Yurutse...</p>
+    </div>
+    
+    <div className="blog-subsection" id="section6">
+        <h3 className="subgroup-title">Day 4 - 16/08/2024</h3>
+        <p>Skiu (3366m) – Markha (3760m)</p>
+        <ul>
+            <li>Distance = 20.19km</li>
+            <li>Ascent = 526m</li>
+            <li>Duration = 4.5 hours</li>
+        </ul>
+        <p>Today was a gradual incline up to Markha...</p>
+    </div>
+    
+    <div className="blog-subsection" id="section7">
+        <h3 className="subgroup-title">Conclusion</h3>
+        <ul>
+            <li>Total distance = 108km</li>
+            <li>Total ascent = 6000m</li>
+            <li>The reality of camping in remote areas</li>
+            <li>Not a massive amount of high altitude experience</li>
+            <li>Stomach infection</li>
+            <li>Lack of sleep on summit day</li>
+            <li>Walking in snow in unfamiliar ski boots with metal crampons</li>
+        </ul>
+    </div>
+    
+    <div className="blog-references references-text" id="section8">
+        <p className="subgroup-title">Lessons learned:</p>
+        <ul>
+            <li>Never leave your bag on the grass overnight. It will get covered in spiders.</li>
+            <li>Only need to carry 2 water bottles on you, assuming there is consistent water flow. Just make sure to use the purification tablets!</li>
+        </ul>
+    </div>
+</body>
+</html>
