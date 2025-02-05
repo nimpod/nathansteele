@@ -222,6 +222,8 @@ def artist_name_doesnt_match_with_lastfm(folder_name, artist_name):
         return 'Devin Townsend'
     elif 'Kiyo Sen - Trick or Treat' in folder_name:
         return ' KIYO＊SEN '
+    elif 'Panzerballett' in folder_name:
+        return 'Panzerballett'
     else:
         return artist_name
 

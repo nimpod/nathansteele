@@ -4048,7 +4048,7 @@ const database = {
 		},
 		"yu_mikaye__katamari_damacy_soundtrack": {
 			lastfm_url: "https://www.last.fm/music/Yu+Miyake/Katamari+Damacy+Soundtrack+%22Katamari+Fortissimo+Damacy%22",
-			rym_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/%E4%B8%89%E5%AE%85%E5%84%AA/%E5%A1%8A%E9%AD%82%E3%80%8C%E5%A1%8A%E3%83%95%E3%82%A9%E3%83%AB%E3%83%86%E3%83%83%E3%82%B7%E3%83%A2%E9%AD%82%E3%80%8D/",
 			youtube_url: "https://www.youtube.com/watch?v=QAA6hq9RL-4&t=16s&pp=ygUleXVfbWlrYXllX19rYXRhbWFyaV9kYW1hY3lfc291bmR0cmFjaw%3D%3D",
 			year_of_release: "2004",
 			year_of_discovery: "2021",
