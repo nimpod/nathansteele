@@ -43,3 +43,18 @@ return <HashLink
     id={`link-to-album-${num}`}
     </HashLink>
 ```
+
+#### Common errors
+
+##### Error message
+```
+npm update react-particles-js
+npm error code ERESOLVE 
+npm error ERESOLVE unable to resolve dependency tree npm error
+```
+
+##### Solution
+```
+npm config set legacy-peer-deps true
+```
+
