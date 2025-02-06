@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { withRouter, Link } from 'react-router-dom';
 
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 import { get_value_of_CSS_variable } from '../../js/helpers';
 
 
