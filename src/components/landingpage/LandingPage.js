@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { withRouter, Link } from 'react-router-dom';
 
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 import { get_value_of_CSS_variable } from '../../js/helpers';
 
 
@@ -152,11 +152,11 @@ class LandingPage extends Component {
     render() {
         return(
             <div className='page-wrapper'>
+                {/*
                 <div id="particles-js">
-                    {/*}
                     <Particles params={particlesConfig} />
-                    */}
                 </div>
+                */}
                 <div className='landingpage-container'>
                     <div className='landingpage-intro'>
                         <p>Hi, I'm</p>
