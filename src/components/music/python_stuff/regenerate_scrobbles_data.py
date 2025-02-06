@@ -117,8 +117,8 @@ def get_top_albums(period=TIME_PERIOD_OPTIONS.ALL_TIME, limit=10):
                 pos = album['@attr']['rank']
                 play_count = album['playcount']
                 
-                musicbrainz_artist_id = album['artist']['mbid']
-                musicbrainz_album_id = album['mbid']
+                # musicbrainz_artist_id = album['artist']['mbid']
+                # musicbrainz_album_id = album['mbid']
                 
                 # print(track)
                 # print(f'{musicbrainz_artist_id} - {musicbrainz_track_id}')
@@ -132,8 +132,8 @@ def get_top_albums(period=TIME_PERIOD_OPTIONS.ALL_TIME, limit=10):
                     'lastfm_artist_url': lastfm_artist_url,
                     'album_cover': album_cover,
                     'play_count': play_count,
-                    'musicbrainz_artist_id': musicbrainz_artist_id,
-                    'musicbrainz_album_id': musicbrainz_album_id,
+                    #'musicbrainz_artist_id': musicbrainz_artist_id,
+                    #'musicbrainz_album_id': musicbrainz_album_id,
                 })
     
     return albums
