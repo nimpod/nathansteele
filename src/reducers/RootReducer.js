@@ -146,6 +146,10 @@ const merge_albums_data = (init_state) => {
         if (v["artist_name_Japanese"]) {
             v["artist_name_displayed"] = v["artist_name"] + " [" + v["artist_name_Japanese"] + "]";
         }
+
+        // automate retrieval of RYM artist link... Not sure if this will work 100% of the time.
+        let artist_name_in_rym = v["artist_name"].replace(' ', '-').toLowerCase();
+        v["rym_artist_link"] = `https://rateyourmusic.com/artist/${artist_name_in_rym}`;
         
         // add scrobble data to each album...
         //console.log(init_state.scrobble_data_top_albums);

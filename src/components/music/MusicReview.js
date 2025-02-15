@@ -123,7 +123,9 @@ class MusicReview extends React.Component {
                                 {/* Album info */}
                                 <div className='album-info'>
                                     <span className='album-name' title='Album name'>{album_name}</span>
-                                    <span className='artist-name' title='Artist name'>{artist_name}</span>
+                                    <span className='artist-name' title='Artist name'>
+                                        <a target='_blank' href={this.props.album_data.rym_artist_link}>{artist_name}</a>
+                                    </span>
                                     
                                     {/* Year */}
                                     <div className='year-of-release album-info-item' title="Year this album was released">
