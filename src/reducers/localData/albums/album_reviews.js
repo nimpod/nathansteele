@@ -179,6 +179,18 @@ const database = {
 		},
 
 
+		"the_klf__chillout": {
+			lastfm_url: "https://www.last.fm/music/The+KLF/Come+Down+Dawn",
+			rym_url: "https://rateyourmusic.com/release/album/the-klf/chill-out/",
+			youtube_url: "https://rateyourmusic.com/release/album/the-klf/chill-out/",
+			custom_cover_url: "https://e.snmc.io/i/600/s/015c32ebab1741a35db88638c68bed0f/10718368/the-klf-chill-out-Cover-Art.jpg", 
+			year_of_release: "1990",
+			year_of_discovery: "2025",
+			genres: "Ambient; Electronic; Ambient house; Nature recordings; Tuvan throat singing",
+			my_rating: 9.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
 		"the_future_sound_of_london__lifeforms": {
 			lastfm_url: "https://www.last.fm/music/The+Future+Sound+of+London/Lifeforms",
 			rym_url: "https://rateyourmusic.com/release/album/the-future-sound-of-london/lifeforms-3/",
@@ -785,9 +797,19 @@ const database = {
 		},
 
 
+		"biosphere__substrata": {
+			lastfm_url: "https://www.last.fm/music/Biosphere/Substrata+%252B+Man+with+a+Movie+Camera",
+			rym_url: "https://rateyourmusic.com/release/album/biosphere/substrata/",
+			spotify_url: "https://rateyourmusic.com/release/album/biosphere/substrata/",
+			year_of_release: "1997",
+			year_of_discovery: "2021",
+			genres: "Electronic; Ambient; Drone; Nature recordings",
+			my_rating: 9.0,
+			my_review: ""
+		},
 		"banco_de_gaia__last_train_to_lhasa": {
 			lastfm_url: "https://www.last.fm/music/Banco+De+Gaia/Last+Train+to+Lhasa+(Special+Edition)",
-			rym_url: "httphttps://rateyourmusic.com/release/album/banco-de-gaia/last-train-to-lhasa/",
+			rym_url: "https://rateyourmusic.com/release/album/banco-de-gaia/last-train-to-lhasa/",
 			spotify_url: "",
 			year_of_release: "1995",
 			year_of_discovery: "2024",
