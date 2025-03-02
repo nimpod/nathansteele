@@ -4680,6 +4680,12 @@ const database = {
             my_review: "",
             custom_poster_url: "https://www.themoviedb.org/t/p/original/6fOnpPpobaisTHo1MChGCh76qV8.jpg"
         },
+        "serial_experiments_lain": {
+            letterboxd_url: "https://boxd.it/hYQE",
+            my_rating: 9.5,
+            my_tags: ["Cyberpunk", "Profound", "Philosophical", "Disassociation", "Demigod", "Identity", "Questioning reality", "Depression", ],
+            my_review: "",
+        },
 
         //
         "shadow_in_the_cloud": {

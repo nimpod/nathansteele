@@ -205,8 +205,8 @@ const database = {
 		},
 		"the_field__looping_state_of_mind": {
 			lastfm_url: "https://www.last.fm/music/The+Field/Looping+State+of+Mind",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/the-field/looping-state-of-mind/",
+			spotify_url: "https://open.spotify.com/album/3fASgexUtIr2a7jAGaIeNP",
 			year_of_release: "2011",
 			year_of_discovery: "2023",
 			genres: "Minimal techno; Ambient techno; Tech house; Electronic",
@@ -684,7 +684,17 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
-	
+		"badbadnotgood__sour_soul": {
+			lastfm_url: "https://www.last.fm/music/BADBADNOTGOOD/Sour+Soul",
+			rym_url: "https://rateyourmusic.com/release/album/badbadnotgood-ghostface-killah/sour-soul/",
+			spotify_url: "https://rateyourmusic.com/release/album/badbadnotgood-ghostface-killah/sour-soul/",
+			year_of_release: "2015",
+			year_of_discovery: "2017",
+			genres: "Jazz rap; Instrumental Hip Hop; Hip Hop; Rap",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
 		//
 		"brand_new__science_fiction": {
 			lastfm_url: "https://www.last.fm/music/Brand+New/Science+Fiction",
@@ -932,6 +942,16 @@ const database = {
 		},
 
 
+		"cocomofo__cardinal_rose": {
+			lastfm_url: "https://www.last.fm/music/Cocomofo/Cardinal+Rose",
+			rym_url: "https://rateyourmusic.com/release/album/cocomofo/cardinal-rose/",
+			spotify_url: "https://open.spotify.com/album/3weQTp7l3pUWzkmdi8naYN?si=m4u4wJJlTb28A4RugcE63A",
+			year_of_release: "2023",
+			year_of_discovery: "2024",
+			genres: "Jazz; Psychedelic pop; Jazz rock; Space rock; Jazz fusion",
+			my_rating: 8.0,
+			my_review: ""
+		},	
 		"ceephax_acid_crew__box_steady": {
 			lastfm_url: "https://www.last.fm/music/Ceephax+Acid+Crew/Box+Steady",
 			rym_url: "https://rateyourmusic.com/release/album/ceephax-acid-crew/box-steady/",
@@ -1069,7 +1089,7 @@ const database = {
 		"dispirited_spirits__the_redshift_blues": {
 			lastfm_url: "https://www.last.fm/music/Dispirited+Spirits/The+Redshift+Blues",
 			rym_url: "https://rateyourmusic.com/release/album/dispirited-spirits/the-redshift-blues/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/5X0zmtiglsalNjS6uJj6iI",
 			year_of_release: "2023",
 			year_of_discovery: "2024",
 			genres: "Midwest emo; Progressive rock; Post-rock; Math rock",
@@ -1100,6 +1120,7 @@ const database = {
 		"deaths_dynamic_shroud__reality_2_archive_of_fading_mist": { 
 			lastfm_url: "https://www.last.fm/music/death%27s+dynamic+shroud/Reality+2+:+Archive+of+Fading+Mist+(part+ii)",
 			rym_url: "https://rateyourmusic.com/release/album/deaths-dynamic-shroud_wmv/reality-2-archive-of-fading-mist-part-ii/",
+			youtube_url: "https://www.youtube.com/watch?v=0R4W3nVw7Mg",
 			year_of_release: "2022",
 			year_of_discovery: "2023",
 			genres: "Vaporwave; Glitch pop; Hyperpop; Deconstructed club; Alternative dance; Dance pop; Bubblegum bass; Electronic",
@@ -1346,7 +1367,29 @@ const database = {
 			my_review: "",
 		},
 
+		//
+		"frank_ocean__blonde": {
+			lastfm_url: "https://www.last.fm/music/Frank+Ocean/Blonde",
+			rym_url: "https://rateyourmusic.com/release/album/frank-ocean/blonde/",
+			spotify_url: "https://open.spotify.com/album/3mH6qwIy9crq0I9YQbOuDf",
+			year_of_release: "2016",
+			year_of_discovery: "2017",
+			genres: "R&B; Neo-soul; Hip-Hop; Rap",
+			my_rating: 9.0,
+			my_review: "",
+		},
+		"frank_ocean__endless": {
+			lastfm_url: "https://www.last.fm/music/Frank+Ocean/Endless",
+			rym_url: "https://rateyourmusic.com/release/album/frank-ocean/endless/",
+			youtube_url: "https://rateyourmusic.com/release/album/frank-ocean/endless/",
+			year_of_release: "2018",
+			year_of_discovery: "2019",
+			genres: "R&B; Neo-soul; Hip-Hop; Rap; Ambient pop; Electronic; Experimental Hip Hop",
+			my_rating: 8.0,
+			my_review: "",
+		},
 
+		//
 		"four_tet__new_energy": {
 			lastfm_url: "https://www.last.fm/music/Four+Tet/New+Energy",
 			rym_url: "https://rateyourmusic.com/release/album/four-tet/new-energy/",
@@ -1356,7 +1399,18 @@ const database = {
 			genres: "IDM; Microhouse; Downtempo; Ambient house; Folktronica; Electronic",
 			my_rating: 8.0,
 			my_review: "",
-		},	
+		},
+		"four_tet__there_is_love_in_you": {
+			lastfm_url: "https://www.last.fm/music/Four+Tet/There+Is+Love+in+You",
+			rym_url: "https://rateyourmusic.com/release/album/four-tet/there-is-love-in-you/",
+			spotify_url: "https://rateyourmusic.com/release/album/four-tet/there-is-love-in-you/",
+			year_of_release: "2010",
+			year_of_discovery: "2017",
+			genres: "IDM; Microhouse; Minimal techno; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
 		"fiona_apple__the_idler_wheel": {
 			lastfm_url: "https://www.last.fm/music/Fiona+Apple/The+Idler+Wheel+Is+Wiser+Than+the+Driver+of+the+Screw+and+Whipping+Cords+Will+Serve+You+More+Than+Ropes+Will+Ever+Do",
 			rym_url: "https://rateyourmusic.com/release/album/fiona-apple/the-idler-wheel-is-wiser-than-the-driver-of-the-screw-and-whipping-cords-will-serve-you-more-than-ropes-will-ever-do/",
@@ -1367,16 +1421,6 @@ const database = {
 			my_rating: 9.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
-		},
-		"frank_ocean__blonde": {
-			lastfm_url: "https://www.last.fm/music/Frank+Ocean/Blonde",
-			rym_url: "https://rateyourmusic.com/release/album/frank-ocean/blonde/",
-			spotify_url: "https://open.spotify.com/album/3mH6qwIy9crq0I9YQbOuDf",
-			year_of_release: "2016",
-			year_of_discovery: "2017",
-			genres: "R&B; Neo-soul; Hip-Hop; Rap",
-			my_rating: 9.0,
-			my_review: "",
 		},
 		"father_john_misty__pure_comedy": {
 			lastfm_url: "https://www.last.fm/music/Father+John+Misty/Pure+Comedy",
@@ -1436,11 +1480,22 @@ const database = {
 		},
 
 
+		"gridlock_trace": {
+			lastfm_url: "https://www.last.fm/music/Gridlock/Trace",
+			rym_url: "https://rateyourmusic.com/release/album/gridlock/trace/",
+			spotify_url: "https://open.spotify.com/album/7mvzPEE2UBA0nYNwWvakFi",
+			year_of_release: "2001",
+			year_of_discovery: "2024",
+			genres: "IDM; Ambient; Glitch; Post-Industrial",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.NIELS
+		},
 		"greg_isakov__this_empty_northern_hemisphere": {
 			lastfm_url: "https://www.last.fm/music/Gregory+Alan+Isakov/This+Empty+Northern+Hemisphere",
 			rym_url: " https://rateyourmusic.com/release/album/gregory-alan-isakov/this-empty-northern-hemisphere/",
-			spotify_url: "",
-			year_of_release: "2008",
+			spotify_url: "https://open.spotify.com/album/06UoTVgpPiGnRPGjowrG3g",
+			year_of_release: "2009",
 			year_of_discovery: "2024",
 			genres: "Indie folk; Americana; Country",
 			my_rating: 8.0,
@@ -1929,6 +1984,16 @@ const database = {
 		},
 
 
+		"jockstrap__i_love_you_jenifer_b": {
+			lastfm_url: "https://www.last.fm/music/Jockstrap/I+Love+You+Jennifer+B",
+			rym_url: "https://rateyourmusic.com/release/album/jockstrap/i-love-you-jennifer-b/",
+			spotify_url: "https://rateyourmusic.com/release/album/jockstrap/i-love-you-jennifer-b/",
+			year_of_release: "2022",
+			year_of_discovery: "2022",
+			genres: "Art pop; Glitch pop; Chamber pop; Folktronica; Indie folk",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"jessica_pratt__here_in_the_pitch": {
 			lastfm_url: "https://www.last.fm/music/Jessica+Pratt/Here+In+The+Pitch",
 			rym_url: "https://rateyourmusic.com/release/album/jessica-pratt/here-in-the-pitch/",
@@ -1973,8 +2038,8 @@ const database = {
 		},
 		"jme__integrity": {
 			lastfm_url: "https://www.last.fm/music/JME/Integrity",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/jme/integrity/",
+			spotify_url: "https://open.spotify.com/album/1D9L39944TjCRUuLTYJqBn",
 			year_of_release: "2015",
 			year_of_discovery: "2015",
 			genres: "Grime; UK Rap; Hip-Hop; Rap",
@@ -2111,6 +2176,18 @@ const database = {
 		},
 		
 
+		"Kang Eun-Il Ancient Futures": {
+			lastfm_url: "https://www.last.fm/music/+noredirect/Kang+Eun-Il/Ancient+Futures",
+			// lastfm_url: "https://www.last.fm/music/Kang+Eun+Il/Ancient+Futures+-+Haegeum+Solo+(The+Bow+OST)",
+			rym_url: "https://rateyourmusic.com/release/album/%EA%B0%95%EC%9D%80%EC%9D%BC/vol__1__ancient_futures/",
+			youtube_url: "https://www.youtube.com/playlist?list=PLn9uCGUz21K36gErIIYvlxoD8f4-Ujk-g",
+			year_of_release: "1981",
+			year_of_discovery: "2024",
+			genres: "Korean classical music; Film soundtrack",
+			themes: ["Not on spotify"],
+			my_rating: 8.0,
+			my_review: ""
+		},
 		"kitaro_ki": {
 			lastfm_url: "https://www.last.fm/music/KIYO%EF%BC%8ASEN/Trick+or+Treat",
 			rym_url: "https://rateyourmusic.com/release/album/kiyo_sen/trick-or-treat/",
@@ -3123,8 +3200,8 @@ const database = {
 		},
 		"portishead__dummy": {
 			lastfm_url: "https://www.last.fm/music/Portishead/Dummy",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/portishead/dummy/",
+			spotify_url: "https://open.spotify.com/album/3539EbNgIdEDGBKkUf4wno",
 			year_of_release: "1994",
 			year_of_discovery: "2021",
 			genres: "Trip hop; Chillout; Dark cabaret",
@@ -3298,7 +3375,7 @@ const database = {
 		"rafael_toral__spectral_evolution": {
 			lastfm_url: "https://www.last.fm/music/Rafael+Toral/Spectral+Evolution",
 			rym_url: "https://rateyourmusic.com/release/album/rafael-toral/spectral-evolution/",
-			spotify_url: "https://open.spotify.com/album/3kbPhX2YtREsebMrmN74fN?si=kDGEu52QTGCzJLvOFkX7vA",
+			youtube_url: "https://www.youtube.com/watch?v=YeFG3pNHbTs&pp=ygUeU3BlY3RyYWwgRXZvbHV0aW9uUmFmYWVsIFRvcmFs",
 			year_of_release: "2024",
 			year_of_discovery: "2024",
 			genres: "Ambient; Drone; Electroacoustic; Nature recordings; Experimental",
@@ -3498,6 +3575,17 @@ const database = {
 		},
 
 
+		"spelling__the_turning_wheel": {
+			lastfm_url: "https://www.last.fm/music/SPELLLING/The+Turning+Wheel",
+			rym_url: "https://rateyourmusic.com/release/album/spellling/the-turning-wheel/",
+			spotify_url: "https://open.spotify.com/album/0vzzI81Sz2JAr4dVo8rrIj",
+			year_of_release: "2021",
+			year_of_discovery: "2021",
+			genres: "Art pop; Baroque pop; Psychedelic pop",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
+		},
 		"sean_ashe__flux": {
 			lastfm_url: "https://www.last.fm/music/Sean+Ashe/Flux",
 			rym_url: "https://rateyourmusic.com/release/album/sean_ashe/flux/",
@@ -3659,19 +3747,19 @@ const database = {
 		},
 		"sam_gellaitry__escapism_iii": {
 			lastfm_url: "https://www.last.fm/music/Sam+Gellaitry/Escapism+III",
-			rym_url: "",
-			spotify_url: "",
-			year_of_release: "2022",
+			rym_url: "https://rateyourmusic.com/release/ep/sam-gellaitry/escapism-iii/",
+			spotify_url: "https://open.spotify.com/album/39Xf184PU6ESRke6jtAk8n",
+			year_of_release: "2017",
 			year_of_discovery: "2022",
-			genres: "Dubstep; Future bass; Drum and bass; Electronic",
+			genres: "Future bass; Wonky; EDM Trap; Electronic",
 			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.BELPHEGOR_SATAN
 		},
 		"slipknot__slipknot": {
 			lastfm_url: "https://www.last.fm/music/Slipknot/Slipknot",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/slipknot/slipknot/",
+			spotify_url: "https://open.spotify.com/album/5lOFvOWAdy9G6p44noRILU",
 			year_of_release: "1999",
 			year_of_discovery: "2009",
 			genres: "Nu metal; Alternative metal",
@@ -3772,6 +3860,17 @@ const database = {
 		},
 
 
+		"tineidae__exo": {
+			lastfm_url: "https://www.last.fm/music/Tineidae/Exo",
+			rym_url: "https://rateyourmusic.com/release/album/tineidae/exo/",
+			spotify_url: "https://open.spotify.com/album/4gJcg3Kv3WWrI5VZ4aVu1e",
+			year_of_release: "2020",
+			year_of_discovery: "2024",
+			genres: "Ambient; Drone; Space ambient",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
 		"takashi_kokubo__music_for_a_cosmic_garden": {
 			lastfm_url: "https://www.last.fm/music/Takashi+Kokubo/Music+for+a+Cosmic+Garden",
 			rym_url: "https://rateyourmusic.com/release/album/%E5%B0%8F%E4%B9%85%E4%BF%9D%E9%9A%86-andrea-esperti/music-for-a-cosmic-garden/",
@@ -3915,10 +4014,10 @@ const database = {
 	V: {
 		"vale_smith__coruscate": {
 			lastfm_url: "https://www.last.fm/music/Vale-Smith/Coruscate",
-			rym_url: "",
-			spotify_url: "",
-			year_of_release: "2021",
-			year_of_discovery: "2021",
+			rym_url: "https://rateyourmusic.com/release/album/vale-smith/coruscate/",
+			spotify_url: "https://open.spotify.com/album/2dXw9wbnBZGsTIBEJvjMso",
+			year_of_release: "2022",
+			year_of_discovery: "2022",
 			genres: "Future bass; EDM Trap; EDM; IDM; Wonky; Glitch pop; Electronic",
 			my_rating: 8.5,
 			my_review: "",
