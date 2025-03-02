@@ -1855,7 +1855,8 @@ const database = {
 			my_review: "",
 		},
 		"joe_hisaishi__children_of_the_sea_OST": {
-			lastfm_url: "https://www.last.fm/music/Joe+Hisaishi/%E6%B5%B7%E7%8D%A3%E3%81%AE%E5%AD%90%E4%BE%9B+(%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%BB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF)",
+			lastfm_url: "https://www.last.fm/music/Joe+Hisaishi/Children+Of+The+Sea",
+			// lastfm_url: "https://www.last.fm/music/Joe+Hisaishi/%E6%B5%B7%E7%8D%A3%E3%81%AE%E5%AD%90%E4%BE%9B+(%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%BB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF)",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/%E6%B5%B7%E7%8D%A3%E3%81%AE%E5%AD%90%E4%BE%9B-children-of-the-sea/",
 			spotify_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/%E6%B5%B7%E7%8D%A3%E3%81%AE%E5%AD%90%E4%BE%9B-children-of-the-sea/",
 			year_of_release: "2019",
