@@ -22,8 +22,16 @@ export const review = () => (
                 Pretty quickly I started going through their discography, and while all of their albums are very special, something about this 1998 album was and still is the most unique/engaging/otherworldly album I have ever experienced.
             </p>
         </div>
+
+        <div className="review-trackRatings">
+            <h5>Track ratings</h5>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
         
         <div class="review-summary">
+            <h5>Review summary</h5>
             <p>
                 Truly the greatest album of all time. The marriage of futurism and nostalgia is unlike any album I have ever heard.
                 The balance between melancolia and happienss is perfect.

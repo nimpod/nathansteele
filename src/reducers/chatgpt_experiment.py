@@ -1,6 +1,7 @@
 from openai import OpenAI
 
 """
+[Trying to automate blog post txt content into jsx file]
 Instructions for ChatGPT:
 
 Convert the following text into HTML code.
@@ -35,4 +36,23 @@ completion = client.chat.completions.create(
   ]
 )
 
-print(completion.choices[0].message.content);
+print(completion.choices[0].message.content)
+
+
+
+"""
+[Trying to automate album review txt content into jsx file]
+Instructions for ChatGPT:
+
+Convert the following text into HTML code.
+Please obide by these rules:
+1) Do not apply any CSS code. 
+2) Apply the <a> links appropriately to the related text above it.
+3) If you see a URL that refers to a .jpeg, please make it into an <img> element.
+
+Divide each section into <div> block elements.
+
+1) There should be 3 sections, please divide them up into indivudual div blocks with appropriate classnames.
+2) At the end of the track ratings, there is a slot for my average rating of all the tracks. Can you calculate this, and display the value?
+
+"""

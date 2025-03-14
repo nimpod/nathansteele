@@ -6,6 +6,7 @@
 
 import os
 import json
+import time
 
 from LastFm import LastFM
 from LastFm import TIME_PERIOD_OPTIONS
@@ -76,7 +77,23 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     # modify the array so it starts from where we left off before
                     toplist = toplist[pos:]
                     # inform the user pos has been changed...
-                    print(f"You have changed to 'Append' mode, restarting from pos {pos}")
+                    print(f"You added new album(s). Changed to 'Append' mode. Restarting from pos {pos}")
+                elif num_of_albums_already_in_list == num_of_albums:
+                    # If the new data and old data are same size, I am probbaly just reordering the list.
+                    # Therefore it's more efficient to regenerate the list starting from the point at which they are different.
+                    # https://stackoverflow.com/questions/67263585/determining-the-indicies-where-2-numpy-arrays-differ
+                    pass
+                    #append = True
+                    #print(old_data_reformatted)
+                    #print(new_data)
+                    #test = (~numpy.equal(data_reformatted, new_data)).astype(object)
+                    #indices = numpy.flatnonzero(test)
+                    #print(indices)
+                    #pos = indices[0]
+                    #print(pos)
+                    #toplist = toplist[pos:]
+                    #print(f"You reordered the list. Changed to 'Append' mode. Restarting from pos {pos}")
+
             
             # local version of list
             albums_list = []            
@@ -90,6 +107,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 
                 # essentially the name of the folder containing the songs from the album
                 folder_name = elem.split('\\')[0]
+                # print(folder_name)
                 
                 # but the symbols need to be replaced...
                 folder_name_fixed = MusicbeeHelpers.fix_symbols_on_album_filenames(folder_name=folder_name)
@@ -115,6 +133,10 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
 
                     # get more data via LastFM API...
                     data = lastfm.GET_album_info(artist_name=artist_name_lastfm_version, album_name=album_name_lastfm_version)
+                except ConnectionError as err:
+                    # I get the error message below when disconnected mid script... Wait for 60s in the hope that the connection is regained by then. Otherwise we loose all progress!
+                    # HTTPSConnectionPool(host='ws.audioscrobbler.com', port=443): Max retries exceeded with url: /2.0/?method=album.getinfo&artist=ichiko_aoba&album=utabiko&api_key=641be1ed643c913edb609208c24efad7&format=json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000026587B7F890>: Failed to establish a new connection: [WinError 10065] A socket operation was attempted to an unreachable host'))
+                    time.sleep(60)
                 except Exception as err:
                     # something went wrong... Break out of loop before we loose all the data we've gathered so far
                     print(err)
@@ -200,6 +222,8 @@ def album_name_doesnt_match_with_lastfm(folder_name, album_name):
         return "Suite: April 2020"
     elif "Jobim - The Composer of Desafinado" in folder_name:
         return "The Composer Of Desafinado, Plays"
+    elif "Metamatics - Mind Mushing Git" in folder_name:
+        return "Midnight Sun Pig"
     #elif 'Penguin Cafe - Rain Before Seven':
     #    return 'Rain Before Seven...'
     #elif 'Opposite Day - What Is Is':
