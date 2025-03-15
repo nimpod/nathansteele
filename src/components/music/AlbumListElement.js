@@ -2,11 +2,13 @@ import React, {Component} from 'react'
 import { withRouter, Link } from 'react-router-dom';
 import { ReactComponent as ToplistPosIcon } from "../../icons/toplistPos.svg";
 import { ReactComponent as ToplistRatingIcon } from "../../icons/toplistRating.svg";
+import { unicodeDecode } from '../../js/helpers.js';
+
 
 
 class AlbumListElement extends Component {
     render() {
-        console.log(this.props.album);
+        // console.log(this.props.album);
 
         let album_cover_url = ""
         let album_name = "";
@@ -63,13 +65,15 @@ class AlbumListElement extends Component {
             let my_review = this.props.album.my_review;
             let search_begin = 'review-summary\"><p>';
             let search_end = '</p>';
+            let review_exists = my_review.includes(search_begin);
 
-            if (my_review.includes(search_begin) == false) {
-                review_summary = "Haven't written a review summary yet..."
-            } else {
+            if (review_exists) {
                 review_summary = my_review.split(search_begin)[1];
                 review_summary = review_summary.split(search_end)[0];
+                review_summary = unicodeDecode(review_summary);
                 console.log(review_summary);
+            } else {
+                review_summary = "Haven't written a review summary yet...";
             }
         }
 

@@ -304,7 +304,7 @@ class Music extends Component {
                                 // show all albums...
                                 return true;
                             }
-                            if (a.genres !== undefined) {
+                            if (a.genres !== undefined && a.genres_lowercase !== undefined) {
                                 // only show albums that contain the requested genre...
                                 return a.genres_lowercase.includes(genre_selected.toLowerCase());
                             }

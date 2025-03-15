@@ -18,6 +18,7 @@ import { review as BoC__MHTRTC__Review } 						from './content/BoC__MHTRTC.jsx';
 import { review as Chisato_Yamada__Suite_Nihonkai__Review } 	from './content/Chisato_Yamada__Suite_Nihonkai.jsx';
 import { review as Lucrecia_Dalt__Syzygy__Review }				from './content/Lucrecia_Dalt__Syzygy.jsx';
 import { review as Nanoray__Digimaiden__Review }				from './content/Nanoray__Digimaiden.jsx';
+import { review as Jesus_Molina__Agape__Review }				from './content/Jesus_Molina__Agape/review.jsx';
 
 
 // [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut for this particular file!
@@ -2074,9 +2075,9 @@ const database = {
 			custom_cover_url: "https://i.scdn.co/image/ab67616d0000b273869c2360bb37a1fa34923957",
 			year_of_release: "2022",
 			year_of_discovery: "2024",
-			genres: "Jazz; Jazz fusion",
+			genres: "Jazz fusion; Jazz; Latin jazz; Bossa nova; Art pop",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Jesus_Molina__Agape__Review()),
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 

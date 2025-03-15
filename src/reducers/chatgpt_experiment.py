@@ -53,6 +53,21 @@ Please obide by these rules:
 Divide each section into <div> block elements.
 
 1) There should be 3 sections, please divide them up into indivudual div blocks with appropriate classnames.
-2) At the end of the track ratings, there is a slot for my average rating of all the tracks. Can you calculate this, and display the value?
+2) At the end of the track ratings, there is a slot for my average rating of all the tracks. Can you calculate this, and display the value to 2 decimal places?
+3) Change the headings at the beginning of each div block, to <h3 className="subgroup-title">
+4) Remove the <h1> heading
+5) Change the first div block to <div className="review-intro">
+6) Change the first div block to <div className="review-trackRatings">
+7) Change the first div block to <div className="review-summary"
+8) Encapsulate all this content within the "review-content" div block, please keep the import statement and export statement.
+9) Remove the 'export default review' line at the bottom.
+
+import React from 'react';
+
+export const review = () => (
+    <div className='review-content'>
+
+    </div>
+)
 
 """

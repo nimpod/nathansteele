@@ -1,47 +1,18 @@
 import React from 'react';
 import TemplateTracklistComponent from '../TemplateTracklistComponent.jsx';
-
 const tracklist = [
-    {
-        "title": "The First Movement (Ferry To Shamisen) 第一楽章 （渡来三味)",
-        "my_rating": 8,
-        "my_feelings": "",
-    },
-    {
-        "title": "The Second Movement (Echizen Flow Nodes)] 第二楽章 （越前流れ節）",
-        "my_rating": 9,
-        "my_feelings": "",
-    },
-    {
-        "title": "The Third Movement (Collar People a Shallow Premier Lai Ishikawa) 第三楽章 （領民一揆浅瀬石川)",
-        "my_rating": 11,
-        "my_feelings": "",
-    },
-    {
-        "title": "The Fourth Movement (In Indigenous Kamigawara Fushitamashi Forever) 第四楽章 （土着上河原節魂永遠に)",
-        "my_rating": 11,
-        "my_feelings": "The greatest song of all time?",
-    },
-    {
-        "title": "Tsugaru Spring Song 津軽春唄",
-        "my_rating": 11,
-        "my_feelings": "Insane vibes",
-    },
-    {
-        "title": "Tsugaru Autumn Song 津軽秋唄",
-        "my_rating": 10,
-        "my_feelings": "",
-    },
-    {
-        "title": "Tsugaru Winter Song 津軽冬唄",
-        "my_rating": 10,
-        "my_feelings": "",
-    },
+    { "rating": 8, "title": "The First Movement (Ferry To Shamisen) 第一楽章 （渡来三味)" },
+    { "rating": 9, "title": "The Second Movement (Echizen Flow Nodes)] 第二楽章 （越前流れ節" },
+    { "rating": 11, "title": "The Third Movement (Collar People a Shallow Premier Lai Ishikawa) 第三楽章 （領民一揆浅瀬石川)" },
+    { "rating": 11, "title": "The Fourth Movement (In Indigenous Kamigawara Fushitamashi Forever) 第四楽章 （土着上河原節魂永遠に)" },
+    { "rating": 11, "title": "Tsugaru Spring Song 津軽春唄" },
+    { "rating": 10, "title": "Tsugaru Autumn Song 津軽秋唄" },
+    { "rating": 10, "title": "Tsugaru Winter Song 津軽冬唄" },
 ]
 
 export const review = () => (
     <div className='review-content'>
-        <div className="review-meRambling">
+        <div className="review-intro">
             <p>
                 Japanese tsugaru-jamisen musician Chisato Yamanda created one of the best fusions of Japanese funk and Min'yō music I've ever heard in my life!
                 This is so underrated and underappreciated in the modern era.
@@ -61,6 +32,13 @@ export const review = () => (
                 Honestly the only song I'm a bit meh on is The First Movement, the intro to the album. But this is because the album develops at its own pace, gradually introducing new layers of instrumentation and production, which is part of its charm in my opinion. 
             </p>
         </div>
-        <TemplateTracklistComponent tracklist={tracklist} />
+
+        <div className='review-trackRatings'>
+            <TemplateTracklistComponent tracklist={tracklist} />
+        </div>
+
+        <div className='review-summary'>
+            <p>It's a very memorable, funky, catchy hidden gem of an album from Japan's finest tsugaru-jamisen player. An album I highly recommend for anyone that wants something a little different from the usual.</p>
+        </div>
     </div>
 )

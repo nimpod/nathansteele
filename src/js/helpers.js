@@ -442,6 +442,17 @@ export function get_random_RGBA(opacity) {
     return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + (opacity) + ')';
 }
 
+/**
+ * Fixes situations where text suddenly looks like &#27x; instead of '
+ * https://stackoverflow.com/questions/63482621/json-how-to-remove-x27-letters-of-the-string
+ */
+export function unicodeDecode(text) {
+    const decoded = text.replace(/&#x([0-9a-f]+);/gi, (_, code) =>
+      String.fromCharCode(parseInt(code, 16))
+    );
+    return decoded;
+};
+
 
 /**
  * Hide something when a user clicks outside the item

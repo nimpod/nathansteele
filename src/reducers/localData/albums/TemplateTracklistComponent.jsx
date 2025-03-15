@@ -7,6 +7,13 @@ import React from 'react';
  * @returns 
  */
 function TemplateTracklistComponent(props) {
+    let ratings = [];
+    props.tracklist.forEach(track => {
+        ratings.push(track['rating']);
+    });
+    let avg = ratings.reduce((acc, c) => acc + c, 0) / ratings.length;
+    avg = avg.toFixed(3);
+
     return (
         <div className="review-fullTracklist">
             <div className='tracklist-header'>
@@ -16,14 +23,18 @@ function TemplateTracklistComponent(props) {
             </div>
             
             {props.tracklist.map((track, i) => {
-                let i_have_feelings = (track.my_feelings.length > 0);
-                let i_have_feelings_str = (i_have_feelings == true) ? "iHaveFeelings" : "";
+                if (track.my_feelings !== undefined) {
+                    let i_have_feelings = (track.my_feelings.length > 0);
+                    let i_have_feelings_str = (i_have_feelings == true) ? "iHaveFeelings" : "";
+                }
+                let i_have_feelings = undefined;
                 let embed_spotify = (track.spotify_track_id !== undefined);
 
                 // automate the tracklist num, rather than manually inserting 
                 i++;
 
-                return <div className={`track-item ${i_have_feelings_str}`} id={`track-${i}`}>
+                // return <div className={`track-item ${i_have_feelings_str}`} id={`track-${i}`}>
+                return <div className={`track-item `} id={`track-${i}`}>
                     {/* Num in tracklist */}
                     <span className='track-num'>{i}</span>
 
@@ -31,7 +42,7 @@ function TemplateTracklistComponent(props) {
                     <span className='track-title'>{track.title}</span>
 
                     {/* My rating */}
-                    <span className={`track-myRating r${track.my_rating}`}>{track.my_rating}</span>
+                    <span className={`track-myRating r${track.rating}`}>{track.rating}</span>
 
                     {/* My feelings */}
                     {
@@ -39,7 +50,7 @@ function TemplateTracklistComponent(props) {
                         <div className='track-myFeelings-wrapper'>
                             <div className='curvy-line'></div>
                             <div className='track-myFeelings'>
-                                {track.my_feelings}
+                                {/* { track.my_feelings } */}
 
                                 {/* Spotify link */}
                                 {
@@ -60,6 +71,8 @@ function TemplateTracklistComponent(props) {
                     }
                 </div>
             })}
+
+            <span className='avg-rating'>Average = {avg}</span>
         </div>
     )
 }
