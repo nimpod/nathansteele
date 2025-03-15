@@ -108,7 +108,7 @@ class MusicReview extends React.Component {
                             {/* Back to previous page button */}
                             <Link to='/music' className="custom-btn-1 back-to-previous-page" title="Back to toplist">
                                 <ArrowLeftV2 className="invertable-icon" />
-                                <span>Back to list</span>
+                                {/* <span>Back to list</span> */}
                             </Link>
                             
                             {/* Album header */}
@@ -222,13 +222,15 @@ class MusicReview extends React.Component {
 
                                 <div className='prev-review-link' title="Click to go to previous album in toplist">
                                     <Link to={'/music/' + review_id_of_prev_album}>
+                                        <p className='prev-review-pos-indicator'>go to album #{this.props.album_data.position -1}</p>
                                         <p>&lt;</p>
                                     </Link>
                                 </div>
 
                                 <div className='next-review-link' title="Click to go to next album in toplist">
                                     <Link to={'/music/' + review_id_of_next_album}>
-                                        <p>&gt;</p>                             
+                                        <p>&gt;</p>
+                                        <p className='next-review-pos-indicator'>go to album #{this.props.album_data.position +1}</p>                             
                                     </Link>
                                 </div>
 

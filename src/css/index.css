@@ -1138,6 +1138,7 @@ div.blog-post
   border-radius: 10px;
   text-decoration: none;
   user-select: none;
+  display: flex;
 }
 .custom-btn-1 > span {
   font-size: 13px;
@@ -1195,7 +1196,7 @@ div.blog-post
   position: fixed;
   color: inherit;
   border: 2px solid transparent;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 0;
   cursor: pointer;
   display: flex;
@@ -1203,9 +1204,9 @@ div.blog-post
 }
 .back-to-previous-page svg.invertable-icon {
   /* the arrow icon */
-  width: 30px;
-  height: 30px;
-  padding: 7px;
+  width: 39px;
+  height: 39px;
+  padding: 10px;
 }
 
 /* Button to back to top of blog post */
@@ -4046,10 +4047,10 @@ div.albumInfoContainer > div.myRating {
 /* Go back to prev page btn */
 .album-review .back-to-previous-page {
   position: absolute;
-  /*
-  margin-left: -40px;
-  */
+  /* 
   left: -140px;
+  */
+  left: -45px;
   bottom: 50%;
 }
 
@@ -4111,10 +4112,19 @@ div.albumInfoContainer > div.myRating {
 .album-review .prev-review-link a,
 .album-review .next-review-link a {
   color: var(--text) !important;
+  display: flex;
+  flex-direction: row;
 }
 .album-review .prev-review-link a p,
 .album-review .next-review-link a p {
   margin-bottom: 0px;
+  margin: 0 auto;
+}
+
+.album-review .prev-review-link a p.prev-review-pos-indicator,
+.album-review .next-review-link a p.next-review-pos-indicator {
+  font-size: 0.7rem;
+  color: var(--text-darker);
 }
 
 /* #endregion */
@@ -4275,7 +4285,7 @@ div.albumInfoContainer > div.myRating {
 /* #region -----------------------------------<13: MOBILE VIEW>---------------------------------- */
 :root {
   --mobile-navbar-topborder-color: rgba(70, 77, 81, 0.497);
-  --mobile-navbar-height: 56px;
+  --mobile-navbar-height: 46px;
 }
 /* anything that should be hidden in mobile goes here... */
 @media screen and (max-width: 900px) { #about, #projects { height: 85vh !important; } }
@@ -4995,16 +5005,23 @@ div.albumInfoContainer > div.myRating {
   .album-review .album-header {
     flex-direction: column;
     border-radius: 0;
+    padding: 0;
   }
   .album-review .album-info {
     width: 100%;
+    padding: 5px;
   }
   .album-review .album-cover-container img {
-    width: 210px;
+    width: 100%;
+    border-radius: 0px;
+  }
+  .album-header > * {
+    margin: 0;
   }
   .album-review .review-content-and-tracklist {
     width: 100%;
     left: 0;
+    padding-bottom: 60px;
   }
   .album-info > .album-name {
     font-size: 1.1rem;
@@ -5020,6 +5037,10 @@ div.albumInfoContainer > div.myRating {
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 0px;
+  }
+
+  .album-info .list-of-tags.themes {
+    position: relative;
   }
 
   .list-of-tags {
@@ -5203,7 +5224,7 @@ div.albumInfoContainer > div.myRating {
 
 @media screen and (max-width: 900px) { .my-custom-grid-container { padding: 0px 5px; } }
 
-@media screen and (max-width: 700px) { .page-title{ font-size: 1.25rem !important; } }
+@media screen and (max-width: 700px) { .page-title{ font-size: 1.2rem !important; } }
 
 
 /* remove padding from a blog post as screen gets smaller */

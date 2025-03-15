@@ -19,6 +19,7 @@ import { review as Chisato_Yamada__Suite_Nihonkai__Review } 	from './content/Chi
 import { review as Lucrecia_Dalt__Syzygy__Review }				from './content/Lucrecia_Dalt__Syzygy.jsx';
 import { review as Nanoray__Digimaiden__Review }				from './content/Nanoray__Digimaiden.jsx';
 import { review as Jesus_Molina__Agape__Review }				from './content/Jesus_Molina__Agape/review.jsx';
+import { review as Poppy__Eat__Review }							from './content/Poppy__Eat.jsx';
 
 
 // [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut for this particular file!
@@ -124,6 +125,7 @@ const database = {
 			year_of_release: "2013",
 			year_of_discovery: "2014",
 			genres: "Indie rock; Post-punk revival; Alternative rock; Garage rock; New wave",
+			themes: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -134,6 +136,7 @@ const database = {
 			year_of_release: "2011",
 			year_of_discovery: "2014",
 			genres: "Indie rock; Garage rock; Indie rock",
+			themes: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -144,6 +147,7 @@ const database = {
 			year_of_release: "2006",
 			year_of_discovery: "2013",			
 			genres: "Alternative rock; Garage rock; Indie rock",
+			themes: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -154,6 +158,7 @@ const database = {
 			year_of_release: "2001",
 			year_of_discovery: "2014",			
 			genres: "Alternative rock; Garage rock; Indie rock",
+			themes: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -228,8 +233,8 @@ const database = {
 		},
 		"the_bug__london_zoo": {
 			lastfm_url: "https://www.last.fm/music/The+Bug/London+Zoo",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/the-bug/london-zoo/",
+			spotify_url: "https://open.spotify.com/album/0Au4HNwGtEi5iOFprP0027",
 			year_of_release: "2008",
 			year_of_discovery: "2021",
 			genres: "Dubstep; Ragga; Industrial Hip-Hop",
@@ -488,9 +493,9 @@ const database = {
 			my_review: "",
 		},		
 		"antonio_carlos_jobim__the_composer_of_desafinado_plays": {
-			lastfm_url: "https://www.last.fm/music/Ant%C3%B4nio+Carlos+Jobim/The+Composer+of+Desafinado+Plays",
+			lastfm_url: "https://www.last.fm/music/Ant%C3%B4nio+Carlos+Jobim/The+Composer+Of+Desafinado,+Plays",
 			rym_url: "https://rateyourmusic.com/release/album/antonio-carlos-jobim/the-composer-of-desafinado-plays/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/3tW43cUkPyYkzzntfPwm4A",
 			year_of_release: "1963",
 			year_of_discovery: "2023",
 			genres: "Jazz; Bossa nova; MBP; Latin jazz; Brazilian jazz",
@@ -626,7 +631,7 @@ const database = {
 			year_of_discovery: "2016",
 			genres: "Ambient; Downtempo; Electronic",
 			themes: ["Creepy", "Sinister", "Mysterious", "Relaxing"],
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"boards_of_canada__the_campfire_headphase": {
@@ -881,6 +886,29 @@ const database = {
 		},
 
 
+		//
+		"brockhampton__saturation_iii": {
+			lastfm_url: "https://www.last.fm/music/BROCKHAMPTON/SATURATION+III",
+			rym_url: "https://rateyourmusic.com/release/album/brockhampton/saturation-iii/",
+			spotify_url: "https://open.spotify.com/album/5c2AzoNyr46fCQM5d8mxE0?si=lcsioOPXSKebGjw75Ii7uw",
+			year_of_release: "2017",
+			year_of_discovery: "2017",
+			genres: "Hip-Hop; Rap",
+			my_rating: 9.0,
+			my_review: "",
+		},
+		"brockhampton__saturation_i": {
+			lastfm_url: "https://www.last.fm/music/BROCKHAMPTON/SATURATION",
+			rym_url: "https://rateyourmusic.com/release/album/brockhampton/saturation/",
+			spotify_url: "https://rateyourmusic.com/release/album/brockhampton/saturation/",
+			year_of_release: "2017",
+			year_of_discovery: "2017",
+			genres: "Hip-Hop; Rap",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
+
 		"biosphere__substrata": {
 			lastfm_url: "https://www.last.fm/music/Biosphere/Substrata+%252B+Man+with+a+Movie+Camera",
 			rym_url: "https://rateyourmusic.com/release/album/biosphere/substrata/",
@@ -892,7 +920,7 @@ const database = {
 			my_review: ""
 		},
 		"banco_de_gaia__last_train_to_lhasa": {
-			lastfm_url: "https://www.last.fm/music/Banco+De+Gaia/Last+Train+To+Lhasa",
+			lastfm_url: "https://www.last.fm/music/Banco+De+Gaia/Last+Train+to+Lhasa+(Special+Edition)",
 			rym_url: "https://rateyourmusic.com/release/album/banco-de-gaia/last-train-to-lhasa/",
 			spotify_url: "https://rateyourmusic.com/release/album/banco-de-gaia/last-train-to-lhasa/sj",
 			year_of_release: "1995",
@@ -933,16 +961,6 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.NIELS
-		},
-		"brockhampton__saturation_iii": {
-			lastfm_url: "https://www.last.fm/music/BROCKHAMPTON/SATURATION+III",
-			rym_url: "https://rateyourmusic.com/release/album/brockhampton/saturation-iii/",
-			spotify_url: "https://open.spotify.com/album/5c2AzoNyr46fCQM5d8mxE0?si=lcsioOPXSKebGjw75Ii7uw",
-			year_of_release: "2017",
-			year_of_discovery: "2017",
-			genres: "Hip-Hop; Rap",
-			my_rating: 9.0,
-			my_review: "",
 		},
 		"bent__programmed_to_love": {
 			lastfm_url: "https://www.last.fm/music/Bent/Programmed+to+Love",
@@ -1129,7 +1147,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/4WGpRBfDu7OJ4Rimkzu9jp?si=WIUEm_yvQrmBcYM3D1QhwQ",
 			year_of_release: "1987",
 			year_of_discovery: "2022",
-			genres: "Neoclassical darkwave; Gothic rock; Ambient; Neo-classical",
+			genres: "Neoclassical darkwave; Gothic rock; Dark ambient; Tribal ambient; Neo-classical",
 			themes: ["Atmospheric"],
 			my_rating: 9.5,
 			my_review: "",
@@ -1146,6 +1164,7 @@ const database = {
 		},
 
 
+		//
 		"deaths dynamic shroud Faith in Persona": { 
 			lastfm_url: "https://www.last.fm/music/death%27s+dynamic+shroud/Faith+in+Persona",
 			rym_url: "https://rateyourmusic.com/release/album/deaths-dynamic-shroud_wmv/faith-in-persona/",
@@ -1165,6 +1184,29 @@ const database = {
 			genres: "Vaporwave; Glitch pop; Hyperpop; Deconstructed club; Alternative dance; Dance pop; Bubblegum bass; Electronic",
 			my_rating: 8.5,
 			themes: ["Abstract", "Surreal", "Reality deconstructed"],
+			my_review: "",
+		},
+
+		
+		//
+		"Denzel Curry Unlocked": { 
+			lastfm_url: "https://www.last.fm/music/Denzel+Curry/UNLOCKED",
+			rym_url: "https://rateyourmusic.com/release/ep/denzel-curry-x-kenny-beats/unlocked/",
+			spotify_url: "https://open.spotify.com/album/5LsyqeWryTmxsmda4xkm5a",
+			year_of_release: "2019",
+			year_of_discovery: "2020",
+			genres: "Hip-Hop; Rap; Boom bap",
+			my_rating: 8.0,
+			my_review: "",
+		},	
+		"Denzel Curry Melt My Eyez See Your Future": { 
+			lastfm_url: "https://www.last.fm/music/Denzel+Curry/Melt+My+Eyez+See+Your+Future",
+			rym_url: "https://rateyourmusic.com/release/album/denzel-curry/melt-my-eyez-see-your-future/",
+			spotify_url: "https://www.last.fm/music/Denzel+Curry/Melt+My+Eyez+See+Your+Future",
+			year_of_release: "2022",
+			year_of_discovery: "2022",
+			genres: "Hip-Hop; Rap; Boom bap; Jazz rap; Neo-soul",
+			my_rating: 8.0,
 			my_review: "",
 		},	
 
@@ -1232,11 +1274,11 @@ const database = {
 		},
 		"daniel_caesar__freudian": {
 			lastfm_url: "https://www.last.fm/music/Daniel+Caesar/Freudian",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/daniel-caesar/freudian/",
+			spotify_url: "https://open.spotify.com/album/3xybjP7r2VsWzwvDQipdM0",
 			year_of_release: "2017",
 			year_of_discovery: "2017",
-			genres: "R&B; Neo-soul; Gospel music",
+			genres: "R&B; Neo-soul",
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -1521,11 +1563,12 @@ const database = {
 		},
 		"fightstar__one_day_son_this_will_all_be_yours": {
 			lastfm_url: "https://www.last.fm/music/Fightstar/One+Day+Son,+This+Will+All+Be+Yours",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/fightstar/one-day-son-this-will-all-be-yours/",
+			spotify_url: "https://open.spotify.com/album/654HNsMqnrSWOmTCItwp0w?si=g1MNDzulSdGPKGw4RRCR5w",
 			year_of_release: "2017",
 			year_of_discovery: "2017",
-			genres: "Post-hardcore; Emo; Screamo; Alternative rock",
+			genres: "Post-hardcore; Emo; Emo pop; Screamo; Alternative rock; Alternative metal",
+			themes: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -1640,8 +1683,8 @@ const database = {
 		},
 		"grimes__art_angels": {
 			lastfm_url: "https://www.last.fm/music/Grimes/Art+Angels",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/grimes/art-angels/",
+			spotify_url: "https://open.spotify.com/album/1t9k2P4C88alWEikeJb4mI",
 			year_of_release: "2015",
 			year_of_discovery: "2020",
 			genres: "Pop; Synthpop; Indie pop; Dance pop; Electronic",
@@ -1655,7 +1698,7 @@ const database = {
 			year_of_release: "2009",
 			year_of_discovery: "2020",
 			genres: "Jazz; Vocal jazz; Latin jazz",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 	},
@@ -2211,7 +2254,7 @@ const database = {
 		"kendrick_lamar__good_kid_maad_city": {
 			lastfm_url: "https://www.last.fm/music/Kendrick+Lamar/good+kid,+m.A.A.d+city+(Deluxe)",
 			rym_url: "https://rateyourmusic.com/release/album/kendrick-lamar/good-kid-m_a_a_d-city/",
-			spotify_url: "",
+			spotify_url: "https://rateyourmusic.com/release/album/opposite-day/what-is-is/",
 			year_of_release: "2012",
 			year_of_discovery: "2016",
 			genres: "Hip-Hop; Rap; Gangsta rap",
@@ -2237,7 +2280,7 @@ const database = {
 			year_of_release: "2015",
 			year_of_discovery: "2018",
 			genres: "Psychedelic folk; Psychdelic pop; Dream pop; Folk rock; Folk",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"king_gizzard_and_the_lizard_wizard__sketches_of_brunswick_east": {
@@ -2265,7 +2308,7 @@ const database = {
 		"kero_kero_bonito__time_and_place": {
 			lastfm_url: "https://www.last.fm/music/Kero+Kero+Bonito/Time+%27n%27+Place",
 			rym_url: "https://rateyourmusic.com/release/album/kero-kero-bonito/time-n-place/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/5Az98PddCKwVoorl9pK6U7",
 			year_of_release: "2018",
 			year_of_discovery: "2019",
 			genres: "Noise pop; Synthpop; Indie rock; Dream pop; Progressive pop; Shoegaze; Electronic",
@@ -2491,7 +2534,7 @@ const database = {
 			year_of_discovery: "2015",
 			genres: "Nu metal; Alternative metal; Alternative rock",
 			themes: ["Old favourite"],
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 
@@ -3178,8 +3221,8 @@ const database = {
 		},
 		"opposite_day__opposite_day": {
 			lastfm_url: "https://www.last.fm/music/Opposite+Day/What+is+is%3F",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/opposite-day/what-is-is/",
+			spotify_url: "https://rateyourmusic.com/release/album/opposite-day/what-is-is/",
 			year_of_release: "2009",
 			year_of_discovery: "2009",
 			genres: "Alternative rock",
@@ -3219,7 +3262,7 @@ const database = {
 			genres: "Metalcore; Alternative metal; Nu metal; Noise; Electropop; Screamo",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/263ef1af1dd0bea47e452cf4c75e681f.jpg#263ef1af1dd0bea47e452cf4c75e681f",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Poppy__Eat__Review()),
 			year_of_discovery: "2021",
 		},
 
@@ -4329,7 +4372,8 @@ const database = {
 			genres: "Art punk; New wave; Art rock; Psychdelic pop; Neo-Psychedelia",
 			my_rating: 10.0,
 			custom_cover_url: "https://beatopolis.files.wordpress.com/2019/01/xtc-1.jpg?w=640",
-			year_of_discovery: "2013"
+			year_of_discovery: "2013",
+			my_review: ""
 		},
 		"xtc__chips_from_the_chocolate_fireball": {
 			lastfm_url: "https://www.last.fm/music/The+Dukes+Of+Stratosphear/Chips+From+The+Chocolate+Fireball",
@@ -4481,7 +4525,7 @@ const database = {
 			my_review: "",
 		},
 		"yuriko__nakamura__wind_and_reflections": {
-			lastfm_url: "https://www.last.fm/music/%E4%B8%AD%E6%9D%91%E7%94%B1%E5%88%A9%E5%AD%90/%E9%A2%A8%E3%81%AE%E9%8F%A1",
+			lastfm_url: "https://www.last.fm/music/%E4%B8%AD%E6%9D%91+%E7%94%B1%E5%88%A9%E5%AD%90/%E9%A2%A8%E3%81%AE%E9%8F%A1",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B8%AD%E6%9D%91%E7%94%B1%E5%88%A9%E5%AD%90/%E9%A2%A8%E3%81%AE%E9%8F%A1-wind-and-reflections/",
 			spotify_url: "https://open.spotify.com/album/0LobQJ0Ks8zIWtlCCZ31ZO",
  			year_of_release: "1987",
@@ -4498,6 +4542,19 @@ const database = {
 			year_of_discovery: "2023",
 			album_name_English: "Lupin the 3rd: The Castle of Cagliostro OST",
 			genres: "Film soundtrack; Anime soundtrack; Jazz; Jazz fusion; Samba jazz; Samba; Cool jazz",
+			my_rating: 8.0,
+			my_review: "",
+		},
+	},
+
+	Z: {	
+		"Zircon Antigravity": {
+			lastfm_url: "https://www.last.fm/music/Zircon/Antigravity",
+			rym_url: "hhttps://rateyourmusic.com/release/album/zircon/antigravity/",
+			spotify_url: "https://open.spotify.com/album/7y6vn4dfLigD7njrwCVoRu",
+			year_of_release: "2007",
+			year_of_discovery: "2025",
+			genres: "Breakbeat; Trance; Electronic",
 			my_rating: 8.0,
 			my_review: "",
 		},

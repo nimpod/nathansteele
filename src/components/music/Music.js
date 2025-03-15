@@ -29,6 +29,8 @@ const MIN_GENRE_COUNT_TO_BE_DISPLAYED = 4;
 const MIN_ARTIST_COUNT_TO_BE_DISPLAYED = 2;
 const MIN_YEAR_COUNT_TO_BE_DISPLAYED = 2;
 
+const NAVIGATION_GAP = 25;
+const NAVIGATION_MAX = 650;
 
 class Music extends Component {
     state = {
@@ -733,11 +735,9 @@ class Music extends Component {
 
         // generate array of intervals (e.g. [1,25,50,75,100,...,600])
         const navigation = [1];
-        const gap = 25;
-        const max = 600;
-        const num_of_sections = max / gap;
+        const num_of_sections = NAVIGATION_MAX / NAVIGATION_GAP;
         for (let i = 1; i < num_of_sections+1; i++) {
-            navigation.push(gap*i);
+            navigation.push(NAVIGATION_GAP*i);
         }
 
         return (
@@ -755,7 +755,7 @@ class Music extends Component {
                             {/* Title */}
                             <div className='top-albums-list-header'>
                                 <h3 className='page-title'>
-                                    My top {this.props.top_albums.length} favourite albums of all time
+                                    My favourite {this.props.top_albums.length} albums of all time
                                 </h3>
 
                                 {/* Information about what is currently being filtered (if anything) */}

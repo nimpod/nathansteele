@@ -71,9 +71,8 @@ class AlbumListElement extends Component {
                 review_summary = my_review.split(search_begin)[1];
                 review_summary = review_summary.split(search_end)[0];
                 review_summary = unicodeDecode(review_summary);
-                console.log(review_summary);
             } else {
-                review_summary = "Haven't written a review summary yet...";
+                review_summary = "Need to write a review for this awesome album...";
             }
         }
 
