@@ -30,7 +30,6 @@ import { post as KangYatze2 }       from './content/trekking/kang_yatze_2.jsx';
 import { post as HowToDigitizeMiniDvTapesPost }         from './content/how_to_digitize_mini_dv_tapes.jsx';
 import { post as MessiahsHandbookPost }                 from './content/messiahs_handbook.jsx';
 import { post as InspirationDatabase }                  from './content/inspiration_database.jsx';
-import { post as LanguageNotes }                        from './content/language_notes/language_notes.jsx';
 
 
 export const blog_posts = [
@@ -49,12 +48,6 @@ export const blog_posts = [
     },
     */
 
-    {
-        date: "05 Nov 2024",
-        title: "Language notes",
-        content: ReactDomServer.renderToString(LanguageNotes()),
-        tags: ["Travelling", "Languages"]
-    },
     {
         date: "04 Nov 2024",
         title: "Manaslu circuit trek",

@@ -1,7 +1,7 @@
 
 // FIXED VARIABLES
 :root {
-  --sidebar-width: 4.0rem;
+  --sidebar-width: 3.5rem;
 }
 
 
@@ -19,7 +19,7 @@
 
 // DARK MODE
 [data-theme="dark"] {
-  --sidenav-bg-color: rgb(32, 44, 51);  // rgb(35, 37, 46); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
+  --sidenav-bg-color: rgb(25, 34, 41);  // rgb(35, 37, 46); /* rgb(31, 31, 33); */  /* rgb(41, 42, 48); */
   --sidenav-shadow-color: rgba(0, 0, 0, 0.593);
   --sidenav-item-text-color: rgb(183, 185, 197);
   --sidenav-item-bg-color: rgb(32, 44, 51); // rgb(60, 61, 67);

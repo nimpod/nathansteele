@@ -3172,7 +3172,7 @@ div.btn.films-reset-filters-btn svg {
 /* #region -----------------------------------<11: MUSIC PAGE>---------------------------------- */
 
 :root {
-  --albums-displayed-per-row: 6;
+  --albums-displayed-per-row: 5;
   --album-cover-border-radius: 0.3rem;
 }
 
@@ -3594,10 +3594,6 @@ div.top-albums-list > a.navigated-to {
   animation-name: example;
   animation-duration: 6s;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-:root {
-  --box-shadow-navigated: rgb(27, 173, 100);
 }
 
 @keyframes example {
@@ -5492,9 +5488,5 @@ ul.messiahs-handbook p.quote-person {
 
 /* #endregion */
 
-/* #region ----------< Language notes >---------- */
-
-
-/* #endregion */
 
 /* #endregion */

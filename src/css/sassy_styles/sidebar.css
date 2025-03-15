@@ -1,5 +1,5 @@
 :root {
-  --sidebar-width: 4.0rem;
+  --sidebar-width: 3.5rem;
 }
 
 :root {
@@ -14,7 +14,7 @@
 }
 
 [data-theme=dark] {
-  --sidenav-bg-color: rgb(32, 44, 51);
+  --sidenav-bg-color: rgb(25, 34, 41);
   --sidenav-shadow-color: rgba(0, 0, 0, 0.593);
   --sidenav-item-text-color: rgb(183, 185, 197);
   --sidenav-item-bg-color: rgb(32, 44, 51);

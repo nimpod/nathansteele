@@ -1,10 +1,3 @@
-#music-page {
-  /*
-  overflow-y: hidden;
-  height: 97vh;
-  */
-}
-
 #top-albums-list-sidebar .changeViewOfToplist-btns {
   margin: 0 auto;
   text-align: center;
@@ -84,7 +77,7 @@
 }
 .top-albums-list.view-as-list span.review-summary {
   color: var(--text) !important;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 .top-albums-list.view-as-list a {
   margin-bottom: 35px;

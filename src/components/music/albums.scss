@@ -1,15 +1,10 @@
 
-#music-page {
-    /*
-    overflow-y: hidden;
-    height: 97vh;
-    */
-}
 
 #top-albums-list-sidebar .changeViewOfToplist-btns {
     margin: 0 auto;
     text-align: center;
 }
+
 
 .top-albums-list.view-as-list {
     grid-template-columns: 1fr;
@@ -90,10 +85,6 @@
         filter: brightness(1.0);
     }
 
-    .albumInfo {
-
-    }
-
     div.albumInfoContainer div.albumInfo > div {
         padding: 0;
         background-color: transparent;
@@ -101,7 +92,7 @@
 
     span.review-summary {
         color: var(--text) !important;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     
     a {

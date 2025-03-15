@@ -3,16 +3,14 @@ import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
-import './css/index.css';
 
 // import each individual .scss file here...
-import './css/sassy_styles/language_notes.min.css';
-import './css/sassy_styles/LandingPage.min.css';
-import './css/sassy_styles/topbar.min.css';
-import './css/sassy_styles/sidebar.min.css';
-import './css/sassy_styles/tooltip.min.css';
-import './css/sassy_styles/albums.min.css';
-import './css/sassy_styles/website_reference_component.min.css';
+import './css/sassy_styles/albums.css';
+import './css/sassy_styles/sidebar.css';
+import './css/sassy_styles/LandingPage.css';
+import './css/sassy_styles/topbar.css';
+import './css/sassy_styles/tooltip.css';
+import './css/sassy_styles/website_reference_component.css';
 
 
 import App from './App';
