@@ -19,9 +19,7 @@ import { review as global_communication__7614 }					from './content/Global_Commu
 // my_review: ReactDomServer.renderToString(Jesus_Molina__Agape__Review()),
 
 
-
 // [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut for this particular file!
-
 
 const custom_covers = {
     Yes__Fly_From_Here:								"https://s3.eu-west-2.amazonaws.com/nathansteele.com/music/Yes__Fly_From_Here/custom_album_cover.jpg",
