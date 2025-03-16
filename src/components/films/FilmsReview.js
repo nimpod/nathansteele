@@ -49,6 +49,11 @@ class FilmsReview extends React.Component {
         if (this.props.film.review_id_of_prev_film !== undefined) {
             review_id_of_prev_film = this.props.film.review_id_of_prev_film;
         }
+
+        // pos as number
+        let pos_as_number = Number(this.props.film.position);
+        let prev_pos = pos_as_number - 1;
+        let next_pos = pos_as_number + 1;
     
         return (
             <div className="page-wrapper film-review">
@@ -61,10 +66,10 @@ class FilmsReview extends React.Component {
                             </picture>
                         </div>
 
-                        {/* Prev review link */}
-                        <div className='prev-review-link' title="Click to go to previous film in toplist">
-                            <Link to={'/films/' + review_id_of_prev_film}>
-                                <p>&lt;</p>
+                        {/* Next review link */}
+                        <div className='next-review-link' title="Click to go to next film in toplist">
+                            <Link to={'/films/' + review_id_of_next_film}>
+                                <p className='arrowIcon'>&lt; <span>Go to film #{prev_pos}</span></p>
                             </Link>
                         </div>
 
@@ -145,13 +150,14 @@ class FilmsReview extends React.Component {
                                 
                             </div>
                         </div>
-                        
-                        {/* Next review link */}
-                        <div className='next-review-link' title="Click to go to next film in toplist">
-                            <Link to={'/films/' + review_id_of_next_film}>
-                                <p>&gt;</p>
+
+                        {/* Prev review link */}
+                        <div className='prev-review-link' title="Click to go to previous film in toplist">
+                            <Link to={'/films/' + review_id_of_prev_film}>
+                                <p className='arrowIcon'>&gt; <span>Go to film #{next_pos}</span></p>
                             </Link>
                         </div>
+
                     </div>
                 </div>
             </div>

@@ -8,11 +8,6 @@ import ReactDomServer from 'react-dom/server';
 import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../../js/helpers.js';
 import { TrustworthyMusicReviewers } from '../../../js/enums.js';
 
-/**
- * Import individual reviews as .jsx files here...
- * For example...
- * 	my_review: ReactDomServer.renderToString(Lucrecia_Dalt__Syzygy__Review()),
- */
 import { review as Yes__Fly_From_Here__Review } 				from './content/Yes__Fly_From_Here.jsx';
 import { review as BoC__MHTRTC__Review } 						from './content/BoC__MHTRTC.jsx';
 import { review as Chisato_Yamada__Suite_Nihonkai__Review } 	from './content/Chisato_Yamada__Suite_Nihonkai.jsx';
@@ -20,6 +15,9 @@ import { review as Lucrecia_Dalt__Syzygy__Review }				from './content/Lucrecia_D
 import { review as Nanoray__Digimaiden__Review }				from './content/Nanoray__Digimaiden.jsx';
 import { review as Jesus_Molina__Agape__Review }				from './content/Jesus_Molina__Agape/review.jsx';
 import { review as Poppy__Eat__Review }							from './content/Poppy__Eat.jsx';
+import { review as global_communication__7614 }					from './content/Global_Communication__7614/review.jsx';
+// my_review: ReactDomServer.renderToString(Jesus_Molina__Agape__Review()),
+
 
 
 // [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut for this particular file!
@@ -586,6 +584,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Boards+of+Canada/Geogaddi",
 			rym_url: "https://rateyourmusic.com/release/album/boards-of-canada/geogaddi/",
 			spotify_url: "https://open.spotify.com/album/4T7JGfRryhw5POaXalkApE?si=xSJGDU22TRuiZgHKN87g8A",
+			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/b0c1511b79b6a4a86d55fdd36ea9b3b5.jpg#b0c1511b79b6a4a86d55fdd36ea9b3b5",
 			year_of_release: "2002",
 			year_of_discovery: "2016",
 			genres: "IDM; Ambient; Ambient techno; Downtempo; Electronic",
@@ -1634,11 +1633,13 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Global+Communication/76:14",
 			rym_url: "https://rateyourmusic.com/release/album/global-communication/76_14/",
 			spotify_url: "https://open.spotify.com/album/0CCYU4pfINH3Lt5krDd9JO?si=56BX_twVQxugz7uCZTwwDg",
+			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/2fd94367ab87c69d0427d1d834f7d2af.jpg#2fd94367ab87c69d0427d1d834f7d2af",
+			album_name_displayed: "76:14",
 			year_of_release: "1994",
 			year_of_discovery: "2024",
 			genres: "Electronic; Ambient; Ambient techno; Downtempo; Drone; Space ambient",
 			my_rating: 10.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(global_communication__7614()),
 		},
 		"garaj_mahal__woot": {
 			lastfm_url: "https://www.last.fm/music/Garaj+Mahal/wOOt",
@@ -1688,7 +1689,7 @@ const database = {
 			year_of_release: "2015",
 			year_of_discovery: "2020",
 			genres: "Pop; Synthpop; Indie pop; Dance pop; Electronic",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"gretchen_parlato__in_a_dream": {
@@ -1950,6 +1951,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/Kiki%27s+Delivery+Service+Soundtrack+Music+Collection",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/kikis-delivery-service-original-soundtrack/",
 			spotify_url: "https://open.spotify.com/album/2NO5lYWs4aWpsmHOjF4JHk?si=eitK7DgpTYWtnaV3aQ0E6g",
+			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/a123a5aec422cdea3999187580f08018.jpg#a123a5aec422cdea3999187580f08018",
 			year_of_release: "1989",
 			year_of_discovery: "2022",
 			artist_name_English: "Joe Hisaishi",
@@ -2442,6 +2444,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Logic/Under+Pressure+(Deluxe)",
 			rym_url: "https://rateyourmusic.com/release/album/logic/under-pressure/",
 			spotify_url: "https://open.spotify.com/album/1Mk7Lei0Ra3hawezqmad5V?si=7buq1FOVQ8KZFOpLIf8ZzQ",
+			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/99c313a1ef5aed97baaeb17eb739b3b2.jpg#99c313a1ef5aed97baaeb17eb739b3b2",
 			year_of_release: "2014",
 			year_of_discovery: "2016",
 			genres: "Hip-Hop; Rap; Pop rap",
@@ -3038,6 +3041,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/NANORAY/DIGIMAIDEN",
 			rym_url: "https://rateyourmusic.com/release/album/nanoray/digimaiden/",
 			spotify_url: "https://open.spotify.com/album/3HU9kKXZaaUK69KpAwZKvO?si=5VUcvS9UT8u1kiDODLFKMQ",
+			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/adee050fb548d25591e49c369441fb94.jpg#adee050fb548d25591e49c369441fb94",
 			year_of_release: "2022",
 			year_of_discovery: "2022",
 			genres: "Digital hardcore; Jungle; Breakcore; Breakbeat; Drum and bass; Ambient trance; Electronic",
@@ -3306,7 +3310,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/23J3Spwrl0dg0kZLWj3xb1?si=TxKK0FC5Ty6NjGEcVyoiFg",
 			year_of_release: "2009",
 			year_of_discovery: "2025",
-			genres: "Jazz fusion; Djent; Progressive metal",
+			genres: "Jazz; Jazz fusion; Djent; Progressive metal",
 			my_rating: 8.0,
 			my_review: "",
 		},

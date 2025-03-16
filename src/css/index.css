@@ -592,27 +592,24 @@ body > div#root > div.App {
 .page-wrapper {
   width: 100vw;
   top: 0;
+}
 
-  /* with topbar... */
-  /*
+#nav-side ~ div.page-wrapper {
+  /* With sidebar */
+  margin-left: var(--sidebar-width);
+}
+#nav-top ~ div.page-wrapper {
+  /* With topbar */
   margin-top: 60px;
-  */
+}
 
-  /* with sidebar... */
-  margin-left: var(--sidebar-width);
-
-  /*
-  margin-left: var(--sidebar-width);
-  */
-
-  /*
-  background-color: var(--page-wrapper-bg) !important;
-  */
+.section-inner {
+  padding: 10px 10px;
 }
 
 .page-title {
   color: var(--page-text-color);
-  font-size: 1.8rem !important;
+  font-size: 1.5rem !important;
   font-weight: bold !important;
   margin-bottom: 5px;
 }
@@ -3050,9 +3047,23 @@ div.btn.films-reset-filters-btn svg {
 .film-review .review-displayed > div.next-review-link,
 .film-review .review-displayed > div.prev-review-link {
   width: 40px;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   align-items: center;
+}
+
+.film-review .review-displayed > div.next-review-link p > span,
+.film-review .review-displayed > div.prev-review-link p > span {
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 10px;
+  margin-left: -20px;
+}
+.film-review .review-displayed > div.prev-review-link p > span {
+  transform: rotate(-40deg);
+}
+.film-review .review-displayed > div.next-review-link p > span {
+  transform: rotate(40deg);
 }
 
 .film-review .review-displayed > div.next-review-link > a {
@@ -3172,7 +3183,7 @@ div.btn.films-reset-filters-btn svg {
 /* #region -----------------------------------<11: MUSIC PAGE>---------------------------------- */
 
 :root {
-  --albums-displayed-per-row: 5;
+  --albums-displayed-per-row: 6;
   --album-cover-border-radius: 0.3rem;
 }
 
@@ -3225,10 +3236,6 @@ div.btn.films-reset-filters-btn svg {
   --topAlbumsList-filters-bg-color: rgba(89, 93, 95, 0.88);
 }
 
-
-.section-inner {
-  padding: 20px 20px;
-}
 .music-page-container {
   /*
   display: grid;
@@ -3418,29 +3425,18 @@ div.btn.filter-list-by-artist-btn {
   /* when always displaying filters... */
   height: 90vh;
 }
-.top-albums-list.there-are-less-than-12-albums-on-display {
-  /*
-  grid-template-rows: repeat(2, 38%);
-  */
-}
-
-/*
-#filtered-albums-list-info.filters-active + .top-albums-list {
-  padding-top: 40px;
-}
-*/
 
 #top-albums-list-sidebar {
   padding-top: 6px;
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1100px) {
   .top-albums-list {
     padding: 50px 10px;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   .top-albums-list {
     padding: 0px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -4009,7 +4005,7 @@ div.albumInfoContainer > div.myRating {
 
 /* Album name */
 .album-info > .album-name {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   display: block;
   white-space: nowrap;
@@ -4021,7 +4017,7 @@ div.albumInfoContainer > div.myRating {
 /* Artist name */
 .album-info > .artist-name {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   color: var(--text-darker);
   cursor: help;
 }
@@ -4397,7 +4393,7 @@ div.albumInfoContainer > div.myRating {
     display: flex !important;
     position: fixed;
     width: 100vw;
-    bottom: 0;
+    top: 0;
     left: 0;
     height: var(--mobile-navbar-height);
     opacity: 1.0;
@@ -4405,26 +4401,32 @@ div.albumInfoContainer > div.myRating {
     background-color: var(--topnav-bg-color-mobileView);
     box-shadow: none;
   }
+  #nav-top .website-logo-container {
+    display: none;
+  }
+  #nav-top .website-logo-container-mobileView {
+    display: block;
+  }
+  #nav-top .website-logo-container-mobileView a {
+    margin: 0 !important;
+  }
+  #nav-top .website-logo-container-mobileView span {
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
   #nav-top .website-links {
     display: flex;
     justify-content: space-between;
   }
-  #nav-top a:not(.website-logo).navlink {
-    /*
-    margin-top: 11px;
-    */
-    vertical-align: middle;
-    margin-right: 30px;
-    margin-bottom: 0px;
-  }
   #nav-top a.navlink {
-    background-color: transparent !important;
+    vertical-align: middle;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    font-size: 1.1rem;
+    padding: 0 2px;
   }
   #nav-top .website-links a {
     margin-left: 0;
-  }
-  #nav-top a.navlink {
-    padding: 0 !important;
   }
   #nav-top a:not(.website-logo).navlink.active {
     /*
@@ -4990,7 +4992,6 @@ div.albumInfoContainer > div.myRating {
 
   .album-header > .album-cover-container {
     text-align: center;
-    margin-bottom: 20px;
   }
   
   .album-review .album-header-container {
@@ -5020,10 +5021,10 @@ div.albumInfoContainer > div.myRating {
     padding-bottom: 60px;
   }
   .album-info > .album-name {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   .album-info > .artist-name {
-    font-size: 0.9rem;
+    font-size: 1.0rem;
   }
   .album-info > .year-of-release {
     font-size: 0.75rem;

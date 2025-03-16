@@ -133,61 +133,50 @@ class NavbarTop extends Component {
     /**
      * content rendered to page
      */
-    render_old() {
-        return (
-            <header id="nav-top">
-                <div className="nav-right">
-                    <div className="hamburger-menu inline-svg-wrapper" onClick={this.toggleMenu}>
-                        <span className="inline-svg">
-                            <HamburgerMenuIcon />
-                        </span>
-                    </div>
-                </div>
-            </header>
-        )
-    }
-
-    /**
-     * content rendered to page
-     */
     render() {
         return (
             <header id="nav-top" className="animated faster slideInUp">
                 <div className="nav-left">
                     <nav className="website-links">
+
+                        {/* LOGO */}
                         <div className="website-logo-container">
-                        <NavLink to="/" className="navlink website-logo">
-                            <Logo className="logo" />
-                        </NavLink>
+                            <NavLink to="/" className="navlink">
+                                {/* <Logo className="logo" /> */}
+                                <span>nathansteele.com</span>
+                            </NavLink>
                         </div>
-                        <NavLink to="/aboutme" title='About' className="navlink">
-                            <span>About Me</span>
-                            <span className='mobile-view-title'>About me</span>
-                        </NavLink>
-                        <NavLink to="/films" title='Films' className="navlink">
-                            <span>Films</span>
-                            <span className='mobile-view-title'>Films</span>
-                        </NavLink>
-                        <NavLink to="/music" title='Music' className="navlink">
-                            <span>Music</span>
-                            <span className='mobile-view-title'>Music</span>
-                        </NavLink>
+                        <div className="website-logo-container-mobileView">
+                            <NavLink to="/" className="navlink">
+                                {/* <Logo className="logo" /> */}
+                                <span>NS.com</span>
+                            </NavLink>
+                        </div>
+
+                        {/* BLOG */}
                         <NavLink to="/blog" title='Blog' className="navlink">
                             <span>Blog</span>
                             <span className='mobile-view-title'>Blog</span>
                         </NavLink>
+
+                        {/* MUSIC */}
+                        <NavLink to="/music" title='Music' className="navlink">
+                            <span>Music</span>
+                            <span className='mobile-view-title'>Music</span>
+                        </NavLink>
+
+                        {/* FILMS */}
+                        <NavLink to="/films" title='Films' className="navlink">
+                            <span>Films</span>
+                            <span className='mobile-view-title'>Films</span>
+                        </NavLink>
+                        
+                        {/* ART */}
                         <NavLink to="/art" title='Art' className="navlink">
                             <span>Art</span>
                             <span className='mobile-view-title'>Art</span>
                         </NavLink>
                     </nav>
-                    {/*
-                    <div className='secret-buttons'>
-                        <NavLink to="/messiahshandbook" title='Messiahs Handbook' className="navlink" onClick={this.clickedNavbarItem}>
-                            <span>🞾</span>
-                        </NavLink>
-                    </div>
-                    */}
                 </div>
                 
                 <div className="nav-right">
@@ -199,6 +188,7 @@ class NavbarTop extends Component {
                             <LightThemeIcon />
                         </span>
                     </div>
+                    
                     <div className="hamburger-menu inline-svg-wrapper" onClick={this.toggleMenu}>
                         <span className="inline-svg">
                             <HamburgerMenuIcon />

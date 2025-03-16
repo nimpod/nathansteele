@@ -124,7 +124,7 @@ class MusicReview extends React.Component {
                                 <div className='album-info'>
                                     <span className='album-name' title='Album name'>{album_name}</span>
                                     <span className='artist-name' title='Artist name'>
-                                        <a target='_blank' href={this.props.album_data.rym_artist_link}>{artist_name}</a>
+                                        By <a target='_blank' href={this.props.album_data.rym_artist_link}>{artist_name}</a>
                                     </span>
                                     
                                     {/* Year */}

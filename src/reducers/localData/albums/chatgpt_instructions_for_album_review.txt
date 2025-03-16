@@ -1,0 +1,46 @@
+Convert the following text into HTML code.
+Please obide by these rules:
+1) Do not apply any CSS code. 
+2) Apply the <a> links appropriately to the related text above it.
+3) If you see a URL that refers to a .jpeg, please make it into an <img> element.
+
+
+
+Divide each section into <div> block elements.
+1) There should be 3 sections, please divide them up into indivudual div blocks with appropriate classnames.
+2) Remove the headings that you generated for each div block.
+3) Change the first div block to <div className="review-intro">
+4) Change the first div block to <div className="review-trackRatings">
+5) Change the first div block to <div className="review-summary"
+
+
+
+6) Encapsulate all this content within the "review-content" div block (as shown in the code snippet below) please keep the import statement and export statement.
+
+    import React from 'react';
+
+    export const review = () => (
+        <div className='review-content'>
+        </div>
+    )
+
+
+
+7) Convert the content inside "review-trackRatings" into a JSON object that is of the same strucutre as the JSON shown below.
+   Make the JSON data a variable, and place it in the .jsx file we have been previously working on.
+    
+    const tracklist = [
+        { "rating": 9, "title": "DT" },
+        { "rating": 11, "title": "Magic Mirror Mayhem!" },
+        { "rating": 10, "title": "1,000,001 MOLA" },
+        { "rating": 11, "title": "Meter Workbench" },
+        { "rating": 8, "title": "Endless Higabana" },
+        { "rating": 10, "title": "Myztic Stage: Frost and Fire" },
+    ]
+
+
+8) In the "review-trackRatings", replace all content inside the div with the following line:
+    <TemplateTracklistComponent tracklist={tracklist} />
+
+9) Add the following import statement to the top of the .jsx file:
+    import TemplateTracklistComponent from '../../TemplateTracklistComponent.jsx';

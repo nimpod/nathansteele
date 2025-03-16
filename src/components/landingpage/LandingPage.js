@@ -160,7 +160,7 @@ class LandingPage extends Component {
                 <div className='landingpage-container'>
                     <div className='landingpage-intro'>
                         <p>Hi, I'm</p>
-                        <h1>Nayaflob Davidson</h1>
+                        <h1>Nathan Steele</h1>
                         <p>I write code, think about data, and create digital experiences.</p>
                         <div className="landingpage-moreText">
                           <p>This is a place where I can talk about the things that make me most excited about life (<Link to='/art'>art</Link>, <Link to='/music'>music</Link>, <Link to='/astronomy'>astronomy</Link>, <Link to='/films'>films</Link>, travelling, walking, running, cycling, web dev, the origins of life, vexilology, surrealism).</p>

@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 // import each individual .scss file here...
 import './css/sassy_styles/albums.css';
 import './css/sassy_styles/sidebar.css';
+import './css/sassy_styles/topbar.css';
 import './css/sassy_styles/LandingPage.css';
 import './css/sassy_styles/topbar.css';
 import './css/sassy_styles/tooltip.css';
