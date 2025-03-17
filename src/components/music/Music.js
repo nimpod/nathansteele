@@ -18,11 +18,16 @@ import {
     // remove_class_from_item_when_user_clicks_outside_of_item
 } from '../../js/helpers.js';
 
-import { ViewType, AlbumProperties } from '../../js/enums.js';
+import { 
+    ViewType,
+    AlbumProperties, 
+    LocalStorageAlbums
+} from '../../js/enums.js';
 
 import { ReactComponent as ArrowDownIcon } from "../../icons/arrowDown.svg";
 import { ReactComponent as ViewAsListIcon } from "../../icons/showList.svg";
 import { ReactComponent as ViewAsGridIcon } from "../../icons/showGrid.svg";
+import { useEffect } from 'react';
 
 
 const MIN_GENRE_COUNT_TO_BE_DISPLAYED = 4;
@@ -32,11 +37,23 @@ const MIN_YEAR_COUNT_TO_BE_DISPLAYED = 2;
 const NAVIGATION_GAP = 25;
 const NAVIGATION_MAX = 650;
 
+// if local storage values are empty, set default values...
+if (localStorage.getItem(LocalStorageAlbums.VIEW_TYPE) == undefined) {
+    localStorage.setItem(LocalStorageAlbums.VIEW_TYPE, ViewType.GRID);
+}
+
+
 class Music extends Component {
     state = {
         // state representation of data that is displayed/filtered/sorted
         __filtered_data: Array.from(this.props.top_albums)
             .sort((a,b) => { return a['position'] - b['position'] }),
+        
+        // total num of albums in my list...
+        __num_of_albums: Array.from(this.props.top_albums).length,
+
+        // current ypos...
+        __ypos: localStorage.getItem(LocalStorageAlbums.YPOS),
 
         // filters...
         __current_genre_filter: "All genres",
@@ -50,7 +67,7 @@ class Music extends Component {
         __search_text: "",
 
         // view stuff...
-        __view_type: ViewType.GRID,
+        __view_type: localStorage.getItem(LocalStorageAlbums.VIEW_TYPE),
 
         // defaults...
         __default_genre_filter: "All genres",
@@ -63,6 +80,9 @@ class Music extends Component {
      * 
      */
     componentDidMount() {
+        let ypos = localStorage.getItem(LocalStorageAlbums.YPOS);
+        document.querySelector(".top-albums-list").scrollTop = ypos;
+
         // first find out what highest play count is...
         const play_counts = [];
         const tracks = document.getElementsByClassName("track-container");
@@ -299,9 +319,6 @@ class Music extends Component {
                 return {
                     __filtered_data: Array.from(this.props.top_albums)
                         .filter((a) => {
-                            // console.log(a.artist_name);
-                            // console.log(a.album_name);
-
                             if (genre_selected === this.state.__default_genre_filter) {
                                 // show all albums...
                                 return true;
@@ -645,10 +662,12 @@ class Music extends Component {
             this.setState({__view_type: ViewType.LIST});
             toplist.classList.add('view-as-list');
             toplist.classList.remove('view-as-grid');
+            localStorage.setItem(LocalStorageAlbums.VIEW_TYPE, ViewType.LIST);
         } else if (selected_view_type === ViewType.GRID) {
             this.setState({__view_type: ViewType.GRID});
             toplist.classList.remove('view-as-list');
             toplist.classList.add('view-as-grid');
+            localStorage.setItem(LocalStorageAlbums.VIEW_TYPE, ViewType.GRID);
         }
         
         // toggle .active class on buttons
@@ -690,6 +709,54 @@ class Music extends Component {
             setTimeout(() => {
                 album_selected.classList.remove('navigated-to');
             }, N);
+        }
+    }
+
+    /**
+     * Remove active class from all navItem buttons
+     * @param {*} btns 
+     */
+    deactivate_all_nav_items = (btns) => {
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].classList.remove('active');
+        }
+    }
+
+    /**
+     * As user scrolls list, keep track of current ypos
+     */
+    update_scroll_pos = () => {
+        // scrollTop tells us the y-coordinate. Store it in localStorage too!
+        let ypos = document.querySelector(".top-albums-list").scrollTop;
+        localStorage.setItem(LocalStorageAlbums.YPOS, ypos);
+
+        // approximate height of each row in the top albums list
+        const row_height = 295;
+
+        // num of albums per row
+        const albums_per_row = 5;
+        
+        // all navItem buttons in navigation
+        let btns = document.querySelectorAll('#top-albums-list-navigation > a.navItem');
+
+        let num_of_nav_btns = NAVIGATION_MAX / NAVIGATION_GAP;
+
+        for (let i = 0; i < num_of_nav_btns; i++) {
+            let lower = (row_height * albums_per_row)*i;
+            let upper = (row_height * albums_per_row)*(i+1);
+
+            // first album in this section, so I can actually activate the right button in the navigation section
+            let btnId = NAVIGATION_GAP*i;
+            if (i == 0) {
+                // first album has id of 1, not 0
+                btnId += 1;
+            }
+
+            if (ypos > lower && ypos < upper) {
+                this.deactivate_all_nav_items(btns);
+                let btn = document.getElementById(`link-to-album-${btnId}`);
+                btn.classList.add('active');
+            } 
         }
     }
 
@@ -898,7 +965,7 @@ class Music extends Component {
                                     </div>
                                 </div>
 
-                                <div className={`top-albums-list ${less_than_12_albums_on_display} ${view_type_classname}`}>
+                                <div className={`top-albums-list ${less_than_12_albums_on_display} ${view_type_classname}`} onScroll={this.update_scroll_pos}>
                                     {albums_displayed.map(a => {
                                         if (this.state.__view_type === ViewType.LIST)
                                             return <AlbumListElement album={a} />

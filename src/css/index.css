@@ -3183,7 +3183,7 @@ div.btn.films-reset-filters-btn svg {
 /* #region -----------------------------------<11: MUSIC PAGE>---------------------------------- */
 
 :root {
-  --albums-displayed-per-row: 6;
+  --albums-displayed-per-row: 5;
   --album-cover-border-radius: 0.3rem;
 }
 
