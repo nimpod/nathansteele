@@ -8,14 +8,15 @@ import ReactDomServer from 'react-dom/server';
 import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../../js/helpers.js';
 import { TrustworthyMusicReviewers } from '../../../js/enums.js';
 
-import { review as Yes__Fly_From_Here__Review } 				from './content/Yes__Fly_From_Here.jsx';
-import { review as BoC__MHTRTC__Review } 						from './content/BoC__MHTRTC.jsx';
-import { review as Chisato_Yamada__Suite_Nihonkai__Review } 	from './content/Chisato_Yamada__Suite_Nihonkai.jsx';
-import { review as Lucrecia_Dalt__Syzygy__Review }				from './content/Lucrecia_Dalt__Syzygy.jsx';
-import { review as Nanoray__Digimaiden__Review }				from './content/Nanoray__Digimaiden.jsx';
-import { review as Jesus_Molina__Agape__Review }				from './content/Jesus_Molina__Agape/review.jsx';
-import { review as Poppy__Eat__Review }							from './content/Poppy__Eat.jsx';
-import { review as global_communication__7614 }					from './content/Global_Communication__7614/review.jsx';
+import { review as Yes__Fly_From_Here } 				from './content/yes/fly_from_here/review.jsx';
+import { review as BoC__MHTRTC } 						from './content/boards_of_canada/MHTRTC/review.jsx';
+import { review as BoC__Random35TracksTape } 			from './content/boards_of_canada/R35TT/review.jsx';
+import { review as ChisatoYamada__Suite_Nihonkai } 		from './content/chisato_yamada/suite_nihonkai/review.jsx';
+import { review as LucreciaDalt__Syzygy }				from './content/lucrecia_dalt/syzygy/review.jsx';
+import { review as Nanoray__Digimaiden }				from './content/nanoray/digimaiden/review.jsx';
+import { review as JesusMolina__Agape }					from './content/jesus_molina/agape/review.jsx';
+import { review as Poppy__Eat }							from './content/poppy/eat/review.jsx';
+import { review as GlobalCommunication__7614 }			from './content/global_communication/7614/review.jsx';
 // my_review: ReactDomServer.renderToString(Jesus_Molina__Agape__Review()),
 
 
@@ -517,7 +518,7 @@ const database = {
 			year_of_discovery: "2015",
 			genres: "Reggaeton; Technocumbia; Breakbeat; Dance pop",
 			themes: ["Venezuela", "Spanish"],
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"ask_my_bull__creature": {
@@ -576,7 +577,7 @@ const database = {
 			genres: "IDM; Ambient; Downtempo; Electronic",
 			themes: ["Atmospheric", "Otherworldy", "Mysterious", "Vast", "Dark", "Nostalgic", "Ethereal", "Creepy", "Weird", "Surreal"],
 			my_rating: 10.0,
-			my_review: ReactDomServer.renderToString(BoC__MHTRTC__Review()),
+			my_review: ReactDomServer.renderToString(BoC__MHTRTC()),
 		},
 		"boards_of_canada__geogaddi": {
 			lastfm_url: "https://www.last.fm/music/Boards+of+Canada/Geogaddi",
@@ -589,7 +590,7 @@ const database = {
 			my_rating: 10,
 			my_review: "",
 		},
-		"boards_of_canada__random_30_tracks_tape": {
+		"boards_of_canada__random_35_tracks_tape": {
 			lastfm_url: "https://www.last.fm/music/Boards+of+Canada/Random+35+Tracks+Tape",
 			rym_url: "https://rateyourmusic.com/release/unauth/boards-of-canada/random-35-tracks-tape/",
 			youtube_url: "https://www.youtube.com/watch?v=nSGIX0U8myU&t=8s&pp=ygUnYm9hcmRzX29mX2NhbmFkYV9fcmFuZG9tXzMwX3RyYWNrc190YXBl",
@@ -597,7 +598,7 @@ const database = {
 			genres: "IDM; Ambient; Breakbeat; Electronic",
 			custom_cover_url: "https://i1.sndcdn.com/artworks-MCKqEy3UB0Ye9PdD-sI6suA-t500x500.jpg",
 			my_rating: 10.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(BoC__Random35TracksTape()),
 			year_of_discovery: "2017"
 		},
 		"boards_of_canada__a_few_old_tunes": {
@@ -1048,7 +1049,7 @@ const database = {
 			genres: "Tsugaru shamisen; Min'yō Music; J-acoustic; J-funk; Funk",
 			my_rating: 10.0,
 			year_of_discovery: "2021",
-			my_review: ReactDomServer.renderToString(Chisato_Yamada__Suite_Nihonkai__Review()),
+			my_review: ReactDomServer.renderToString(ChisatoYamada__Suite_Nihonkai()),
 		},
 		"cavern_of_anti_matter__in_fabric_ost": {
 			lastfm_url: "https://www.last.fm/music/Cavern+of+Anti-Matter/In+Fabric+OST",
@@ -1637,7 +1638,7 @@ const database = {
 			year_of_discovery: "2024",
 			genres: "Electronic; Ambient; Ambient techno; Downtempo; Drone; Space ambient",
 			my_rating: 10.0,
-			my_review: ReactDomServer.renderToString(global_communication__7614()),
+			my_review: ReactDomServer.renderToString(GlobalCommunication__7614()),
 		},
 		"garaj_mahal__woot": {
 			lastfm_url: "https://www.last.fm/music/Garaj+Mahal/wOOt",
@@ -2120,7 +2121,7 @@ const database = {
 			year_of_discovery: "2024",
 			genres: "Jazz fusion; Jazz; Latin jazz; Bossa nova; Art pop",
 			my_rating: 9.0,
-			my_review: ReactDomServer.renderToString(Jesus_Molina__Agape__Review()),
+			my_review: ReactDomServer.renderToString(JesusMolina__Agape()),
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 
@@ -2590,7 +2591,7 @@ const database = {
 			year_of_discovery: "2020",
 			genres: "Ambient pop; Ambient; Electronic",
 			my_rating: 9.0,
-			my_review: ReactDomServer.renderToString(Lucrecia_Dalt__Syzygy__Review()),
+			my_review: ReactDomServer.renderToString(LucreciaDalt__Syzygy()),
 		},
 		"lealani__fantastic_planet": {
 			lastfm_url: "https://www.last.fm/music/Lealani/Fantastic+Planet",
@@ -3045,7 +3046,7 @@ const database = {
 			genres: "Digital hardcore; Jungle; Breakcore; Breakbeat; Drum and bass; Ambient trance; Electronic",
 			themes: ["Rave", "Intense"],
 			my_rating: 9.5,
-			my_review: ReactDomServer.renderToString(Nanoray__Digimaiden__Review()),
+			my_review: ReactDomServer.renderToString(Nanoray__Digimaiden()),
 		},
 		"nas__illmatic": {
 			lastfm_url: "https://www.last.fm/music/Nas/Illmatic",
@@ -3264,7 +3265,7 @@ const database = {
 			genres: "Metalcore; Alternative metal; Nu metal; Noise; Electropop; Screamo",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/263ef1af1dd0bea47e452cf4c75e681f.jpg#263ef1af1dd0bea47e452cf4c75e681f",
 			my_rating: 9.5,
-			my_review: ReactDomServer.renderToString(Poppy__Eat__Review()),
+			my_review: ReactDomServer.renderToString(Poppy__Eat()),
 			year_of_discovery: "2021",
 		},
 
@@ -4467,7 +4468,7 @@ const database = {
 			year_of_discovery: "2013",
 			genres: "Progressive rock; Symphonic prog; Progressive pop",
 			my_rating: 10.0,
-			my_review: ReactDomServer.renderToString(Yes__Fly_From_Here__Review()),
+			my_review: ReactDomServer.renderToString(Yes__Fly_From_Here()),
 			custom_cover_url: custom_covers.Yes__Fly_From_Here,
 		},
 		"yes__close_to_the_edge": {

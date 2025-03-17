@@ -2,7 +2,7 @@ Convert the following text into HTML code.
 Please obide by these rules:
 1) Do not apply any CSS code. 
 2) Apply the <a> links appropriately to the related text above it.
-3) If you see a URL that refers to a .jpeg, please make it into an <img> element.
+3) For the youtube links, I only want the <iframe> component, not the <p><a> tag you inserted below each <iframe>
 
 
 
@@ -12,7 +12,7 @@ Divide each section into <div> block elements.
 3) Change the first div block to <div className="review-intro">
 4) Change the first div block to <div className="review-trackRatings">
 5) Change the first div block to <div className="review-summary"
-
+6) Remove the 'export default review' line at the bottom.
 
 
 6) Encapsulate all this content within the "review-content" div block (as shown in the code snippet below) please keep the import statement and export statement.
@@ -35,7 +35,6 @@ Divide each section into <div> block elements.
         { "rating": 10, "title": "1,000,001 MOLA" },
         { "rating": 11, "title": "Meter Workbench" },
         { "rating": 8, "title": "Endless Higabana" },
-        { "rating": 10, "title": "Myztic Stage: Frost and Fire" },
     ]
 
 

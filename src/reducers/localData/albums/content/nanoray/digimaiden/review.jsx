@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateTracklistComponent from '../TemplateTracklistComponent.jsx';
+import TemplateTracklistComponent from '../../../TemplateTracklistComponent.jsx';
 const tracklist = [
     { "rating": 9, "title": "DT" },
     { "rating": 11, "title": "Magic Mirror Mayhem!" },

@@ -11,20 +11,20 @@
     {
         "position": 2,
         "position_str": "002",
-        "lastfm_url": "https://www.last.fm/music/Orbital/In+Sides",
-        "artist_name": "Orbital",
-        "album_name": "In Sides",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/b6632a7043614a6ccaf120124b9a425d.png",
-        "review_id": "orbital-in_sides"
-    },
-    {
-        "position": 3,
-        "position_str": "003",
         "lastfm_url": "https://www.last.fm/music/XTC/Mummer",
         "artist_name": "XTC",
         "album_name": "Mummer",
         "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/085ab1cd779d467a8d240078f6973e21.png",
         "review_id": "xtc-mummer"
+    },
+    {
+        "position": 3,
+        "position_str": "003",
+        "lastfm_url": "https://www.last.fm/music/Orbital/In+Sides",
+        "artist_name": "Orbital",
+        "album_name": "In Sides",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/b6632a7043614a6ccaf120124b9a425d.png",
+        "review_id": "orbital-in_sides"
     },
     {
         "position": 4,
@@ -110,15 +110,6 @@
     {
         "position": 13,
         "position_str": "013",
-        "lastfm_url": "https://www.last.fm/music/Boards+of+Canada/Random+35+Tracks+Tape",
-        "artist_name": "Boards of Canada",
-        "album_name": "Random 35 Tracks Tape",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/b0c19beb04474f06aa8c9b65f75a0b8d.jpg",
-        "review_id": "boards_of_canada-random_35_tracks_tape"
-    },
-    {
-        "position": 14,
-        "position_str": "014",
         "lastfm_url": "https://www.last.fm/music/Chisato+Yamada/Suite+Nihonkai+%E7%B5%84%E6%9B%B2%E3%80%8C%E6%97%A5%E6%9C%AC%E6%B5%B7%E3%80%8D%E6%B4%A5%E8%BB%BD%E3%81%98%E3%82%87%E3%82%93%E3%81%8B%E3%82%89%E6%B5%81%E3%82%8C%E7%AF%80",
         "artist_name": "Chisato Yamada",
         "album_name": "Suite Nihonkai \u7d44\u66f2\u300c\u65e5\u672c\u6d77\u300d\u6d25\u8efd\u3058\u3087\u3093\u304b\u3089\u6d41\u308c\u7bc0",
@@ -126,8 +117,8 @@
         "review_id": "chisato_yamada-suite_nihonkai_\u7d44\u66f2\u300c\u65e5\u672c\u6d77\u300d\u6d25\u8efd\u3058\u3087\u3093\u304b\u3089\u6d41\u308c\u7bc0"
     },
     {
-        "position": 15,
-        "position_str": "015",
+        "position": 14,
+        "position_str": "014",
         "lastfm_url": "https://www.last.fm/music/Radiohead/In+Rainbows",
         "artist_name": "Radiohead",
         "album_name": "In Rainbows",
@@ -135,8 +126,8 @@
         "review_id": "radiohead-in_rainbows"
     },
     {
-        "position": 16,
-        "position_str": "016",
+        "position": 15,
+        "position_str": "015",
         "lastfm_url": "https://www.last.fm/music/Bruno+Sanfilippo/Ver+Sacrum",
         "artist_name": "Bruno Sanfilippo",
         "album_name": "Ver Sacrum",
@@ -144,13 +135,22 @@
         "review_id": "bruno_sanfilippo-ver_sacrum"
     },
     {
-        "position": 17,
-        "position_str": "017",
+        "position": 16,
+        "position_str": "016",
         "lastfm_url": "https://www.last.fm/music/System+of+a+Down/Mezmerize",
         "artist_name": "System Of A Down",
         "album_name": "Mezmerize",
         "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/6af731c307585bb1e496f80f7dbad566.jpg",
         "review_id": "system_of_a_down-mezmerize"
+    },
+    {
+        "position": 17,
+        "position_str": "017",
+        "lastfm_url": "https://www.last.fm/music/Boards+of+Canada/Random+35+Tracks+Tape",
+        "artist_name": "Boards of Canada",
+        "album_name": "Random 35 Tracks Tape",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/b0c19beb04474f06aa8c9b65f75a0b8d.jpg",
+        "review_id": "boards_of_canada-random_35_tracks_tape"
     },
     {
         "position": 18,
@@ -2027,15 +2027,6 @@
     {
         "position": 226,
         "position_str": "226",
-        "lastfm_url": "https://www.last.fm/music/Grimes/Art+Angels",
-        "artist_name": "Grimes",
-        "album_name": "Art Angels",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/f6b3a85f39a656aaa61d30d1d2ec8d85.png",
-        "review_id": "grimes-art_angels"
-    },
-    {
-        "position": 227,
-        "position_str": "227",
         "lastfm_url": "https://www.last.fm/music/Katzenjammer/Le+Pop",
         "artist_name": "Katzenjammer",
         "album_name": "Le Pop",
@@ -2043,8 +2034,8 @@
         "review_id": "katzenjammer-le_pop"
     },
     {
-        "position": 228,
-        "position_str": "228",
+        "position": 227,
+        "position_str": "227",
         "lastfm_url": "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Paper+M%C3%A2ch%C3%A9+Dream+Balloon",
         "artist_name": "King Gizzard & The Lizard Wizard",
         "album_name": "Paper M\u00e2ch\u00e9 Dream Balloon",
@@ -2052,8 +2043,8 @@
         "review_id": "king_gizzard_and_the_lizard_wizard-paper_m\u00e2ch\u00e9_dream_balloon"
     },
     {
-        "position": 229,
-        "position_str": "229",
+        "position": 228,
+        "position_str": "228",
         "lastfm_url": "https://www.last.fm/music/Ocoeur/Nouveau+D%C3%A9part",
         "artist_name": "Ocoeur",
         "album_name": "Nouveau D\u00e9part",
@@ -2061,8 +2052,8 @@
         "review_id": "ocoeur-nouveau_d\u00e9part"
     },
     {
-        "position": 230,
-        "position_str": "230",
+        "position": 229,
+        "position_str": "229",
         "lastfm_url": "https://www.last.fm/music/KIYO%EF%BC%8ASEN/Trick+or+Treat",
         "artist_name": "KIYO * SEN",
         "album_name": "Trick or Treat",
@@ -2070,8 +2061,8 @@
         "review_id": "kiyo_sen-trick_or_treat"
     },
     {
-        "position": 231,
-        "position_str": "231",
+        "position": 230,
+        "position_str": "230",
         "lastfm_url": "https://www.last.fm/music/Ween/The+Mollusk",
         "artist_name": "Ween",
         "album_name": "The Mollusk",
@@ -2079,8 +2070,8 @@
         "review_id": "ween-the_mollusk"
     },
     {
-        "position": 232,
-        "position_str": "232",
+        "position": 231,
+        "position_str": "231",
         "lastfm_url": "https://www.last.fm/music/All+Time+Low/Future+Hearts",
         "artist_name": "All Time Low",
         "album_name": "Future Hearts",
@@ -2088,8 +2079,8 @@
         "review_id": "all_time_low-future_hearts"
     },
     {
-        "position": 233,
-        "position_str": "233",
+        "position": 232,
+        "position_str": "232",
         "lastfm_url": "https://www.last.fm/music/Namy/Colorful",
         "artist_name": "Namy",
         "album_name": "Colorful",
@@ -2097,8 +2088,8 @@
         "review_id": "namy-colorful"
     },
     {
-        "position": 234,
-        "position_str": "234",
+        "position": 233,
+        "position_str": "233",
         "lastfm_url": "https://www.last.fm/music/Bon+Iver/For+Emma,+Forever+Ago",
         "artist_name": "Bon Iver",
         "album_name": "For Emma, Forever Ago",
@@ -2106,8 +2097,8 @@
         "review_id": "bon_iver-for_emma_forever_ago"
     },
     {
-        "position": 235,
-        "position_str": "235",
+        "position": 234,
+        "position_str": "234",
         "lastfm_url": "https://www.last.fm/music/Gretchen+Parlato/In+A+Dream",
         "artist_name": "Gretchen Parlato",
         "album_name": "In A Dream",
@@ -2115,8 +2106,8 @@
         "review_id": "gretchen_parlato-in_a_dream"
     },
     {
-        "position": 236,
-        "position_str": "236",
+        "position": 235,
+        "position_str": "235",
         "lastfm_url": "https://www.last.fm/music/Sven+Wunder/Wabi+Sabi",
         "artist_name": "Sven Wunder",
         "album_name": "Wabi Sabi",
@@ -2124,8 +2115,8 @@
         "review_id": "sven_wunder-wabi_sabi"
     },
     {
-        "position": 237,
-        "position_str": "237",
+        "position": 236,
+        "position_str": "236",
         "lastfm_url": "https://www.last.fm/music/Air/Moon+Safari",
         "artist_name": "Air",
         "album_name": "Moon Safari",
@@ -2133,8 +2124,8 @@
         "review_id": "air-moon_safari"
     },
     {
-        "position": 238,
-        "position_str": "238",
+        "position": 237,
+        "position_str": "237",
         "lastfm_url": "https://www.last.fm/music/Ween/Shinola+(Vol.+1)",
         "artist_name": "Ween",
         "album_name": "Shinola (Vol. 1)",
@@ -2142,8 +2133,8 @@
         "review_id": "ween-shinola_vol_1"
     },
     {
-        "position": 239,
-        "position_str": "239",
+        "position": 238,
+        "position_str": "238",
         "lastfm_url": "https://www.last.fm/music/Ichiko+Aoba/qp",
         "artist_name": "Ichiko Aoba",
         "album_name": "qp",
@@ -2151,8 +2142,8 @@
         "review_id": "ichiko_aoba-qp"
     },
     {
-        "position": 240,
-        "position_str": "240",
+        "position": 239,
+        "position_str": "239",
         "lastfm_url": "https://www.last.fm/music/Guy+Farley/Cashback",
         "artist_name": "Guy Farley",
         "album_name": "Cashback",
@@ -2160,8 +2151,8 @@
         "review_id": "guy_farley-cashback"
     },
     {
-        "position": 241,
-        "position_str": "241",
+        "position": 240,
+        "position_str": "240",
         "lastfm_url": "https://www.last.fm/music/Andreas+Vollenweider/Dancing+With+The+Lion",
         "artist_name": "Andreas Vollenweider",
         "album_name": "Dancing With The Lion",
@@ -2169,8 +2160,8 @@
         "review_id": "andreas_vollenweider-dancing_with_the_lion"
     },
     {
-        "position": 242,
-        "position_str": "242",
+        "position": 241,
+        "position_str": "241",
         "lastfm_url": "https://www.last.fm/music/Scott+Walker/Scott+3",
         "artist_name": "Scott Walker",
         "album_name": "Scott 3",
@@ -2178,8 +2169,8 @@
         "review_id": "scott_walker-scott_3"
     },
     {
-        "position": 243,
-        "position_str": "243",
+        "position": 242,
+        "position_str": "242",
         "lastfm_url": "https://www.last.fm/music/Joe+Hisaishi/A+Scene+at+the+Sea+(Takeshi+Kitano%27s+Original+Motion+Picture+Soundtrack)",
         "artist_name": "Joe Hisaishi",
         "album_name": "A Scene at the Sea (Takeshi Kitano's Original Motion Picture Soundtrack)",
@@ -2187,8 +2178,8 @@
         "review_id": "joe_hisaishi-a_scene_at_the_sea_takeshi_kitanos_original_motion_picture_soundtrack"
     },
     {
-        "position": 244,
-        "position_str": "244",
+        "position": 243,
+        "position_str": "243",
         "lastfm_url": "https://www.last.fm/music/Air/10+000+Hz+Legend",
         "artist_name": "Air",
         "album_name": "10,000 Hz Legend",
@@ -2196,8 +2187,8 @@
         "review_id": "air-10000_hz_legend"
     },
     {
-        "position": 245,
-        "position_str": "245",
+        "position": 244,
+        "position_str": "244",
         "lastfm_url": "https://www.last.fm/music/Alexandre+Desplat/The+Shape+Of+Water+(Original+Motion+Picture+Soundtrack)",
         "artist_name": "Alexandre Desplat",
         "album_name": "The Shape of Water (Original Motion Picture Soundtrack)",
@@ -2205,8 +2196,8 @@
         "review_id": "alexandre_desplat-the_shape_of_water_original_motion_picture_soundtrack"
     },
     {
-        "position": 246,
-        "position_str": "246",
+        "position": 245,
+        "position_str": "245",
         "lastfm_url": "https://www.last.fm/music/Arca/KICK+ii",
         "artist_name": "Arca",
         "album_name": "KICK ii",
@@ -2214,8 +2205,8 @@
         "review_id": "arca-kick_ii"
     },
     {
-        "position": 247,
-        "position_str": "247",
+        "position": 246,
+        "position_str": "246",
         "lastfm_url": "https://www.last.fm/music/Cavern+of+Anti-Matter/In+Fabric+OST",
         "artist_name": "Cavern of Anti-Matter",
         "album_name": "In Fabric OST",
@@ -2223,8 +2214,8 @@
         "review_id": "cavern_of_antimatter-in_fabric_ost"
     },
     {
-        "position": 248,
-        "position_str": "248",
+        "position": 247,
+        "position_str": "247",
         "lastfm_url": "https://www.last.fm/music/Silverstein/I+Am+Alive+in+Everything+I+Touch",
         "artist_name": "Silverstein",
         "album_name": "I Am Alive In Everything I Touch",
@@ -2232,8 +2223,8 @@
         "review_id": "silverstein-i_am_alive_in_everything_i_touch"
     },
     {
-        "position": 249,
-        "position_str": "249",
+        "position": 248,
+        "position_str": "248",
         "lastfm_url": "https://www.last.fm/music/G+Jones/Acid+Disk",
         "artist_name": "G Jones",
         "album_name": "Acid Disk",
@@ -2241,8 +2232,8 @@
         "review_id": "g_jones-acid_disk"
     },
     {
-        "position": 250,
-        "position_str": "250",
+        "position": 249,
+        "position_str": "249",
         "lastfm_url": "https://www.last.fm/music/Yuji+Ohno/%E3%83%AB%E3%83%91%E3%83%B3%E4%B8%89%E4%B8%96+%E3%82%AB%E3%83%AA%E3%82%AA%E3%82%B9%E3%83%88%E3%83%AD%E3%81%AE%E5%9F%8E+%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%BB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF+BGM%E9%9B%86",
         "artist_name": "Yuji Ohno",
         "album_name": "\u30eb\u30d1\u30f3\u4e09\u4e16 \u30ab\u30ea\u30aa\u30b9\u30c8\u30ed\u306e\u57ce \u30aa\u30ea\u30b8\u30ca\u30eb\u30fb\u30b5\u30a6\u30f3\u30c9\u30c8\u30e9\u30c3\u30af BGM\u96c6",
@@ -2250,13 +2241,22 @@
         "review_id": "yuji_ohno-\u30eb\u30d1\u30f3\u4e09\u4e16_\u30ab\u30ea\u30aa\u30b9\u30c8\u30ed\u306e\u57ce_\u30aa\u30ea\u30b8\u30ca\u30eb\u30fb\u30b5\u30a6\u30f3\u30c9\u30c8\u30e9\u30c3\u30af_bgm\u96c6"
     },
     {
-        "position": 251,
-        "position_str": "251",
+        "position": 250,
+        "position_str": "250",
         "lastfm_url": "https://www.last.fm/music/Eric+Whitacre/Light+&+Gold",
         "artist_name": "Eric Whitacre",
         "album_name": "Light & Gold",
         "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/cfd26464f8cf4afe86bd20965b01dab8.jpg",
         "review_id": "eric_whitacre-light_and_gold"
+    },
+    {
+        "position": 251,
+        "position_str": "251",
+        "lastfm_url": "https://www.last.fm/music/Panzerballett/Hart+Genossen",
+        "artist_name": "Panzerballett",
+        "album_name": "Hart Genossen",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/6bf114e3551b41cd9c928ca7a32f8633.jpg",
+        "review_id": "panzerballett-hart_genossen"
     },
     {
         "position": 252,
@@ -2468,15 +2468,6 @@
     {
         "position": 275,
         "position_str": "275",
-        "lastfm_url": "https://www.last.fm/music/Return+to+Forever/Romantic+Warrior",
-        "artist_name": "Return to Forever",
-        "album_name": "Romantic Warrior",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/d086af728b754522a5acc0f5eb029bdb.png",
-        "review_id": "return_to_forever-romantic_warrior"
-    },
-    {
-        "position": 276,
-        "position_str": "276",
         "lastfm_url": "https://www.last.fm/music/Regina+Spektor/Remember+Us+to+Life",
         "artist_name": "Regina Spektor",
         "album_name": "Remember Us to Life",
@@ -2484,17 +2475,8 @@
         "review_id": "regina_spektor-remember_us_to_life"
     },
     {
-        "position": 277,
-        "position_str": "277",
-        "lastfm_url": "https://www.last.fm/music/Aphex+Twin/Come+to+Daddy",
-        "artist_name": "Aphex Twin",
-        "album_name": "Come To Daddy",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/78651fa46c964b57d2a572c6452f03fc.jpg",
-        "review_id": "aphex_twin-come_to_daddy"
-    },
-    {
-        "position": 278,
-        "position_str": "278",
+        "position": 276,
+        "position_str": "276",
         "lastfm_url": "https://www.last.fm/music/Nick+Drake/Pink+Moon",
         "artist_name": "Nick Drake",
         "album_name": "Pink Moon",
@@ -2502,8 +2484,8 @@
         "review_id": "nick_drake-pink_moon"
     },
     {
-        "position": 279,
-        "position_str": "279",
+        "position": 277,
+        "position_str": "277",
         "lastfm_url": "https://www.last.fm/music/Hiromi/Time+Control",
         "artist_name": "Hiromi",
         "album_name": "Time control",
@@ -2511,17 +2493,8 @@
         "review_id": "hiromi-time_control"
     },
     {
-        "position": 280,
-        "position_str": "280",
-        "lastfm_url": "https://www.last.fm/music/Panzerballett/Hart+Genossen",
-        "artist_name": "Panzerballett",
-        "album_name": "Hart Genossen",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/6bf114e3551b41cd9c928ca7a32f8633.jpg",
-        "review_id": "panzerballett-hart_genossen"
-    },
-    {
-        "position": 281,
-        "position_str": "281",
+        "position": 278,
+        "position_str": "278",
         "lastfm_url": "https://www.last.fm/music/%E7%A5%AD%E5%8F%B8/Death+of+Mishima",
         "artist_name": "\u796d\u53f8",
         "album_name": "Death of Mishima",
@@ -2529,8 +2502,8 @@
         "review_id": "\u796d\u53f8-death_of_mishima"
     },
     {
-        "position": 282,
-        "position_str": "282",
+        "position": 279,
+        "position_str": "279",
         "lastfm_url": "https://www.last.fm/music/Lee+Jin+Ah/Random",
         "artist_name": "Lee Jin Ah",
         "album_name": "RANDOM",
@@ -2538,8 +2511,8 @@
         "review_id": "lee_jin_ah-random"
     },
     {
-        "position": 283,
-        "position_str": "283",
+        "position": 280,
+        "position_str": "280",
         "lastfm_url": "https://www.last.fm/music/Nitin+Sawhney/Beyond+Skin",
         "artist_name": "Nitin Sawhney",
         "album_name": "Beyond Skin",
@@ -2547,8 +2520,8 @@
         "review_id": "nitin_sawhney-beyond_skin"
     },
     {
-        "position": 284,
-        "position_str": "284",
+        "position": 281,
+        "position_str": "281",
         "lastfm_url": "https://www.last.fm/music/Richard+Dawson+&+Circle/Henki",
         "artist_name": "Richard Dawson & Circle",
         "album_name": "Henki",
@@ -2556,8 +2529,17 @@
         "review_id": "richard_dawson_and_circle-henki"
     },
     {
-        "position": 285,
-        "position_str": "285",
+        "position": 282,
+        "position_str": "282",
+        "lastfm_url": "https://www.last.fm/music/Grimes/Art+Angels",
+        "artist_name": "Grimes",
+        "album_name": "Art Angels",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/f6b3a85f39a656aaa61d30d1d2ec8d85.png",
+        "review_id": "grimes-art_angels"
+    },
+    {
+        "position": 283,
+        "position_str": "283",
         "lastfm_url": "https://www.last.fm/music/Chick+Corea/Light+as+a+Feather",
         "artist_name": "Chick Corea",
         "album_name": "Light As A Feather",
@@ -2565,8 +2547,8 @@
         "review_id": "chick_corea-light_as_a_feather"
     },
     {
-        "position": 286,
-        "position_str": "286",
+        "position": 284,
+        "position_str": "284",
         "lastfm_url": "https://www.last.fm/music/Lealani/Fantastic+Planet",
         "artist_name": "Lealani",
         "album_name": "Fantastic Planet",
@@ -2574,8 +2556,8 @@
         "review_id": "lealani-fantastic_planet"
     },
     {
-        "position": 287,
-        "position_str": "287",
+        "position": 285,
+        "position_str": "285",
         "lastfm_url": "https://www.last.fm/music/Fleet+Foxes/Helplessness+Blues",
         "artist_name": "Fleet Foxes",
         "album_name": "Helplessness Blues",
@@ -2583,8 +2565,8 @@
         "review_id": "fleet_foxes-helplessness_blues"
     },
     {
-        "position": 288,
-        "position_str": "288",
+        "position": 286,
+        "position_str": "286",
         "lastfm_url": "https://www.last.fm/music/M.I.A./Matangi",
         "artist_name": "M.I.A.",
         "album_name": "Matangi",
@@ -2592,8 +2574,8 @@
         "review_id": "mia-matangi"
     },
     {
-        "position": 289,
-        "position_str": "289",
+        "position": 287,
+        "position_str": "287",
         "lastfm_url": "https://www.last.fm/music/Yellow+Magic+Orchestra/YMO",
         "artist_name": "Yellow Magic Orchestra",
         "album_name": "YMO",
@@ -2601,8 +2583,8 @@
         "review_id": "yellow_magic_orchestra-ymo"
     },
     {
-        "position": 290,
-        "position_str": "290",
+        "position": 288,
+        "position_str": "288",
         "lastfm_url": "https://www.last.fm/music/Ask+My+Bull/CREATURE",
         "artist_name": "Ask My Bull",
         "album_name": "Creature",
@@ -2610,8 +2592,8 @@
         "review_id": "ask_my_bull-creature"
     },
     {
-        "position": 291,
-        "position_str": "291",
+        "position": 289,
+        "position_str": "289",
         "lastfm_url": "https://www.last.fm/music/Kate+Bush/Never+for+Ever",
         "artist_name": "Kate Bush",
         "album_name": "Never For Ever",
@@ -2619,8 +2601,8 @@
         "review_id": "kate_bush-never_for_ever"
     },
     {
-        "position": 292,
-        "position_str": "292",
+        "position": 290,
+        "position_str": "290",
         "lastfm_url": "https://www.last.fm/music/Ichiko+Aoba/0",
         "artist_name": "Ichiko Aoba",
         "album_name": "0",
@@ -2628,8 +2610,8 @@
         "review_id": "ichiko_aoba-0"
     },
     {
-        "position": 293,
-        "position_str": "293",
+        "position": 291,
+        "position_str": "291",
         "lastfm_url": "https://www.last.fm/music/Steven+Wilson/The+Harmony+Codex",
         "artist_name": "Steven Wilson",
         "album_name": "The Harmony Codex",
@@ -2637,8 +2619,8 @@
         "review_id": "steven_wilson-the_harmony_codex"
     },
     {
-        "position": 294,
-        "position_str": "294",
+        "position": 292,
+        "position_str": "292",
         "lastfm_url": "https://www.last.fm/music/Ulrich+Schnauss/A+Strangely+Isolated+Place",
         "artist_name": "Ulrich Schnauss",
         "album_name": "A Strangely Isolated Place",
@@ -2646,8 +2628,8 @@
         "review_id": "ulrich_schnauss-a_strangely_isolated_place"
     },
     {
-        "position": 295,
-        "position_str": "295",
+        "position": 293,
+        "position_str": "293",
         "lastfm_url": "https://www.last.fm/music/Native+Construct/Quiet+World",
         "artist_name": "Native Construct",
         "album_name": "Quiet World",
@@ -2655,8 +2637,8 @@
         "review_id": "native_construct-quiet_world"
     },
     {
-        "position": 296,
-        "position_str": "296",
+        "position": 294,
+        "position_str": "294",
         "lastfm_url": "https://www.last.fm/music/Takashi+Kokubo/Music+for+a+Cosmic+Garden",
         "artist_name": "Takashi Kokubo",
         "album_name": "Music For A Cosmic Garden",
@@ -2664,8 +2646,8 @@
         "review_id": "takashi_kokubo-music_for_a_cosmic_garden"
     },
     {
-        "position": 297,
-        "position_str": "297",
+        "position": 295,
+        "position_str": "295",
         "lastfm_url": "https://www.last.fm/music/Jockstrap/I+Love+You+Jennifer+B",
         "artist_name": "Jockstrap",
         "album_name": "I Love You Jennifer B",
@@ -2673,8 +2655,17 @@
         "review_id": "jockstrap-i_love_you_jennifer_b"
     },
     {
-        "position": 298,
-        "position_str": "298",
+        "position": 296,
+        "position_str": "296",
+        "lastfm_url": "https://www.last.fm/music/Jon+Kennedy/HA!",
+        "artist_name": "Jon Kennedy",
+        "album_name": "HA!",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/f3222b01aeea73e64ff9b822354a8020.jpg",
+        "review_id": "jon_kennedy-ha"
+    },
+    {
+        "position": 297,
+        "position_str": "297",
         "lastfm_url": "https://www.last.fm/music/World%27s+End+Girlfriend/Starry+Starry+Night+Soundtrack",
         "artist_name": "World's End Girlfriend",
         "album_name": "Starry Starry Night soundtrack",
@@ -2682,8 +2673,8 @@
         "review_id": "worlds_end_girlfriend-starry_starry_night_soundtrack"
     },
     {
-        "position": 299,
-        "position_str": "299",
+        "position": 298,
+        "position_str": "298",
         "lastfm_url": "https://www.last.fm/music/Garaj+Mahal/wOOt",
         "artist_name": "Garaj Mahal",
         "album_name": "wOOt",
@@ -2691,13 +2682,22 @@
         "review_id": "garaj_mahal-woot"
     },
     {
-        "position": 300,
-        "position_str": "300",
+        "position": 299,
+        "position_str": "299",
         "lastfm_url": "https://www.last.fm/music/Masal/Ahora",
         "artist_name": "Masal",
         "album_name": "Ahora",
         "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/918ab78eb535070a8731a761bc298abc.jpg",
         "review_id": "masal-ahora"
+    },
+    {
+        "position": 300,
+        "position_str": "300",
+        "lastfm_url": "https://www.last.fm/music/Return+to+Forever/Romantic+Warrior",
+        "artist_name": "Return to Forever",
+        "album_name": "Romantic Warrior",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/d086af728b754522a5acc0f5eb029bdb.png",
+        "review_id": "return_to_forever-romantic_warrior"
     },
     {
         "position": 301,
@@ -2765,6 +2765,15 @@
     {
         "position": 308,
         "position_str": "308",
+        "lastfm_url": "https://www.last.fm/music/Aphex+Twin/Come+to+Daddy",
+        "artist_name": "Aphex Twin",
+        "album_name": "Come To Daddy",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/78651fa46c964b57d2a572c6452f03fc.jpg",
+        "review_id": "aphex_twin-come_to_daddy"
+    },
+    {
+        "position": 309,
+        "position_str": "309",
         "lastfm_url": "https://www.last.fm/music/Zircon/Antigravity",
         "artist_name": "Zircon",
         "album_name": "Antigravity",
@@ -2772,8 +2781,8 @@
         "review_id": "zircon-antigravity"
     },
     {
-        "position": 309,
-        "position_str": "309",
+        "position": 310,
+        "position_str": "310",
         "lastfm_url": "https://www.last.fm/music/%EF%BC%92%EF%BC%98%EF%BC%91%EF%BC%94/%E6%96%B0%E3%81%97%E3%81%84%E6%97%A5%E3%81%AE%E8%AA%95%E7%94%9F",
         "artist_name": "\uff12\uff18\uff11\uff14",
         "album_name": "\u65b0\u3057\u3044\u65e5\u306e\u8a95\u751f",
@@ -2781,8 +2790,8 @@
         "review_id": "\uff12\uff18\uff11\uff14-\u65b0\u3057\u3044\u65e5\u306e\u8a95\u751f"
     },
     {
-        "position": 310,
-        "position_str": "310",
+        "position": 311,
+        "position_str": "311",
         "lastfm_url": "https://www.last.fm/music/HAAi/DJ-Kicks:+HAAi",
         "artist_name": "HAAi",
         "album_name": "DJ-Kicks: HAAi",
@@ -2790,8 +2799,8 @@
         "review_id": "haai-djkicks_haai"
     },
     {
-        "position": 311,
-        "position_str": "311",
+        "position": 312,
+        "position_str": "312",
         "lastfm_url": "https://www.last.fm/music/Pendulum/Immersion",
         "artist_name": "Pendulum",
         "album_name": "Immersion",
@@ -2799,8 +2808,8 @@
         "review_id": "pendulum-immersion"
     },
     {
-        "position": 312,
-        "position_str": "312",
+        "position": 313,
+        "position_str": "313",
         "lastfm_url": "https://www.last.fm/music/Daft+Punk/Human+After+All",
         "artist_name": "Daft Punk",
         "album_name": "Human After All",
@@ -2808,8 +2817,8 @@
         "review_id": "daft_punk-human_after_all"
     },
     {
-        "position": 313,
-        "position_str": "313",
+        "position": 314,
+        "position_str": "314",
         "lastfm_url": "https://www.last.fm/music/twenty+one+pilots/Trench",
         "artist_name": "twenty one pilots",
         "album_name": "Trench",
@@ -2817,8 +2826,8 @@
         "review_id": "twenty_one_pilots-trench"
     },
     {
-        "position": 314,
-        "position_str": "314",
+        "position": 315,
+        "position_str": "315",
         "lastfm_url": "https://www.last.fm/music/Enter+Shikari/Common+Dreads",
         "artist_name": "Enter Shikari",
         "album_name": "Common Dreads",
@@ -2826,8 +2835,8 @@
         "review_id": "enter_shikari-common_dreads"
     },
     {
-        "position": 315,
-        "position_str": "315",
+        "position": 316,
+        "position_str": "316",
         "lastfm_url": "https://www.last.fm/music/twenty+one+pilots/Blurryface",
         "artist_name": "twenty one pilots",
         "album_name": "Blurryface",
@@ -2835,22 +2844,13 @@
         "review_id": "twenty_one_pilots-blurryface"
     },
     {
-        "position": 316,
-        "position_str": "316",
+        "position": 317,
+        "position_str": "317",
         "lastfm_url": "https://www.last.fm/music/Issues/Issues",
         "artist_name": "Issues",
         "album_name": "Issues",
         "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/c66fb51b810731ffc4c62fab2c6e9493.jpg",
         "review_id": "issues-issues"
-    },
-    {
-        "position": 317,
-        "position_str": "317",
-        "lastfm_url": "https://www.last.fm/music/Aphex+Twin/Come+to+Daddy",
-        "artist_name": "Aphex Twin",
-        "album_name": "Come To Daddy",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/78651fa46c964b57d2a572c6452f03fc.jpg",
-        "review_id": "aphex_twin-come_to_daddy"
     },
     {
         "position": 318,
@@ -5411,15 +5411,6 @@
     {
         "position": 602,
         "position_str": "602",
-        "lastfm_url": "https://www.last.fm/music/Jon+Kennedy/HA!",
-        "artist_name": "Jon Kennedy",
-        "album_name": "HA!",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/f3222b01aeea73e64ff9b822354a8020.jpg",
-        "review_id": "jon_kennedy-ha"
-    },
-    {
-        "position": 603,
-        "position_str": "603",
         "lastfm_url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside",
         "artist_name": "Kate Bush",
         "album_name": "The Kick Inside",
@@ -5427,8 +5418,8 @@
         "review_id": "kate_bush-the_kick_inside"
     },
     {
-        "position": 604,
-        "position_str": "604",
+        "position": 603,
+        "position_str": "603",
         "lastfm_url": "https://www.last.fm/music/%E3%82%B3%E3%83%BC%E3%82%A8%E3%83%BC%E3%83%86%E3%82%AF%E3%83%A2%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89/DYNASTY+WARRIORS+3",
         "artist_name": "\u30b3\u30fc\u30a8\u30fc\u30c6\u30af\u30e2\u30b5\u30a6\u30f3\u30c9",
         "album_name": "DYNASTY WARRIORS 3",
@@ -5436,8 +5427,8 @@
         "review_id": "\u30b3\u30fc\u30a8\u30fc\u30c6\u30af\u30e2\u30b5\u30a6\u30f3\u30c9-dynasty_warriors_3"
     },
     {
-        "position": 605,
-        "position_str": "605",
+        "position": 604,
+        "position_str": "604",
         "lastfm_url": "https://www.last.fm/music/Julian+Nott/Wallace+&+Gromit",
         "artist_name": "Julian Nott",
         "album_name": "Wallace & Gromit",
@@ -5445,8 +5436,8 @@
         "review_id": "julian_nott-wallace_and_gromit"
     },
     {
-        "position": 606,
-        "position_str": "606",
+        "position": 605,
+        "position_str": "605",
         "lastfm_url": "https://www.last.fm/music/Fall+Out+Boy/Save+Rock+and+Roll",
         "artist_name": "Fall Out Boy",
         "album_name": "Save Rock and Roll",
@@ -5454,8 +5445,8 @@
         "review_id": "fall_out_boy-save_rock_and_roll"
     },
     {
-        "position": 607,
-        "position_str": "607",
+        "position": 606,
+        "position_str": "606",
         "lastfm_url": "https://www.last.fm/music/Two+Door+Cinema+Club/Gameshow",
         "artist_name": "Two Door Cinema Club",
         "album_name": "Gameshow",
@@ -5463,8 +5454,8 @@
         "review_id": "two_door_cinema_club-gameshow"
     },
     {
-        "position": 608,
-        "position_str": "608",
+        "position": 607,
+        "position_str": "607",
         "lastfm_url": "https://www.last.fm/music/Klaatu/Hope",
         "artist_name": "Klaatu",
         "album_name": "Hope",
@@ -5472,8 +5463,8 @@
         "review_id": "klaatu-hope"
     },
     {
-        "position": 609,
-        "position_str": "609",
+        "position": 608,
+        "position_str": "608",
         "lastfm_url": "https://www.last.fm/music/Cults/Cults",
         "artist_name": "Cults",
         "album_name": "Cults",
@@ -5481,8 +5472,8 @@
         "review_id": "cults-cults"
     },
     {
-        "position": 610,
-        "position_str": "610",
+        "position": 609,
+        "position_str": "609",
         "lastfm_url": "https://www.last.fm/music/Logic/Young,+Broke+&+Infamous",
         "artist_name": "Logic",
         "album_name": "Young, Broke & Infamous",
@@ -5490,8 +5481,8 @@
         "review_id": "logic-young_broke_and_infamous"
     },
     {
-        "position": 611,
-        "position_str": "611",
+        "position": 610,
+        "position_str": "610",
         "lastfm_url": "https://www.last.fm/music/Max+Richter/Sleep",
         "artist_name": "Max Richter",
         "album_name": "Sleep",
@@ -5499,8 +5490,8 @@
         "review_id": "max_richter-sleep"
     },
     {
-        "position": 612,
-        "position_str": "612",
+        "position": 611,
+        "position_str": "611",
         "lastfm_url": "https://www.last.fm/music/Michael+Nyman/Decay+Music",
         "artist_name": "Michael Nyman",
         "album_name": "Decay Music",
@@ -5508,8 +5499,8 @@
         "review_id": "michael_nyman-decay_music"
     },
     {
-        "position": 613,
-        "position_str": "613",
+        "position": 612,
+        "position_str": "612",
         "lastfm_url": "https://www.last.fm/music/Mos+Def/Black+On+Both+Sides",
         "artist_name": "Mos Def",
         "album_name": "Black on Both Sides",
@@ -5517,8 +5508,8 @@
         "review_id": "mos_def-black_on_both_sides"
     },
     {
-        "position": 614,
-        "position_str": "614",
+        "position": 613,
+        "position_str": "613",
         "lastfm_url": "https://www.last.fm/music/The+Police/Outlandos+D%27Amour",
         "artist_name": "The Police",
         "album_name": "Outlandos D'Amour",
@@ -5526,8 +5517,8 @@
         "review_id": "the_police-outlandos_damour"
     },
     {
-        "position": 615,
-        "position_str": "615",
+        "position": 614,
+        "position_str": "614",
         "lastfm_url": "https://www.last.fm/music/Michael+Jackson/Bad",
         "artist_name": "Michael Jackson",
         "album_name": "Bad",
@@ -5535,8 +5526,8 @@
         "review_id": "michael_jackson-bad"
     },
     {
-        "position": 616,
-        "position_str": "616",
+        "position": 615,
+        "position_str": "615",
         "lastfm_url": "https://www.last.fm/music/Kiyoshi+Yamaya/Komuso+World+In+Shakuhachi",
         "artist_name": "Kiyoshi Yamaya",
         "album_name": "Komuso World In Shakuhachi",
@@ -5544,8 +5535,8 @@
         "review_id": "kiyoshi_yamaya-komuso_world_in_shakuhachi"
     },
     {
-        "position": 617,
-        "position_str": "617",
+        "position": 616,
+        "position_str": "616",
         "lastfm_url": "https://www.last.fm/music/Paramore/Paramore",
         "artist_name": "Paramore",
         "album_name": "Paramore",
@@ -5553,8 +5544,8 @@
         "review_id": "paramore-paramore"
     },
     {
-        "position": 618,
-        "position_str": "618",
+        "position": 617,
+        "position_str": "617",
         "lastfm_url": "https://www.last.fm/music/Daniel+Powter/Daniel+Powter",
         "artist_name": "Daniel Powter",
         "album_name": "Daniel Powter",
@@ -5562,8 +5553,8 @@
         "review_id": "daniel_powter-daniel_powter"
     },
     {
-        "position": 619,
-        "position_str": "619",
+        "position": 618,
+        "position_str": "618",
         "lastfm_url": "https://www.last.fm/music/ScHoolboy+Q/Blank+Face+LP",
         "artist_name": "ScHoolboy Q",
         "album_name": "Blank Face LP",
@@ -5571,8 +5562,8 @@
         "review_id": "schoolboy_q-blank_face_lp"
     },
     {
-        "position": 620,
-        "position_str": "620",
+        "position": 619,
+        "position_str": "619",
         "lastfm_url": "https://www.last.fm/music/Pendulum/Elemental",
         "artist_name": "Pendulum",
         "album_name": "Elemental",
@@ -5580,8 +5571,8 @@
         "review_id": "pendulum-elemental"
     },
     {
-        "position": 621,
-        "position_str": "621",
+        "position": 620,
+        "position_str": "620",
         "lastfm_url": "https://www.last.fm/music/Brand+New/Daisy",
         "artist_name": "Brand New",
         "album_name": "Daisy",
@@ -5589,8 +5580,8 @@
         "review_id": "brand_new-daisy"
     },
     {
-        "position": 622,
-        "position_str": "622",
+        "position": 621,
+        "position_str": "621",
         "lastfm_url": "https://www.last.fm/music/Phoenix/Bankrupt!",
         "artist_name": "Phoenix",
         "album_name": "Bankrupt!",
@@ -5598,8 +5589,8 @@
         "review_id": "phoenix-bankrupt"
     },
     {
-        "position": 623,
-        "position_str": "623",
+        "position": 622,
+        "position_str": "622",
         "lastfm_url": "https://www.last.fm/music/William+Basinski/Melancholia",
         "artist_name": "William Basinski",
         "album_name": "Melancholia",
@@ -5607,8 +5598,8 @@
         "review_id": "william_basinski-melancholia"
     },
     {
-        "position": 624,
-        "position_str": "624",
+        "position": 623,
+        "position_str": "623",
         "lastfm_url": "https://www.last.fm/music/The+Police/Zenyatta+Mondatta",
         "artist_name": "The Police",
         "album_name": "Zenyatta Mondatta",
@@ -5616,8 +5607,8 @@
         "review_id": "the_police-zenyatta_mondatta"
     },
     {
-        "position": 625,
-        "position_str": "625",
+        "position": 624,
+        "position_str": "624",
         "lastfm_url": "https://www.last.fm/music/Silversun+Pickups/Carnavas",
         "artist_name": "Silversun Pickups",
         "album_name": "Carnavas",
@@ -5625,8 +5616,8 @@
         "review_id": "silversun_pickups-carnavas"
     },
     {
-        "position": 626,
-        "position_str": "626",
+        "position": 625,
+        "position_str": "625",
         "lastfm_url": "https://www.last.fm/music/The+Red+Jumpsuit+Apparatus/Don%27t+You+Fake+It",
         "artist_name": "The Red Jumpsuit Apparatus",
         "album_name": "Don't You Fake It",
@@ -5634,8 +5625,8 @@
         "review_id": "the_red_jumpsuit_apparatus-dont_you_fake_it"
     },
     {
-        "position": 627,
-        "position_str": "627",
+        "position": 626,
+        "position_str": "626",
         "lastfm_url": "https://www.last.fm/music/Two+Door+Cinema+Club/Tourist+History",
         "artist_name": "Two Door Cinema Club",
         "album_name": "Tourist History",
@@ -5643,8 +5634,8 @@
         "review_id": "two_door_cinema_club-tourist_history"
     },
     {
-        "position": 628,
-        "position_str": "628",
+        "position": 627,
+        "position_str": "627",
         "lastfm_url": "https://www.last.fm/music/Silk+Sonic/An+Evening+with+Silk+Sonic",
         "artist_name": "Silk Sonic",
         "album_name": "An Evening With Silk Sonic",
@@ -5652,8 +5643,8 @@
         "review_id": "silk_sonic-an_evening_with_silk_sonic"
     },
     {
-        "position": 629,
-        "position_str": "629",
+        "position": 628,
+        "position_str": "628",
         "lastfm_url": "https://www.last.fm/music/Oasis/(What%27s+the+Story)+Morning+Glory%3F",
         "artist_name": "Oasis",
         "album_name": "(What's The Story) Morning Glory?",
@@ -5661,8 +5652,8 @@
         "review_id": "oasis-whats_the_story_morning_glory"
     },
     {
-        "position": 630,
-        "position_str": "630",
+        "position": 629,
+        "position_str": "629",
         "lastfm_url": "https://www.last.fm/music/Pedro+Iturralde/Jazz+Flamenco+Vols.+1+Y+2+(Remasterizado+2015)",
         "artist_name": "Pedro Iturralde",
         "album_name": "Jazz Flamenco Vols. 1 Y 2 (Remasterizado 2015)",
@@ -5670,8 +5661,8 @@
         "review_id": "pedro_iturralde-jazz_flamenco_vols_1_y_2_remasterizado_2015"
     },
     {
-        "position": 631,
-        "position_str": "631",
+        "position": 630,
+        "position_str": "630",
         "lastfm_url": "https://www.last.fm/music/Novos+Baianos/Acabou+Chorare",
         "artist_name": "Novos Baianos",
         "album_name": "Acabou Chorare",
@@ -5679,8 +5670,8 @@
         "review_id": "novos_baianos-acabou_chorare"
     },
     {
-        "position": 632,
-        "position_str": "632",
+        "position": 631,
+        "position_str": "631",
         "lastfm_url": "https://www.last.fm/music/Skee+Mask/ISS009",
         "artist_name": "Skee Mask",
         "album_name": "ISS009",
@@ -5688,8 +5679,8 @@
         "review_id": "skee_mask-iss009"
     },
     {
-        "position": 633,
-        "position_str": "633",
+        "position": 632,
+        "position_str": "632",
         "lastfm_url": "https://www.last.fm/music/Skee+Mask/B",
         "artist_name": "Skee Mask",
         "album_name": "B",
@@ -5697,8 +5688,8 @@
         "review_id": "skee_mask-b"
     },
     {
-        "position": 634,
-        "position_str": "634",
+        "position": 633,
+        "position_str": "633",
         "lastfm_url": "https://www.last.fm/music/Skee+Mask/A",
         "artist_name": "Skee Mask",
         "album_name": "A",
@@ -5706,8 +5697,8 @@
         "review_id": "skee_mask-a"
     },
     {
-        "position": 635,
-        "position_str": "635",
+        "position": 634,
+        "position_str": "634",
         "lastfm_url": "https://www.last.fm/music/Machine+Girl/Stretch+Collection",
         "artist_name": "Machine Girl",
         "album_name": "Stretch Collection",
@@ -5715,8 +5706,8 @@
         "review_id": "machine_girl-stretch_collection"
     },
     {
-        "position": 636,
-        "position_str": "636",
+        "position": 635,
+        "position_str": "635",
         "lastfm_url": "https://www.last.fm/music/BT/These+Hopeful+Machines",
         "artist_name": "BT",
         "album_name": "These Hopeful Machines",
@@ -5724,8 +5715,8 @@
         "review_id": "bt-these_hopeful_machines"
     },
     {
-        "position": 637,
-        "position_str": "637",
+        "position": 636,
+        "position_str": "636",
         "lastfm_url": "https://www.last.fm/music/Underworld/DRIFT+Series+1",
         "artist_name": "Underworld",
         "album_name": "DRIFT Series 1",
@@ -5733,8 +5724,8 @@
         "review_id": "underworld-drift_series_1"
     },
     {
-        "position": 638,
-        "position_str": "638",
+        "position": 637,
+        "position_str": "637",
         "lastfm_url": "https://www.last.fm/music/Tricky/Maxinquaye",
         "artist_name": "Tricky",
         "album_name": "Maxinquaye",
@@ -5742,8 +5733,8 @@
         "review_id": "tricky-maxinquaye"
     },
     {
-        "position": 639,
-        "position_str": "639",
+        "position": 638,
+        "position_str": "638",
         "lastfm_url": "https://www.last.fm/music/Brian+Eno/Small+Craft+on+a+Milk+Sea",
         "artist_name": "Brian Eno",
         "album_name": "Small Craft On A Milk Sea",
@@ -5751,8 +5742,8 @@
         "review_id": "brian_eno-small_craft_on_a_milk_sea"
     },
     {
-        "position": 640,
-        "position_str": "640",
+        "position": 639,
+        "position_str": "639",
         "lastfm_url": "https://www.last.fm/music/Fantastic+Plastic+Machine/Luxury",
         "artist_name": "Fantastic Plastic Machine",
         "album_name": "Luxury",
@@ -5760,8 +5751,8 @@
         "review_id": "fantastic_plastic_machine-luxury"
     },
     {
-        "position": 641,
-        "position_str": "641",
+        "position": 640,
+        "position_str": "640",
         "lastfm_url": "https://www.last.fm/music/Julia+Holter/Aviary",
         "artist_name": "Julia Holter",
         "album_name": "Aviary",
@@ -5769,8 +5760,8 @@
         "review_id": "julia_holter-aviary"
     },
     {
-        "position": 642,
-        "position_str": "642",
+        "position": 641,
+        "position_str": "641",
         "lastfm_url": "https://www.last.fm/music/Johnny+Manchild+and+the+Poor+Bastards/We+Did+Not+Ask+For+This+Room",
         "artist_name": "Johnny Manchild and the Poor Bastards",
         "album_name": "We Did Not Ask For This Room",
@@ -5778,8 +5769,8 @@
         "review_id": "johnny_manchild_and_the_poor_bastards-we_did_not_ask_for_this_room"
     },
     {
-        "position": 643,
-        "position_str": "643",
+        "position": 642,
+        "position_str": "642",
         "lastfm_url": "https://www.last.fm/music/Fief/II",
         "artist_name": "Fief",
         "album_name": "II",
@@ -5787,8 +5778,8 @@
         "review_id": "fief-ii"
     },
     {
-        "position": 644,
-        "position_str": "644",
+        "position": 643,
+        "position_str": "643",
         "lastfm_url": "https://www.last.fm/music/Linkin+Park/Reanimation",
         "artist_name": "Linkin Park",
         "album_name": "Reanimation",
@@ -5796,8 +5787,8 @@
         "review_id": "linkin_park-reanimation"
     },
     {
-        "position": 645,
-        "position_str": "645",
+        "position": 644,
+        "position_str": "644",
         "lastfm_url": "https://www.last.fm/music/Nintendo/Nintendo+Land+OST",
         "artist_name": "Nintendo",
         "album_name": "Nintendo Land OST",
@@ -5805,8 +5796,8 @@
         "review_id": "nintendo-nintendo_land_ost"
     },
     {
-        "position": 646,
-        "position_str": "646",
+        "position": 645,
+        "position_str": "645",
         "lastfm_url": "https://www.last.fm/music/WaqWaq+Kingdom/Essaka+Hoisa",
         "artist_name": "WaqWaq Kingdom",
         "album_name": "Essaka Hoisa",
@@ -5814,8 +5805,8 @@
         "review_id": "waqwaq_kingdom-essaka_hoisa"
     },
     {
-        "position": 647,
-        "position_str": "647",
+        "position": 646,
+        "position_str": "646",
         "lastfm_url": "https://www.last.fm/music/The+Lemon+Twigs/Everything+Harmony",
         "artist_name": "The Lemon Twigs",
         "album_name": "Everything Harmony",
@@ -5823,8 +5814,8 @@
         "review_id": "the_lemon_twigs-everything_harmony"
     },
     {
-        "position": 648,
-        "position_str": "648",
+        "position": 647,
+        "position_str": "647",
         "lastfm_url": "https://www.last.fm/music/OFFTHESKY/the+serpent+phase",
         "artist_name": "Offthesky",
         "album_name": "The Serpent Phase",
@@ -5832,8 +5823,8 @@
         "review_id": "offthesky-the_serpent_phase"
     },
     {
-        "position": 649,
-        "position_str": "649",
+        "position": 648,
+        "position_str": "648",
         "lastfm_url": "https://www.last.fm/music/Guilhem+Desq/Visions",
         "artist_name": "Guilhem Desq",
         "album_name": "Visions",
@@ -5841,8 +5832,8 @@
         "review_id": "guilhem_desq-visions"
     },
     {
-        "position": 650,
-        "position_str": "650",
+        "position": 649,
+        "position_str": "649",
         "lastfm_url": "https://www.last.fm/music/Ozric+Tentacles/The+Hidden+Step",
         "artist_name": "Ozric Tentacles",
         "album_name": "The Hidden Step",
@@ -5850,8 +5841,8 @@
         "review_id": "ozric_tentacles-the_hidden_step"
     },
     {
-        "position": 651,
-        "position_str": "651",
+        "position": 650,
+        "position_str": "650",
         "lastfm_url": "https://www.last.fm/music/The+Souljazz+Orchestra/Resistance",
         "artist_name": "The Souljazz Orchestra",
         "album_name": "Resistance",
@@ -5859,8 +5850,8 @@
         "review_id": "the_souljazz_orchestra-resistance"
     },
     {
-        "position": 652,
-        "position_str": "652",
+        "position": 651,
+        "position_str": "651",
         "lastfm_url": "https://www.last.fm/music/+noredirect/Jean-Michel+Jarre/Oxygene",
         "artist_name": "Jean-Michel Jarre",
         "album_name": "Oxygene",
@@ -5868,8 +5859,8 @@
         "review_id": "jeanmichel_jarre-oxygene"
     },
     {
-        "position": 653,
-        "position_str": "653",
+        "position": 652,
+        "position_str": "652",
         "lastfm_url": "https://www.last.fm/music/Airwave/Believe",
         "artist_name": "Airwave",
         "album_name": "Believe",
@@ -5877,8 +5868,8 @@
         "review_id": "airwave-believe"
     },
     {
-        "position": 654,
-        "position_str": "654",
+        "position": 653,
+        "position_str": "653",
         "lastfm_url": "https://www.last.fm/music/Hiromi/Another+Mind",
         "artist_name": "Hiromi",
         "album_name": "Another Mind",
@@ -5886,8 +5877,8 @@
         "review_id": "hiromi-another_mind"
     },
     {
-        "position": 655,
-        "position_str": "655",
+        "position": 654,
+        "position_str": "654",
         "lastfm_url": "https://www.last.fm/music/Chick+Corea+Elektric+Band+II/Paint+The+World",
         "artist_name": "Chick Corea Elektric Band II",
         "album_name": "Paint The World",
@@ -5895,8 +5886,8 @@
         "review_id": "chick_corea_elektric_band_ii-paint_the_world"
     },
     {
-        "position": 656,
-        "position_str": "656",
+        "position": 655,
+        "position_str": "655",
         "lastfm_url": "https://www.last.fm/music/Taku+Yabuki/Modern+World+Symphony+No.+3",
         "artist_name": "Taku Yabuki",
         "album_name": "Modern World Symphony No. 3",
@@ -5904,8 +5895,8 @@
         "review_id": "taku_yabuki-modern_world_symphony_no_3"
     },
     {
-        "position": 657,
-        "position_str": "657",
+        "position": 656,
+        "position_str": "656",
         "lastfm_url": "https://www.last.fm/music/Scooter/...and+the+Beat+Goes+On!",
         "artist_name": "Scooter",
         "album_name": "...And The Beat Goes On!",
@@ -5913,8 +5904,8 @@
         "review_id": "scooter-and_the_beat_goes_on"
     },
     {
-        "position": 658,
-        "position_str": "658",
+        "position": 657,
+        "position_str": "657",
         "lastfm_url": "https://www.last.fm/music/Lisa+Gerrard/Hiraeth",
         "artist_name": "Lisa Gerrard",
         "album_name": "Hiraeth",
@@ -5922,8 +5913,8 @@
         "review_id": "lisa_gerrard-hiraeth"
     },
     {
-        "position": 659,
-        "position_str": "659",
+        "position": 658,
+        "position_str": "658",
         "lastfm_url": "https://www.last.fm/music/Zircon/The+World+Circuit",
         "artist_name": "Zircon",
         "album_name": "The World Circuit",
@@ -5931,8 +5922,8 @@
         "review_id": "zircon-the_world_circuit"
     },
     {
-        "position": 660,
-        "position_str": "660",
+        "position": 659,
+        "position_str": "659",
         "lastfm_url": "https://www.last.fm/music/Zircon/Mass+Media+Constant",
         "artist_name": "Zircon",
         "album_name": "Mass Media Constant",
@@ -5940,8 +5931,8 @@
         "review_id": "zircon-mass_media_constant"
     },
     {
-        "position": 661,
-        "position_str": "661",
+        "position": 660,
+        "position_str": "660",
         "lastfm_url": "https://www.last.fm/music/Midnight+Skyracer/Shadows+On+The+Moon",
         "artist_name": "Midnight Skyracer",
         "album_name": "Shadows On The Moon",
@@ -5949,8 +5940,8 @@
         "review_id": "midnight_skyracer-shadows_on_the_moon"
     },
     {
-        "position": 662,
-        "position_str": "662",
+        "position": 661,
+        "position_str": "661",
         "lastfm_url": "https://www.last.fm/music/Joey+Valence+&+Brae/NO+HANDS",
         "artist_name": "Joey Valence & Brae",
         "album_name": "NO HANDS",
@@ -5958,8 +5949,8 @@
         "review_id": "joey_valence_and_brae-no_hands"
     },
     {
-        "position": 663,
-        "position_str": "663",
+        "position": 662,
+        "position_str": "662",
         "lastfm_url": "https://www.last.fm/music/BT/This+Binary+Universe+%5BRemastered%5D",
         "artist_name": "BT",
         "album_name": "This Binary Universe [Remastered]",
@@ -5967,8 +5958,8 @@
         "review_id": "bt-this_binary_universe_remastered"
     },
     {
-        "position": 664,
-        "position_str": "664",
+        "position": 663,
+        "position_str": "663",
         "lastfm_url": "https://www.last.fm/music/Monolake/Cinemascope",
         "artist_name": "Monolake",
         "album_name": "Cinemascope",
@@ -5976,8 +5967,8 @@
         "review_id": "monolake-cinemascope"
     },
     {
-        "position": 665,
-        "position_str": "665",
+        "position": 664,
+        "position_str": "664",
         "lastfm_url": "https://www.last.fm/music/+noredirect/NIK+B%C3%84RTSCH/Llyr%C3%ACa",
         "artist_name": "Nik B\u00e4rtsch",
         "album_name": "Llyr\u00eca",
@@ -5985,8 +5976,8 @@
         "review_id": "nik_b\u00e4rtsch-llyr\u00eca"
     },
     {
-        "position": 666,
-        "position_str": "666",
+        "position": 665,
+        "position_str": "665",
         "lastfm_url": "https://www.last.fm/music/Moses+Yoofee+Trio/MYT",
         "artist_name": "Moses Yoofee Trio",
         "album_name": "MYT",
@@ -5994,8 +5985,8 @@
         "review_id": "moses_yoofee_trio-myt"
     },
     {
-        "position": 667,
-        "position_str": "667",
+        "position": 666,
+        "position_str": "666",
         "lastfm_url": "https://www.last.fm/music/Quincy+Jones/The+Dude",
         "artist_name": "Quincy Jones",
         "album_name": "The Dude",
@@ -6003,8 +5994,8 @@
         "review_id": "quincy_jones-the_dude"
     },
     {
-        "position": 668,
-        "position_str": "668",
+        "position": 667,
+        "position_str": "667",
         "lastfm_url": "https://www.last.fm/music/Quincy+Jones/Big+Band+Bossa+Nova",
         "artist_name": "Quincy Jones",
         "album_name": "Big Band Bossa Nova",
@@ -6012,8 +6003,8 @@
         "review_id": "quincy_jones-big_band_bossa_nova"
     },
     {
-        "position": 669,
-        "position_str": "669",
+        "position": 668,
+        "position_str": "668",
         "lastfm_url": "https://www.last.fm/music/Dezolve/Asterism",
         "artist_name": "DEZOLVE",
         "album_name": "Asterism",
@@ -6021,8 +6012,8 @@
         "review_id": "dezolve-asterism"
     },
     {
-        "position": 670,
-        "position_str": "670",
+        "position": 669,
+        "position_str": "669",
         "lastfm_url": "https://www.last.fm/music/Kaltenecker+Trio/The+Crossing",
         "artist_name": "Kaltenecker Trio",
         "album_name": "The Crossing",
@@ -6030,12 +6021,21 @@
         "review_id": "kaltenecker_trio-the_crossing"
     },
     {
-        "position": 671,
-        "position_str": "671",
+        "position": 670,
+        "position_str": "670",
         "lastfm_url": "https://www.last.fm/music/Tohpati/Maru",
         "artist_name": "Tohpati",
         "album_name": "Maru",
         "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/d7b891b756e7e060e32a4ef70cc6b3f6.jpg",
         "review_id": "tohpati-maru"
+    },
+    {
+        "position": 671,
+        "position_str": "671",
+        "lastfm_url": "https://www.last.fm/music/The+Dead+Texan/The+Dead+Texan",
+        "artist_name": "The Dead Texan",
+        "album_name": "The Dead Texan",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/f7e5057eec5d47dd5593558dcd1c99bf.jpg",
+        "review_id": "the_dead_texan-the_dead_texan"
     }
 ]

@@ -1199,11 +1199,18 @@ div.blog-post
   display: flex;
   flex-direction: row;
 }
-.back-to-previous-page svg.invertable-icon {
-  /* the arrow icon */
+.album-review .back-to-previous-page svg.invertable-icon {
+  /* the arrow icon on Album review page */
   width: 39px;
   height: 39px;
   padding: 10px;
+}
+
+.back-to-previous-page svg.invertable-icon {
+  /* the arrow icon everywhere else */
+  width: 30px;
+  height: 30px;
+  padding: 7px;
 }
 
 /* Button to back to top of blog post */
@@ -1618,7 +1625,8 @@ div.blog-post
   .blog-post h3.subgroup-title > span {
   }
 
-  .blog-post iframe {
+  .blog-post iframe,
+  .album-review iframe {
     width: calc(100%);
   }
 }
@@ -3315,18 +3323,10 @@ picture:hover .img-content {
 }
 .top-albums-list-innerContainer {
   display: grid;
-  /* 
-  grid-template-columns: 11% auto;
-  */
   grid-template-columns: var(--filters-section-width) auto;
   grid-template-rows: auto 1fr;
 }
 
-/*
-.top-albums-list-header {
-  display: grid;
-  grid-template-columns: 30% 40% 20% 10%;
-}*/
 .top-albums-list-header > * {
   padding-right: 20px;
 }
@@ -3362,7 +3362,7 @@ div.btn.filter-list-by-album-property > .item-text {
   flex-direction: row;
   background-color: var(--topAlbumsList-topLevelfilterBtn-bg-color);
   border-radius: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   padding: 7px 0;
   cursor: pointer;
 }
@@ -3373,10 +3373,6 @@ div.btn.filter-list-by-album-property > .item-text {
 #top-albums-list-sidebar .albums-filterBtnsContainer:hover .albums-filterBtns {
   display: block;
   position: absolute;
-  /*
-  margin-left: 170px;
-  margin-top: -7px;
-  */
   margin-left: calc(var(--filters-section-width) + 1px);
   margin-top: -7px;
   z-index: 9999;
@@ -3419,6 +3415,7 @@ div.btn.filter-list-by-artist-btn {
   grid-template-columns: repeat(var(--albums-displayed-per-row), minmax(0, 1fr));
   grid-gap: 3px;
   padding-top: 4px;
+  padding-left: 20px;
   overflow-y: scroll;
   overflow: auto;
 
@@ -3428,6 +3425,10 @@ div.btn.filter-list-by-artist-btn {
 
 #top-albums-list-sidebar {
   padding-top: 6px;
+}
+
+.top-albums-list-sideSection {
+  padding-bottom: 10px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -3565,10 +3566,6 @@ div.btn.filter-list-by-artist-btn {
 }
 #top-albums-list-navigation .navItem.active {
   background-color: var(--films-pagination-btn-bg-color-active);
-}
-
-.top-albums-list-sideSection {
-  padding-bottom: 20px;
 }
 
 .top-albums-list-sideSection .searchbox input {
@@ -4293,8 +4290,8 @@ div.albumInfoContainer > div.myRating {
 /* anything that should be hidden in mobile goes here... */
 @media screen and (max-width: 670px) {
   /* #region --------------------< Top level containers >-------------------- */
-  .page-wrapper {
-    margin-top: 10px;
+  #nav-top ~ div.page-wrapper {
+    margin-top: 0px;
   }
   .section-inner {
     margin: 0 !important;
@@ -4315,7 +4312,7 @@ div.albumInfoContainer > div.myRating {
   }
   .section-inner .controls,
   .section-inner .container-intro {
-    padding: 0px 12px;
+    padding: 0px 0px;
   }
   .section-inner table tbody tr a > td {
     padding-left: 10px;
@@ -4393,7 +4390,7 @@ div.albumInfoContainer > div.myRating {
     display: flex !important;
     position: fixed;
     width: 100vw;
-    top: 0;
+    bottom: 0;
     left: 0;
     height: var(--mobile-navbar-height);
     opacity: 1.0;
@@ -4405,27 +4402,29 @@ div.albumInfoContainer > div.myRating {
     display: none;
   }
   #nav-top .website-logo-container-mobileView {
-    display: block;
+    display: inline;
+    padding: 0;
   }
   #nav-top .website-logo-container-mobileView a {
     margin: 0 !important;
   }
   #nav-top .website-logo-container-mobileView span {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    padding: 10px 5px;
     text-decoration: none;
   }
   #nav-top .website-links {
     display: flex;
     justify-content: space-between;
   }
-  #nav-top a.navlink {
+  #nav-top .nav-left .website-links > a.navlink {
     vertical-align: middle;
     margin-right: 0px;
     margin-bottom: 0px;
-    font-size: 1.1rem;
-    padding: 0 2px;
+    font-size: 0.9rem;
+    padding: 10px 6px;
   }
-  #nav-top .website-links a {
+  #nav-top .nav-left .website-links a {
     margin-left: 0;
   }
   #nav-top a:not(.website-logo).navlink.active {
@@ -5221,7 +5220,7 @@ div.albumInfoContainer > div.myRating {
 
 @media screen and (max-width: 900px) { .my-custom-grid-container { padding: 0px 5px; } }
 
-@media screen and (max-width: 700px) { .page-title{ font-size: 1.2rem !important; } }
+@media screen and (max-width: 700px) { .page-title{ font-size: 1.1rem !important; } }
 
 
 /* remove padding from a blog post as screen gets smaller */

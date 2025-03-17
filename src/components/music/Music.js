@@ -39,8 +39,20 @@ const NAVIGATION_MAX = 650;
 
 // if local storage values are empty, set default values...
 if (localStorage.getItem(LocalStorageAlbums.VIEW_TYPE) == undefined) {
+    console.log(localStorage.getItem(LocalStorageAlbums.VIEW_TYPE));
     localStorage.setItem(LocalStorageAlbums.VIEW_TYPE, ViewType.GRID);
 }
+
+let vars = {
+    grid: {
+        row_height: 290,
+        albums_per_row: 5,
+    },
+    list: {
+        row_height: 300,
+        albums_per_row: 24,
+    }
+};
 
 
 class Music extends Component {
@@ -730,17 +742,17 @@ class Music extends Component {
         let ypos = document.querySelector(".top-albums-list").scrollTop;
         localStorage.setItem(LocalStorageAlbums.YPOS, ypos);
 
-        // approximate height of each row in the top albums list
-        const row_height = 295;
-
-        // num of albums per row
-        const albums_per_row = 5;
+        let viewType = localStorage.getItem(LocalStorageAlbums.VIEW_TYPE);
+        let row_height = (viewType == "View as grid") ? vars.grid.row_height : vars.list.row_height;
+        let albums_per_row = (viewType == "View as grid") ? vars.grid.albums_per_row : vars.list.albums_per_row;
         
         // all navItem buttons in navigation
         let btns = document.querySelectorAll('#top-albums-list-navigation > a.navItem');
 
+        // calcualte how many nav buttons should be displayed...
         let num_of_nav_btns = NAVIGATION_MAX / NAVIGATION_GAP;
 
+        // now just iterate over each nav button, and check which one should be active...
         for (let i = 0; i < num_of_nav_btns; i++) {
             let lower = (row_height * albums_per_row)*i;
             let upper = (row_height * albums_per_row)*(i+1);

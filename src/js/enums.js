@@ -50,14 +50,14 @@ export const ViewType = Object.freeze({
  *  Local storage variable names, so that I don't accidently mistype it, easier to refer as enum.
  */
 export const LocalStorageAlbums = Object.freeze({
-    VIEW_TYPE: "albums_ViewType",
+    VIEW_TYPE: enumValue("albums_ViewType"),
 
-    GENRE_FILTER: "albums_GenreFilter",
-    ARTIST_FILTER: "albums_ArtistFilter",
-    YEAR_FILTER: "albums_YearFilter",
-    REVIEWER_FILTER: "albums_ReviewerFilter",
+    GENRE_FILTER: enumValue("albums_GenreFilter"),
+    ARTIST_FILTER: enumValue("albums_ArtistFilter"),
+    YEAR_FILTER: enumValue("albums_YearFilter"),
+    REVIEWER_FILTER: enumValue("albums_ReviewerFilter"),
 
-    YPOS: "albums_ypos",
+    YPOS: enumValue("albums_ypos"),
 })
 
 
