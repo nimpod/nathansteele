@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nathansteele/static/css/main.2a1cdf1d.css",
-    "main.js": "/nathansteele/static/js/main.df5a1781.js",
+    "main.css": "/nathansteele/static/css/main.a970e9d6.css",
+    "main.js": "/nathansteele/static/js/main.152322f8.js",
     "static/media/mosaics-of-videos.png": "/nathansteele/static/media/mosaics-of-videos.c459068a6404a87d1f4a.png",
     "static/media/assembly.png": "/nathansteele/static/media/assembly.e515c81d9c784a8efb6a.png",
     "static/media/web-dev-thumbnail.PNG": "/nathansteele/static/media/web-dev-thumbnail.2a83f8123c0f86d50ad4.PNG",
@@ -42,11 +42,11 @@
     "static/media/grid.svg": "/nathansteele/static/media/grid.f7ed28aa1988bcf54f9ab4bddd936271.svg",
     "static/media/arrowUp.svg": "/nathansteele/static/media/arrowUp.42d53f2d8dc185305ac5ddd119a8ee9e.svg",
     "static/media/arrowLeft.svg": "/nathansteele/static/media/arrowLeft.3f87024def284940a6ee12faf6aff69f.svg",
-    "main.2a1cdf1d.css.map": "/nathansteele/static/css/main.2a1cdf1d.css.map",
-    "main.df5a1781.js.map": "/nathansteele/static/js/main.df5a1781.js.map"
+    "main.a970e9d6.css.map": "/nathansteele/static/css/main.a970e9d6.css.map",
+    "main.152322f8.js.map": "/nathansteele/static/js/main.152322f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a1cdf1d.css",
-    "static/js/main.df5a1781.js"
+    "static/css/main.a970e9d6.css",
+    "static/js/main.152322f8.js"
   ]
 }
