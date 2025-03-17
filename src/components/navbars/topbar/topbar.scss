@@ -41,7 +41,7 @@
     --logo-inversion-number: 1;
 }
 [data-theme="dark"] {
-    --topnav-bg-color: rgb(29, 43, 52); // rgba(0, 0, 0, 0.822);
+    --topnav-bg-color: rgba(29, 43, 52, 0.905); // rgba(0, 0, 0, 0.822);
     --topnav-btn-bg-color: rgb(29, 43, 52); // rgba(0, 0, 0, 0.711);
     --topnav-btn-bg-color-hover: rgb(53, 71, 82); // rgb(29, 43, 52);
     --topnav-btn-bg-color-active: rgb(71, 89, 101); // rgb(43, 43, 45);
@@ -78,6 +78,7 @@
   z-index: 1000;
   width: 100vw;
   height: 55px;
+  z-index: 9999999999;
   align-items: center;
   font-size: 1.05rem;
   background-color: var(--topnav-bg-color);

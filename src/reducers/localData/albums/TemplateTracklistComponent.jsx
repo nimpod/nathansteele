@@ -9,7 +9,11 @@ import React from 'react';
 function TemplateTracklistComponent(props) {
     let ratings = [];
     props.tracklist.forEach(track => {
-        ratings.push(track['rating']);
+        if (track['rating'] == 'interlude') {
+            // dont add to list...
+        } else {
+            ratings.push(track['rating']);
+        }
     });
     let avg = ratings.reduce((acc, c) => acc + c, 0) / ratings.length;
     avg = avg.toFixed(3);
@@ -34,15 +38,15 @@ function TemplateTracklistComponent(props) {
                 i++;
 
                 // return <div className={`track-item ${i_have_feelings_str}`} id={`track-${i}`}>
-                return <div className={`track-item `} id={`track-${i}`}>
+                return <div className={`track-item r${track.rating}`} id={`track-${i}`}>
                     {/* Num in tracklist */}
                     <span className='track-num'>{i}</span>
 
                     {/* Track title */}
-                    <span className='track-title'>{track.title}</span>
+                    <span className={`track-title`}>{track.title}</span>
 
                     {/* My rating */}
-                    <span className={`track-myRating r${track.rating}`}>{track.rating}</span>
+                    <span className={`track-myRating`}>{track.rating}</span>
 
                     {/* My feelings */}
                     {

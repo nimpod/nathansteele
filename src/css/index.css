@@ -3125,7 +3125,7 @@ div.btn.films-reset-filters-btn svg {
 .review-content-container .review-content > div {
   /* border: 1px solid transparent;*/
   border-radius: 5px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   color: var(--intro-text);
   font-size: 0.8rem;
 }
@@ -4061,6 +4061,9 @@ div.albumInfoContainer > div.myRating {
   padding-top: 30px;
 }
 
+.album-review p {
+}
+
 .album-header-container,
 .review-content-and-tracklist {
   width: 70%;
@@ -4091,8 +4094,8 @@ div.albumInfoContainer > div.myRating {
   padding: 1px 0;
   font-size: 0.9rem;
   width: 200px;
-  z-index: 99999;
   user-select: none;
+  z-index: 99999;
 }
 .album-review .prev-review-link:hover,
 .album-review .next-review-link:hover {
@@ -4181,13 +4184,24 @@ div.albumInfoContainer > div.myRating {
   font-size: 0.8rem;
   text-align: center;
 }
-.review-fullTracklist .track-myRating.r11 {
+.review-fullTracklist .track-item.r11 .track-myRating {
   background-image: linear-gradient(to bottom right, rgb(163, 255, 58), rgb(72, 249, 249));
   color: black;
 }
-.review-fullTracklist .track-myRating.r10 { background-color: rgb(21, 119, 74);  }
-.review-fullTracklist .track-myRating.r9  { background-color: rgb(24, 153, 121);  }
-.review-fullTracklist .track-myRating.r8  { background-color: rgb(51, 127, 177);  }
+.review-fullTracklist .track-item.r10 .track-myRating { background-color: rgb(21, 119, 74);  }
+.review-fullTracklist .track-item.r9 .track-myRating { background-color: rgb(24, 153, 121);  }
+.review-fullTracklist .track-item.r8 .track-myRating { background-color: rgb(51, 127, 177);  }
+.review-fullTracklist .track-item.rinterlude .track-myRating { 
+  background-color: rgba(78, 78, 78, 0.354);
+  font-size: 0.6rem;
+  width: fit-content;
+  color: var(--text-much-darker);
+}
+.review-fullTracklist .track-item.rinterlude .track-title,
+.review-fullTracklist .track-item.rinterlude .track-num {
+  color: var(--text-much-darker);
+  font-weight: normal;
+}
 
 .review-trackRatings .avg-rating {
   float: right;
@@ -4395,7 +4409,6 @@ div.albumInfoContainer > div.myRating {
     height: var(--mobile-navbar-height);
     opacity: 1.0;
     border-top: 2px solid var(--mobile-navbar-topborder-color);
-    background-color: var(--topnav-bg-color-mobileView);
     box-shadow: none;
   }
   #nav-top .website-logo-container {
@@ -5018,6 +5031,10 @@ div.albumInfoContainer > div.myRating {
     width: 100%;
     left: 0;
     padding-bottom: 60px;
+  }
+  .review-fullTracklist .track-item,
+  .review-fullTracklist .tracklist-header { 
+    grid-template-columns: 10% 80% 10%;
   }
   .album-info > .album-name {
     font-size: 1.4rem;

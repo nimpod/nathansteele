@@ -36,7 +36,7 @@
 }
 
 [data-theme=dark] {
-  --topnav-bg-color: rgb(29, 43, 52);
+  --topnav-bg-color: rgba(29, 43, 52, 0.905);
   --topnav-btn-bg-color: rgb(29, 43, 52);
   --topnav-btn-bg-color-hover: rgb(53, 71, 82);
   --topnav-btn-bg-color-active: rgb(71, 89, 101);
@@ -68,6 +68,7 @@
   z-index: 1000;
   width: 100vw;
   height: 55px;
+  z-index: 9999999999;
   align-items: center;
   font-size: 1.05rem;
   background-color: var(--topnav-bg-color);

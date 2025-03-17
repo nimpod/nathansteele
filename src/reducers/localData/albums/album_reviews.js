@@ -8,6 +8,7 @@ import ReactDomServer from 'react-dom/server';
 import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../../js/helpers.js';
 import { TrustworthyMusicReviewers } from '../../../js/enums.js';
 
+import { review as AndreasVollenweider__DownToTheMoon } 				from './content/andreas_vollenweider/down_to_the_moon/review.jsx';
 import { review as Yes__Fly_From_Here } 				from './content/yes/fly_from_here/review.jsx';
 import { review as BoC__MHTRTC } 						from './content/boards_of_canada/MHTRTC/review.jsx';
 import { review as BoC__Random35TracksTape } 			from './content/boards_of_canada/R35TT/review.jsx';
@@ -16,6 +17,7 @@ import { review as LucreciaDalt__Syzygy }				from './content/lucrecia_dalt/syzyg
 import { review as Nanoray__Digimaiden }				from './content/nanoray/digimaiden/review.jsx';
 import { review as JesusMolina__Agape }					from './content/jesus_molina/agape/review.jsx';
 import { review as Poppy__Eat }							from './content/poppy/eat/review.jsx';
+import { review as Poppy__IDisagree }					from './content/poppy/i_disagree/review.jsx';
 import { review as GlobalCommunication__7614 }			from './content/global_communication/7614/review.jsx';
 // my_review: ReactDomServer.renderToString(Jesus_Molina__Agape__Review()),
 
@@ -292,7 +294,7 @@ const database = {
 			year_of_discovery: "2023",
 			genres: "New age; Ambient; Progressive pop; Electronic",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(AndreasVollenweider__DownToTheMoon()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"andreas_vollenweider__dancing_with_the_lion": {
@@ -3253,9 +3255,9 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/4uTce2w80loIu3oLnW0irN?si=YRKDBaE5QB-HzZ-1XiUV2A",
 			year_of_release: "2020",
 			year_of_discovery: "2021",
-			genres: "Nu metal; Riot grrrl; Industrial metal; Pop metal; Electropop; Electronic",
-			my_rating: 10.0,
-			my_review: "",
+			genres: "Nu metal; Riot grrrl; Industrial metal; Alternative metal; Pop metal; Electropop; Electro-industrial",
+			my_rating: 8.5,
+			my_review: ReactDomServer.renderToString(Poppy__IDisagree()),
 		},
 		"poppy_eat": {
 			lastfm_url: "https://www.last.fm/music/Poppy/EAT+(NXT+Soundtrack)",
