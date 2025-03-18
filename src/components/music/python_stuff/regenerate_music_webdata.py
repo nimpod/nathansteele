@@ -24,7 +24,7 @@ disable_warnings(InsecureRequestWarning)
 
 # find the .m3u export...
 dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
-musicbee_export_filename = 'FAVOURITE ALBUMS.m3u'
+musicbee_export_filename = 'FAVOURITE_ALBUMS.m3u'
 fullpath_to_musicbee_export = f"{dir_export}\\{musicbee_export_filename}"
 
 # define full path to json file...

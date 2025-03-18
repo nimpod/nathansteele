@@ -188,6 +188,7 @@ class MusicReview extends React.Component {
                                     </div>
 
                                     {/* Themes */}
+                                    {/*  ====== I moved this into the .jsx file =========
                                     <div className='themes list-of-tags'>
                                         {themes.map(t => {
                                             return <span className='theme-tag' key={t}>
@@ -195,6 +196,7 @@ class MusicReview extends React.Component {
                                             </span>
                                         })}
                                     </div>
+                                    */}
 
                                     {/* My data */}
                                     <div className='album-details-myData'>

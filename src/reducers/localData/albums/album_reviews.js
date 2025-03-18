@@ -8,17 +8,27 @@ import ReactDomServer from 'react-dom/server';
 import { convert_collection_of_json_objects_to_one_list, convert_collection_of_json_objects_to_one_list_grouped_by_letters } from '../../../js/helpers.js';
 import { TrustworthyMusicReviewers } from '../../../js/enums.js';
 
-import { review as AndreasVollenweider__DownToTheMoon } 				from './content/andreas_vollenweider/down_to_the_moon/review.jsx';
-import { review as Yes__Fly_From_Here } 				from './content/yes/fly_from_here/review.jsx';
-import { review as BoC__MHTRTC } 						from './content/boards_of_canada/MHTRTC/review.jsx';
-import { review as BoC__Random35TracksTape } 			from './content/boards_of_canada/R35TT/review.jsx';
-import { review as ChisatoYamada__Suite_Nihonkai } 		from './content/chisato_yamada/suite_nihonkai/review.jsx';
-import { review as LucreciaDalt__Syzygy }				from './content/lucrecia_dalt/syzygy/review.jsx';
-import { review as Nanoray__Digimaiden }				from './content/nanoray/digimaiden/review.jsx';
-import { review as JesusMolina__Agape }					from './content/jesus_molina/agape/review.jsx';
-import { review as Poppy__Eat }							from './content/poppy/eat/review.jsx';
-import { review as Poppy__IDisagree }					from './content/poppy/i_disagree/review.jsx';
-import { review as GlobalCommunication__7614 }			from './content/global_communication/7614/review.jsx';
+
+//// IMPORT REVIEW CONTENT HERE, TRY AND KEEP IN ALPHABETICAL ORDER AND FOLLOW FILE STRUCTURE ACCORDINGLY
+import { review as AndreasVollenweider_DownToTheMoon } from './content/andreas_vollenweider/down_to_the_moon/review.jsx';
+
+import { review as BoC_MusicHasTheRightToChildren } 	from './content/boards_of_canada/music_has_the_right_to_children/review.jsx';
+import { review as BoC_Random35TracksTape } 			from './content/boards_of_canada/random_35_tracks_tape/review.jsx';
+
+import { review as ChisatoYamada_SuiteNihonkai } 		from './content/chisato_yamada/suite_nihonkai/review.jsx';
+
+import { review as GlobalCommunication_7614 }			from './content/global_communication/7614/review.jsx';
+
+import { review as JesusMolina_Agape }					from './content/jesus_molina/agape/review.jsx';
+
+import { review as LucreciaDalt_Syzygy }				from './content/lucrecia_dalt/syzygy/review.jsx';
+
+import { review as Nanoray_Digimaiden }					from './content/nanoray/digimaiden/review.jsx';
+
+import { review as Poppy_Eat }							from './content/poppy/eat/review.jsx';
+import { review as Poppy_IDisagree }					from './content/poppy/i_disagree/review.jsx';
+
+import { review as Yes_FlyFromHere } 					from './content/yes/fly_from_here/review.jsx';
 // my_review: ReactDomServer.renderToString(Jesus_Molina__Agape__Review()),
 
 
@@ -124,7 +134,7 @@ const database = {
 			year_of_release: "2013",
 			year_of_discovery: "2014",
 			genres: "Indie rock; Post-punk revival; Alternative rock; Garage rock; New wave",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -135,7 +145,7 @@ const database = {
 			year_of_release: "2011",
 			year_of_discovery: "2014",
 			genres: "Indie rock; Garage rock; Indie rock",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -146,7 +156,7 @@ const database = {
 			year_of_release: "2006",
 			year_of_discovery: "2013",			
 			genres: "Alternative rock; Garage rock; Indie rock",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -157,7 +167,7 @@ const database = {
 			year_of_release: "2001",
 			year_of_discovery: "2014",			
 			genres: "Alternative rock; Garage rock; Indie rock",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -195,9 +205,35 @@ const database = {
 		},
 
 
+		//
+		"the_prodigy music for the jilted generation": {
+			lastfm_url: "https://www.last.fm/music/The+Prodigy/Music+for+the+Jilted+Generation",
+			rym_url: "https://rateyourmusic.com/release/album/the-prodigy/music-for-the-jilted-generation/",
+			spotify_url: "https://rateyourmusic.com/release/album/the-prodigy/music-for-the-jilted-generation/",
+			year_of_release: "1994",
+			year_of_discovery: "2024",
+			genres: "Breakbeat; Jungle; Acid breaks; Techno; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
+		"the_prodigy__experience": {
+			lastfm_url: "https://www.last.fm/music/The+Prodigy/Experience",
+			rym_url: "https://rateyourmusic.com/release/album/the-prodigy/experience/",
+			spotify_url: "https://open.spotify.com/album/0M6LHXO4ozsi0OOCCk6vWE?si=XJ8JUQUQQjeVhol3PlWRYg",
+			year_of_release: "1992",
+			year_of_discovery: "2024",
+			genres: "Breakbeat; Jungle; Electronic",
+			my_rating: 9.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
+
+
 		"the_klf__chillout": {
 			lastfm_url: "https://www.last.fm/music/The+KLF/Come+Down+Dawn",
 			rym_url: "https://rateyourmusic.com/release/album/the-klf/chill-out/",
+			spotify_url: "https://open.spotify.com/album/4fBvkZkBuPyo3k7ZogKFAo?si=bx9ppPw6QHO_EOmRqJOqXA",
 			youtube_url: "https://rateyourmusic.com/release/album/the-klf/chill-out/",
 			custom_cover_url: "https://e.snmc.io/i/600/s/015c32ebab1741a35db88638c68bed0f/10718368/the-klf-chill-out-Cover-Art.jpg", 
 			album_name_displayed: "Chill out",
@@ -261,17 +297,6 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
-		"the_prodigy__experience": {
-			lastfm_url: "https://www.last.fm/music/The+Prodigy/Experience",
-			rym_url: "https://rateyourmusic.com/release/album/the-prodigy/experience/",
-			spotify_url: "https://open.spotify.com/album/0M6LHXO4ozsi0OOCCk6vWE?si=XJ8JUQUQQjeVhol3PlWRYg",
-			year_of_release: "1992",
-			year_of_discovery: "2024",
-			genres: "Breakbeat; Jungle; Electronic",
-			my_rating: 9.0,
-			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
-		},
 		"the_millennium__begin": {
 			lastfm_url: "https://www.last.fm/music/The+Millennium/Begin",
 			rym_url: "https://rateyourmusic.com/release/album/the-millennium/begin/",
@@ -294,7 +319,7 @@ const database = {
 			year_of_discovery: "2023",
 			genres: "New age; Ambient; Progressive pop; Electronic",
 			my_rating: 9.5,
-			my_review: ReactDomServer.renderToString(AndreasVollenweider__DownToTheMoon()),
+			my_review: ReactDomServer.renderToString(AndreasVollenweider_DownToTheMoon()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"andreas_vollenweider__dancing_with_the_lion": {
@@ -577,9 +602,8 @@ const database = {
 			year_of_release: "1998",
 			year_of_discovery: "2016",
 			genres: "IDM; Ambient; Downtempo; Electronic",
-			themes: ["Atmospheric", "Otherworldy", "Mysterious", "Vast", "Dark", "Nostalgic", "Ethereal", "Creepy", "Weird", "Surreal"],
 			my_rating: 10.0,
-			my_review: ReactDomServer.renderToString(BoC__MHTRTC()),
+			my_review: ReactDomServer.renderToString(BoC_MusicHasTheRightToChildren()),
 		},
 		"boards_of_canada__geogaddi": {
 			lastfm_url: "https://www.last.fm/music/Boards+of+Canada/Geogaddi",
@@ -600,7 +624,7 @@ const database = {
 			genres: "IDM; Ambient; Breakbeat; Electronic",
 			custom_cover_url: "https://i1.sndcdn.com/artworks-MCKqEy3UB0Ye9PdD-sI6suA-t500x500.jpg",
 			my_rating: 10.0,
-			my_review: ReactDomServer.renderToString(BoC__Random35TracksTape()),
+			my_review: ReactDomServer.renderToString(BoC_Random35TracksTape()),
 			year_of_discovery: "2017"
 		},
 		"boards_of_canada__a_few_old_tunes": {
@@ -740,7 +764,8 @@ const database = {
 			year_of_release: "2003",
 			year_of_discovery: "2015",
 			genres: "Post-hardcore; Emo; Alternative rock",
-			themes: ["Old favourite", "Angsty", "Rebellious"],
+			themes: ["Angsty", "Rebellious"],
+			tags: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -785,7 +810,7 @@ const database = {
 			year_of_release: "2015",
 			year_of_discovery: "2015",
 			genres: "Metalcore; Alternative rock; Pop rock; Alternative metal; Nu metal; Electronic rock",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -807,7 +832,7 @@ const database = {
 			year_of_release: "2013",
 			year_of_discovery: "2015",
 			genres: "Metalcore; Alternative metal; Post-hardcore",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -1051,7 +1076,7 @@ const database = {
 			genres: "Tsugaru shamisen; Min'yō Music; J-acoustic; J-funk; Funk",
 			my_rating: 10.0,
 			year_of_discovery: "2021",
-			my_review: ReactDomServer.renderToString(ChisatoYamada__Suite_Nihonkai()),
+			my_review: ReactDomServer.renderToString(ChisatoYamada_SuiteNihonkai()),
 		},
 		"cavern_of_anti_matter__in_fabric_ost": {
 			lastfm_url: "https://www.last.fm/music/Cavern+of+Anti-Matter/In+Fabric+OST",
@@ -1316,7 +1341,7 @@ const database = {
 			year_of_release: "2007",
 			year_of_discovery: "2015",
 			genres: "Post-hardcore; Metalcore; Alternative rock; Drum and bass; Electronic",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -1327,7 +1352,7 @@ const database = {
 			year_of_release: "2009",
 			year_of_discovery: "2015",
 			genres: "Post-hardcore; Alternative rock; Metalcore; Electronicore",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -1339,7 +1364,8 @@ const database = {
 			year_of_discovery: "2015",
 			custom_cover_url: "https://m.media-amazon.com/images/I/517mRQndYyL._UF894,1000_QL80_.jpg",
 			genres: "Metalcore; Post-hardcore; Alternative rock; Trancecore; Electronic",
-			themes: ["Old favourite", "Rave", "Political"],
+			themes: ["Rave", "Political"],
+			tags: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -1568,7 +1594,7 @@ const database = {
 			year_of_release: "2017",
 			year_of_discovery: "2017",
 			genres: "Post-hardcore; Emo; Emo pop; Screamo; Alternative rock; Alternative metal",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -1640,7 +1666,7 @@ const database = {
 			year_of_discovery: "2024",
 			genres: "Electronic; Ambient; Ambient techno; Downtempo; Drone; Space ambient",
 			my_rating: 10.0,
-			my_review: ReactDomServer.renderToString(GlobalCommunication__7614()),
+			my_review: ReactDomServer.renderToString(GlobalCommunication_7614()),
 		},
 		"garaj_mahal__woot": {
 			lastfm_url: "https://www.last.fm/music/Garaj+Mahal/wOOt",
@@ -1883,7 +1909,7 @@ const database = {
 			year_of_release: "2012",
 			year_of_discovery: "2023",
 			genres: "Metalcore; Nu metal; Electronicore; Djent; R&B",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},		
@@ -1894,7 +1920,7 @@ const database = {
 			year_of_release: "2014",
 			year_of_discovery: "2015",
 			genres: "Metalcore; Nu metal; Electronicore; Djent; R&B",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -2123,7 +2149,7 @@ const database = {
 			year_of_discovery: "2024",
 			genres: "Jazz fusion; Jazz; Latin jazz; Bossa nova; Art pop",
 			my_rating: 9.0,
-			my_review: ReactDomServer.renderToString(JesusMolina__Agape()),
+			my_review: ReactDomServer.renderToString(JesusMolina_Agape()),
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 
@@ -2348,7 +2374,7 @@ const database = {
 			year_of_release: "1981",
 			year_of_discovery: "2024",
 			genres: "Korean classical music; Film soundtrack",
-			themes: ["Not on spotify"],
+			tags: ["Not on spotify"],
 			my_rating: 8.0,
 			my_review: ""
 		},
@@ -2358,7 +2384,8 @@ const database = {
 			spotify_url: "",
 			year_of_release: "1981",
 			year_of_discovery: "2024",
-			genres: "New Age; Ambient; Progressive rock; Not on spotify",
+			genres: "New Age; Ambient; Progressive rock",
+			tags: ["Not on spotify"],
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
@@ -2438,6 +2465,7 @@ const database = {
 			year_of_release: "2012",
 			year_of_discovery: "2015",
 			genres: "Hip-Hop; Rap; Pop rap",
+			tags: ["Not on spotify"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -2470,6 +2498,7 @@ const database = {
 			year_of_release: "2013",
 			year_of_discovery: "2016",
 			genres: "Hip-Hop; Boom bap; Jazz rap; Pop rap",
+			tags: ["Not on spotify"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -2480,6 +2509,7 @@ const database = {
 			year_of_release: "2013",
 			year_of_discovery: "2016",
 			genres: "Hip-Hop; Boom bap; Jazz rap; Pop rap",
+			tags: ["Not on spotify"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -2514,7 +2544,7 @@ const database = {
 			year_of_release: "2000",
 			year_of_discovery: "2016",
 			genres: "Nu metal",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/cc15ebc58ec625979776cabaaaa282fa.jpg#cc15ebc58ec625979776cabaaaa282fa",
 			my_rating: 10.0,
 			my_review: "",
@@ -2526,7 +2556,7 @@ const database = {
 			year_of_release: "2010",
 			year_of_discovery: "2015",
 			genres: "Nu metal; Alternative rock; Industrial rock; Electronic",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 10.0,
 			my_review: "",
 		},		
@@ -2537,7 +2567,7 @@ const database = {
 			year_of_release: "2003",
 			year_of_discovery: "2015",
 			genres: "Nu metal; Alternative metal; Alternative rock",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -2592,8 +2622,9 @@ const database = {
 			year_of_release: "2013",
 			year_of_discovery: "2020",
 			genres: "Ambient pop; Ambient; Electronic",
+			tags: ["Not on spotify"],
 			my_rating: 9.0,
-			my_review: ReactDomServer.renderToString(LucreciaDalt__Syzygy()),
+			my_review: ReactDomServer.renderToString(LucreciaDalt_Syzygy()),
 		},
 		"lealani__fantastic_planet": {
 			lastfm_url: "https://www.last.fm/music/Lealani/Fantastic+Planet",
@@ -2637,6 +2668,7 @@ const database = {
 			year_of_release: "2020",
 			year_of_discovery: "2023",
 			genres: "Breakbeat; Acid techno; Jungle; Electronic",
+			tags: ["Not on spotify"],
 			my_rating: 8.5,
 			my_review: "",
 		},
@@ -3048,7 +3080,7 @@ const database = {
 			genres: "Digital hardcore; Jungle; Breakcore; Breakbeat; Drum and bass; Ambient trance; Electronic",
 			themes: ["Rave", "Intense"],
 			my_rating: 9.5,
-			my_review: ReactDomServer.renderToString(Nanoray__Digimaiden()),
+			my_review: ReactDomServer.renderToString(Nanoray_Digimaiden()),
 		},
 		"nas__illmatic": {
 			lastfm_url: "https://www.last.fm/music/Nas/Illmatic",
@@ -3257,7 +3289,7 @@ const database = {
 			year_of_discovery: "2021",
 			genres: "Nu metal; Riot grrrl; Industrial metal; Alternative metal; Pop metal; Electropop; Electro-industrial",
 			my_rating: 8.5,
-			my_review: ReactDomServer.renderToString(Poppy__IDisagree()),
+			my_review: ReactDomServer.renderToString(Poppy_IDisagree()),
 		},
 		"poppy_eat": {
 			lastfm_url: "https://www.last.fm/music/Poppy/EAT+(NXT+Soundtrack)",
@@ -3267,7 +3299,7 @@ const database = {
 			genres: "Metalcore; Alternative metal; Nu metal; Noise; Electropop; Screamo",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/263ef1af1dd0bea47e452cf4c75e681f.jpg#263ef1af1dd0bea47e452cf4c75e681f",
 			my_rating: 9.5,
-			my_review: ReactDomServer.renderToString(Poppy__Eat()),
+			my_review: ReactDomServer.renderToString(Poppy_Eat()),
 			year_of_discovery: "2021",
 		},
 
@@ -3332,7 +3364,8 @@ const database = {
 			youtube_url: "https://youtu.be/E5vpL_iudus?si=n6INkzUKDWRafK0P",
 			year_of_release: "2024",
 			year_of_discovery: "2024",
-			genres: "Drone; Ambient; Nature recordings; Not on spotify",
+			genres: "Drone; Ambient; Nature recordings",
+			tags: ["Not on spotify"],
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
@@ -3397,7 +3430,8 @@ const database = {
 			youtube_url: "https://www.youtube.com/watch?v=gcU7ZlnJFPE&t=1426s&pp=ygUlcGx1c19jcmllciBzb3VuZHMgZm9yIHRoZSBzdXBlcm1hcmtldA%3D%3D",
 			year_of_release: "1975",
 			year_of_discovery: "2020",
-			genres: "Supermarket music; Lounge; Easy listening",
+			genres: "Supermarket music; Lounge",
+			tags: ["Not on spotify"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -3408,6 +3442,7 @@ const database = {
 			year_of_release: "2009",
 			year_of_discovery: "2022",
 			genres: "Film soundtrack; Modern classical",
+			tags: ["Not on spotify"],
 			my_rating: 9.5,
 			my_review: "",
 		},
@@ -3418,7 +3453,7 @@ const database = {
 			year_of_release: "2014",
 			year_of_discovery: "2015",
 			genres: "Dance punk; Alternative rock; Pop punk; Post-hardcore; Synthpop; Electropop; Electronic",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 10.0,
 			my_review: "",
 		},
@@ -3714,7 +3749,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/3QxX3NbWyLlLG6lP1xveL3?si=n_AwZVu8Tv6txWmdVNNE9w",
 			year_of_release: "2005",
 			genres: "Alternative metal; Avant-garde metal",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/a96a0ff1cd9b384659b7edac19dc15b6.jpg#a96a0ff1cd9b384659b7edac19dc15b6",
 			my_rating: 10.0,
 			my_review: "",
@@ -3727,7 +3762,7 @@ const database = {
 			year_of_release: "1998",
 			year_of_discovery: "2011",
 			genres: "Avant-garde metal; Nu metal; Heavy metal; Alternative metal",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 9.5,
 			my_review: "",
 		},
@@ -3738,7 +3773,7 @@ const database = {
 			year_of_release: "2002",
 			year_of_discovery: "2011",
 			genres: "Nu metal; Heavy metal; Alternative metal; Avant-garde metal",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 9.5,
 			my_review: "",
 		},
@@ -3748,7 +3783,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0cn6MHyx4YuZauaB7Pb66o?si=QhPBwwzXSaizJVqewya15Q",
 			year_of_release: "2005",
 			genres: "Alternative metal; Avant-garde metal; Heavy metal; Nu metal",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 10.0,
 			my_review: "",
 			year_of_discovery: "2010",
@@ -3760,7 +3795,7 @@ const database = {
 			year_of_release: "2001",
 			year_of_discovery: "2011",
 			genres: "Nu metal; Heavy metal; Alternative metal; Avant-garde metal",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -3885,7 +3920,8 @@ const database = {
 			youtube_url: "https://youtube.com/playlist?list=PL_m58L0UBc3UdAHunu6zUKZXh2gjXjtR5&si=mj5BS9HFLk2oWbSu",
 			year_of_release: "2009",
 			year_of_discovery: "2023",
-			genres: "Trip hop; Folk pop; Folktronica; Chinese folk music; Dance pop; Not on spotify",
+			genres: "Trip hop; Folk pop; Folktronica; Chinese folk music; Dance pop",
+			tags: ["Not on spotify"],
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.SITE_NOISE
@@ -3950,7 +3986,7 @@ const database = {
 			year_of_release: "2014",
 			year_of_discovery: "2016",
 			genres: "Metalcore; Alternative rock; Industrial metal; Post-hardcore; Post-grunge",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -4014,7 +4050,8 @@ const database = {
 			year_of_release: "1999",
 			year_of_discovery: "2009",
 			genres: "Nu metal; Alternative metal",
-			themes: ["Old favourite", "Angsty", "Rebellious"],
+			themes: ["Angsty", "Rebellious"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -4060,6 +4097,7 @@ const database = {
 			artist_name_Japanese: "加古隆",
 			year_of_release: "2000",
 			genres: "Film soundtrack; Neoclassical new age; Piano",
+			tags: ["Not on spotify"],
 			my_rating: 9.5,
 			my_review: "",
 			year_of_discovery: "2023",
@@ -4084,7 +4122,8 @@ const database = {
 			year_of_release: "2013",
 			year_of_discovery: "2015",
 			genres: "Pop; Hip-Hop; Pop rap; Alternative pop; Emo",
-			themes: ["Old favourite", "Upbeat"],
+			themes: ["Upbeat"],
+			tags: ["Old favourite"],
 			album_name_displayed: "Vessel",
 			my_rating: 9.0,
 			my_review: "",
@@ -4096,7 +4135,7 @@ const database = {
 			year_of_release: "2013",
 			year_of_discovery: "2015",
 			genres: "Indie pop; Pop rap; Indietronica; Electropop",
-			themes: ["Old favourite"],
+			tags: ["Old favourite"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -4266,7 +4305,8 @@ const database = {
 			rym_url: "https://rateyourmusic.com/release/album/woob/woob-1194/",
 			youtube_url: "https://youtu.be/0S3owK3pN64?si=_7bQ4lyo0aAVM96Z",
 			year_of_release: "1994",
-			genres: "Ambient dub; Downtempo; Ambient techno; Not on spotify; Electronic",
+			genres: "Ambient dub; Downtempo; Ambient techno; Electronic",
+			tags: ["Not on spotify"],
 			my_rating: 8.0,
 			my_review: "",
 			year_of_discovery: "2023",
@@ -4346,6 +4386,7 @@ const database = {
 			year_of_release: "1999",
 			year_of_discovery: "2014",
 			genres: "Symphonic pop; New wave; Pop; Progressive pop",
+			tags: ["Not on spotify"],
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -4421,6 +4462,7 @@ const database = {
 			year_of_release: "2000",
 			artist_name_displayed: "XTC",
 			genres: "Art punk; Alternative rock; Art rock; New wave",
+			tags: ["Not on spotify"],
 			my_rating: 8.0,
 			my_review: "",
 			year_of_discovery: "2012",
@@ -4469,8 +4511,9 @@ const database = {
 			year_of_release: "2011",
 			year_of_discovery: "2013",
 			genres: "Progressive rock; Symphonic prog; Progressive pop",
+			tags: ["Not on spotify"],
 			my_rating: 10.0,
-			my_review: ReactDomServer.renderToString(Yes__Fly_From_Here()),
+			my_review: ReactDomServer.renderToString(Yes_FlyFromHere()),
 			custom_cover_url: custom_covers.Yes__Fly_From_Here,
 		},
 		"yes__close_to_the_edge": {
@@ -4526,6 +4569,7 @@ const database = {
 			year_of_release: "2004",
 			year_of_discovery: "2021",
 			genres: "Video game soundtrack; J-pop; Shibuya-kei; Synthpop; Jazz pop; Salsa; Funk",
+			tags: ["Not on spotify"],
 			my_rating: 9.5,
 			my_review: "",
 		},

@@ -6,7 +6,7 @@ Convert the following text into HTML code. Please obide by these rules:
 
 
 Divide each section into <div> block elements:
-1) There should be 3 sections, please divide them up into indivudual div blocks with appropriate classnames.
+1) There should be 4 sections, please divide them up into indivudual div blocks with appropriate classnames.
 2) Change the first div block to <div className="review-artistIntro">
 3) Change the first div block to <div className="review-content">
 4) Change the first div block to <div className="review-trackRatings">
