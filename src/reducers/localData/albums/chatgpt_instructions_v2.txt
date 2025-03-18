@@ -1,7 +1,0 @@
-Below you can see a template .jsx file:
-
-I am going to provide you with some plain text. I would like you to convert it into HTML code, inserting it into the template .jsx file. Please obide by these rules:
-1) Apply the <a> links appropriately to the related text above it.
-2) Do NOT use <ul> tags.
-3) Do NOT encapsulate a track reference around an anchor tag. For example do not change [4] Anything Like Me, to <a href="#">Anything Like Me</a>. Instead, I would simply like you to encapsulate it around <strong></strong>
-

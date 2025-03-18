@@ -1,0 +1,27 @@
+I am going to show you a template .jsx file:
+
+
+
+
+Now I am going to provide you with some plain text.
+
+I would like you to convert it into HTML code, inserting it into the template .jsx file.
+
+Please obide by these rules:
+- 1) Apply the <a> links appropriately to the related text above it.
+
+- 2) Do NOT use <ul> tags.
+
+- 3) Do NOT encapsulate a track reference around an anchor tag. For example do not change [4] Anything Like Me, to <a href="#">Anything Like Me</a>. Instead, I would simply like you to encapsulate it around <strong></strong>
+
+- 4) Do NOT put any embedded youtube links in a seperate <div> block. They are supposed to be inside <div className="review-main">. Also, please keep all the code for the embedded youtube video on 1 line, I don't care about all the tags that youtube placed in there.
+
+- 5) Do NOT change the comments above each <div> block
+
+- 6) If you put a <a> tag around some text, but the href is "#", just leave the text alone, I did not want you to do that!
+
+- 7) If you spot any typos or grammar mistakes, feel free to correct them. Please summarise these mistakes at the end.
+
+- 8) Remove any headings that you created at the beginning of each <div> block.
+
+- 9) Remove and <br> tags that you inserted into the code.

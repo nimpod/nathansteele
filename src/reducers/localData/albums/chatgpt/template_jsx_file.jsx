@@ -11,7 +11,7 @@ const tracklist = [
 
 const themes = [
     "Atmospheric",
-    "Otherworldy",
+    "Otherworldly",
     "Mysterious",
     "Vast",
 ];
@@ -39,7 +39,7 @@ export const review = () => (
         </div>
             
         {/* Main section of the review, overview of what I like and dislike about the album */}
-        <div className="review-positivesAndNegatives">
+        <div className="review-main">
             <p>
                 blah blah blah
             </p>
@@ -51,7 +51,7 @@ export const review = () => (
         </div>
             
         {/* A brief overview/summary of my personal experience with the album */}
-        <div class="review-summary">
+        <div className="review-summary">
             <p>
                 blah blah blah
             </p>

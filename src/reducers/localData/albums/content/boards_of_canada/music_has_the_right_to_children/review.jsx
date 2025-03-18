@@ -23,7 +23,7 @@ const tracklist = [
 
 const themes = [
     "Atmospheric",
-    "Otherworldy",
+    "Otherworldly",
     "Mysterious",
     "Vast",
     "Dark", 

@@ -1,0 +1,27 @@
+
+LastFM:
+https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=641be1ed643c913edb609208c24efad7&artist=Andreas%20Vollenweider&album=Down%20to%20the%20Moon&format=json
+
+
+Discogs API:
+const [tracklist, setTracklist] = useState([]);
+
+useEffect(() => {
+    const fetchTracklist = async () => {
+        try {
+            const response = await fetch("https://api.discogs.com/releases/6825991?token=YOUR_DISCOGS_API_TOKEN");
+            const data = await response.json();
+
+            if (data.tracklist) {
+                setTracklist(data.tracklist.map(track => ({
+                    title: track.title,
+                    rating: "N/A"  // Ratings need to be manually added
+                })));
+            }
+        } catch (error) {
+            console.error("Error fetching tracklist:", error);
+        }
+    };
+
+    fetchTracklist();
+}, []);

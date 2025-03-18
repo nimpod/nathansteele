@@ -32,7 +32,7 @@ export const post = () => (
             </p>
             <p>For a long time <a href='https://solarsystem.nasa.gov/planets/venus/overview/' target='_blank'>Venus</a> was thought to be Earth-like due to being a similar size and composition. No telescope could pierce the thick cloud layers that enveloped the mysterious planet, so
                 we really had no idea what lurked on Venus without actually going there with scientific instruments to make measurements. The Venera probes gradually revealed to us that Venus is a hellish world full of volcanoes
-                and sulphuric acid rain and inconceivably high surface temperatures (475°C). Venus is completely inhospitable for life as we know it, and despite the otherworldy challenges that Venus presented to the
+                and sulphuric acid rain and inconceivably high surface temperatures (475°C). Venus is completely inhospitable for life as we know it, and despite the otherworldly challenges that Venus presented to the
                 Venera engineers, they still succeeded in landing probes on the planet, snapping pictures, drilling holes, making audio recordings, and gathering a vast set of data that completely changed our understanding
                 of the Universe and our insignificant but precious place within it.
             </p>
