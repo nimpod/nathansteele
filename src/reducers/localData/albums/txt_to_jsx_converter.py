@@ -62,6 +62,7 @@ template_jsx_file = f'{albums}\\chatgpt\\template_jsx_file.jsx'
 rules_file = f'{albums}\\chatgpt\\rules.txt'
 
 
+print(f"- OpenAI API key = {API_KEY}")
 print(f"- Artist = {args.artist}")
 print(f"- Album = {args.album}")
 print(f"- '{review_dir}'")

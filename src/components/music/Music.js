@@ -11,7 +11,8 @@ import {
     handle_filter_button_toggling_stuff,
     generate_colour_v2,
     generate_colour_v1,
-    get_actual_button
+    get_actual_button,
+    close_div_if_user_clicks_outside
     // toggle_dropdown_list,
     // remove_genre_duplicates,
     // toggle_dropdown_list_arrow_icon,
@@ -773,6 +774,31 @@ class Music extends Component {
     }
 
     /**
+     * 
+     * @param {*} e 
+     */
+    toggle_filters_section = (e, div_id) => {
+        // to remove possibility of human error...
+        let visible = "visible";
+
+        // make sure all other sections are closed first...
+        let allFilterBtns = document.getElementsByClassName('albums-filterBtns');
+        for (let item of allFilterBtns) {
+            item.classList.remove(visible);
+        }
+        
+        let filterBtns = document.querySelectorAll(`#${div_id}`)[0];
+
+        if (filterBtns.classList.contains(visible)) {
+            filterBtns.classList.remove(visible);
+        } else {
+            filterBtns.classList.add(visible);
+        }
+
+        close_div_if_user_clicks_outside(filterBtns, filterBtns.parentElement);
+    }
+
+    /**
      * Render function
      * @returns 
      */
@@ -882,7 +908,8 @@ class Music extends Component {
                                         <p className='sidebar-subsection-title'>Filters</p>
 
                                         {/* Filter by artist... */}
-                                        <div id='albums-filterByArtist' className='albums-filterBtnsContainer'>
+                                        <div id='albums-filterByArtist' className='albums-filterBtnsContainer' onClick={(e) => this.toggle_filters_section(e, 'filter-by-artist-btns')}>
+                                                
                                             <p className='current-filter'>{this.state.__current_artist_filter}</p>
                                             <div id='filter-by-artist-btns' className='albums-filterBtns'>
                                                 {
@@ -899,7 +926,7 @@ class Music extends Component {
                                         </div>
 
                                         {/* Filter by genre... */}
-                                        <div id='albums-filterByGenre' className='albums-filterBtnsContainer'>
+                                        <div id='albums-filterByGenre' className='albums-filterBtnsContainer'  onClick={(e) => this.toggle_filters_section(e, 'filter-by-genre-btns')}>
                                             <p className='current-filter'>{this.state.__current_genre_filter}</p>
                                             <div id='filter-by-genre-btns' className='albums-filterBtns'>
                                                 {
@@ -916,7 +943,7 @@ class Music extends Component {
                                         </div>
 
                                         {/* Filter by year... */}
-                                        <div id='albums-filterByYear' className='albums-filterBtnsContainer'>
+                                        <div id='albums-filterByYear' className='albums-filterBtnsContainer'  onClick={(e) => this.toggle_filters_section(e, 'filter-by-year-btns')}>
                                             <p className='current-filter'>{this.state.__current_year_filter}</p>
                                             <div id='filter-by-year-btns' className='albums-filterBtns'>
                                                 {
@@ -933,7 +960,7 @@ class Music extends Component {
                                         </div>
 
                                         {/* Filter by reviewer who recommened it to me... */}
-                                        <div id='albums-filterByReviewer' className='albums-filterBtnsContainer'>
+                                        <div id='albums-filterByReviewer' className='albums-filterBtnsContainer'  onClick={(e) => this.toggle_filters_section(e, 'filter-by-Reviewer-btns')}>
                                             <p className='current-filter'>{this.state.__current_reviewer_filter}</p>
                                             <div id='filter-by-Reviewer-btns' className='albums-filterBtns'>
                                                 {

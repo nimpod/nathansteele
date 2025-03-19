@@ -475,6 +475,32 @@ export function remove_class_from_item_when_user_clicks_outside_of_item(item_to_
     });
 }
 
+
+/**
+ * 
+ * @param {div to close} div
+ * @param {btn that toggles the div} btn 
+ */
+export const close_div_if_user_clicks_outside = (div, btn) => {
+    window.addEventListener('click', function(mouseEvent) {
+        // hide div when user clicks outside of btn...
+        remove_class_from_item_when_user_clicks_outside_of_item(
+            div,
+            btn,
+            mouseEvent,
+            'visible'
+        );
+
+        // deactivate btn when user clicks outside of btn...
+        remove_class_from_item_when_user_clicks_outside_of_item(
+            btn,
+            btn,
+            mouseEvent,
+            'div-is-visible'
+        );
+    });
+}
+
 /**
  * Either open or close a dropdown list
  * @param {*} classname_of_list 

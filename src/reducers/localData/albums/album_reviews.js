@@ -23,6 +23,7 @@ import { review as GregIsakov_ThisEmptyNorthernHemisphere }	from './content/greg
 import { review as JesusMolina_Agape }					from './content/jesus_molina/agape/review.jsx';
 
 import { review as LucreciaDalt_Syzygy }				from './content/lucrecia_dalt/syzygy/review.jsx';
+import { review as LinkinPark_HybridTheory }			from './content/linkin_park/hybrid_theory/review.jsx';
 
 import { review as Nanoray_Digimaiden }					from './content/nanoray/digimaiden/review.jsx';
 
@@ -2557,8 +2558,8 @@ const database = {
 			genres: "Nu metal",
 			tags: ["Old favourite"],
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/cc15ebc58ec625979776cabaaaa282fa.jpg#cc15ebc58ec625979776cabaaaa282fa",
-			my_rating: 10.0,
-			my_review: "",
+			my_rating: 9.5,
+			my_review: ReactDomServer.renderToString(LinkinPark_HybridTheory()),
 		},	
 		"linkin_park__a_thousand_suns": {
 			lastfm_url: "https://www.last.fm/music/Linkin+Park/A+Thousand+Suns",
@@ -3860,6 +3861,17 @@ const database = {
 		},
 
 
+		"soley mother melancholia": {
+			lastfm_url: "https://www.last.fm/music/S%C3%B3ley/Mother+Melancholia",
+			rym_url: "https://rateyourmusic.com/release/album/soley/mother-melancholia/",
+			spotify_url: "https://rateyourmusic.com/release/album/soley/mother-melancholia/",
+			year_of_release: "2021",
+			year_of_discovery: "2023",
+			genres: "Dark ambient; Ambient pop; Art pop",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
 		"snarky puppy immigrance": {
 			lastfm_url: "https://www.last.fm/music/Snarky+Puppy/Immigrance",
 			rym_url: "https://rateyourmusic.com/release/album/snarky-puppy/immigrance/",

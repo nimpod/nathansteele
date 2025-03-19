@@ -3373,7 +3373,7 @@ div.btn.filter-list-by-album-property > .item-text {
 #top-albums-list-sidebar .albums-filterBtnsContainer:active {
   background-color: var(--topAlbumsList-topLevelfilterBtn-bg-color-hover);
 }
-#top-albums-list-sidebar .albums-filterBtnsContainer:hover .albums-filterBtns {
+#top-albums-list-sidebar .albums-filterBtnsContainer .albums-filterBtns.visible {
   display: block;
   position: absolute;
   margin-left: calc(var(--filters-section-width) + 1px);
@@ -3392,6 +3392,7 @@ div.btn.filter-list-by-album-property > .item-text {
 
 #top-albums-list-sidebar .albums-filterBtnsContainer p.current-filter {
   color: var(--text);
+  user-select: none;
   margin: 0 auto;
   font-size: 0.9rem;
 }
@@ -3706,7 +3707,7 @@ div.albumMoreInfo p::after {
     display: none;
   }
 
-  div.albumName {
+  #top-albums-list.view-as-grid div.albumName {
     display: flex;
     flex-direction: row;
   }
@@ -4997,8 +4998,68 @@ div.albumInfoContainer > div.myRating {
     grid-template-columns: 100%;
   }
   .top-albums-list-innerContainer #top-albums-list-sidebar {
+    
+  }
+  #top-albums-list-sidebar #top-albums-filtering-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #top-albums-list-sidebar .sidebar-subsection-title {
     display: none;
   }
+  #top-albums-list-sidebar #top-albums-list-navigation {
+
+  }
+  #top-albums-list-sidebar .albums-filterBtnsContainer {
+    margin-right: 4px;
+    padding: 7px 10px;
+  }
+  #top-albums-list-sidebar .albums-filterBtnsContainer p.current-filter {
+    font-size: 0.75rem;
+  }
+  #top-albums-list-sidebar .albums-filterBtnsContainer .albums-filterBtns.visible {
+    margin-left: 0px;
+    margin-top: 30px;
+    left: 0 !important;
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+
+    height: fit-content;
+    max-height: 55%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: auto;
+    scrollbar-color: rgb(17, 198, 126) rgb(108, 112, 114);
+  }
+  #top-albums-list-sidebar div.btn.filter-list-by-album-property {
+    font-size: 0.7rem;
+    margin: 0 3px;
+    border-radius: 4px;
+    padding: 0 3px;
+  }
+
+  #music-page .top-albums-list.view-as-list {
+    grid-template-columns: 1fr;
+  }
+
+  #top-albums-list-navigation {
+    margin-bottom: 0;
+    grid-column-gap: 0;
+    grid-template-columns: repeat(10, 10%);
+  }
+  #top-albums-list-navigation .navItem {
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  #top-albums-list-header .page-title {
+    display: none;
+  }
+
+
   /* #endregion */
 
   /* #region --------------------< Music page - review >------------------- */
@@ -5094,9 +5155,9 @@ div.albumInfoContainer > div.myRating {
 
 
 /* albums list grid view as screen gets smaller... */
-@media screen and (max-width: 900px) { #music-page .top-albums-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-@media screen and (max-width: 500px) { #music-page .top-albums-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media screen and (max-width: 400px) { #music-page .top-albums-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media screen and (max-width: 900px) { #music-page .top-albums-list.view-as-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media screen and (max-width: 500px) { #music-page .top-albums-list.view-as-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media screen and (max-width: 400px) { #music-page .top-albums-list.view-as-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 
 /* bigger than mobile but smaller than pc */
