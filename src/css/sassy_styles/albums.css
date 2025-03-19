@@ -75,9 +75,9 @@
   padding: 0;
   background-color: transparent;
 }
-.top-albums-list.view-as-list span.review-summary {
+.top-albums-list.view-as-list p.review-summary {
   color: var(--text) !important;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
 }
 .top-albums-list.view-as-list a {
   margin-bottom: 35px;

@@ -129,7 +129,7 @@ class AlbumListElement extends Component {
                         </div>
                     </div>
                 </div>
-                <span className='review-summary'>{review_summary}</span>
+                <p className='review-summary'>{review_summary}</p>
 
             </Link>
         )

@@ -132,7 +132,6 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
 
                     # get more data via LastFM API...
                     data = lastfm.GET_album_info(artist_name=artist_name_lastfm_version, album_name=album_name_lastfm_version)
-                    print(data)
                 except ConnectionError as err:
                     # I get the error message below when disconnected mid script... Wait for 60s in the hope that the connection is regained by then. Otherwise we loose all progress!
                     # HTTPSConnectionPool(host='ws.audioscrobbler.com', port=443): Max retries exceeded with url: /2.0/?method=album.getinfo&artist=ichiko_aoba&album=utabiko&api_key=641be1ed643c913edb609208c24efad7&format=json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000026587B7F890>: Failed to establish a new connection: [WinError 10065] A socket operation was attempted to an unreachable host'))
@@ -144,6 +143,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 
                 lastfm_url = ""
                 album_cover_url = ""
+                wiki_summary = ""
                 duration = 0    # mostly useless, lastfm rarely provides this statistic per album, I wish they did
                 tracks = []     # also useless, lastfm is shit when it comes to tracklists for albums, sometimes it's not there, sometimes the tracks are spelt wrong, not translated properly, etc...
 
@@ -162,6 +162,14 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                         print(album_cover_url)
                     else:
                         print('no album cover found :(')
+                    
+                    # get wiki summary...
+                    """
+                    if 'wiki' in data['album']:
+                        wiki_summary = data['album']['wiki']['summary']
+                    else:
+                        print('No wiki found :(')
+                    """
                 
                 # Annoying.... Sometimes Lastfm automatically gives me slightly different versions of artist names... This will have to do for now...
                 artist_name = fix_artist_name_to_make_filtering_easier_in_javascript_world(artist_name=artist_name)

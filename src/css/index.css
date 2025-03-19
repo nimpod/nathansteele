@@ -4534,6 +4534,19 @@ div.albumInfoContainer > div.myRating {
   */
   /* #endregion */
   
+  /* #region --------------------< Landing Page >-------------------- */
+
+  .landingpage-intro {
+    top: 10%;
+    left: 10%;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* #endregion */
+
   /* #region --------------------< About me >-------------------- */
   
   /* make aboutme page look normal on mobile */
@@ -4969,7 +4982,9 @@ div.albumInfoContainer > div.myRating {
     display: block;
   }
   #filtered-albums-list-info {
+    /*
     display: none !important;
+    */
   }
 
   #music-page .section-inner {
@@ -5055,8 +5070,24 @@ div.albumInfoContainer > div.myRating {
     margin-bottom: 0;
   }
 
-  #top-albums-list-header .page-title {
-    display: none;
+  .top-albums-list-header .page-title {
+
+  }
+
+  #top-albums-list-sidebar div.searchbox {
+    height: 25px;
+  }
+  #top-albums-list-sidebar div.searchbox input {
+    margin-top: 0;
+  }
+
+  .top-albums-list.view-as-list p.review-summary {
+    color: var(--text) !important;
+    font-size: 0.6rem;
+  }
+
+  .top-albums-list.view-as-list a {
+    margin-bottom: 5px;
   }
 
 
@@ -5325,7 +5356,7 @@ div.albumInfoContainer > div.myRating {
 
 @media screen and (max-width: 900px) { .my-custom-grid-container { padding: 0px 5px; } }
 
-@media screen and (max-width: 700px) { .page-title{ font-size: 1.1rem !important; } }
+@media screen and (max-width: 700px) { .page-title{ font-size: 0.8rem !important; } }
 
 
 /* remove padding from a blog post as screen gets smaller */
