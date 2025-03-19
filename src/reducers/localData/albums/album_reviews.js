@@ -18,6 +18,7 @@ import { review as BoC_Random35TracksTape } 			from './content/boards_of_canada/
 import { review as ChisatoYamada_SuiteNihonkai } 		from './content/chisato_yamada/suite_nihonkai/review.jsx';
 
 import { review as GlobalCommunication_7614 }			from './content/global_communication/7614/review.jsx';
+import { review as GregIsakov_ThisEmptyNorthernHemisphere }	from './content/greg_isakov/this_empty_northern_hemisphere/review.jsx';
 
 import { review as JesusMolina_Agape }					from './content/jesus_molina/agape/review.jsx';
 
@@ -28,11 +29,15 @@ import { review as Nanoray_Digimaiden }					from './content/nanoray/digimaiden/r
 import { review as Poppy_Eat }							from './content/poppy/eat/review.jsx';
 import { review as Poppy_IDisagree }					from './content/poppy/i_disagree/review.jsx';
 
+import { review as Xtc_Skylarking } 					from './content/xtc/skylarking/review.jsx';
+import { review as Xtc_Mummer } 						from './content/xtc/mummer/review.jsx';
+
 import { review as Yes_FlyFromHere } 					from './content/yes/fly_from_here/review.jsx';
 // my_review: ReactDomServer.renderToString(Jesus_Molina__Agape__Review()),
 
 
-// [NOTE]: Ctrl+k, Ctrl+0 will close all variables... Very handy shortcut for this particular file!
+// [VSCode]: Ctrl+k, Ctrl+0 will close all sections...
+// [Sublime]: Ctrl+k, Ctrl+1 will close all sections...
 
 const custom_covers = {
     Yes__Fly_From_Here:								"https://s3.eu-west-2.amazonaws.com/nathansteele.com/music/Yes__Fly_From_Here/custom_album_cover.jpg",
@@ -51,6 +56,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/808+State/Don+Solaris",
 			rym_url: "https://rateyourmusic.com/release/album/808-state/don-solaris/",
 			spotify_url: "https://open.spotify.com/album/5cfkvzD1MzHt03tXPOolEZ?si=AUhSN6DKR2S0evFY71kTfQ",
+			discogs: "https://www.discogs.com/release/162439-808state-Don-Solaris",
 			year_of_release: "1996",
 			year_of_discovery: "2023",
 			genres: "Acid house; Drum and bass; Trip hop; Jungle; Breakbeat; Electronic",
@@ -62,6 +68,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/808+State/Ninety",
 			rym_url: "https://rateyourmusic.com/release/album/808-state/90/",
 			spotify_url: "https://open.spotify.com/album/1Wn9vV02wDeOvMJkaXfQJM?si=AC4luxVvRYmBb_AJJtGOvg",
+			discogs: "https://www.discogs.com/release/3497-808-State-Ninety",
 			year_of_release: "1989",
 			year_of_discovery: "2023",
 			genres: "Breakbeat; Techno; Acid house; Acid techno; Rave; Electronic",
@@ -85,6 +92,7 @@ const database = {
 			rym_url: "https://rateyourmusic.com/release/album/4hero/two-pages/",
 			spotify_url: "https://open.spotify.com/album/5k4w88bM5Ldvwhu9zDcKhM?si=tOiJODopRlOwcjOFLrqN8A",
 			custom_cover_url: "https://i.scdn.co/image/ab67616d0000b27321d99b4c2770a2e68c84e8e8",
+			discogs: "https://www.discogs.com/release/88106-4-Hero-Two-Pages",
 			year_of_release: "1998",
 			year_of_discovery: "2023",
 			genres: "Jazz; Drum and bass; Nu jazz; Breakbeat; Electronic",
@@ -95,6 +103,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/311/Music",
 			rym_url: "https://rateyourmusic.com/release/album/311/music/",
 			spotify_url: "https://open.spotify.com/album/4MCopKPStHNf57HclK4Ds6?si=vhdoC0QeQfqI1vcfkpLYQQ",
+			discogs: "https://www.discogs.com/release/3601129-311-Music",
 			year_of_release: "1993",
 			year_of_discovery: "2024",
 			genres: "Rap rock; Alternative rock; Funk rock; Reggae rock; Reggae; Funk metal; Nu metal",
@@ -315,6 +324,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Andreas+Vollenweider/Down+to+the+Moon",
 			rym_url: "https://rateyourmusic.com/release/album/andreas-vollenweider/down-to-the-moon/",
 			spotify_url: "https://open.spotify.com/album/2DM9WPZiokvkAm4Y7xqXjF?si=8H3b6UPJSAuszhCCIiX5Gg",
+			discogs: "https://www.discogs.com/release/224642-Andreas-Vollenweider-Down-To-The-Moon",
 			year_of_release: "1986",
 			year_of_discovery: "2023",
 			genres: "New age; Ambient; Progressive pop; Electronic",
@@ -1653,7 +1663,7 @@ const database = {
 			year_of_discovery: "2024",
 			genres: "Indie folk; Americana; Country",
 			my_rating: 8.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(GregIsakov_ThisEmptyNorthernHemisphere()),
 			recommended_by: TrustworthyMusicReviewers.ABBOT
 		},
 		"global_communication__7614": {
@@ -2394,6 +2404,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/KIYO%EF%BC%8ASEN/Trick+or+Treat",
 			rym_url: "https://rateyourmusic.com/release/album/kiyo_sen/trick-or-treat/",
 			spotify_url: "https://open.spotify.com/album/0uiDE56P3BsCclvh53bNpU?si=zPbxIjRYRsWYV3Do5_bjQw",
+			discogs: "https://www.discogs.com/release/10104177-KiyoSen-Trick-Or-Treat",
 			year_of_release: "2017",
 			year_of_discovery: "2024",
 			genres: "Jazz fusion; Jazz; Progressive rock",
@@ -3385,7 +3396,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Plantoid/Terrapath",
 			rym_url: "https://rateyourmusic.com/release/album/plantoid/terrapath/",
 			spotify_url: "https://open.spotify.com/album/5cwz5vi4rPL0nErSTrdn6z?si=YQyPH88-RByI96bYEkSEfA",
-			year_of_release: "2023",
+			year_of_release: "2024",
 			year_of_discovery: "2024",
 			genres: "Progressive rock; Psychedelic rock; Jazz rock; Space rock",
 			my_rating: 8.5,
@@ -4408,7 +4419,7 @@ const database = {
 			year_of_discovery: "2013",
 			genres: "New wave; Psychedelic pop; Baroque pop; Art pop; Art rock; Chamber pop",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Xtc_Skylarking()),
 		},	
 		"xtc__mummer": {
 			lastfm_url: "https://www.last.fm/music/XTC/Mummer",
@@ -4419,7 +4430,7 @@ const database = {
 			my_rating: 10.0,
 			custom_cover_url: "https://beatopolis.files.wordpress.com/2019/01/xtc-1.jpg?w=640",
 			year_of_discovery: "2013",
-			my_review: ""
+			my_review: ReactDomServer.renderToString(Xtc_Mummer())
 		},
 		"xtc__chips_from_the_chocolate_fireball": {
 			lastfm_url: "https://www.last.fm/music/The+Dukes+Of+Stratosphear/Chips+From+The+Chocolate+Fireball",
@@ -4566,11 +4577,11 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Yu+Miyake/Katamari+Damacy+Soundtrack+%22Katamari+Fortissimo+Damacy%22",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B8%89%E5%AE%85%E5%84%AA/%E5%A1%8A%E9%AD%82%E3%80%8C%E5%A1%8A%E3%83%95%E3%82%A9%E3%83%AB%E3%83%86%E3%83%83%E3%82%B7%E3%83%A2%E9%AD%82%E3%80%8D/",
 			youtube_url: "https://www.youtube.com/watch?v=QAA6hq9RL-4&t=16s&pp=ygUleXVfbWlrYXllX19rYXRhbWFyaV9kYW1hY3lfc291bmR0cmFjaw%3D%3D",
+			spotify_url: "https://open.spotify.com/album/7KHPyc1crwPfCZekggfw77",
 			year_of_release: "2004",
 			year_of_discovery: "2021",
 			genres: "Video game soundtrack; J-pop; Shibuya-kei; Synthpop; Jazz pop; Salsa; Funk",
-			tags: ["Not on spotify"],
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 		"yuriko__nakamura__wind_and_reflections": {

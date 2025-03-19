@@ -1,9 +1,10 @@
 1) Apply <a> links appropriately to the related text but do NOT use href="#".
 2) Do NOT use <ul> tags.
 3) Do NOT encapsulate track references around <a>. Instead, wrap them in <strong>.
-4) Keep embedded YouTube videos inside <div className="review-main"> and on a single line. Do NOT put the youtube video inside another internal div container!
-5) Do NOT modify any comment sections.
-6) Remove any headings that you created at the beginning of each <div> block.
-7) Remove and <br> tags that you inserted into the code.
-8) Return ONLY the JSX code without explanations.
-9) Finally, remove the ''' from the beginning and end of the JSX code
+4) Do NOT put the youtube video inside <div className="youtube-video">. Keep embedded YouTube videos inside <div className="review-main"> and on a single line.
+5) Remove any headings that you created at the beginning of each <div> block.
+6) In the tracklist section, if the "rating" value is "interlude", please do NOT change it to 0. Keep it as "interlude".
+7) Ammend any spelling, grammar, punctuation mistakes.
+8) Do NOT modify any comment sections.
+9) Return ONLY the JSX code without explanations.
+10) Finally, remove the ''' from the beginning and end of the JSX code

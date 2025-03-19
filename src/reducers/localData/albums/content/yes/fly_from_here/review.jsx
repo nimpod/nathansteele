@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateTracklistComponent from '../../../TemplateTracklistComponent.jsx';
+import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 const tracklist = [
     { "rating": 10, "title": "Fly From Here: Overture" },
     { "rating": 11, "title": "Fly From Here, Part I: We Can Fly" },

@@ -2054,10 +2054,10 @@
     {
         "position": 229,
         "position_str": "229",
-        "lastfm_url": "https://www.last.fm/music/KIYO+SEN/Trick+Or+Treat",
-        "artist_name": "KIYO SEN",
+        "lastfm_url": "https://www.last.fm/music/KIYO%EF%BC%8ASEN/Trick+or+Treat",
+        "artist_name": "KIYO * SEN",
         "album_name": "Trick or Treat",
-        "album_cover_url": "",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/ec8bc71f539f2ccc0865f48ab1f7fa2e.jpg",
         "review_id": "kiyo_sen-trick_or_treat"
     },
     {
@@ -5567,7 +5567,7 @@
         "lastfm_url": "https://www.last.fm/music/Paramore/Paramore",
         "artist_name": "Paramore",
         "album_name": "Paramore",
-        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/919a1916404a2777163ed83f0057f9cb.jpg",
+        "album_cover_url": "https://lastfm.freetls.fastly.net/i/u/300x300/25864d55be7c4e619ce08356dc41a9d5.png",
         "review_id": "paramore-paramore"
     },
     {

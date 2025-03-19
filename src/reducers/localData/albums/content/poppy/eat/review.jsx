@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateTracklistComponent from '../../../TemplateTracklistComponent.jsx';
+import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 const tracklist = [
     { "rating": 11, "title": "EAT" },
     { "rating": 11, "title": "Say Cheese" },
@@ -17,7 +17,7 @@ export const review = () => (
                 Absolute maximalist alt-metal vibes.
                 Certainly one of the most exciting prospects in alt-metal today.
                 Very memorable despite it's short runtime.
-                I really hope Poppy continue with this sound in future albums. What she created here in just 14 minutes is phenomenal and far more memorable and aggressive than most alt-metal albums out there.
+                I really hope Poppy continues with this sound in future albums. What she created here in just 14 minutes is phenomenal and far more memorable and aggressive than most alt-metal albums out there.
             </p>
         </div>
 

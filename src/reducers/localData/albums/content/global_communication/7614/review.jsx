@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateTracklistComponent from '../../../TemplateTracklistComponent.jsx';
+import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
     { "rating": 11, "title": "4:02" },

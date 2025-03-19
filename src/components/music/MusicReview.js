@@ -129,26 +129,8 @@ class MusicReview extends React.Component {
                                     
                                     {/* Year */}
                                     <div className='year-of-release album-info-item' title="Year this album was released">
-                                        <span>Year of release: </span>
+                                        <span>Year: </span>
                                         <span>{this.props.album_data.year_of_release}</span>
-                                    </div>
-
-                                    {/* Year of discovery */}
-                                    <div className='year-of-discovery album-info-item' title={`The approximate year that I started listening to this album`}>
-                                        <span>Year of discovery: </span>
-                                        <span>{year_of_discovery}</span>
-                                    </div>
-
-                                    {/* My rating */}
-                                    <div className={`my-rating album-info-item`}>
-                                        <span>Rating: </span>
-                                        <span className={`r${my_rating_nodp}`}>{this.props.album_data.my_rating}</span>
-                                    </div>
-
-                                    {/* Scrobbles */}
-                                    <div className='scrobbles album-info-item' title={`A scrobble is a play count. I have ${scrobbles} scrobbles for this particular album.`}>
-                                        <span>Scrobbles: </span>
-                                        <span>{scrobbles} <span>(#{scrobbles_pos})</span></span>
                                     </div>
 
                                     {/* Genres */}
@@ -160,6 +142,24 @@ class MusicReview extends React.Component {
                                                 {g}
                                             </span>
                                         })}
+                                    </div>
+
+                                    {/* My rating */}
+                                    <div className={`my-rating album-info-item`}>
+                                        <span>Rating: </span>
+                                        <span className={`myRating r${this.props.album_data.my_rating_nodp}`}>{this.props.album_data.my_rating}</span>
+                                    </div>
+
+                                    {/* Year of discovery */}
+                                    <div className='year-of-discovery album-info-item' title={`The approximate year that I started listening to this album`}>
+                                        <span>Discovered in: </span>
+                                        <span>{year_of_discovery}</span>
+                                    </div>
+
+                                    {/* Scrobbles */}
+                                    <div className='scrobbles album-info-item' title={`A scrobble is a play count. I have ${scrobbles} scrobbles for this particular album.`}>
+                                        <span>Scrobbles: </span>
+                                        <span>{scrobbles} <span>(#{scrobbles_pos})</span></span>
                                     </div>
 
                                     {/* Reviewer who recommened it to me */}

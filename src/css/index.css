@@ -2922,9 +2922,10 @@ div.btn.films-reset-filters-btn svg {
   --my-rating-colour-r10: linear-gradient(100deg, rgb(17, 137, 91), rgb(82, 127, 30), rgb(45, 83, 26));
   --my-rating-colour-r95: linear-gradient(100deg, rgb(159, 124, 240), rgb(179, 80, 216), rgb(212, 30, 187));
   --my-rating-colour-r9: linear-gradient(100deg, rgb(85, 198, 246), rgb(71, 150, 193), rgb(41, 101, 190));
-  --my-rating-colour-r85: linear-gradient(100deg, rgb(218, 211, 95), rgb(104, 113, 19), rgb(111, 106, 13));
+  --my-rating-colour-r85: linear-gradient(100deg, rgb(136, 149, 43), rgb(104, 113, 25), rgb(96, 90, 11));
   --my-rating-colour-r8: linear-gradient(100deg, rgb(248, 165, 106), rgb(154, 82, 18), rgb(128, 81, 21));
   --my-rating-colour-r75: linear-gradient(100deg, rgb(119, 119, 119), rgb(176, 178, 177), rgb(143, 143, 143));
+  --my-rating-colour-r7: linear-gradient(100deg, rgb(119, 119, 119), rgb(176, 178, 177), rgb(143, 143, 143));
 
   --my-rating-textColour-r10: rgb(59, 205, 46);
   --my-rating-textColour-r95: rgb(142, 253, 214);
@@ -2937,6 +2938,7 @@ div.btn.films-reset-filters-btn svg {
 }
 
 /* My rating */
+/*
 .review-displayed .myRating {
   font-size: 1.4rem;
   border-radius: 100%;
@@ -2945,9 +2947,6 @@ div.btn.films-reset-filters-btn svg {
   text-align: center;
   padding-top: 17px;
   opacity: 0.9;
-  /*
-  position: absolute;
-  */
   color: rgb(255, 255, 255);
   font-weight: bold;
   cursor: pointer;
@@ -2956,19 +2955,23 @@ div.btn.films-reset-filters-btn svg {
 .review-displayed .myRating:hover {
   filter: brightness(1.2);
 }
+*/
 .myRating.r100 { background: var(--my-rating-colour-r10); }
 .myRating.r95 { background: var(--my-rating-colour-r95); }
 .myRating.r90 { background: var(--my-rating-colour-r9); }
 .myRating.r85 { background: var(--my-rating-colour-r85); }
 .myRating.r80 { background: var(--my-rating-colour-r8); }
 .myRating.r75 { background: var(--my-rating-colour-r75); }
+.myRating.r7 { background: var(--my-rating-colour-r7); }
 
+/*
 .my-rating span.r100 { color: var(--my-rating-textColour-r10); }
 .my-rating span.r95 { color: var(--my-rating-textColour-r95); }
 .my-rating span.r90 { color: var(--my-rating-textColour-r9); }
 .my-rating span.r85 { color: var(--my-rating-textColour-r85); }
 .my-rating span.r80 { color: var(--my-rating-textColour-r8); }
 .my-rating span.r75 { color: var(--my-rating-textColour-r75); }
+*/
 
 .film-details-myData {
   display: flex;
@@ -4191,6 +4194,7 @@ div.albumInfoContainer > div.myRating {
 .review-fullTracklist .track-item.r10 .track-myRating { background-color: rgb(21, 119, 74);  }
 .review-fullTracklist .track-item.r9 .track-myRating { background-color: rgb(24, 153, 121);  }
 .review-fullTracklist .track-item.r8 .track-myRating { background-color: rgb(51, 127, 177);  }
+.review-fullTracklist .track-item.r7 .track-myRating { background-color: rgba(59, 84, 100, 0.814); }
 .review-fullTracklist .track-item.rinterlude .track-myRating { 
   background-color: rgba(78, 78, 78, 0.354);
   font-size: 0.6rem;
@@ -5021,7 +5025,9 @@ div.albumInfoContainer > div.myRating {
     padding: 5px;
   }
   .album-review .album-cover-container img {
-    width: 100%;
+    width: 92%;
+    padding-top: 10px;
+    margin: 0 auto;
     border-radius: 0px;
   }
   .album-header > * {
@@ -5034,10 +5040,13 @@ div.albumInfoContainer > div.myRating {
   }
   .review-fullTracklist .track-item,
   .review-fullTracklist .tracklist-header { 
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 7% 73% 20%;
+  }
+  .review-fullTracklist .track-item span {
+    font-size: 0.65rem;
   }
   .album-info > .album-name {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .album-info > .artist-name {
     font-size: 1.0rem;
@@ -5062,6 +5071,24 @@ div.albumInfoContainer > div.myRating {
   .list-of-tags > span {
     margin-bottom: 2px;
   }
+
+  .album-review .genre-tag {
+    padding: 1px;
+    margin-right: 3px;
+  }
+
+  .album-review .artist-name {
+    margin-bottom: 10px;
+  }
+
+  .album-info-item > span:not(.genre-tag) {
+    font-size: 0.65rem;
+  }
+
+  .album-info-item span:nth-child(1) {
+    right: 10px;
+  }
+
   /* #endregion */
 }
 

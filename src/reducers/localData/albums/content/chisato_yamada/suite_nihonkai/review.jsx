@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateTracklistComponent from '../../../TemplateTracklistComponent.jsx';
+import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 const tracklist = [
     { "rating": 8, "title": "The First Movement (Ferry To Shamisen) 第一楽章 （渡来三味)" },
     { "rating": 9, "title": "The Second Movement (Echizen Flow Nodes)] 第二楽章 （越前流れ節" },

@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateTracklistComponent from '../../../TemplateTracklistComponent.jsx';
+import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
     { "rating": 8, "title": "Wildlife Analysis" },
@@ -29,13 +29,6 @@ export const review = () => (
                     </span>
                 })}
             </div>
-        </div>
-        
-        {/* Objective introduction to the artist, and objective context around this album */}
-        <div className="review-artistIntro">
-            <p>
-                blah blah blah
-            </p>
         </div>
             
         {/* Main section of the review, overview of what I like and dislike about the album */}
