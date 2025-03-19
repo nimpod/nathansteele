@@ -22,7 +22,7 @@ I would like you to do the following 5 tasks whilst iterating the HTML content:
 Can you combine the first 3 div blocks, and then reconfgigure the ID's of all subsequent div blocks?
 """
 
-API_KEY = "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";
+API_KEY = ""
 client = OpenAI(api_key=API_KEY)
 
 completion = client.chat.completions.create(
