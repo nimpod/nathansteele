@@ -38,11 +38,19 @@ const MIN_YEAR_COUNT_TO_BE_DISPLAYED = 2;
 const NAVIGATION_GAP = 25;
 const NAVIGATION_MAX = 650;
 
+const DEFAULT_FILTERS = {
+    "artist": "All artists",
+    "genre": "All genres",
+    "year": "All years",
+    "reviewer": "All reviewers"
+}
+
 // if local storage values are empty, set default values...
 if (localStorage.getItem(LocalStorageAlbums.VIEW_TYPE) == undefined) {
     console.log(localStorage.getItem(LocalStorageAlbums.VIEW_TYPE));
     localStorage.setItem(LocalStorageAlbums.VIEW_TYPE, ViewType.GRID);
 }
+
 
 let vars = {
     grid: {
@@ -69,10 +77,10 @@ class Music extends Component {
         __ypos: localStorage.getItem(LocalStorageAlbums.YPOS),
 
         // filters...
-        __current_genre_filter: "All genres",
-        __current_artist_filter: "All artists",
-        __current_year_filter: "All years",
-        __current_reviewer_filter: "All reviewers",
+        __current_genre_filter: DEFAULT_FILTERS.genre,
+        __current_artist_filter: DEFAULT_FILTERS.artist,
+        __current_year_filter: DEFAULT_FILTERS.year,
+        __current_reviewer_filter: DEFAULT_FILTERS.reviewer,
 
         // search stuff...
         __search_box_contains_text: false,
@@ -83,10 +91,10 @@ class Music extends Component {
         __view_type: localStorage.getItem(LocalStorageAlbums.VIEW_TYPE),
 
         // defaults...
-        __default_genre_filter: "All genres",
-        __default_artist_filter: "All artists",
-        __default_year_filter: "All years",
-        __default_reviewer_filter: "All reviewers",
+        __default_genre_filter: DEFAULT_FILTERS.genre,
+        __default_artist_filter: DEFAULT_FILTERS.artist,
+        __default_year_filter: DEFAULT_FILTERS.year,
+        __default_reviewer_filter: DEFAULT_FILTERS.reviewer,
     }
 
     /**
@@ -113,6 +121,11 @@ class Music extends Component {
             let play_count_div = track.children[2];
             play_count_div.style.backgroundColor = this.generate_colour_v1(play_count, highest_play_count);
         }
+
+        localStorage.setItem(LocalStorageAlbums.ARTIST_FILTER, DEFAULT_FILTERS.artist);
+        localStorage.setItem(LocalStorageAlbums.GENRE_FILTER, DEFAULT_FILTERS.genre);
+        localStorage.setItem(LocalStorageAlbums.YEAR_FILTER, DEFAULT_FILTERS.year);
+        localStorage.setItem(LocalStorageAlbums.REVIEWER_FILTER, DEFAULT_FILTERS.reviewer);
     }
     
     /**
@@ -333,10 +346,16 @@ class Music extends Component {
                     __filtered_data: Array.from(this.props.top_albums)
                         .filter((a) => {
                             if (genre_selected === this.state.__default_genre_filter) {
+                                // update local storage 
+                                localStorage.setItem(LocalStorageAlbums.GENRE_FILTER, this.state.__default_genre_filter);
+
                                 // show all albums...
                                 return true;
                             }
                             if (a.genres !== undefined && a.genres_lowercase !== undefined) {
+                                // update local storage
+                                localStorage.setItem(LocalStorageAlbums.GENRE_FILTER, genre_selected);
+
                                 // only show albums that contain the requested genre...
                                 return a.genres_lowercase.includes(genre_selected.toLowerCase());
                             }
@@ -913,9 +932,13 @@ class Music extends Component {
                                             <p className='current-filter'>{this.state.__current_artist_filter}</p>
                                             <div id='filter-by-artist-btns' className='albums-filterBtns'>
                                                 {
-                                                    all_artists_album_count.map((obj => {
+                                                    all_artists_album_count.map(((obj, i) => { 
+                                                        let active = "";
+                                                        if (i == 0) {
+                                                            active = "active";
+                                                        }
                                                         if (obj.count >= MIN_ARTIST_COUNT_TO_BE_DISPLAYED) {
-                                                            return <div className="btn filter-list-by-album-property filter-list-by-artist-btn" key={obj.item} onClick={(e) => this.filter_by_artist(e, obj.item)}>
+                                                            return <div className={`btn filter-list-by-album-property filter-list-by-artist-btn ${active}`} key={obj.item} onClick={(e) => this.filter_by_artist(e, obj.item)}>
                                                                 <span className='item-text'>{obj.item}</span>
                                                                 <span className='item-count'>{obj.count}</span>
                                                             </div>
@@ -930,9 +953,13 @@ class Music extends Component {
                                             <p className='current-filter'>{this.state.__current_genre_filter}</p>
                                             <div id='filter-by-genre-btns' className='albums-filterBtns'>
                                                 {
-                                                    all_genres_album_count.map((obj => {
+                                                    all_genres_album_count.map(((obj, i) => {
+                                                        let active = "";
+                                                        if (i == 0) {
+                                                            active = "active";
+                                                        }
                                                         if (obj.count >= MIN_GENRE_COUNT_TO_BE_DISPLAYED) {
-                                                            return <div className="btn filter-list-by-album-property filter-list-by-genre-btn" key={obj.item} onClick={(e) => this.filter_by_genre(e, obj.item)}>
+                                                            return <div className={`btn filter-list-by-album-property filter-list-by-genre-btn ${active}`} key={obj.item} onClick={(e) => this.filter_by_genre(e, obj.item)}>
                                                                 <span className='item-text'>{obj.item}</span>
                                                                 <span className='item-count'>{obj.count}</span>
                                                             </div>
@@ -947,9 +974,13 @@ class Music extends Component {
                                             <p className='current-filter'>{this.state.__current_year_filter}</p>
                                             <div id='filter-by-year-btns' className='albums-filterBtns'>
                                                 {
-                                                    all_years_album_count.map((obj => {
+                                                    all_years_album_count.map(((obj, i) => {
+                                                        let active = "";
+                                                        if (i == 0) {
+                                                            active = "active";
+                                                        }
                                                         if (obj.count >= MIN_YEAR_COUNT_TO_BE_DISPLAYED) {
-                                                            return <div className="btn filter-list-by-album-property filter-list-by-year-btn" key={obj.item} onClick={(e) => this.filter_by_year(e, obj.item)}>
+                                                            return <div className={`btn filter-list-by-album-property filter-list-by-year-btn ${active}`} key={obj.item} onClick={(e) => this.filter_by_year(e, obj.item)}>
                                                                 <span className='item-text'>{obj.item}</span>
                                                                 <span className='item-count'>{obj.count}</span>
                                                             </div>
@@ -964,11 +995,16 @@ class Music extends Component {
                                             <p className='current-filter'>{this.state.__current_reviewer_filter}</p>
                                             <div id='filter-by-Reviewer-btns' className='albums-filterBtns'>
                                                 {
-                                                    all_reviewers_album_count.map((obj => {
+                                                    all_reviewers_album_count.map(((obj, i) => {
                                                         // for the 'All artists' button
                                                         let artist_name = (obj.item.name !== undefined) ? obj.item.name : obj.item;
                                                         
-                                                        return <div className="btn filter-list-by-album-property filter-list-by-reviewer-btn" key={obj.item} onClick={(e) => this.filter_by_reviewer(e, obj.item)}>
+                                                        let active = "";
+                                                        if (i == 0) {
+                                                            active = "active";
+                                                        }
+
+                                                        return <div className={`btn filter-list-by-album-property filter-list-by-reviewer-btn ${active}`} key={obj.item} onClick={(e) => this.filter_by_reviewer(e, obj.item)}>
                                                                 <span className='item-text'>{artist_name}</span>
                                                                 <span className='item-count'>{obj.count}</span>
                                                             </div>

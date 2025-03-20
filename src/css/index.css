@@ -4977,15 +4977,6 @@ div.albumInfoContainer > div.myRating {
   .album-review-displayed {
     display: block;
   }
-  
-  .top-albums-list-header {
-    display: block;
-  }
-  #filtered-albums-list-info {
-    /*
-    display: none !important;
-    */
-  }
 
   #music-page .section-inner {
     padding: 0px;
@@ -5090,6 +5081,28 @@ div.albumInfoContainer > div.myRating {
     margin-bottom: 5px;
   }
 
+  .top-albums-list-header {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 20% 80%;
+  }
+  .top-albums-list-header {
+    display: block;
+  }
+  .top-albums-list-container.filters-active #filtered-albums-list-info {
+    font-size: 0.6rem;
+    border-radius: 0;
+  }
+  #filtered-albums-list-info p {
+    margin-right: 7px;
+  }
+
+
+
+  .top-albums-list.view-as-list img.albumCover {
+    padding-right: 5px;
+    min-width: 200px;
+    width: 15%;
+  }
 
   /* #endregion */
 
