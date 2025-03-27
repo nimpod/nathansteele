@@ -1,9 +1,6 @@
 import argparse
 import os
-
 from openai import OpenAI
-from dotenv import load_dotenv
-from pathlib import Path
 
 from Helpers import Helpers
 
@@ -31,13 +28,12 @@ review_dir = f'{albums}\\content\\{args.artist}\\{args.album}'
 txt = f'{review_dir}\\review.txt'
 
 # template jsx file...
-template_jsx_file = f'{albums}\\chatgpt\\template_jsx_file.jsx'
+template_jsx_file = f'./chatgpt/template_jsx_file.jsx'
 
 # rules for converting the .txt file into a .jsx file...
-rules_file = f'{albums}\\chatgpt\\rules.txt'
+rules_file = f'./chatgpt/rules.txt'
 
 
-print(f"- OpenAI API key = {API_KEY}")
 print(f"- Artist = {args.artist}")
 print(f"- Album = {args.album}")
 print(f"- '{review_dir}'")

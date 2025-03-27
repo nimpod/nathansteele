@@ -11,8 +11,8 @@ import time
 from LastFm import LastFM
 from LastFm import TIME_PERIOD_OPTIONS
 from musicbee_helpers import MusicbeeHelpers
-from Helpers import export_list_to_json
-from Helpers import append_list_to_existing_json
+
+from Helpers import Helpers
 
 from urllib3.exceptions import InsecurePlatformWarning, InsecureRequestWarning
 from urllib3 import disable_warnings
@@ -36,7 +36,8 @@ rootpath_laptop = f'C:\\dev'
 fullpath_to_json_output = f'{rootpath_laptop}\\nathansteele\\src\\components\\music\\{json_output_filename}'
 
 # create instance of my class that communicates with LastFM API...
-lastfm = LastFM(API_KEY='641be1ed643c913edb609208c24efad7', USERNAME='gutash')
+API_KEY = Helpers.get_api_key(name="LASTFM_API_KEY")
+lastfm = LastFM(API_KEY=API_KEY, USERNAME='gutash')
 
 
 def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
@@ -191,9 +192,9 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                 })
             
             if append:
-                append_list_to_existing_json(fullpath_to_json_output, albums_list)
+                Helpers.append_list_to_existing_json(fullpath_to_json_output, albums_list)
             else:
-                export_list_to_json(fullpath_to_json_output, albums_list)
+                Helpers.export_list_to_json(fullpath_to_json_output, albums_list)
 
 
 def album_name_doesnt_match_with_lastfm(folder_name, album_name):
