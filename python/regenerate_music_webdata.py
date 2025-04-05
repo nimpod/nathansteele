@@ -22,11 +22,6 @@ disable_warnings(InsecurePlatformWarning)
 disable_warnings(InsecureRequestWarning)
 
 
-# find the .m3u export...
-dir_export = f"C:\\Users\\{os.getlogin()}\\Downloads"
-musicbee_export_filename = 'FAVOURITE_ALBUMS.m3u'
-fullpath_to_musicbee_export = f"{dir_export}\\{musicbee_export_filename}"
-
 # define full path to json file...
 json_output_filename = 'webdata_top_albums_list.json'
 rootpath_home = f'D:\\Programming-Projects'
@@ -35,9 +30,16 @@ rootpath_laptop = f'C:\\dev'
 # fullpath_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\music\\{json_output_filename}'
 fullpath_to_json_output = f'{rootpath_laptop}\\nathansteele\\src\\components\\music\\{json_output_filename}'
 
+# find the .m3u export...
+musicbee_export_filename = 'FAVOURITE_ALBUMS.m3u'
+fullpath_to_musicbee_export = f'{rootpath_laptop}\\nathansteele\\python\\{musicbee_export_filename}'
+
 # create instance of my class that communicates with LastFM API...
 API_KEY = Helpers.get_api_key(name="LASTFM_API_KEY")
 lastfm = LastFM(API_KEY=API_KEY, USERNAME='gutash')
+
+if(API_KEY is None):
+    print('Something went wrong with getting the API key from .env.local.....')
 
 
 def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
@@ -133,6 +135,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
 
                     # get more data via LastFM API...
                     data = lastfm.GET_album_info(artist_name=artist_name_lastfm_version, album_name=album_name_lastfm_version)
+                    print(data)
                 except ConnectionError as err:
                     # I get the error message below when disconnected mid script... Wait for 60s in the hope that the connection is regained by then. Otherwise we loose all progress!
                     # HTTPSConnectionPool(host='ws.audioscrobbler.com', port=443): Max retries exceeded with url: /2.0/?method=album.getinfo&artist=ichiko_aoba&album=utabiko&api_key=641be1ed643c913edb609208c24efad7&format=json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000026587B7F890>: Failed to establish a new connection: [WinError 10065] A socket operation was attempted to an unreachable host'))
