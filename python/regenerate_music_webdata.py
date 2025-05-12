@@ -135,7 +135,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
 
                     # get more data via LastFM API...
                     data = lastfm.GET_album_info(artist_name=artist_name_lastfm_version, album_name=album_name_lastfm_version)
-                    print(data)
+                    #print(data)
                 except ConnectionError as err:
                     # I get the error message below when disconnected mid script... Wait for 60s in the hope that the connection is regained by then. Otherwise we loose all progress!
                     # HTTPSConnectionPool(host='ws.audioscrobbler.com', port=443): Max retries exceeded with url: /2.0/?method=album.getinfo&artist=ichiko_aoba&album=utabiko&api_key=641be1ed643c913edb609208c24efad7&format=json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000026587B7F890>: Failed to establish a new connection: [WinError 10065] A socket operation was attempted to an unreachable host'))

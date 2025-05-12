@@ -40,7 +40,7 @@ export const review = () => (
         
         <div className="review-artistIntro">
             <p>
-                Greg Isakov is an indie folk artist from South Africa. This album was his 4th album.
+                Greg Isakov is an indie folk artist from South Africa. This Empty Northern Hemisphere (TENH) was his 4th album.
             </p>
         </div>
             

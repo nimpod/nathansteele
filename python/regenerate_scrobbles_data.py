@@ -1,7 +1,7 @@
 from LastFm import LastFM
 from LastFm import TIME_PERIOD_OPTIONS
 from musicbee_helpers import MusicbeeHelpers
-from Helpers import export_list_to_json
+from Helpers import Helpers
 
 # create instance of my class that communicates with LastFM API...
 lastfm = LastFM(API_KEY='641be1ed643c913edb609208c24efad7', USERNAME='gutash')
@@ -89,7 +89,7 @@ def get_top_tracks_all_data(limit=10):
     }
     
     # export all data to individual json files...
-    export_list_to_json(top_tracks_json_output, all_data)
+    Helpers.export_list_to_json(top_tracks_json_output, all_data)
 
 
 def get_top_albums(period=TIME_PERIOD_OPTIONS.ALL_TIME, limit=10):
@@ -140,7 +140,7 @@ def get_top_albums(period=TIME_PERIOD_OPTIONS.ALL_TIME, limit=10):
 
 def get_top_albums_all_data(limit=10):
     albums = get_top_albums(limit=limit)
-    export_list_to_json(top_albums_json_output, albums)
+    Helpers.export_list_to_json(top_albums_json_output, albums)
 
 
 ##### GET TOP TRACKS...

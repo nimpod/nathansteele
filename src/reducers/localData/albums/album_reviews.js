@@ -2198,7 +2198,7 @@ const database = {
 		"jason_isbell__weathervanes": {
 			lastfm_url: "https://www.last.fm/music/Jason+Isbell+and+The+400+Unit/Weathervanes",
 			rym_url: "https://rateyourmusic.com/release/album/jason-isbell-and-the-400-unit/weathervanes/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/3KXHIwkGCHTjFmuYeBNXtc",
 			year_of_release: "2023",
 			year_of_discovery: "2024",
 			genres: "Country; Americana; Indie folk",
@@ -2751,6 +2751,17 @@ const database = {
 		},
 
 
+		"Monolake - Cinemascope": {
+			lastfm_url: "https://www.last.fm/music/Monolake/Cinemascope",
+			rym_url: "https://rateyourmusic.com/release/album/monolake/cinemascope/",
+			spotify_url: "https://open.spotify.com/album/3KXHIwkGCHTjFmuYeBNXtc",
+			year_of_release: "2001",
+			year_of_discovery: "2025",
+			date_of_discovery: "01/04/2025",
+			genres: "Ambient techno; IDM; Dub techno; Minimal techno; Techno; Ambient",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"Moses Yoofee Trio - MYT": {
 			lastfm_url: "https://www.last.fm/music/Moses+Yoofee+Trio/MYT",
 			rym_url: "https://rateyourmusic.com/release/album/moses-yoofee-trio/myt/",
@@ -3861,10 +3872,22 @@ const database = {
 		},
 
 
+		"sea oleena weaving a basket": {
+			lastfm_url: "https://www.last.fm/music/Sea+Oleena/Weaving+a+Basket",
+			rym_url: "https://rateyourmusic.com/release/album/sea-oleena/weaving-a-basket/",
+			spotify_url: "https://open.spotify.com/album/6y7B7Ovp6v6X7hNRBw1mg5",
+			year_of_release: "2020",
+			year_of_discovery: "2025",
+			date_of_discovery: "01/05/2025",
+			genres: "Psychedelic folk; Ambient; Ambient pop; Dream pop",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
 		"soley mother melancholia": {
 			lastfm_url: "https://www.last.fm/music/S%C3%B3ley/Mother+Melancholia",
 			rym_url: "https://rateyourmusic.com/release/album/soley/mother-melancholia/",
-			spotify_url: "https://rateyourmusic.com/release/album/soley/mother-melancholia/",
+			spotify_url: "https://open.spotify.com/album/6y7B7Ovp6v6X7hNRBw1mg5",
 			year_of_release: "2021",
 			year_of_discovery: "2023",
 			genres: "Dark ambient; Ambient pop; Art pop",
