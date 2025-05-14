@@ -1466,22 +1466,30 @@ div.blog-post
 :root {
   --border-col: rgb(73, 73, 86);
   --track-info-header-bg-color: rgb(37, 37, 44);
-  --track-info-scrobbles-bg-color-1: rgb(41, 44, 49);
-  --track-info-scrobbles-bg-color-2: rgb(91, 95, 101);
+  --track-info-scrobbles-bg-color-1: rgb(36, 39, 44);
+  --track-info-scrobbles-bg-color-2: rgb(76, 80, 87);
 }
 
 .blog-post .top-songs-EOY table {
   color: var(--text-darker);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-align: center;
+  border-bottom: 1px solid var(--border-col);
 }
 .blog-post .top-songs-EOY table th {
   text-align: center;
 }
+.blog-post .top-songs-EOY table th:nth-child(1), .blog-post .top-songs-EOY table tr > td:nth-child(1) { width: 6%; }
+.blog-post .top-songs-EOY table th:nth-child(4), .blog-post .top-songs-EOY table tr > td:nth-child(4) { width: 12%; }
+.blog-post .top-songs-EOY table th:nth-child(6), .blog-post .top-songs-EOY table tr > td:nth-child(6) { width: 15%; }
+
 .blog-post .top-songs-EOY table {
   margin: 10px 0 !important;
 }
-
+.blog-post .top-songs-EOY table .td-inner {
+  background: linear-gradient(to right, var(--track-info-scrobbles-bg-color-1), var(--track-info-scrobbles-bg-color-2));
+  text-align: left;
+}
 
 .blog-post .track-artist-and-title {
   padding-left: 8px;
@@ -1502,7 +1510,7 @@ div.blog-post
 
 .blog-post div.track-info-header {
   display: grid;
-  grid-template-columns: 4% 56% 40%;
+  grid-template-columns: 6% 54% 40%;
   background-color: var(--track-info-header-bg-color);
   color: var(--text);
 
@@ -1512,6 +1520,7 @@ div.blog-post
   padding: 0 6px;
   border-radius: 4px;
   margin-top: 40px;
+  font-size: 1.1rem;
 }
 .blog-post div.track-info-header > div {
   /*
@@ -1524,6 +1533,11 @@ div.blog-post
 }
 .blog-post .track-pos {
   text-align: center;
+}
+.blog-post .track-pos::before {
+  content: "#";
+  font-size: 0.9rem;
+  color: var(--text-darker);
 }
 .blog-post .track-scrobbles {
 }

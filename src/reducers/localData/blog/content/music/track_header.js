@@ -1,11 +1,7 @@
 import React, {Component} from 'react'
 import { ReactComponent as PlayIcon } from "../../../../../icons/play.svg";
 
-class TrackMetadataComponent extends React.Component {
-    
-    handleOnClick = (e) => {
-        console.log("WHY THE FUCK IS THIS NOT WORKING FUCKING BULLSHIT");
-    }
+class TrackHeader extends React.Component {
 
     render() {
         return (
@@ -16,7 +12,7 @@ class TrackMetadataComponent extends React.Component {
                         {this.props.scrobbles} scrobbles
                     </div>
                 </div>
-                <div className='track-artist-and-title' onClick={(e) => this.handleOnClick(e)}>
+                <div className='track-artist-and-title' onClick={(e) => {console.log("clicked")}}>
                     <span className='track-title'>{this.props.title}</span>
                     <span className='track-artist'>{this.props.artist}</span>
                 </div>
@@ -31,7 +27,7 @@ class TrackMetadataComponent extends React.Component {
 }
  
 // export default withRouter(TrackMetadataComponent)
-export default TrackMetadataComponent
+export default TrackHeader
 // not sure why, but I get this error when I export using the 'withRouter' function
 // Invariant failed: You should not use A/> outside a <Router>
 // it works without using withRouter, so whatever...

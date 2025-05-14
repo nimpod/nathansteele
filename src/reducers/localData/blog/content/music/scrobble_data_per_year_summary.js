@@ -1,15 +1,30 @@
 import React, {Component} from 'react'
+import { Link, withRouter, BrowserRouter } from 'react-router-dom';
 
-// SCD = SCrobble Data (abbreviating it to make code more readable)
-let SCD = require('./scrobble_data.json');
-let _2024 = SCD["2024"];
-let _2023 = SCD["2023"];
-let _2022 = SCD["2022"];
-let _2021 = SCD["2021"];
+import data from './scrobble_data.json';
+
+// get max values for each column
+let MAX_total_scrobbles = Math.max(...data.map(yearData => yearData['total_scrobbles']));
+let MAX_tracks_scrobbled = Math.max(...data.map(yearData => yearData['tracks_scrobbled']));
+let MAX_scrobbles_per_day_avg = Math.max(...data.map(yearData => yearData['scrobbles_per_day_avg']));
+let MAX_artists_scrobbled = Math.max(...data.map(yearData => yearData['artists_scrobbled']));
+let MAX_albums_scrobbled = Math.max(...data.map(yearData => yearData['albums_scrobbled']));
+let MAX_top_track_scrobbles = Math.max(...data.map(yearData => yearData['top_track_scrobbles']));
+
+// component to display the scrobble data in a table
+const ScrobbleDataTD = (props) => { 
+  return <td>
+        <div className="td-inner" style={{width: ((props.val)/props.max)*100 + '%'}}>
+            {props.val}
+        </div>
+    </td>
+}
+
 
 class ScrobbleDataSummary extends Component {
     render() {
         return(
+            <BrowserRouter>
             <table className='scrobble-data-summary'>
                 <thead>
                     <th>Year</th>
@@ -21,40 +36,29 @@ class ScrobbleDataSummary extends Component {
                     <th>#1 sc</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>2024</td>
-                        <td data-totalscrobbles={_2024["total_scrobbles"]}>{_2024["total_scrobbles"]}</td>
-                        <td data-tracksscrobbled={_2024["tracks_scrobbled"]}>{_2024['tracks_scrobbled']}</td>
-                        <td data-scrobblesperday={_2024["scrobbles_per_day_avg"]}>{_2024["scrobbles_per_day_avg"]}</td>
-                        <td data-artistsscrobbled={_2024["artists_scrobbled"]}>{_2024["artists_scrobbled"]}</td>
-                        <td data-albumsscrobbled={_2024["albums_scrobbled"]}>{_2024["albums_scrobbled"]}</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td data-totalscrobbles={_2023["total_scrobbles"]}>{_2023["total_scrobbles"]}</td>
-                        <td data-tracksscrobbled={_2023["tracks_scrobbled"]}>{_2023["tracks_scrobbled"]}</td>
-                        <td data-scrobblesperday={_2023["scrobbles_per_day_avg"]}>{_2023["scrobbles_per_day_avg"]}</td>
-                        <td data-artistsscrobbled={_2023["artists_scrobbled"]}>{_2023["artists_scrobbled"]}</td>
-                        <td data-albumsscrobbled={_2023["albums_scrobbled"]}>{_2023["albums_scrobbled"]}</td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td data-totalscrobbles={_2022["total_scrobbles"]}>{_2022["total_scrobbles"]}</td>
-                        <td data-tracksscrobbled={_2022["tracks_scrobbled"]}>{_2022["tracks_scrobbled"]}</td>
-                        <td data-scrobblesperday={_2022["scrobbles_per_day_avg"]}>{_2022["scrobbles_per_day_avg"]}</td>
-                        <td data-artistsscrobbled={_2022["artists_scrobbled"]}>{_2022["artists_scrobbled"]}</td>
-                        <td data-albumsscrobbled={_2022["albums_scrobbled"]}>{_2022["albums_scrobbled"]}</td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td data-totalscrobbles={_2021["total_scrobbles"]}>{_2021["total_scrobbles"]}</td>
-                        <td data-tracksscrobbled={_2021["tracks_scrobbled"]}>{_2021["tracks_scrobbled"]}</td>
-                        <td data-scrobblesperday={_2021["scrobbles_per_day_avg"]}>{_2021["scrobbles_per_day_avg"]}</td>
-                        <td data-artistsscrobbled={_2021["artists_scrobbled"]}>{_2021["artists_scrobbled"]}</td>
-                        <td data-albumsscrobbled={_2021["albums_scrobbled"]}>{_2021["albums_scrobbled"]}</td>
-                    </tr>
+                    {data.map(yearData => {
+                        let total_scrobbles = yearData['total_scrobbles'];
+                        let tracks_scrobbled = yearData['tracks_scrobbled'];
+                        let scrobbles_per_day_avg = yearData['scrobbles_per_day_avg'];
+                        let artists_scrobbled = yearData['artists_scrobbled'];
+                        let albums_scrobbled = yearData['albums_scrobbled'];
+                        let top_track_scrobbles = yearData['top_track_scrobbles'];
+                        let year = yearData['year'];
+                        let id = `#/blog/my_most_listened_songs_of_${year}`;
+                        
+                        return <tr>
+                            <td><Link to={id}>{year}</Link></td>                            
+                            <ScrobbleDataTD val={total_scrobbles} max={MAX_total_scrobbles} />
+                            <ScrobbleDataTD val={tracks_scrobbled} max={MAX_tracks_scrobbled} />
+                            <ScrobbleDataTD val={scrobbles_per_day_avg} max={MAX_scrobbles_per_day_avg} />
+                            <ScrobbleDataTD val={artists_scrobbled} max={MAX_artists_scrobbled} />
+                            <ScrobbleDataTD val={albums_scrobbled} max={MAX_albums_scrobbled} />
+                            <ScrobbleDataTD val={top_track_scrobbles} max={MAX_top_track_scrobbles} />
+                        </tr>
+                    })}
                 </tbody>
             </table>
+            </BrowserRouter>
         )
     }
 }

@@ -142,9 +142,7 @@ class BlogPost extends Component {
  * @param {*} state 
  */
 const mapStateToProps = (state, ownProps) => {
-    let id = ownProps.match.params.post_id;     // the id of the post being displayed in the UI
-    console.log(id);
-    
+    let id = ownProps.match.params.post_id;     // the id of the post being displayed in the UI    
     return {
         // post: state.posts.find(post => post.id === id)      // get the actual post data from the redux data store
         post: state.posts.find(post => get_blog_post_id(post.title) === id )

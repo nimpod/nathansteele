@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom';
 
-class SongFooterComponent extends Component {
+class TrackFooter extends Component {
     render() {
         return(
             <div>
-                
                 {
-                    (this.props.review_id !== undefined) ?
+                    (this.props.album_name !== "") ?
                         <p className='track-albumLink'>
                             <Link to={`#/music/${this.props.review_id}`}>
                                 {this.props.album_artist} - {this.props.album_name}
@@ -16,7 +15,6 @@ class SongFooterComponent extends Component {
                     :
                     ""
                 }
-
                 <iframe
                     width="560" 
                     height="315" 
@@ -32,4 +30,4 @@ class SongFooterComponent extends Component {
     }
 }
 
-export default SongFooterComponent
+export default TrackFooter
