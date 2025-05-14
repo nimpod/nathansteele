@@ -5,13 +5,7 @@
         "scrobbles_per_day_avg": 51,
         "artists_scrobbled": 2306,
         "albums_scrobbled": 3342,
-        "scrobbles_per_month": [
-            {
-                "jan": 1719,
-                "feb": 1401,
-                "mar": 1744
-            }
-        ]
+        "track1_scrobbles": 41
     },
     "2023": {
         "total_scrobbles": 17260,
@@ -19,26 +13,22 @@
         "artists_scrobbled": 2447,
         "albums_scrobbled": 3393,
         "tracks_scrobbled": 7543,
-        "scrobbles_per_month": [
-            {
-                "january": 1719,
-                "february": 1401,
-                "march": 1744
-            }
-        ]
+        "track1_scrobbles": 34
     },
     "2022": {
         "total_scrobbles": 16265,
         "scrobbles_per_day_avg": 44,
         "artists_scrobbled": 1838,
         "albums_scrobbled": 2720,
-        "tracks_scrobbled": 6493
+        "tracks_scrobbled": 6493,
+        "track1_scrobbles": 30
     },
     "2021": {
         "total_scrobbles": 18157,
         "scrobbles_per_day_avg": 49,
         "artists_scrobbled": 1473,
         "albums_scrobbled": 2300,
-        "tracks_scrobbled": 7510
+        "tracks_scrobbled": 7510,
+        "track1_scrobbles": 31
     }
 }

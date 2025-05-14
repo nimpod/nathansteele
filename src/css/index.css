@@ -1463,6 +1463,13 @@ div.blog-post
 
 /* #region -----------------------< 8.3) Specific blog posts >------------------------ */
 
+:root {
+  --border-col: rgb(73, 73, 86);
+  --track-info-header-bg-color: rgb(37, 37, 44);
+  --track-info-scrobbles-bg-color-1: rgb(41, 44, 49);
+  --track-info-scrobbles-bg-color-2: rgb(91, 95, 101);
+}
+
 .blog-post .top-songs-EOY table {
   color: var(--text-darker);
   font-size: 0.8rem;
@@ -1474,15 +1481,16 @@ div.blog-post
 .blog-post .top-songs-EOY table {
   margin: 10px 0 !important;
 }
-:root {
-  --border-col: rgb(73, 73, 86);
+
+
+.blog-post .track-artist-and-title {
+  padding-left: 8px;
 }
-.blog-post .top-songs-EOY div.track-info-header {
-  border-left: 1px solid var(--border-col);
-  border-right: 1px solid var(--border-col);
-  border-bottom: 1px solid var(--border-col);
-  cursor: pointer;
+.blog-post .track-artist-and-title span.track-artist {
+  font-size: 0.9rem;
+  color: var(--text-darker);
 }
+/*
 .blog-post .top-songs-EOY .blog-subsection.selected .track-review {
   display: block;
   border: 1px solid var(--border-col);
@@ -1490,15 +1498,25 @@ div.blog-post
 .blog-post .top-songs-EOY .blog-subsection:not(.selected):not(.intro-text) .track-review {
   display: none;
 }
+*/
 
 .blog-post div.track-info-header {
   display: grid;
-  grid-template-columns: 4% 40% 50% 6%;
-  background-color: rgb(55, 56, 68);
+  grid-template-columns: 4% 56% 40%;
+  background-color: var(--track-info-header-bg-color);
   color: var(--text);
+
+  border-left: 1px solid var(--border-col);
+  border-right: 1px solid var(--border-col);
+  border-bottom: 1px solid var(--border-col);
+  padding: 0 6px;
+  border-radius: 4px;
+  margin-top: 40px;
 }
 .blog-post div.track-info-header > div {
+  /*
   border-right: 3px dotted var(--border-col);
+  */
 }
 .blog-post div.track-artist-and-title {
   display: grid;
@@ -1510,7 +1528,9 @@ div.blog-post
 .blog-post .track-scrobbles {
 }
 .blog-post .track-scrobbles-inner {
-  background-color: rgb(110, 114, 120);
+  background: linear-gradient(to right, var(--track-info-scrobbles-bg-color-1), var(--track-info-scrobbles-bg-color-2));
+  /*background-color: var(--track-info-scrobbles-bg-color);*/
+  padding: 0 5px;
 }
 .blog-post .track-pos,
 .blog-post .track-scrobbles,

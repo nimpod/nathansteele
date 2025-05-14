@@ -6,11 +6,16 @@ class SongFooterComponent extends Component {
         return(
             <div>
                 
-                <p className='track-albumLink'>
-                    <Link to={`#/music/${this.props.review_id}`}>
-                        {this.props.album_artist} - {this.props.album_name}
-                    </Link>
-                </p>
+                {
+                    (this.props.review_id !== undefined) ?
+                        <p className='track-albumLink'>
+                            <Link to={`#/music/${this.props.review_id}`}>
+                                {this.props.album_artist} - {this.props.album_name}
+                            </Link>
+                        </p>
+                    :
+                    ""
+                }
 
                 <iframe
                     width="560" 

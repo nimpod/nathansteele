@@ -44,6 +44,18 @@ return <HashLink
     </HashLink>
 ```
 
+### 3) Iterate over list to minimise code duplication
+#### It's super useful to be able to iterate over a list, and then create instances of a component.
+#### Basically converting static data into dynamic data!
+```
+{arr.map(theme => {
+    return <span className='myDiv' key={theme}>
+        {theme}
+    </span>
+})}
+```
+
+
 #### Common errors
 
 ##### Error message

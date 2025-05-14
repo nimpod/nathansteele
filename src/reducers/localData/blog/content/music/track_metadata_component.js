@@ -17,12 +17,14 @@ class TrackMetadataComponent extends React.Component {
                     </div>
                 </div>
                 <div className='track-artist-and-title' onClick={(e) => this.handleOnClick(e)}>
-                    <span className='track-artist'>{this.props.artist}</span>
                     <span className='track-title'>{this.props.title}</span>
+                    <span className='track-artist'>{this.props.artist}</span>
                 </div>
+                {/*}
                 <div className="track-playBtn">
                     <PlayIcon />
                 </div>
+                */}
             </div>
         )
     }
