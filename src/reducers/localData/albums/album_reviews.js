@@ -10,7 +10,7 @@ import { TrustworthyMusicReviewers } from '../../../js/enums.js';
 
 
 //// IMPORT REVIEW CONTENT HERE, TRY AND KEEP IN ALPHABETICAL ORDER AND FOLLOW FILE STRUCTURE ACCORDINGLY
-import { review as AndreasVollenweider_DownToTheMoon } from './content/andreas_vollenweider/down_to_the_moon/review.jsx';
+import { review as AndreasVollenweider_DownToTheMoon }  from './content/andreas_vollenweider/down_to_the_moon/review.jsx';
 
 import { review as BoC_MusicHasTheRightToChildren } 	from './content/boards_of_canada/music_has_the_right_to_children/review.jsx';
 import { review as BoC_Random35TracksTape } 			from './content/boards_of_canada/random_35_tracks_tape/review.jsx';
@@ -29,6 +29,8 @@ import { review as Nanoray_Digimaiden }					from './content/nanoray/digimaiden/r
 
 import { review as Poppy_Eat }							from './content/poppy/eat/review.jsx';
 import { review as Poppy_IDisagree }					from './content/poppy/i_disagree/review.jsx';
+
+import { review as RafaelToral_SpectralEvolution } 		from './content/rafael_toral/spectral_evolution/review.jsx';
 
 import { review as Xtc_Skylarking } 					from './content/xtc/skylarking/review.jsx';
 import { review as Xtc_Mummer } 						from './content/xtc/mummer/review.jsx';
@@ -424,8 +426,8 @@ const database = {
 		},
 		"a_tribe_called_quest__thank_you_4_your_service": {
 			lastfm_url: "https://www.last.fm/music/A+Tribe+Called+Quest/We+Got+It+From+Here...+Thank+You+4+Your+Service",
-			rym_url: "",
-			spotify_url: "",
+			rym_url: "https://rateyourmusic.com/release/album/a-tribe-called-quest/we-got-it-from-here%E2%80%A6-thank-you-4-your-service/",
+			spotify_url: "https://open.spotify.com/album/3WvQpufOsPzkZvcSuynCf3",
 			year_of_release: "2016",
 			year_of_discovery: "2016",
 			genres: "Hip-Hop; Rap; Jazz rap",
@@ -900,7 +902,7 @@ const database = {
 		"bt__ima": {
 			lastfm_url: "https://www.last.fm/music/BT/Ima",
 			rym_url: "https://rateyourmusic.com/release/album/bt/ima/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/3bKp9TUgbHGhfRBsTQTAxS",
 			year_of_release: "1995",
 			year_of_discovery: "2024",
 			genres: "Electronic; Trance; Acid trance",
@@ -1247,6 +1249,17 @@ const database = {
 		},	
 
 
+		"Desolve - Asterism": {
+			lastfm_url: "https://www.last.fm/music/Dezolve/Asterism",
+			rym_url: "https://rateyourmusic.com/release/album/dezolve/asterism/",
+			spotify_url: "https://open.spotify.com/album/36GBHpAL5SgiwBMwbbO5fF",
+			year_of_release: "2024",
+			year_of_discovery: "2024",
+			genres: "Jazz fusion; Jazz",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
+		},
 		"dispirited_spirits__the_redshift_blues": {
 			lastfm_url: "https://www.last.fm/music/Dispirited+Spirits/The+Redshift+Blues",
 			rym_url: "https://rateyourmusic.com/release/album/dispirited-spirits/the-redshift-blues/",
@@ -2164,7 +2177,18 @@ const database = {
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 
+		
 
+		"Jon Kennedy - HA": {
+			lastfm_url: "https://www.last.fm/music/Jon+Kennedy/HA!",
+			rym_url: "https://rateyourmusic.com/release/album/jon-kennedy/ha/",
+			spotify_url: "https://open.spotify.com/album/4i6BAj5zSw2kAdOZ6iLQkP?si=Ji1kuIZUTPOOsSr051N4hw",
+			year_of_release: "2017",
+			year_of_discovery: "2019",
+			genres: "Downtempo; Trip hop; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"Jan Garbarek Group - It's OK To Listen To The Gray Voice": {
 			lastfm_url: "https://www.last.fm/music/Jan+Garbarek+Group/It%27s+OK+To+Listen+To+The+Gray+Voice",
 			rym_url: "https://rateyourmusic.com/release/album/jan-garbarek-group/its-ok-to-listen-to-the-gray-voice/",
@@ -3396,10 +3420,10 @@ const database = {
 		"pangaea__changing_channels": {
 			lastfm_url: "https://www.last.fm/music/Pangaea/Changing+Channels",
 			rym_url: "https://rateyourmusic.com/release/album/pangaea/changing-channels/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/3bKp9TUgbHGhfRBsTQTAxS",
 			year_of_release: "2023",
 			year_of_discovery: "2024",
-			genres: "Electronic; Breakbeat",
+			genres: "Electronic; Breakbeat; Speed garage",
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.STEREOGUM
@@ -3522,6 +3546,16 @@ const database = {
 			year_of_discovery: "2022",
 			genres: "Stoner rock; Alternative metal; Alternative rock",
 			my_rating: 9.0,
+			my_review: "",
+		},
+		"Quincy Jones - Big Band Bossa Nova": {
+			lastfm_url: "https://www.last.fm/music/Quincy+Jones/Big+Band+Bossa+Nova",
+			rym_url: "https://rateyourmusic.com/release/album/quincy-jones/big-band-bossa-nova/",
+			spotify_url: "https://open.spotify.com/album/1KSOL1jvue2lfcdsNZ7YN8",
+			year_of_release: "1962",
+			year_of_discovery: "2025",
+			genres: "Jazz; Bossa nova; Soul jazz; Samba; Big band",
+			my_rating: 8.0,
 			my_review: "",
 		},
 	},
@@ -3654,6 +3688,17 @@ const database = {
 		},
 
 
+		"Raja Kirik - Phantasmagoria of Jathilan": {
+			lastfm_url: "https://www.last.fm/music/Raja+Kirik/Phantasmagoria+of+Jathilan",
+			rym_url: "https://rateyourmusic.com/release/album/raja-kirik/phantasmagoria-of-jathilan/",
+			spotify_url: "https://www.last.fm/music/Raja+Kirik/Phantasmagoria+of+Jathilan",
+			year_of_release: "2023",
+			year_of_discovery: "2025",
+			date_of_discovery: "13/05/2025",
+			genres: "Kuda kepang; Industrial techno; Ritual ambient; Deconstructed club; Industrial hardcore",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"Rhapsody - Symphony of Enchanted Lands": {
 			lastfm_url: "https://www.last.fm/music/Rhapsody/Symphony+of+Enchanted+Lands",
 			rym_url: "https://rateyourmusic.com/release/album/rhapsody/symphony-of-enchanted-lands/",
@@ -3672,7 +3717,7 @@ const database = {
 			year_of_discovery: "2024",
 			genres: "Ambient; Drone; Electroacoustic; Nature recordings; Experimental",
 			my_rating: 8.0,
-			my_review: "Discovered this wonderful album from this list - https://www.stereogum.com/2290265/the-10-best-experimental-albums-of-2024/lists/album-list/",
+			my_review: ReactDomServer.renderToString(RafaelToral_SpectralEvolution()),
 			recommended_by: TrustworthyMusicReviewers.STEREOGUM
 		},
 		"return_to_forever__romantic_warrior": {
@@ -4197,6 +4242,17 @@ const database = {
 		},
 
 
+		"Throwing Snow - Isthmus": {
+			lastfm_url: "https://www.last.fm/music/Throwing+Snow/Isthmus",
+			rym_url: "https://rateyourmusic.com/release/album/throwing-snow/isthmus/",
+			spotify_url: "https://rateyourmusic.com/release/album/throwing-snow/isthmus/",
+			year_of_release: "2024",
+			year_of_discovery: "2025",
+			genres: "Dubstep; IDM; Future garage; Jungle; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
 		"tineidae__exo": {
 			lastfm_url: "https://www.last.fm/music/Tineidae/Exo",
 			rym_url: "https://rateyourmusic.com/release/album/tineidae/exo/",

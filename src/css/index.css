@@ -1510,7 +1510,7 @@ div.blog-post
 
 .blog-post div.track-info-header {
   display: grid;
-  grid-template-columns: 6% 54% 40%;
+  grid-template-columns: 5% 40% 60%;
   background-color: var(--track-info-header-bg-color);
   color: var(--text);
 

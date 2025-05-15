@@ -11,7 +11,7 @@ import { post as SolarFlares }                          from './content/solar_fl
 
 // blog posts about music...
 import { post as MyMostListenedSongsOf2024Post }        from './content/music/2024/my_most_listened_songs_of_2024.jsx';
-import { post as MyMostListenedSongsOf2023Post }        from './content/music/my_most_listened_songs_of_2023.jsx';
+import { post as MyMostListenedSongsOf2023Post }        from './content/music/2023/my_most_listened_songs_of_2023.jsx';
 import { post as MyMostListenedSongsOf2022Post }        from './content/music/my_most_listened_songs_of_2022.jsx';
 import { post as MyMostListenedSongsOf2021Post }        from './content/music/my_most_listened_songs_of_2021.jsx';
 import { post as MyMostListenedSongsOf2020Post }        from './content/music/my_most_listened_songs_of_2020.jsx';

@@ -142,7 +142,7 @@ export const post = () => (
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Le1j0WM-cUo?si=1d3gw9PpkH33f8Zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div className='blog-subsection' id='track9'>
-        <h3 className='subgroup-title'>
+            <h3 className='subgroup-title'>
                 <span className='track-pos'>#9</span>
                 <span className='track-scrobbles'>24 scrobbles</span>
                 <span className='track-artist-and-title'>Hakushi Hasegawa - Somoku</span>
