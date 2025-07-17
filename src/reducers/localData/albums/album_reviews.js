@@ -32,6 +32,8 @@ import { review as Poppy_IDisagree }					from './content/poppy/i_disagree/review
 
 import { review as RafaelToral_SpectralEvolution } 		from './content/rafael_toral/spectral_evolution/review.jsx';
 
+import { review as SeaOleena__WeavingABasket } 			from './content/sea_oleena/weaving_a_basket/review.jsx';
+
 import { review as Xtc_Skylarking } 					from './content/xtc/skylarking/review.jsx';
 import { review as Xtc_Mummer } 						from './content/xtc/mummer/review.jsx';
 
@@ -468,6 +470,16 @@ const database = {
 		},
 
 
+		"anoushka shankar shades of you": {
+			lastfm_url: "https://www.last.fm/music/Anoushka+Shankar/Traces+Of+You",
+			rym_url: "https://rateyourmusic.com/artist/anoushka-shankar/traces-of-you/",
+			spotify_url: "",
+			year_of_release: "2013",
+			genres: "Hindustani classical music",
+			my_rating: 9.0,
+			my_review: "",
+			date_of_review: "July 10, 2025",
+		},
 		"amorphous_androgynous__tales_of_ephidrina": {
 			lastfm_url: "https://www.last.fm/music/Amorphous+Androgynous/Tales+of+Ephidrina",
 			rym_url: "https://rateyourmusic.com/release/album/amorphous-androgynous/tales-of-ephidrina/",
@@ -475,7 +487,7 @@ const database = {
 			year_of_release: "1994",
 			genres: "IDM; Ambient techno; Techno; Electronic",
 			my_rating: 9.0,
-			my_review: "Electronic; Ambient techno; Ambient dub; Ambient",
+			my_review: "",
 			year_of_discovery: "2024",
 		},
 		"arctic_monkeys__favourite_worst_nightmare": {
@@ -2020,7 +2032,7 @@ const database = {
 			artist_name_English: "Joe Hisaishi",
 			album_name_English: "Dolls OST",
 			genres: "Film soundtrack; Ambient",
-			my_rating: 8.5,
+			my_rating: 9.5,
 			my_review: "",
 		},
 		"joe_hisaishi__my_neighbour_totoro_OST": {
@@ -2780,8 +2792,7 @@ const database = {
 			rym_url: "https://rateyourmusic.com/release/album/monolake/cinemascope/",
 			spotify_url: "https://open.spotify.com/album/3KXHIwkGCHTjFmuYeBNXtc",
 			year_of_release: "2001",
-			year_of_discovery: "2025",
-			date_of_discovery: "01/04/2025",
+			date_of_review: "01/04/2025",
 			genres: "Ambient techno; IDM; Dub techno; Minimal techno; Techno; Ambient",
 			my_rating: 8.0,
 			my_review: "",
@@ -2791,7 +2802,7 @@ const database = {
 			rym_url: "https://rateyourmusic.com/release/album/moses-yoofee-trio/myt/",
 			spotify_url: "https://open.spotify.com/album/3ihDpzywVOAaafh0Cmo4aH",
 			year_of_release: "2025",
-			year_of_discovery: "2025",
+			date_of_review: "01/05/2025",
 			genres: "Jazz fusion; Nu jazz; Neo-soul; Jazz",
 			my_rating: 8.0,
 			my_review: "",
@@ -2801,7 +2812,7 @@ const database = {
 			rym_url: "https://rateyourmusic.com/release/album/masal/ahora/",
 			spotify_url: "https://open.spotify.com/album/0CGZh1gIOJAUVRDLDksbfC?si=G7czW_pVSEWNSqrosCrtkA",
 			year_of_release: "2022",
-			year_of_discovery: "2024",
+			date_of_review: "01/06/2024",
 			genres: "Jazz fusion; Jazz; Jazz rock; Avant-Prog",
 			my_rating: 8.0,
 			my_review: "",
@@ -2812,7 +2823,7 @@ const database = {
 			rym_url: "https://rateyourmusic.com/release/ep/mazie/the-rainbow-cassette/",
 			spotify_url: "https://open.spotify.com/album/7uzmNefPoRgc5Pi9DS00CC?si=r2_HfmOCTZemHmcg0DrnDQ",
 			year_of_release: "2021",
-			year_of_discovery: "2023",
+			date_of_review: "01/05/2023",
 			genres: "Bedroom pop; Psychedelic pop; Indietronica; EDM Trap; Baroque pop; Alternative pop",
 			my_rating: 8.0,
 			my_review: "",
@@ -3694,7 +3705,7 @@ const database = {
 			spotify_url: "https://www.last.fm/music/Raja+Kirik/Phantasmagoria+of+Jathilan",
 			year_of_release: "2023",
 			year_of_discovery: "2025",
-			date_of_discovery: "13/05/2025",
+			date_of_review: "13/05/2025",
 			genres: "Kuda kepang; Industrial techno; Ritual ambient; Deconstructed club; Industrial hardcore",
 			my_rating: 8.0,
 			my_review: "",
@@ -3785,7 +3796,7 @@ const database = {
 		},
 	},
 
-	S: {
+	S: { 
 		//
 		"steven_wilson__hand_cannot_erase": {
 			lastfm_url: "https://www.last.fm/music/Steven+Wilson/Hand+Cannot+Erase",
@@ -3922,11 +3933,10 @@ const database = {
 			rym_url: "https://rateyourmusic.com/release/album/sea-oleena/weaving-a-basket/",
 			spotify_url: "https://open.spotify.com/album/6y7B7Ovp6v6X7hNRBw1mg5",
 			year_of_release: "2020",
-			year_of_discovery: "2025",
-			date_of_discovery: "01/05/2025",
+			date_of_review: "May 10, 2025",
 			genres: "Psychedelic folk; Ambient; Ambient pop; Dream pop",
-			my_rating: 8.0,
-			my_review: "",
+			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(SeaOleena__WeavingABasket()),
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"soley mother melancholia": {
@@ -4409,7 +4419,7 @@ const database = {
 			year_of_release: "1994",
 			genres: "Ambient dub; Downtempo; Ambient techno; Electronic",
 			tags: ["Not on spotify"],
-			my_rating: 8.0,
+			my_rating: 9.0,
 			my_review: "",
 			year_of_discovery: "2023",
 		},

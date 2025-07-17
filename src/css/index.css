@@ -2085,8 +2085,10 @@ div.blog-post
 }
 .films-toplist.view-as-list span.film-myRating::after,
 .myRating::after {
+  /*
   content: "/10";
   font-weight: 100;
+  */
 }
 .myRating::after {
   font-size: 9px;
@@ -2936,8 +2938,16 @@ div.btn.films-reset-filters-btn svg {
   font-weight: bold;
 }
 
-.album-info-item.my-rating > span:nth-child(2)::after {
-  content: " / 10"
+.album-info-item span.myRating {
+  padding: 4px 10px;
+  min-width: 50px;
+  font-size: 1.1rem !important;
+}
+
+.album-info-item.my-rating::after {
+  content: " / 10";
+  font-size: 0.7rem;
+  color: var(--text-darker);
 }
 .album-info-item.scrobbles > span:nth-child(2) > span {
   font-size: 0.6rem;
@@ -3990,9 +4000,11 @@ div.albumInfoContainer > div.myRating {
 
 :root {
   --album-info-header-bg-color: rgb(218, 221, 225);
+  --album-info-footer-bg-color: rgb(200, 200, 200);
 }
 [data-theme="dark"] {
   --album-info-header-bg-color: rgb(37, 38, 39);
+  --album-info-footer-bg-color: rgb(50, 50, 50);
 }
 
 :root {
@@ -4055,6 +4067,11 @@ div.albumInfoContainer > div.myRating {
   font-size: 1.0rem;
   color: var(--text-darker);
   cursor: help;
+  margin-bottom: 10px;
+}
+
+.album-info .myAlbumData {
+  margin-bottom: 10px;
 }
 
 /* Album year */
@@ -4089,9 +4106,11 @@ div.albumInfoContainer > div.myRating {
 .album-review .review-content-container {
   width: 100%;
   padding-top: 20px;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: var(--album-info-header-bg-color);
 }
+
 
 .album-review .review-content-container > .review-content {
   padding-left: 20px;
@@ -4116,6 +4135,14 @@ div.albumInfoContainer > div.myRating {
 .album-header-container,
 .review-content-and-tracklist {
   margin: 0 auto;
+}
+
+
+.album-review .review-footer {
+  font-size: 0.8rem;
+  color: var(--text-darker);
+  background: var(--album-info-footer-bg-color);
+  padding: 5px 10px;
 }
 
 /* #region --------------- Prev & Next review links --------------- */
@@ -5164,7 +5191,7 @@ div.albumInfoContainer > div.myRating {
     padding: 5px;
   }
   .album-review .album-cover-container img {
-    width: 92%;
+    width: 84%;
     padding-top: 10px;
     margin: 0 auto;
     border-radius: 0px;
@@ -5176,6 +5203,9 @@ div.albumInfoContainer > div.myRating {
     width: 100%;
     left: 0;
     padding-bottom: 60px;
+  }
+  .album-review .review-content-container {
+    border-radius: 0px;
   }
   .review-fullTracklist .track-item,
   .review-fullTracklist .tracklist-header { 
@@ -5204,8 +5234,32 @@ div.albumInfoContainer > div.myRating {
     position: relative;
   }
 
+
+  .album-review .myPosition {
+    position: absolute;
+    right: 15px;
+    top: 400px;
+    height: fit-content;
+  }
+  .album-review .my-rating {
+    margin-bottom: 10px;
+  }
+  .review-displayed .myPosition > a > span:nth-child(1) {
+    font-size: 1.4rem;
+  }
+  .review-displayed .myPosition > a > span:nth-child(2) {
+    font-size: 0.57rem;
+  }
+  
+  .albuim-review .myAlbumData {
+    display: flex;
+    flex-direction: row;
+  }
+
   .list-of-tags {
+    /*
     padding-bottom: 8px;
+    */
   }
   .list-of-tags > span {
     margin-bottom: 2px;

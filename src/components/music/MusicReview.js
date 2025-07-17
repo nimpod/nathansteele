@@ -32,7 +32,7 @@ class MusicReview extends React.Component {
         let recommended_by = "";
         let scrobbles = "";
         let scrobbles_pos = "";
-        let year_of_discovery = "";
+        let date_of_review = "";
         //
         let no_spotify_str = "";
         let spotify_hover_text = "Click to listen on Spotify";
@@ -70,8 +70,8 @@ class MusicReview extends React.Component {
         }
 
         // get year of discovery if it's there...
-        if (this.props.album_data.year_of_discovery !== undefined) {
-            year_of_discovery = this.props.album_data.year_of_discovery;
+        if (this.props.album_data.date_of_review !== undefined) {
+            date_of_review = this.props.album_data.date_of_review;
         }
 
         // check if I put any links in...
@@ -126,7 +126,23 @@ class MusicReview extends React.Component {
                                     <span className='artist-name' title='Artist name'>
                                         By <a target='_blank' href={this.props.album_data.rym_artist_link}>{artist_name}</a>
                                     </span>
+
+                                    <div className='myAlbumData'>
+                                        {/* Position in list */}
+                                        <div className='myPosition generic-hover' title='Position in my toplist'>
+                                            <Link to='/music'>
+                                                <span>#{this.props.album_data.position_str}</span>
+                                                <span>in my toplist</span>
+                                            </Link>
+                                        </div>
                                     
+                                        {/* My rating */}
+                                        <div className={`my-rating album-info-item`}>
+                                            <span>Rating: </span>
+                                            <span className={`myRating r${this.props.album_data.my_rating_nodp}`}>{this.props.album_data.my_rating}</span>
+                                        </div>
+                                    </div>
+                                
                                     {/* Year */}
                                     <div className='year-of-release album-info-item' title="Year this album was released">
                                         <span>Year: </span>
@@ -142,18 +158,6 @@ class MusicReview extends React.Component {
                                                 {g}
                                             </span>
                                         })}
-                                    </div>
-
-                                    {/* My rating */}
-                                    <div className={`my-rating album-info-item`}>
-                                        <span>Rating: </span>
-                                        <span className={`myRating r${this.props.album_data.my_rating_nodp}`}>{this.props.album_data.my_rating}</span>
-                                    </div>
-
-                                    {/* Year of discovery */}
-                                    <div className='year-of-discovery album-info-item' title={`The approximate year that I started listening to this album`}>
-                                        <span>Discovered in: </span>
-                                        <span>{year_of_discovery}</span>
                                     </div>
 
                                     {/* Scrobbles */}
@@ -187,6 +191,7 @@ class MusicReview extends React.Component {
                                         }
                                     </div>
 
+
                                     {/* Themes */}
                                     {/*  ====== I moved this into the .jsx file =========
                                     <div className='themes list-of-tags'>
@@ -201,13 +206,7 @@ class MusicReview extends React.Component {
                                     {/* My data */}
                                     <div className='album-details-myData'>
 
-                                        {/* Position in list */}
-                                        <div className='myPosition generic-hover' title='Position in my toplist'>
-                                            <Link to='/music'>
-                                                <span>#{this.props.album_data.position_str}</span>
-                                                <span>in my toplist</span>
-                                            </Link>
-                                        </div>
+
 
                                         {/* My rating */}
                                         {/*}
@@ -243,6 +242,11 @@ class MusicReview extends React.Component {
                             {/* The actual review content!! */}
                             <div className='review-content-container' dangerouslySetInnerHTML={{__html: this.props.album_data.my_review}}>
 
+                            </div>
+
+                            {/* Review footer */}
+                            <div className="review-footer">
+                                Nathan Steele | {date_of_review}
                             </div>
                         </div>
                     </div>
