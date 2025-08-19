@@ -16,6 +16,10 @@ import { review as BoC_MusicHasTheRightToChildren } from './content/boards_of_ca
 import { review as BoC_Random35TracksTape } from './content/boards_of_canada/random_35_tracks_tape/review.jsx';
 
 import { review as ChisatoYamada_SuiteNihonkai } from './content/chisato_yamada/suite_nihonkai/review.jsx';
+import { review as Crumb_Jinx } from './content/crumb/jinx/review.jsx';
+import { review as Crumb_Locket } from './content/crumb/locket/review.jsx';
+
+import { review as DigablePlanets_Reachin } from './content/digable_planets/reachin/review.jsx';
 
 import { review as GlobalCommunication_7614 } from './content/global_communication/7614/review.jsx';
 import { review as GregIsakov_ThisEmptyNorthernHemisphere } from './content/greg_isakov/this_empty_northern_hemisphere/review.jsx';
@@ -31,6 +35,7 @@ import { review as Poppy_Eat } from './content/poppy/eat/review.jsx';
 import { review as Poppy_IDisagree } from './content/poppy/i_disagree/review.jsx';
 
 import { review as RafaelToral_SpectralEvolution } from './content/rafael_toral/spectral_evolution/review.jsx';
+import { review as RunTheJewels_RTJ4 } from './content/run_the_jewels/rtj4/review.jsx';
 
 import { review as SeaOleena__WeavingABasket } from './content/sea_oleena/weaving_a_basket/review.jsx';
 
@@ -38,7 +43,7 @@ import { review as Xtc_Skylarking } from './content/xtc/skylarking/review.jsx';
 import { review as Xtc_Mummer } from './content/xtc/mummer/review.jsx';
 
 import { review as Yes_FlyFromHere } from './content/yes/fly_from_here/review.jsx';
-// my_review: ReactDomServer.renderToString(Jesus_Molina__Agape__Review()),
+// ReactDomServer.renderToString(BoC_MusicHasTheRightToChildren()),
 
 
 // [VSCode]: Ctrl+k, Ctrl+0 will close all sections...
@@ -149,7 +154,7 @@ const database = {
 			date_of_review: "2014",
 			genres: "Indie rock; Post-punk revival; Alternative rock; Garage rock; New wave",
 			tags: ["Old favourite"],
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"the_strokes__angles": {
@@ -244,6 +249,16 @@ const database = {
 		},
 
 
+		"The Black Dog - Spanners": {
+			lastfm_url: "https://www.last.fm/music/The+Black+Dog/Spanners",
+			rym_url: "https://rateyourmusic.com/release/album/the-black-dog/spanners/",
+			spotify_url: "https://open.spotify.com/album/2xP369vU8kb1QJWIT9vSFH",
+			year_of_release: "1995",
+			date_of_review: "2025",
+			genres: "Ambient techno; Acid techno; IDM; Electronic",
+			my_rating: 8.0,
+			my_review: ""
+		},
 		"the_klf__chillout": {
 			lastfm_url: "https://www.last.fm/music/The+KLF/Come+Down+Dawn",
 			rym_url: "https://rateyourmusic.com/release/album/the-klf/chill-out/",
@@ -523,7 +538,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/7jxs0XY2yJS36PZCjUv4Hp?si=WhCLi2EsR9aUjLP6A6RGDA",
 			year_of_release: "1998",
 			genres: "Drum & Bass; Breakbeat; Nu jazz; Jazz; Trip hop; Drumfunk; Techstep; Electronic",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			date_of_review: "2024",
 		},
@@ -1036,7 +1051,7 @@ const database = {
 			year_of_release: "1999",
 			date_of_review: "2024",
 			genres: "Drill and bass; Breakcore; IDM; Chiptune; Drum and bass; Electronic",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.NIELS
 		},
@@ -1062,8 +1077,8 @@ const database = {
 			year_of_release: "2017",
 			date_of_review: "2017",
 			genres: "Indie pop; Dream pop",
-			my_rating: 9.0,
-			my_review: "",
+			my_rating: 8.5,
+			my_review: ReactDomServer.renderToString(Crumb_Locket()),
 		},
 		"crumb__jinx": {
 			lastfm_url: "https://www.last.fm/music/Crumb/Jinx",
@@ -1072,8 +1087,8 @@ const database = {
 			year_of_release: "2019",
 			date_of_review: "2019",
 			genres: "Psychdelic pop; Dream pop; Indie pop; Indie rock",
-			my_rating: 9.0,
-			my_review: "",
+			my_rating: 8.0,
+			my_review: ReactDomServer.renderToString(Crumb_Jinx()),
 		},
 
 
@@ -1087,7 +1102,7 @@ const database = {
 			my_rating: 8.0,
 			my_review: ""
 		},
-		"Chick corea Light as a feather": {
+		"Chick Corea - Light As A Feather": {
 			lastfm_url: "https://www.last.fm/music/Chick+Corea/Light+as+a+Feather",
 			rym_url: "https://rateyourmusic.com/release/album/chick-corea-and-return-to-forever/light-as-a-feather/",
 			spotify_url: "https://open.spotify.com/album/2b53ZhXIiCGr3rPTYkpVeF",
@@ -1106,7 +1121,7 @@ const database = {
 			genres: "Jazz fusion; Jazz",
 			country: "Bolivia",
 			themes: ["Bolivia", "Guitar"],
-			my_rating: 8.5,
+			my_rating: 9.0,
 			my_review: ""
 		},
 		"cocomofo__cardinal_rose": {
@@ -1300,6 +1315,30 @@ const database = {
 		},
 
 
+		//
+		"digable_planets__reachin_a_new_refutiation_of_time_and_space": {
+			lastfm_url: "https://www.last.fm/music/Digable+Planets/Reachin%E2%80%99+(A+New+Refutation+of+Time+and+Space)",
+			rym_url: "https://rateyourmusic.com/release/album/digable-planets/reachin-a-new-refutation-of-time-and-space/",
+			spotify_url: "https://open.spotify.com/album/5snUbps5KleLIP0cVI72lP",
+			year_of_release: "1993",
+			date_of_review: "2021",
+			genres: "Hip-Hop; Rap; Jazz rap; Alternative Hip-hop",
+			my_rating: 8.0,
+			my_review: ReactDomServer.renderToString(DigablePlanets_Reachin()),
+			recommended_by: TrustworthyMusicReviewers.DEEP_CUTS
+		},
+		"Digable Planets - Blowout Comb": {
+			lastfm_url: "https://www.last.fm/music/Digable+Planets/Blowout+Comb",
+			rym_url: "https://rateyourmusic.com/release/album/digable-planets/blowout-comb/",
+			spotify_url: "https://open.spotify.com/album/5gvlpKnnINq8Z1YICdtiBt",
+			year_of_release: "1994",
+			date_of_review: "2021",
+			genres: "Hip-Hop; Rap; Jazz rap; Alternative Hip-hop",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
+
 		"Desolve - Asterism": {
 			lastfm_url: "https://www.last.fm/music/Dezolve/Asterism",
 			rym_url: "https://rateyourmusic.com/release/album/dezolve/asterism/",
@@ -1381,18 +1420,6 @@ const database = {
 			genres: "R&B; Neo-soul",
 			my_rating: 9.0,
 			my_review: "",
-		},
-		"digable_planets__reachin_a_new_refutiation_of_time_and_space": {
-			lastfm_url: "https://www.last.fm/music/Digable+Planets/Reachin%E2%80%99+(A+New+Refutation+of+Time+and+Space)",
-			rym_url: "https://rateyourmusic.com/release/album/digable-planets/reachin-a-new-refutation-of-time-and-space/",
-			spotify_url: "https://open.spotify.com/album/5snUbps5KleLIP0cVI72lP",
-			year_of_release: "1993",
-			date_of_review: "2021",
-			genres: "Hip-Hop; Rap; Jazz rap; Alternative Hip-hop",
-			themes: ["Chill", "Conscious lyricism"],
-			my_rating: 9.0,
-			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.DEEP_CUTS
 		},
 	},
 
@@ -2671,6 +2698,30 @@ const database = {
 			my_review: "",
 		},
 
+		//
+		"lustmord__much_unseen_is_also_here": {
+			lastfm_url: "https://www.last.fm/music/Lustmord/Much+Unseen+Is+Also+Here",
+			rym_url: "https://rateyourmusic.com/release/album/lustmord/much-unseen-is-also-here/",
+			spotify_url: "https://open.spotify.com/album/3MwZ6Qrwt4E7cZXhxhDzXe",
+			year_of_release: "2024",
+			date_of_review: "2024",
+			genres: "Dark ambient; Drone",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
+		"Lustmord - Alter": {
+			lastfm_url: "https://www.last.fm/music/Lustmord/ALTER",
+			rym_url: "https://rateyourmusic.com/release/album/lustmord-karin-park/alter/",
+			spotify_url: "https://open.spotify.com/album/4XO3DdBAjIIe6YI2a7iLza",
+			year_of_release: "2021",
+			date_of_review: "2024",
+			genres: "Dark ambient; Neoclassical darkwave",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
+
 
 		"Little Simz - Lotus ": {
 			lastfm_url: "https://www.last.fm/music/Little+Simz/Lotus",
@@ -2679,17 +2730,6 @@ const database = {
 			year_of_release: "2025",
 			date_of_review: "29 June, 2025",
 			genres: "Hip Hop; Neo-soul; Jazz rap; Post-Punk; Afrobeat",
-			my_rating: 8.0,
-			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
-		},
-		"lustmord__much_unseen_is_also_here": {
-			lastfm_url: "https://www.last.fm/music/Lustmord/Much+Unseen+Is+Also+Here",
-			rym_url: "https://rateyourmusic.com/release/album/lustmord/much-unseen-is-also-here/",
-			spotify_url: "https://open.spotify.com/album/3MwZ6Qrwt4E7cZXhxhDzXe",
-			year_of_release: "2024",
-			date_of_review: "2024",
-			genres: "Dark ambient; Drone",
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
@@ -2822,7 +2862,7 @@ const database = {
 			year_of_release: "2013",
 			date_of_review: "2014",
 			genres: "Folk; Indie folk; Chamber folk",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 
@@ -3790,7 +3830,7 @@ const database = {
 			date_of_review: "2025",
 			date_of_review: "13/05/2025",
 			genres: "Kuda kepang; Industrial techno; Ritual ambient; Deconstructed club; Industrial hardcore",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"Rhapsody - Symphony of Enchanted Lands": {
@@ -3864,14 +3904,14 @@ const database = {
 			year_of_release: "2020",
 			date_of_review: "2020",
 			genres: "Hip-Hop; Rap",
-			my_rating: 9.0,
-			my_review: "",
+			my_rating: 8.0,
+			my_review: ReactDomServer.renderToString(RunTheJewels_RTJ4()),
 		},
 		"regina_spektor__remember_us_to_life": {
 			lastfm_url: "https://www.last.fm/music/Regina+Spektor/Remember+Us+to+Life",
 			rym_url: "https://rateyourmusic.com/release/album/regina-spektor/remember-us-to-life/",
 			spotify_url: "https://open.spotify.com/album/6C0ZhA7FLKwguVU8BWfkeS?si=f0vj3mjjTyeocPXehPobWw",
-			year_of_release: "2013",
+			year_of_release: "2016",
 			date_of_review: "2021",
 			genres: "Chamber pop; Piano rock; Indie pop; Piano; Singer-songwritter",
 			my_rating: 8.0,
@@ -4010,6 +4050,28 @@ const database = {
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 
+		//
+		"squarepusher__be_up_a_hello": {
+			lastfm_url: "https://www.last.fm/music/Squarepusher/Be+Up+a+Hello",
+			rym_url: "https://rateyourmusic.com/release/album/squarepusher/be-up-a-hello/",
+			spotify_url: "https://open.spotify.com/album/1zcfHeYC0sEQs3D3fCAr4m?si=Wha9wfEdSN-mE-s9f4wiLA",
+			year_of_release: "2020",
+			date_of_review: "2020",
+			genres: "Drill and bass; Breakcore; Glitch; IDM; Jungle; Electronic",
+			my_rating: 8.5,
+			my_review: "",
+		},
+		"Squarepusher - Feed me weird things": {
+			lastfm_url: "https://www.last.fm/music/Squarepusher/Feed+Me+Weird+Things",
+			rym_url: "https://rateyourmusic.com/release/album/squarepusher/feed-me-weird-things/",
+			spotify_url: "https://open.spotify.com/album/3mr4Eo5QyvLqvghU1usLM4",
+			year_of_release: "1995",
+			date_of_review: "2025",
+			genres: "Drill and bass; Drum and bass; Jazz; Jazzstep; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
+
 
 		"sea oleena weaving a basket": {
 			lastfm_url: "https://www.last.fm/music/Sea+Oleena/Weaving+a+Basket",
@@ -4110,16 +4172,6 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.SITE_NOISE
-		},
-		"squarepusher__be_up_a_hello": {
-			lastfm_url: "https://www.last.fm/music/Squarepusher/Be+Up+a+Hello",
-			rym_url: "https://rateyourmusic.com/release/album/squarepusher/be-up-a-hello/",
-			spotify_url: "https://open.spotify.com/album/1zcfHeYC0sEQs3D3fCAr4m?si=Wha9wfEdSN-mE-s9f4wiLA",
-			year_of_release: "2020",
-			date_of_review: "2020",
-			genres: "Drill and bass; Breakcore; Glitch; IDM; Jungle; Electronic",
-			my_rating: 8.5,
-			my_review: "",
 		},
 		"senri_kawaguchi__cider_hard_and_sweet": {
 			lastfm_url: "https://www.last.fm/music/Senri+Kawaguchi/CIDER+~Hard+&+Sweet~",
@@ -4825,6 +4877,16 @@ const database = {
 			year_of_release: "2007",
 			date_of_review: "2025",
 			genres: "Breakbeat; Trance; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"Zircon Mass Media Constant": {
+			lastfm_url: "https://www.last.fm/music/Zircon/Mass+Media+Constant",
+			rym_url: "https://rateyourmusic.com/release/album/zircon/mass-media-constant/",
+			spotify_url: "https://open.spotify.com/album/3nqCl2NrlKi2YVjagliu9G",
+			year_of_release: "2009",
+			date_of_review: "2025",
+			genres: "Electronic; Drum and bass; Jungle; Breakbeat",
 			my_rating: 8.0,
 			my_review: "",
 		},

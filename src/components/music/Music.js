@@ -36,7 +36,7 @@ const MIN_ARTIST_COUNT_TO_BE_DISPLAYED = 2;
 const MIN_YEAR_COUNT_TO_BE_DISPLAYED = 2;
 
 const NAVIGATION_GAP = 25;
-const NAVIGATION_MAX = 650;
+const NAVIGATION_MAX = 700;
 
 const DEFAULT_FILTERS = {
     "artist": "All artists",

@@ -4257,6 +4257,7 @@ div.albumInfoContainer > div.myRating {
 .review-fullTracklist .track-item.r9 .track-myRating { background-color: rgb(24, 153, 121);  }
 .review-fullTracklist .track-item.r8 .track-myRating { background-color: rgb(51, 127, 177);  }
 .review-fullTracklist .track-item.r7 .track-myRating { background-color: rgba(59, 84, 100, 0.814); }
+.review-fullTracklist .track-item.r6 .track-myRating { background-color: rgba(70, 84, 92, 0.317); }
 .review-fullTracklist .track-item.rinterlude .track-myRating { 
   background-color: rgba(78, 78, 78, 0.354);
   font-size: 0.6rem;
