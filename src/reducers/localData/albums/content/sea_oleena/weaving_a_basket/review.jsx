@@ -3,10 +3,10 @@ import TemplateTracklistComponent from '../../../../../../components/music/Templ
 
 const tracklist = [
     { "rating": 10, "title": "Will I Know" },
-    { "rating": 9, "title": "Calvisius" },
-    { "rating": 9, "title": "Lost Song" },
+    { "rating": 10, "title": "Calvisius" },
+    { "rating": 10, "title": "Lost Song" },
     { "rating": 8, "title": "Carrying" },
-    { "rating": 10, "title": "Gardens" },
+    { "rating": 11, "title": "Gardens" },
     { "rating": 10, "title": "On Possession" },
     { "rating": 7, "title": "Horses" },
 ];
@@ -34,10 +34,13 @@ export const review = () => (
 
         <div className="review-main">
             <p>
-                
+                A very soothing and melancholic album. 
+                This is probably the most "ambient" album they have made, usually they are focussed on more of a dream pop or folk sound.
+                But they decided to go full ambient here, and I think it went down very well.
             </p>
             <p>
-                
+                Lead vocalist Charlotte Oleena, her voice is very majestic.
+                The whole album is like flying through a vast landscape of autumnal trees, a forest that goes on forever.
             </p>
             <p>
                 Only track here I'm not a big fan of is the final song "Horses", 
