@@ -35,6 +35,10 @@ import { review as LinkinPark_HybridTheory } from './content/linkin_park/hybrid_
 
 import { review as Nanoray_Digimaiden } from './content/nanoray/digimaiden/review.jsx';
 
+import { review as Orbital_Snivilisation } from './content/orbital/snivilisation/review.jsx';
+import { review as Orbital_TheMiddleOfNowhere } from './content/orbital/the_middle_of_nowhere/review.jsx';
+import { review as Orbital_InSides } from './content/orbital/in_sides/review.jsx';
+
 import { review as Poppy_Eat } from './content/poppy/eat/review.jsx';
 import { review as Poppy_IDisagree } from './content/poppy/i_disagree/review.jsx';
 
@@ -1112,6 +1116,18 @@ const database = {
 		},
 
 
+		"Cheng Bi - I want to waste time with you": {
+			lastfm_url: "https://www.last.fm/music/Cheng+Bi/I+want+to+waste+time+with+you",
+			rym_url: "https://rateyourmusic.com/release/album/%E7%A8%8B%E7%92%A7/%E6%88%91%E6%83%B3%E5%92%8C%E4%BD%A0%E8%99%9A%E5%BA%A6%E6%97%B6%E5%85%89/",
+			spotify_url: "https://rateyourmusic.com/release/album/%E7%A8%8B%E7%92%A7/%E6%88%91%E6%83%B3%E5%92%8C%E4%BD%A0%E8%99%9A%E5%BA%A6%E6%97%B6%E5%85%89/",
+			artist_name_Chinese: "程璧",
+			year_of_release: "2015",
+			date_of_review: "03 October, 2025",
+			genres: "Chamber folk; Folk pop; Chinese folk",
+			country: "China",
+			my_rating: 8.0,
+			my_review: ""
+		},
 		"Celer - Xiexie": {
 			lastfm_url: "https://www.last.fm/music/Celer/Xi%C3%A8xie",
 			rym_url: "https://rateyourmusic.com/release/album/celer/xiexie/",
@@ -2336,7 +2352,7 @@ const database = {
 			my_review: "",
 		},
 		"jason_isbell__weathervanes": {
-			lastfm_url: "https://www.last.fm/music/Jason+Isbell+and+The+400+Unit/Weathervanes",
+			lastfm_url: "https://www.last.fm/music/Jason+Isbell+and+the+400+Unit/Weathervanes",
 			rym_url: "https://rateyourmusic.com/release/album/jason-isbell-and-the-400-unit/weathervanes/",
 			spotify_url: "https://open.spotify.com/album/3KXHIwkGCHTjFmuYeBNXtc",
 			year_of_release: "2023",
@@ -3361,20 +3377,20 @@ const database = {
 			year_of_release: "1997",
 			genres: "Ambient techno; IDM; Breakbeat; Progressive Breaks; Neo-Psychedelia; Electronic",
 			my_rating: 10.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Orbital_InSides()),
 			date_of_review: "2017",
 			custom_cover_url: "https://f4.bcbits.com/img/a1871008282_10.jpg",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
-		"orbital__snivilization": {
-			lastfm_url: "https://www.last.fm/music/Orbital/Snivilization",
+		"orbital__snivilisation": {
+			lastfm_url: "https://www.last.fm/music/Orbital/Snivilisation",
 			rym_url: "https://rateyourmusic.com/release/album/orbital/snivilisation/",
 			spotify_url: "https://open.spotify.com/album/2biXiNkJXdREKZwx4HrhZE?si=CTCPAaamQKiaePEZ6Ux3QQ",
 			year_of_release: "1994",
 			date_of_review: "2018",
 			genres: "Ambient techno; Techno; Breakbeat; IDM; Electronic",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Orbital_Snivilisation()),
 		},
 		"orbital__the_middle_of_nowhere": {
 			lastfm_url: "https://www.last.fm/music/Orbital/The+Middle+of+Nowhere",
@@ -3384,6 +3400,16 @@ const database = {
 			date_of_review: "2018",
 			genres: "Ambient techno; Techno; Breakbeat; IDM; Electronic",
 			my_rating: 9.5,
+			my_review: ReactDomServer.renderToString(Orbital_TheMiddleOfNowhere()),
+		},
+		"orbital__orbital": {
+			lastfm_url: "https://www.last.fm/music/Orbital/Orbital",
+			rym_url: "https://rateyourmusic.com/release/album/orbital/orbital-green-album/",
+			spotify_url: "https://open.spotify.com/album/4RAIZHAkdmzR8awlPKH7Xh",
+			year_of_release: "1991",
+			date_of_review: "2024",
+			genres: "Electronic; Techno; Acid house; Acid techno; Trance",
+			my_rating: 8.0,
 			my_review: "",
 		},
 
