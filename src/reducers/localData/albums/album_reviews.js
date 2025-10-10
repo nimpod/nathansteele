@@ -154,7 +154,7 @@ const database = {
 			date_of_review: "2014",
 			genres: "Indie rock; Post-punk revival; Alternative rock; Garage rock; New wave",
 			tags: ["Old favourite"],
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"the_strokes__angles": {
@@ -199,7 +199,7 @@ const database = {
 			year_of_release: "2010",
 			date_of_review: "2014",
 			genres: "Indie pop; Surf music; Indie rock",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"the_drums__encyclopedia": {
@@ -249,6 +249,16 @@ const database = {
 		},
 
 
+		"The Dead Texan": {
+			lastfm_url: "https://www.last.fm/music/The+Dead+Texan/The+Dead+Texan",
+			rym_url: "https://rateyourmusic.com/release/album/the-dead-texan/the-dead-texan",
+			spotify_url: "https://open.spotify.com/album/55mLyioYUt6V3TxkFObTEo",
+			year_of_release: "2004",
+			date_of_review: "2025",
+			genres: "Ambient; Drone",
+			my_rating: 8.0,
+			my_review: ""
+		},
 		"The Black Dog - Spanners": {
 			lastfm_url: "https://www.last.fm/music/The+Black+Dog/Spanners",
 			rym_url: "https://rateyourmusic.com/release/album/the-black-dog/spanners/",
@@ -302,7 +312,7 @@ const database = {
 			year_of_release: "2008",
 			date_of_review: "2021",
 			genres: "Dubstep; Ragga; Industrial Hip-Hop",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.DEEP_CUTS
 		},
@@ -1041,7 +1051,7 @@ const database = {
 			year_of_release: "2008",
 			date_of_review: "2022",
 			genres: "Indie folk; Folk",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"bogdan_raczynski__samurai_math_beats": {
@@ -1829,7 +1839,7 @@ const database = {
 			year_of_release: "2009",
 			date_of_review: "2020",
 			genres: "Jazz; Vocal jazz; Latin jazz",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 	},
@@ -1906,7 +1916,7 @@ const database = {
 			date_of_review: "27/08/2025",
 			genres: "Chinese folk music; Ambient; ",
 			country: "China",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"HAAi - DJ-Kicks: HAAi": {
@@ -2134,7 +2144,7 @@ const database = {
 			artist_name_English: "Joe Hisaishi",
 			//album_name_English: "A Scene At The Sea OST",
 			genres: "Film soundtrack; New age; Neoclassical new age; Impressionism",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"joe_hisaishi__children_of_the_sea_OST": {
@@ -2338,7 +2348,7 @@ const database = {
 			year_of_release: "2008",
 			date_of_review: "2020",
 			genres: "Film soundtrack; Jazz pop",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"jme__integrity": {
@@ -2523,7 +2533,7 @@ const database = {
 			year_of_release: "2017",
 			date_of_review: "2024",
 			genres: "Jazz fusion; Jazz; Progressive rock",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
@@ -3036,7 +3046,7 @@ const database = {
 			date_of_review: "2015",
 			genres: "Pop; Dance pop; Indie pop; Synthpop",
 			themes: ["Summery"],
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"milt_jackson__bags_and_trane": {
@@ -3401,7 +3411,7 @@ const database = {
 			year_of_release: "2023",
 			date_of_review: "2023",
 			genres: "Ambient; Post-minimalism",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
@@ -3817,7 +3827,7 @@ const database = {
 			year_of_release: "2006",
 			date_of_review: "2014",
 			genres: "Indie rock; Alternative rock; Neo-Psychedelia; Electronic",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 
@@ -4266,7 +4276,7 @@ const database = {
 			year_of_release: "2021",
 			date_of_review: "2021",
 			genres: "Djent; Alternative metal; Metalcore; Post-metal",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"sam_gellaitry__escapism_iii": {
@@ -4363,7 +4373,7 @@ const database = {
 			themes: ["Upbeat"],
 			tags: ["Old favourite"],
 			album_name_displayed: "Vessel",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"twenty_one_pilots__blurryface": {
