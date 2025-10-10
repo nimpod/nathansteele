@@ -14,12 +14,16 @@ import { review as AndreasVollenweider_DownToTheMoon } from './content/andreas_v
 
 import { review as BoC_MusicHasTheRightToChildren } from './content/boards_of_canada/music_has_the_right_to_children/review.jsx';
 import { review as BoC_Random35TracksTape } from './content/boards_of_canada/random_35_tracks_tape/review.jsx';
+import { review as BrunoSanfilippo_VerSacrum } from './content/bruno_sanfilippo/ver_sacrum/review.jsx';
+import { review as BrunoSanfilippo_Unity } from './content/bruno_sanfilippo/unity/review.jsx';
 
 import { review as ChisatoYamada_SuiteNihonkai } from './content/chisato_yamada/suite_nihonkai/review.jsx';
 import { review as Crumb_Jinx } from './content/crumb/jinx/review.jsx';
 import { review as Crumb_Locket } from './content/crumb/locket/review.jsx';
 
 import { review as DigablePlanets_Reachin } from './content/digable_planets/reachin/review.jsx';
+
+import { review as FleetFoxes_FleetFoxes } from './content/fleet_foxes/fleet_foxes/review.jsx';
 
 import { review as GlobalCommunication_7614 } from './content/global_communication/7614/review.jsx';
 import { review as GregIsakov_ThisEmptyNorthernHemisphere } from './content/greg_isakov/this_empty_northern_hemisphere/review.jsx';
@@ -38,6 +42,8 @@ import { review as RafaelToral_SpectralEvolution } from './content/rafael_toral/
 import { review as RunTheJewels_RTJ4 } from './content/run_the_jewels/rtj4/review.jsx';
 
 import { review as SeaOleena__WeavingABasket } from './content/sea_oleena/weaving_a_basket/review.jsx';
+import { review as SOAD_Hypnotize } from './content/system_of_a_down/hypnotize/review.jsx';
+import { review as SOAD_Mezmerize } from './content/system_of_a_down/mezmerize/review.jsx';
 
 import { review as Xtc_Skylarking } from './content/xtc/skylarking/review.jsx';
 import { review as Xtc_Mummer } from './content/xtc/mummer/review.jsx';
@@ -766,7 +772,7 @@ const database = {
 			custom_cover_url: "https://e.snmc.io/i/600/s/9199616ea9d11c849dcdb03698cedcc8/10834079/bruno-sanfilippo-ver-sacrum-Cover-Art.jpg",
 			genres: "Ambient; Post-minimalism; Neo-classical new age; Electronic",
 			my_rating: 10.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(BrunoSanfilippo_VerSacrum()),
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"bruno_sanfilippo__unity": {
@@ -777,7 +783,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Ambient; Post-minimalism",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(BrunoSanfilippo_Unity()),
 		},
 
 		//
@@ -1165,6 +1171,7 @@ const database = {
 			genres: "Tsugaru shamisen; Min'yō Music; J-acoustic; J-funk; Funk",
 			my_rating: 10.0,
 			date_of_review: "2021",
+			country: "Japan",
 			my_review: ReactDomServer.renderToString(ChisatoYamada_SuiteNihonkai()),
 		},
 		"cavern_of_anti_matter__in_fabric_ost": {
@@ -1618,8 +1625,8 @@ const database = {
 			year_of_release: "2008",
 			date_of_review: "2017",
 			genres: "Indie folk; Indie pop; Chamber pop; Folk pop; Baroque pop; Folk rock",
-			my_rating: 9.5,
-			my_review: "",
+			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(FleetFoxes_FleetFoxes()),
 		},
 		"fleet_foxes__helplessness_blues": {
 			lastfm_url: "https://www.last.fm/music/Fleet+Foxes/Helplessness+Blues",
@@ -1910,11 +1917,11 @@ const database = {
 
 		"Haya - 寂靜的天空": {
 			lastfm_url: "https://www.last.fm/music/HAYA%E6%A8%82%E5%9C%98/%E5%AF%82%E9%9D%9C%E7%9A%84%E5%A4%A9%E7%A9%BA",
-			rym_url: "",
-			spotify_url: "https://open.spotify.com/album/1vETf8fzGng1ynbmaMbo3u?si=lZrmTusYQzSLr8lwDIlHhQ",
+			rym_url: "https://rateyourmusic.com/release/album/%E9%BB%9B%E9%9D%92%E5%A1%94%E5%A8%9C-haya%E6%A8%82%E5%9C%98/%E5%AF%82%E9%9D%9C%E7%9A%84%E5%A4%A9%E7%A9%BA/",
+			spotify_url: "https://open.spotify.com/album/1vETf8fzGng1ynbmaMbo3u",
 			year_of_release: "2009",
 			date_of_review: "27/08/2025",
-			genres: "Chinese folk music; Ambient; ",
+			genres: "Chinese folk music; New age; Mongolian throat singing; Chamber folk",
 			country: "China",
 			my_rating: 8.5,
 			my_review: "",
@@ -1938,6 +1945,7 @@ const database = {
 			genres: "Jazz; Nu jazz; J-pop; Vocaloid; Breakbeat; Electronic",
 			my_rating: 9.0,
 			my_review: "",
+			country: "Japan",
 		},
 		"hajime_mizoguchi__jin_roh_soundtrack": {
 			lastfm_url: "https://www.last.fm/music/%E6%BA%9D%E5%8F%A3%E8%82%87/Jin-Roh",
@@ -1950,7 +1958,8 @@ const database = {
 			genres: "Film soundtrack; New age; Modern classical",
 			my_rating: 8.0,
 			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.NIELS
+			recommended_by: TrustworthyMusicReviewers.NIELS,
+			country: "Japan",
 		},
 	},
 
@@ -1965,6 +1974,7 @@ const database = {
 			artist_name_Japanese: "青葉市子",
 			genres: "J-folk; Chamber folk; Ambient; New age; Nature recordings; J-acoustic",
 			themes: ["Japanese", "Majestic", "Atmospheric"],
+			country: "Japan",
 			custom_cover_url: "https://m.media-amazon.com/images/I/71Q93PPdn0L._UF894,1000_QL80_.jpg",
 			my_rating: 10.0,
 			my_review: "",
@@ -1977,6 +1987,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "J-folk; J-acoustic; Folk",
 			themes: ["Japanese"],
+			country: "Japan",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -1988,6 +1999,7 @@ const database = {
 			date_of_review: "2019",
 			genres: "J-folk; J-acoustic; Folk",
 			themes: ["Japanese"],
+			country: "Japan",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -2510,6 +2522,7 @@ const database = {
 			date_of_review: "2024",
 			genres: "Korean classical music; Film soundtrack",
 			tags: ["Not on spotify"],
+			country: "South Korea",
 			my_rating: 8.0,
 			my_review: ""
 		},
@@ -2535,6 +2548,7 @@ const database = {
 			genres: "Jazz fusion; Jazz; Progressive rock",
 			my_rating: 8.5,
 			my_review: "",
+			country: "Japan",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"karl_jenkins__motets": {
@@ -2556,6 +2570,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "Klezmer; Alternative rock; Punk rock",
 			themes: ["Norwegian"],
+			country: "Norway",
 			my_rating: 8.5,
 			my_review: "",
 		},
@@ -2805,6 +2820,7 @@ const database = {
 			genres: "K-pop; Jazz; Jazz pop; Vocal jazz",
 			my_rating: 8.0,
 			my_review: "",
+			country: "South Korea",
 			recommended_by: TrustworthyMusicReviewers.LOGSTAR_100
 		},
 	},
@@ -2886,6 +2902,7 @@ const database = {
 			genres: "J-rock; Jazz punk; Jazz fusion; Noise rock; J-pop; Punk",
 			my_rating: 9.0,
 			my_review: "",
+			country: "Japan",
 		},
 		"midori__aratamemashite_hajimemashite_midori_desu": {
 			lastfm_url: "https://www.last.fm/music/Midori/Aratamemashite+Hajimemashite+Midori+Desu",
@@ -2896,6 +2913,7 @@ const database = {
 			genres: "J-rock; Jazz punk; Jazz fusion; Noise rock; J-pop; Punk",
 			my_rating: 9.0,
 			my_review: "",
+			country: "Japan",
 		},
 
 
@@ -2908,6 +2926,7 @@ const database = {
 			genres: "Hindustani classical music; Downtempo",
 			my_rating: 8.5,
 			my_review: "",
+			country: "India"
 		},
 		"Monolake - Cinemascope": {
 			lastfm_url: "https://www.last.fm/music/Monolake/Cinemascope",
@@ -2960,6 +2979,7 @@ const database = {
 			genres: "Jazz fusion; Progressive big band; Jazz; J-jazz",
 			my_rating: 8.5,
 			my_review: "",
+			country: "Japan",
 		},
 		"metamatics__mind_mushing_git": {
 			lastfm_url: "https://www.last.fm/music/Metamatics/Midnight+Sun+Pig",
@@ -2982,6 +3002,7 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 			date_of_review: "2023",
+			country: "South Korea",
 			recommended_by: TrustworthyMusicReviewers.LOGSTAR_100
 		},
 		"massive_attack__mezzanine": {
@@ -3036,6 +3057,7 @@ const database = {
 			genres: "Jazz fusion; Jazz rock; Progressive rock; Progressive metal; Djent; Funk metal; Jazz",
 			my_rating: 9.0,
 			my_review: "",
+			country: "India",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"misun__superstitions": {
@@ -3099,6 +3121,7 @@ const database = {
 			date_of_review: "2022",
 			genres: "Salsa; Latin afrobeat; Latin electronic; Latin funk; Musica tropicale; Tropicanibalismo; Tropicália",
 			themes: ["Colombia", "Latin rhythms"],
+			country: "Colombia",
 			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP,
@@ -3546,6 +3569,7 @@ const database = {
 			genres: "Hindustani classical music",
 			country: "India",
 			themes: ["India; Tamil"],
+			country: "India",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -3840,6 +3864,7 @@ const database = {
 			date_of_review: "2025",
 			date_of_review: "13/05/2025",
 			genres: "Kuda kepang; Industrial techno; Ritual ambient; Deconstructed club; Industrial hardcore",
+			country: "Indonesia",
 			my_rating: 8.5,
 			my_review: "",
 		},
@@ -3963,8 +3988,8 @@ const database = {
 			genres: "Alternative metal; Avant-garde metal",
 			tags: ["Old favourite"],
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/a96a0ff1cd9b384659b7edac19dc15b6.jpg#a96a0ff1cd9b384659b7edac19dc15b6",
-			my_rating: 10.0,
-			my_review: "",
+			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(SOAD_Hypnotize()),
 			date_of_review: "2010",
 		},
 		"system_of_a_down__system_of_a_down": {
@@ -3975,7 +4000,7 @@ const database = {
 			date_of_review: "2011",
 			genres: "Avant-garde metal; Nu metal; Heavy metal; Alternative metal",
 			tags: ["Old favourite"],
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 		"system_of_a_down__steal_this_album": {
@@ -3986,7 +4011,7 @@ const database = {
 			date_of_review: "2011",
 			genres: "Nu metal; Heavy metal; Alternative metal; Avant-garde metal",
 			tags: ["Old favourite"],
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 		"system_of_a_down__mezmerize": {
@@ -3996,8 +4021,8 @@ const database = {
 			year_of_release: "2005",
 			genres: "Alternative metal; Avant-garde metal; Heavy metal; Nu metal",
 			tags: ["Old favourite"],
-			my_rating: 10.0,
-			my_review: "",
+			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(SOAD_Mezmerize()),
 			date_of_review: "2010",
 		},
 		"system_of_a_down__toxicity": {
@@ -4103,6 +4128,7 @@ const database = {
 			genres: "Dark ambient; Ambient pop; Art pop",
 			my_rating: 8.0,
 			my_review: "",
+			country: "Iceland",
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"snarky puppy immigrance": {
@@ -4167,6 +4193,7 @@ const database = {
 			year_of_release: "2023",
 			date_of_review: "2024",
 			genres: "Jazz; Indo jazz; Hindustani Classical Music",
+			country: "India",
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -4193,6 +4220,7 @@ const database = {
 			custom_cover_url: "https://e.snmc.io/i/600/s/34ab31eb0b79f74d0c14afef3ffae48e/6344120/senri-kawaguchi-cider-%EF%BD%9Ehard-and-sweet%EF%BD%9E-Cover-Art.jpg",
 			my_rating: 8.0,
 			my_review: "",
+			country: "Japan",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"scott_walker__scott3": {
@@ -4265,6 +4293,7 @@ const database = {
 			album_name_English: "Shōso Strip",
 			year_of_release: "2000",
 			date_of_review: "2022",
+			country: "Japan",
 			genres: "J-rock; Alternative rock; J-pop; Kayokyoku",
 			my_rating: 8.5,
 			my_review: "",
@@ -4309,6 +4338,7 @@ const database = {
 			year_of_release: "1999",
 			date_of_review: "2022",
 			genres: "Post-rock; Ambient; Minimalism",
+			country: "Iceland",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -4863,6 +4893,7 @@ const database = {
 			year_of_release: "1987",
 			date_of_review: "2023",
 			genres: "New age; Ambient; Neoclassical new age; Piano",
+			country: "Japan",
 			my_rating: 8.5,
 			my_review: "",
 		},

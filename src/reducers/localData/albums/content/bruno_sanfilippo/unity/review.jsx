@@ -2,23 +2,19 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Solider Side - intro" },
-    { "rating": 9, "title": "B.Y.O.B" },
-    { "rating": 8, "title": "Revenge" },
-    { "rating": 9, "title": "Cigaro" },
-    { "rating": 9, "title": "Radio/Video" },
-    { "rating": 10, "title": "This Cocaine Makes Me Feel Like I'm On This Song" },
-    { "rating": 10, "title": "Violent Pornogaraphy" },
-    { "rating": 10, "title": "Question!" },
-    { "rating": 9, "title": "Sad Statue" },
-    { "rating": 9, "title": "Old School Hollywood" },
-    { "rating": 9, "title": "Lost In Hollywood" },
+    { "rating": 11, "title": "Spiral" },
+    { "rating": 10, "title": "One" },
+    { "rating": 8, "title": "Lux" },
+    { "rating": 8, "title": "Simple" },
+    { "rating": 8, "title": "Oneness" },
+    { "rating": 10, "title": "Entity" },
+    { "rating": 9, "title": "Cyclical" },
+    { "rating": 8, "title": "Unity" },
 ];
 
 const themes = [
-    "Energetic",
-    "Aggressive",
-    "Accessible",
+    "Melancholic",
+    "Peaceful",
 ];
 
 const date_of_review = "June 10, 2025";

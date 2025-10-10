@@ -2,23 +2,20 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Solider Side - intro" },
-    { "rating": 9, "title": "B.Y.O.B" },
-    { "rating": 8, "title": "Revenge" },
-    { "rating": 9, "title": "Cigaro" },
-    { "rating": 9, "title": "Radio/Video" },
-    { "rating": 10, "title": "This Cocaine Makes Me Feel Like I'm On This Song" },
-    { "rating": 10, "title": "Violent Pornogaraphy" },
-    { "rating": 10, "title": "Question!" },
-    { "rating": 9, "title": "Sad Statue" },
-    { "rating": 9, "title": "Old School Hollywood" },
-    { "rating": 9, "title": "Lost In Hollywood" },
+    { "rating": 11, "title": "Sacred Spring" },
+    { "rating": 10, "title": "Camerinum" },
+    { "rating": 9, "title": "The Children's Ceremony" },
+    { "rating": 10, "title": "Initiation Pilgrimages" },
+    { "rating": 9, "title": "Collective Calamity" },
+    { "rating": 10, "title": "Numen" },
+    { "rating": 10, "title": "Superstition" },
+    { "rating": 9, "title": "The Feast of Crows" },
+    { "rating": 9, "title": "Yersinia Pestis" },
 ];
 
 const themes = [
-    "Energetic",
-    "Aggressive",
-    "Accessible",
+    "Melancholic",
+    "Peaceful",
 ];
 
 const date_of_review = "June 10, 2025";

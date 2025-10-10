@@ -2,23 +2,21 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Solider Side - intro" },
-    { "rating": 9, "title": "B.Y.O.B" },
-    { "rating": 8, "title": "Revenge" },
-    { "rating": 9, "title": "Cigaro" },
-    { "rating": 9, "title": "Radio/Video" },
-    { "rating": 10, "title": "This Cocaine Makes Me Feel Like I'm On This Song" },
-    { "rating": 10, "title": "Violent Pornogaraphy" },
-    { "rating": 10, "title": "Question!" },
-    { "rating": 9, "title": "Sad Statue" },
-    { "rating": 9, "title": "Old School Hollywood" },
-    { "rating": 9, "title": "Lost In Hollywood" },
+    { "rating": 9, "title": "Sun It Rises" },
+    { "rating": 9, "title": "White Winter Hymnal" },
+    { "rating": 9, "title": "Ragged Wood" },
+    { "rating": 10, "title": "Tiger Mountain Peasant Song" },
+    { "rating": 9, "title": "Quiet Houses" },
+    { "rating": 9, "title": "He Doesn't Know Why" },
+    { "rating": 9, "title": "Heard Them Stirring" },
+    { "rating": 9, "title": "Your Protector" },
+    { "rating": 9, "title": "Meadowlarks" },
+    { "rating": 10, "title": "Blue Ridge Mountains" },
+    { "rating": 9, "title": "Oliver James" },
 ];
 
 const themes = [
-    "Energetic",
-    "Aggressive",
-    "Accessible",
+    "Peaceful",
 ];
 
 const date_of_review = "June 10, 2025";
