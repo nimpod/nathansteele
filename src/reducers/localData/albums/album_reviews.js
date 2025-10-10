@@ -44,6 +44,10 @@ import { review as RunTheJewels_RTJ4 } from './content/run_the_jewels/rtj4/revie
 import { review as SeaOleena__WeavingABasket } from './content/sea_oleena/weaving_a_basket/review.jsx';
 import { review as SOAD_Hypnotize } from './content/system_of_a_down/hypnotize/review.jsx';
 import { review as SOAD_Mezmerize } from './content/system_of_a_down/mezmerize/review.jsx';
+import { review as SufjanStevens_CarrieAndLowell } from './content/sufjan_stevens/carrie_and_lowell/review.jsx';
+import { review as SufjanStevens_Illinois } from './content/sufjan_stevens/illinois/review.jsx';
+import { review as SoundsFromTheGround_Luminal } from './content/sounds_from_the_ground/luminal/review.jsx';
+import { review as SoundsFromTheGround_Mosaic } from './content/sounds_from_the_ground/mosaic/review.jsx';
 
 import { review as Xtc_Skylarking } from './content/xtc/skylarking/review.jsx';
 import { review as Xtc_Mummer } from './content/xtc/mummer/review.jsx';
@@ -4046,7 +4050,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "Indie folk; Chamber folk; Singer-songwritter",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(SufjanStevens_CarrieAndLowell()),
 		},
 		"sufjan_stevens__ilinois": {
 			lastfm_url: "https://www.last.fm/music/Sufjan+Stevens/Illinois",
@@ -4055,8 +4059,8 @@ const database = {
 			year_of_release: "2005",
 			date_of_review: "2021",
 			genres: "Chamber pop; Baroque pop; Indie folk",
-			my_rating: 8.5,
-			my_review: "",
+			my_rating: 8.0,
+			my_review: ReactDomServer.renderToString(SufjanStevens_Illinois()),
 		},
 
 		//
@@ -4069,7 +4073,7 @@ const database = {
 			genres: "Ambient; Ambient dub; Downtempo; Electronic",
 			custom_cover_url: "https://f4.bcbits.com/img/a1960581482_65",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(SoundsFromTheGround_Mosaic()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"sounds_from_the_ground__luminal": {
@@ -4081,7 +4085,7 @@ const database = {
 			genres: "Ambient; Ambient dub; Downtempo; Trip hop; Electronic",
 			custom_cover_url: "https://f4.bcbits.com/img/a3859474998_65",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(SoundsFromTheGround_Luminal()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 
