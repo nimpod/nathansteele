@@ -2,19 +2,27 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "Way Out -->" },
-    { "rating": 10, "title": "Spare Parts Express" },
-    { "rating": 10, "title": "Know Where to Run" },
-    { "rating": 10, "title": "I Don't Know You People" },
-    { "rating": 9, "title": "Otono" },
-    { "rating": 10, "title": "Nothing Left 1" },
-    { "rating": 11, "title": "Nothing Left 2" },
-    { "rating": 9, "title": "Style" },
+    { "rating": 9, "title": "Garden of Earthly Delights" },
+    { "rating": 8, "title": "Mayor of Simpleton" },
+    { "rating": 9, "title": "King For A Day" },
+    { "rating": 7, "title": "Here Comes President Kill Again" },
+    { "rating": 8, "title": "The Loving" },
+    { "rating": 10, "title": "Poor Skeleton Steps Out" },
+    { "rating": 9, "title": "One of the Millions" },
+    { "rating": 11, "title": "Scarecrow People" },
+    { "rating": 7, "title": "Merely A Man" },
+    { "rating": 9, "title": "Cynical Days" },
+    { "rating": 7, "title": "Across This Antheap" },
+    { "rating": 7, "title": "Hold Me Daddy" },
+    { "rating": 8, "title": "Pink Thing" },
+    { "rating": 8, "title": "Minature Sun" },
+    { "rating": 10, "title": "Chalkhills and Children" },
 ];
 
-const themes = [
-    
+const themes = [,
 ];
+
+const date_of_review = "June 10, 2025";
 
 export const review = () => (
     <div className='review-content'>

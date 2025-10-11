@@ -2,18 +2,25 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "Way Out -->" },
-    { "rating": 10, "title": "Spare Parts Express" },
-    { "rating": 10, "title": "Know Where to Run" },
-    { "rating": 10, "title": "I Don't Know You People" },
-    { "rating": 9, "title": "Otono" },
-    { "rating": 10, "title": "Nothing Left 1" },
-    { "rating": 11, "title": "Nothing Left 2" },
-    { "rating": 9, "title": "Style" },
+    { "rating": 10, "title": "25 O'Clock" },
+    { "rating": 9, "title": "Bike Ride To The Moon" },
+    { "rating": 8, "title": "My Love Explodes" },
+    { "rating": 10, "title": "What In The World?" },
+    { "rating": 8,  "title": "Your Gold Dress" },
+    { "rating": 8, "title": "The Mole From The Ministry" },
+    { "rating": 11, "title": "Vanishing Girl" },
+    { "rating": 10, "title": "Have You Seen Jackie?" },
+    { "rating": 9, "title": "Little Lighthouse" },
+    { "rating": 11, "title": "You're A Good Man Albert Brown" },
+    { "rating": 8, "title": "Collideascope" },
+    { "rating": 7, "title": "You're My Drug" },
+    { "rating": 8, "title": "Shiny Cage" },
+    { "rating": 11, "title": "Braniac's Daughter" },
+    { "rating": 8, "title": "The Affliated" },
+    { "rating": 10, "title": "Pale And Precious" },
 ];
 
-const themes = [
-    
+const themes = [,
 ];
 
 export const review = () => (

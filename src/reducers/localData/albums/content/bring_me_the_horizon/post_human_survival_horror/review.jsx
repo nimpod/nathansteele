@@ -2,14 +2,15 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "Way Out -->" },
-    { "rating": 10, "title": "Spare Parts Express" },
-    { "rating": 10, "title": "Know Where to Run" },
-    { "rating": 10, "title": "I Don't Know You People" },
-    { "rating": 9, "title": "Otono" },
-    { "rating": 10, "title": "Nothing Left 1" },
-    { "rating": 11, "title": "Nothing Left 2" },
-    { "rating": 9, "title": "Style" },
+    { "rating": 10, "title": "Dear Diary" },
+    { "rating": 10, "title": "Parasite Eve" },
+    { "rating": 10, "title": "Teardrops" },
+    { "rating": 9, "title": "Obey" },
+    { "rating": 9,  "title": "Itch For The Cure" },
+    { "rating": 10, "title": "Kingslayer" },
+    { "rating": 8, "title": "1x1" },
+    { "rating": 9, "title": "Ludens" },
+    { "rating": 10, "title": "One Day The Only Butterflies Left Will Be In Your Chest" },
 ];
 
 const themes = [

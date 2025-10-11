@@ -73,11 +73,6 @@ export const review = () => (
                     <li>An ethereal/mysterious/creepy/surreal/cosmic/atmospheric vibe</li>
                 </ul>
             </p>
-            <p>
-                To give an album a 10/10, every song has to be perfect. 
-                This album absolutely achieves that, and goes beyond, in terms of achieving high quality AND quantity. 
-                There are so many amazing moments on this album.
-            </p>
         </div>
 
         {/* My ratings of each track */}
@@ -88,7 +83,8 @@ export const review = () => (
         {/* A brief overview/summary of my personal experience with the album */}
         <div class="review-summary">
             <p>
-                Truly the greatest album of all time. The marriage of futurism and nostalgia is unlike any album I have ever heard.
+                One of my favourite albums of all time. 
+                The marriage of futurism and nostalgia is unlike any album I have ever heard.
                 The balance between melancolia and happienss is perfect.
                 It has an ethereal/mysterious/creepy/surreal/cosmic/atmospheric vibe like no other album.
                 The quantity of the quality on this album is unmatched.

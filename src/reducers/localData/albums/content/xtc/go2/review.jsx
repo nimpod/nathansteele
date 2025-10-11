@@ -2,18 +2,22 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "Way Out -->" },
-    { "rating": 10, "title": "Spare Parts Express" },
-    { "rating": 10, "title": "Know Where to Run" },
-    { "rating": 10, "title": "I Don't Know You People" },
-    { "rating": 9, "title": "Otono" },
-    { "rating": 10, "title": "Nothing Left 1" },
-    { "rating": 11, "title": "Nothing Left 2" },
-    { "rating": 9, "title": "Style" },
+    { "rating": 11, "title": "Meccanik Dancing" },
+    { "rating": 9, "title": "Battery Bridges" },
+    { "rating": 9, "title": "Buzzcity Talking" },
+    { "rating": 9, "title": "Crowded Room" },
+    { "rating": 9, "title": "The Rhythm" },
+    { "rating": 8, "title": "Red" },
+    { "rating": 10, "title": "Beatown" },
+    { "rating": 8, "title": "Life Is Good In The Greenhouse" },
+    { "rating": 10, "title": "Jumping In Gomorrah" },
+    { "rating": 8, "title": "My Weapon" },
+    { "rating": 8, "title": "Super-Tuff" },
+    { "rating": 9, "title": "I Am The Audience" },
+    { "rating": 9, "title": "Are You Receiving Me?" },
 ];
 
-const themes = [
-    
+const themes = [,
 ];
 
 export const review = () => (

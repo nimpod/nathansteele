@@ -2,14 +2,18 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "Way Out -->" },
-    { "rating": 10, "title": "Spare Parts Express" },
-    { "rating": 10, "title": "Know Where to Run" },
-    { "rating": 10, "title": "I Don't Know You People" },
-    { "rating": 9, "title": "Otono" },
-    { "rating": 10, "title": "Nothing Left 1" },
-    { "rating": 11, "title": "Nothing Left 2" },
-    { "rating": 9, "title": "Style" },
+    { "rating": 11, "title": "The Appeal & the Mindsweep I" },
+    { "rating": 8, "title": "The One True Colour" },
+    { "rating": 11, "title": "Anaesthetist" },
+    { "rating": 8, "title": "The Last Garrison" },
+    { "rating": 11,  "title": "Never Let Go Of The Microscope" },
+    { "rating": 10, "title": "Myopia" },
+    { "rating": 9, "title": "Torn Apart" },
+    { "rating": "interlude", "title": "Interlude" },
+    { "rating": 9, "title": "The Bank of England" },
+    { "rating": 10, "title": "There's A Price On Your Head" },
+    { "rating": 10, "title": "Dear Future Historians" },
+    { "rating": 10, "title": "The Appeal & the Mindsweep II" },
 ];
 
 const themes = [

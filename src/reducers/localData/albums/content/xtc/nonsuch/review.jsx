@@ -2,18 +2,26 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "Way Out -->" },
-    { "rating": 10, "title": "Spare Parts Express" },
-    { "rating": 10, "title": "Know Where to Run" },
-    { "rating": 10, "title": "I Don't Know You People" },
-    { "rating": 9, "title": "Otono" },
-    { "rating": 10, "title": "Nothing Left 1" },
-    { "rating": 11, "title": "Nothing Left 2" },
-    { "rating": 9, "title": "Style" },
+    { "rating": 8, "title": "Ballad of Peter Pumpkinhead" },
+    { "rating": 9, "title": "My Bird Performs" },
+    { "rating": 8, "title": "Dear Madam Barnum" },
+    { "rating": 8, "title": "Humle Daisy" },
+    { "rating": 8, "title": "The Smartest Monkeys" },
+    { "rating": 8, "title": "The Disappointed" },
+    { "rating": 8, "title": "Holly Up On Poppy" },
+    { "rating": 7, "title": "Crocodile" },
+    { "rating": 10, "title": "Rook" },
+    { "rating": 10, "title": "Omnibus" },
+    { "rating": 8, "title": "That Wave" },
+    { "rating": 8, "title": "Then She Appeared" },
+    { "rating": 9, "title": "War Dance" },
+    { "rating": 10, "title": "Wrapped In Grey" },
+    { "rating": 9, "title": "The Ugly Underneath" },
+    { "rating": 8, "title": "Bungalow" },
+    { "rating": 10, "title": "Books Are Burning" },
 ];
 
-const themes = [
-    
+const themes = [,
 ];
 
 export const review = () => (

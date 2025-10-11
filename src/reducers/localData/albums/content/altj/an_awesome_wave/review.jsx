@@ -2,14 +2,20 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "Way Out -->" },
-    { "rating": 10, "title": "Spare Parts Express" },
-    { "rating": 10, "title": "Know Where to Run" },
-    { "rating": 10, "title": "I Don't Know You People" },
-    { "rating": 9, "title": "Otono" },
-    { "rating": 10, "title": "Nothing Left 1" },
-    { "rating": 11, "title": "Nothing Left 2" },
-    { "rating": 9, "title": "Style" },
+    { "rating": 10, "title": "Intro" },
+    { "rating": 10, "title": "Interlude I (The Ripe & Ruin)" },
+    { "rating": 10, "title": "Tessellate" },
+    { "rating": 11, "title": "Breezblocks" },
+    { "rating": 10,  "title": "Interlude II (Guitar)" },
+    { "rating": 10, "title": "Something Good" },
+    { "rating": 10, "title": "Dissolve Me" },
+    { "rating": 11, "title": "Matilda" },
+    { "rating": 10, "title": "Ms" },
+    { "rating": 11, "title": "Fitzpleasure" },
+    { "rating": 10, "title": "Interlude III (Piano)" },
+    { "rating": 10, "title": "Bloodflood" },
+    { "rating": 10, "title": "Taro" },
+    { "rating": 10, "title": "Hand-Made" },
 ];
 
 const themes = [

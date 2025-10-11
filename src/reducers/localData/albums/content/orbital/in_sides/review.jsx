@@ -14,7 +14,6 @@ const tracklist = [
 ];
 
 const themes = [
-    "",
 ];
 
 export const review = () => (

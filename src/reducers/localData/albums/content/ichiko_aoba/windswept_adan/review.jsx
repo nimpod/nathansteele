@@ -2,18 +2,23 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "Way Out -->" },
-    { "rating": 10, "title": "Spare Parts Express" },
-    { "rating": 10, "title": "Know Where to Run" },
-    { "rating": 10, "title": "I Don't Know You People" },
-    { "rating": 9, "title": "Otono" },
-    { "rating": 10, "title": "Nothing Left 1" },
-    { "rating": 11, "title": "Nothing Left 2" },
-    { "rating": 9, "title": "Style" },
+    { "rating": 11, "title": "Prologue" },
+    { "rating": 10, "title": "Pilgrimage" },
+    { "rating": 10, "title": "Porcelain" },
+    { "rating": 10, "title": "Horo" },
+    { "rating": 11, "title": "Easter Lily" },
+    { "rating": 12, "title": "Parfum d'etoiles" },
+    { "rating": 10, "title": "Kirinaki Shima" },
+    { "rating": 9, "title": "Sagu Palm's Song" },
+    { "rating": 9, "title": "Chinuhaji" },
+    { "rating": 10, "title": "Chi no Kaze" },
+    { "rating": 10, "title": "Hagupit" },
+    { "rating": 10, "title": "Dawn in the Adan" },
+    { "rating": 9, "title": "Ohayashi" },
+    { "rating": 10, "title": "Adan no Shima no Tanjyosai" },
 ];
 
 const themes = [
-    
 ];
 
 export const review = () => (

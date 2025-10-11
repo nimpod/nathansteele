@@ -2,18 +2,18 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "Way Out -->" },
-    { "rating": 10, "title": "Spare Parts Express" },
-    { "rating": 10, "title": "Know Where to Run" },
-    { "rating": 10, "title": "I Don't Know You People" },
-    { "rating": 9, "title": "Otono" },
-    { "rating": 10, "title": "Nothing Left 1" },
-    { "rating": 11, "title": "Nothing Left 2" },
-    { "rating": 9, "title": "Style" },
+    { "rating": 10, "title": "Sous les draps" },
+    { "rating": 10, "title": "Trois petites filles" },
+    { "rating": 10, "title": "Waltz" },
+    { "rating": 10, "title": "La nature des peurs" },
+    { "rating": 10, "title": "Du bout des doigts" },
+    { "rating": 11, "title": "Le temps immobile" },
+    { "rating": 10, "title": "Cercles" },
+    { "rating": 9, "title": "Celui qui n'existe pas" },
+    { "rating": 10, "title": "Au fond des bois" },
 ];
 
 const themes = [
-    
 ];
 
 export const review = () => (
