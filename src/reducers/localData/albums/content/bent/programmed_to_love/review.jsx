@@ -2,22 +2,19 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Somewhat Damaged" },
-    { "rating": 10, "title": "The Day The World Went Away" },
-    { "rating": 10, "title": "The Frail" },
-    { "rating": 9, "title": "The Wretched" },
-    { "rating": 9,  "title": "We're In This Together" },
-    { "rating": 8, "title": "The Fragile" },
-    { "rating": 8, "title": "Just Like You Imagined" },
-    { "rating": 8, "title": "Even Deeper" },
-    { "rating": 7, "title": "Pilgrimage" },
-    { "rating": 8, "title": "No, You Don't" },
-    { "rating": 10, "title": "La Mer" },
-    { "rating": 9, "title": "The Great Below" },
+    { "rating": 9, "title": "Exercise 1" },
+    { "rating": 10, "title": "Private Road" },
+    { "rating": 8, "title": "Cylons In Love" },
+    { "rating": 8, "title": "Chocolate Wings" },
+    { "rating": 8, "title": "Invisible Pedestrians" },
+    { "rating": 9, "title": "I Remember Johnny" },
+    { "rating": 11, "title": "Swollen" },
+    { "rating": 8, "title": "Well Top Mary" },
+    { "rating": 8, "title": "Irritating Noises" },
+    { "rating": 8, "title": "Always" },
 ];
 
 const themes = [
-    
 ];
 
 export const review = () => (

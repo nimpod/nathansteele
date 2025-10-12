@@ -2,23 +2,35 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Somewhat Damaged" },
-    { "rating": 10, "title": "The Day The World Went Away" },
-    { "rating": 10, "title": "The Frail" },
-    { "rating": 9, "title": "The Wretched" },
-    { "rating": 9,  "title": "We're In This Together" },
-    { "rating": 8, "title": "The Fragile" },
-    { "rating": 8, "title": "Just Like You Imagined" },
-    { "rating": 8, "title": "Even Deeper" },
-    { "rating": 7, "title": "Pilgrimage" },
-    { "rating": 8, "title": "No, You Don't" },
-    { "rating": 10, "title": "La Mer" },
-    { "rating": 9, "title": "The Great Below" },
+    { "rating": 10, "title": "Cascade" },
+    { "rating": 10, "title": "III Flower" },
+    { "rating": 10, "title": "Flak" },
+    { "rating": 10, "title": "Bird Wings" },
+    { "rating": 9, "title": "Dead Skin Cells" },
+    { "rating": 10, "title": "Lifeforms" },
+    { "rating": 9, "title": "Eggshell" },
+    { "rating": 9, "title": "Among Myselves" },
+    { "rating": 8, "title": "Domain" },
+    { "rating": 10, "title": "Spineless Jelly" },
+    { "rating": 9, "title": "Interstat" },
+    { "rating": 9, "title": "Vertical Pig" },
+    { "rating": 9, "title": "Cerebral" },
+    { "rating": 9, "title": "Life Form Ends" },
+    { "rating": 9, "title": "Vit" },
+    { "rating": 9, "title": "Omnipresence" },
+    { "rating": 9, "title": "Room 208" },
+    { "rating": 9, "title": "Elaborate Burn" },
+    { "rating": 10, "title": "Little Brother" },
 ];
 
 const themes = [
-    
+    "Surreal",
+    "Otherworldly",
+    "Spooky",
+    "Mysterious"
 ];
+
+const date_of_review = "June 10, 2025";
 
 export const review = () => (
     <div className='review-content'>

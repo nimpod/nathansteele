@@ -2,22 +2,20 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Somewhat Damaged" },
-    { "rating": 10, "title": "The Day The World Went Away" },
-    { "rating": 10, "title": "The Frail" },
-    { "rating": 9, "title": "The Wretched" },
-    { "rating": 9,  "title": "We're In This Together" },
-    { "rating": 8, "title": "The Fragile" },
-    { "rating": 8, "title": "Just Like You Imagined" },
-    { "rating": 8, "title": "Even Deeper" },
-    { "rating": 7, "title": "Pilgrimage" },
-    { "rating": 8, "title": "No, You Don't" },
-    { "rating": 10, "title": "La Mer" },
-    { "rating": 9, "title": "The Great Below" },
+    { "rating": 11, "title": "Nautilus" },
+    { "rating": 10, "title": "Taken" },
+    { "rating": 9, "title": "Scrimshaw" },
+    { "rating": 8, "title": "Something Helpful" },
+    { "rating": 8, "title": "R-Type" },
+    { "rating": 10, "title": "Dowager" },
+    { "rating": 8, "title": "The Vapours" },
+    { "rating": 8, "title": "Honeyed Words" },
+    { "rating": 8, "title": "Last Rose" },
+    { "rating": 8, "title": "Shill" },
+    { "rating": 8, "title": "Blackfriars" },
 ];
 
 const themes = [
-    
 ];
 
 export const review = () => (

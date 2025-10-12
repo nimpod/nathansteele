@@ -2,22 +2,27 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Somewhat Damaged" },
-    { "rating": 10, "title": "The Day The World Went Away" },
-    { "rating": 10, "title": "The Frail" },
-    { "rating": 9, "title": "The Wretched" },
-    { "rating": 9,  "title": "We're In This Together" },
-    { "rating": 8, "title": "The Fragile" },
-    { "rating": 8, "title": "Just Like You Imagined" },
-    { "rating": 8, "title": "Even Deeper" },
-    { "rating": 7, "title": "Pilgrimage" },
-    { "rating": 8, "title": "No, You Don't" },
-    { "rating": 10, "title": "La Mer" },
-    { "rating": 9, "title": "The Great Below" },
+    { "rating": 9, "title": "Once Twice Melody" },
+    { "rating": 10, "title": "Superstar" },
+    { "rating": 10, "title": "Pink Funeral" },
+    { "rating": 9, "title": "Through Me" },
+    { "rating": 9, "title": "Runaway" },
+    { "rating": 10, "title": "ESP" },
+    { "rating": 9, "title": "New Romance" },
+    { "rating": 9, "title": "Over and Over" },
+    { "rating": 9, "title": "Sunset" },
+    { "rating": 9, "title": "Only You Know" },
+    { "rating": 8, "title": "Another Go Around" },
+    { "rating": 10, "title": "Masquerade" },
+    { "rating": 8, "title": "Illusion of Flower" },
+    { "rating": "interlude", "title": "Finale" },
+    { "rating": "interlude", "title": "The Bells" },
+    { "rating": "interlude", "title": "Hurts to Love" },
+    { "rating": "interlude", "title": "Many Nights" },
+    { "rating": "interlude", "title": "Modern Love Stories" },
 ];
 
 const themes = [
-    
 ];
 
 export const review = () => (

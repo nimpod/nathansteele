@@ -10,8 +10,13 @@ import { TrustworthyMusicReviewers } from '../../../js/enums.js';
 
 
 //// IMPORT REVIEW CONTENT HERE, TRY AND KEEP IN ALPHABETICAL ORDER AND FOLLOW FILE STRUCTURE ACCORDINGLY
+import { review as _808State_DonSolaris } from './content/808state/don_solaris/review.jsx';
+import { review as _311_Music } from './content/311/musicc/review.jsx';
+import { review as _4hero_TwoPages } from './content/4hero/two_pages/review.jsx';
+
 import { review as AndreasVollenweider_DownToTheMoon } from './content/andreas_vollenweider/down_to_the_moon/review.jsx';
 import { review as Altj_AnAwesomeWave } from './content/altj/an_awesome_wave/review.jsx';
+import { review as AnnaMeredith_Varmints } from './content/anna_meredith/varmints/review.jsx';
 
 import { review as BoC_MusicHasTheRightToChildren } from './content/boards_of_canada/music_has_the_right_to_children/review.jsx';
 import { review as BoC_Geogaddi } from './content/boards_of_canada/geogaddi/review.jsx';
@@ -20,6 +25,8 @@ import { review as BrunoSanfilippo_VerSacrum } from './content/bruno_sanfilippo/
 import { review as BrunoSanfilippo_Unity } from './content/bruno_sanfilippo/unity/review.jsx';
 import { review as Biosphere_Substrata } from './content/biosphere/substrata/review.jsx';
 import { review as BMTH_PostHumanSurvivalHorror } from './content/bring_me_the_horizon/post_human_survival_horror/review.jsx';
+import { review as Bent_ProgrammedToLove } from './content/bent/programmed_to_love/review.jsx';
+import { review as BeachHouse_OnceTwiceMelody } from './content/beach_house/once_twice_melody/review.jsx';
 
 import { review as ChisatoYamada_SuiteNihonkai } from './content/chisato_yamada/suite_nihonkai/review.jsx';
 import { review as Crumb_Jinx } from './content/crumb/jinx/review.jsx';
@@ -28,10 +35,12 @@ import { review as Crumb_Locket } from './content/crumb/locket/review.jsx';
 import { review as DigablePlanets_Reachin } from './content/digable_planets/reachin/review.jsx';
 
 import { review as EmilyScottRobinson_TravelingMercies } from './content/emily_scott_robinson/traveling_mercies/review.jsx';
+import { review as ElliottSmith_Figure8 } from './content/elliott_smith/figure8/review.jsx';
 import { review as EnterShikari_TheMindsweep } from './content/enter_shikari/the_mindsweep/review.jsx';
 
 import { review as FleetFoxes_FleetFoxes } from './content/fleet_foxes/fleet_foxes/review.jsx';
 import { review as FionaApple_TheIdlerWheel } from './content/fiona_apple/the_idler_wheel/review.jsx';
+import { review as FSOL_Lifeforms } from './content/fsol/lifeforms/review.jsx';
 
 import { review as GlobalCommunication_7614 } from './content/global_communication/7614/review.jsx';
 import { review as GregIsakov_ThisEmptyNorthernHemisphere } from './content/greg_isakov/this_empty_northern_hemisphere/review.jsx';
@@ -51,6 +60,7 @@ import { review as LucreciaDalt_Syzygy } from './content/lucrecia_dalt/syzygy/re
 import { review as LinkinPark_HybridTheory } from './content/linkin_park/hybrid_theory/review.jsx';
 
 import { review as MarikaHackman_WeSleptAtLast } from './content/marika_hackman/we_slept_at_last/review.jsx';
+import { review as MohiniDey_MohiniDey } from './content/mohini_dey/mohini_dey/review.jsx';
 
 import { review as Nanoray_Digimaiden } from './content/nanoray/digimaiden/review.jsx';
 import { review as NineInchNails_TheFragile } from './content/nine_inch_nails/the_fragile/review.jsx';
@@ -73,8 +83,12 @@ import { review as SufjanStevens_CarrieAndLowell } from './content/sufjan_steven
 import { review as SufjanStevens_Illinois } from './content/sufjan_stevens/illinois/review.jsx';
 import { review as SoundsFromTheGround_Luminal } from './content/sounds_from_the_ground/luminal/review.jsx';
 import { review as SoundsFromTheGround_Mosaic } from './content/sounds_from_the_ground/mosaic/review.jsx';
+import { review as Shakti_ThisMoment } from './content/shakti/this_moment/review.jsx';
 
 import { review as TakashiKako_Ritual } from './content/takashi_kako/ritual/review.jsx';
+import { review as ThomYorke_Suspiria } from './content/thom_yorke/suspiria/review.jsx';
+
+import { review as Woob_Woob1994 } from './content/woob/woob_1194/review.jsx';
 
 import { review as Xtc_Skylarking } from './content/xtc/skylarking/review.jsx';
 import { review as Xtc_Mummer } from './content/xtc/mummer/review.jsx';
@@ -113,7 +127,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Acid house; Drum and bass; Trip hop; Jungle; Breakbeat; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(_808State_DonSolaris()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"808_state__ninety": {
@@ -149,7 +163,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Jazz; Drum and bass; Nu jazz; Breakbeat; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(_4hero_TwoPages()),
 		},
 		"311__music": {
 			lastfm_url: "https://www.last.fm/music/311/Music",
@@ -160,7 +174,7 @@ const database = {
 			date_of_review: "2024",
 			genres: "Rap rock; Alternative rock; Funk rock; Reggae rock; Reggae; Funk metal; Nu metal",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(_311_Music()),
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"4amkru__incognito_rhythm": {
@@ -333,7 +347,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Ambient; Ambient techno; Techno; IDM; Electronic",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(FSOL_Lifeforms()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"the_field__looping_state_of_mind": {
@@ -623,7 +637,7 @@ const database = {
 			date_of_review: "2018",
 			genres: "Progressive pop; Synthpop; Dance pop; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(AnnaMeredith_Varmints()),
 		},
 		"antonio_carlos_jobim__the_composer_of_desafinado_plays": {
 			lastfm_url: "https://www.last.fm/music/Ant%C3%B4nio+Carlos+Jobim/The+Composer+Of+Desafinado,+Plays",
@@ -898,7 +912,7 @@ const database = {
 			date_of_review: "2022",
 			genres: "Dream pop; Chamber pop; Neo-Psychedelia",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(BeachHouse_OnceTwiceMelody()),
 		},
 		"beach_house__bloom": {
 			lastfm_url: "https://www.last.fm/music/Beach+House/Bloom",
@@ -1116,7 +1130,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Downtempo; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Bent_ProgrammedToLove()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 	},
@@ -1638,8 +1652,8 @@ const database = {
 			year_of_release: "2000",
 			date_of_review: "2021",
 			genres: "Indie rock; Chamber pop; Indie folk; Singer-songwritter",
-			my_rating: 9.5,
-			my_review: "",
+			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(ElliottSmith_Figure8()),
 		},
 		"erik_satie__3_gymnopedies": {
 			lastfm_url: "https://www.last.fm/music/Erik+Satie/Satie:+3+Gymnop%C3%A9dies;+6+Gnossiennes+etc.",
@@ -3125,7 +3139,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Jazz fusion; Jazz rock; Progressive rock; Progressive metal; Djent; Funk metal; Jazz",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(MohiniDey_MohiniDey()),
 			country: "India",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
@@ -4273,8 +4287,8 @@ const database = {
 			date_of_review: "2024",
 			genres: "Jazz; Indo jazz; Hindustani Classical Music",
 			country: "India",
-			my_rating: 9.0,
-			my_review: "",
+			my_rating: 9.5,
+			my_review: ReactDomServer.renderToString(Shakti_ThisMoment()),
 		},
 		"sa_dingding__harmony": {
 			lastfm_url: "https://www.last.fm/music/Sa+Dingding/Harmony",
@@ -4584,7 +4598,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "Ambient; Ambient pop; Alternative folk; Chamber pop",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(ThomYorke_Suspiria()),
 		},
 		"tkay_maidza__last_year_was_weird_vol_2": {
 			lastfm_url: "https://www.last.fm/music/Tkay+Maidza/Last+Year+Was+Weird,+Vol.+2",
@@ -4690,7 +4704,7 @@ const database = {
 			genres: "Ambient dub; Downtempo; Ambient techno; Electronic",
 			tags: ["Not on spotify"],
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Woob_Woob1994()),
 			date_of_review: "2023",
 		},
 		"Wang Xiofeng - Postmen in the mountains": {

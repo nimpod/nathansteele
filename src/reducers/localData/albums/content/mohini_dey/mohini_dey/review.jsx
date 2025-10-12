@@ -2,22 +2,20 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Somewhat Damaged" },
-    { "rating": 10, "title": "The Day The World Went Away" },
-    { "rating": 10, "title": "The Frail" },
-    { "rating": 9, "title": "The Wretched" },
-    { "rating": 9,  "title": "We're In This Together" },
-    { "rating": 8, "title": "The Fragile" },
-    { "rating": 8, "title": "Just Like You Imagined" },
-    { "rating": 8, "title": "Even Deeper" },
-    { "rating": 7, "title": "Pilgrimage" },
-    { "rating": 8, "title": "No, You Don't" },
-    { "rating": 10, "title": "La Mer" },
-    { "rating": 9, "title": "The Great Below" },
+    { "rating": 11, "title": "In-N-Out" },
+    { "rating": 9, "title": "Introverted Soul" },
+    { "rating": 10, "title": "Bombay Song" },
+    { "rating": 9, "title": "Meat Eater" },
+    { "rating": 9, "title": "Coloured Goddess" },
+    { "rating": 10, "title": "First Food Then You" },
+    { "rating": 9, "title": "Kick'B'ass" },
+    { "rating": 9, "title": "Emotion" },
+    { "rating": 9, "title": "Happy To Slap It" },
 ];
 
 const themes = [
-    
+    "Intense",
+    "Energetic"
 ];
 
 export const review = () => (

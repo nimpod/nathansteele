@@ -2,18 +2,18 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Somewhat Damaged" },
-    { "rating": 10, "title": "The Day The World Went Away" },
-    { "rating": 10, "title": "The Frail" },
-    { "rating": 9, "title": "The Wretched" },
-    { "rating": 9,  "title": "We're In This Together" },
-    { "rating": 8, "title": "The Fragile" },
-    { "rating": 8, "title": "Just Like You Imagined" },
-    { "rating": 8, "title": "Even Deeper" },
-    { "rating": 7, "title": "Pilgrimage" },
-    { "rating": 8, "title": "No, You Don't" },
-    { "rating": 10, "title": "La Mer" },
-    { "rating": 9, "title": "The Great Below" },
+    { "rating": 8, "title": "Welcome" },
+    { "rating": 9, "title": "Freak Out" },
+    { "rating": 10, "title": "Visit" },
+    { "rating": 9, "title": "Paradise" },
+    { "rating": 10,  "title": "Unity" },
+    { "rating": 8, "title": "Hydroponic" },
+    { "rating": 10, "title": "My Stoney Baby" },
+    { "rating": 8, "title": "Nix Hex" },
+    { "rating": 10, "title": "Plain" },
+    { "rating": 9, "title": "Feels So Good" },
+    { "rating": 9, "title": "Do You Right" },
+    { "rating": 10, "title": "Fat Chance" },
 ];
 
 const themes = [

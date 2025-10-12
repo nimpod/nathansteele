@@ -2,22 +2,25 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Somewhat Damaged" },
-    { "rating": 10, "title": "The Day The World Went Away" },
-    { "rating": 10, "title": "The Frail" },
-    { "rating": 9, "title": "The Wretched" },
-    { "rating": 9,  "title": "We're In This Together" },
-    { "rating": 8, "title": "The Fragile" },
-    { "rating": 8, "title": "Just Like You Imagined" },
-    { "rating": 8, "title": "Even Deeper" },
-    { "rating": 7, "title": "Pilgrimage" },
-    { "rating": 8, "title": "No, You Don't" },
-    { "rating": 10, "title": "La Mer" },
-    { "rating": 9, "title": "The Great Below" },
+    { "rating": 9, "title": "Son Of Sam" },
+    { "rating": 10, "title": "Somebody That I Used To Know" },
+    { "rating": 8, "title": "Junk Bond Trader" },
+    { "rating": 10, "title": "Everything Reminds Me Of Her" },
+    { "rating": 10, "title": "Everything Measn Nothing To Me" },
+    { "rating": 7, "title": "L.A." },
+    { "rating": 9, "title": "In The Lost And Found" },
+    { "rating": 8, "title": "Stupidity Tries" },
+    { "rating": 8, "title": "Easy Way Out" },
+    { "rating": 8, "title": "Wouldn't Mama Be Proud" },
+    { "rating": 8, "title": "Colorbars" },
+    { "rating": 10, "title": "Happiness/The Gondola Man" },
+    { "rating": 8, "title": "Pretty Mary Kay" },
+    { "rating": 8, "title": "Better Be Quiet Now" },
+    { "rating": 8, "title": "Can't Make A Sound" },
+    { "rating": 10, "title": "Bye" },
 ];
 
 const themes = [
-    
 ];
 
 export const review = () => (

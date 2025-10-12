@@ -2,18 +2,18 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Somewhat Damaged" },
-    { "rating": 10, "title": "The Day The World Went Away" },
-    { "rating": 10, "title": "The Frail" },
-    { "rating": 9, "title": "The Wretched" },
-    { "rating": 9,  "title": "We're In This Together" },
-    { "rating": 8, "title": "The Fragile" },
-    { "rating": 8, "title": "Just Like You Imagined" },
-    { "rating": 8, "title": "Even Deeper" },
-    { "rating": 7, "title": "Pilgrimage" },
-    { "rating": 8, "title": "No, You Don't" },
-    { "rating": 10, "title": "La Mer" },
-    { "rating": 9, "title": "The Great Below" },
+    { "rating": 8, "title": "Intro" },
+    { "rating": 9, "title": "Bond" },
+    { "rating": 8, "title": "Bird" },
+    { "rating": 8, "title": "Azura" },
+    { "rating": 9,  "title": "Black Dartangnon" },
+    { "rating": 10, "title": "Joyrider" },
+    { "rating": 10, "title": "Lopez" },
+    { "rating": 10, "title": "Balboa" },
+    { "rating": 9, "title": "Kohoutek" },
+    { "rating": 8, "title": "Mooz" },
+    { "rating": 9, "title": "Jerusahat" },
+    { "rating": 10, "title": "Banacheq" },
 ];
 
 const themes = [

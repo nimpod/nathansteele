@@ -2,18 +2,14 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Somewhat Damaged" },
-    { "rating": 10, "title": "The Day The World Went Away" },
-    { "rating": 10, "title": "The Frail" },
-    { "rating": 9, "title": "The Wretched" },
-    { "rating": 9,  "title": "We're In This Together" },
-    { "rating": 8, "title": "The Fragile" },
-    { "rating": 8, "title": "Just Like You Imagined" },
-    { "rating": 8, "title": "Even Deeper" },
-    { "rating": 7, "title": "Pilgrimage" },
-    { "rating": 8, "title": "No, You Don't" },
-    { "rating": 10, "title": "La Mer" },
-    { "rating": 9, "title": "The Great Below" },
+    { "rating": 10, "title": "Shrini's Dream" },
+    { "rating": 10, "title": "Bending The Rules" },
+    { "rating": 10, "title": "Karuna" },
+    { "rating": 9, "title": "Mohanam" },
+    { "rating": 8, "title": "Giriaj Sudha" },
+    { "rating": 9, "title": "Las Palmas" },
+    { "rating": 10, "title": "Changay Naino" },
+    { "rating": 9, "title": "Sono Mama" },
 ];
 
 const themes = [
