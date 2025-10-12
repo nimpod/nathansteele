@@ -1178,7 +1178,7 @@ const database = {
 			year_of_release: "2019",
 			date_of_review: "31 May, 2025",
 			genres: "Ambient; Drone; Field recordings",
-			my_rating: 8.0,
+			my_rating: 8.,
 			my_review: ""
 		},
 		"Chick Corea - Light As A Feather": {
@@ -4727,7 +4727,7 @@ const database = {
 			year_of_release: "2025",
 			date_of_review: "10 May, 2025",
 			genres: "Jazz; Jazz fusion",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
