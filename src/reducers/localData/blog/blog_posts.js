@@ -10,6 +10,7 @@ import { Post as OurMoon }                              from './content/our_moon
 import { post as SolarFlares }                          from './content/solar_flares.jsx';
 
 // blog posts about music...
+import { post as MyMostListenedSongsOf2025Post }        from './content/music/2025/2025_my_most_listened_songs.jsx';
 import { post as MyMostListenedSongsOf2024Post }        from './content/music/2024/my_most_listened_songs_of_2024.jsx';
 import { post as MyMostListenedSongsOf2023Post }        from './content/music/2023/my_most_listened_songs_of_2023.jsx';
 import { post as MyMostListenedSongsOf2022Post }        from './content/music/my_most_listened_songs_of_2022.jsx';
@@ -102,9 +103,9 @@ export const blog_posts = [
 
     // MUSIC POSTS
     {
-        date: "6 May 2024",
-        title: "Top 25 favourite chillstep songs",
-        content: ReactDomServer.renderToString(Top25FavouriteChillstepSongs()),
+        date: "31 Dec 2025",
+        title: "My most listened songs of 2025",
+        content: ReactDomServer.renderToString(MyMostListenedSongsOf2025Post()),
         tags: ["Music"]
     },
     {
@@ -141,6 +142,12 @@ export const blog_posts = [
         date: "31 Dec 2017",
         title: "My most listened songs between 2014 - 2016",
         content: ReactDomServer.renderToString(MyMostListenedSongsOf2016Post()),
+        tags: ["Music"]
+    },
+    {
+        date: "6 May 2024",
+        title: "Top 25 favourite chillstep songs",
+        content: ReactDomServer.renderToString(Top25FavouriteChillstepSongs()),
         tags: ["Music"]
     },
 
