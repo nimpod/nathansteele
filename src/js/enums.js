@@ -81,6 +81,7 @@ export const TrustworthyMusicReviewers = Object.freeze({
     ELASTIC_ROCK: { name: "ElasticRock", url: "https://rateyourmusic.com/list/elasticrock/100-favourite-ecm-albums/", genres: ["ECM style jazz", "Jazz"] },
     TAIWAN_MANIAC: { name: "TaiwanManiac", url: "https://rateyourmusic.com/~taiwanmaniac", genres: ["Jazz", "Pop"] },
     AJ_COLLINS: { name: "ajcollins", url: "https://rateyourmusic.com/~ajcollins15", genres: ["Prog rock"] },
+    TAKASHI_HAFUZA: { name: "Takashi Hafuza", url: "https://rateyourmusic.com/~Takashi_Hafuza", genres: ["Electronic", "Breakbeat", "IDM"]},
 
     // Other review sites
     STEREOGUM: { name: "StereoGum", url: "https://www.stereogum.com/" },

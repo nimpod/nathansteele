@@ -3959,6 +3959,7 @@ const database = {
 			country: "Indonesia",
 			my_rating: 8.5,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.TAKASHI_HAFUZA
 		},
 		"Rhapsody - Symphony of Enchanted Lands": {
 			lastfm_url: "https://www.last.fm/music/Rhapsody/Symphony+of+Enchanted+Lands",
