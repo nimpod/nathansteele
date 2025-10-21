@@ -3353,6 +3353,15 @@ picture:hover .img-content {
   color: var(--text-much-darker);
   font-size: 0.65rem;
 }
+
+#btn-link-to-MusicStats-page {
+  padding: 4px;
+  border-radius: 2px;
+  background-color: var(--films-pagination-btn-bg-color);
+  margin-left: 3px;
+  font-size: 0.7rem;
+}
+
 /* #endregion */
 
 

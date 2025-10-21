@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect }  from 'react-redux';
 import { HashLink } from 'react-router-hash-link';
+import { withRouter, Link } from 'react-router-dom';
 import $ from "jquery";
 
 import TopTracksList from './TopTracksList.js';
@@ -880,6 +881,7 @@ class Music extends Component {
                             <div className='top-albums-list-header'>
                                 <h3 className='page-title'>
                                     My favourite {this.props.top_albums.length} albums of all time
+                                    <Link id="btn-link-to-MusicStats-page" to={'/music/stats'}>Stats</Link>
                                 </h3>
 
                                 {/* Information about what is currently being filtered (if anything) */}

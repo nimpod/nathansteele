@@ -2840,7 +2840,6 @@ const database = {
 			genres: "Hip Hop; Neo-soul; Jazz rap; Post-Punk; Afrobeat",
 			my_rating: 8.0,
 			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"lisa_gerrard__the_silver_tree": {
 			lastfm_url: "https://www.last.fm/music/Lone/Galaxy+Garden",
@@ -4068,8 +4067,7 @@ const database = {
 			genres: "Art rock; Progressive rock; Glitch pop; Electronic",
 			my_rating: 8.0,
 			my_review: "",
-			date_of_review: "2024",
-			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+			date_of_review: "2024"
 		},
 
 		// 
