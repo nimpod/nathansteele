@@ -14,7 +14,7 @@ export const review = () => (
     <div className='review-content'>
         <div className="review-intro">
             <p>
-                Japanese tsugaru-jamisen musician Chisato Yamanda created one of the best fusions of Japanese funk and Min'yō music I've ever heard in my life!
+                Japanese tsugaru-shamisen musician Chisato Yamanda created one of the best fusions of Japanese funk and Min'yō music I've ever heard in my life!
                 This is so underrated and underappreciated in the modern era.
                 It's authentically Japanese and incredibly unique in its combination of genres and instrumentaiton - 
             </p>
@@ -31,6 +31,12 @@ export const review = () => (
                 Everything just works. I have rarely any criticims of this album, I think almost every song flow perfectly and the variety of instrumentation is a delectable splendour you should give your ears the chance. 
                 Honestly the only song I'm a bit meh on is The First Movement, the intro to the album. But this is because the album develops at its own pace, gradually introducing new layers of instrumentation and production, which is part of its charm in my opinion. 
             </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VUyMjI356kw?si=vA4Ry-ndWl6mbYvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>
+                The clip below is not a song from this album, 
+                but I just wanted to show Chisato Yamada playing the shamisen live!
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nqNcxfvUTIA?si=el_dUOTeMN0kfv0a&amp;start=626" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div className='review-trackRatings'>

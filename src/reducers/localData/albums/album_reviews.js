@@ -17,6 +17,8 @@ import { review as _4hero_TwoPages } from './content/4hero/two_pages/review.jsx'
 import { review as AndreasVollenweider_DownToTheMoon } from './content/andreas_vollenweider/down_to_the_moon/review.jsx';
 import { review as Altj_AnAwesomeWave } from './content/altj/an_awesome_wave/review.jsx';
 import { review as AnnaMeredith_Varmints } from './content/anna_meredith/varmints/review.jsx';
+import { review as Asia_Gravitas } from './content/asia/gravitas/review.jsx';
+import { review as AphexTwin_SAW2 } from './content/aphex_twin/saw2/review.jsx';
 
 import { review as BoC_MusicHasTheRightToChildren } from './content/boards_of_canada/music_has_the_right_to_children/review.jsx';
 import { review as BoC_Geogaddi } from './content/boards_of_canada/geogaddi/review.jsx';
@@ -37,6 +39,7 @@ import { review as DigablePlanets_Reachin } from './content/digable_planets/reac
 import { review as EmilyScottRobinson_TravelingMercies } from './content/emily_scott_robinson/traveling_mercies/review.jsx';
 import { review as ElliottSmith_Figure8 } from './content/elliott_smith/figure8/review.jsx';
 import { review as EnterShikari_TheMindsweep } from './content/enter_shikari/the_mindsweep/review.jsx';
+import { review as EnterShikari_AFlashFloodOfColour } from './content/enter_shikari/a_flash_flood_of_colour/review.jsx';
 
 import { review as FleetFoxes_FleetFoxes } from './content/fleet_foxes/fleet_foxes/review.jsx';
 import { review as FionaApple_TheIdlerWheel } from './content/fiona_apple/the_idler_wheel/review.jsx';
@@ -44,7 +47,9 @@ import { review as FSOL_Lifeforms } from './content/fsol/lifeforms/review.jsx';
 
 import { review as GlobalCommunication_7614 } from './content/global_communication/7614/review.jsx';
 import { review as GregIsakov_ThisEmptyNorthernHemisphere } from './content/greg_isakov/this_empty_northern_hemisphere/review.jsx';
+import { review as GrantKirkhope_BanjoKazooie } from './content/grant_kirkhope/banjo_kazooie/review.jsx';
 
+import { review as HakushiHasegawa_SomokuHodo} from './content/hakushi_hasegawa/somoku_hodo/review.jsx';
 import { review as Hiromi_Alive } from './content/hiromi/alive/review.jsx';
 import { review as Hiromi_Spark } from './content/hiromi/spark/review.jsx';
 import { review as Hiromi_Move } from './content/hiromi/move/review.jsx';
@@ -57,13 +62,18 @@ import { review as JesusMolina_Agape } from './content/jesus_molina/agape/review
 import { review as JoeHisaishi_Dolls } from './content/joe_hisaishi/dolls/review.jsx';
 
 import { review as LucreciaDalt_Syzygy } from './content/lucrecia_dalt/syzygy/review.jsx';
+import { review as Logic_UnderPressure } from './content/logic/under_pressure/review.jsx';
 import { review as LinkinPark_HybridTheory } from './content/linkin_park/hybrid_theory/review.jsx';
 
 import { review as MarikaHackman_WeSleptAtLast } from './content/marika_hackman/we_slept_at_last/review.jsx';
 import { review as MohiniDey_MohiniDey } from './content/mohini_dey/mohini_dey/review.jsx';
+import { review as MoronPolice_ABoatOnTheSea } from './content/moron_police/a_boat_on_the_sea/review.jsx';
 
+import { review as Nas_Illmatic } from './content/nas/illmatic/review.jsx';
 import { review as Nanoray_Digimaiden } from './content/nanoray/digimaiden/review.jsx';
 import { review as NineInchNails_TheFragile } from './content/nine_inch_nails/the_fragile/review.jsx';
+import { review as NothingButThieves_NothingButThieves } from './content/nothing_but_thieves/nothing_but_thieves/review.jsx';
+import { review as NothingButThieves_BrokenMachine } from './content/nothing_but_thieves/broken_machine/review.jsx';
 
 import { review as Orbital_Snivilisation } from './content/orbital/snivilisation/review.jsx';
 import { review as Orbital_TheMiddleOfNowhere } from './content/orbital/the_middle_of_nowhere/review.jsx';
@@ -75,6 +85,8 @@ import { review as PierreVanDormael_MrNobodyOST } from './content/pierre_van_dor
 
 import { review as RafaelToral_SpectralEvolution } from './content/rafael_toral/spectral_evolution/review.jsx';
 import { review as RunTheJewels_RTJ4 } from './content/run_the_jewels/rtj4/review.jsx';
+import { review as Radiohead_InRainbows } from './content/radiohead/in_rainbows/review.jsx';
+import { review as Radiohead_AMoonShapedPool } from './content/radiohead/a_moon_shaped_pool/review.jsx';
 
 import { review as SeaOleena__WeavingABasket } from './content/sea_oleena/weaving_a_basket/review.jsx';
 import { review as SOAD_Hypnotize } from './content/system_of_a_down/hypnotize/review.jsx';
@@ -530,7 +542,7 @@ const database = {
 			date_of_review: "2019",
 			genres: "Ambient; Dark ambient; Minimalism; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(AphexTwin_SAW2()),
 		},
 		"aphex_twin__selected_ambient_works_85_92": {
 			lastfm_url: "https://www.last.fm/music/Aphex+Twin/Selected+Ambient+Works+85-92",
@@ -626,7 +638,7 @@ const database = {
 			genres: "Symphonic rock; Progressive rock; Art rock; AOR",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/fc4273ad9d904206c2776ca005d01e32.jpg#fc4273ad9d904206c2776ca005d01e32",
 			my_rating: 10.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Asia_Gravitas()),
 			date_of_review: "2014",
 		},
 		"anna_meridith__varmints": {
@@ -1549,7 +1561,17 @@ const database = {
 			themes: ["Rave", "Political"],
 			tags: ["Old favourite"],
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(EnterShikari_AFlashFloodOfColour()),
+		},
+		"enter_shikari - Nothing Is True And Everything Is Possible": {
+			lastfm_url: "https://www.last.fm/music/Enter+Shikari/Nothing+Is+True+&+Everything+Is+Possible",
+			rym_url: "https://rateyourmusic.com/release/album/enter-shikari/nothing-is-true-and-everything-is-possible/",
+			spotify_url: "https://open.spotify.com/album/4VBnxLnSqWSodiwHIZGdIH",
+			year_of_release: "2020",
+			date_of_review: "2020",
+			genres: "Metalcore; Post-hardcore; Alternative rock; Trancecore; Electronic",
+			themes: ["Rave", "Political"],
+			my_rating: 8.0,
 		},
 
 		//
@@ -1890,7 +1912,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Video game soundtrack; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(GrantKirkhope_BanjoKazooie()),
 		},
 		"grimes__art_angels": {
 			lastfm_url: "https://www.last.fm/music/Grimes/Art+Angels",
@@ -2027,7 +2049,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Jazz; Nu jazz; J-pop; Vocaloid; Breakbeat; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(HakushiHasegawa_SomokuHodo()),
 			country: "Japan",
 		},
 		"hajime_mizoguchi__jin_roh_soundtrack": {
@@ -2712,8 +2734,8 @@ const database = {
 			date_of_review: "2016",
 			genres: "Hip-Hop; Rap; Pop rap",
 			album_name_displayed: "Under Pressure",
-			my_rating: 9.5,
-			my_review: "",
+			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(Logic_UnderPressure()),
 		},
 		"logic__no_pressure": {
 			lastfm_url: "https://www.last.fm/music/Logic/No+Pressure",
@@ -3116,7 +3138,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "Progressive rock; Symphonic rock; Pop rock",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(MoronPolice_ABoatOnTheSea()),
 			recommended_by: TrustworthyMusicReviewers.SPECTRUM_PULSE
 		},
 		"maximum_the_hormone__yoshu_fukushu": {
@@ -3240,7 +3262,7 @@ const database = {
 			date_of_review: "2017",
 			genres: "Alternative rock; Indie rock",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(NothingButThieves_BrokenMachine()),
 		},
 		"nothing_but_thieves__nothing_but_thieves": {
 			lastfm_url: "https://www.last.fm/music/Nothing+But+Thieves/Nothing+But+Thieves+(Deluxe)",
@@ -3251,7 +3273,7 @@ const database = {
 			genres: "Alternative rock; Indie rock",
 			album_name_displayed: "Nothing But Thieves",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(NothingButThieves_NothingButThieves()),
 		},
 
 		//
@@ -3375,7 +3397,7 @@ const database = {
 			date_of_review: "2018",
 			genres: "Hip-Hop; Rap; Gangsta rap",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Nas_Illmatic()),
 		},
 		"namy__colorful": {
 			lastfm_url: "https://www.last.fm/music/Namy/Colorful",
@@ -3830,7 +3852,7 @@ const database = {
 			genres: "Art rock; Chamber pop; Ambient pop; Art pop",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/28db3fdca036fb53c62754694a89d3fd.jpg#28db3fdca036fb53c62754694a89d3fd",
 			my_rating: 10.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Radiohead_AMoonShapedPool()),
 			date_of_review: "2016",
 		},
 		"radiohead__in_rainbows": {
@@ -3841,7 +3863,7 @@ const database = {
 			genres: "Art rock; Dream pop; Art pop; Alternative rock",
 			custom_cover_url: "https://m.media-amazon.com/images/I/A1MwaIeBpwL._UF894,1000_QL80_.jpg",
 			my_rating: 10.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Radiohead_InRainbows()),
 			date_of_review: "2017",
 		},
 		"radiohead__ok_computer": {
