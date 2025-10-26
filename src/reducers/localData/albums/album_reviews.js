@@ -2845,7 +2845,7 @@ const database = {
 			date_of_review: "2015",
 			genres: "Nu metal; Alternative rock; Industrial rock; Electronic",
 			tags: ["Old favourite"],
-			my_rating: 10.0,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(LinkinPark_AThousandSuns()),
 		},
 		"linkin_park__meteora": {
