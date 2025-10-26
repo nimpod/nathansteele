@@ -2,26 +2,19 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "15 Step" },
-    { "rating": 7, "title": "Bodysnatchers" },
-    { "rating": 10, "title": "Nude" },
-    { "rating": 10, "title": "Weird Fishes/Arpeggi" },
-    { "rating": 9, "title": "All I Need" },
-    { "rating": 8, "title": "Faust Arp" },
-    { "rating": 10, "title": "Reckoner" },
-    { "rating": 8, "title": "House of Cards" },
-    { "rating": 9, "title": "Jigsaw Falling Into Place" },
-    { "rating": 7, "title": "Videotape" },
-    /*
-    { "rating": 8, "title": "MK1" },
-    { "rating": 8, "title": "Down Is The New Up" },
-    { "rating": 8, "title": "Go Slowly" },
-    { "rating": 8, "title": "MK2" },
-    { "rating": 9, "title": "Last Flowers" },
-    { "rating": 7, "title": "Up On The Ladder" },
-    { "rating": 8, "title": "Bangers + Mash" },
-    { "rating": 7, "title": "4 Minute Warning" },
-    */
+    { "rating": 9, "title": "Xtal" },
+    { "rating": 9, "title": "Tha" },
+    { "rating": 9, "title": "Pulsewidth" },
+    { "rating": 8, "title": "Ageispolis" },
+    { "rating": 8, "title": "I" },
+    { "rating": 9, "title": "Green Calx" },
+    { "rating": 10, "title": "Heliospan" },
+    { "rating": 9, "title": "We Are The Music Makers" },
+    { "rating": 9, "title": "Schottkey 7th Path" },
+    { "rating": 8, "title": "Ptolemy" },
+    { "rating": 9, "title": "Hedphelym" },
+    { "rating": 9, "title": "Delphium" },
+    { "rating": 9, "title": "Actium" },
 ];
 
 const themes = [

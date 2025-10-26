@@ -2,30 +2,26 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "15 Step" },
-    { "rating": 7, "title": "Bodysnatchers" },
-    { "rating": 10, "title": "Nude" },
-    { "rating": 10, "title": "Weird Fishes/Arpeggi" },
-    { "rating": 9, "title": "All I Need" },
-    { "rating": 8, "title": "Faust Arp" },
-    { "rating": 10, "title": "Reckoner" },
-    { "rating": 8, "title": "House of Cards" },
-    { "rating": 9, "title": "Jigsaw Falling Into Place" },
-    { "rating": 7, "title": "Videotape" },
-    /*
-    { "rating": 8, "title": "MK1" },
-    { "rating": 8, "title": "Down Is The New Up" },
-    { "rating": 8, "title": "Go Slowly" },
-    { "rating": 8, "title": "MK2" },
-    { "rating": 9, "title": "Last Flowers" },
-    { "rating": 7, "title": "Up On The Ladder" },
-    { "rating": 8, "title": "Bangers + Mash" },
-    { "rating": 7, "title": "4 Minute Warning" },
-    */
+    { "rating": 8, "title": "One More Time" },
+    { "rating": 8, "title": "Aerodynamic" },
+    { "rating": 10, "title": "Digital Love" },
+    { "rating": 8, "title": "Harder, Better, Faster, Stronger" },
+    { "rating": 8, "title": "Crescendolls" },
+    { "rating": 7, "title": "Nightvision" },
+    { "rating": 8, "title": "Superhereos" },
+    { "rating": 10, "title": "High Life" },
+    { "rating": 9, "title": "Something About Us" },
+    { "rating": 9, "title": "Voyager" },
+    { "rating": 10, "title": "Veridis Quo" },
+    { "rating": 11, "title": "Short Circuit" },
+    { "rating": 8, "title": "Face To Face" },
+    { "rating": 9, "title": "Too Long" },
 ];
 
 const themes = [
 ];
+
+const date_of_review = "June 10, 2025";
 
 export const review = () => (
     <div className='review-content'>

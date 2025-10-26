@@ -2,26 +2,21 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "15 Step" },
-    { "rating": 7, "title": "Bodysnatchers" },
-    { "rating": 10, "title": "Nude" },
-    { "rating": 10, "title": "Weird Fishes/Arpeggi" },
-    { "rating": 9, "title": "All I Need" },
-    { "rating": 8, "title": "Faust Arp" },
-    { "rating": 10, "title": "Reckoner" },
-    { "rating": 8, "title": "House of Cards" },
-    { "rating": 9, "title": "Jigsaw Falling Into Place" },
-    { "rating": 7, "title": "Videotape" },
-    /*
-    { "rating": 8, "title": "MK1" },
-    { "rating": 8, "title": "Down Is The New Up" },
-    { "rating": 8, "title": "Go Slowly" },
-    { "rating": 8, "title": "MK2" },
-    { "rating": 9, "title": "Last Flowers" },
-    { "rating": 7, "title": "Up On The Ladder" },
-    { "rating": 8, "title": "Bangers + Mash" },
-    { "rating": 7, "title": "4 Minute Warning" },
-    */
+    { "rating": 10, "title": "Fuck Your Ethnicity" },
+    { "rating": 9, "title": "Hol'Up" },
+    { "rating": 9, "title": "A.D.H.D" },
+    { "rating": 8, "title": "No Make-Up" },
+    { "rating": 9, "title": "Tammy's Song" },
+    { "rating": 9, "title": "Chapter Six" },
+    { "rating": 9, "title": "Ronald Reagan Era" },
+    { "rating": 9, "title": "Poe Mans Dreams" },
+    { "rating": 8, "title": "Chapter Ten" },
+    { "rating": 9, "title": "Keisha's Song" },
+    { "rating": 10, "title": "Rigamortus" },
+    { "rating": 8, "title": "Kush & Corinthians" },
+    { "rating": 9, "title": "Blow My High" },
+    { "rating": 9, "title": "Ab-Souls Outro" },
+    { "rating": 10, "title": "HiiiPower" },
 ];
 
 const themes = [

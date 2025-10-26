@@ -2,26 +2,25 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "15 Step" },
-    { "rating": 7, "title": "Bodysnatchers" },
-    { "rating": 10, "title": "Nude" },
-    { "rating": 10, "title": "Weird Fishes/Arpeggi" },
-    { "rating": 9, "title": "All I Need" },
-    { "rating": 8, "title": "Faust Arp" },
-    { "rating": 10, "title": "Reckoner" },
-    { "rating": 8, "title": "House of Cards" },
-    { "rating": 9, "title": "Jigsaw Falling Into Place" },
-    { "rating": 7, "title": "Videotape" },
-    /*
-    { "rating": 8, "title": "MK1" },
-    { "rating": 8, "title": "Down Is The New Up" },
-    { "rating": 8, "title": "Go Slowly" },
-    { "rating": 8, "title": "MK2" },
-    { "rating": 9, "title": "Last Flowers" },
-    { "rating": 7, "title": "Up On The Ladder" },
-    { "rating": 8, "title": "Bangers + Mash" },
-    { "rating": 7, "title": "4 Minute Warning" },
-    */
+    { "rating": 10, "title": "On A Clear Day" },
+    { "rating": 9, "title": "Departure" },
+    { "rating": 9, "title": "A Town With An Ocean View" },
+    { "rating": 9, "title": "Flying Delivery Service" },
+    { "rating": 8, "title": "The Baker's Assistant" },
+    { "rating": 9, "title": "Starting The Job" },
+    { "rating": 10, "title": "Surrogate Jiji" },
+    { "rating": 8, "title": "Jeff" },
+    { "rating": 9, "title": "A Very Busy Kiki" },
+    { "rating": 8, "title": "Late For The Party" },
+    { "rating": 9, "title": "Osono's Request" },
+    { "rating": 10, "title": "A Propeller Driven Bicycle" },
+    { "rating": 8, "title": "I Can't Fly" },
+    { "rating": 10, "title": "Heartbroken Kiki" },
+    { "rating": 10, "title": "To Ursula's Cabin" },
+    { "rating": 8, "title": "Un Unusual Painting" },
+    { "rating": 8, "title": "The Adventure of Freedom, Out Of Control" },
+    { "rating": 8, "title": "The Old Mans' Push Broom" },
+    { "rating": 8, "title": "Rendevous on the Push Broom" },
 ];
 
 const themes = [

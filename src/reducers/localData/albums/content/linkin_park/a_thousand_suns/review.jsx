@@ -2,26 +2,21 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "15 Step" },
-    { "rating": 7, "title": "Bodysnatchers" },
-    { "rating": 10, "title": "Nude" },
-    { "rating": 10, "title": "Weird Fishes/Arpeggi" },
-    { "rating": 9, "title": "All I Need" },
-    { "rating": 8, "title": "Faust Arp" },
-    { "rating": 10, "title": "Reckoner" },
-    { "rating": 8, "title": "House of Cards" },
-    { "rating": 9, "title": "Jigsaw Falling Into Place" },
-    { "rating": 7, "title": "Videotape" },
-    /*
-    { "rating": 8, "title": "MK1" },
-    { "rating": 8, "title": "Down Is The New Up" },
-    { "rating": 8, "title": "Go Slowly" },
-    { "rating": 8, "title": "MK2" },
-    { "rating": 9, "title": "Last Flowers" },
-    { "rating": 7, "title": "Up On The Ladder" },
-    { "rating": 8, "title": "Bangers + Mash" },
-    { "rating": 7, "title": "4 Minute Warning" },
-    */
+    { "rating": 8, "title": "The Requiem" },
+    { "rating": 8, "title": "The Radiance" },
+    { "rating": 9, "title": "Burning In The Skies" },
+    { "rating": "interlude", "title": "Empty Spaces" },
+    { "rating": 10, "title": "When They Come For Me" },
+    { "rating": 9, "title": "Robot Boy" },
+    { "rating": 9, "title": "Jornada Del Muerto" },
+    { "rating": 9, "title": "Waiting For The End" },
+    { "rating": 10, "title": "Blackout" },
+    { "rating": 10, "title": "Wretches and Kings" },
+    { "rating": "interlude", "title": "Wisdom, Justice, and Love" },
+    { "rating": 8, "title": "Iridescent" },
+    { "rating": 9, "title": "Fallout" },
+    { "rating": 8, "title": "The Catalyst" },
+    { "rating": 9, "title": "The Messenger" },
 ];
 
 const themes = [

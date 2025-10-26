@@ -238,6 +238,8 @@ def album_name_doesnt_match_with_lastfm(folder_name, album_name):
         return "Midnight Sun Pig"
     elif "Banco De Gaia - Last Train to Lhasa" in folder_name:
         return "Last Train to Lhasa (Special Edition)"
+    elif "Minecraft Volume Alpha" in folder_name:
+        return "Minecraft - Volume Alpha"
     #elif 'Penguin Cafe - Rain Before Seven':
     #    return 'Rain Before Seven...'
     #elif 'Opposite Day - What Is Is':

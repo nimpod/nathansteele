@@ -2,29 +2,25 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "15 Step" },
-    { "rating": 7, "title": "Bodysnatchers" },
-    { "rating": 10, "title": "Nude" },
-    { "rating": 10, "title": "Weird Fishes/Arpeggi" },
-    { "rating": 9, "title": "All I Need" },
-    { "rating": 8, "title": "Faust Arp" },
-    { "rating": 10, "title": "Reckoner" },
-    { "rating": 8, "title": "House of Cards" },
-    { "rating": 9, "title": "Jigsaw Falling Into Place" },
-    { "rating": 7, "title": "Videotape" },
-    /*
-    { "rating": 8, "title": "MK1" },
-    { "rating": 8, "title": "Down Is The New Up" },
-    { "rating": 8, "title": "Go Slowly" },
-    { "rating": 8, "title": "MK2" },
-    { "rating": 9, "title": "Last Flowers" },
-    { "rating": 7, "title": "Up On The Ladder" },
-    { "rating": 8, "title": "Bangers + Mash" },
-    { "rating": 7, "title": "4 Minute Warning" },
-    */
+    { "rating": 8, "title": "Into The Rainbow Vein" },
+    { "rating": 9, "title": "Chromakey Dreamcoat" },
+    { "rating": 8, "title": "Satellite Anthem Icarus" },
+    { "rating": 9, "title": "Peacock Tail" },
+    { "rating": 8,  "title": "Dayvan Cowboy" },
+    { "rating": 9, "title": "A Moment of Clarity" },
+    { "rating": 8, "title": "84 Pontiac Dream" },
+    { "rating": 10, "title": "Sherbet Head" },
+    { "rating": 8, "title": "Oscar See Through Red Eye" },
+    { "rating": 8, "title": "Ataronchronon" },
+    { "rating": 8, "title": "Hey Saturday Sun" },
+    { "rating": 8, "title": "Constants Are Changing" },
+    { "rating": 12, "title": "Slow This Bird Down" },
+    { "rating": 10, "title": "Tears From The Compound Eye" },
+    { "rating": 8, "title": "Farewell Fire" },
 ];
 
 const themes = [
+    
 ];
 
 export const review = () => (
