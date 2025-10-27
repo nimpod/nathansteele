@@ -2,17 +2,21 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Army of Me" },
-    { "rating": 10, "title": "Hyper Ballad" },
-    { "rating": 8, "title": "The Modern Things" },
-    { "rating": 10, "title": "It's Oh So Quiet" },
-    { "rating": 8, "title": "Enjoy" },
-    { "rating": 9, "title": "You've Been Flirting Again" },
-    { "rating": 9, "title": "Isobel" },
-    { "rating": 9, "title": "Possibly Maybe" },
-    { "rating": 9, "title": "I Miss You" },
-    { "rating": 9, "title": "Cover Me" },
-    { "rating": 9, "title": "Headphones" },
+    { "rating": 11, "title": "Boogie" },
+    { "rating": 9, "title": "Zipper" },
+    { "rating": 9, "title": "Johnny" },
+    { "rating": 8, "title": "Liquid" },
+    { "rating": "interlude", "title": "Cinema 1" },
+    { "rating": 9, "title": "Stupid" },
+    { "rating": 8, "title": "Bleach" },
+    { "rating": 9, "title": "Alaska" },
+    { "rating": 10, "title": "Hottie" },
+    { "rating": "interlude", "title": "Cinema 2" },
+    { "rating": 9, "title": "Sister/Nation" },
+    { "rating": 9, "title": "Rental" },
+    { "rating": 9, "title": "Stains" },
+    { "rating": "interlude", "title": "Cinema 3" },
+    { "rating": 7, "title": "Team" },
 ];
 
 const themes = [

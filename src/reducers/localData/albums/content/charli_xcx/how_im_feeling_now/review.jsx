@@ -2,17 +2,17 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Army of Me" },
-    { "rating": 10, "title": "Hyper Ballad" },
-    { "rating": 8, "title": "The Modern Things" },
-    { "rating": 10, "title": "It's Oh So Quiet" },
-    { "rating": 8, "title": "Enjoy" },
-    { "rating": 9, "title": "You've Been Flirting Again" },
-    { "rating": 9, "title": "Isobel" },
-    { "rating": 9, "title": "Possibly Maybe" },
-    { "rating": 9, "title": "I Miss You" },
-    { "rating": 9, "title": "Cover Me" },
-    { "rating": 9, "title": "Headphones" },
+    { "rating": 9, "title": "Pink Diamond" },
+    { "rating": 11, "title": "forever" },
+    { "rating": 11, "title": "claws" },
+    { "rating": 8, "title": "7 years" },
+    { "rating": 8, "title": "detonate" },
+    { "rating": 8, "title": "enemy" },
+    { "rating": 8, "title": "i finally understand" },
+    { "rating": 9, "title": "c2.0" },
+    { "rating": 9, "title": "party 4 u" },
+    { "rating": 10, "title": "anthems" },
+    { "rating": 9, "title": "visions" },
 ];
 
 const themes = [

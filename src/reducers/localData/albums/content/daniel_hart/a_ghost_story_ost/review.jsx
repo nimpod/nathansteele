@@ -2,17 +2,19 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Army of Me" },
-    { "rating": 10, "title": "Hyper Ballad" },
-    { "rating": 8, "title": "The Modern Things" },
-    { "rating": 10, "title": "It's Oh So Quiet" },
-    { "rating": 8, "title": "Enjoy" },
-    { "rating": 9, "title": "You've Been Flirting Again" },
-    { "rating": 9, "title": "Isobel" },
-    { "rating": 9, "title": "Possibly Maybe" },
-    { "rating": 9, "title": "I Miss You" },
-    { "rating": 9, "title": "Cover Me" },
-    { "rating": 9, "title": "Headphones" },
+    { "rating": 8, "title": "Whatever Hour You Woke" },
+    { "rating": 10, "title": "Little Notes" },
+    { "rating": 8, "title": "One Door Closes" },
+    { "rating": 10, "title": "Post Pie" },
+    { "rating": 8, "title": "Gentleman Caller" },
+    { "rating": 9, "title": "I Get Overwhelmed" },
+    { "rating": 10, "title": "The Secret In The Wall" },
+    { "rating": 8, "title": "Vivintes Enim" },
+    { "rating": 8, "title": "Sciunt Se Esse Mortui" },
+    { "rating": 8, "title": "Last One" },
+    { "rating": 8, "title": "Thesaurus Tuus" },
+    { "rating": 9, "title": "History" },
+    { "rating": 8, "title": "Safe Safe Safe" },
 ];
 
 const themes = [

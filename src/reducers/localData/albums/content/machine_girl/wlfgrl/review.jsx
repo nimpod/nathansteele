@@ -2,17 +2,19 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Army of Me" },
-    { "rating": 10, "title": "Hyper Ballad" },
-    { "rating": 8, "title": "The Modern Things" },
-    { "rating": 10, "title": "It's Oh So Quiet" },
-    { "rating": 8, "title": "Enjoy" },
-    { "rating": 9, "title": "You've Been Flirting Again" },
-    { "rating": 9, "title": "Isobel" },
-    { "rating": 9, "title": "Possibly Maybe" },
-    { "rating": 9, "title": "I Miss You" },
-    { "rating": 9, "title": "Cover Me" },
-    { "rating": 9, "title": "Headphones" },
+    { "rating": "interlude", "title": "Mg1" },
+    { "rating": 9, "title": "Ionic Funk - 20xx Battle Music" },
+    { "rating": 9, "title": "Krystle - URL Cyber Palace Mix" },
+    { "rating": 8, "title": "Ginger Claps" },
+    { "rating": 8, "title": "Ghost" },
+    { "rating": 8, "title": "Frenesi - Machine Girl GabberTrap Mix" },
+    { "rating": 8, "title": "Out By 16, Dead On The Scene" },
+    { "rating": 11, "title": "Post Rave Maximalist" },
+    { "rating": 8, "title": "Phase Alpha" },
+    { "rating": 8, "title": "Freewill" },
+    { "rating": 11, "title": "Excruciating Deth" },
+    { "rating": 9, "title": "Hidden Power" },
+    { "rating": 9, "title": "Mg2" },
 ];
 
 const themes = [

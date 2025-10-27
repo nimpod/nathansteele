@@ -2,23 +2,24 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Army of Me" },
-    { "rating": 10, "title": "Hyper Ballad" },
-    { "rating": 8, "title": "The Modern Things" },
-    { "rating": 10, "title": "It's Oh So Quiet" },
-    { "rating": 8, "title": "Enjoy" },
-    { "rating": 9, "title": "You've Been Flirting Again" },
-    { "rating": 9, "title": "Isobel" },
-    { "rating": 9, "title": "Possibly Maybe" },
-    { "rating": 9, "title": "I Miss You" },
-    { "rating": 9, "title": "Cover Me" },
-    { "rating": 9, "title": "Headphones" },
+    { "rating": 10, "title": "The Sun Won't Set" },
+    { "rating": 8, "title": "Flight" },
+    { "rating": 8, "title": "Indian Summer" },
+    { "rating": 8, "title": "Maya" },
+    { "rating": 10, "title": "Lasya" },
+    { "rating": 8, "title": "Fathers" },
+    { "rating": 8, "title": "Metamorphosis" },
+    { "rating": 10, "title": "In Jyoti's Name" },
+    { "rating": 8, "title": "Monsoon" },
+    { "rating": 9, "title": "Traces of You" },
+    { "rating": 8, "title": "River Pulse" },
+    { "rating": 10, "title": "Chasing Shadows" },
+    { "rating": 10, "title": "Unsaid" },
 ];
 
 const themes = [
+    
 ];
-
-const date_of_review = "June 10, 2025";
 
 export const review = () => (
     <div className='review-content'>

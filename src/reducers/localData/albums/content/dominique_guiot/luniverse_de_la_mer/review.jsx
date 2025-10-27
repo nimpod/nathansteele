@@ -2,17 +2,18 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Army of Me" },
-    { "rating": 10, "title": "Hyper Ballad" },
-    { "rating": 8, "title": "The Modern Things" },
-    { "rating": 10, "title": "It's Oh So Quiet" },
-    { "rating": 8, "title": "Enjoy" },
-    { "rating": 9, "title": "You've Been Flirting Again" },
-    { "rating": 9, "title": "Isobel" },
-    { "rating": 9, "title": "Possibly Maybe" },
-    { "rating": 9, "title": "I Miss You" },
-    { "rating": 9, "title": "Cover Me" },
-    { "rating": 9, "title": "Headphones" },
+    { "rating": 10, "title": "Wind Surf Ballad" },
+    { "rating": 9, "title": "La Danse Des Meduses" },
+    { "rating": 8, "title": "Une Ballade Pour Une Goelette" },
+    { "rating": 10, "title": "Les Deux Poissons" },
+    { "rating": 8, "title": "Ballet Amoureux Des Dauphins" },
+    { "rating": 8, "title": "Les Pingouins S'Amusent" },
+    { "rating": 8, "title": "Destination Inconnue" },
+    { "rating": 8, "title": "Iceberg En Voyage" },
+    { "rating": 8, "title": "L'Univers De La Mer" },
+    { "rating": 10, "title": "Alerte En Mer" },
+    { "rating": 8, "title": "Les Emigrants De La Mer" },
+    { "rating": 8, "title": "A La Decouverte D'Une Amphore" },
 ];
 
 const themes = [

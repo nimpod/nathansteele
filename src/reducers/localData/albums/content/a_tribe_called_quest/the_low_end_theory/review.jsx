@@ -2,23 +2,24 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Army of Me" },
-    { "rating": 10, "title": "Hyper Ballad" },
-    { "rating": 8, "title": "The Modern Things" },
-    { "rating": 10, "title": "It's Oh So Quiet" },
-    { "rating": 8, "title": "Enjoy" },
-    { "rating": 9, "title": "You've Been Flirting Again" },
-    { "rating": 9, "title": "Isobel" },
-    { "rating": 9, "title": "Possibly Maybe" },
-    { "rating": 9, "title": "I Miss You" },
-    { "rating": 9, "title": "Cover Me" },
-    { "rating": 9, "title": "Headphones" },
+    { "rating": 9, "title": "Excursions" },
+    { "rating": 11, "title": "Buggin' Out" },
+    { "rating": 9, "title": "Rap Promoter" },
+    { "rating": 9, "title": "Butter" },
+    { "rating": 8, "title": "Verses from the abstract" },
+    { "rating": 8, "title": "Show Business" },
+    { "rating": 9, "title": "Vibes and Stuff" },
+    { "rating": 8, "title": "Infamous Date Rape" },
+    { "rating": 10, "title": "Check the Rhime" },
+    { "rating": 8, "title": "Everything Is Fair" },
+    { "rating": 10, "title": "Jazz (we've got)" },
+    { "rating": 8, "title": "Skypager" },
+    { "rating": 9, "title": "What?" },
+    { "rating": 11, "title": "Scenario" },
 ];
 
 const themes = [
 ];
-
-const date_of_review = "June 10, 2025";
 
 export const review = () => (
     <div className='review-content'>

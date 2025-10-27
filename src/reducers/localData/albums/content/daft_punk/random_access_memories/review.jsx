@@ -2,17 +2,19 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Army of Me" },
-    { "rating": 10, "title": "Hyper Ballad" },
-    { "rating": 8, "title": "The Modern Things" },
-    { "rating": 10, "title": "It's Oh So Quiet" },
-    { "rating": 8, "title": "Enjoy" },
-    { "rating": 9, "title": "You've Been Flirting Again" },
-    { "rating": 9, "title": "Isobel" },
-    { "rating": 9, "title": "Possibly Maybe" },
-    { "rating": 9, "title": "I Miss You" },
-    { "rating": 9, "title": "Cover Me" },
-    { "rating": 9, "title": "Headphones" },
+    { "rating": 9, "title": "Give Life Back To Music" },
+    { "rating": 8, "title": "The Game Of Love" },
+    { "rating": 9, "title": "Giorgio by Moroder" },
+    { "rating": 9, "title": "Within" },
+    { "rating": 9, "title": "Instant Crush" },
+    { "rating": 9, "title": "Lose Yourself To Dance" },
+    { "rating": 11, "title": "Touch" },
+    { "rating": 9, "title": "Get Lucky" },
+    { "rating": 9, "title": "Beyond" },
+    { "rating": 9, "title": "Motherboard" },
+    { "rating": 9, "title": "Fragments of Time" },
+    { "rating": 9, "title": "Doin' it Right" },
+    { "rating": 9, "title": "Contact" },
 ];
 
 const themes = [

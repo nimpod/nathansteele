@@ -2,23 +2,31 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Army of Me" },
-    { "rating": 10, "title": "Hyper Ballad" },
-    { "rating": 8, "title": "The Modern Things" },
-    { "rating": 10, "title": "It's Oh So Quiet" },
-    { "rating": 8, "title": "Enjoy" },
-    { "rating": 9, "title": "You've Been Flirting Again" },
-    { "rating": 9, "title": "Isobel" },
-    { "rating": 9, "title": "Possibly Maybe" },
-    { "rating": 9, "title": "I Miss You" },
-    { "rating": 9, "title": "Cover Me" },
-    { "rating": 9, "title": "Headphones" },
+    { "rating": 10, "title": "Love In The Sky" },
+    { "rating": 8, "title": "Flying With Turtles" },
+    { "rating": 9, "title": "The Girl" },
+    { "rating": 8, "title": "The Tsunami" },
+    { "rating": 8, "title": "White Hair" },
+    { "rating": 9, "title": "She Is Dead" },
+    { "rating": 8, "title": "The Baby" },
+    { "rating": 8, "title": "Despair" },
+    { "rating": 8, "title": "Baby's Fall" },
+    { "rating": 11, "title": "L'au Revoir" },
+    { "rating": 8, "title": "The First Raft" },
+    { "rating": 8, "title": "The Red Turtle" },
+    { "rating": 10, "title": "I Will Stay With You" },
+    { "rating": 8, "title": "The Fall" },
+    { "rating": 9, "title": "The Dream" },
+    { "rating": 8, "title": "I've Found Dad" },
+    { "rating": 8, "title": "Where Is She?" },
+    { "rating": 8, "title": "He Has To Go" },
+    { "rating": 8, "title": "Anger" },
+    { "rating": 8, "title": "Second Raft" },
 ];
 
 const themes = [
+    
 ];
-
-const date_of_review = "June 10, 2025";
 
 export const review = () => (
     <div className='review-content'>

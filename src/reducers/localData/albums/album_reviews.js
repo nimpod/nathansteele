@@ -14,6 +14,7 @@ import { review as _808State_DonSolaris } from './content/808state/don_solaris/r
 import { review as _311_Music } from './content/311/musicc/review.jsx';
 import { review as _4hero_TwoPages } from './content/4hero/two_pages/review.jsx';
 
+import { review as ATribeCalledQuest_TheLowEndTheory } from './content/a_tribe_called_quest/the_low_end_theory/review.jsx';
 import { review as AndreasVollenweider_DownToTheMoon } from './content/andreas_vollenweider/down_to_the_moon/review.jsx';
 import { review as Altj_AnAwesomeWave } from './content/altj/an_awesome_wave/review.jsx';
 import { review as AmorphousAndrogynous_TalesOfEphidrina } from './content/amorphous_androgynous/tales_of_ephidrina/review.jsx';
@@ -22,6 +23,9 @@ import { review as Air_TalkieWalkie } from './content/air/talkie_walkie/review.j
 import { review as Asia_Gravitas } from './content/asia/gravitas/review.jsx';
 import { review as AphexTwin_SAW2 } from './content/aphex_twin/saw2/review.jsx';
 import { review as AphexTwin_SAW8592 } from './content/aphex_twin/saw8592/review.jsx';
+import { review as AnoushakaShankar_TracesOfYou } from './content/anoushka_shankar/traces_of_you/review.jsx';
+import { review as Autechre_Amber } from './content/autechre/amber/review.jsx';
+import { review as AntonioCarlosJobim_tcodp } from './content/antonio_carlos_jobim/tcodp/review.jsx';
 
 import { review as BoC_MusicHasTheRightToChildren } from './content/boards_of_canada/music_has_the_right_to_children/review.jsx';
 import { review as BoC_Geogaddi } from './content/boards_of_canada/geogaddi/review.jsx';
@@ -30,6 +34,7 @@ import { review as BoC_Random35TracksTape } from './content/boards_of_canada/ran
 import { review as BoC_OldTunesVol2 } from './content/boards_of_canada/old_tunes_vol2/review.jsx';
 import { review as BoC_OldTunes } from './content/boards_of_canada/old_tunes/review.jsx';
 import { review as Bjork_Post } from './content/bjork/post/review.jsx';
+import { review as Bjork_MountWittenbergOrca } from './content/bjork/mount_wittenberg_orca/review.jsx';
 import { review as BradMehldau_TamingTheDragon } from './content/brad_mehldau/taming_the_dragon/review.jsx';
 import { review as BrunoSanfilippo_VerSacrum } from './content/bruno_sanfilippo/ver_sacrum/review.jsx';
 import { review as BrunoSanfilippo_Unity } from './content/bruno_sanfilippo/unity/review.jsx';
@@ -37,14 +42,23 @@ import { review as Biosphere_Substrata } from './content/biosphere/substrata/rev
 import { review as BMTH_PostHumanSurvivalHorror } from './content/bring_me_the_horizon/post_human_survival_horror/review.jsx';
 import { review as Bent_ProgrammedToLove } from './content/bent/programmed_to_love/review.jsx';
 import { review as BeachHouse_OnceTwiceMelody } from './content/beach_house/once_twice_melody/review.jsx';
+import { review as BireliLagrene_ElectricSide } from './content/bireli_lagrene/electric_side/review.jsx';
+import { review as BadBadNotGood_IV } from './content/badbadnotgood/iv/review.jsx';
+import { review as Brockhampton_Saturation3 } from './content/brockhampton/saturation3/review.jsx';
 
 import { review as C418_Minecraft } from './content/c418/minecraft/review.jsx';
 import { review as ChisatoYamada_SuiteNihonkai } from './content/chisato_yamada/suite_nihonkai/review.jsx';
 import { review as Crumb_Jinx } from './content/crumb/jinx/review.jsx';
 import { review as Crumb_Locket } from './content/crumb/locket/review.jsx';
+import { review as ClownCore_Van } from './content/clown_core/van/review.jsx';
+import { review as CharliXcx_HowImFeelingNow } from './content/charli_xcx/how_im_feeling_now/review.jsx';
+import { review as CarlosFischer_BusquedaInfinita } from './content/carlos_fischer/busqueda_infinita/review.jsx';
 
+import { review as DanielHart_AGhostStoryOST } from './content/daniel_hart/a_ghost_story_ost/review.jsx';
+import { review as DominiqueGuiot_LUniverseDeLaMer } from './content/dominique_guiot/luniverse_de_la_mer/review.jsx';
 import { review as DigablePlanets_Reachin } from './content/digable_planets/reachin/review.jsx';
 import { review as DaftPunk_Discovery } from './content/daft_punk/discovery/review.jsx';
+import { review as DaftPunk_RandomAccessMemories } from './content/daft_punk/random_access_memories/review.jsx';
 import { review as DeadCanDance_WTROADS } from './content/dead_can_dance/wtroads/review.jsx';
 import { review as DeadCanDance_Dionysus } from './content/dead_can_dance/dionysus/review.jsx';
 
@@ -57,8 +71,11 @@ import { review as EnterShikari_AFlashFloodOfColour } from './content/enter_shik
 import { review as FleetFoxes_FleetFoxes } from './content/fleet_foxes/fleet_foxes/review.jsx';
 import { review as FionaApple_TheIdlerWheel } from './content/fiona_apple/the_idler_wheel/review.jsx';
 import { review as FSOL_Lifeforms } from './content/fsol/lifeforms/review.jsx';
+import { review as FrankOcean_Blonde } from './content/frank_ocean/blonde/review.jsx';
+import { review as FatherJohnMisty_PureComedy } from './content/father_john_misty/pure_comedy/review.jsx';
 
 import { review as GJones_AcidDisk2 } from './content/gjones/acid_disk_2/review.jsx';
+import { review as GJones_IllusoryTracks } from './content/gjones/illusory_tracks/review.jsx';
 import { review as GlobalCommunication_7614 } from './content/global_communication/7614/review.jsx';
 import { review as GregIsakov_ThisEmptyNorthernHemisphere } from './content/greg_isakov/this_empty_northern_hemisphere/review.jsx';
 import { review as GrantKirkhope_BanjoKazooie } from './content/grant_kirkhope/banjo_kazooie/review.jsx';
@@ -72,21 +89,31 @@ import { review as Hiromi_SilverLiningSuite } from './content/hiromi/silver_lini
 import { review as Igorrr_SavageSinusoid } from './content/igorrr/savage_sinusoid/review.jsx';
 import { review as IchikoAoba_WindsweptAdan } from './content/ichiko_aoba/windswept_adan/review.jsx';
 import { review as Iglooghost_NeoWaxBloom } from './content/iglooghost/neo_wax_bloom/review.jsx';
+import { review as Iglooghost_SteelMogu } from './content/iglooghost/steel_mogu/review.jsx';
+import { review as Iglooghost_ClearTamei } from './content/iglooghost/clear_tamei/review.jsx';
 
+import { review as JoyceMoreno_Natureza } from './content/joyce_moreno/natureza/review.jsx';
+import { review as JonHopkins_ContactNote } from './content/jon_hopkins/contact_note/review.jsx';
 import { review as JesusMolina_Agape } from './content/jesus_molina/agape/review.jsx';
 import { review as JesusMolina_Departing } from './content/jesus_molina/departing/review.jsx';
 import { review as JoeHisaishi_Dolls } from './content/joe_hisaishi/dolls/review.jsx';
 import { review as JoeHisaishi_KikisDeliveryService } from './content/joe_hisaishi/kikis_delivery_service/review.jsx';
+import { review as JoeHisaishi_KidsReturn } from './content/joe_hisaishi/kids_return/review.jsx';
+import { review as JoeHisaishi_TheWindRises } from './content/joe_hisaishi/the_wind_rises/review.jsx';
 
 import { review as KendrickLamar_Section80 } from './content/kendrick_lamar/section80/review.jsx';
 import { review as KendrickLamar_UntitledUnmastered } from './content/kendrick_lamar/untitled_unmastered/review.jsx';
+import { review as Klute_NOLA } from './content/klute/nola/review.jsx';
+import { review as KarlJenkins_Motets } from './content/karl_jenkins/motets/review.jsx';
 
+import { review as LaurentPerezDelMar_TheRedTurtleOST } from './content/laurent_perez_del_mar/the_red_turtle_ost/review.jsx';
 import { review as Lone_GalaxyGarden } from './content/lone/galaxy_garden/review.jsx';
 import { review as LucreciaDalt_Syzygy } from './content/lucrecia_dalt/syzygy/review.jsx';
 import { review as Logic_UnderPressure } from './content/logic/under_pressure/review.jsx';
 import { review as LinkinPark_HybridTheory } from './content/linkin_park/hybrid_theory/review.jsx';
 import { review as LinkinPark_AThousandSuns } from './content/linkin_park/a_thousand_suns/review.jsx';
 import { review as LilyAllen_AlrightStill } from './content/lily_allen/alright_still/review.jsx';
+import { review as LilyAllen_INMIY } from './content/lily_allen/inmiy/review.jsx';
 
 import { review as MarikaHackman_WeSleptAtLast } from './content/marika_hackman/we_slept_at_last/review.jsx';
 import { review as MarikaHackman_ThatIronTaste } from './content/marika_hackman/that_iron_taste/review.jsx';
@@ -94,7 +121,10 @@ import { review as MohiniDey_MohiniDey } from './content/mohini_dey/mohini_dey/r
 import { review as MoronPolice_ABoatOnTheSea } from './content/moron_police/a_boat_on_the_sea/review.jsx';
 import { review as MaximumTheHormone_YushuFukushu } from './content/maximum_the_hormone/yoshu_fukushu/review.jsx';
 import { review as Matmos_PlasticAnniversary } from './content/matmos/plastic_anniversary/review.jsx';
+import { review as MassiveAttack_Mezzanine } from './content/massive_attack/mezzanine/review.jsx';
+import { review as MachineGirl_Wlfgrl } from './content/machine_girl/wlfgrl/review.jsx';
 
+import { review as NickDrake_BryterLayter } from './content/nick_drake/bryter_layter/review.jsx';
 import { review as Nas_Illmatic } from './content/nas/illmatic/review.jsx';
 import { review as Nanoray_Digimaiden } from './content/nanoray/digimaiden/review.jsx';
 import { review as NineInchNails_TheFragile } from './content/nine_inch_nails/the_fragile/review.jsx';
@@ -104,18 +134,28 @@ import { review as NothingButThieves_BrokenMachine } from './content/nothing_but
 import { review as Orbital_Snivilisation } from './content/orbital/snivilisation/review.jsx';
 import { review as Orbital_TheMiddleOfNowhere } from './content/orbital/the_middle_of_nowhere/review.jsx';
 import { review as Orbital_InSides } from './content/orbital/in_sides/review.jsx';
+import { review as OzricTentacles_SpiralsInHyperspace } from './content/ozric_tentacles/spirals_in_hyperspace/review.jsx';
+import { review as OskarSchuster_Sneeuwland } from './content/oskar_schuster/sneeuwland/review.jsx';
+import { review as OskarSchuster_LesValsesInvisibles } from './content/oskar_schuster/les_valses_invisibles/review.jsx';
+import { review as OppositeDay_WhatIsIs } from './content/opposite_day/what_is_is/review.jsx';
 
 import { review as Poppy_Eat } from './content/poppy/eat/review.jsx';
 import { review as Poppy_IDisagree } from './content/poppy/i_disagree/review.jsx';
 import { review as PierreVanDormael_MrNobodyOST } from './content/pierre_van_dormael/mr_nobody_ost/review.jsx';
 import { review as PatrickOHearn_SoFlowsTheCurrent } from './content/patrick_ohearn/so_flows_the_current/review.jsx';
+import { review as Plaid_NotForThrees } from './content/plaid/not_for_threes/review.jsx';
+import { review as Pendulum_InSilico } from './content/pendulum/in_silico/review.jsx';
 
+import { review as QueensOfTheStoneAge_SongsForTheDeaf } from './content/queens_of_the_stone_age/songs_for_the_deaf/review.jsx';
+
+import { review as Revocation_Teratogenesis } from './content/revocation/teratogenesis/review.jsx';
 import { review as Rumpistol_Isola } from './content/rumpistol/isola/review.jsx';
 import { review as RafaelToral_SpectralEvolution } from './content/rafael_toral/spectral_evolution/review.jsx';
 import { review as RalphTowner_BlueSun } from './content/ralph_towner/blue_sun/review.jsx';
 import { review as RunTheJewels_RTJ4 } from './content/run_the_jewels/rtj4/review.jsx';
 import { review as Radiohead_InRainbows } from './content/radiohead/in_rainbows/review.jsx';
 import { review as Radiohead_AMoonShapedPool } from './content/radiohead/a_moon_shaped_pool/review.jsx';
+import { review as RichardDawson_2020 } from './content/richard_dawson/2020/review.jsx';
 
 import { review as SeaOleena__WeavingABasket } from './content/sea_oleena/weaving_a_basket/review.jsx';
 import { review as SOAD_Hypnotize } from './content/system_of_a_down/hypnotize/review.jsx';
@@ -125,10 +165,14 @@ import { review as SufjanStevens_Illinois } from './content/sufjan_stevens/illin
 import { review as SoundsFromTheGround_Luminal } from './content/sounds_from_the_ground/luminal/review.jsx';
 import { review as SoundsFromTheGround_Mosaic } from './content/sounds_from_the_ground/mosaic/review.jsx';
 import { review as Shakti_ThisMoment } from './content/shakti/this_moment/review.jsx';
+import { review as SingStreet_SingStreetOST } from './content/sing_street/sing_street_ost/review.jsx';
+import { review as Scntfc_Oxenfree } from './content/scntfc/oxenfree/review.jsx';
 
 import { review as TakashiKako_Ritual } from './content/takashi_kako/ritual/review.jsx';
 import { review as ThomYorke_Suspiria } from './content/thom_yorke/suspiria/review.jsx';
+import { review as Telegraph_Mir } from './content/telegraph/mir/review.jsx';
 import { review as TheProdigy_Experience } from './content/the_prodigy/experience/review.jsx';
+import { review as TheKLF_Chillout } from './content/the_klf/chillout/review.jsx';
 
 import { review as Woob_Woob1994 } from './content/woob/woob_1194/review.jsx';
 import { review as Understatement_SmallCircle } from './content/understatement/small_circle/review.jsx';
@@ -298,7 +342,7 @@ const database = {
 			year_of_release: "2010",
 			date_of_review: "2014",
 			genres: "Indie pop; Surf music; Indie rock",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"the_drums__encyclopedia": {
@@ -372,14 +416,14 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/The+KLF/Come+Down+Dawn",
 			rym_url: "https://rateyourmusic.com/release/album/the-klf/chill-out/",
 			spotify_url: "https://open.spotify.com/album/4fBvkZkBuPyo3k7ZogKFAo?si=bx9ppPw6QHO_EOmRqJOqXA",
-			youtube_url: "https://rateyourmusic.com/release/album/the-klf/chill-out/",
+			youtube_url: "https://youtu.be/bWebqCRw7o4?si=wFoZ7aXDQKKmHTg6",
 			custom_cover_url: "https://e.snmc.io/i/600/s/015c32ebab1741a35db88638c68bed0f/10718368/the-klf-chill-out-Cover-Art.jpg",
 			album_name_displayed: "Chill out",
 			year_of_release: "1990",
 			date_of_review: "2025",
 			genres: "Ambient; Electronic; Ambient house; Nature recordings; Tuvan throat singing",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(TheKLF_Chillout()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"the_future_sound_of_london__lifeforms": {
@@ -551,7 +595,7 @@ const database = {
 			date_of_review: "2017",
 			genres: "Hip-Hop; Rap; Jazz rap; Old-school Hip-Hop",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(ATribeCalledQuest_TheLowEndTheory()),
 		},
 		"a_tribe_called_quest__thank_you_4_your_service": {
 			lastfm_url: "https://www.last.fm/music/A+Tribe+Called+Quest/We+Got+It+From+Here...+Thank+You+4+Your+Service",
@@ -566,7 +610,7 @@ const database = {
 
 		//
 		"aphex_twin__selected_ambient_works_volume_ii": {
-			lastfm_url: "https://www.last.fm/music/Aphex+Twin/Selected+Ambient+Works,+Volume+II",
+			lastfm_url: "https://www.last.fm/music/Aphex+Twin/Selected+Ambient+Works+Volume+II",
 			rym_url: "https://rateyourmusic.com/release/album/aphex-twin/selected-ambient-works-volume-ii/",
 			spotify_url: "https://open.spotify.com/album/17vHPMmoxN5B8cdhCDeMTe?si=ooGHiCpzSJasXrkkarvRaQ",
 			year_of_release: "1994",
@@ -597,15 +641,15 @@ const database = {
 		},
 
 		//
-		"anoushka shankar - Shades of you": {
+		"anoushka shankar - Traces of you": {
 			lastfm_url: "https://www.last.fm/music/Anoushka+Shankar/Traces+Of+You",
 			rym_url: "https://rateyourmusic.com/artist/anoushka-shankar/traces-of-you/",
-			spotify_url: "",
+			spotify_url: "https://rateyourmusic.com/release/album/anoushka-shankar/traces-of-you/",
 			year_of_release: "2013",
 			genres: "Hindustani classical music",
 			country: "India",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(AnoushakaShankar_TracesOfYou()),
 			date_of_review: "July 10, 2025",
 		},
 		"anoushka shankar Chapter II how dark it is before dawn": {
@@ -658,7 +702,7 @@ const database = {
 			year_of_release: "1994",
 			genres: "IDM; Ambient techno; Techno; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Autechre_Amber()),
 			date_of_review: "2023",
 		},
 		"asia__gravitas": {
@@ -691,7 +735,7 @@ const database = {
 			genres: "Jazz; Bossa nova; MBP; Latin jazz; Brazilian jazz",
 			country: "Brazil",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(AntonioCarlosJobim_tcodp())
 		},
 		"all_time_low__future_hearts": {
 			lastfm_url: "https://www.last.fm/music/All+Time+Low/Future+Hearts",
@@ -899,7 +943,7 @@ const database = {
 			date_of_review: "2018",
 			genres: "Jazz; Soul jazz; Nu jazz; Neo-soul; Instrumental Hip-Hop",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(BadBadNotGood_IV())
 		},
 		"badbadnotgood__sour_soul": {
 			lastfm_url: "https://www.last.fm/music/BADBADNOTGOOD/Sour+Soul",
@@ -1037,7 +1081,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "Art pop; Acappella; Indie folk",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Bjork_MountWittenbergOrca())
 		},
 		"bjork__post": {
 			lastfm_url: "https://www.last.fm/music/Bj%C3%B6rk/Post",
@@ -1081,17 +1125,27 @@ const database = {
 		"brockhampton__saturation_iii": {
 			lastfm_url: "https://www.last.fm/music/BROCKHAMPTON/SATURATION+III",
 			rym_url: "https://rateyourmusic.com/release/album/brockhampton/saturation-iii/",
-			spotify_url: "https://open.spotify.com/album/5c2AzoNyr46fCQM5d8mxE0?si=lcsioOPXSKebGjw75Ii7uw",
+			spotify_url: "https://open.spotify.com/album/5c2AzoNyr46fCQM5d8mxE0",
 			year_of_release: "2017",
 			date_of_review: "2017",
 			genres: "Hip-Hop; Rap",
 			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(Brockhampton_Saturation3())
+		},
+		"brockhampton__saturation_ii": {
+			lastfm_url: "https://www.last.fm/music/BROCKHAMPTON/SATURATION+II",
+			rym_url: "https://rateyourmusic.com/release/album/brockhampton/saturation-ii/",
+			spotify_url: "https://open.spotify.com/album/0XnqQzdSFAml08XZoRt1St",
+			year_of_release: "2017",
+			date_of_review: "2017",
+			genres: "Hip-Hop; Rap",
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"brockhampton__saturation_i": {
 			lastfm_url: "https://www.last.fm/music/BROCKHAMPTON/SATURATION",
 			rym_url: "https://rateyourmusic.com/release/album/brockhampton/saturation/",
-			spotify_url: "https://rateyourmusic.com/release/album/brockhampton/saturation/",
+			spotify_url: "https://open.spotify.com/album/67smHJOf5YlFwad6dAlppm",
 			year_of_release: "2017",
 			date_of_review: "2017",
 			genres: "Hip-Hop; Rap",
@@ -1141,7 +1195,7 @@ const database = {
 			date_of_review: "2024",
 			genres: "Jazz fusion; Jazz",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(BireliLagrene_ElectricSide()),
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"bon_iver__for_emma_forever_ago": {
@@ -1244,7 +1298,7 @@ const database = {
 			country: "Bolivia",
 			themes: ["Bolivia", "Guitar"],
 			my_rating: 9.0,
-			my_review: ""
+			my_review: ReactDomServer.renderToString(CarlosFischer_BusquedaInfinita())
 		},
 		"cocomofo__cardinal_rose": {
 			lastfm_url: "https://www.last.fm/music/Cocomofo/Cardinal+Rose",
@@ -1299,17 +1353,17 @@ const database = {
 			date_of_review: "2020",
 			genres: "Hyperpop; Pop; Dance pop; Electropop; Alternative pop; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(CharliXcx_HowImFeelingNow())
 		},
 		"clown_core__van": {
 			lastfm_url: "https://www.last.fm/music/Clown+Core/Van",
 			rym_url: "https://rateyourmusic.com/release/album/clown-core/van/",
 			spotify_url: "https://open.spotify.com/album/7f5AP647DfTSWf0OmZRrPe?si=ZDIH7yqCRx-XfSggnSRdpQ",
-			year_of_release: "1996",
-			date_of_review: "2023",
+			year_of_release: "2020",
+			date_of_review: "2020",
 			genres: "Avant-garde metal; Experimental rock; Jazz; Jazz fusion; Noise; Breakbeat; Grindcore; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(ClownCore_Van())
 		},
 		"c418__minecraft_volume_alpha": {
 			lastfm_url: "https://www.last.fm/music/C418/Minecraft+-+Volume+Alpha",
@@ -1354,7 +1408,7 @@ const database = {
 			date_of_review: "2018",
 			genres: "Disco; French house; Progressive pop; Electropop; Synthpop; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(DaftPunk_RandomAccessMemories())
 		},
 		"daft_punk__human_after_all": {
 			lastfm_url: "https://www.last.fm/music/Daft+Punk/Human+After+All",
@@ -1511,8 +1565,8 @@ const database = {
 			year_of_release: "1978",
 			date_of_review: "2020",
 			genres: "Progressive electronic; Progressive rock; Electronic",
-			my_rating: 9.0,
-			my_review: "",
+			my_rating: 8.5,
+			my_review: ReactDomServer.renderToString(DominiqueGuiot_LUniverseDeLaMer())
 		},
 		"daniel_hart__a_ghost_story_soundtrack": {
 			lastfm_url: "https://www.last.fm/music/Daniel+Hart/A+Ghost+Story",
@@ -1522,12 +1576,12 @@ const database = {
 			date_of_review: "2021",
 			genres: "Film soundtrack; Ambient; Post-minimalism; Modern classical",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(DanielHart_AGhostStoryOST())
 		},
 		"dirty_projectors__mount_wittenburg_orca": {
-			lastfm_url: "https://www.last.fm/music/Dirty+Projectors+%252B+Bj%C3%B6rk/Mount+Wittenberg+Orca",
-			rym_url: "",
-			spotify_url: "",
+			lastfm_url: "https://www.last.fm/music/Dirty+Projectors/Mount+Wittenberg+Orca",
+			rym_url: "https://rateyourmusic.com/release/ep/dirty-projectors-bjork/mount-wittenberg-orca/",
+			spotify_url: "https://open.spotify.com/album/14xINYt1omt6jlxv8AFbly",
 			year_of_release: "2010",
 			date_of_review: "2022",
 			genres: "Alternative pop; Experimental pop; Progressive pop; Downtempo; Vocal",
@@ -1541,7 +1595,7 @@ const database = {
 			year_of_release: "2017",
 			date_of_review: "2017",
 			genres: "R&B; Neo-soul",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 	},
@@ -1763,8 +1817,8 @@ const database = {
 			year_of_release: "2016",
 			date_of_review: "2017",
 			genres: "R&B; Neo-soul; Hip-Hop; Rap",
-			my_rating: 9.0,
-			my_review: "",
+			my_rating: 8.5,
+			my_review: ReactDomServer.renderToString(FrankOcean_Blonde())
 		},
 		"frank_ocean__endless": {
 			lastfm_url: "https://www.last.fm/music/Frank+Ocean/Endless",
@@ -1819,7 +1873,7 @@ const database = {
 			genres: "Folk; Indie folk; Baroque pop; Baroque folk; Singer-songwritter",
 			themes: ["Contemplative", "Existential", "Peaceful"],
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(FatherJohnMisty_PureComedy()),
 			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
 		},
 		"fightstar__one_day_son_this_will_all_be_yours": {
@@ -1855,7 +1909,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Breakbeat; Hybrid trap; Drum and bass; Acid breaks; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(GJones_IllusoryTracks())
 		},
 		"g_jones__acid_disk": {
 			lastfm_url: "https://www.last.fm/music/G+Jones/Acid+Disk",
@@ -2151,7 +2205,7 @@ const database = {
 			genres: "Wonky; Drill and bass; Hybrid trap; Bubblegum bass; Glitch hop; Electronic",
 			custom_cover_url: "https://e.snmc.io/i/600/s/1d1b3a0374c280a392f0f8eed8bdac74/7047365/iglooghost-steel-mogu-Cover-Art.png",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Iglooghost_SteelMogu())
 		},
 		"iglooghost__neo_wax_bloom": {
 			lastfm_url: "https://www.last.fm/music/Iglooghost/Ne%C5%8D+Wax+Bloom",
@@ -2171,7 +2225,7 @@ const database = {
 			date_of_review: "2018",
 			genres: "Future bass; Wonky; Glitch; Future garage; Footwork; Breakbeat; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Iglooghost_ClearTamei())
 		},
 
 		//
@@ -2222,7 +2276,8 @@ const database = {
 			artist_name_English: "Joe Hisaishi",
 			genres: "Film soundtrack; Neoclassical new age; New age; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(JoeHisaishi_KidsReturn()),
+			country: "Japan"
 		},
 		"joe_hisaishi__the_wind_rises_OST": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/The+Wind+Rises+Soundtrack",
@@ -2234,7 +2289,7 @@ const database = {
 			genres: "Film soundtrack",
 			my_rating: 9.0,
 			custom_cover_url: "https://i.scdn.co/image/ab67616d0000b273c853c5a8535cc3dc394efc58",
-			my_review: "",
+			my_review: ReactDomServer.renderToString(JoeHisaishi_TheWindRises())
 		},
 		"joe_hisaishi__a_symphonic_celebration": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/A+Symphonic+Celebration+(Music+from+the+Studio+Ghibli+Films+of+Hayao+Miyazaki)",
@@ -2352,7 +2407,7 @@ const database = {
 			year_of_release: "2013",
 			date_of_review: "2013",
 			album_name_displayed: "The Elder Scrolls V: Skyrim: Original Game Soundtrack",
-			genres: "Video game soundtrack; Modern classical; Cinematic classical; Ambient; Celtic folk; Nordic folk; Choral",
+			genres: "Video game soundtrack; Modern classical; Cinematic classical; Ambient; Nordic folk; Choral",
 			my_rating: 9.0,
 			my_review: "",
 		},
@@ -2377,6 +2432,16 @@ const database = {
 			date_of_review: "2017",
 			genres: "Ambient; Downtempo; Electronic",
 			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(JonHopkins_ContactNote())
+		},
+		"Jon Hopkins - Immunity": {
+			lastfm_url: "https://www.last.fm/music/Jon+Hopkins/Immunity",
+			rym_url: "https://rateyourmusic.com/release/album/jon-hopkins/immunity/",
+			spotify_url: "https://open.spotify.com/album/1rxWlYQcH945S3jpIMYR35",
+			year_of_release: "2013",
+			date_of_review: "2015",
+			genres: "Ambient; IDM; Microhouse; Ambient techno",
+			my_rating: 8.0,
 			my_review: "",
 		},
 
@@ -2488,7 +2553,7 @@ const database = {
 			genres: "Jazz; Bossa nova; MPB; Latin jazz",
 			country: "Brazil",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(JoyceMoreno_Natureza())
 		},
 		"jon_brion__synecdoche_new_york": {
 			lastfm_url: "https://www.last.fm/music/Jon+Brion/Synecdoche,+New+York",
@@ -2567,7 +2632,7 @@ const database = {
 		"kendrick_lamar__good_kid_maad_city": {
 			lastfm_url: "https://www.last.fm/music/Kendrick+Lamar/good+kid,+m.A.A.d+city+(Deluxe)",
 			rym_url: "https://rateyourmusic.com/release/album/kendrick-lamar/good-kid-m_a_a_d-city/",
-			spotify_url: "https://rateyourmusic.com/release/album/opposite-day/what-is-is/",
+			spotify_url: "https://open.spotify.com/album/0Oq3mWfexhsjUh0aNNBB5u",
 			year_of_release: "2012",
 			date_of_review: "2016",
 			genres: "Hip-Hop; Rap; Gangsta rap",
@@ -2696,7 +2761,7 @@ const database = {
 			genres: "New Age; Choral; Modern clasical",
 			themes: ["Peaceful", "Calming", "Melancholic"],
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(KarlJenkins_Motets()),
 			recommended_by: TrustworthyMusicReviewers.XENOPHILE
 		},
 		"katzenjammer__le_pop": {
@@ -2714,12 +2779,12 @@ const database = {
 		"klute__no_ones_listening_anymore": {
 			lastfm_url: "https://www.last.fm/music/Klute/No+One%27s+Listening+Anymore",
 			rym_url: "https://rateyourmusic.com/release/album/klute/no-ones-listening-anymore/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/7aDh6fZXMKoPjldO9ZiiY9",
 			year_of_release: "2004",
 			date_of_review: "2021",
-			genres: "Drum and bass; Breakbeat; Industrial; Downtempo; Techno; Electronic",
+			genres: "Drum and bass; Breakbeat; Downtempo; Techno; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Klute_NOLA())
 		},
 		"kate_bush__never_for_ever": {
 			lastfm_url: "https://www.last.fm/music/Kate+Bush/Never+for+Ever",
@@ -2821,7 +2886,7 @@ const database = {
 			date_of_review: "2009",
 			genres: "Pop; Reggae pop; Synthpop; Indie pop",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(LilyAllen_INMIY())
 		},
 
 		//
@@ -2896,7 +2961,7 @@ const database = {
 			my_review: "",
 		},
 		"lisa_gerrard__the_silver_tree": {
-			lastfm_url: "https://www.last.fm/music/Lone/Galaxy+Garden",
+			lastfm_url: "https://www.last.fm/music/Lisa+Gerrard/The+Silver+Tree+(Extended+Edition)",
 			rym_url: "https://rateyourmusic.com/release/album/lisa-gerrard/the-silver-tree/",
 			spotify_url: "https://open.spotify.com/album/2DFO6AjnwgPAMQ0xYMR8JM?si=EsgAcNWLS1CUaYMhR5i69A",
 			year_of_release: "2006",
@@ -2904,6 +2969,7 @@ const database = {
 			genres: "Neoclassical darkwave; Ambient",
 			my_rating: 8.0,
 			my_review: "",
+			album_name_displayed: "The Silver Tree",
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"lone__galaxy_garden": {
@@ -2924,7 +2990,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "Film soundtrack; Ambient; Modern classical",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(LaurentPerezDelMar_TheRedTurtleOST())
 		},
 		"lucrecia_dalt__syzygy": {
 			lastfm_url: "https://www.last.fm/music/Lucrecia+Dalt/Syzygy",
@@ -2967,11 +3033,11 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Machine+Girl/WLFGRL",
 			rym_url: "https://rateyourmusic.com/release/album/machine-girl/wlfgrl/",
 			spotify_url: "https://open.spotify.com/album/1GezMTE4OA4tikMDBQK5u3?si=fUAphrORTLi-z9p9Vc-87Q",
-			year_of_release: "2000",
+			year_of_release: "2014",
 			date_of_review: "2022",
-			genres: "Digital hardcore; Drum and bass; Footwork; Industrial; Breakbeat; Jungle; Hardcore breaks; Electronic",
+			genres: "Digital hardcore; Drum and bass; Footwork; Breakbeat; Jungle; Hardcore breaks; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(MachineGirl_Wlfgrl())
 		},
 		"machine_girl__bootleg": {
 			lastfm_url: "https://www.last.fm/music/Machine+Girl/bootleg",
@@ -3148,8 +3214,8 @@ const database = {
 			year_of_release: "1998",
 			date_of_review: "2019",
 			genres: "Trip hop; Downtempo; Ambient pop; Alternative rock",
-			my_rating: 9.5,
-			my_review: "",
+			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(MassiveAttack_Mezzanine())
 		},
 		"mild_minds__mood": {
 			lastfm_url: "https://www.last.fm/music/Mild+Minds/MOOD",
@@ -3328,7 +3394,7 @@ const database = {
 			date_of_review: "2020",
 			album_name_displayed: "The Downward Spiral",
 			genres: "Industrial; Industrial metal; Alternative rock; Nu metal",
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 
@@ -3352,7 +3418,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "Art rock; Folk; Folk rock; Baroque folk",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(NickDrake_BryterLayter())
 		},
 		"nick_drake__five_leaves_left": {
 			lastfm_url: "https://www.last.fm/music/Nick+Drake/Five+Leaves+Left",
@@ -3539,7 +3605,7 @@ const database = {
 			date_of_review: "2015",
 			genres: "Modern classical; Piano",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(OskarSchuster_Sneeuwland())
 		},
 		"oskar_schuster__matilda": {
 			lastfm_url: "https://www.last.fm/music/Oskar+Schuster/Matilda",
@@ -3559,7 +3625,7 @@ const database = {
 			date_of_review: "2014",
 			genres: "Piano; Minimalism",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(OskarSchuster_LesValsesInvisibles())
 		},
 
 
@@ -3593,7 +3659,7 @@ const database = {
 			date_of_review: "2024",
 			genres: "Space rock; Progressive rock; Jazz fusion; Psychedelic rock; Livetronica",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(OzricTentacles_SpiralsInHyperspace()),
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"open_mike_eagle__brick_body_kids_still_daydream": {
@@ -3609,12 +3675,12 @@ const database = {
 		"opposite_day__opposite_day": {
 			lastfm_url: "https://www.last.fm/music/Opposite+Day/What+is+is%3F",
 			rym_url: "https://rateyourmusic.com/release/album/opposite-day/what-is-is/",
-			spotify_url: "https://rateyourmusic.com/release/album/opposite-day/what-is-is/",
+			spotify_url: "https://open.spotify.com/album/2I57SPGIdHDZvV6qpoesjn?si=ebTlBK7RS_-YOLUxKOUnig",
 			year_of_release: "2009",
 			date_of_review: "2009",
 			genres: "Alternative rock",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(OppositeDay_WhatIsIs())
 		},
 		"orange_blossom__everything_must_change": {
 			lastfm_url: "https://www.last.fm/music/Orange+Blossom/Everything+Must+Change",
@@ -3673,7 +3739,7 @@ const database = {
 			custom_cover_url: "https://e.snmc.io/i/600/s/4c72ae04e751c0c7c973b9de2702ed9f/2273844/pendulum-in-silico-Cover-Art.jpg",
 			genres: "Drum and bass; Electronic rock; Alternative dance; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Pendulum_InSilico())
 		},
 		"pendulum__immersion": {
 			lastfm_url: "https://www.last.fm/music/Pendulum/Immersion",
@@ -3706,6 +3772,7 @@ const database = {
 			genres: "Jazz; Jazz fusion; Djent; Progressive metal",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"Pushpavanam Kuppusamy Avaram Poo": {
 			lastfm_url: "https://www.last.fm/music/Pushpavanam+Kuppusamy/Avaram+Poo",
@@ -3837,7 +3904,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "IDM; Ambient; Ambient techno; Trip hop; Drum and bass; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Plaid_NotForThrees())
 		},
 		"pat_metheny__as_falls_wichita_so_falls_wichita_falls": {
 			lastfm_url: "https://www.last.fm/music/Pat+Metheny/As+Falls+Wichita,+So+Falls+Wichita+Falls",
@@ -3861,7 +3928,7 @@ const database = {
 			date_of_review: "2022",
 			genres: "Stoner rock; Alternative metal; Alternative rock",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(QueensOfTheStoneAge_SongsForTheDeaf())
 		},
 		"Quincy Jones - Big Band Bossa Nova": {
 			lastfm_url: "https://www.last.fm/music/Quincy+Jones/Big+Band+Bossa+Nova",
@@ -3941,7 +4008,7 @@ const database = {
 			genres: "Progressive folk; Folk; Singer-songwritter",
 			themes: ["Newcastle", "Geordie dialect"],
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(RichardDawson_2020()),
 			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP,
 		},
 		"richard_dawson__henki": {
@@ -4077,7 +4144,7 @@ const database = {
 			date_of_review: "2021",
 			genres: "Technical death metal; Death metal; Thrash metal",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Revocation_Teratogenesis()),
 			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
 		},
 		"run_the_jewels__rtj4": {
@@ -4262,7 +4329,7 @@ const database = {
 			year_of_release: "2020",
 			date_of_review: "May 10, 2025",
 			genres: "Psychedelic folk; Ambient; Ambient pop; Dream pop",
-			my_rating: 9.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(SeaOleena__WeavingABasket()),
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
@@ -4412,7 +4479,7 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
-		"sing_street__sing_street_soundtrack": {
+		"sing_street__sing_street_ost": {
 			lastfm_url: "https://www.last.fm/music/Sing+Street/Sing+Street+(Original+Motion+Picture+Soundtrack)",
 			rym_url: "https://rateyourmusic.com/release/album/various-artists/sing-street/",
 			spotify_url: "https://open.spotify.com/album/7ubvuN0J0CPRUa2JUE2pxM?si=M3t03PzRSm68P3mbaeU1eA",
@@ -4420,7 +4487,7 @@ const database = {
 			date_of_review: "2022",
 			genres: "Film soundtrack; New wave; Synthpop; Indie pop; Pop",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(SingStreet_SingStreetOST())
 		},
 		"scntfc__oxenfree": {
 			lastfm_url: "https://www.last.fm/music/scntfc/Oxenfree",
@@ -4430,7 +4497,7 @@ const database = {
 			date_of_review: "2017",
 			genres: "Video game soundtrack; Ambient; Downtempo",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Scntfc_Oxenfree())
 		},
 		"sheena_ringo__shoso_strip": {
 			lastfm_url: "https://www.last.fm/music/%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E/%E5%8B%9D%E8%A8%B4%E3%82%B9%E3%83%88%E3%83%AA%E3%83%83%E3%83%97",
@@ -4479,7 +4546,7 @@ const database = {
 			my_review: "",
 		},
 		"sigur_ros__agaetis_byrjun": {
-			lastfm_url: "https://www.last.fm/music/Sigur+R%C3%B3s/Agaetis+Byrjun",
+			lastfm_url: "https://www.last.fm/music/Sigur+R%C3%B3s/%C3%81g%C3%A6tis+byrjun",
 			rym_url: "https://rateyourmusic.com/release/album/sigur-ros/agaetis-byrjun/",
 			spotify_url: "https://open.spotify.com/album/1DMMv1Kmoli3Y9fVEZDUVC?si=E01Rt49ITD-PkVEW5bfoKw",
 			year_of_release: "1999",
@@ -4539,7 +4606,6 @@ const database = {
 			my_review: "",
 		},
 
-
 		//
 		"twenty_one_pilots__vessel": {
 			lastfm_url: "https://www.last.fm/music/twenty+one+pilots/Vessel+(Bonus+Tracks+Version)",
@@ -4575,7 +4641,6 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
-
 
 		//
 		"tyler_the_creator__flower_boy": {
@@ -4641,7 +4706,7 @@ const database = {
 			date_of_review: "2024",
 			genres: "Progressive rock; Space rock; Psychedelic rock; Post-rock; Radio broadcast recordings; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Telegraph_Mir()),
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"thom_yorke__suspiria": {
