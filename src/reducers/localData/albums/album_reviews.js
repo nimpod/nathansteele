@@ -371,7 +371,7 @@ const database = {
 		"the_prodigy music for the jilted generation": {
 			lastfm_url: "https://www.last.fm/music/The+Prodigy/Music+for+the+Jilted+Generation",
 			rym_url: "https://rateyourmusic.com/release/album/the-prodigy/music-for-the-jilted-generation/",
-			spotify_url: "https://rateyourmusic.com/release/album/the-prodigy/music-for-the-jilted-generation/",
+			spotify_url: "https://open.spotify.com/album/05yevdRXvaX6KGRaZehaDW",
 			year_of_release: "1994",
 			date_of_review: "2024",
 			genres: "Breakbeat; Jungle; Acid breaks; Techno; Electronic",
@@ -392,6 +392,31 @@ const database = {
 		},
 
 
+		//
+		"The Orb - UFOrb": {
+			lastfm_url: "https://www.last.fm/music/The+Orb/U.F.Orb",
+			rym_url: "https://rateyourmusic.com/release/album/the-orb/u_f_orb/",
+			spotify_url: "https://open.spotify.com/album/2Kn0WVtKYv7bcE3EYk3wRA",
+			year_of_release: "1992",
+			date_of_review: "2025",
+			genres: "Ambient house; Ambient dub; Space ambient; Breakbeat; Downtempo; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
+		"the_prodigy__experience": {
+			lastfm_url: "https://www.last.fm/music/The+Orb/Adventures+Beyond+the+Ultraworld",
+			rym_url: "https://rateyourmusic.com/release/album/orb/the-orbs-adventures-beyond-the-ultraworld/",
+			spotify_url: "https://open.spotify.com/album/0ee1sAau9a2DXQkAyezdwk",
+			year_of_release: "1991",
+			date_of_review: "2025",
+			genres: "Ambient house; Ambient dub; Ambient techno; Space ambient; Breakbeat; Downtempo; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+		},
+
+		
 		"The Dead Texan": {
 			lastfm_url: "https://www.last.fm/music/The+Dead+Texan/The+Dead+Texan",
 			rym_url: "https://rateyourmusic.com/release/album/the-dead-texan/the-dead-texan",
@@ -3432,6 +3457,16 @@ const database = {
 		},
 
 
+		"Nickel Creek - Nickel Creek": {
+			lastfm_url: "https://www.last.fm/music/Nickel+Creek/Nickel+Creek",
+			rym_url: "https://rateyourmusic.com/release/album/nickel-creek/nickel-creek/",
+			spotify_url: "https://open.spotify.com/album/5SGG7graQOU3OnK3cZZCNd",
+			year_of_release: "2000",
+			date_of_review: "2025",
+			genres: "Bluegrass; Folk",
+			my_rating: 9.0,
+			my_review: "",
+		},
 		"nathan fake blizzards": {
 			lastfm_url: "https://www.last.fm/music/Nathan+Fake/Blizzards",
 			rym_url: "https://rateyourmusic.com/release/album/nathan-fake/blizzards/",
@@ -3593,6 +3628,16 @@ const database = {
 			date_of_review: "2024",
 			genres: "Electronic; Techno; Acid house; Acid techno; Trance",
 			my_rating: 8.0,
+			my_review: "",
+		},
+		"orbital__orbital2": {
+			lastfm_url: "https://www.last.fm/music/Orbital/Orbital+2",
+			rym_url: "https://rateyourmusic.com/release/album/orbital/orbital-brown-album/",
+			spotify_url: "https://open.spotify.com/album/1JYyYFJSYrXMHLe7Dz1B3W",
+			year_of_release: "1993",
+			date_of_review: "2025",
+			genres: "Electronic; Techno; Acid house; Acid techno; Trance",
+			my_rating: 8.5,
 			my_review: "",
 		},
 
@@ -5106,7 +5151,7 @@ const database = {
 			year_of_release: "2004",
 			date_of_review: "2021",
 			genres: "Video game soundtrack; J-pop; Shibuya-kei; Synthpop; Jazz pop; Salsa; Funk",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"yuriko__nakamura__wind_and_reflections": {
