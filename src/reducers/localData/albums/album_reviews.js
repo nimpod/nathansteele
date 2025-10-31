@@ -145,6 +145,7 @@ import { review as PierreVanDormael_MrNobodyOST } from './content/pierre_van_dor
 import { review as PatrickOHearn_SoFlowsTheCurrent } from './content/patrick_ohearn/so_flows_the_current/review.jsx';
 import { review as Plaid_NotForThrees } from './content/plaid/not_for_threes/review.jsx';
 import { review as Pendulum_InSilico } from './content/pendulum/in_silico/review.jsx';
+import { review as Pendulum_HoldYourColour } from './content/pendulum/hold_your_colour/review.jsx';
 
 import { review as QueensOfTheStoneAge_SongsForTheDeaf } from './content/queens_of_the_stone_age/songs_for_the_deaf/review.jsx';
 
@@ -1842,7 +1843,7 @@ const database = {
 			year_of_release: "2016",
 			date_of_review: "2017",
 			genres: "R&B; Neo-soul; Hip-Hop; Rap",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: ReactDomServer.renderToString(FrankOcean_Blonde())
 		},
 		"frank_ocean__endless": {
@@ -1910,6 +1911,16 @@ const database = {
 			genres: "Post-hardcore; Emo; Emo pop; Screamo; Alternative rock; Alternative metal",
 			tags: ["Old favourite"],
 			my_rating: 9.0,
+			my_review: "",
+		},
+		"Floating Points - Promises": {
+			lastfm_url: "https://www.last.fm/music/Floating+Points/Promises",
+			rym_url: "https://rateyourmusic.com/release/album/floating-points-pharoah-sanders-and-the-london-symphony-orchestra/promises/",
+			spotify_url: "https://open.spotify.com/album/3ShtO5VCYa3ctlR5uzLWBa",
+			year_of_release: "2021",
+			date_of_review: "2021",
+			genres: "Post-minimalism; Ambient; Spiritual jazz; Chamber jazz; Electronic",
+			my_rating: 8.0,
 			my_review: "",
 		},
 	},
@@ -2089,13 +2100,13 @@ const database = {
 			my_review: "",
 		},
 		"Hiromi - Time control": {
-			lastfm_url: "https://www.last.fm/music/Hiromi/Time+Control",
+			lastfm_url: "https://www.last.fm/music/Hiromi/Hiromi%27s+Sonicbloom:+Time+Control",
 			rym_url: "https://rateyourmusic.com/release/album/hiromis-sonicbloom/time-control/",
 			spotify_url: "https://open.spotify.com/album/2WOOWcTQwyEVSOisaCAmQS?si=eA2sx4GaRkuO8XeYfMOk0g",
 			year_of_release: "2007",
 			date_of_review: "2023",
 			genres: "Jazz fusion; Progressive rock; Jazz; Jazz funk; Funk",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"Hiromi - Spark": {
@@ -2292,7 +2303,7 @@ const database = {
 
 	J: {
 		//
-		"joe_hisaishi__kids_return_OST": {
+		"Joe Hisaishi - Kids_return_OST": {
 			lastfm_url: "https://www.last.fm/music/Joe+Hisaishi/Kids+Return+(%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%BB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF)",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/kids_return/",
 			spotify_url: "https://open.spotify.com/album/32TaUR88QyqMkXT4h7ffm0?si=OSTF7MkaSriZfrGzvFcj6g",
@@ -2300,11 +2311,12 @@ const database = {
 			date_of_review: "2024",
 			artist_name_English: "Joe Hisaishi",
 			genres: "Film soundtrack; Neoclassical new age; New age; Electronic",
+			country: "Japan",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(JoeHisaishi_KidsReturn()),
 			country: "Japan"
 		},
-		"joe_hisaishi__the_wind_rises_OST": {
+		"Joe Hisaishi - The_wind_rises_OST": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/The+Wind+Rises+Soundtrack",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/%E9%A2%A8%E7%AB%8B%E3%81%A1%E3%81%AC_%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF__kaze_tachinu_soundtrack_/",
 			spotify_url: "https://open.spotify.com/album/59U5FQ4kDEt11Q2UcFu1dK?si=nA7B5VZLTYe8Y9Q-ul-yxg",
@@ -2316,7 +2328,7 @@ const database = {
 			custom_cover_url: "https://i.scdn.co/image/ab67616d0000b273c853c5a8535cc3dc394efc58",
 			my_review: ReactDomServer.renderToString(JoeHisaishi_TheWindRises())
 		},
-		"joe_hisaishi__a_symphonic_celebration": {
+		"Joe Hisaishi - A symphonic_celebration": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/A+Symphonic+Celebration+(Music+from+the+Studio+Ghibli+Films+of+Hayao+Miyazaki)",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2-royal-philharmonic-orchestra/a-symphonic-celebration-music-from-the-studio-ghibli-films-of-hayao-miyazaki/",
 			spotify_url: "https://open.spotify.com/album/561qUZZO6f2sILHUMlXmlM?si=P6gAV3ZPQlWF9BwzQeaeZw",
@@ -2327,7 +2339,7 @@ const database = {
 			my_rating: 9.0,
 			my_review: "",
 		},
-		"joe_hisaishi__kikis_delivery_service_OST": {
+		"Joe Hisaishi - Kikis_delivery_service_OST": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/Kiki%27s+Delivery+Service+Soundtrack+Music+Collection",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/kikis-delivery-service-original-soundtrack/",
 			spotify_url: "https://open.spotify.com/album/2NO5lYWs4aWpsmHOjF4JHk?si=eitK7DgpTYWtnaV3aQ0E6g",
@@ -2340,7 +2352,7 @@ const database = {
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(JoeHisaishi_KikisDeliveryService()),
 		},
-		"joe_hisaishi__dolls_OST": {
+		"Joe Hisaishi - Dolls_OST": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/Dolls",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/dolls/",
 			youtube_url: "https://youtu.be/pUkWsPKmto8?si=mCvOVQzXeX3AI5yl",
@@ -2348,11 +2360,12 @@ const database = {
 			date_of_review: "2024",
 			artist_name_English: "Joe Hisaishi",
 			album_name_English: "Dolls OST",
+			country: "Japan",
 			genres: "Film soundtrack; Ambient; New age",
 			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(JoeHisaishi_Dolls()),
 		},
-		"joe_hisaishi__my_neighbour_totoro_OST": {
+		"Joe Hisaishi - My_neighbour_totoro_OST": {
 			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/My+Neighbor+Totoro+Image+Song+Collection",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/%E3%81%A8%E3%81%AA%E3%82%8A%E3%81%AE%E3%83%88%E3%83%88%E3%83%AD-tonari-no-totoro-2/",
 			spotify_url: "https://open.spotify.com/album/2Dn4ABFUYJbrlMF7K12RT3?si=fn_UieBZQYWnaWsX-aKMfQ",
@@ -2364,7 +2377,7 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
-		"joe_hisaishi__a_scene_at_the_sea_OST": {
+		"Joe Hisaishi - A_scene_at_the_sea_OST": {
 			lastfm_url: "https://www.last.fm/music/Joe+Hisaishi/A+Scene+at+the+Sea+(Takeshi+Kitano%27s+Original+Motion+Picture+Soundtrack)",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/%E3%81%82%E3%81%AE%E5%A4%8F%E3%80%81%E3%81%84%E3%81%A1%E3%81%B0%E3%82%93%E9%9D%99%E3%81%8B%E3%81%AA%E6%B5%B7-ano-natsu-ichiban-shizukana-umi/",
 			spotify_url: "https://open.spotify.com/album/7g9uud3w9A6uVuT7krdRU7?si=qy8Lc6fkQEObi1Gdf6V0oQ",
@@ -2376,7 +2389,7 @@ const database = {
 			my_rating: 8.5,
 			my_review: "",
 		},
-		"joe_hisaishi__children_of_the_sea_OST": {
+		"Joe Hisaishi - children_of_the_sea_OST": {
 			lastfm_url: "https://www.last.fm/music/Joe+Hisaishi/Children+Of+The+Sea",
 			// lastfm_url: "https://www.last.fm/music/Joe+Hisaishi/%E6%B5%B7%E7%8D%A3%E3%81%AE%E5%AD%90%E4%BE%9B+(%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%BB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF)",
 			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/%E6%B5%B7%E7%8D%A3%E3%81%AE%E5%AD%90%E4%BE%9B-children-of-the-sea/",
@@ -2386,6 +2399,18 @@ const database = {
 			artist_name_English: "Joe Hisaishi",
 			album_name_English: "Children of the Sea OST",
 			genres: "Film soundtrack; New age; Neoclassical new age; Post-minimalism",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"Joe Hisaishi - Sonatine": {
+			lastfm_url: "https://www.last.fm/music/%E4%B9%85%E7%9F%B3%E8%AD%B2/Sonatine+(Original+Soundtrack)",
+			rym_url: "https://rateyourmusic.com/release/album/%E4%B9%85%E7%9F%B3%E8%AD%B2/sonatine/",
+			spotify_url: "https://open.spotify.com/album/0uQtaDnUHNsTSf5fEc0IQW",
+			year_of_release: "1993",
+			date_of_review: "2025",
+			artist_name_English: "Joe Hisaishi",
+			country: "Japan",
+			genres: "Film soundtrack; New age; Neoclassical new age; Tribal ambient; Okinawan music",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -3641,6 +3666,7 @@ const database = {
 			my_review: "",
 		},
 
+		
 		//
 		"oskar_schuster__sneeuwland": {
 			lastfm_url: "https://www.last.fm/music/Oskar+Schuster/Sneeuwland",
@@ -3674,17 +3700,7 @@ const database = {
 		},
 
 
-		"ola_gjeilo__voices_piano_strings": {
-			lastfm_url: "https://www.last.fm/music/Ola+Gjeilo/Ola+Gjeilo",
-			rym_url: "https://rateyourmusic.com/release/album/ola-gjeilo/ola-gjeilo/",
-			spotify_url: "https://open.spotify.com/album/4IOXEu8EgItKI8J9JDaEr4?si=-LH5R0Y5SjKm_mSXkUk0qw",
-			year_of_release: "2016",
-			date_of_review: "2024",
-			genres: "Choral; Modern classical",
-			my_rating: 8.0,
-			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.XENOPHILE
-		},
+		//
 		"ocoeur__nouveau_depart": {
 			lastfm_url: "https://www.last.fm/music/Ocoeur/Nouveau+D%C3%A9part",
 			rym_url: "https://rateyourmusic.com/release/album/ocoeur/nouveau-de%CC%81part/",
@@ -3695,6 +3711,39 @@ const database = {
 			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
+		"Ocoeur - Light as a feather": {
+			lastfm_url: "https://www.last.fm/music/Ocoeur/Light+as+a+Feather",
+			rym_url: "https://rateyourmusic.com/release/album/ocoeur/light_as_a_feather/",
+			spotify_url: "https://open.spotify.com/album/3ukISo8eMQVxqQqp7OnUjK",
+			year_of_release: "2013",
+			date_of_review: "2025",
+			genres: "Ambient; IDM; Modern classical",
+			my_rating: 8.0,
+			my_review: ""
+		},
+
+		"offthesky - Silent Went The Sea": {
+			lastfm_url: "https://www.last.fm/music/OFFTHESKY/Silent+Went+The+Sea",
+			rym_url: "https://rateyourmusic.com/release/album/offthesky/silent-went-the-sea/",
+			spotify_url: "https://open.spotify.com/album/4ct68YnRfJdlFseVXtGMRS?si=fbYA-N_0QkmD6rl-b2h3Pg",
+			year_of_release: "2016",
+			date_of_review: "2024",
+			genres: "Ambient; Drone",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
+		"ola_gjeilo__voices_piano_strings": {
+			lastfm_url: "https://www.last.fm/music/Ola+Gjeilo/Ola+Gjeilo",
+			rym_url: "https://rateyourmusic.com/release/album/ola-gjeilo/ola-gjeilo/",
+			spotify_url: "https://open.spotify.com/album/4IOXEu8EgItKI8J9JDaEr4?si=-LH5R0Y5SjKm_mSXkUk0qw",
+			year_of_release: "2016",
+			date_of_review: "2024",
+			genres: "Choral; Modern classical",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.XENOPHILE
 		},
 		"ozric_tentacles__spirals_in_hyperspace": {
 			lastfm_url: "https://www.last.fm/music/Ozric+Tentacles/Spirals+in+Hyperspace",
@@ -3773,7 +3822,7 @@ const database = {
 			date_of_review: "2010",
 			genres: "Drum and bass; Breakbeat; Electronic",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Pendulum_HoldYourColour())
 		},
 		"pendulum__in_silico": {
 			lastfm_url: "https://www.last.fm/music/Pendulum/In+Silico",
@@ -4662,7 +4711,7 @@ const database = {
 			themes: ["Upbeat"],
 			tags: ["Old favourite"],
 			album_name_displayed: "Vessel",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"twenty_one_pilots__blurryface": {
