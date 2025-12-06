@@ -14,13 +14,32 @@
         "artist": "Sea Oleena",
         "track": "Will I Know",
         "album": "Weaving a Basket",
-        "scrobbles": 34,
+        "scrobbles": 35,
         "genres": "Ambient; Ambient folk",
         "youtube": "https://www.youtube.com/embed/Njo_SX5fKGk?si=UpjHy9cPK-k-Sc2t&amp;start=2",
         "thoughts": "The intro to the album, incredible atmosphere, so immersive and calming"
     },
     {
         "pos": 3,
+        "artist": "The Dead Texan",
+        "track": "Aegina Airlines",
+        "album": "The Dead Texan",
+        "scrobbles": 29,
+        "genres": "Ambient",
+        "youtube": "https://www.youtube.com/embed/V-6H0DOujx8?si=kpbIl5mjcAe6rOBL",
+        "thoughts": "Beautiful melancolia, one of the many great songs on this album which I somehow only started listening to this year!"
+    },
+    {
+        "pos": 4,
+        "artist": "Aoneko No Torso",
+        "track": "Ryuichi Sakamoto",
+        "scrobbles": 27,
+        "genres": "Modern classical; Piano",
+        "youtube": "https://www.youtube.com/embed/Njo_SX5fKGk?si=UpjHy9cPK-k-Sc2t&amp;start=134",
+        "thoughts": "Yes, my top 3 most scrobbled songs of 2025 are all from the same album, Sea Oleena - Weaving a Basket. This song is a wonderfully peaceful 5 minute drone track with eerie but calming vocals."
+    },
+    {
+        "pos": 5,
         "artist": "Sea Oleena",
         "track": "Calvisius",
         "album": "Weaving a Basket",
@@ -79,16 +98,6 @@
         "genres": "Chinese folk; New age",
         "youtube": "https://www.youtube.com/embed/98FT4hvDejI?si=FtQa6ffhxuSCYfIV&amp;start=24",
         "thoughts": "Haya are a band from Inner Mongolia, China. This track, and the entire album is amazing, must listen if you are intrigued by Chinese culture and traditions."
-    },
-    {
-        "pos": 9,
-        "artist": "The Dead Texan",
-        "track": "Aegina Airlines",
-        "album": "The Dead Texan",
-        "scrobbles": 20,
-        "genres": "Ambient",
-        "youtube": "https://www.youtube.com/embed/V-6H0DOujx8?si=kpbIl5mjcAe6rOBL",
-        "thoughts": "Beautiful melancolia, one of the many great songs on this album which I somehow only started listening to this year!"
     },
     {
         "pos": 10,

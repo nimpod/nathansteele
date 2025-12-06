@@ -380,7 +380,7 @@ const database = {
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
-		"the_prodigy__experience": {
+		"The Prodigy - Experience": {
 			lastfm_url: "https://www.last.fm/music/The+Prodigy/Experience",
 			rym_url: "https://rateyourmusic.com/release/album/the-prodigy/experience/",
 			spotify_url: "https://open.spotify.com/album/0M6LHXO4ozsi0OOCCk6vWE?si=XJ8JUQUQQjeVhol3PlWRYg",
@@ -405,7 +405,7 @@ const database = {
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
-		"the_prodigy__experience": {
+		"The Orb - Adventures Beyond the Ultraworld": {
 			lastfm_url: "https://www.last.fm/music/The+Orb/Adventures+Beyond+the+Ultraworld",
 			rym_url: "https://rateyourmusic.com/release/album/orb/the-orbs-adventures-beyond-the-ultraworld/",
 			spotify_url: "https://open.spotify.com/album/0ee1sAau9a2DXQkAyezdwk",
@@ -425,7 +425,7 @@ const database = {
 			year_of_release: "2004",
 			date_of_review: "2025",
 			genres: "Ambient; Drone",
-			my_rating: 8.0,
+			my_rating: 9.0,
 			my_review: ""
 		},
 		"The Black Dog - Spanners": {
@@ -1944,7 +1944,7 @@ const database = {
 			year_of_release: "2022",
 			date_of_review: "2023",
 			genres: "Breakbeat; Hybrid trap; Drum and bass; Acid breaks; Electronic",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(GJones_IllusoryTracks())
 		},
 		"g_jones__acid_disk": {
@@ -2106,7 +2106,7 @@ const database = {
 			year_of_release: "2007",
 			date_of_review: "2023",
 			genres: "Jazz fusion; Progressive rock; Jazz; Jazz funk; Funk",
-			my_rating: 8.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 		"Hiromi - Spark": {
@@ -2686,7 +2686,7 @@ const database = {
 			year_of_release: "2012",
 			date_of_review: "2016",
 			genres: "Hip-Hop; Rap; Gangsta rap",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 
@@ -3264,7 +3264,7 @@ const database = {
 			year_of_release: "1998",
 			date_of_review: "2019",
 			genres: "Trip hop; Downtempo; Ambient pop; Alternative rock",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: ReactDomServer.renderToString(MassiveAttack_Mezzanine())
 		},
 		"mild_minds__mood": {
@@ -3662,7 +3662,7 @@ const database = {
 			year_of_release: "1993",
 			date_of_review: "2025",
 			genres: "Electronic; Techno; Acid house; Acid techno; Trance",
-			my_rating: 8.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 
