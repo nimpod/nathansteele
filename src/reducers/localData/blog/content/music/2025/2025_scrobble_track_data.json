@@ -35,7 +35,7 @@
         "track": "Ryuichi Sakamoto",
         "scrobbles": 27,
         "genres": "Modern classical; Piano",
-        "youtube": "https://www.youtube.com/watch?v=3hAFuQEAmEI&list=PL_m58L0UBc3VOPqbZf7Bxu8IO7xpwbeaH&index=34&pp=gAQBiAQB8AUB",
+        "youtube": "https://www.youtube.com/embed/3hAFuQEAmEI?si=zddQjKeEPhrBp409",
         "thoughts": "Japanese pianist Ryuichi Sakamoto, one of my all time favourite musicians, this track in particular is super amazing. It reminds me of Erik Satie's gymnopedies, super melancholic, peaceful, simple, and endlessley relistenable."
     },
     {
@@ -94,7 +94,7 @@
         "album": "Nickel Creek",
         "scrobbles": 22,
         "genres": "Bluegrass; Folk",
-        "youtube": "https://www.youtube.com/watch?v=ng5-VUDcjJ8&list=PL_m58L0UBc3VOPqbZf7Bxu8IO7xpwbeaH&index=27&pp=gAQBiAQB8AUB",
+        "youtube": "https://www.youtube.com/embed/ng5-VUDcjJ8?si=-oLBoo62vUzK5GiL",
         "thoughts": "Somehow I only just started listening to Nickel Creek this year. They are a fantastic bluegrass folk band, this album in particular has many great songs, this song is very memorable to me and endlessley relistenable."},
     {
         "pos": 11,
@@ -162,8 +162,8 @@
         "track": "Jaadoo Jaadoo",
         "scrobbles": 20,
         "genres": "Film soundtrack; Bollywood; Hindustani classical music",
-        "youtube": "https://www.youtube.com/watch?v=ID7oIDuXtf4&list=PL_m58L0UBc3VOPqbZf7Bxu8IO7xpwbeaH&index=17&pp=gAQBiAQB8AUB",
-        "thoughts": "Brings back great memories of India :)"
+        "youtube": "https://www.youtube.com/embed/ID7oIDuXtf4?si=No7wmbvfrk4wwmmg",
+        "thoughts": "Brings back great memories of India :) Jaaaadoooooo"
     },
     {
         "pos": 18,
@@ -192,7 +192,7 @@
         "track": "Jiping: Fu Gui and Jia Zhen (from 'To Live')",
         "scrobbles": 19,
         "genres": "Chinese classical music; Film soundtrack",
-        "youtube": "https://www.youtube.com/watch?v=W2__SV0E2Eg&list=PL_m58L0UBc3VOPqbZf7Bxu8IO7xpwbeaH&index=35&pp=gAQBiAQB8AUB",
+        "youtube": "https://www.youtube.com/embed/W2__SV0E2Eg?si=u1mhVcdY5JIct_4E",
         "thoughts": "Another great track from Anoushka Shankar, from her 2024 album. This one is more atmospheric, slow, peaceful, and feels like wandering through the Indian jungles of Maharashtra on a misty evening."
     },
     {
@@ -201,7 +201,7 @@
         "track": "Kobresia",
         "scrobbles": 18,
         "genres": "Ambient",
-        "youtube": "https://youtu.be/cKiuEHV6HWo?si=EZoda9p3f0W_5oVN",
+        "youtube": "https://www.youtube.com/embed/cKiuEHV6HWo?si=1mfxDTdCLgPaz2EU",
         "thoughts": "Been listening to a lot of Biosphere this year. This is a classic."
     },
     {
@@ -224,43 +224,25 @@
         "thoughts": "Little Simz new album was an instant hit for me, and quickly became my favourite of her discography. This song in particular I loved, great combination of intelligent lyrics, orchestral moments, authenticity, and energy."
     },
     {
-        "pos": 22,
-        "artist": "",
-        "track": "",
-        "scrobbles": 18,
-        "genres": "",
-        "youtube": "",
-        "thoughts": ""
-    },
-    {
-        "pos": 23,
-        "artist": "",
-        "track": "",
-        "scrobbles": 18,
-        "genres": "",
-        "youtube": "",
-        "thoughts": ""
-    },
-    {
         "pos": 24,
-        "artist": "",
-        "track": "",
+        "artist": "The Kyoto Connection",
+        "track": "The Matsuyama Mirror",
         "scrobbles": 18,
-        "genres": "",
-        "youtube": "",
-        "thoughts": ""
+        "genres": "Ambient; Modern classical",
+        "youtube": "https://www.youtube.com/embed/Oe2YjBQ3lFQ?si=Sw6HSICbQyLWAnTc",
+        "thoughts": "A short but beautiful melancholic piano ballad. Highly recommend!"
     },
     {
         "pos": 25,
-        "artist": "",
-        "track": "",
+        "artist": "Ryuichi Sakamoto",
+        "track": "Bibo No Aozora",
         "scrobbles": 18,
-        "genres": "",
-        "youtube": "",
-        "thoughts": ""
+        "genres": "Modern classical; Piano",
+        "youtube": "https://www.youtube.com/embed/q3gM_xpLdAI?si=haI0ksDQxwFvTAy6",
+        "thoughts": "Another beautiful piano ballad from Sakamoto-san."
     },
     {
-        "pos": 27,
+        "pos": 26,
         "artist": "Anoushka Shankar",
         "track": "In Jyoti's Name",
         "album": "Traces Of You",
@@ -271,7 +253,7 @@
         "thoughts_p2": "This is one of the many fantastic songs from her album 'Traces of You' (2009) which I somehow only just discovered this year. It's fantastic Hindustani classical music with great performances. This song in particular, was apparently my most scrobbled, it's a brief highly energetic Hindustani tune, but generally the whole album is great and worth listening to."
     },
     {
-        "pos": 28,
+        "pos": 27,
         "artist": "Anoushka Shankar",
         "track": "In The End",
         "album": "Chapter II: How Dark It Is Before Dawn",
@@ -281,7 +263,7 @@
         "thoughts": "Another great track from Anoushka Shankar, from her 2024 album. This one is more atmospheric, slow, peaceful, and feels like wandering through the Indian jungles of Maharashtra on a misty evening."
     },
     {
-        "pos": 30,
+        "pos": 28,
         "artist": "Kitty MacFarlane",
         "track": "Dawn & Dark",
         "album": "Namer of Clouds",
@@ -291,7 +273,7 @@
         "thoughts": "This album was a very random discovery this year, but Kitty MacFarlane has something missing from mainstream indie folk - a certain rawness and authenticity that makes her music stand out. This track in particular is a beautiful, melancholic, yet hopeful song, but has brought hope, comfort, and moments of light, in moments of darkness this year."
     },
     {
-        "pos": 20,
+        "pos": 29,
         "artist": "Low Altitude",
         "track": "Sunbeam",
         "scrobbles": 17,
@@ -300,7 +282,7 @@
         "thoughts": "The album this track is fairly standard ambient in my opinion - however this song in particular has a different energy to it, something ethereal and unqiue about it has kept me listening throughout the year."
     },
     {
-        "pos": 32,
+        "pos": 30,
         "artist": "Nusrat Fateh Ali Khan & Michael Brook",
         "track": "My Heart, My Life",
         "album": "Night Song",
