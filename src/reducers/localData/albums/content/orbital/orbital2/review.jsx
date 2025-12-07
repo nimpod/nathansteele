@@ -2,22 +2,20 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Xtal" },
-    { "rating": 10, "title": "Tha" },
-    { "rating": 9, "title": "Pulsewidth" },
-    { "rating": 8, "title": "Ageispolis" },
-    { "rating": 8, "title": "I" },
-    { "rating": 9, "title": "Green Calx" },
-    { "rating": 11, "title": "Heliospan" },
-    { "rating": 9, "title": "We Are The Music Makers" },
-    { "rating": 9, "title": "Schottkey 7th Path" },
-    { "rating": 8, "title": "Ptolemy" },
-    { "rating": 9, "title": "Hedphelym" },
-    { "rating": 9, "title": "Delphium" },
-    { "rating": 9, "title": "Actium" },
+    { "rating": "interlude", "title": "Time Becomes" },
+    { "rating": 10, "title": "PLANET OF THE SHAPES" },
+    { "rating": 10, "title": "LUSH 3.1" },
+    { "rating": 9, "title": "LUSH 3-2" },
+    { "rating": 9, "title": "IMPACT (The Earth Is Burning)" },
+    { "rating": 9, "title": "REMIND" },
+    { "rating": 10, "title": "WALK NOW..." },
+    { "rating": 9, "title": "MONDAY" },
+    { "rating": 11, "title": "HALCYON + ON + ON" },
+    { "rating": "interlude", "title": "Input Out" },
 ];
 
 const themes = [
+    "",
 ];
 
 export const review = () => (

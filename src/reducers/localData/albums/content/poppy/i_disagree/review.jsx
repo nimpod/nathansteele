@@ -16,11 +16,17 @@ const tracklist = [
 export const review = () => (
     <div className='review-content'>
         <div className="review-artistIntro">
-            <p>Poppy (i.e. Moriah Rose Pereira) is a genre-fluid artist, constantly reinventing her sound with each album. 'I Disagree,' released in 2020, showcases her unique blend of pop, industrial, and alt-metal influences.</p>
+            <p>
+                Poppy (i.e. Moriah Rose Pereira) is reinventing her sound with each album. 
+                This album is a unique blend of pop, industrial, and alt-metal influences.
+            </p>
         </div>
         
         <div className="review-content">
-            <p>One of the things that makes this album so entertaining to listen to (and Poppy as an artist in general) is the contrast from cute pop moments, to aggressive alt-metal. It's unique and very distinctive, introducing a bit of spice into the well-trodden genres.</p>
+            <p>
+                One of the things that makes this album so entertaining to listen to (and Poppy as an artist in general) is the contrast from cute pop moments, to aggressive alt-metal. 
+                It's unique and very distinctive, introducing a bit of spice into the well-trodden genres.
+            </p>
             
             <p>
                 Within a few weeks of discovering this album back in early 2021, I was absolutely hooked. I was convinced this was a full on alt-metal masterpiece.

@@ -16,8 +16,17 @@ export const review = () => (
     <div className='review-content'>
         <div className="review-intro">
             <p>
-
+                Absolutely my favourite Hiromi album.
+                She found a perfect balance of melancholic moments and energetic moments.
+                Most of her albums are 90% energetic moments and 10% melancholic moments.
+                But often this is quite intense. I personally like a few moments to breath and reflect on the journey.
+                Perhaps this album is 80% energetic moments and 20% melancholic moments. 80/20 principle! Kanpeki!
             </p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GAfUpYTAZgg?si=-vXzha3jAALipLRS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pkfrBUscKVw?si=pcg5g0Yem3XM_kq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
             <p>
 
             </p>

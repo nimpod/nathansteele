@@ -5,9 +5,9 @@ const tracklist = [
     { "rating": 10, "title": "On My Mind" },
     { "rating": 12, "title": "A2C2I2D" },
     { "rating": 9, "title": "Facebang (Acid Mix)" },
-    { "rating": 9, "title": "On The Platform" },
-    { "rating": 9, "title": "Flex Acid" },
-    { "rating": 9, "title": "Final Lap" },
+    { "rating": 8, "title": "On The Platform" },
+    { "rating": 8, "title": "Flex Acid" },
+    { "rating": 8, "title": "Final Lap" },
 ];
 
 const themes = [

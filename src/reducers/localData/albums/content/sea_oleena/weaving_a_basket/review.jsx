@@ -34,14 +34,16 @@ export const review = () => (
 
         <div className="review-main">
             <p>
-                A very soothing and melancholic album. 
-                This is probably the most "ambient" album they have made, usually they are focussed on more of a dream pop or folk sound.
-                But they decided to go full ambient here, and I think it went down very well.
+                A very soothing and melancholic album that has brought me a lot of comfort and reflection in recent years.
             </p>
+
             <p>
                 Lead vocalist Charlotte Oleena, her voice is very majestic.
                 The whole album is like flying through a vast landscape of autumnal trees, a forest that goes on forever.
             </p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Njo_SX5fKGk?si=GeeIKmm0mygUZdJR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
             <p>
                 Only track here I'm not a big fan of is the final song "Horses", 
                 which never captivated me in the same way every other song did.

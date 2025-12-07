@@ -1,15 +1,16 @@
 import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 const tracklist = [
-    { "rating": 12, "title": "A Lovely Place To Be" },
-    { "rating": 9, "title": "So Flows The Current" },
-    { "rating": 8, "title": "The Cold Sea's Embrace" },
-    { "rating": 10, "title": "Panning The Sands" },
-    { "rating": 11, "title": "Beyond This Moment" },
-    { "rating": 9, "title": "Along The Waterfront" },
-    { "rating": 8, "title": "Northwest Passage" },
-    { "rating": 9, "title": "Like So Much Lost Time" },
-    { "rating": 9, "title": "Traveler's Rest" },
+    { "rating": 8, "title": "Intro" },
+    { "rating": 11, "title": "Hymn Bream" },
+    { "rating": 10, "title": "Man-Q-Neons" },
+    { "rating": 9, "title": "Mops" },
+    { "rating": 8, "title": "Liquid Gel" },
+    { "rating": 8, "title": "Ying Yang Mang" },
+    { "rating": 9, "title": "Hot Synchronomy" },
+    { "rating": 8, "title": "Midnight Sun Pig" },
+    { "rating": 8, "title": "Vocoder Odour" },
+    { "rating": 8, "title": "Spacemang" },
 ]
 
 export const review = () => (

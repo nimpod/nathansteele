@@ -4,7 +4,7 @@ import TemplateTracklistComponent from '../../../../../../components/music/Templ
 const tracklist = [
     { "rating": 10, "title": "Dear Diary" },
     { "rating": 10, "title": "Parasite Eve" },
-    { "rating": 10, "title": "Teardrops" },
+    { "rating": 11, "title": "Teardrops" },
     { "rating": 9, "title": "Obey" },
     { "rating": 9,  "title": "Itch For The Cure" },
     { "rating": 10, "title": "Kingslayer" },

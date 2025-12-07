@@ -85,6 +85,9 @@ import { review as Hiromi_Alive } from './content/hiromi/alive/review.jsx';
 import { review as Hiromi_Spark } from './content/hiromi/spark/review.jsx';
 import { review as Hiromi_Move } from './content/hiromi/move/review.jsx';
 import { review as Hiromi_SilverLiningSuite } from './content/hiromi/silver_lining_suite/review.jsx';
+import { review as Hiromi_TimeControl } from './content/hiromi/time_control/review.jsx';
+import { review as Hiromi_AnotherMind } from './content/hiromi/another_mind/review.jsx';
+import { review as Hiromi_OutThere } from './content/hiromi/out_there/review.jsx';
 
 import { review as Igorrr_SavageSinusoid } from './content/igorrr/savage_sinusoid/review.jsx';
 import { review as IchikoAoba_WindsweptAdan } from './content/ichiko_aoba/windswept_adan/review.jsx';
@@ -109,11 +112,13 @@ import { review as KarlJenkins_Motets } from './content/karl_jenkins/motets/revi
 import { review as LaurentPerezDelMar_TheRedTurtleOST } from './content/laurent_perez_del_mar/the_red_turtle_ost/review.jsx';
 import { review as Lone_GalaxyGarden } from './content/lone/galaxy_garden/review.jsx';
 import { review as LucreciaDalt_Syzygy } from './content/lucrecia_dalt/syzygy/review.jsx';
-import { review as Logic_UnderPressure } from './content/logic/under_pressure/review.jsx';
 import { review as LinkinPark_HybridTheory } from './content/linkin_park/hybrid_theory/review.jsx';
 import { review as LinkinPark_AThousandSuns } from './content/linkin_park/a_thousand_suns/review.jsx';
 import { review as LilyAllen_AlrightStill } from './content/lily_allen/alright_still/review.jsx';
 import { review as LilyAllen_INMIY } from './content/lily_allen/inmiy/review.jsx';
+import { review as Logic_UnderPressure } from './content/logic/under_pressure/review.jsx';
+import { review as Logic_NoPressure } from './content/logic/no_pressure/review.jsx';
+import { review as Logic_Ultra85 } from './content/logic/ultra85/review.jsx';
 
 import { review as MarikaHackman_WeSleptAtLast } from './content/marika_hackman/we_slept_at_last/review.jsx';
 import { review as MarikaHackman_ThatIronTaste } from './content/marika_hackman/that_iron_taste/review.jsx';
@@ -123,6 +128,7 @@ import { review as MaximumTheHormone_YushuFukushu } from './content/maximum_the_
 import { review as Matmos_PlasticAnniversary } from './content/matmos/plastic_anniversary/review.jsx';
 import { review as MassiveAttack_Mezzanine } from './content/massive_attack/mezzanine/review.jsx';
 import { review as MachineGirl_Wlfgrl } from './content/machine_girl/wlfgrl/review.jsx';
+import { review as Metamatics_MindMushingGit } from './content/metamatics/mind_mushing_git/review.jsx';
 
 import { review as NickDrake_BryterLayter } from './content/nick_drake/bryter_layter/review.jsx';
 import { review as Nas_Illmatic } from './content/nas/illmatic/review.jsx';
@@ -131,6 +137,7 @@ import { review as NineInchNails_TheFragile } from './content/nine_inch_nails/th
 import { review as NothingButThieves_NothingButThieves } from './content/nothing_but_thieves/nothing_but_thieves/review.jsx';
 import { review as NothingButThieves_BrokenMachine } from './content/nothing_but_thieves/broken_machine/review.jsx';
 
+import { review as Orbital_Orbital2 } from './content/orbital/orbital2/review.jsx';
 import { review as Orbital_Snivilisation } from './content/orbital/snivilisation/review.jsx';
 import { review as Orbital_TheMiddleOfNowhere } from './content/orbital/the_middle_of_nowhere/review.jsx';
 import { review as Orbital_InSides } from './content/orbital/in_sides/review.jsx';
@@ -172,11 +179,14 @@ import { review as Scntfc_Oxenfree } from './content/scntfc/oxenfree/review.jsx'
 import { review as TakashiKako_Ritual } from './content/takashi_kako/ritual/review.jsx';
 import { review as ThomYorke_Suspiria } from './content/thom_yorke/suspiria/review.jsx';
 import { review as Telegraph_Mir } from './content/telegraph/mir/review.jsx';
+
+import { review as TheDeadTexan_TheDeadTexan } from './content/the_dead_texan/the_dead_texan/review.jsx';
 import { review as TheProdigy_Experience } from './content/the_prodigy/experience/review.jsx';
 import { review as TheKLF_Chillout } from './content/the_klf/chillout/review.jsx';
 
 import { review as Woob_Woob1994 } from './content/woob/woob_1194/review.jsx';
 import { review as Understatement_SmallCircle } from './content/understatement/small_circle/review.jsx';
+import { review as ValeSmith_Coruscate } from './content/vale_smith/coruscate/review.jsx';
 
 import { review as Xtc_Skylarking } from './content/xtc/skylarking/review.jsx';
 import { review as Xtc_Mummer } from './content/xtc/mummer/review.jsx';
@@ -425,8 +435,8 @@ const database = {
 			year_of_release: "2004",
 			date_of_review: "2025",
 			genres: "Ambient; Drone",
-			my_rating: 9.0,
-			my_review: ""
+			my_rating: 9.5,
+			my_review: ReactDomServer.renderToString(TheDeadTexan_TheDeadTexan()),
 		},
 		"The Black Dog - Spanners": {
 			lastfm_url: "https://www.last.fm/music/The+Black+Dog/Spanners",
@@ -1058,7 +1068,7 @@ const database = {
 			date_of_review: "2020",
 			custom_cover_url: "https://e.snmc.io/i/600/s/ea770c5f41025644462a5eda765f0582/8509675/bring-me-the-horizon-post-human-survival-horror-Cover-Art.jpg",
 			genres: "Alternative metal; Metalcore; Heavy metal; Nu metal",
-			my_rating: 10.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(BMTH_PostHumanSurvivalHorror()),
 		},
 		"bring_me_the_horizon__sempiternal": {
@@ -2107,7 +2117,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Jazz fusion; Progressive rock; Jazz; Jazz funk; Funk",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Hiromi_TimeControl()),
 		},
 		"Hiromi - Spark": {
 			lastfm_url: "https://www.last.fm/music/Hiromi/Spark",
@@ -2128,7 +2138,7 @@ const database = {
 			genres: "Jazz fusion; Jazz; Post-Bop",
 			album_name_displayed: "OUT THERE",
 			my_rating: 8.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Hiromi_OutThere()),
 		},
 		"Hiromi - Another Mind": {
 			lastfm_url: "https://www.last.fm/music/Hiromi/Another+Mind",
@@ -2138,7 +2148,7 @@ const database = {
 			date_of_review: "2025",
 			genres: "Jazz fusion; Jazz; Post-Bop",
 			my_rating: 8.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Hiromi_AnotherMind()),
 		},
 
 
@@ -2892,7 +2902,17 @@ const database = {
 			date_of_review: "2020",
 			genres: "Hip-Hop; Boom bap; Jazz rap; Pop rap",
 			my_rating: 8.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Logic_NoPressure()),
+		},
+		"logic__ultra85": {
+			lastfm_url: "https://www.last.fm/music/Logic/Ultra+85",
+			rym_url: "https://rateyourmusic.com/release/album/logic/ultra-85/",
+			spotify_url: "https://open.spotify.com/album/6vVOpqIXPbM9vZWzesdTax?si=Ua2GCV61RAaHFd59gYgU3g",
+			year_of_release: "2024",
+			date_of_review: "2024",
+			genres: "Hip-Hop; Boom bap; Jazz rap; Pop rap",
+			my_rating: 8.0,
+			my_review: ReactDomServer.renderToString(Logic_Ultra85()),
 		},
 		"logic__young_sinatra_welcome_to_forever": {
 			lastfm_url: "https://www.last.fm/music/Logic/Young+Sinatra:+Welcome+to+Forever",
@@ -3039,7 +3059,7 @@ const database = {
 			year_of_release: "2016",
 			date_of_review: "2021",
 			genres: "Film soundtrack; Ambient; Modern classical",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(LaurentPerezDelMar_TheRedTurtleOST())
 		},
 		"lucrecia_dalt__syzygy": {
@@ -3241,7 +3261,7 @@ const database = {
 			year_of_release: "2003",
 			genres: "Electronic; Ambient; IDM; Ambient techno",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Metamatics_MindMushingGit()),
 			date_of_review: "2023",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
@@ -3663,7 +3683,7 @@ const database = {
 			date_of_review: "2025",
 			genres: "Electronic; Techno; Acid house; Acid techno; Trance",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Orbital_Orbital2()),
 		},
 
 		
@@ -4952,7 +4972,7 @@ const database = {
 			date_of_review: "2022",
 			genres: "Future bass; EDM Trap; EDM; IDM; Wonky; Glitch pop; Electronic",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(ValeSmith_Coruscate()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"vampire_weekend__vampire_weekend": {
