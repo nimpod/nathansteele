@@ -2,18 +2,24 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Valkyrie" },
-    { "rating": 10, "title": "Gravitas" },
-    { "rating": 10, "title": "The Closer I Get To You" },
-    { "rating": 10, "title": "Nyctophobia" },
-    { "rating": 11, "title": "Russian Dolls" }, 
-    { "rating": 8, "title": "Heaven Help Me Now" },
-    { "rating": 9, "title": "I Would Die For You" },
-    { "rating": 9, "title": "Joe DiMaggio's Glove" },
-    { "rating": 8, "title": "Till We Meet Again" },
+    { "rating": 10, "title": "Intro" },
+    { "rating": 10, "title": "Arrival in Nara" },
+    { "rating": 10, "title": "Nara" },
+    { "rating": 9, "title": "Every Other Freckle" },
+    { "rating": 9,  "title": "Left Hand Free" },
+    { "rating": 9, "title": "Garden of England" },
+    { "rating": 9, "title": "Choice Kingdom" },
+    { "rating": 10, "title": "Hunger of the Pine" },
+    { "rating": 10, "title": "Warm Foothills" },
+    { "rating": 10, "title": "The Gospel of John Hurt" },
+    { "rating": 9, "title": "Pusher" },
+    { "rating": 10, "title": "Bloodflood, Pt. 2" },
+    { "rating": 9, "title": "Leaving Nara" },
+    { "rating": 10, "title": "Lovely Day" },
 ];
 
 const themes = [
+    
 ];
 
 export const review = () => (

@@ -17,6 +17,7 @@ import { review as _4hero_TwoPages } from './content/4hero/two_pages/review.jsx'
 import { review as ATribeCalledQuest_TheLowEndTheory } from './content/a_tribe_called_quest/the_low_end_theory/review.jsx';
 import { review as AndreasVollenweider_DownToTheMoon } from './content/andreas_vollenweider/down_to_the_moon/review.jsx';
 import { review as Altj_AnAwesomeWave } from './content/altj/an_awesome_wave/review.jsx';
+import { review as Altj_ThisIsAllYours } from './content/altj/this_is_all_yours/review.jsx';
 import { review as AmorphousAndrogynous_TalesOfEphidrina } from './content/amorphous_androgynous/tales_of_ephidrina/review.jsx';
 import { review as AnnaMeredith_Varmints } from './content/anna_meredith/varmints/review.jsx';
 import { review as Air_TalkieWalkie } from './content/air/talkie_walkie/review.jsx';
@@ -45,6 +46,7 @@ import { review as BeachHouse_OnceTwiceMelody } from './content/beach_house/once
 import { review as BireliLagrene_ElectricSide } from './content/bireli_lagrene/electric_side/review.jsx';
 import { review as BadBadNotGood_IV } from './content/badbadnotgood/iv/review.jsx';
 import { review as Brockhampton_Saturation3 } from './content/brockhampton/saturation3/review.jsx';
+import { review as BrandNew_ScienceFiction } from './content/brand_new/science_fiction/review.jsx';
 
 import { review as C418_Minecraft } from './content/c418/minecraft/review.jsx';
 import { review as ChisatoYamada_SuiteNihonkai } from './content/chisato_yamada/suite_nihonkai/review.jsx';
@@ -585,7 +587,7 @@ const database = {
 			date_of_review: "2014",
 			genres: "Indie pop; Indie rock; Indietronica",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Altj_ThisIsAllYours()),
 		},
 
 		//
@@ -869,7 +871,7 @@ const database = {
 			year_of_release: "1996",
 			genres: "IDM; Ambient; Breakbeat; Electronic",
 			custom_cover_url: "https://i1.sndcdn.com/artworks-MCKqEy3UB0Ye9PdD-sI6suA-t500x500.jpg",
-			my_rating: 10.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(BoC_Random35TracksTape()),
 			date_of_review: "2017"
 		},
@@ -1001,7 +1003,7 @@ const database = {
 			date_of_review: "2017",
 			genres: "Emo; Alternative rock; Post-hardcore; Indie rock",
 			my_rating: 9.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(BrandNew_ScienceFiction()),
 		},
 		"brand_new__deja_entendu": {
 			lastfm_url: "https://www.last.fm/music/Brand+New/Deja+Entendu",
@@ -1012,7 +1014,7 @@ const database = {
 			genres: "Post-hardcore; Emo; Alternative rock",
 			themes: ["Angsty", "Rebellious"],
 			tags: ["Old favourite"],
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 
@@ -2372,7 +2374,7 @@ const database = {
 			album_name_English: "Dolls OST",
 			country: "Japan",
 			genres: "Film soundtrack; Ambient; New age",
-			my_rating: 9.5,
+			my_rating: 10,
 			my_review: ReactDomServer.renderToString(JoeHisaishi_Dolls()),
 		},
 		"Joe Hisaishi - My_neighbour_totoro_OST": {
@@ -4065,7 +4067,7 @@ const database = {
 			year_of_release: "2016",
 			genres: "Art rock; Chamber pop; Ambient pop; Art pop",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/28db3fdca036fb53c62754694a89d3fd.jpg#28db3fdca036fb53c62754694a89d3fd",
-			my_rating: 10.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(Radiohead_AMoonShapedPool()),
 			date_of_review: "2016",
 		},
@@ -4499,7 +4501,7 @@ const database = {
 			year_of_release: "2009",
 			date_of_review: "2024",
 			genres: "Psybient; Psytrance; Electronic",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
@@ -5079,7 +5081,7 @@ const database = {
 			artist_name_displayed: "XTC",
 			genres: "Psychedelic rock; Psychedelic pop; Jangle pop; New wave",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/42a3dd8c1dea4f35b3c0711eb02c1a9d.jpg#42a3dd8c1dea4f35b3c0711eb02c1a9d",
-			my_rating: 10.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(Xtc_ChipsFromTheChocolateFireball()),
 			date_of_review: "2012",
 		},

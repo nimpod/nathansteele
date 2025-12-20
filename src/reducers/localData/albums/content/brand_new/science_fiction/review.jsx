@@ -2,19 +2,24 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 9, "title": "Valkyrie" },
-    { "rating": 10, "title": "Gravitas" },
-    { "rating": 10, "title": "The Closer I Get To You" },
-    { "rating": 10, "title": "Nyctophobia" },
-    { "rating": 11, "title": "Russian Dolls" }, 
-    { "rating": 8, "title": "Heaven Help Me Now" },
-    { "rating": 9, "title": "I Would Die For You" },
-    { "rating": 9, "title": "Joe DiMaggio's Glove" },
-    { "rating": 8, "title": "Till We Meet Again" },
+    { "rating": 10, "title": "Lit Me Up" },
+    { "rating": 10, "title": "Can't Get It Out" },
+    { "rating": 9, "title": "Waste" },
+    { "rating": 10, "title": "Could Never Be Heaven" },
+    { "rating": 8, "title": "Same Logic/Teeth" },
+    { "rating": 9, "title": "137" },
+    { "rating": 10, "title": "Out of Mana" },
+    { "rating": 10, "title": "In the Water" },
+    { "rating": 8, "title": "Desert" },
+    { "rating": 9, "title": "No Control" },
+    { "rating": 8, "title": "451" },
+    { "rating": 10, "title": "Batter Up" },
 ];
 
 const themes = [
 ];
+
+const date_of_review = "June 10, 2025";
 
 export const review = () => (
     <div className='review-content'>

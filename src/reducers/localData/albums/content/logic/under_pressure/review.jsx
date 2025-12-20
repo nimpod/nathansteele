@@ -3,7 +3,7 @@ import TemplateTracklistComponent from '../../../../../../components/music/Templ
 const tracklist = [
     { "rating": 9, "title": "Intro" },
     { "rating": 10, "title": "Soul Food" },
-    { "rating": 8, "title": "I'm Gone" },
+    { "rating": 9, "title": "I'm Gone" },
     { "rating": 9, "title": "Gang Related" },
     { "rating": 10, "title": "Buried Alive" },
     { "rating": 10, "title": "Bounce" },

@@ -6,6 +6,7 @@ This python script allows us to do 2 things:
 
 import time
 import os
+import random
 import zipfile
 import csv
 import json
@@ -25,7 +26,28 @@ from selenium.webdriver.common.by import By
 
 # https://devpress.csdn.net/python/630454e3c67703293080b48b.html
 session = requests.Session()
+session.headers.update({
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/122.0.0.0 Safari/537.36"
+    ),
+    "Accept": (
+        "text/html,application/xhtml+xml,"
+        "application/xml;q=0.9,image/webp,*/*;q=0.8"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://letterboxd.com/",
+    "Connection": "keep-alive",
+})
 
+# home pc
+blahu_homepc = '../../../../blahu.txt'
+blahp_homepc = '../../../../blahp.txt'
+
+# laptop
+blahp_laptop = '../blahp.txt'
+blahu_laptop = '../blahu.txt'
 
 class Helpers:
     """ Useful functions (TODO: move to separate file) """
@@ -90,9 +112,9 @@ def download_letterboxd_data():
     # enter username & password...
     username = driver.find_element(By.ID, "field-username")
     print(username)
-    username.send_keys(Helpers.read_txt_file('../../../../blahu.txt'))
+    username.send_keys(Helpers.read_txt_file(blahu_laptop))
     password = driver.find_element(By.ID, "field-password")
-    password.send_keys(Helpers.read_txt_file('../../../../blahp.txt'))
+    password.send_keys(Helpers.read_txt_file(blahp_laptop))
 
     # click sign in button
     button_sign_in = driver.find_element(By.CSS_SELECTOR, "button.standalone-flow-button")
@@ -120,6 +142,26 @@ def download_letterboxd_data():
     driver.quit()
 
 
+def fetch_film_page(letterboxd_url):
+    # My old code looked like this...
+    #page = session.get(url=letterboxd_url, verify=False, stream=True)
+    #soup = BeautifulSoup(page.content, 'html.parser')
+
+    # Adding a random delay might help avoid Cloudflare blocks... But it works fine without... For now...
+    #time.sleep(random.uniform(4, 9))
+
+    response = session.get(letterboxd_url, timeout=15)
+
+    # Detect Cloudflare block
+    if response.status_code in (403, 429):
+        raise RuntimeError("Blocked by Cloudflare (status code)")
+
+    if b"Cloudflare" in response.content or b"rate limited" in response.content.lower():
+        raise RuntimeError("Blocked by Cloudflare (HTML detected)")
+
+    return BeautifulSoup(response.content, "html.parser")
+
+
 def regenerate_json_file():
     """
     Function to re-generate json file based on most recently downloaded letterboxd data
@@ -130,8 +172,9 @@ def regenerate_json_file():
     list_name = 'my-favourite-films.csv'
     json_output_filename = 'webdata_top_films_list.json'
     path_to_rootreducer = f'D:\\Programming-Projects\\nathansteele\\src\\reducers\\RootReducer.js'
-    path_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\films\\{json_output_filename}'
-    
+    #path_to_json_output = f'D:\\Programming-Projects\\nathansteele\\src\\components\\films\\{json_output_filename}'
+    path_to_json_output = f"./src/components/films/{json_output_filename}"
+
     # 1) find letterboxd zip export...
     prefix = 'letterboxd'
     postfix = 'utc.zip'
@@ -194,11 +237,10 @@ def regenerate_json_file():
                 imdb_num_votes = ""
                 tmdb_url = ""
                 poster_url = ""
-                
-                # parse data from letterboxd web page... (this takes ~1.21s)
-                page = session.get(url=letterboxd_url, verify=False, stream=True)
-                soup = BeautifulSoup(page.content, 'html.parser')
-                # print(soup)
+
+                # parse data from letterboxd web page... (this takes ~1.5s)
+                soup = fetch_film_page(letterboxd_url)
+                #print(soup)
                 
                 # retrieve list of genres...
                 div_genres = soup.select_one('#tab-genres')
@@ -246,6 +288,7 @@ def regenerate_json_file():
                 imdb_film_id = imdb_url.split('/')[-2]
                 url = f'http://www.omdbapi.com/?i={imdb_film_id}&apikey={omdb_api_key}'
                 imdb = requests.get(url=url, verify=False)
+                #print(f" > {pos}: {title} ({year}), {letterboxd_url}, [{genres}]")
                 print(f" > {pos}: {imdb.text}")
 
                 try:
