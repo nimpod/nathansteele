@@ -179,6 +179,7 @@ import { review as SingStreet_SingStreetOST } from './content/sing_street/sing_s
 import { review as Scntfc_Oxenfree } from './content/scntfc/oxenfree/review.jsx';
 
 import { review as TakashiKako_Ritual } from './content/takashi_kako/ritual/review.jsx';
+import { review as TakashiKako_WindWaltz } from './content/takashi_kako/wind_waltz/review.jsx';
 import { review as ThomYorke_Suspiria } from './content/thom_yorke/suspiria/review.jsx';
 import { review as Telegraph_Mir } from './content/telegraph/mir/review.jsx';
 
@@ -750,7 +751,7 @@ const database = {
 			year_of_release: "2013",
 			genres: "Symphonic rock; Progressive rock; Art rock; AOR",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/fc4273ad9d904206c2776ca005d01e32.jpg#fc4273ad9d904206c2776ca005d01e32",
-			my_rating: 10.0,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Asia_Gravitas()),
 			date_of_review: "2014",
 		},
@@ -1002,7 +1003,7 @@ const database = {
 			year_of_release: "2017",
 			date_of_review: "2017",
 			genres: "Emo; Alternative rock; Post-hardcore; Indie rock",
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(BrandNew_ScienceFiction()),
 		},
 		"brand_new__deja_entendu": {
@@ -2307,7 +2308,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/2NsGk9oBBBMfblYdLcjYhu?si=dBE06x5bRD2yxWihazG-Dw",
 			year_of_release: "2017",
 			date_of_review: "2021",
-			genres: "Breakcore; Avant-garde metal; Balkan; Electronic",
+			genres: "Breakcore; Avant-garde metal; Balkan	",
 			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(Igorrr_SavageSinusoid()),
 		},
@@ -2668,7 +2669,7 @@ const database = {
 			year_of_release: "2011",
 			date_of_review: "2016",
 			genres: "Hip-Hop; Rap; Jazz rap",
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(KendrickLamar_Section80()),
 		},
 		"kendrick_lamar__to_pimp_a_butterfly": {
@@ -2698,7 +2699,7 @@ const database = {
 			year_of_release: "2012",
 			date_of_review: "2016",
 			genres: "Hip-Hop; Rap; Gangsta rap",
-			my_rating: 8.5,
+			my_rating: 9.0,
 			my_review: "",
 		},
 
@@ -4078,7 +4079,7 @@ const database = {
 			year_of_release: "2007",
 			genres: "Art rock; Dream pop; Art pop; Alternative rock",
 			custom_cover_url: "https://m.media-amazon.com/images/I/A1MwaIeBpwL._UF894,1000_QL80_.jpg",
-			my_rating: 10.0,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Radiohead_InRainbows()),
 			date_of_review: "2017",
 		},
@@ -4501,7 +4502,7 @@ const database = {
 			year_of_release: "2009",
 			date_of_review: "2024",
 			genres: "Psybient; Psytrance; Electronic",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
@@ -4715,11 +4716,12 @@ const database = {
 			rym_url: "",
 			spotify_url: "https://open.spotify.com/album/7LGWojAe9BrC9auLAMB2yX?si=OqsyEzMPS4WU_FHuTK7-Zg",
 			artist_name_Japanese: "加古隆",
+			album_name_English: "Wind Waltz",
 			year_of_release: "2002",
 			date_of_review: "2023",
 			genres: "Piano; Neo-classical new age; Modern classical",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(TakashiKako_WindWaltz()),
 		},
 
 		//
@@ -4832,7 +4834,7 @@ const database = {
 			year_of_release: "2012",
 			date_of_review: "2021",
 			genres: "Ambient; Ambient pop; Alternative folk; Chamber pop",
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(ThomYorke_Suspiria()),
 		},
 		"tkay_maidza__last_year_was_weird_vol_2": {

@@ -288,8 +288,8 @@ def regenerate_json_file():
                 imdb_film_id = imdb_url.split('/')[-2]
                 url = f'http://www.omdbapi.com/?i={imdb_film_id}&apikey={omdb_api_key}'
                 imdb = requests.get(url=url, verify=False)
-                #print(f" > {pos}: {title} ({year}), {letterboxd_url}, [{genres}]")
-                print(f" > {pos}: {imdb.text}")
+                print(f" > {pos}: {title} ({year}), {letterboxd_url}, [{genres}]")
+                #print(f" > {pos}: {imdb.text}")
 
                 try:
                     imdb_json = json.loads(imdb.text)

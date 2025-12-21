@@ -5,7 +5,7 @@ const tracklist = [
     { "rating": 10, "title": "Will I Know" },
     { "rating": 10, "title": "Calvisius" },
     { "rating": 10, "title": "Lost Song" },
-    { "rating": 8, "title": "Carrying" },
+    { "rating": 9, "title": "Carrying" },
     { "rating": 11, "title": "Gardens" },
     { "rating": 10, "title": "On Possession" },
     { "rating": 7, "title": "Horses" },

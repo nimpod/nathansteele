@@ -163,9 +163,18 @@ class LandingPage extends Component {
                         <h1>Nathan Steele</h1>
                         <p>I write code, think about data, and create digital experiences.</p>
                         <div className="landingpage-moreText">
-                          <p>This is a place where I can talk about the things that make me most excited about life (<Link to='/art'>art</Link>, <Link to='/music'>music</Link>, <Link to='/astronomy'>astronomy</Link>, <Link to='/films'>films</Link>, travelling, walking, running, cycling, web dev, the origins of life, vexilology, surrealism).</p>
-                          <p>I graduated from Newcastle University in 2021 (BSc Computer Science). I worked in web development (react, d3, asp.net, mvc) and test automation (python) until 2024.</p>
-                          <p>As of August 2024, I have been taking a sabbatical, spending some time travelling in India and Nepal.</p>
+                          <p>
+                            This is a place where I can talk about the things that make me most excited about life 
+                            (<Link to='/art'>art</Link>, <Link to='/music'>music</Link>, <Link to='/astronomy'>astronomy</Link>, <Link to='/films'>films</Link>, <a href="https://www.polarsteps.com/nayaflob">travelling</a>, <a href="https://www.strava.com/athletes/45999759">hiking</a>, <a href="https://www.strava.com/athletes/45999759">running</a>, <a href="https://www.strava.com/athletes/45999759">cycling</a>, web dev, the origins of life, vexilology, surrealism, buddhism, and much more!).
+                          </p>
+                          <p>
+                            I graduated from Newcastle University in 2021 (BSc Computer Science). 
+                            I worked in web development (react, d3, asp.net, mvc) and test automation (python) until 2024.
+                          </p>
+                          <p>
+                            As of August 2024, I have been taking a sabbatical, 
+                            spending some time <a href="https://www.polarsteps.com/nayaflob">travelling the world!</a>
+                          </p>
                           <div className='social-medias'>
                             <a className='strava' href='https://www.strava.com/athletes/45999759'>
                                 <img src='https://seeklogo.com/images/S/strava-logo-C419D1A461-seeklogo.com.png' alt='Strava logo'></img>

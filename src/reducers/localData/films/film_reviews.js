@@ -2037,7 +2037,7 @@ const database = {
             custom_poster_url: "https://image.tmdb.org/t/p/original/4wM16hbACD7btRRcbRxHXMn3slS.jpg",
             screenshots: screenshots.A_SCENE_AT_THE_SEA,
             my_review: ReactDomServer.renderToString(TemplateReview(screenshots.A_SCENE_AT_THE_SEA)),
-            my_rating: 8.0,
+            my_rating: 9.5,
             my_tags: [
                 "Relaxing",
                 "Contemplative",
@@ -2050,7 +2050,7 @@ const database = {
                 "Surfing",
                 "The sea",
             ],
-            gradual_interest: [8, 8, 9, 8, 8, 8, 8, 8, 8, 8],
+            gradual_interest: [8, 8, 9, 9, 8, 9, 9, 9, 10, 10],
         },
 
         "a_banquet": {
@@ -2164,7 +2164,7 @@ const database = {
     
         //
         "akira": {
-            my_rating: 8.5,
+            my_rating: 9.5,
             letterboxd_url: "https://boxd.it/2b1i",
             my_review: "",
             custom_poster_url: "https://image.tmdb.org/t/p/original/oVc2I0WBRaVCmnL3DO0LaPQuEqh.jpg",
@@ -2965,6 +2965,19 @@ const database = {
             my_review: "",
             custom_poster_url: "https://www.themoviedb.org/t/p/original/p69QzIBbN06aTYqRRiCOY1emNBh.jpg"
         },
+        "dolls": {
+            letterboxd_url: "https://boxd.it/29pi",
+            my_rating: 9.0,
+            my_tags: [
+                "Quiet",
+                "Sad",
+                "Atmospheric",
+                "Lonely",
+                "Emotional",
+                "Impernanence"
+            ],
+            my_review: "",
+        },
 
         //
         "dave_made_a_maze": {
@@ -3483,7 +3496,7 @@ const database = {
         },
         "helter_skelter": {
             letterboxd_url: "https://boxd.it/3ybW",
-            my_rating: 8.0,
+            my_rating: 9.0,
             my_tags: [
                 "Challenging to watch at times", 
                 "Audio-visual spectacle", 
@@ -4495,10 +4508,14 @@ const database = {
         },
         "ritual": {
             letterboxd_url: "https://boxd.it/14z6",
-            my_rating: 8.5,
-            my_tags: ["Melancholic", "Loneliness", "Amazing soundtrack"],
+            my_rating: 10.0,
+            my_tags: [
+                "Melancholic", 
+                "Loneliness", 
+                "Amazing soundtrack"
+            ],
             my_review: "",
-            gradual_interest: [8, 8, 8, 7, 8, 8, 7, 9, 8, 8, 7, 8],
+            gradual_interest: [8, 8, 8, 7, 9, 10, 7, 9, 10, 10, 9, 10],
             custom_poster_url: "https://www.themoviedb.org/t/p/original/3WDKfLdU2FP8gjVcXTpNvV9fWdA.jpg"
         },
 
