@@ -3418,8 +3418,8 @@ div.btn.filter-list-by-album-property > .item-text {
   flex-direction: row;
   background-color: var(--topAlbumsList-topLevelfilterBtn-bg-color);
   border-radius: 6px;
-  margin-bottom: 8px;
-  padding: 7px 0;
+  margin-bottom: 7px;
+  padding: 6px 0;
   cursor: pointer;
 }
 #top-albums-list-sidebar .albums-filterBtnsContainer:hover,

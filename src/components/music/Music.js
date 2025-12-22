@@ -37,13 +37,14 @@ const MIN_ARTIST_COUNT_TO_BE_DISPLAYED = 2;
 const MIN_YEAR_COUNT_TO_BE_DISPLAYED = 2;
 
 const NAVIGATION_GAP = 25;
-const NAVIGATION_MAX = 700;
+const NAVIGATION_MAX = 725;
 
 const DEFAULT_FILTERS = {
     "artist": "All artists",
     "genre": "All genres",
     "year": "All years",
-    "reviewer": "All reviewers"
+    "reviewer": "All reviewers",
+    "country": "All countries"
 }
 
 // if local storage values are empty, set default values...
@@ -82,6 +83,7 @@ class Music extends Component {
         __current_artist_filter: DEFAULT_FILTERS.artist,
         __current_year_filter: DEFAULT_FILTERS.year,
         __current_reviewer_filter: DEFAULT_FILTERS.reviewer,
+        __current_country_filter: DEFAULT_FILTERS.country,
 
         // search stuff...
         __search_box_contains_text: false,
@@ -96,6 +98,7 @@ class Music extends Component {
         __default_artist_filter: DEFAULT_FILTERS.artist,
         __default_year_filter: DEFAULT_FILTERS.year,
         __default_reviewer_filter: DEFAULT_FILTERS.reviewer,
+        __default_country_filter: DEFAULT_FILTERS.country,
     }
 
     /**
@@ -256,6 +259,16 @@ class Music extends Component {
                         return album.recommended_by === item;
                     }
                 }
+
+                // how many albums per country?
+                else if (property == "country") {
+                    if (album.country !== undefined) {
+                        if (item === default_property) {
+                             return Array.from(album.country);
+                        }
+                        return album.country === item;
+                    }
+                }
             }).length;
 
             album_count_list.push({
@@ -328,6 +341,8 @@ class Music extends Component {
         }
     }
 
+
+    // -------------------------< Filtering functions >-------------------------
     /**
      * Filter list by specified genre
      * @param {*} e 
@@ -533,132 +548,166 @@ class Music extends Component {
     }
 
     /**
+     * Filter list by a particular country
+     * @param {*} e 
+     * @param {*} country_selected 
+     */
+    filter_by_country = (e, country_selected) => { 
+        if (country_selected !== this.state.__current_country_filter) {
+            // update the 'current_country_filter' state...
+            this.setState({__current_country_filter: country_selected})
+
+            this.setState(prevState => {
+                return {
+                    __filtered_data: Array.from(this.props.top_albums)
+                        .filter((a) => {
+                            if (country_selected === this.state.__default_country_filter) {
+                                return true;
+                            }
+                            return a.country === country_selected;
+                        })
+                }
+            })
+
+            // deal with button stuff...
+            let actual_button = handle_filter_button_toggling_stuff(e.target, '.filter-list-by-country-btn');
+            let top_level_button = document.querySelector('#albums-filterByCountry');
+
+            // toggle the .active class
+            if (!actual_button.classList.contains('active')) {
+                // enable filter...
+                actual_button.classList.add('active');
+                top_level_button.classList.add('active');
+            } else {
+                // disable filter...
+                actual_button.classList.remove('active');
+                this.setState({__current_artist_filter: ""})
+               // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
+            }
+            
+            if (country_selected.toLowerCase() == "all countries") {
+                top_level_button.classList.remove('active');
+            }
+        }
+    }
+
+    /**
+     * 
+     * @param {*} param0 
+     * @returns 
+     */
+    apply_filter({currentFilter, defaultFilter, filterTypeLabel, albumsDisplayed}) {
+        if (currentFilter === defaultFilter) 
+            return null;
+
+        const filter_info_div = document.getElementById('filtered-albums-list-info');
+        const albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
+        
+        if (!filter_info_div) 
+            return null;
+        
+        albums_list_container.classList.add('filters-active');
+        const obj = this.calculate_avgs(albumsDisplayed, filter_info_div);
+
+        return {
+            filter_type: filterTypeLabel,
+            filter_criteria: currentFilter,
+            ...obj
+        };
+    }
+
+    /**
      * 
      * @param {*} albums_displayed 
-     * @param {*} current_filter 
-     * @param {*} default_filter 
      * @returns 
      */
     show_filter_info(albums_displayed) {
-        let num_of_albums = 0;
-        let avg_pos = 0;
-        let avg_rating = 0;
-        let num_of_10s = 0;
-        let num_of_9s = 0;
-        let num_of_8s = 0;
-        let filter_criteria = "";
-        let filter_type = "";
-        let filter_url = "";
-
-        if (this.state.__current_artist_filter !== this.state.__default_artist_filter) {
-            // Filtering by ARTIST
-            let filter_info_div = document.getElementById('filtered-albums-list-info');
-            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
-
-            if (filter_info_div !== null) {
-                // filter_info_div.classList.add('filters-active');
-                albums_list_container.classList.add('filters-active');
-
-                filter_criteria = this.state.__current_artist_filter;
-
-                let obj = this.calculate_avgs(albums_displayed, filter_info_div);
-                avg_pos = obj['avg_pos'];
-                avg_rating = obj['avg_rating'];
-                num_of_albums = obj['num_of_albums'];
-                num_of_10s = obj['num_of_10s'];
-                num_of_9s = obj['num_of_9s'];
-                num_of_8s = obj['num_of_8s'];
-
-                filter_type = "Artist:";
+        const filters = [
+            {
+                current: this.state.__current_artist_filter,
+                default: this.state.__default_artist_filter,
+                type: "Artist:"
+            },
+            {
+                current: this.state.__current_genre_filter,
+                default: this.state.__default_genre_filter,
+                type: "Genre:"
+            },
+            {
+                current: this.state.__current_year_filter,
+                default: this.state.__default_year_filter,
+                type: "Year:"
+            },
+            {
+                current: this.state.__current_reviewer_filter,
+                default: this.state.__default_reviewer_filter,
+                type: "Reviewer:"
+            },
+            {
+                current: this.state.__current_country_filter,
+                default: this.state.__default_country_filter,
+                type: "Country:"
             }
-        } else if (this.state.__current_genre_filter !== this.state.__default_genre_filter) {
-            // Filtering by GENRE
-            let filter_info_div = document.getElementById('filtered-albums-list-info');
-            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
-
-            if (filter_info_div !== null) {
-                //filter_info_div.classList.add('filters-active');
-                albums_list_container.classList.add('filters-active');
-
-                filter_criteria = this.state.__current_genre_filter;
-
-                let obj = this.calculate_avgs(albums_displayed, filter_info_div);
-                avg_pos = obj['avg_pos'];
-                avg_rating = obj['avg_rating'];
-                num_of_albums = obj['num_of_albums'];
-                num_of_10s = obj['num_of_10s'];
-                num_of_9s = obj['num_of_9s'];
-                num_of_8s = obj['num_of_8s'];
-
-                filter_type = "Genre:";
-            }
-        } else if (this.state.__current_year_filter !== this.state.__default_year_filter) {
-            // Filtering by YEAR
-            let filter_info_div = document.getElementById('filtered-albums-list-info');
-            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
-
-            if (filter_info_div !== null) {
-                //filter_info_div.classList.add('filters-active');
-                albums_list_container.classList.add('filters-active');
-
-                filter_criteria = this.state.__current_year_filter;
-
-                let obj = this.calculate_avgs(albums_displayed, filter_info_div);
-                avg_pos = obj['avg_pos'];
-                avg_rating = obj['avg_rating'];
-                num_of_albums = obj['num_of_albums'];
-                num_of_10s = obj['num_of_10s'];
-                num_of_9s = obj['num_of_9s'];
-                num_of_8s = obj['num_of_8s'];
-
-                filter_type = "Year:";
-            }
-        } else if (this.state.__current_reviewer_filter !== this.state.__default_reviewer_filter) {
-            // Filtering by REVIEWER
-            let filter_info_div = document.getElementById('filtered-albums-list-info');
-            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
-
-            if (filter_info_div !== null) {
-                //filter_info_div.classList.add('filters-active');
-                albums_list_container.classList.add('filters-active');
-
-                filter_criteria = (this.state.__current_reviewer_filter);
-
-                let obj = this.calculate_avgs(albums_displayed, filter_info_div);
-                avg_pos = obj['avg_pos'];
-                avg_rating = obj['avg_rating'];
-                num_of_albums = obj['num_of_albums'];
-                num_of_10s = obj['num_of_10s'];
-                num_of_9s = obj['num_of_9s'];
-                num_of_8s = obj['num_of_8s'];
-
-                filter_type = "Recommened by...";
-                //filter_url = (this.state.__current_reviewer_filter).url;
-            }
-        } else {
-            let filter_info_div = document.getElementById('filtered-albums-list-info');
-            let albums_list_container = document.getElementsByClassName('top-albums-list-container')[0];
-
-            if (filter_info_div !== null) {
-                //filter_info_div.classList.remove('filters-active');
-                albums_list_container.classList.remove('filters-active');
+        ];
+    
+        for (const f of filters) {
+            const result = this.apply_filter(
+                {
+                    currentFilter: f.current,
+                    defaultFilter: f.default,
+                    filterTypeLabel: f.type,
+                    albumsDisplayed: albums_displayed
+                }
+            );
+            
+            if (result) {
+                return {
+                    filter_url: "",
+                    ...result
+                };
             }
         }
 
-        const info = {
-            "filter_type": filter_type,
-            "filter_criteria": filter_criteria,
-            "filter_url": filter_url,
-            "num_of_albums": num_of_albums,
-            "avg_pos": avg_pos,
-            "avg_rating": avg_rating,
-            "num_of_10s": num_of_10s,
-            "num_of_9s": num_of_9s,
-            "num_of_8s": num_of_8s
-        }
-        // console.log(info);
-        return info;
+        // No filters active
+        return {
+            filter_type: "",
+            filter_criteria: "",
+            filter_url: "",
+            num_of_albums: 0,
+            avg_pos: 0,
+            avg_rating: 0,
+            num_of_10s: 0,
+            num_of_9s: 0,
+            num_of_8s: 0
+        };
     }
+
+    /**
+     * 
+     * @param {*} e 
+     */
+    toggle_filters_section = (e, div_id) => {
+        // to remove possibility of human error...
+        let visible = "visible";
+
+        // make sure all other sections are closed first...
+        let allFilterBtns = document.getElementsByClassName('albums-filterBtns');
+        for (let item of allFilterBtns) {
+            item.classList.remove(visible);
+        }
+        
+        let filterBtns = document.querySelectorAll(`#${div_id}`)[0];
+
+        if (filterBtns.classList.contains(visible)) {
+            filterBtns.classList.remove(visible);
+        } else {
+            filterBtns.classList.add(visible);
+        }
+
+        close_div_if_user_clicks_outside(filterBtns, filterBtns.parentElement);
+    }
+
+    // -------------------------< End of filtering functions >-------------------------
 
     /**
      * New text handler for the searchbox
@@ -794,31 +843,6 @@ class Music extends Component {
     }
 
     /**
-     * 
-     * @param {*} e 
-     */
-    toggle_filters_section = (e, div_id) => {
-        // to remove possibility of human error...
-        let visible = "visible";
-
-        // make sure all other sections are closed first...
-        let allFilterBtns = document.getElementsByClassName('albums-filterBtns');
-        for (let item of allFilterBtns) {
-            item.classList.remove(visible);
-        }
-        
-        let filterBtns = document.querySelectorAll(`#${div_id}`)[0];
-
-        if (filterBtns.classList.contains(visible)) {
-            filterBtns.classList.remove(visible);
-        } else {
-            filterBtns.classList.add(visible);
-        }
-
-        close_div_if_user_clicks_outside(filterBtns, filterBtns.parentElement);
-    }
-
-    /**
      * Render function
      * @returns 
      */
@@ -851,6 +875,7 @@ class Music extends Component {
         const all_genres_album_count = this.find_num_of_albums(AlbumProperties.GENRES.toString(), this.state.__default_genre_filter);
         const all_years_album_count = this.find_num_of_albums(AlbumProperties.YEAR.toString(), this.state.__default_year_filter);
         const all_reviewers_album_count = this.find_num_of_albums(AlbumProperties.RECOMMENDED_BY.toString(), this.state.__default_reviewer_filter);
+        const all_countries_album_count = this.find_num_of_albums(AlbumProperties.COUNTRY.toString(), this.state.__default_country_filter);
 
         // view type...
         const view_type_classname = (this.state.__view_type === ViewType.GRID) ? "view-as-grid" : "view-as-list";
@@ -983,6 +1008,27 @@ class Music extends Component {
                                                         }
                                                         if (obj.count >= MIN_YEAR_COUNT_TO_BE_DISPLAYED) {
                                                             return <div className={`btn filter-list-by-album-property filter-list-by-year-btn ${active}`} key={obj.item} onClick={(e) => this.filter_by_year(e, obj.item)}>
+                                                                <span className='item-text'>{obj.item}</span>
+                                                                <span className='item-count'>{obj.count}</span>
+                                                            </div>
+                                                        }
+                                                    }))
+                                                }
+                                            </div>
+                                        </div>
+
+                                        {/* Filter by country... */}
+                                        <div id='albums-filterByCountry' className='albums-filterBtnsContainer'  onClick={(e) => this.toggle_filters_section(e, 'filter-by-country-btns')}>
+                                            <p className='current-filter'>{this.state.__current_country_filter}</p>
+                                            <div id='filter-by-country-btns' className='albums-filterBtns'>
+                                                {
+                                                    all_countries_album_count.map(((obj, i) => {
+                                                        let active = "";
+                                                        if (i == 0) {
+                                                            active = "active";
+                                                        }
+                                                        if (obj.count >= 1) {
+                                                            return <div className={`btn filter-list-by-album-property filter-list-by-country-btn ${active}`} key={obj.item} onClick={(e) => this.filter_by_country(e, obj.item)}>
                                                                 <span className='item-text'>{obj.item}</span>
                                                                 <span className='item-count'>{obj.count}</span>
                                                             </div>

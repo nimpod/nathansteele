@@ -116,7 +116,8 @@ export const AlbumProperties = Object.freeze({
     ARTIST_NAME: enumValue("artist_name"),
     GENRES: enumValue("genres"),
     YEAR: enumValue("year_of_release"),
-    RECOMMENDED_BY: enumValue("recommended_by")
+    RECOMMENDED_BY: enumValue("recommended_by"),
+    COUNTRY: enumValue("country"),
 })
 
 /**

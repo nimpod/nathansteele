@@ -1301,6 +1301,17 @@ const database = {
             ],
             my_review: ""
         },
+    
+        "18x2_beyond_youthful_days": {
+            letterboxd_url: "https://boxd.it/J4Lk",
+            "title_displayed": "18x2 Beyond Youthful Days",
+            my_rating: 9.0,
+            my_tags: [
+                "Soulmate", 
+                "Sad",
+            ],
+            my_review: ""
+        },
     },
 
     THE: {
@@ -3429,7 +3440,15 @@ const database = {
                 "Fake celebrity personas"
             ],
         },
-    
+        "hakuichi_the_innocent": {
+            my_rating: 9.0,
+            letterboxd_url: "https://boxd.it/4Dpc",
+            my_review: "",
+            my_tags: [
+                "Weird", 
+            ],
+        },
+ 
         "happy_go_lucky": {
             my_rating: 9.5,
             letterboxd_url: "https://boxd.it/1W68",
@@ -4403,6 +4422,12 @@ const database = {
             letterboxd_url: "https://boxd.it/jkPq",
             my_rating: 8.5,
             my_tags: ["Great cinematography", "Mysterious", "Melancholic", "France 1800s", "Art"],
+            my_review: ""
+        },
+        "postmen_in_the_mountains": {
+            letterboxd_url: "https://boxd.it/3FLM",
+            my_rating: 9.0,
+            my_tags: ["Atmospheric", "Nature", "Rural China"],
             my_review: ""
         },
 

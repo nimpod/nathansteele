@@ -448,7 +448,7 @@ const database = {
 			year_of_release: "1995",
 			date_of_review: "2025",
 			genres: "Ambient techno; Acid techno; IDM; Electronic",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: ""
 		},
 		"the_klf__chillout": {
@@ -945,6 +945,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/24L8oeb5PczT6YTS3Edq1U?si=btGVLCniQLCIpGPyS0ZFnQ",
 			year_of_release: "2023",
 			date_of_review: "2023",
+			country: "Argentina",
 			custom_cover_url: "https://e.snmc.io/i/600/s/9199616ea9d11c849dcdb03698cedcc8/10834079/bruno-sanfilippo-ver-sacrum-Cover-Art.jpg",
 			genres: "Ambient; Post-minimalism; Neo-classical new age; Electronic",
 			my_rating: 10.0,
@@ -957,6 +958,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0ol5IXILkcvI1VUOfXYrPY?si=wAr9G8_DRz2N-Nowmu8Dtg",
 			year_of_release: "2018",
 			date_of_review: "2023",
+			country: "Argentina",
 			genres: "Ambient; Post-minimalism",
 			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(BrunoSanfilippo_Unity()),
@@ -1118,6 +1120,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/14xINYt1omt6jlxv8AFbly",
 			year_of_release: "2010",
 			date_of_review: "2021",
+			country: "Iceland",
 			genres: "Art pop; Acappella; Indie folk",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Bjork_MountWittenbergOrca())
@@ -1128,6 +1131,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/3p7WXDBxhC5KS9IFXnwae7?si=GAhYw43FROKgEjtY7l5p4w",
 			year_of_release: "1995",
 			date_of_review: "2021",
+			country: "Iceland",
 			genres: "Trip hop; Alternative pop; Electronic",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Bjork_Post()),
@@ -1555,12 +1559,24 @@ const database = {
 		},
 
 
+		"Deki Alem - Forget In Mass": {
+			lastfm_url: "https://www.last.fm/music/Deki+Alem/Forget+in+Mass",
+			rym_url: "https://rateyourmusic.com/release/album/deki-alem/forget-in-mass/",
+			spotify_url: "https://rateyourmusic.com/release/album/deki-alem/forget-in-mass/",
+			year_of_release: "2025",
+			date_of_review: "2025",
+			country: "Sweden",
+			genres: "Breakbeat; Trip hop; Electronic",
+			my_rating: 8.0,
+			my_review: ""
+		},
 		"Desolve - Asterism": {
 			lastfm_url: "https://www.last.fm/music/Dezolve/Asterism",
 			rym_url: "https://rateyourmusic.com/release/album/dezolve/asterism/",
 			spotify_url: "https://open.spotify.com/album/36GBHpAL5SgiwBMwbbO5fF",
 			year_of_release: "2024",
 			date_of_review: "2024",
+			country: "Japan",
 			genres: "Jazz fusion; Jazz",
 			my_rating: 8.0,
 			my_review: "",
@@ -1706,7 +1722,7 @@ const database = {
 			year_of_release: "1979",
 			date_of_review: "2023",
 			genres: "Jazz; ECM style jazz; Chamber jazz; Ambient; Minimalism; Norwegian jazz",
-			themes: ["Norwegian"],
+			country: "Norway",
 			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK,
@@ -1718,7 +1734,7 @@ const database = {
 			year_of_release: "1974",
 			date_of_review: "2023",
 			genres: "ECM style jazz; Chamber jazz; Jazz fusion; Minimalism; Third stream; Jazz; Norwegian jazz",
-			themes: ["Norwegian"],
+			country: "Norway",
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK,
@@ -1818,6 +1834,7 @@ const database = {
 			custom_cover_url: "https://e.snmc.io/i/600/s/9d49d9cb2e2c8fc9fb525f43fe52e9a1/5663936/egberto-gismonti-egberto-gismonti-Cover-Art.jpg",
 			year_of_release: "1973",
 			date_of_review: "2024",
+			country: "Brazil",
 			genres: "Jazz; Jazz fusion; Chamber jazz; MPB; Third stream; Modern classical; Chamber folk",
 			my_rating: 8.0,
 			my_review: "",
@@ -1971,6 +1988,32 @@ const database = {
 			my_review: "",
 		},
 
+		//
+		"Garaj Mahal - Woot": {
+			lastfm_url: "https://www.last.fm/music/Garaj+Mahal/wOOt",
+			rym_url: "https://rateyourmusic.com/release/album/garaj-mahal/w00t/",
+			spotify_url: "https://open.spotify.com/album/0AEPd4r1TJOwR0qH17BxS6?si=4AivQUX-Qx-FOObl9f07vg",
+			year_of_release: "2008",
+			date_of_review: "2024",
+			country: "India",
+			genres: "Jazz fusion; Jazz; Funk; Jazz funk",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
+		},
+		"Garaj Mahal - Rotifier": {
+			lastfm_url: "https://www.last.fm/music/Garaj+Mahal/Rotifer",
+			rym_url: "https://rateyourmusic.com/release/album/garaj-mahal/rotifier/",
+			spotify_url: "https://open.spotify.com/album/0AEPd4r1TJOwR0qH17BxS6?si=4AivQUX-Qx-FOObl9f07vg",
+			year_of_release: "2025",
+			date_of_review: "2025",
+			country: "India",
+			genres: "Jazz fusion; Jazz; Funk; Jazz funk",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
+		},
+
 
 		"gridlock_trace": {
 			lastfm_url: "https://www.last.fm/music/Gridlock/Trace",
@@ -2005,16 +2048,6 @@ const database = {
 			genres: "Electronic; Ambient; Ambient techno; Downtempo; Drone; Space ambient",
 			my_rating: 10.0,
 			my_review: ReactDomServer.renderToString(GlobalCommunication_7614()),
-		},
-		"garaj_mahal__woot": {
-			lastfm_url: "https://www.last.fm/music/Garaj+Mahal/wOOt",
-			rym_url: "https://rateyourmusic.com/release/album/garaj-mahal/w00t/",
-			spotify_url: "https://open.spotify.com/album/0AEPd4r1TJOwR0qH17BxS6?si=4AivQUX-Qx-FOObl9f07vg",
-			year_of_release: "2008",
-			date_of_review: "2024",
-			genres: "Jazz fusion; Jazz; Funk; Jazz funk",
-			my_rating: 8.0,
-			my_review: "",
 		},
 		"gladde_paling__dansmuziek": {
 			lastfm_url: "https://www.last.fm/music/gladde+paling/dansmuziek",
@@ -2078,6 +2111,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/18L36uUa7xLegzjkvr10ev?si=1Ew_DKL6QgmX5DCr3Z6D9g",
 			year_of_release: "2014",
 			date_of_review: "2023",
+			country: "Japan",
 			genres: "Jazz; Jazz fusion; Post-bop",
 			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(Hiromi_Alive()),
@@ -2088,6 +2122,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/4YVXRF8adSLNDk6wx943nC?si=1YXhvra5RoytHrvlARsvgg",
 			year_of_release: "2021",
 			date_of_review: "2023",
+			country: "Japan",
 			genres: "Jazz; Jazz fusion; Third stream jazz",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Hiromi_SilverLiningSuite()),
@@ -2098,6 +2133,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0oM9n40a2mG73Qk5ntGuOg?si=zZ3am-BESRufOFyeImEgxw",
 			year_of_release: "2012",
 			date_of_review: "2023",
+			country: "Japan",
 			genres: "Jazz; Jazz fusion; Third stream jazz",
 			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(Hiromi_Move()),
@@ -2108,6 +2144,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/5c4VPlbSpT7rY3NzbJy87Y?si=i_1qRiF5SU2qM3CQP_MPlA",
 			year_of_release: "2012",
 			date_of_review: "2023",
+			country: "Japan",
 			genres: "Jazz; Jazz fusion; Third stream jazz",
 			my_rating: 8.0,
 			my_review: "",
@@ -2118,6 +2155,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/2WOOWcTQwyEVSOisaCAmQS?si=eA2sx4GaRkuO8XeYfMOk0g",
 			year_of_release: "2007",
 			date_of_review: "2023",
+			country: "Japan",
 			genres: "Jazz fusion; Progressive rock; Jazz; Jazz funk; Funk",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Hiromi_TimeControl()),
@@ -2128,6 +2166,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/7KBqCSKifD2EacrwgUN1gH?si=ZUoYyJq0RrKgxvMcdzy4ag",
 			year_of_release: "2016",
 			date_of_review: "2023",
+			country: "Japan",
 			genres: "Jazz fusion; Jazz; Post-Bop",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Hiromi_Spark()),
@@ -2139,6 +2178,7 @@ const database = {
 			year_of_release: "2025",
 			date_of_review: "2025",
 			genres: "Jazz fusion; Jazz; Post-Bop",
+			country: "Japan",
 			album_name_displayed: "OUT THERE",
 			my_rating: 8.0,
 			my_review: ReactDomServer.renderToString(Hiromi_OutThere()),
@@ -2149,6 +2189,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/3icv4BC45cfT3pdnzEMPPX",
 			year_of_release: "2003",
 			date_of_review: "2025",
+			country: "Japan",
 			genres: "Jazz fusion; Jazz; Post-Bop",
 			my_rating: 8.0,
 			my_review: ReactDomServer.renderToString(Hiromi_AnotherMind()),
@@ -2213,7 +2254,6 @@ const database = {
 			date_of_review: "2021",
 			artist_name_Japanese: "青葉市子",
 			genres: "J-folk; Chamber folk; Ambient; New age; Nature recordings; J-acoustic",
-			themes: ["Japanese", "Majestic", "Atmospheric"],
 			country: "Japan",
 			custom_cover_url: "https://m.media-amazon.com/images/I/71Q93PPdn0L._UF894,1000_QL80_.jpg",
 			my_rating: 10.0,
@@ -2226,7 +2266,6 @@ const database = {
 			year_of_release: "2018",
 			date_of_review: "2021",
 			genres: "J-folk; J-acoustic; Folk",
-			themes: ["Japanese"],
 			country: "Japan",
 			my_rating: 8.0,
 			my_review: "",
@@ -2238,7 +2277,6 @@ const database = {
 			year_of_release: "2013",
 			date_of_review: "2019",
 			genres: "J-folk; J-acoustic; Folk",
-			themes: ["Japanese"],
 			country: "Japan",
 			my_rating: 8.0,
 			my_review: "",
@@ -2537,6 +2575,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0qwe5VPmlFIDkXACdSWXw2?si=-oVm7Ny3TDy-b0g3T1lMRg",
 			year_of_release: "2020",
 			date_of_review: "2024",
+			country: "Colombia",
 			genres: "Jazz fusion; Jazz; Latin jazz; Post-Bop",
 			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(JesusMolina_Departing()),
@@ -2548,6 +2587,7 @@ const database = {
 			custom_cover_url: "https://i.scdn.co/image/ab67616d0000b273869c2360bb37a1fa34923957",
 			year_of_release: "2022",
 			date_of_review: "2024",
+			country: "Colombia",
 			genres: "Jazz fusion; Jazz; Latin jazz; Bossa nova; Art pop",
 			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(JesusMolina_Agape()),
@@ -2555,7 +2595,16 @@ const database = {
 		},
 
 
-
+		"John Tejada - The Watchline": {
+			lastfm_url: "https://www.last.fm/music/John+Tejada/The+Watchline",
+			rym_url: "https://rateyourmusic.com/release/album/john-tejada/the-watchline/",
+			spotify_url: "https://open.spotify.com/album/6lmX7FyCs97gC6InJTWvyC",
+			year_of_release: "2025",
+			date_of_review: "2025",
+			genres: "Downtempo; Trip hop; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"Jon Kennedy - HA": {
 			lastfm_url: "https://www.last.fm/music/Jon+Kennedy/HA!",
 			rym_url: "https://rateyourmusic.com/release/album/jon-kennedy/ha/",
@@ -2799,6 +2848,7 @@ const database = {
 			date_of_review: "2024",
 			genres: "New Age; Ambient; Progressive rock",
 			tags: ["Not on spotify"],
+			country: "Japan",
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
@@ -3023,6 +3073,27 @@ const database = {
 		},
 
 
+		"llyr - Biome": {
+			lastfm_url: "https://www.last.fm/music/llyr/biome",
+			rym_url: "https://rateyourmusic.com/release/album/llyr/biome/",
+			spotify_url: "https://open.spotify.com/album/4al4RrIK5oMUd95Gvjlyiu",
+			year_of_release: "2021",
+			date_of_review: "2025",
+			genres: "IDM; Ambient; Dark ambient; Ambient techno; Industrial techno; Field recordings; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
+		"La Bottine souriante - La Bottine en spectacle": {
+			lastfm_url: "https://www.last.fm/music/La+Bottine+Souriante/En+spectacle",
+			rym_url: "https://rateyourmusic.com/release/album/la-bottine-souriante/la-bottine-en-spectacle/",
+			spotify_url: "https://open.spotify.com/album/0WvCt5rRrMt4Ako04f8uvV",
+			year_of_release: "1996",
+			date_of_review: "2025",
+			genres: "French-Canadian folk; Folk; Quebecois folk",
+			country: "Quebec",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"Little Simz - Lotus ": {
 			lastfm_url: "https://www.last.fm/music/Little+Simz/Lotus",
 			rym_url: "https://rateyourmusic.com/release/album/little-simz/lotus/",
@@ -3062,7 +3133,7 @@ const database = {
 			year_of_release: "2016",
 			date_of_review: "2021",
 			genres: "Film soundtrack; Ambient; Modern classical",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: ReactDomServer.renderToString(LaurentPerezDelMar_TheRedTurtleOST())
 		},
 		"lucrecia_dalt__syzygy": {
@@ -3192,6 +3263,17 @@ const database = {
 		},
 
 
+		"Marconi Union - The Fear of Never Landing": {
+			lastfm_url: "https://www.last.fm/music/Marconi+Union/The+Fear+of+Never+Landing",
+			rym_url: "https://rateyourmusic.com/release/album/marconi-union/the-fear-of-never-landing/",
+			spotify_url: "https://open.spotify.com/album/5lpuG7QX2csZN8lJHNsSo4",
+			year_of_release: "2025",
+			date_of_review: "22/12/2025",
+			genres: "Ambient; Downtempo; Electronic",
+			my_rating: 8.5,
+			my_review: "",
+			country: "India"
+		},
 		"Manish Vyas - Water down the ganges": {
 			lastfm_url: "https://www.last.fm/music/Manish+Vyas/Water+Down+the+Ganges",
 			rym_url: "https://rateyourmusic.com/release/album/prem-joshua-manish-vyas/water-down-the-ganges/",
@@ -3210,7 +3292,7 @@ const database = {
 			year_of_release: "2001",
 			date_of_review: "01/04/2025",
 			genres: "Ambient techno; IDM; Dub techno; Minimal techno; Techno; Ambient",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"Moses Yoofee Trio - MYT": {
@@ -3230,7 +3312,7 @@ const database = {
 			year_of_release: "2022",
 			date_of_review: "01/06/2024",
 			genres: "Jazz fusion; Jazz; Jazz rock; Avant-Prog",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
@@ -3308,6 +3390,7 @@ const database = {
 			year_of_release: "2019",
 			date_of_review: "2021",
 			genres: "Progressive rock; Symphonic rock; Pop rock",
+			country: "Norway",
 			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(MoronPolice_ABoatOnTheSea()),
 			recommended_by: TrustworthyMusicReviewers.SPECTRUM_PULSE
@@ -3505,6 +3588,16 @@ const database = {
 		},
 
 
+		"Nils Frahm - All Melody": {
+			lastfm_url: "https://www.last.fm/music/Nils+Frahm/All+Melody",
+			rym_url: "https://rateyourmusic.com/release/album/nils-frahm/all-melody/",
+			spotify_url: "https://open.spotify.com/album/43hPjSOlltDtbjltUv24EV",
+			year_of_release: "2018",
+			date_of_review: "2025",
+			genres: "Ambient techno; Ambient; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"Nickel Creek - Nickel Creek": {
 			lastfm_url: "https://www.last.fm/music/Nickel+Creek/Nickel+Creek",
 			rym_url: "https://rateyourmusic.com/release/album/nickel-creek/nickel-creek/",
@@ -3722,7 +3815,6 @@ const database = {
 			my_review: ReactDomServer.renderToString(OskarSchuster_LesValsesInvisibles())
 		},
 
-
 		//
 		"ocoeur__nouveau_depart": {
 			lastfm_url: "https://www.last.fm/music/Ocoeur/Nouveau+D%C3%A9part",
@@ -3746,6 +3838,18 @@ const database = {
 			my_review: ""
 		},
 
+
+		"Oscar Peterson - Night Train": {
+			lastfm_url: "https://www.last.fm/music/Oscar+Peterson+Trio/Night+Train",
+			rym_url: "https://rateyourmusic.com/release/album/the-oscar-peterson-trio/night-train/",
+			spotify_url: "https://open.spotify.com/album/0vnauBNT2FOGKFOtIbZJu6",
+			year_of_release: "1963",
+			date_of_review: "2025",
+			genres: "Jazz; Swing; Bebop",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
+		},
 		"offthesky - Silent Went The Sea": {
 			lastfm_url: "https://www.last.fm/music/OFFTHESKY/Silent+Went+The+Sea",
 			rym_url: "https://rateyourmusic.com/release/album/offthesky/silent-went-the-sea/",
@@ -3877,6 +3981,7 @@ const database = {
 			year_of_release: "2001",
 			date_of_review: "3 July, 2025",
 			genres: "Hindustani classical music",
+			country: "India",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -4502,7 +4607,7 @@ const database = {
 			year_of_release: "2009",
 			date_of_review: "2024",
 			genres: "Psybient; Psytrance; Electronic",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
@@ -4707,6 +4812,7 @@ const database = {
 			year_of_release: "2000",
 			genres: "Film soundtrack; Neoclassical new age; Piano",
 			tags: ["Not on spotify"],
+			country: "Japan",
 			my_rating: 10,
 			my_review: ReactDomServer.renderToString(TakashiKako_Ritual()),
 			date_of_review: "2023",
@@ -4719,6 +4825,7 @@ const database = {
 			album_name_English: "Wind Waltz",
 			year_of_release: "2002",
 			date_of_review: "2023",
+			country: "Japan",
 			genres: "Piano; Neo-classical new age; Modern classical",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(TakashiKako_WindWaltz()),
@@ -4774,7 +4881,7 @@ const database = {
 		"Tyler The Creator - igor": {
 			lastfm_url: "https://www.last.fm/music/Tyler,+The+Creator/IGOR",
 			rym_url: "https://rateyourmusic.com/release/album/tyler-the-creator/IGOR/",
-			spotify_url: "",
+			spotify_url: "https://open.spotify.com/album/5zi7WsKlIiUXv09tbGLKsE",
 			year_of_release: "2019",
 			date_of_review: "10 June, 2019",
 			genres: "Hip-Hop; Rap; Neo-soul; Soul; Pop rap",
@@ -4783,16 +4890,17 @@ const database = {
 		},
 
 
-		"Throwing Snow - Isthmus": {
-			lastfm_url: "https://www.last.fm/music/Throwing+Snow/Isthmus",
-			rym_url: "https://rateyourmusic.com/release/album/throwing-snow/isthmus/",
-			spotify_url: "https://rateyourmusic.com/release/album/throwing-snow/isthmus/",
-			year_of_release: "2024",
+
+		"Talvin Singh - Ok": {
+			lastfm_url: "https://www.last.fm/music/talvin+singh/ok",
+			rym_url: "https://rateyourmusic.com/release/album/talvin-singh/ok-1/",
+			spotify_url: "https://open.spotify.com/album/3BX2BQbQhcjoEP79UsQOAK",
+			year_of_release: "1998",
 			date_of_review: "2025",
-			genres: "Dubstep; IDM; Future garage; Jungle; Electronic",
+			country: "India",
+			genres: "Downtempo; Drum and bass; Breakbeat; Jungle; Tribal house; South Asian music; Electronic",
 			my_rating: 8.0,
 			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"tineidae__exo": {
 			lastfm_url: "https://www.last.fm/music/Tineidae/Exo",
@@ -4950,9 +5058,21 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/3F7dtIvD3D2oefh8gdBcdf?si=y3RZtC4JSxK5eZnLe021_Q",
 			year_of_release: "1999",
 			genres: "Film soundtrack; Chinese folk music; Impressionism",
+			country: "China",
 			my_rating: 8.0,
 			my_review: "",
 			date_of_review: "08 October 2025",
+		},
+		"Wagon Christ - Planet Roll": {
+			lastfm_url: "https://www.last.fm/music/Wagon+Christ/Planet+Roll",
+			rym_url: "https://rateyourmusic.com/release/album/wagon-christ/planet-roll/",
+			spotify_url: "https://open.spotify.com/album/59c3N45Ul2Cp29yH16mXIQ",
+			year_of_release: "2025",
+			genres: "Downtempo; Breakbeat; Plunderphonics; Instrumental hip hop; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			date_of_review: "2025",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 	},
 
@@ -5212,6 +5332,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0otC2s8AupBtfGUe0UUhYg?si=uBD0WCehSk2XxJIJyJut6A",
 			year_of_release: "2012",
 			date_of_review: "2024",
+			country: "Japan",
 			genres: "Electroacoustic; IDM; Ambient",
 			my_rating: 8.0,
 			my_review: "",
@@ -5223,6 +5344,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/7KHPyc1crwPfCZekggfw77",
 			year_of_release: "2004",
 			date_of_review: "2021",
+			country: "Japan",
 			genres: "Video game soundtrack; J-pop; Shibuya-kei; Synthpop; Jazz pop; Salsa; Funk",
 			my_rating: 8.5,
 			my_review: "",
@@ -5244,6 +5366,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0UCBCrOKGE3ppguBmgx4vR?si=hM0Gv4XbQDiZZEcGzbnfLA",
 			year_of_release: "1983",
 			date_of_review: "2023",
+			country: "Japan",
 			album_name_English: "Lupin the 3rd: The Castle of Cagliostro OST",
 			genres: "Film soundtrack; Anime soundtrack; Jazz; Jazz fusion; Samba jazz; Samba; Cool jazz",
 			my_rating: 8.0,
