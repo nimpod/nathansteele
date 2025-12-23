@@ -108,6 +108,7 @@ import { review as JoeHisaishi_TheWindRises } from './content/joe_hisaishi/the_w
 
 import { review as KendrickLamar_Section80 } from './content/kendrick_lamar/section80/review.jsx';
 import { review as KendrickLamar_UntitledUnmastered } from './content/kendrick_lamar/untitled_unmastered/review.jsx';
+import { review as KendrickLamar_TPAB } from './content/kendrick_lamar/tpab/review.jsx';
 import { review as Klute_NOLA } from './content/klute/nola/review.jsx';
 import { review as KarlJenkins_Motets } from './content/karl_jenkins/motets/review.jsx';
 
@@ -182,6 +183,7 @@ import { review as TakashiKako_Ritual } from './content/takashi_kako/ritual/revi
 import { review as TakashiKako_WindWaltz } from './content/takashi_kako/wind_waltz/review.jsx';
 import { review as ThomYorke_Suspiria } from './content/thom_yorke/suspiria/review.jsx';
 import { review as Telegraph_Mir } from './content/telegraph/mir/review.jsx';
+import { review as TkayMaidza_LastYearWasWeirdVol2 } from './content/tkay_maidza/lyww2/review.jsx';
 
 import { review as TheDeadTexan_TheDeadTexan } from './content/the_dead_texan/the_dead_texan/review.jsx';
 import { review as TheProdigy_Experience } from './content/the_prodigy/experience/review.jsx';
@@ -1824,7 +1826,7 @@ const database = {
 			year_of_release: "1984",
 			date_of_review: "2022",
 			genres: "Piano; Modern classical",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(ErikSatie_3Gymnopedies()),
 		},
 		"egberto_gismonti__egberto_gismonti": {
@@ -1995,7 +1997,6 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0AEPd4r1TJOwR0qH17BxS6?si=4AivQUX-Qx-FOObl9f07vg",
 			year_of_release: "2008",
 			date_of_review: "2024",
-			country: "India",
 			genres: "Jazz fusion; Jazz; Funk; Jazz funk",
 			my_rating: 8.0,
 			my_review: "",
@@ -2007,9 +2008,8 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/0AEPd4r1TJOwR0qH17BxS6?si=4AivQUX-Qx-FOObl9f07vg",
 			year_of_release: "2025",
 			date_of_review: "2025",
-			country: "India",
 			genres: "Jazz fusion; Jazz; Funk; Jazz funk",
-			my_rating: 8.0,
+			my_rating: 9.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
@@ -2729,7 +2729,7 @@ const database = {
 			date_of_review: "2016",
 			genres: "Hip-Hop; Rap; Jazz rap; Jazz; Funk",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(KendrickLamar_TPAB()),
 		},
 		"kendrick_lamar__untitled_unmastered": {
 			lastfm_url: "https://www.last.fm/music/Kendrick+Lamar/untitled+unmastered.",
@@ -2896,7 +2896,7 @@ const database = {
 			year_of_release: "2004",
 			date_of_review: "2021",
 			genres: "Drum and bass; Breakbeat; Downtempo; Techno; Electronic",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(Klute_NOLA())
 		},
 		"kate_bush__never_for_ever": {
@@ -3573,7 +3573,7 @@ const database = {
 			year_of_release: "1971",
 			date_of_review: "2021",
 			genres: "Art rock; Folk; Folk rock; Baroque folk",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(NickDrake_BryterLayter())
 		},
 		"nick_drake__five_leaves_left": {
@@ -3726,7 +3726,7 @@ const database = {
 			year_of_release: "2003",
 			date_of_review: "2019",
 			genres: "Film soundtrack; Ambient; Ambient techno",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"orbital__in_sides": {
@@ -4953,7 +4953,7 @@ const database = {
 			date_of_review: "2020",
 			genres: "Hip-Hop; Rap; R&B; Pop rap; Neo-soul",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(TkayMaidza_LastYearWasWeirdVol2()),
 		},
 		"thelonious_monk__monks_music": {
 			lastfm_url: "https://www.last.fm/music/+noredirect/Thelonious+Monk+Septet/Monk%27s+Music",
