@@ -2157,7 +2157,7 @@ const database = {
 			date_of_review: "2023",
 			country: "Japan",
 			genres: "Jazz fusion; Progressive rock; Jazz; Jazz funk; Funk",
-			my_rating: 9.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(Hiromi_TimeControl()),
 		},
 		"Hiromi - Spark": {
@@ -2241,6 +2241,17 @@ const database = {
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.NIELS,
 			country: "Japan",
+		},
+		"Hybrid - Wide Angle": {
+			lastfm_url: "https://www.last.fm/music/Hybrid/Wide+Angle",
+			rym_url: "https://rateyourmusic.com/release/album/hybrid/wide-angle/",
+			spotify_url: "https://open.spotify.com/album/3ydvpuVZay0HhH4isFrdlP",
+			year_of_release: "1999",
+			date_of_review: "2016",
+			genres: "Breakbeat; Acid breaks; Trance; Cinematic classical; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE,
 		},
 	},
 
@@ -4292,13 +4303,23 @@ const database = {
 		},
 
 
+		"Ryuichi Sakamoto - Playing the piano 12122020": {
+			lastfm_url: "https://www.last.fm/music/Ryuichi+Sakamoto/Playing+the+Piano+12122020",
+			rym_url: "https://rateyourmusic.com/release/album/%E5%9D%82%E6%9C%AC%E9%BE%8D%E4%B8%80/playing-the-piano-12122020/",
+			spotify_url: "https://open.spotify.com/album/5RRib8eRMf8OthdvJX26iU",
+			year_of_release: "2020",
+			date_of_review: "2025",
+			genres: "Modern classical; Minimalism; Piano",
+			country: "Japan",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"Raja Kirik - Phantasmagoria of Jathilan": {
 			lastfm_url: "https://www.last.fm/music/Raja+Kirik/Phantasmagoria+of+Jathilan",
 			rym_url: "https://rateyourmusic.com/release/album/raja-kirik/phantasmagoria-of-jathilan/",
 			spotify_url: "https://www.last.fm/music/Raja+Kirik/Phantasmagoria+of+Jathilan",
 			year_of_release: "2023",
 			date_of_review: "2025",
-			date_of_review: "13/05/2025",
 			genres: "Kuda kepang; Industrial techno; Ritual ambient; Deconstructed club; Industrial hardcore",
 			country: "Indonesia",
 			my_rating: 8.5,

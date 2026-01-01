@@ -14,55 +14,55 @@
         "artist": "Sea Oleena",
         "track": "Will I Know",
         "album": "Weaving a Basket",
-        "scrobbles": 35,
+        "scrobbles": 36,
         "genres": "Ambient; Ambient folk",
         "youtube": "https://www.youtube.com/embed/Njo_SX5fKGk?si=UpjHy9cPK-k-Sc2t&amp;start=2",
         "thoughts": "The intro to the album, incredible atmosphere, so immersive and calming"
     },
     {
         "pos": 3,
-        "artist": "The Dead Texan",
-        "track": "Aegina Airlines",
-        "album": "The Dead Texan",
-        "scrobbles": 29,
-        "genres": "Ambient",
-        "youtube": "https://www.youtube.com/embed/V-6H0DOujx8?si=kpbIl5mjcAe6rOBL",
-        "thoughts": "Beautiful melancolia, one of the many great songs on this album which I somehow only started listening to this year!"
-    },
-    {
-        "pos": 4,
         "artist": "Aoneko No Torso",
         "track": "Ryuichi Sakamoto",
-        "scrobbles": 27,
+        "scrobbles": 34,
         "genres": "Modern classical; Piano",
         "youtube": "https://www.youtube.com/embed/3hAFuQEAmEI?si=zddQjKeEPhrBp409",
         "thoughts": "Japanese pianist Ryuichi Sakamoto, one of my all time favourite musicians, this track in particular is super amazing. It reminds me of Erik Satie's gymnopedies, super melancholic, peaceful, simple, and endlessley relistenable."
     },
     {
-        "pos": 5,
-        "artist": "Sea Oleena",
-        "track": "Calvisius",
-        "album": "Weaving a Basket",
-        "scrobbles": 26,
-        "genres": "Ambient; Ambient folk",
-        "youtube": "https://www.youtube.com/embed/Njo_SX5fKGk?si=UpjHy9cPK-k-Sc2t&amp;start=134",
-        "thoughts": "Sea Oleena, again! This song is a wonderfully peaceful 5 minute drone track with eerie but calming vocals."
+        "pos": 4,
+        "artist": "The Dead Texan",
+        "track": "Aegina Airlines",
+        "album": "The Dead Texan",
+        "scrobbles": 32,
+        "genres": "Ambient",
+        "youtube": "https://www.youtube.com/embed/V-6H0DOujx8?si=kpbIl5mjcAe6rOBL",
+        "thoughts": "Beautiful melancolia, one of the many great songs on this album which I somehow only started listening to this year!"
     },
     {
-        "pos": 6,
+        "pos": 5,
         "artist": "Elena Kats-Chernin",
         "track": "The Wisdom of Snails",
-        "scrobbles": 25,
+        "scrobbles": 29,
         "genres": "Film soundtrack; Neo-classical",
         "youtube": "https://www.youtube.com/embed/6oOwhoiYR4s?si=Ofm0Ut61lNLQDpn4",
         "thoughts": "One of the many beautiful songs to this very sad film. It's a stopmotion animation film about many things, and I found myself going back to the soundtrack many times after watching. This song captures the vibe pretty well."
+    },
+    {
+        "pos": 6,
+        "artist": "Sea Oleena",
+        "track": "Calvisius",
+        "album": "Weaving a Basket",
+        "scrobbles": 28,
+        "genres": "Ambient; Ambient folk",
+        "youtube": "https://www.youtube.com/embed/Njo_SX5fKGk?si=UpjHy9cPK-k-Sc2t&amp;start=134",
+        "thoughts": "Sea Oleena, again! This song is a wonderfully peaceful 5 minute drone track with eerie but calming vocals."
     },
     {
         "pos": 7,
         "artist": "Llyr",
         "track": "Refuge of Majesty",
         "album": "Biome",
-        "scrobbles": 25,
+        "scrobbles": 26,
         "genres": "Ambient techno",
         "youtube": "https://www.youtube.com/embed/U5e4niHOaIo?si=0yZ0ITCzaJPqkbQ-",
         "thoughts": "A wonderfully mysterious, immersive, tropical, almost alien sounding ambient techno track. The whole album has a very spooky, otherwordly, alien kinda vibe, it contains lots of field recordings, but its mixed in with ambient techno to create this interesting contrast between nature and technology."
@@ -72,7 +72,7 @@
         "artist": "Monolake",
         "track": "Ionized",
         "album": "Cinemascope",
-        "scrobbles": 23,
+        "scrobbles": 25,
         "genres": "Ambient; Ambient techno",
         "youtube": "https://www.youtube.com/embed/8iKMcyqno9A?si=3lvHqdiOKBsQNVe7",
         "thoughts": "This album took a while to grow on me, but it was this track that kept me captivated, and intrigued about the atmopshere being created. It's an 11 minute abstract adventure into some kind of dystopia. Great vibes."
@@ -82,26 +82,27 @@
         "artist": "Sea Oleena",
         "track": "Lost Song",
         "album": "Weaving a Basket",
-        "scrobbles": 22,
+        "scrobbles": 24,
         "genres": "Ambient; Ambient folk",
         "youtube": "https://www.youtube.com/embed/Njo_SX5fKGk?si=UpjHy9cPK-k-Sc2t&amp;start=423",
         "thoughts": "And we are back again with Sea Oleena! Clearly I listened to this album a lot this year..."
     },
     {
         "pos": 10,
-        "artist": "Nickel Creek",
-        "track": "When You Come Back Down",
-        "album": "Nickel Creek",
-        "scrobbles": 22,
-        "genres": "Bluegrass; Folk",
-        "youtube": "https://www.youtube.com/embed/ng5-VUDcjJ8?si=-oLBoo62vUzK5GiL",
-        "thoughts": "Somehow I only just started listening to Nickel Creek this year. They are a fantastic bluegrass folk band, this album in particular has many great songs, this song is very memorable to me and endlessley relistenable."},
+        "artist": "運命の縁から跳び立つ私を、白い鳳凰の翼が抱きしめる",
+        "track": "t e l e p a t h テレパシー能力者",
+        "album": "夜明けが訪れる",
+        "scrobbles": 24,
+        "genres": "New age; Neo-classical; Film soundtrack",
+        "youtube": "https://www.youtube.com/embed/HZWrMd_XRU0?si=a6HgaCyMmSzGTa8T",
+        "thoughts": "telepath are pioneers of the vaporwave genre. I've not always been a big fan of the genre, often it all feels a bit 'samey'. However, this track, and their new album, I found to be quite enjoyable. Despite the runtime for this track being a whopping 19 minutes, somehow I stil listened to it 20 times this year! So I spent 6 hours listening to this... However it's an unbelievably mesmerising experience, again I think this was the kind of mood I was in this year, long moody melancholic drone ambient tracks."
+    },
     {
         "pos": 11,
         "artist": "Celer",
         "track": "In the Middle Of the Moving Field",
         "album": "Xiexie",
-        "scrobbles": 21,
+        "scrobbles": 22,
         "genres": "Ambient; Drone",
         "youtube": "https://www.youtube.com/embed/AZymCTnAAbk?si=GtqBcmGckl5EYHhj",
         "thoughts": "In case it wasn't already obvious, this year I have been listening to a lot of long-form ambient/drone kind of music. Music that gives the mind some space to think and contemplate. Often I tended towards very melancholic sounds this year, perhaps that reflects my mood and feelings.",
@@ -112,52 +113,100 @@
         "artist": "HAYA樂團",
         "track": "寂靜的天空",
         "album": "寂靜的天空",
-        "scrobbles": 21,
+        "scrobbles": 22,
         "genres": "Chinese folk; New age",
         "youtube": "https://www.youtube.com/embed/98FT4hvDejI?si=FtQa6ffhxuSCYfIV&amp;start=24",
         "thoughts": "Haya are a band from Inner Mongolia, China. This track, and the entire album is amazing, must listen if you are intrigued by Chinese culture and traditions."
     },
     {
         "pos": 13,
-        "artist": "運命の縁から跳び立つ私を、白い鳳凰の翼が抱きしめる",
-        "track": "t e l e p a t h テレパシー能力者",
-        "album": "夜明けが訪れる",
-        "scrobbles": 21,
-        "genres": "New age; Neo-classical; Film soundtrack",
-        "youtube": "https://www.youtube.com/embed/HZWrMd_XRU0?si=a6HgaCyMmSzGTa8T",
-        "thoughts": "telepath are pioneers of the vaporwave genre. I've not always been a big fan of the genre, often it all feels a bit 'samey'. However, this track, and their new album, I found to be quite enjoyable. Despite the runtime for this track being a whopping 19 minutes, somehow I stil listened to it 20 times this year! So I spent 6 hours listening to this... However it's an unbelievably mesmerising experience, again I think this was the kind of mood I was in this year, long moody melancholic drone ambient tracks."
+        "artist": "Nickel Creek",
+        "track": "When You Come Back Down",
+        "album": "Nickel Creek",
+        "scrobbles": 22,
+        "genres": "Bluegrass; Folk",
+        "youtube": "https://www.youtube.com/embed/ng5-VUDcjJ8?si=-oLBoo62vUzK5GiL",
+        "thoughts": "Somehow I only just started listening to Nickel Creek this year. They are a fantastic bluegrass folk band, this album in particular has many great songs, this song is very memorable to me and endlessley relistenable."
     },
     {
         "pos": 14,
-        "artist": "Sufjan Stevens",
-        "track": "Neptune",
-        "scrobbles": 21,
-        "genres": "Indie folk; New age",
-        "youtube": "https://www.youtube.com/embed/A2V_NF4HH6A?si=0Fq0qS1YZYb09AWI",
-        "thoughts": "Incredible atmosphere, vocals, instrumentation, drowning in melancholy, makes me feel so peaceful and alive. I had heard the song a few times in previous years, but for some reason it only just clicked this year, and now because I scrobbled it a bit last year too it has quickly become one of my most scrobbled tracks of all time (currently in my top 30 of all time). It's an absolute masterpiece, must listen for fans of Sufjan."
-    },
-    {
-        "pos": 15,
         "artist": "Sounds From The Ground",
         "track": "Pearl",
-        "scrobbles": 19,
+        "scrobbles": 21,
         "genres": "Downtempo; Ambient",
         "youtube": "https://www.youtube.com/embed/6emM05JVd7c?si=WeUDxRXkyrFnFCHU",
         "thoughts": "This artist (Sounds From The Ground) I discovered last year, they apperared in my top 25 tracks of 2024 on 4 occasions, and this year I'm still discovering more of their great music!",
         "thoughts_p2": "This track 'Pearl' is an interesting fusion of ambient dub and a spoken word passage from the Irish mythological tale Oisin & Niamh: The land of Tir Na Nog (the Land of Youth). The entire song is very mesmerising, the 6 minutes flies by every time I listen to it, ironically with the lyrics about 300 years passing by without realising, akin to my listening experience."
     },
     {
-        "pos": 16,
+        "pos": 15,
         "artist": "The Dead Texan",
         "track": "6 Million Dollar Sandwich",
         "album": "The Dead Texan",
-        "scrobbles": 20,
+        "scrobbles": 21,
         "genres": "Ambient; Modern classical",
         "youtube": "https://www.youtube.com/embed/f7JiCZvJh5Q?si=qNbEqtso3b4xth1i",
         "thoughts": "The intro to this beautiful album, incredible atmosphere, super immersive and peaceful."
     },
     {
+        "pos": 16,
+        "artist": "Zhao Ji-Ping",
+        "track": "Jiping: Fu Gui and Jia Zhen (from 'To Live')",
+        "scrobbles": 21,
+        "genres": "Chinese classical music; Film soundtrack",
+        "youtube": "https://www.youtube.com/embed/W2__SV0E2Eg?si=u1mhVcdY5JIct_4E",
+        "thoughts": "Another great track from Anoushka Shankar, from her 2024 album. This one is more atmospheric, slow, peaceful, and feels like wandering through the Indian jungles of Maharashtra on a misty evening."
+    },
+    {
         "pos": 17,
+        "artist": "Biosphere",
+        "track": "Kobresia",
+        "scrobbles": 20,
+        "genres": "Ambient",
+        "youtube": "https://www.youtube.com/embed/cKiuEHV6HWo?si=1mfxDTdCLgPaz2EU",
+        "thoughts": "Been listening to a lot of Biosphere this year. This is a classic."
+    },
+    {
+        "pos": 18,
+        "artist": "Sufjan Stevens",
+        "track": "Neptune",
+        "scrobbles": 20,
+        "genres": "Indie folk; New age",
+        "youtube": "https://www.youtube.com/embed/A2V_NF4HH6A?si=0Fq0qS1YZYb09AWI",
+        "thoughts": "Incredible atmosphere, vocals, instrumentation, drowning in melancholy, makes me feel so peaceful and alive. I had heard the song a few times in previous years, but for some reason it only just clicked this year, and now because I scrobbled it a bit last year too it has quickly become one of my most scrobbled tracks of all time (currently in my top 30 of all time). It's an absolute masterpiece, must listen for fans of Sufjan."
+    },
+    {
+        "pos": 19,
+        "artist": "Kitty MacFarlane",
+        "track": "Dawn & Dark",
+        "album": "Namer of Clouds",
+        "scrobbles": 20,
+        "genres": "Indie folk",
+        "youtube": "https://www.youtube.com/embed/TKn13pRdstY?si=pdONw65HNoXc_2D6",
+        "thoughts": "This album was a very random discovery this year, but Kitty MacFarlane has something missing from mainstream indie folk - a certain rawness and authenticity that makes her music stand out. This track in particular is a beautiful, melancholic, yet hopeful song, but has brought hope, comfort, and moments of light, in moments of darkness this year."
+    },
+    {
+        "pos": 20,
+        "artist": "Little Simz",
+        "track": "Free",
+        "album": "Lotus",
+        "scrobbles": 20,
+        "genres": "Hip-Hop",
+        "youtube": "https://www.youtube.com/embed/yBtFS7XsBAI?si=KfmjOHiT0ootnV90",
+        "thoughts": "Little Simz new album was an instant hit for me, and quickly became my favourite of her discography. This song in particular I loved, great combination of intelligent lyrics, orchestral moments, authenticity, and energy."
+    },
+    {
+        "pos": 21,
+        "artist": "The Dead Texan",
+        "track": "Taco Me Manque",
+        "album": "The Dead Texan",
+        "scrobbles": 20,
+        "genres": "Ambient; Modern classical",
+        "youtube": "https://www.youtube.com/embed/KqE6NkIpRZA?si=EIN9VM6KdeONNrAb",
+        "thoughts": "Another great track from this album!"
+    },
+    {
+        "pos": 22,
         "artist": "Udit Narayan",
         "track": "Jaadoo Jaadoo",
         "scrobbles": 20,
@@ -166,7 +215,27 @@
         "thoughts": "Brings back great memories of India :) Jaaaadoooooo"
     },
     {
-        "pos": 18,
+        "pos": 23,
+        "artist": "Varun Das",
+        "track": "Inner Circle",
+        "scrobbles": 20,
+        "genres": "Jazz fusion",
+        "youtube": "https://www.youtube.com/embed/bnoU5iyAu6U?si=WK1sw8gBZOWOgUQG",
+        "thoughts": "This track is one of many great tracks from Varun Das's new album 'Childlike', it's a great vibe, not too intense but still enjoyable and energetic jazz fusion with a unique sound."
+    },
+    {
+        "pos": 24,
+        "artist": "Anoushka Shankar",
+        "track": "In Jyoti's Name",
+        "album": "Traces Of You",
+        "scrobbles": 19,
+        "genres": "Hindustani classical music",
+        "youtube": "",
+        "thoughts": "Finally something other than ambient music! Anoushka Shankar is a world-class sitar player, and also born into a very musical family (her father is Ravi Shankar, and her sister is Norah Jones).",
+        "thoughts_p2": "This is one of the many fantastic songs from her album 'Traces of You' (2009) which I somehow only just discovered this year. It's fantastic Hindustani classical music with great performances. This song in particular, was apparently my most scrobbled, it's a brief highly energetic Hindustani tune, but generally the whole album is great and worth listening to."
+    },
+    {
+        "pos": 25,
         "artist": "BT",
         "track": "Dynamic Symmetry",
         "album": "This Binary Universe",
@@ -176,61 +245,16 @@
         "thoughts": "I have been aware of this album for many years, but haven't really gotten into it... Until this year, in particular, this song has been heavily rotated this year.",
         "thoughts_p2": "It's a beautiful 10 minute immersion into a world of complex simplicity. It's melancholic, energetic, intricate, and peaceful all at once."
     },
+
     {
-        "pos": 19,
+        "pos": 26,
         "artist": "Celer",
         "track": "Rains Lit By Neon",
         "album": "Xiexie",
-        "scrobbles": 18,
+        "scrobbles": 19,
         "genres": "Ambient; Drone",
         "youtube": "https://www.youtube.com/embed/cdrib-6NAGA?si=hSw_L-QNj2XAizQx",
         "thoughts": "Another great, long, droning track from Celer's album Xiexie."
-    },
-    {
-        "pos": 20,
-        "artist": "Zhao Ji-Ping",
-        "track": "Jiping: Fu Gui and Jia Zhen (from 'To Live')",
-        "scrobbles": 19,
-        "genres": "Chinese classical music; Film soundtrack",
-        "youtube": "https://www.youtube.com/embed/W2__SV0E2Eg?si=u1mhVcdY5JIct_4E",
-        "thoughts": "Another great track from Anoushka Shankar, from her 2024 album. This one is more atmospheric, slow, peaceful, and feels like wandering through the Indian jungles of Maharashtra on a misty evening."
-    },
-    {
-        "pos": 21,
-        "artist": "Biosphere",
-        "track": "Kobresia",
-        "scrobbles": 18,
-        "genres": "Ambient",
-        "youtube": "https://www.youtube.com/embed/cKiuEHV6HWo?si=1mfxDTdCLgPaz2EU",
-        "thoughts": "Been listening to a lot of Biosphere this year. This is a classic."
-    },
-    {
-        "pos": 22,
-        "artist": "",
-        "track": "",
-        "scrobbles": 18,
-        "genres": "",
-        "youtube": "",
-        "thoughts": ""
-    },
-    {
-        "pos": 23,
-        "artist": "Little Simz",
-        "track": "Free",
-        "album": "Lotus",
-        "scrobbles": 17,
-        "genres": "Hip-Hop",
-        "youtube": "https://www.youtube.com/embed/yBtFS7XsBAI?si=KfmjOHiT0ootnV90",
-        "thoughts": "Little Simz new album was an instant hit for me, and quickly became my favourite of her discography. This song in particular I loved, great combination of intelligent lyrics, orchestral moments, authenticity, and energy."
-    },
-    {
-        "pos": 24,
-        "artist": "The Kyoto Connection",
-        "track": "The Matsuyama Mirror",
-        "scrobbles": 18,
-        "genres": "Ambient; Modern classical",
-        "youtube": "https://www.youtube.com/embed/Oe2YjBQ3lFQ?si=Sw6HSICbQyLWAnTc",
-        "thoughts": "A short but beautiful melancholic piano ballad. Highly recommend!"
     },
     {
         "pos": 25,
@@ -242,35 +266,13 @@
         "thoughts": "Another beautiful piano ballad from Sakamoto-san."
     },
     {
-        "pos": 26,
-        "artist": "Anoushka Shankar",
-        "track": "In Jyoti's Name",
-        "album": "Traces Of You",
-        "scrobbles": 17,
-        "genres": "Hindustani classical music",
-        "youtube": "",
-        "thoughts": "Finally something other than ambient music! Anoushka Shankar is a world-class sitar player, and also born into a very musical family (her father is Ravi Shankar, and her sister is Norah Jones).",
-        "thoughts_p2": "This is one of the many fantastic songs from her album 'Traces of You' (2009) which I somehow only just discovered this year. It's fantastic Hindustani classical music with great performances. This song in particular, was apparently my most scrobbled, it's a brief highly energetic Hindustani tune, but generally the whole album is great and worth listening to."
-    },
-    {
-        "pos": 27,
-        "artist": "Anoushka Shankar",
-        "track": "In The End",
-        "album": "Chapter II: How Dark It Is Before Dawn",
-        "scrobbles": 17,
-        "genres": "Hindustani classical music",
-        "youtube": "https://www.youtube.com/embed/0KekORHS2fE?si=9zrdD0oqKJD2tiui",
-        "thoughts": "Another great track from Anoushka Shankar, from her 2024 album. This one is more atmospheric, slow, peaceful, and feels like wandering through the Indian jungles of Maharashtra on a misty evening."
-    },
-    {
-        "pos": 28,
-        "artist": "Kitty MacFarlane",
-        "track": "Dawn & Dark",
-        "album": "Namer of Clouds",
-        "scrobbles": 17,
-        "genres": "Indie folk",
-        "youtube": "https://www.youtube.com/embed/TKn13pRdstY?si=pdONw65HNoXc_2D6",
-        "thoughts": "This album was a very random discovery this year, but Kitty MacFarlane has something missing from mainstream indie folk - a certain rawness and authenticity that makes her music stand out. This track in particular is a beautiful, melancholic, yet hopeful song, but has brought hope, comfort, and moments of light, in moments of darkness this year."
+        "pos": 24,
+        "artist": "The Kyoto Connection",
+        "track": "The Matsuyama Mirror",
+        "scrobbles": 18,
+        "genres": "Ambient; Modern classical",
+        "youtube": "https://www.youtube.com/embed/Oe2YjBQ3lFQ?si=Sw6HSICbQyLWAnTc",
+        "thoughts": "A short but beautiful melancholic piano ballad. Highly recommend!"
     },
     {
         "pos": 29,
