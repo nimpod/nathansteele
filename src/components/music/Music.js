@@ -79,6 +79,7 @@ class Music extends Component {
         __ypos: localStorage.getItem(LocalStorageAlbums.YPOS),
 
         // filters...
+        __current_filter: "",
         __current_genre_filter: DEFAULT_FILTERS.genre,
         __current_artist_filter: DEFAULT_FILTERS.artist,
         __current_year_filter: DEFAULT_FILTERS.year,
@@ -356,6 +357,7 @@ class Music extends Component {
         if (genre_selected !== this.state.__current_genre_filter) {
             // update the 'current_genre_filter' state...
             this.setState({__current_genre_filter: genre_selected})
+            this.setState({__current_filter: genre_selected})
 
             this.setState(prevState => {
                 return {
@@ -392,7 +394,8 @@ class Music extends Component {
                 // disable filter...
                 actual_button.classList.remove('active');
                 this.setState({__current_genre_filter: ""})
-               // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
+                this.setState({__current_filter: ""})
+                // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
             }
 
             if (genre_selected.toLowerCase() == "all genres") {
@@ -411,6 +414,7 @@ class Music extends Component {
         if (artist_selected !== this.state.__current_artist_filter) {
             // update the 'current_genre_filter' state...
             this.setState({__current_artist_filter: artist_selected})
+            this.setState({__current_filter: artist_selected})
 
             this.setState(prevState => {
                 return {
@@ -441,7 +445,8 @@ class Music extends Component {
                 // disable filter...
                 actual_button.classList.remove('active');
                 this.setState({__current_artist_filter: ""})
-               // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
+                this.setState({__current_filter: ""})
+                // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
             }
             
             if (artist_selected.toLowerCase() == "all artists") {
@@ -460,6 +465,7 @@ class Music extends Component {
         if (year_selected !== this.state.__current_year_filter) {
             // update the 'current_genre_filter' state...
             this.setState({__current_year_filter: year_selected})
+            this.setState({__current_filter: year_selected})
 
             this.setState(prevState => {
                 return {
@@ -487,7 +493,8 @@ class Music extends Component {
                 // disable filter...
                 actual_button.classList.remove('active');
                 this.setState({__current_year_filter: ""})
-               // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
+                this.setState({__current_filter: ""})
+                // this.setState({__filtered_data: this.state.__filtered_data.reverse()})
             }
 
             if (year_selected.toLowerCase() == "all years") {
@@ -511,6 +518,7 @@ class Music extends Component {
         if (reviewer_selected_name !== this.state.__current_reviewer_filter) {
             // update the 'current_genre_filter' state...
             this.setState({__current_reviewer_filter: reviewer_selected_name})
+            this.setState({__current_filter: reviewer_selected_name})
 
             this.setState(prevState => {
                 return {
@@ -556,6 +564,7 @@ class Music extends Component {
         if (country_selected !== this.state.__current_country_filter) {
             // update the 'current_country_filter' state...
             this.setState({__current_country_filter: country_selected})
+            this.setState({__current_filter: country_selected})
 
             this.setState(prevState => {
                 return {
@@ -904,10 +913,17 @@ class Music extends Component {
                         <div className='top-albums-list-container'>
                             {/* Title */}
                             <div className='top-albums-list-header'>
-                                <h3 className='page-title'>
-                                    My favourite {this.props.top_albums.length} albums of all time
-                                    <Link id="btn-link-to-MusicStats-page" to={'/music/stats'}>Stats</Link>
-                                </h3>
+
+                                {
+                                    (albums_displayed.length < this.props.top_albums.length) ?
+                                    <h3 className="page-title">
+                                        My favourite <span className="filter-size">{albums_displayed.length}</span> <span className="filter-name">{this.state.__current_filter}</span> albums of all time
+                                    </h3>
+                                    :
+                                    <h3 className="page-title">
+                                        My favourite {albums_displayed.length} albums of all time
+                                    </h3>
+                                }
 
                                 {/* Information about what is currently being filtered (if anything) */}
                                 <div id="filtered-albums-list-info">

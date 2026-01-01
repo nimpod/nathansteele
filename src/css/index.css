@@ -3571,6 +3571,15 @@ div.btn.filter-list-by-artist-btn {
   padding: 2px 4px;
 }
 
+.page-title .filter-name {
+  color: var(--films-pagination-btn-bg-color-active) !important;
+  font-style: italic;
+}
+.page-title .filter-size {
+  color: rgba(220, 10, 180);
+  font-style: italic;
+}
+
 /* #endregion */
 
 /* #region ------------< Navigation for albums list >------------- */
@@ -3704,16 +3713,10 @@ p.myPosition-mobileView {
 }
 
 div.albumInfoContainer > div.albumInfo div.albumRatingInfo {
-  /*
   display: flex;
   flex-direction: row;
   padding-top: 4px;
   padding-bottom: 4px;
-  */
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgba(37, 38, 41, 0);
 }
 div.albumInfoContainer > div.albumInfo div.albumRatingInfo > p {
   margin-right: 8px;
@@ -3763,9 +3766,7 @@ div.albumMoreInfo p::after {
   }
 
   div.albumRatingInfo p {
-    /*
     display: none;
-    */
   }
 
   #top-albums-list.view-as-grid div.albumName {
@@ -3774,9 +3775,7 @@ div.albumMoreInfo p::after {
   }
 
   p.myPosition-mobileView {
-    /*
     display: block;
-    */
   }
   p.albumNameText {
   }

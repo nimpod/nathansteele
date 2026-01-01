@@ -132,6 +132,8 @@ import { review as Matmos_PlasticAnniversary } from './content/matmos/plastic_an
 import { review as MassiveAttack_Mezzanine } from './content/massive_attack/mezzanine/review.jsx';
 import { review as MachineGirl_Wlfgrl } from './content/machine_girl/wlfgrl/review.jsx';
 import { review as Metamatics_MindMushingGit } from './content/metamatics/mind_mushing_git/review.jsx';
+import { review as Midori_NiceToSeeYouAgain } from './content/midori/nice_to_see_you_again/review.jsx';
+import { review as Midori_Shinsekai } from './content/midori/shinsekai/review.jsx';
 
 import { review as NickDrake_BryterLayter } from './content/nick_drake/bryter_layter/review.jsx';
 import { review as Nas_Illmatic } from './content/nas/illmatic/review.jsx';
@@ -3256,20 +3258,20 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/2ShJ5RVcv96wZWt2PcYfxm?si=l7aOPp_IRquASOtzChqybA",
 			year_of_release: "2010",
 			date_of_review: "2022",
-			genres: "J-rock; Jazz punk; Jazz fusion; Noise rock; J-pop; Punk",
+			genres: "J-rock; Jazz punk; Noise rock; J-pop; Punk",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Midori_Shinsekai()),
 			country: "Japan",
 		},
-		"midori__aratamemashite_hajimemashite_midori_desu": {
+		"Midori - Nice to see you again": {
 			lastfm_url: "https://www.last.fm/music/Midori/Aratamemashite+Hajimemashite+Midori+Desu",
 			rym_url: "https://rateyourmusic.com/release/album/%E3%83%9F%E3%83%89%E3%83%AA/%E3%81%82%E3%82%89%E3%81%9F%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6%E3%80%81%E3%83%9F%E3%83%89%E3%83%AA%E3%81%A7%E3%81%99%E3%80%82-aratamemashite-hajimemashite-midori-desu/",
 			spotify_url: "https://open.spotify.com/album/5q8Hkakvwmb5Zyk4nUZKyD?si=VDN-gny9RzGP7ApyGEKjjw",
 			year_of_release: "2003",
 			date_of_review: "2022",
-			genres: "J-rock; Jazz punk; Jazz fusion; Noise rock; J-pop; Punk",
+			genres: "J-rock; Jazz punk; Noise rock; J-pop; Punk",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Midori_NiceToSeeYouAgain()),
 			country: "Japan",
 		},
 
@@ -3889,7 +3891,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/7EVKKZMWphUwkGzntYSnEz?si=zvEtf8KGS1u5zDJ9tPm42A",
 			year_of_release: "2004",
 			date_of_review: "2024",
-			genres: "Space rock; Progressive rock; Jazz fusion; Psychedelic rock; Livetronica",
+			genres: "Space rock; Progressive rock; Psychedelic rock; Livetronica",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(OzricTentacles_SpiralsInHyperspace()),
 			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
