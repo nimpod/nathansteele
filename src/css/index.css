@@ -3704,10 +3704,16 @@ p.myPosition-mobileView {
 }
 
 div.albumInfoContainer > div.albumInfo div.albumRatingInfo {
+  /*
   display: flex;
   flex-direction: row;
   padding-top: 4px;
   padding-bottom: 4px;
+  */
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(37, 38, 41, 0);
 }
 div.albumInfoContainer > div.albumInfo div.albumRatingInfo > p {
   margin-right: 8px;
@@ -3757,7 +3763,9 @@ div.albumMoreInfo p::after {
   }
 
   div.albumRatingInfo p {
+    /*
     display: none;
+    */
   }
 
   #top-albums-list.view-as-grid div.albumName {
@@ -3766,7 +3774,9 @@ div.albumMoreInfo p::after {
   }
 
   p.myPosition-mobileView {
+    /*
     display: block;
+    */
   }
   p.albumNameText {
   }
@@ -5092,11 +5102,11 @@ div.albumInfoContainer > div.myRating {
 
   }
   #top-albums-list-sidebar .albums-filterBtnsContainer {
-    margin-right: 4px;
-    padding: 7px 10px;
+    margin-right: 2px;
+    padding: 2px 6px;
   }
   #top-albums-list-sidebar .albums-filterBtnsContainer p.current-filter {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
   #top-albums-list-sidebar .albums-filterBtnsContainer .albums-filterBtns.visible {
     margin-left: 0px;
