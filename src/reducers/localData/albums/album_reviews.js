@@ -81,6 +81,7 @@ import { review as GJones_IllusoryTracks } from './content/gjones/illusory_track
 import { review as GlobalCommunication_7614 } from './content/global_communication/7614/review.jsx';
 import { review as GregIsakov_ThisEmptyNorthernHemisphere } from './content/greg_isakov/this_empty_northern_hemisphere/review.jsx';
 import { review as GrantKirkhope_BanjoKazooie } from './content/grant_kirkhope/banjo_kazooie/review.jsx';
+import { review as GarajMahal_Rotifier } from './content/garaj_mahal/rotifier/review.jsx';
 
 import { review as HakushiHasegawa_SomokuHodo} from './content/hakushi_hasegawa/somoku_hodo/review.jsx';
 import { review as Hiromi_Alive } from './content/hiromi/alive/review.jsx';
@@ -111,6 +112,7 @@ import { review as KendrickLamar_UntitledUnmastered } from './content/kendrick_l
 import { review as KendrickLamar_TPAB } from './content/kendrick_lamar/tpab/review.jsx';
 import { review as Klute_NOLA } from './content/klute/nola/review.jsx';
 import { review as KarlJenkins_Motets } from './content/karl_jenkins/motets/review.jsx';
+import { review as KingGizzard_NonagonInfinity } from './content/king_gizzard/nonagon_infinity/review.jsx';
 
 import { review as LaurentPerezDelMar_TheRedTurtleOST } from './content/laurent_perez_del_mar/the_red_turtle_ost/review.jsx';
 import { review as Lone_GalaxyGarden } from './content/lone/galaxy_garden/review.jsx';
@@ -138,6 +140,7 @@ import { review as Midori_Shinsekai } from './content/midori/shinsekai/review.js
 import { review as NickDrake_BryterLayter } from './content/nick_drake/bryter_layter/review.jsx';
 import { review as Nas_Illmatic } from './content/nas/illmatic/review.jsx';
 import { review as Nanoray_Digimaiden } from './content/nanoray/digimaiden/review.jsx';
+import { review as NickelCreek_NickelCreek } from './content/nickel_creek/nickel_creek/review.jsx';
 import { review as NineInchNails_TheFragile } from './content/nine_inch_nails/the_fragile/review.jsx';
 import { review as NothingButThieves_NothingButThieves } from './content/nothing_but_thieves/nothing_but_thieves/review.jsx';
 import { review as NothingButThieves_BrokenMachine } from './content/nothing_but_thieves/broken_machine/review.jsx';
@@ -150,6 +153,7 @@ import { review as OzricTentacles_SpiralsInHyperspace } from './content/ozric_te
 import { review as OskarSchuster_Sneeuwland } from './content/oskar_schuster/sneeuwland/review.jsx';
 import { review as OskarSchuster_LesValsesInvisibles } from './content/oskar_schuster/les_valses_invisibles/review.jsx';
 import { review as OppositeDay_WhatIsIs } from './content/opposite_day/what_is_is/review.jsx';
+import { review as OpenMikeEagle_BBKSD } from './content/open_mike_eagle/bbksd/review.jsx';
 
 import { review as Poppy_Eat } from './content/poppy/eat/review.jsx';
 import { review as Poppy_IDisagree } from './content/poppy/i_disagree/review.jsx';
@@ -186,6 +190,8 @@ import { review as TakashiKako_WindWaltz } from './content/takashi_kako/wind_wal
 import { review as ThomYorke_Suspiria } from './content/thom_yorke/suspiria/review.jsx';
 import { review as Telegraph_Mir } from './content/telegraph/mir/review.jsx';
 import { review as TkayMaidza_LastYearWasWeirdVol2 } from './content/tkay_maidza/lyww2/review.jsx';
+import { review as TylerTheCreator_FlowerBoy } from './content/tyler_the_creator/flower_boy/review.jsx';
+import { review as TylerTheCreator_Igor } from './content/tyler_the_creator/igor/review.jsx';
 
 import { review as TheDeadTexan_TheDeadTexan } from './content/the_dead_texan/the_dead_texan/review.jsx';
 import { review as TheProdigy_Experience } from './content/the_prodigy/experience/review.jsx';
@@ -1119,13 +1125,13 @@ const database = {
 
 		//
 		"bjork__mount_wittenberg_orca": {
-			lastfm_url: "https://www.last.fm/music/Dirty+Projectors+%252B+Bj%C3%B6rk/Mount+Wittenberg+Orca",
+			lastfm_url: "https://www.last.fm/music/Dirty+Projectors/Mount+Wittenberg+Orca",
 			rym_url: "https://rateyourmusic.com/release/ep/dirty-projectors-bjork/mount-wittenberg-orca/",
 			spotify_url: "https://open.spotify.com/album/14xINYt1omt6jlxv8AFbly",
 			year_of_release: "2010",
-			date_of_review: "2021",
+			date_of_review: "2022",
 			country: "Iceland",
-			genres: "Art pop; Acappella; Indie folk",
+			genres: "Alternative pop; Experimental pop; Progressive pop; Downtempo; Vocal",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Bjork_MountWittenbergOrca())
 		},
@@ -1637,16 +1643,6 @@ const database = {
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(DanielHart_AGhostStoryOST())
 		},
-		"dirty_projectors__mount_wittenburg_orca": {
-			lastfm_url: "https://www.last.fm/music/Dirty+Projectors/Mount+Wittenberg+Orca",
-			rym_url: "https://rateyourmusic.com/release/ep/dirty-projectors-bjork/mount-wittenberg-orca/",
-			spotify_url: "https://open.spotify.com/album/14xINYt1omt6jlxv8AFbly",
-			year_of_release: "2010",
-			date_of_review: "2022",
-			genres: "Alternative pop; Experimental pop; Progressive pop; Downtempo; Vocal",
-			my_rating: 9.0,
-			my_review: "",
-		},
 		"daniel_caesar__freudian": {
 			lastfm_url: "https://www.last.fm/music/Daniel+Caesar/Freudian",
 			rym_url: "https://rateyourmusic.com/release/album/daniel-caesar/freudian/",
@@ -2012,7 +2008,7 @@ const database = {
 			date_of_review: "2025",
 			genres: "Jazz fusion; Jazz; Funk; Jazz funk",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(GarajMahal_Rotifier()),
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 
@@ -2774,7 +2770,7 @@ const database = {
 			date_of_review: "2018",
 			genres: "Psychedelic rock; Garage punk",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(KingGizzard_NonagonInfinity()),
 		},
 		"king_gizzard_and_the_lizard_wizard__paper_mache_dream_balloon": {
 			lastfm_url: "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Paper+M%C3%A2ch%C3%A9+Dream+Balloon",
@@ -3283,7 +3279,7 @@ const database = {
 			year_of_release: "2025",
 			date_of_review: "22/12/2025",
 			genres: "Ambient; Downtempo; Electronic",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 			country: "India"
 		},
@@ -3382,7 +3378,7 @@ const database = {
 			year_of_release: "1998",
 			date_of_review: "2019",
 			genres: "Trip hop; Downtempo; Ambient pop; Alternative rock",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(MassiveAttack_Mezzanine())
 		},
 		"mild_minds__mood": {
@@ -3619,7 +3615,7 @@ const database = {
 			date_of_review: "2025",
 			genres: "Bluegrass; Folk",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(NickelCreek_NickelCreek()),
 		},
 		"nathan fake blizzards": {
 			lastfm_url: "https://www.last.fm/music/Nathan+Fake/Blizzards",
@@ -3903,8 +3899,8 @@ const database = {
 			year_of_release: "2017",
 			date_of_review: "2019",
 			genres: "Hip-Hop; Rap",
-			my_rating: 9.0,
-			my_review: "",
+			my_rating: 8.0,
+			my_review: ReactDomServer.renderToString(OpenMikeEagle_BBKSD()),
 		},
 		"opposite_day__opposite_day": {
 			lastfm_url: "https://www.last.fm/music/Opposite+Day/What+is+is%3F",
@@ -4898,8 +4894,8 @@ const database = {
 			year_of_release: "2017",
 			date_of_review: "2018",
 			genres: "Hip-Hop; Rap; Neo-soul; Soul; Pop rap",
-			my_rating: 9.0,
-			my_review: "",
+			my_rating: 8.5,
+			my_review: ReactDomServer.renderToString(TylerTheCreator_FlowerBoy()),
 		},
 		"Tyler The Creator - igor": {
 			lastfm_url: "https://www.last.fm/music/Tyler,+The+Creator/IGOR",
@@ -4909,7 +4905,7 @@ const database = {
 			date_of_review: "10 June, 2019",
 			genres: "Hip-Hop; Rap; Neo-soul; Soul; Pop rap",
 			my_rating: 8.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(TylerTheCreator_Igor()),
 		},
 
 

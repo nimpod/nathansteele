@@ -50,7 +50,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
     # locate m3u export
     if os.path.exists(fullpath_to_musicbee_export):
         with open(fullpath_to_musicbee_export, 'r', encoding="utf8") as f:
-            # convert m3u to str
+            # convert m3u to str    
             content = f.read()
 
             # convert str to list
