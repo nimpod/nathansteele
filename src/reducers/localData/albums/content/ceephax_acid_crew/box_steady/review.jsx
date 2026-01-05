@@ -2,19 +2,27 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "7 Minds" },
-    { "rating": 10, "title": "Brd" },
-    { "rating": 10, "title": "Some Rules" },
-    { "rating": 8, "title": "Crisco Rides Again" },
-    { "rating": 8, "title": "Agp" },
-    { "rating": 8, "title": "Inner Vibe" },
-    { "rating": 10, "title": "Doin' It Again" },
-    { "rating": 10, "title": "Pairs" },
-    { "rating": 8, "title": "We Are The Survivors" },
+    { "rating": 8, "title": "Amigo" },
+    { "rating": 9, "title": "Flangeslab" },
+    { "rating": 8, "title": "Housedream" },
+    { "rating": 10, "title": "Capsule In Space - Album mix" },
+    { "rating": 9, "title": "Darqcyde" },
+    { "rating": 8, "title": "Galahad" },
+    { "rating": 7, "title": "Meadow Track" },
+    { "rating": 8, "title": "Waltzacid" },
+    { "rating": 8, "title": "Newsround" },
+    { "rating": 8, "title": "Fossil Funk" },
+    { "rating": 9, "title": "Bureau de Rave" },
+    { "rating": 8, "title": "Eurozone" },
+    { "rating": 11, "title": "Capsule In Space - Bonus slam" },
+    { "rating": 8, "title": "Bureau de Rave - Parodigy mix" },
+    { "rating": 8, "title": "Newsround - Craven mix" },
+    { "rating": 8, "title": "Eurozone - Video mix" },
 ];
 
 const themes = [
-
+    "Melancholic",
+    "Peaceful",
 ];
 
 const date_of_review = "June 10, 2025";

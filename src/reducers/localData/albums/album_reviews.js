@@ -45,6 +45,7 @@ import { review as Bent_ProgrammedToLove } from './content/bent/programmed_to_lo
 import { review as BeachHouse_OnceTwiceMelody } from './content/beach_house/once_twice_melody/review.jsx';
 import { review as BireliLagrene_ElectricSide } from './content/bireli_lagrene/electric_side/review.jsx';
 import { review as BadBadNotGood_IV } from './content/badbadnotgood/iv/review.jsx';
+import { review as BadBadNotGood_BBNG2 } from './content/badbadnotgood/bbng2/review.jsx';
 import { review as Brockhampton_Saturation3 } from './content/brockhampton/saturation3/review.jsx';
 import { review as BrandNew_ScienceFiction } from './content/brand_new/science_fiction/review.jsx';
 
@@ -55,6 +56,7 @@ import { review as Crumb_Locket } from './content/crumb/locket/review.jsx';
 import { review as ClownCore_Van } from './content/clown_core/van/review.jsx';
 import { review as CharliXcx_HowImFeelingNow } from './content/charli_xcx/how_im_feeling_now/review.jsx';
 import { review as CarlosFischer_BusquedaInfinita } from './content/carlos_fischer/busqueda_infinita/review.jsx';
+import { review as CeephaxAcidCrew_BoxSteady } from './content/ceephax_acid_crew/box_steady/review.jsx';
 
 import { review as DanielHart_AGhostStoryOST } from './content/daniel_hart/a_ghost_story_ost/review.jsx';
 import { review as DominiqueGuiot_LUniverseDeLaMer } from './content/dominique_guiot/luniverse_de_la_mer/review.jsx';
@@ -84,6 +86,7 @@ import { review as GrantKirkhope_BanjoKazooie } from './content/grant_kirkhope/b
 import { review as GarajMahal_Rotifier } from './content/garaj_mahal/rotifier/review.jsx';
 
 import { review as HakushiHasegawa_SomokuHodo} from './content/hakushi_hasegawa/somoku_hodo/review.jsx';
+import { review as Haya_SilentSky } from './content/haya/silent_sky/review.jsx';
 import { review as Hiromi_Alive } from './content/hiromi/alive/review.jsx';
 import { review as Hiromi_Spark } from './content/hiromi/spark/review.jsx';
 import { review as Hiromi_Move } from './content/hiromi/move/review.jsx';
@@ -113,6 +116,8 @@ import { review as KendrickLamar_TPAB } from './content/kendrick_lamar/tpab/revi
 import { review as Klute_NOLA } from './content/klute/nola/review.jsx';
 import { review as KarlJenkins_Motets } from './content/karl_jenkins/motets/review.jsx';
 import { review as KingGizzard_NonagonInfinity } from './content/king_gizzard/nonagon_infinity/review.jsx';
+import { review as KingGizzard_PaperMache } from './content/king_gizzard/paper_mache/review.jsx';
+import { review as KingGizzard_Brunswick } from './content/king_gizzard/brunswick/review.jsx';
 
 import { review as LaurentPerezDelMar_TheRedTurtleOST } from './content/laurent_perez_del_mar/the_red_turtle_ost/review.jsx';
 import { review as Lone_GalaxyGarden } from './content/lone/galaxy_garden/review.jsx';
@@ -142,6 +147,7 @@ import { review as Nas_Illmatic } from './content/nas/illmatic/review.jsx';
 import { review as Nanoray_Digimaiden } from './content/nanoray/digimaiden/review.jsx';
 import { review as NickelCreek_NickelCreek } from './content/nickel_creek/nickel_creek/review.jsx';
 import { review as NineInchNails_TheFragile } from './content/nine_inch_nails/the_fragile/review.jsx';
+import { review as NineInchNails_TheDownwardSpiral } from './content/nine_inch_nails/the_downward_spiral/review.jsx';
 import { review as NothingButThieves_NothingButThieves } from './content/nothing_but_thieves/nothing_but_thieves/review.jsx';
 import { review as NothingButThieves_BrokenMachine } from './content/nothing_but_thieves/broken_machine/review.jsx';
 
@@ -210,7 +216,6 @@ import { review as Xtc_ChipsFromTheChocolateFireball } from './content/xtc/chips
 
 import { review as Yes_FlyFromHere } from './content/yes/fly_from_here/review.jsx';
 import { review as Yes_CloseToTheEdge } from './content/yes/close_to_the_edge/review.jsx';
-// ReactDomServer.renderToString(BoC_MusicHasTheRightToChildren()),
 
 
 // [VSCode]: Ctrl+k, Ctrl+0 will close all sections...
@@ -983,7 +988,7 @@ const database = {
 			date_of_review: "2015",
 			genres: "Jazz; Jazz fusion; Nu jazz; Instrumental Hip-Hop",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(BadBadNotGood_BBNG2()),
 			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
 		},
 		"badbadnotgood__IV": {
@@ -1371,7 +1376,7 @@ const database = {
 			date_of_review: "2022",
 			genres: "Acid techno; Acid house; Acid trance; Breakbeat; Acid breaks; Chiptune; Electronic",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(CeephaxAcidCrew_BoxSteady()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 		"chisato_yamada__suite_nihonkai": {
@@ -1449,7 +1454,7 @@ const database = {
 			year_of_release: "2001",
 			genres: "French House; Electro-Disco; Funky House; Dance pop; Synth Funk; Nu-disco; Electronic",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/54010ae7c4fa4c96a1e1872a051d9ecc.jpg#54010ae7c4fa4c96a1e1872a051d9ecc",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(DaftPunk_Discovery()),
 			date_of_review: "2020",
 		},
@@ -1640,7 +1645,7 @@ const database = {
 			year_of_release: "2017",
 			date_of_review: "2021",
 			genres: "Film soundtrack; Ambient; Post-minimalism; Modern classical",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(DanielHart_AGhostStoryOST())
 		},
 		"daniel_caesar__freudian": {
@@ -2203,7 +2208,7 @@ const database = {
 			genres: "Chinese folk music; New age; Mongolian throat singing; Chamber folk",
 			country: "China",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(Haya_SilentSky()),
 		},
 		"HAAi - DJ-Kicks: HAAi": {
 			lastfm_url: "https://www.last.fm/music/HAAi/DJ-Kicks:+HAAi",
@@ -2780,7 +2785,7 @@ const database = {
 			date_of_review: "2018",
 			genres: "Psychedelic folk; Psychdelic pop; Dream pop; Folk rock; Folk",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(KingGizzard_PaperMache()),
 		},
 		"king_gizzard_and_the_lizard_wizard__sketches_of_brunswick_east": {
 			lastfm_url: "https://www.last.fm/music/King+Gizzard+&+The+Lizard+Wizard/Sketches+of+Brunswick+East",
@@ -2790,7 +2795,7 @@ const database = {
 			date_of_review: "2018",
 			genres: "Neo-Psychedelia; Psychedelic pop; Australian psych",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(KingGizzard_Brunswick()),
 		},
 
 		//
@@ -3560,7 +3565,7 @@ const database = {
 			album_name_displayed: "The Downward Spiral",
 			genres: "Industrial; Industrial metal; Alternative rock; Nu metal",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(NineInchNails_TheDownwardSpiral()),
 		},
 
 
@@ -4134,7 +4139,7 @@ const database = {
 			year_of_release: "1997",
 			date_of_review: "2021",
 			genres: "IDM; Ambient; Ambient techno; Trip hop; Drum and bass; Electronic",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(Plaid_NotForThrees())
 		},
 		"pat_metheny__as_falls_wichita_so_falls_wichita_falls": {
@@ -4158,7 +4163,7 @@ const database = {
 			year_of_release: "2002",
 			date_of_review: "2022",
 			genres: "Stoner rock; Alternative metal; Alternative rock",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(QueensOfTheStoneAge_SongsForTheDeaf())
 		},
 		"Quincy Jones - Big Band Bossa Nova": {
@@ -4238,7 +4243,7 @@ const database = {
 			date_of_review: "2023",
 			genres: "Progressive folk; Folk; Singer-songwritter",
 			themes: ["Newcastle", "Geordie dialect"],
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(RichardDawson_2020()),
 			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP,
 		},

@@ -9,7 +9,7 @@ const tracklist = [
     { "rating": 8, "title": "Black Triangle" },
     { "rating": 8, "title": "Fulfilment Centre" },
     { "rating": 8, "title": "Fresher's Ball" },
-    { "rating": 8, "title": "No-One" },
+    { "rating": "interlude", "title": "No-One" },
     { "rating": 8, "title": "Dead Dog in an Alleyway" },
 ]
 
