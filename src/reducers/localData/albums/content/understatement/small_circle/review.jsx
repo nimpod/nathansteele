@@ -32,7 +32,14 @@ export const review = () => (
 
         <div className="review-main">
             <p>
+                The artists name 輕描淡寫 [Qīng Miáo Dàn Xiě] is a Mandarin phrase, it roughly translates to "describe lightly / to understate” — i.e., to portray something with gentle, minimal detail.
+                The album title 小圈子 [xiǎo quānzi] is a Mandarin phrase, it roughly translates to “small social circle/clique”. It refers to a small, closed group of people or social circle.
+                Despite the references to Chinese Mandarin, the artist is actually from Iceland.
+            </p>
 
+            <p>
+                The album is purely instrumental, synth-based with field recordings and brief vocal samples in Mandarin Chinese.
+                Nevertheless, this music is sublime - incredibely mesmerising, dreamy, melancholic. The whole album flies by whenever I put it on.
             </p>
         </div>
 

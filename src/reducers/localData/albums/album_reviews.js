@@ -101,6 +101,7 @@ import { review as Iglooghost_NeoWaxBloom } from './content/iglooghost/neo_wax_b
 import { review as Iglooghost_SteelMogu } from './content/iglooghost/steel_mogu/review.jsx';
 import { review as Iglooghost_ClearTamei } from './content/iglooghost/clear_tamei/review.jsx';
 
+import { review as JohnColtrane_BagsAndTrane } from './content/john_coltrane/bags_and_trane/review.jsx';
 import { review as JoyceMoreno_Natureza } from './content/joyce_moreno/natureza/review.jsx';
 import { review as JonHopkins_ContactNote } from './content/jon_hopkins/contact_note/review.jsx';
 import { review as JesusMolina_Agape } from './content/jesus_molina/agape/review.jsx';
@@ -289,7 +290,7 @@ const database = {
 			year_of_release: "1993",
 			date_of_review: "2024",
 			genres: "Rap rock; Alternative rock; Funk rock; Reggae rock; Reggae; Funk metal; Nu metal",
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(_311_Music()),
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
@@ -1343,7 +1344,7 @@ const database = {
 			year_of_release: "1973",
 			date_of_review: "2019",
 			genres: "Jazz fusion; Latin jazz; Samba jazz; Vocal jazz; Jazz",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: ""
 		},
 		"carlos fischer busqueda infinita": {
@@ -2608,7 +2609,17 @@ const database = {
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 
-
+		"John Coltrane - Bags & Trane": {
+			lastfm_url: "https://www.last.fm/music/Milt+Jackson+&+John+Coltrane/Bags+&+Trane",
+			rym_url: "https://rateyourmusic.com/release/album/milt-jackson-john-coltrane/bags-and-trane/",
+			spotify_url: "https://open.spotify.com/album/438EDpsx9oHYfdF2IaJXef?si=-qCxgIkHRVOsdJemGGMz9w",
+			year_of_release: "1961",
+			date_of_review: "2021",
+			genres: "Jazz; Post-bop",
+			themes: ["Vibraphone"],
+			my_rating: 9.0,
+			my_review: ReactDomServer.renderToString(JohnColtrane_BagsAndTrane())
+		},
 		"John Tejada - The Watchline": {
 			lastfm_url: "https://www.last.fm/music/John+Tejada/The+Watchline",
 			rym_url: "https://rateyourmusic.com/release/album/john-tejada/the-watchline/",
@@ -2816,7 +2827,7 @@ const database = {
 			year_of_release: "2018",
 			date_of_review: "2019",
 			genres: "Noise pop; Synthpop; Indie rock; Dream pop; Progressive pop; Shoegaze; Electronic",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"kero_kero_bonito__bonito_generation": {
@@ -3036,7 +3047,7 @@ const database = {
 			genres: "Nu metal",
 			tags: ["Old favourite"],
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/cc15ebc58ec625979776cabaaaa282fa.jpg#cc15ebc58ec625979776cabaaaa282fa",
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(LinkinPark_HybridTheory()),
 		},
 		"linkin_park__a_thousand_suns": {
@@ -3444,17 +3455,6 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
-		"milt_jackson__bags_and_trane": {
-			lastfm_url: "https://www.last.fm/music/Milt+Jackson+&+John+Coltrane/Bags+&+Trane",
-			rym_url: "https://rateyourmusic.com/release/album/milt-jackson-john-coltrane/bags-and-trane/",
-			spotify_url: "https://open.spotify.com/album/438EDpsx9oHYfdF2IaJXef?si=-qCxgIkHRVOsdJemGGMz9w",
-			year_of_release: "1961",
-			date_of_review: "2021",
-			genres: "Jazz; Post-bop",
-			themes: ["Vibraphone"],
-			my_rating: 9.0,
-			my_review: "",
-		},
 		"matmos__plastic_anniversary": {
 			lastfm_url: "https://www.last.fm/music/Matmos/Plastic+Anniversary",
 			rym_url: "https://rateyourmusic.com/release/album/matmos/plastic-anniversary/",
@@ -3792,7 +3792,7 @@ const database = {
 			year_of_release: "1993",
 			date_of_review: "2025",
 			genres: "Electronic; Techno; Acid house; Acid techno; Trance",
-			my_rating: 9.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(Orbital_Orbital2()),
 		},
 
@@ -4163,7 +4163,7 @@ const database = {
 			year_of_release: "2002",
 			date_of_review: "2022",
 			genres: "Stoner rock; Alternative metal; Alternative rock",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: ReactDomServer.renderToString(QueensOfTheStoneAge_SongsForTheDeaf())
 		},
 		"Quincy Jones - Big Band Bossa Nova": {
@@ -4187,7 +4187,7 @@ const database = {
 			year_of_release: "2016",
 			genres: "Art rock; Chamber pop; Ambient pop; Art pop",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/28db3fdca036fb53c62754694a89d3fd.jpg#28db3fdca036fb53c62754694a89d3fd",
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Radiohead_AMoonShapedPool()),
 			date_of_review: "2016",
 		},

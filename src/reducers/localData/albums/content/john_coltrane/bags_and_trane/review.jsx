@@ -2,21 +2,14 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 10, "title": "Fuck Your Ethnicity" },
-    { "rating": 9, "title": "Hol'Up" },
-    { "rating": 9, "title": "A.D.H.D" },
-    { "rating": 8, "title": "No Make-Up" },
-    { "rating": 8, "title": "Tammy's Song" },
-    { "rating": 9, "title": "Chapter Six" },
-    { "rating": 9, "title": "Ronald Reagan Era" },
-    { "rating": 9, "title": "Poe Mans Dreams" },
-    { "rating": 8, "title": "Chapter Ten" },
-    { "rating": 9, "title": "Keisha's Song" },
-    { "rating": 9, "title": "Rigamortus" },
-    { "rating": 8, "title": "Kush & Corinthians" },
-    { "rating": 8, "title": "Blow My High" },
-    { "rating": 9, "title": "Ab-Souls Outro" },
-    { "rating": 10, "title": "HiiiPower" },
+    { "rating": 10, "title": "Stairway to the Stars" },
+    { "rating": 8, "title": "The Late Late Blues" },
+    { "rating": 8, "title": "Bags & Trane" },
+    { "rating": 10, "title": "Three Little Words" },
+    { "rating": 8, "title": "The Night We Called It A Day" },
+    { "rating": 10, "title": "Be-Bop" },
+    { "rating": 9, "title": "Blues Legacy" },
+    { "rating": 8, "title": "Centerpiece" },
 ];
 
 const themes = [

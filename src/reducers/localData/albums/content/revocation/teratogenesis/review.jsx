@@ -4,8 +4,8 @@ const tracklist = [
     { "rating": 10, "title": "The Grip Tightens" },
     { "rating": 10, "title": "Spurn the Outstretched Hand" },
     { "rating": 9, "title": "Maniacally Unleased" },
-    { "rating": 9, "title": "Teratogenesis" },
-    { "rating": 9, "title": "Bound By Desire" },
+    { "rating": 8, "title": "Teratogenesis" },
+    { "rating": 8, "title": "Bound By Desire" },
 ]
 
 export const review = () => (
