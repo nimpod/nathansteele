@@ -49,10 +49,15 @@ export const review = () => (
                 His music is relatively well-known in the New Age genre, but this album crosses into many other genres (jazz; prog pop; ambient). For fans of ambient music, Vollenweider's music must be experienced. This album, and Vollenweider's music in general, deserves so much more attention. He is still releasing new music to this day. In my opinion, this album is his greatest creation.
             </p>
             <p>
-                <strong>Moon Dance</strong> is an absolute banger, amazing intro to the album that keeps new listeners captivated. <strong>Steam Forest</strong>, and <strong>Quiet Observer</strong>, are beautiful more ambient-focused. It's hard to pick a favourite song from the album, but <strong>Night Fire Dance</strong> is an absolute tune. Makes me feel like I am exploring a 13th-century mystical alchemy lab trying to find ingredients for a potion. It has a mysterious, energetic, unique vibe. <strong>Silver Wheel</strong> feels like an undiscovered song from the Donkey Kong soundtrack.
+                <strong>[02] Moon Dance</strong> is an absolute banger, amazing intro to the album that keeps new listeners captivated. 
+                <strong>[03] Steam Forest</strong>, and <strong>[06] Quiet Observer</strong>, are beautiful more ambient-focused. 
+                <strong>[07] Silver Wheel</strong> feels like an undiscovered song from the Donkey Kong soundtrack.
+                It's hard to pick a favourite song from the album, but <strong>[05] Night Fire Dance</strong> is an absolute tune. Makes me feel like I am exploring a 13th-century mystical alchemy lab trying to find ingredients for a potion. It has a mysterious, energetic, unique vibe. 
             </p>
             <p>
-                The first 7 songs on this album flow into each other so perfectly. I feel like the latter half of this album is slightly weaker (track 8 onwards), it feels a bit less layered to my ears. Albeit it is just 4 weaker tracks (in my opinion), which does unfortunately stop this from being a 10/10 album (in my opinion). But the overall vibe of this album is wonderful. So many majestic moments of pure joy.
+                Tracks 1-7 are perfect, they flow into each other so seamlessly and flies by whenever I put this album on. 
+                Personally, I feel like the latter half of this album is slightly weaker (track 8-12), it feels a bit less layered to my ears. Albeit it is just 4 weaker tracks (in my opinion), which does unfortunately stop this from being a 10/10 album (in my opinion). 
+                But the overall vibe of this album is wonderful. So many majestic moments of pure joy.
             </p>
             <p>
                 Here is a wonderful live performance of <strong>Night Fire Dance</strong>:

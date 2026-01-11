@@ -917,7 +917,7 @@ class Music extends Component {
                                 {
                                     (albums_displayed.length < this.props.top_albums.length) ?
                                     <h3 className="page-title">
-                                        My favourite <span className="filter-size">{albums_displayed.length}</span> <span className="filter-name">{this.state.__current_filter}</span> albums of all time
+                                        My favourite <span className="filter-size">{albums_displayed.length}</span> <span className="filter-name">{this.state.__current_filter}</span> albums
                                     </h3>
                                     :
                                     <h3 className="page-title">

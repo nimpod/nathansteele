@@ -103,6 +103,7 @@ import { review as Iglooghost_ClearTamei } from './content/iglooghost/clear_tame
 
 import { review as JohnColtrane_BagsAndTrane } from './content/john_coltrane/bags_and_trane/review.jsx';
 import { review as JoyceMoreno_Natureza } from './content/joyce_moreno/natureza/review.jsx';
+import { review as JeremySoule_Skyrim } from './content/jeremy_soule/skyrim/review.jsx';
 import { review as JonHopkins_ContactNote } from './content/jon_hopkins/contact_note/review.jsx';
 import { review as JesusMolina_Agape } from './content/jesus_molina/agape/review.jsx';
 import { review as JesusMolina_Departing } from './content/jesus_molina/departing/review.jsx';
@@ -477,7 +478,7 @@ const database = {
 			year_of_release: "1990",
 			date_of_review: "2025",
 			genres: "Ambient; Electronic; Ambient house; Nature recordings; Tuvan throat singing",
-			my_rating: 9.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(TheKLF_Chillout()),
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
@@ -726,7 +727,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/4SNliyiumphhCLF7mPnAaJ?si=ojSSf7NeQ3uJRy0SgoHIwA",
 			year_of_release: "1994",
 			genres: "IDM; Ambient techno; Techno; Electronic",
-			my_rating: 9.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(AmorphousAndrogynous_TalesOfEphidrina()),
 			date_of_review: "2024",
 		},
@@ -778,7 +779,7 @@ const database = {
 			year_of_release: "2016",
 			date_of_review: "2018",
 			genres: "Progressive pop; Synthpop; Dance pop; Electronic",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(AnnaMeredith_Varmints()),
 		},
 		"antonio_carlos_jobim__the_composer_of_desafinado_plays": {
@@ -988,7 +989,7 @@ const database = {
 			year_of_release: "2014",
 			date_of_review: "2015",
 			genres: "Jazz; Jazz fusion; Nu jazz; Instrumental Hip-Hop",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(BadBadNotGood_BBNG2()),
 			recommended_by: TrustworthyMusicReviewers.THE_NEEDLE_DROP
 		},
@@ -1315,6 +1316,17 @@ const database = {
 		},
 
 
+		"Commodore - Desde el lado sur": {
+			lastfm_url: "https://www.last.fm/music/Commodore/Desde+el+lado+sur",
+			rym_url: "https://rateyourmusic.com/release/album/commodore/desde-el-lado-sur/",
+			spotify_url: "https://rateyourmusic.com/release/album/commodore/desde-el-lado-sur/",
+			year_of_release: "2025",
+			date_of_review: "2025",
+			genres: "Jazz fusion",
+			country: "Argentina",
+			my_rating: 8.0,
+			my_review: ""
+		},
 		"Cheng Bi - I want to waste time with you": {
 			lastfm_url: "https://www.last.fm/music/Cheng+Bi/I+want+to+waste+time+with+you",
 			rym_url: "https://rateyourmusic.com/release/album/%E7%A8%8B%E7%92%A7/%E6%88%91%E6%83%B3%E5%92%8C%E4%BD%A0%E8%99%9A%E5%BA%A6%E6%97%B6%E5%85%89/",
@@ -1915,6 +1927,16 @@ const database = {
 			my_review: "",
 		},
 
+		"Factor B - Bloom": {
+			lastfm_url: "https://www.last.fm/music/Factor+B/Bloom+%5BIn+Loving+Memory%5D",
+			rym_url: "https://rateyourmusic.com/release/album/factor-b/bloom/",
+			spotify_url: "https://open.spotify.com/album/5zntKRbq6q4nVLr4Fv8449",
+			year_of_release: "2025",
+			date_of_review: "2025",
+			genres: "Trance; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
 		"fiona_apple__the_idler_wheel": {
 			lastfm_url: "https://www.last.fm/music/Fiona+Apple/The+Idler+Wheel+Is+Wiser+Than+the+Driver+of+the+Screw+and+Whipping+Cords+Will+Serve+You+More+Than+Ropes+Will+Ever+Do",
 			rym_url: "https://rateyourmusic.com/release/album/fiona-apple/the-idler-wheel-is-wiser-than-the-driver-of-the-screw-and-whipping-cords-will-serve-you-more-than-ropes-will-ever-do/",
@@ -2184,7 +2206,7 @@ const database = {
 			genres: "Jazz fusion; Jazz; Post-Bop",
 			country: "Japan",
 			album_name_displayed: "OUT THERE",
-			my_rating: 8.0,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Hiromi_OutThere()),
 		},
 		"Hiromi - Another Mind": {
@@ -2525,7 +2547,7 @@ const database = {
 			album_name_displayed: "The Elder Scrolls V: Skyrim: Original Game Soundtrack",
 			genres: "Video game soundtrack; Modern classical; Cinematic classical; Ambient; Nordic folk; Choral",
 			my_rating: 9.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(JeremySoule_Skyrim())
 		},
 		"jeremy_soule__the_northener_diaries_symphonic_sketches": {
 			lastfm_url: "https://www.last.fm/music/Jeremy+Soule/The+Northerner+Diaries+Symphonic+Sketches",
@@ -2753,7 +2775,7 @@ const database = {
 			year_of_release: "2015",
 			date_of_review: "2016",
 			genres: "Hip-Hop; Rap; Jazz rap; Jazz; Funk",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(KendrickLamar_TPAB()),
 		},
 		"kendrick_lamar__untitled_unmastered": {
@@ -2763,7 +2785,7 @@ const database = {
 			year_of_release: "2016",
 			date_of_review: "2016",
 			genres: "Hip-Hop; Rap; Funk; Jazz rap",
-			my_rating: 9.5,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(KendrickLamar_UntitledUnmastered()),
 		},
 		"kendrick_lamar__good_kid_maad_city": {
@@ -2773,7 +2795,7 @@ const database = {
 			year_of_release: "2012",
 			date_of_review: "2016",
 			genres: "Hip-Hop; Rap; Gangsta rap",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: "",
 		},
 
@@ -2785,7 +2807,7 @@ const database = {
 			year_of_release: "2016",
 			date_of_review: "2018",
 			genres: "Psychedelic rock; Garage punk",
-			my_rating: 9.0,
+			my_rating: 8.0,
 			my_review: ReactDomServer.renderToString(KingGizzard_NonagonInfinity()),
 		},
 		"king_gizzard_and_the_lizard_wizard__paper_mache_dream_balloon": {
@@ -2942,7 +2964,7 @@ const database = {
 			date_of_review: "2022",
 			genres: "Space ambient; Ambient; Electronic",
 			themes: ["Cosmic", "Vast", "Mysterious", "Atmospheric"],
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 	},
@@ -3564,7 +3586,7 @@ const database = {
 			date_of_review: "2020",
 			album_name_displayed: "The Downward Spiral",
 			genres: "Industrial; Industrial metal; Alternative rock; Nu metal",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(NineInchNails_TheDownwardSpiral()),
 		},
 
@@ -4006,7 +4028,7 @@ const database = {
 			year_of_release: "2009",
 			date_of_review: "2025",
 			genres: "Jazz; Jazz fusion; Djent; Progressive metal",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
@@ -5214,7 +5236,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/7jArveDNywiBbEqax0f2vn?si=H4JmBO3yRkKNHZdt2xQ3PA",
 			year_of_release: "1983",
 			genres: "Art punk; New wave; Art rock; Psychdelic pop; Neo-Psychedelia",
-			my_rating: 10.0,
+			my_rating: 9.5,
 			custom_cover_url: "https://beatopolis.files.wordpress.com/2019/01/xtc-1.jpg?w=640",
 			date_of_review: "2013",
 			my_review: ReactDomServer.renderToString(Xtc_Mummer())

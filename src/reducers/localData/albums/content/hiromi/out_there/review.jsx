@@ -2,9 +2,9 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 const tracklist = [
     { "rating": 9, "title": "XYX" },
-    { "rating": 8, "title": "Yes! Ramen!" },
+    { "rating": 9, "title": "Yes! Ramen!" },
     { "rating": 10, "title": "Pendulum" },
-    { "rating": 8, "title": "OUT THERE: Takin' Off" },
+    { "rating": 9, "title": "OUT THERE: Takin' Off" },
     { "rating": 10, "title": "OUT THERE: Strollin'" },
     { "rating": 8, "title": "OUT THERE: Orion" },
     { "rating": 8, "title": "OUT THERE: The Quest" },
