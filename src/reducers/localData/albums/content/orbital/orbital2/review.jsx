@@ -15,26 +15,22 @@ const tracklist = [
 ];
 
 const themes = [
-    "",
 ];
 
 export const review = () => (
     <div className='review-content'>
 
-        <div className="review-albumThemes">
-            <div className='themes list-of-tags'>
-                {themes.map(theme => {
-                    return <span className='theme-tag' key={theme}>
-                        {theme}
-                    </span>
-                })}
-            </div>
-        </div>
-
         <div className="review-main">
             <p>
-
+                Not a single skippable track in the album. Full of bangers.
+                This came out in 1993 and is still absolutely amazing.
             </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jCDzdH1FTO0?si=3FyBHzYzCOM_8L53" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <p>
+                The closing track Halcyon + On + On is a masterpiece of ambient techno.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bV-hSgL1R74?si=1UzeajJqNqJ9HLVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div className="review-trackRatings">

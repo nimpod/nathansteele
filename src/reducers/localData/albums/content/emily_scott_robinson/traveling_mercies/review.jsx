@@ -38,7 +38,9 @@ export const review = () => (
 
         <div className='review-summary'>
             <p>
-
+                My favourite album in the country genre. Every song on this album is so memorable, the lyrics are poignant and heartfelt, the instrumentation is great.
+                Emily's voice is angelic and instantly recognisable in the wider country music scene.
+                Highly recommened for fans of music.
             </p>
         </div>
     </div>

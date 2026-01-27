@@ -3,8 +3,8 @@ import TemplateTracklistComponent from '../../../../../../components/music/Templ
 
 const tracklist = [
     { "rating": 9, "title": "Pink Diamond" },
-    { "rating": 11, "title": "forever" },
-    { "rating": 11, "title": "claws" },
+    { "rating": 10, "title": "forever" },
+    { "rating": 10, "title": "claws" },
     { "rating": 8, "title": "7 years" },
     { "rating": 8, "title": "detonate" },
     { "rating": 8, "title": "enemy" },
@@ -23,20 +23,12 @@ const date_of_review = "June 10, 2025";
 export const review = () => (
     <div className='review-content'>
 
-        <div className="review-albumThemes">
-            <div className='themes list-of-tags'>
-                {themes.map(theme => {
-                    return <span className='theme-tag' key={theme}>
-                        {theme}
-                    </span>
-                })}
-            </div>
-        </div>
-
         <div className="review-main">
             <p>
 
             </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/E6oq5HCzG4c?si=JrSALTjbso0y7KUX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TbJE-KVZvTA?si=MlBldRjK0sXRilq2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div className="review-trackRatings">

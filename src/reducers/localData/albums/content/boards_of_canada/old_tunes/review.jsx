@@ -36,7 +36,7 @@ const tracklist = [
 ];
 
 const themes = [
-    
+    "Strange", "Unique", "Memorable"
 ];
 
 export const review = () => (
@@ -54,7 +54,19 @@ export const review = () => (
 
         <div className="review-main">
             <p>
+                Another weird side project from BoC that's not on Spotfiy.
+                It's a unique and strange album experience.
+            </p>
 
+            <p>
+                [08 - Finity], and [26 - 5.9.78] are standout tracks for me, very classic BoC style and some of their best work ever.
+            </p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GQrQt8XtKAk?si=FNbNeOo8_miUVXQ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3A786lOX8jc?si=lTvuE5qrIS4uUyTs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <p>
+                [04 - Trapped] is a bit of an outlier in their style, more funky and ubpeat, but somehow still fits the quirky style of the album.
             </p>
         </div>
 
@@ -64,6 +76,8 @@ export const review = () => (
 
         <div className="review-summary">
             <p>
+                Another strange and quirky side project from BoC.
+                A really memorable album experience and some of their best individual tracks (Finity, 5.9.78).
             </p>
         </div>
 

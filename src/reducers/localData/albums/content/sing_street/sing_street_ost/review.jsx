@@ -5,8 +5,9 @@ const tracklist = [
     { "rating": 10, "title": "Up" },
     { "rating": 9, "title": "To Find You" },
     { "rating": 11, "title": "A Beautiful Sea" },
-    { "rating": 9, "title": "Drive It Like You Stole It" },
+    { "rating": 8, "title": "Drive It Like You Stole It" },
     { "rating": 9, "title": "Up - bedrooom mix" },
+    { "rating": 6, "title": "Girls" },
     { "rating": 9, "title": "Brown Shoes" },
     { "rating": 9, "title": "Go Now" },
 ]

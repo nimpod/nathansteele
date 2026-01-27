@@ -39,10 +39,11 @@ import { review as Bjork_MountWittenbergOrca } from './content/bjork/mount_witte
 import { review as BradMehldau_TamingTheDragon } from './content/brad_mehldau/taming_the_dragon/review.jsx';
 import { review as BrunoSanfilippo_VerSacrum } from './content/bruno_sanfilippo/ver_sacrum/review.jsx';
 import { review as BrunoSanfilippo_Unity } from './content/bruno_sanfilippo/unity/review.jsx';
+import { review as BeachHouse_OnceTwiceMelody } from './content/beach_house/once_twice_melody/review.jsx';
+import { review as BeachHouse_TeenDream } from './content/beach_house/teen_dream/review.jsx';
 import { review as Biosphere_Substrata } from './content/biosphere/substrata/review.jsx';
 import { review as BMTH_PostHumanSurvivalHorror } from './content/bring_me_the_horizon/post_human_survival_horror/review.jsx';
 import { review as Bent_ProgrammedToLove } from './content/bent/programmed_to_love/review.jsx';
-import { review as BeachHouse_OnceTwiceMelody } from './content/beach_house/once_twice_melody/review.jsx';
 import { review as BireliLagrene_ElectricSide } from './content/bireli_lagrene/electric_side/review.jsx';
 import { review as BadBadNotGood_IV } from './content/badbadnotgood/iv/review.jsx';
 import { review as BadBadNotGood_BBNG2 } from './content/badbadnotgood/bbng2/review.jsx';
@@ -84,6 +85,7 @@ import { review as GlobalCommunication_7614 } from './content/global_communicati
 import { review as GregIsakov_ThisEmptyNorthernHemisphere } from './content/greg_isakov/this_empty_northern_hemisphere/review.jsx';
 import { review as GrantKirkhope_BanjoKazooie } from './content/grant_kirkhope/banjo_kazooie/review.jsx';
 import { review as GarajMahal_Rotifier } from './content/garaj_mahal/rotifier/review.jsx';
+import { review as GarajMahal_Woot } from './content/garaj_mahal/woot/review.jsx';
 
 import { review as HakushiHasegawa_SomokuHodo} from './content/hakushi_hasegawa/somoku_hodo/review.jsx';
 import { review as Haya_SilentSky } from './content/haya/silent_sky/review.jsx';
@@ -192,6 +194,7 @@ import { review as SoundsFromTheGround_Mosaic } from './content/sounds_from_the_
 import { review as Shakti_ThisMoment } from './content/shakti/this_moment/review.jsx';
 import { review as SingStreet_SingStreetOST } from './content/sing_street/sing_street_ost/review.jsx';
 import { review as Scntfc_Oxenfree } from './content/scntfc/oxenfree/review.jsx';
+import { review as StevenWilson_HandCannotErase } from './content/steven_wilson/hce/review.jsx';
 
 import { review as TakashiKako_Ritual } from './content/takashi_kako/ritual/review.jsx';
 import { review as TakashiKako_WindWaltz } from './content/takashi_kako/wind_waltz/review.jsx';
@@ -1047,7 +1050,7 @@ const database = {
 			date_of_review: "2022",
 			genres: "Dream pop; Indie pop; Indie rock; Shoegaze",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(BeachHouse_TeenDream()),
 		},
 		"beach_house__once_twice_melody": {
 			lastfm_url: "https://www.last.fm/music/Beach+House/Once+Twice+Melody",
@@ -1153,7 +1156,17 @@ const database = {
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(Bjork_Post()),
 		},
-
+		"bjork__vespertine": {
+			lastfm_url: "https://www.last.fm/music/Bj%C3%B6rk/Vespertine",
+			rym_url: "https://rateyourmusic.com/release/album/bjork/vespertine/",
+			spotify_url: "",
+			year_of_release: "2001",
+			date_of_review: "2025",
+			country: "Iceland",
+			genres: "Folktronica; Art pop; Ambient pop; Glitch pop; Electronic",
+			my_rating: 8.0,
+			my_review: "",
+		},
 
 		//
 		"bt__ima": {
@@ -1368,6 +1381,7 @@ const database = {
 			genres: "Jazz fusion; Jazz",
 			country: "Bolivia",
 			themes: ["Bolivia", "Guitar"],
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X,
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(CarlosFischer_BusquedaInfinita())
 		},
@@ -1478,7 +1492,7 @@ const database = {
 			year_of_release: "2013",
 			date_of_review: "2018",
 			genres: "Disco; French house; Progressive pop; Electropop; Synthpop; Electronic",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(DaftPunk_RandomAccessMemories())
 		},
 		"daft_punk__human_after_all": {
@@ -1511,7 +1525,7 @@ const database = {
 			year_of_release: "2018",
 			date_of_review: "2023",
 			genres: "Tribal ambient; Turkish folk; Balkan folk; Darkwave; Neoclassical darkwave; Neo-classical",
-			my_rating: 8.5,
+			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(DeadCanDance_Dionysus()),
 		},
 
@@ -2025,7 +2039,7 @@ const database = {
 			date_of_review: "2024",
 			genres: "Jazz fusion; Jazz; Funk; Jazz funk",
 			my_rating: 8.0,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(GarajMahal_Woot()),
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
 		},
 		"Garaj Mahal - Rotifier": {
@@ -2041,6 +2055,17 @@ const database = {
 		},
 
 
+		"Ganavya - Nilam": {
+			lastfm_url: "https://www.last.fm/music/Ganavya/Nilam",
+			rym_url: "https://rateyourmusic.com/release/album/ganavya/nilam/",
+			spotify_url: "https://open.spotify.com/album/1HGz1ufV2UHk0OYsVxbcl3",
+			year_of_release: "2025",
+			date_of_review: "2025",
+			genres: "Hindustani classical music; New age; Bhajan",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.TAIWAN_MANIAC
+		},
 		"gridlock_trace": {
 			lastfm_url: "https://www.last.fm/music/Gridlock/Trace",
 			rym_url: "https://rateyourmusic.com/release/album/gridlock/trace/",
@@ -2059,7 +2084,7 @@ const database = {
 			year_of_release: "2009",
 			date_of_review: "2024",
 			genres: "Indie folk; Americana; Country",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(GregIsakov_ThisEmptyNorthernHemisphere()),
 			recommended_by: TrustworthyMusicReviewers.ABBOT
 		},
@@ -2194,7 +2219,7 @@ const database = {
 			date_of_review: "2023",
 			country: "Japan",
 			genres: "Jazz fusion; Jazz; Post-Bop",
-			my_rating: 9.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(Hiromi_Spark()),
 		},
 		"Hiromi - Out There": {
@@ -2219,6 +2244,16 @@ const database = {
 			genres: "Jazz fusion; Jazz; Post-Bop",
 			my_rating: 8.0,
 			my_review: ReactDomServer.renderToString(Hiromi_AnotherMind()),
+		},
+		"Hiromi - Voice": {
+			lastfm_url: "https://www.last.fm/music/Hiromi/Voice",
+			rym_url: "https://rateyourmusic.com/release/album/hiromi/voice/",
+			spotify_url: "https://open.spotify.com/album/3icv4BC45cfT3pdnzEMPPX",
+			year_of_release: "2011",
+			date_of_review: "2025",
+			country: "Japan",
+			genres: "Jazz fusion; Jazz; Post-Bop",
+			my_rating: 8.0,
 		},
 
 
@@ -2412,7 +2447,7 @@ const database = {
 			date_of_review: "2022",
 			artist_name_English: "Joe Hisaishi",
 			genres: "Film soundtrack",
-			my_rating: 9.0,
+			my_rating: 8.5,
 			custom_cover_url: "https://i.scdn.co/image/ab67616d0000b273c853c5a8535cc3dc394efc58",
 			my_review: ReactDomServer.renderToString(JoeHisaishi_TheWindRises())
 		},
@@ -2699,7 +2734,7 @@ const database = {
 			year_of_release: "2023",
 			date_of_review: "2024",
 			genres: "Country; Americana; Indie folk",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.SPECTRUM_PULSE
 		},
@@ -3461,7 +3496,7 @@ const database = {
 			year_of_release: "2023",
 			date_of_review: "2023",
 			genres: "Jazz fusion; Jazz rock; Progressive rock; Progressive metal; Djent; Funk metal; Jazz",
-			my_rating: 9.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(MohiniDey_MohiniDey()),
 			country: "India",
 			recommended_by: TrustworthyMusicReviewers.GEORGE_X
@@ -3631,7 +3666,7 @@ const database = {
 			year_of_release: "2018",
 			date_of_review: "2025",
 			genres: "Ambient techno; Ambient; Electronic",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: "",
 		},
 		"Nickel Creek - Nickel Creek": {
@@ -4446,7 +4481,7 @@ const database = {
 			year_of_release: "2015",
 			genres: "Progressive rock; Art rock; Pop rock; Alternative rock",
 			my_rating: 8.5,
-			my_review: "",
+			my_review: ReactDomServer.renderToString(StevenWilson_HandCannotErase()),
 			date_of_review: "2023",
 			recommended_by: TrustworthyMusicReviewers.TONE_ZONE
 		},

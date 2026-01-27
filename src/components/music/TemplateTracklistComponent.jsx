@@ -9,7 +9,7 @@ import React from 'react';
 function TemplateTracklistComponent(props) {
     let ratings = [];
     props.tracklist.forEach(track => {
-        if (track['rating'] == 'interlude') {
+        if (track['rating'] == 'interlude' || track['rating'] == 'intro') {
             // dont add to list...
         } else {
             ratings.push(track['rating']);

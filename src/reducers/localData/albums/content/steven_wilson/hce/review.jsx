@@ -2,28 +2,20 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 8, "title": "First Voids" },
-    { "rating": 9, "title": "Steel Mogu" },
-    { "rating": 8, "title": "Black Light Ultra" },
-    { "rating": 9, "title": "Mei Mode" },
-    { "rating": 9, "title": "Niteracer" },
+    { "rating": 10, "title": "First Regret / 3 Years Older" },
+    { "rating": 9, "title": "Hand Cannot Erase" },
+    { "rating": 9, "title": "Perfect Life" },
+    { "rating": 11, "title": "Routine" },
+    { "rating": 7, "title": "Home Invasion / Regret #9" },
+    { "rating": 8, "title": "Transience" },
+    { "rating": 8, "title": "Ancestral" },
+    { "rating": 8, "title": "Happy Returns / Ascendant Here" },
 ];
 
-const themes = [
-];
+const date_of_review = "June 10, 2025";
 
 export const review = () => (
     <div className='review-content'>
-
-        <div className="review-albumThemes">
-            <div className='themes list-of-tags'>
-                {themes.map(theme => {
-                    return <span className='theme-tag' key={theme}>
-                        {theme}
-                    </span>
-                })}
-            </div>
-        </div>
 
         <div className="review-main">
             <p>

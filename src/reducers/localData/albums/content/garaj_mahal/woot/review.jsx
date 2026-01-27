@@ -2,17 +2,19 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 11, "title": "我昨晚夢見你了" },
-    { "rating": 9, "title": "她還想入非非呢" },
-    { "rating": 11, "title": "我永遠不會忘記你" },
-    { "rating": 9, "title": "可見光" },
-    { "rating": 9, "title": "捕夢網" },
+    { "rating": 11, "title": "Semos" },
+    { "rating": 8, "title": "Hotel" },
+    { "rating": 9, "title": "Pundit-Ji" },
+    { "rating": "interlude", "title": "Bass Solo" },
+    { "rating": 9, "title": "7 Cows Jumping Over The Moon" },
+    { "rating": 8, "title": "Corner Peace" },
+    { "rating": 10, "title": "Ishmael And Isaac" },
+    { "rating": 8, "title": "Uptown Tippitinas" },
+    { "rating": 8, "title": "Jamie's Jam" },
 ];
 
 const themes = [
-    "Melancholic",
-    "Eerie",
-    "Spooky",
+
 ];
 
 const date_of_review = "June 10, 2025";
@@ -32,17 +34,7 @@ export const review = () => (
 
         <div className="review-main">
             <p>
-                The artists name 輕描淡寫 [Qīng Miáo Dàn Xiě] translates to "describe lightly / to understate” — i.e., to portray something with gentle, minimal detail.
-            </p>
 
-            <p>
-                The album title 小圈子 [xiǎo quānzi] translates to “small social circle/clique”. 
-                It refers to a small, closed group of people or social circle.
-            </p>
-
-            <p>
-                The album is purely instrumental, synth-based with field recordings and brief vocal samples in Mandarin Chinese.
-                Nevertheless, this music is sublime - incredibely mesmerising, dreamy, melancholic. The whole album flies by whenever I put it on.
             </p>
         </div>
 

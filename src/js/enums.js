@@ -70,6 +70,7 @@ export const TrustworthyMusicReviewers = Object.freeze({
     SPECTRUM_PULSE: { name: "Spectrum Pulse", url: "https://www.youtube.com/@SpectrumPulse", genres: ["Country"]},
     DEEP_CUTS: { name: "Deep Cuts", url: "https://www.youtube.com/@deepcuts", genres: ["Electronic", "Nu jazz"]},
     THE_NEEDLE_DROP: { name: "The Needle Drop", url: "https://www.youtube.com/@theneedledrop", genres: ["Hip Hop", "Pop"]},
+    CORDES_RECORDS: { name: "Cordes Records", url: "https://www.youtube.com/@cordesrecords", genres: ["Folk"]},
 
     // RYM
     ALPHAWELLENREITER: { name: "Alphawellenreiter", url: "https://rateyourmusic.com/~Alphawellenreiter", genres: ["Post-minimalism", "Ambient", "Space rock", "Psychedelic rock", "Prog rock"]},

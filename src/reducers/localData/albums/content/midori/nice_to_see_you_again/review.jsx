@@ -1,9 +1,9 @@
 import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 const tracklist = [
-    { "rating": 8, "title": "スキ" },
+    { "rating": "intro", "title": "スキ" },
     { "rating": 10, "title": "ゆきこさん" },
-    { "rating": 8, "title": "かなしい日々。" },
+    { "rating": 9, "title": "かなしい日々。" },
     { "rating": 10, "title": "お猿" },
     { "rating": 8, "title": "根性無しあたし、あほぼけかす" },
     { "rating": 8, "title": "ちはるの恋" },

@@ -14,9 +14,8 @@ export const review = () => (
             <p>
 
             </p>
-            <p>
-
-            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/C_Eg4NgoUNg?si=EL3PKtR-8Yx0YRPq&amp;start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    
             <p>
 
             </p>

@@ -28,7 +28,7 @@ const tracklist = [
 ];
 
 const themes = [
-    
+    "Creepy", "Nostalgic", "Strange", "Hypnotic", "Melancholic"
 ];
 
 export const review = () => (
@@ -46,8 +46,24 @@ export const review = () => (
 
         <div className="review-main">
             <p>
-
+                This album has been a companion throughout my adult life.
+                It's a deeply emotional and introspective work that captures the essence of nostalgia and melancholy.
+                There are so many memorable moments throughout the album.
+                The entire atmosphere and individual moments, it's a perfect album experience so 10/10 for me.
             </p>
+
+            <p>
+                Track #08 Julie and Candy was the first BoC track I ever heard, it was on a "Trip Hop Essentials" youtube mix.
+                The moment the song started playing, I was intrigued. It just instantly aligned with my brainwaves.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vuG39sZxMp8?si=wfnFyAIMbUPunPhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <p>
+                But there are so many other great individual tracks throughout the album. Give it a listen!!
+            </p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/F7bKe_Zgk4o?si=V9L04o_Uixoszc7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
 
         <div className="review-trackRatings">

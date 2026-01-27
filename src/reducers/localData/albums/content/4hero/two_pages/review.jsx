@@ -29,20 +29,11 @@ const themes = [
 export const review = () => (
     <div className='review-content'>
 
-        <div className="review-albumThemes">
-            <div className='themes list-of-tags'>
-                {themes.map(theme => {
-                    return <span className='theme-tag' key={theme}>
-                        {theme}
-                    </span>
-                })}
-            </div>
-        </div>
-
         <div className="review-main">
             <p>
-
+                Super underrated album combining drum & bass, jazz, downtempo. Deserves way more listeners.
             </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cfHtqMOZcZc?si=ltJW--YUntRfViS_&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div className="review-trackRatings">

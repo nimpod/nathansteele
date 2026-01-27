@@ -2,11 +2,16 @@ import React from 'react';
 import TemplateTracklistComponent from '../../../../../../components/music/TemplateTracklistComponent.jsx';
 
 const tracklist = [
-    { "rating": 8, "title": "First Voids" },
-    { "rating": 9, "title": "Steel Mogu" },
-    { "rating": 8, "title": "Black Light Ultra" },
-    { "rating": 9, "title": "Mei Mode" },
-    { "rating": 9, "title": "Niteracer" },
+    { "rating": 9, "title": "Zebra" },
+    { "rating": 9, "title": "Silver Soul" },
+    { "rating": 9, "title": "Norway" },
+    { "rating": 8, "title": "Walk in the Park" },
+    { "rating": 10, "title": "Used to Be" },
+    { "rating": 9, "title": "Lover Of Mine" },
+    { "rating": 8, "title": "Better Times" },
+    { "rating": 8, "title": "10 Mile Stereo" },
+    { "rating": 8, "title": "Real Love" },
+    { "rating": 8, "title": "Take Care" },
 ];
 
 const themes = [
