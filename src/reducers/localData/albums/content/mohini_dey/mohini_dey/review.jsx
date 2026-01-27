@@ -33,7 +33,10 @@ export const review = () => (
 
         <div className="review-main">
             <p>
-
+                Incredible bass guitar playing from Mohini Dey.
+                This is her debut album - absolutely mindblowing.
+                Every track is immense, not a single weak moment.
+                Not often is bass guitar the lead instrument on a fusion album, so it's great to hear a twist on the formula.
             </p>
         </div>
 

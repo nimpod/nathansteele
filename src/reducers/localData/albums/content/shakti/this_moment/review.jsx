@@ -12,27 +12,34 @@ const tracklist = [
     { "rating": 9, "title": "Sono Mama" },
 ];
 
-const themes = [
-    
-];
-
 export const review = () => (
     <div className='review-content'>
 
-        <div className="review-albumThemes">
-            <div className='themes list-of-tags'>
-                {themes.map(theme => {
-                    return <span className='theme-tag' key={theme}>
-                        {theme}
-                    </span>
-                })}
-            </div>
-        </div>
-
         <div className="review-main">
             <p>
-
+                The return of Shakti in 2023 was very unexpected.
+                Their last album as a group was in 1977 - a long hiatus!
             </p>
+
+            <p>
+                Shakti fuse Hindustani classical music with jazz and rock.
+                Tabla legend Zakir Hussain is amazing on this album, jazz fusion legend John McLaughlin still sounds great on guitar, and all of the band members are great throughout:
+                <ul>
+                    <li>John McLaughlin (guitar)</li>
+                    <li>Zakir Hussain (tabla)</li>
+                    <li>L. Shankar (violin)</li>
+                    <li>T.H. Vinayakram (ghatam)</li>
+                    <li>Vikku Vinayakram (mridangam)</li>
+                </ul>
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MxF2U5tRarU?si=n8Em4NwhtfUO2adB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <p>
+                I was also pleasantly surpised to see Shakti get more global acclaim when they were hosted on Tiny Desk concert - 
+                their video currently has 1.3 million views - 
+                hopefully all those people also listened to this album too because it's amazing and one of the best albums of 2023!
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Cx8AaSvH4EQ?si=mGlTkLlMMTozRf37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div className="review-trackRatings">

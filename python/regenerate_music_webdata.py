@@ -1,9 +1,3 @@
-# TODO:
-# 1) Make this script faster, I don't why it takes so fucking long
-# 2) At the end, when the json file has been regenerated, iterate over it again, and look for album_cover_url": ""
-#    This is an indication there was a naming mismatch somewhere (album name missing a colon, comma, fullstop, etc...)
-#    And then print out the names of the albums which couldn't find a LastFM match. So I can speed up the process of fixing it.
-
 import os
 import json
 import time
@@ -46,7 +40,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
     """
     Convert an m3u musicbee export into a json file
     """
-    
+
     # locate m3u export
     if os.path.exists(fullpath_to_musicbee_export):
         with open(fullpath_to_musicbee_export, 'r', encoding="utf8") as f:
@@ -63,40 +57,6 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
 
             # keeps track of current position in list
             pos = 0
-
-            # NOTE: Temporary code, that allows me to append to the existing json so I don't have to reiterate the whole list
-            #       I might not always want this... Because when I add new albums, this will be triggered
-            #       But in that situation I would rather regenerate the whole list...
-            append = False
-            with open(fullpath_to_json_output) as f:
-                data = json.load(f)
-                num_of_albums_already_in_list = len(data)
-                # if there are still more albums missing from the list...
-                if num_of_albums_already_in_list < num_of_albums:
-                    # tell my program that I want to append to the existing list (not create a new one)
-                    append = True
-                    # update current position in list
-                    pos = num_of_albums_already_in_list
-                    # modify the array so it starts from where we left off before
-                    toplist = toplist[pos:]
-                    # inform the user pos has been changed...
-                    print(f"You added new album(s). Changed to 'Append' mode. Restarting from pos {pos}")
-                elif num_of_albums_already_in_list == num_of_albums:
-                    # If the new data and old data are same size, I am probbaly just reordering the list.
-                    # Therefore it's more efficient to regenerate the list starting from the point at which they are different.
-                    # https://stackoverflow.com/questions/67263585/determining-the-indicies-where-2-numpy-arrays-differ
-                    pass
-                    #append = True
-                    #print(old_data_reformatted)
-                    #print(new_data)
-                    #test = (~numpy.equal(data_reformatted, new_data)).astype(object)
-                    #indices = numpy.flatnonzero(test)
-                    #print(indices)
-                    #pos = indices[0]
-                    #print(pos)
-                    #toplist = toplist[pos:]
-                    #print(f"You reordered the list. Changed to 'Append' mode. Restarting from pos {pos}")
-
             
             # local version of list
             albums_list = []            
@@ -194,10 +154,7 @@ def convert_m3u_to_json(fullpath_to_musicbee_export, fullpath_to_json_output):
                     'review_id': review_id,
                 })
             
-            if append:
-                Helpers.append_list_to_existing_json(fullpath_to_json_output, albums_list)
-            else:
-                Helpers.export_list_to_json(fullpath_to_json_output, albums_list)
+            Helpers.export_list_to_json(fullpath_to_json_output, albums_list)
 
 
 def album_name_doesnt_match_with_lastfm(folder_name, album_name):

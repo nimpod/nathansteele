@@ -18,8 +18,7 @@ export const review = () => (
     <div className='review-content'>
         <div className="review-intro">
             <p>
-                This is one of Adam Wiltzie's many side projects.
-                His other aliases include <a href='https://rateyourmusic.com/artist/stars-of-the-lid'>Stars of the Lid</a>,  <a href='https://rateyourmusic.com/artist/a-winged-victory-for-the-sullen'>A Winged Victory for the Sullen</a>, or just <a href='https://rateyourmusic.com/artist/adam_wiltzie'>Adam Wiltize</a>.
+                This is one of Adam Wiltzie's many side projects (his most well known aliase being <a href='https://rateyourmusic.com/artist/stars-of-the-lid'>Stars of the Lid</a>, or just <a href='https://rateyourmusic.com/artist/adam_wiltzie'>Adam Wiltize</a>.
             </p>
 
             <p>

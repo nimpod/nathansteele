@@ -68,7 +68,7 @@ export default class App extends Component {
 
                       <Route path='/music' component={Music} exact />
                       <Route path='/music/:album_id' component={MusicReview} exact />
-                      <Route path='/music_stats' component={MusicStats} exact />
+                      <Route path='/music/stats' component={MusicStats} exact />
 
                       <Route path='/university' component={University} exact />
                       <Route path='/university/:assignment_id' component={UniversityAssignment} exact />

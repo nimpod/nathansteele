@@ -33,8 +33,8 @@ export const review = () => (
                 </ul>
             </p>
             <p>
-                The word "Dionysus" refers to the ancient Greek god of wine, madness, ecstasy, dance, and theatre.
-                He is basically the god of "getting so overwhelmed by rhythm and emotion that you forget who you are"
+                The word "Dionysus" refers to the ancient Greek god of wine - he is basically the god of "getting so overwhelmed by rhythm and emotion that you forget who you are"
+                Themes such as madness, ecstasy, dance, and theatre.
             </p>
             <p>
                 I love how earthy, organic, primitive, rhythmic, and raw this album sounds.

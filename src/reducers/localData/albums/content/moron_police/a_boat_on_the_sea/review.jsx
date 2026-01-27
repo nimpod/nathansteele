@@ -12,27 +12,16 @@ const tracklist = [
     { "rating": 11, "title": "Isn't It Easy" },
 ];
 
-const themes = [
-    "Intense",
-];
-
 export const review = () => (
     <div className='review-content'>
-
-        <div className="review-albumThemes">
-            <div className='themes list-of-tags'>
-                {themes.map(theme => {
-                    return <span className='theme-tag' key={theme}>
-                        {theme}
-                    </span>
-                })}
-            </div>
-        </div>
 
         <div className="review-main">
             <p>
 
             </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JlBr29H65ig?si=iYq5hsV6XzhEsHwf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gnnAw8V2jTE?si=dBPXTQKztXoBurJH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iQZzHqjpwc0?si=hhYwXa5JHiPvIWFn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div className="review-trackRatings">
@@ -41,6 +30,7 @@ export const review = () => (
 
         <div className="review-summary">
             <p>
+                One of my favourite prog rock / symphonic rock albums of all time. Every track is great, high energy and always enjoyable.
             </p>
         </div>
 

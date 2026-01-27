@@ -5,7 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 class MusicStats extends Component {
     render() {
-        console.log(this.props.top_albums)
+        console.log(this.props)
 
         return (
             <div>Music Stats Component</div>

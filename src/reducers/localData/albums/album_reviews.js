@@ -450,6 +450,29 @@ const database = {
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
 		},
 
+
+		//
+		"The Black Dog - Spanners": {
+			lastfm_url: "https://www.last.fm/music/The+Black+Dog/Spanners",
+			rym_url: "https://rateyourmusic.com/release/album/the-black-dog/spanners/",
+			spotify_url: "https://open.spotify.com/album/2xP369vU8kb1QJWIT9vSFH",
+			year_of_release: "1995",
+			date_of_review: "2025",
+			genres: "Ambient techno; Acid techno; IDM; Electronic",
+			my_rating: 8.5,
+			my_review: ""
+		},
+		"The Black Dog - Music For Real Airpots": {
+			lastfm_url: "https://www.last.fm/music/The+Black+Dog/Music+for+Real+Airports",
+			rym_url: "https://rateyourmusic.com/release/album/the-black-dog/music-for-real-airports/",
+			spotify_url: "https://open.spotify.com/album/14JF8KEjLOEAJPSUsUGdzm",
+			year_of_release: "2023",
+			date_of_review: "2025",
+			genres: "Ambient; Drone; Electronic",
+			my_rating: 8.0,
+			my_review: ""
+		},
+
 		
 		"The Dead Texan": {
 			lastfm_url: "https://www.last.fm/music/The+Dead+Texan/The+Dead+Texan",
@@ -460,16 +483,6 @@ const database = {
 			genres: "Ambient; Drone",
 			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(TheDeadTexan_TheDeadTexan()),
-		},
-		"The Black Dog - Spanners": {
-			lastfm_url: "https://www.last.fm/music/The+Black+Dog/Spanners",
-			rym_url: "https://rateyourmusic.com/release/album/the-black-dog/spanners/",
-			spotify_url: "https://open.spotify.com/album/2xP369vU8kb1QJWIT9vSFH",
-			year_of_release: "1995",
-			date_of_review: "2025",
-			genres: "Ambient techno; Acid techno; IDM; Electronic",
-			my_rating: 8.5,
-			my_review: ""
 		},
 		"the_klf__chillout": {
 			lastfm_url: "https://www.last.fm/music/The+KLF/Come+Down+Dawn",
@@ -728,7 +741,7 @@ const database = {
 			lastfm_url: "https://www.last.fm/music/Amorphous+Androgynous/Tales+of+Ephidrina",
 			rym_url: "https://rateyourmusic.com/release/album/amorphous-androgynous/tales-of-ephidrina/",
 			spotify_url: "https://open.spotify.com/album/4SNliyiumphhCLF7mPnAaJ?si=ojSSf7NeQ3uJRy0SgoHIwA",
-			year_of_release: "1994",
+			year_of_release: "1993",
 			genres: "IDM; Ambient techno; Techno; Electronic",
 			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(AmorphousAndrogynous_TalesOfEphidrina()),
@@ -1329,10 +1342,20 @@ const database = {
 		},
 
 
+		"Charaxes - Colors Tease": {
+			lastfm_url: "https://www.last.fm/music/charaxes/Colors+Tease",
+			rym_url: "https://rateyourmusic.com/release/album/charaxes/colors-tease/",
+			spotify_url: "",
+			year_of_release: "2023",
+			date_of_review: "2023",
+			genres: "Ambient techno; Electronic",
+			my_rating: 8.0,
+			my_review: ""
+		},
 		"Commodore - Desde el lado sur": {
 			lastfm_url: "https://www.last.fm/music/Commodore/Desde+el+lado+sur",
 			rym_url: "https://rateyourmusic.com/release/album/commodore/desde-el-lado-sur/",
-			spotify_url: "https://rateyourmusic.com/release/album/commodore/desde-el-lado-sur/",
+			spotify_url: "",
 			year_of_release: "2025",
 			date_of_review: "2025",
 			genres: "Jazz fusion",
@@ -1343,7 +1366,7 @@ const database = {
 		"Cheng Bi - I want to waste time with you": {
 			lastfm_url: "https://www.last.fm/music/Cheng+Bi/I+want+to+waste+time+with+you",
 			rym_url: "https://rateyourmusic.com/release/album/%E7%A8%8B%E7%92%A7/%E6%88%91%E6%83%B3%E5%92%8C%E4%BD%A0%E8%99%9A%E5%BA%A6%E6%97%B6%E5%85%89/",
-			spotify_url: "https://rateyourmusic.com/release/album/%E7%A8%8B%E7%92%A7/%E6%88%91%E6%83%B3%E5%92%8C%E4%BD%A0%E8%99%9A%E5%BA%A6%E6%97%B6%E5%85%89/",
+			spotify_url: "https://open.spotify.com/album/62c12Jq1YayqgqIWomUDu3",
 			artist_name_Chinese: "程璧",
 			year_of_release: "2015",
 			date_of_review: "03 October, 2025",
@@ -1524,7 +1547,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/1l2ZBaHPhtAd5HE4n2LpRf?si=j2y3G1I1SJOZNi074Gg5JA",
 			year_of_release: "2018",
 			date_of_review: "2023",
-			genres: "Tribal ambient; Turkish folk; Balkan folk; Darkwave; Neoclassical darkwave; Neo-classical",
+			genres: "Worldbeat; Tribal ambient; Turkish folk; Balkan folk; Darkwave; Neoclassical darkwave; Neo-classical",
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(DeadCanDance_Dionysus()),
 		},
@@ -2064,7 +2087,7 @@ const database = {
 			genres: "Hindustani classical music; New age; Bhajan",
 			my_rating: 8.0,
 			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.TAIWAN_MANIAC
+			recommended_by: TrustworthyMusicReviewers.CORDES_RECORDS
 		},
 		"gridlock_trace": {
 			lastfm_url: "https://www.last.fm/music/Gridlock/Trace",
@@ -2242,7 +2265,7 @@ const database = {
 			date_of_review: "2025",
 			country: "Japan",
 			genres: "Jazz fusion; Jazz; Post-Bop",
-			my_rating: 8.0,
+			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(Hiromi_AnotherMind()),
 		},
 		"Hiromi - Voice": {
@@ -2263,7 +2286,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/1vETf8fzGng1ynbmaMbo3u",
 			year_of_release: "2009",
 			date_of_review: "27/08/2025",
-			genres: "Chinese folk music; New age; Mongolian throat singing; Chamber folk",
+			genres: "Chinese folk music; New age; Mongolian throat singing; Chamber folk; Worldbeat",
 			country: "China",
 			my_rating: 8.5,
 			my_review: ReactDomServer.renderToString(Haya_SilentSky()),
@@ -2706,6 +2729,7 @@ const database = {
 			genres: "ECM style jazz; Jazz fusion; Jazz",
 			my_rating: 8.0,
 			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.ELASTIC_ROCK
 		},
 		"jockstrap__i_love_you_jenifer_b": {
 			lastfm_url: "https://www.last.fm/music/Jockstrap/I+Love+You+Jennifer+B",
@@ -2899,6 +2923,17 @@ const database = {
 		},
 
 
+		"Kaltenecker Trio - The Crossing": {
+			lastfm_url: "https://www.last.fm/music/Kaltenecker+Trio/The+Crossing",
+			rym_url: "https://rateyourmusic.com/release/album/kaltenecker_trio/the_crossing/",
+			spotify_url: "https://open.spotify.com/album/5dQ2rcIBEUTwvdI8AqgRbO",
+			year_of_release: "1999",
+			date_of_review: "2024",
+			genres: "Jazz fusion",
+			my_rating: 8.0,
+			my_review: "",
+			recommended_by: TrustworthyMusicReviewers.GEORGE_X
+		},
 		"King Creoste Diamond mine": {
 			lastfm_url: "https://www.last.fm/music/King+Creosote/Diamond+Mine",
 			rym_url: "https://rateyourmusic.com/release/album/king-creosote-jon-hopkins/diamond-mine/",
@@ -2928,7 +2963,7 @@ const database = {
 			spotify_url: "",
 			year_of_release: "1981",
 			date_of_review: "2024",
-			genres: "New Age; Ambient; Progressive rock",
+			genres: "New age; Ambient; Progressive rock",
 			tags: ["Not on spotify"],
 			country: "Japan",
 			my_rating: 8.0,
@@ -2953,7 +2988,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/5RLRyOKImXIUHpdVdAOuO9?si=1icIJDq3TvKajyPiq0ZPLw",
 			year_of_release: "2014",
 			date_of_review: "2024",
-			genres: "New Age; Choral; Modern clasical",
+			genres: "New age; Choral; Modern clasical",
 			themes: ["Peaceful", "Calming", "Melancholic"],
 			my_rating: 9.0,
 			my_review: ReactDomServer.renderToString(KarlJenkins_Motets()),
@@ -3156,7 +3191,7 @@ const database = {
 
 
 		"llyr - Biome": {
-			lastfm_url: "https://www.last.fm/music/llyr/biome",
+			lastfm_url: "https://www.last.fm/music/Llyr/Biome",
 			rym_url: "https://rateyourmusic.com/release/album/llyr/biome/",
 			spotify_url: "https://open.spotify.com/album/4al4RrIK5oMUd95Gvjlyiu",
 			year_of_release: "2021",
@@ -3306,7 +3341,7 @@ const database = {
 			year_of_release: "2014",
 			date_of_review: "2015",
 			genres: "Folk; Indie folk",
-			my_rating: 8.5,
+			my_rating: 8.0,
 			my_review: "",
 		},
 		"marika_hackman__sugar_blind": {
@@ -3771,7 +3806,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/41qn4oxd4WFgz4JSBI9Ips?si=3SesRqpwSKCaOq94lIdCsA",
 			year_of_release: "1999",
 			date_of_review: "2022",
-			genres: "Nu jazz; Trip hop; Indian fusion; Indian music; Downtempo",
+			genres: "Nu jazz; Trip hop; Indian fusion; Indian music; Downtempo; Worldbeat",
 			my_rating: 8.0,
 			my_review: "",
 		},
@@ -3919,7 +3954,6 @@ const database = {
 			genres: "Jazz; Swing; Bebop",
 			my_rating: 8.0,
 			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.ALPHAWELLENREITER
 		},
 		"offthesky - Silent Went The Sea": {
 			lastfm_url: "https://www.last.fm/music/OFFTHESKY/Silent+Went+The+Sea",
@@ -3980,7 +4014,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/4j35vp3nvyPvp9lm439ept?si=Ec8ANDVnQYOu1d-TdikFNg",
 			year_of_release: "2004",
 			date_of_review: "2023",
-			genres: "Trip hop; Arabic music; Novo dub; South Asian music; Alternative dance",
+			genres: "Trip hop; Arabic music; Novo dub; Worldbeat; Alternative dance",
 			my_rating: 8.0,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.SITE_NOISE
@@ -4051,7 +4085,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/00zeSauSqhrNr1uzznYxu3?si=QbQT8DgyTFeInLEWBkN6nQ",
 			year_of_release: "2001",
 			date_of_review: "3 July, 2025",
-			genres: "Hindustani classical music",
+			genres: "Hindustani classical music; Worldbeat",
 			country: "India",
 			my_rating: 8.0,
 			my_review: "",
@@ -4687,7 +4721,7 @@ const database = {
 			spotify_url: "https://open.spotify.com/album/6kXYzl5HwGgFxsX1M8aTKp?si=XFlZ5DVrTma6JpO-QeW_uQ",
 			year_of_release: "2009",
 			date_of_review: "2024",
-			genres: "Psybient; Psytrance; Electronic",
+			genres: "Psybient; Psytrance; Worldbeat; Electronic",
 			my_rating: 8.5,
 			my_review: "",
 			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
@@ -4860,7 +4894,7 @@ const database = {
 			my_review: "",
 		},
 		"sophie__oil_of_every_pearls_un_insides": {
-			lastfm_url: "https://www.last.fm/music/Sophie/OIL+OF+EVERY+PEARL%27S+UN-INSIDES",
+			lastfm_url: "https://www.last.fm/music/Sophie/Oil+of+Every+Pearl%27s+Un-Insides",
 			rym_url: "https://rateyourmusic.com/release/album/sophie/oil-of-every-pearls-un-insides/",
 			spotify_url: "https://open.spotify.com/album/23lnmHhZwyercCJhmyPXYN?si=k971jBq_SWGCXqwDDAFdYA",
 			year_of_release: "2018",
@@ -4914,7 +4948,7 @@ const database = {
 
 		//
 		"twenty_one_pilots__vessel": {
-			lastfm_url: "https://www.last.fm/music/twenty+one+pilots/Vessel+(Bonus+Tracks+Version)",
+			lastfm_url: "https://www.last.fm/music/Twenty+One+Pilots/Vessel",
 			rym_url: "https://rateyourmusic.com/release/album/twenty-one-pilots/vessel/",
 			spotify_url: "https://open.spotify.com/album/14onjcwGXJFQnTmmCnTUfQ?si=n6974t5pTvyloWzgWzWVPg",
 			year_of_release: "2013",
@@ -4973,13 +5007,13 @@ const database = {
 
 
 		"Talvin Singh - Ok": {
-			lastfm_url: "https://www.last.fm/music/talvin+singh/ok",
+			lastfm_url: "https://www.last.fm/music/Talvin+Singh/OK",
 			rym_url: "https://rateyourmusic.com/release/album/talvin-singh/ok-1/",
 			spotify_url: "https://open.spotify.com/album/3BX2BQbQhcjoEP79UsQOAK",
 			year_of_release: "1998",
 			date_of_review: "2025",
 			country: "India",
-			genres: "Downtempo; Drum and bass; Breakbeat; Jungle; Tribal house; South Asian music; Electronic",
+			genres: "Downtempo; Drum and bass; Breakbeat; Jungle; Tribal house; Worldbeat; Electronic",
 			my_rating: 8.0,
 			my_review: "",
 		},

@@ -20,20 +20,18 @@ const tracklist = [
 export const review = () => (
     <div className='review-content'>
         <div className="review-intro">
+            <p>
+                This album is a true album experience, not following any typical musical structures or normal genres.
+                It is a continuous, 44-minute "live" ambient mix simulating a late-night radio broadcast from Texas to Louisiana.
+                I love the Tuvan throat singing, strange snippets of radio broadcasts, mysterious field recordings, sounds of nature and wind, and the way it evokes a sense of vast, open landscapes.
+            </p>
+
+            <p>
+                The way the album unfolds, creates a vivid sense of place and time, a vast, melancholic, and mystical journey.
+                These are things I deeply enjoy in music, and we don't see this enough in modern music.
+            </p>
+
             <iframe width="560" height="315" src="https://www.youtube.com/embed/L6p16dZ5Bz8?si=rf_1EUV5nPCmM4VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            <p>
-
-            </p>
-            <p>
-
-            </p>
-            <p>
-
-            </p>
-            <p>
-
-            </p>
         </div>
 
         <div className='review-trackRatings'>
@@ -42,7 +40,8 @@ export const review = () => (
 
         <div className='review-summary'>
             <p>
-
+                One of the most influential albums in ambient and electronic music.
+                Absolute must listen if you enjoy immersive soundscapes and experimental music.
             </p>
         </div>
     </div>
