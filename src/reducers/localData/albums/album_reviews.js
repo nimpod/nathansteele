@@ -3389,7 +3389,6 @@ const database = {
 			genres: "Ambient; Downtempo; Electronic",
 			my_rating: 8.0,
 			my_review: "",
-			country: "India"
 		},
 		"Manish Vyas - Water down the ganges": {
 			lastfm_url: "https://www.last.fm/music/Manish+Vyas/Water+Down+the+Ganges",
@@ -4724,7 +4723,8 @@ const database = {
 			genres: "Psybient; Psytrance; Worldbeat; Electronic",
 			my_rating: 8.5,
 			my_review: "",
-			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE
+			recommended_by: TrustworthyMusicReviewers.THE_WONKY_ANGLE,
+			country: "India"
 		},
 		"sababa5__aspan": {
 			lastfm_url: "https://www.last.fm/music/Sababa+5/Aspan",
