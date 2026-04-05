@@ -1801,12 +1801,14 @@ const database = {
             ],
             my_review: ""
         },
-        "the_prestige": {
-            letterboxd_url: "https://boxd.it/293w",
+        "the_protector": {
+            letterboxd_url: "https://boxd.it/1ZrS",
             my_rating: 8.0,
-            my_tags: ["Magician"],
-            my_review: "",
-            custom_poster_url: "https://www.themoviedb.org/t/p/original/bdN3gXuIZYaJP7ftKK2sU0nPtEA.jpg"
+            my_tags: [
+                "Martial arts",
+                "Thailand",
+            ],
+            my_review: ""
         },
 
         //
@@ -2007,6 +2009,13 @@ const database = {
             ],
             my_review: "",
             custom_poster_url: "https://www.themoviedb.org/t/p/original/q2P9lYkctl5Ory71HEBMaFxbVlD.jpg"
+        },
+        "the village": {
+            letterboxd_url: "https://boxd.it/DijC",
+            my_rating: 8.0,
+            my_tags: [
+            ],
+            my_review: "",
         },
 
         //
@@ -2558,6 +2567,13 @@ const database = {
             gradual_interest: [8, 9, 9, 9, 8, 7, 8, 9, 10, 9],
             custom_poster_url: "https://www.themoviedb.org/t/p/original/tAmHBydreAbLn0gPXBHmbyEytNP.jpg"
         },
+        "bipolar": {
+            letterboxd_url: "https://boxd.it/tgg2",
+            my_rating: 8.0,
+            my_tags: ["Tibet"],
+            my_review: ReactDomServer.renderToString(),
+            gradual_interest: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
+        },
 
         //
         "bunny_drop": {
@@ -2665,7 +2681,16 @@ const database = {
             my_review: "",
             custom_poster_url: "https://www.themoviedb.org/t/p/original/eyAux0xsqSaCthc1wY6mQjZjS4A.jpg"
         },
-    
+        "chocolate": {
+            letterboxd_url: "https://boxd.it/1N1I",
+            my_rating: 8.0,
+            my_tags: [
+                "Martial arts",
+                "Thailand",
+            ],
+            my_review: "",
+        },
+
         //
         "cloud_atlas": {
             letterboxd_url: "https://boxd.it/2W60",
@@ -3004,6 +3029,12 @@ const database = {
         "diner": {
             letterboxd_url: "https://boxd.it/kOde",
             my_rating: 7.5,
+            my_tags: [""],
+            my_review: ""
+        },
+        "dinner_in_america": {
+            letterboxd_url: "https://boxd.it/oinu",
+            my_rating: 8.0,
             my_tags: [""],
             my_review: ""
         },
@@ -3807,13 +3838,21 @@ const database = {
                 "Great soundtrack"
             ],
         },
-    
+
+        
         "kpax": {
             letterboxd_url: "https://boxd.it/2aYo",
             my_rating: 8.0,
             my_tags: ["Melancholic", "Mysterious", "Alien visitor disguised as human", "Search for Extraterrestrial Intelligence (SETI)", "Quirky", "Mental hospital"],
             my_review: "",
             custom_poster_url: "https://www.themoviedb.org/t/p/original/vJqhlC6QNXFxFhJ02kg1CFtcaa.jpg"
+        },
+    
+        "kyrie": {
+            letterboxd_url: "https://boxd.it/GcpU",
+            my_rating: 8.0,
+            my_tags: ["Sad", "Peaceful", "Tsunami"],
+            my_review: "",
         },
     },
 
@@ -4014,6 +4053,14 @@ const database = {
             gradual_interest: [7, 7, 8, 8, 8, 8, 7, 8, 8, 8],
             custom_poster_url: "https://www.themoviedb.org/t/p/original/hQ1mUz3Vi15Qr3dGWlvqGmiFPCL.jpg"
         },
+        "mads": {
+            letterboxd_url: "https://boxd.it/M8qQ",
+            my_rating: 8.0,
+            my_tags: ["Trippy", "One shot"],
+            my_review: "",
+            gradual_interest: [7, 8, 8, 8, 8, 8, 9, 8, 8, 8],
+        },
+
         
         //
         "memento": {
@@ -4053,6 +4100,13 @@ const database = {
             my_review: ReactDomServer.renderToString(TemplateReview(screenshots.MEET_CUTE)),
             screenshots: screenshots.MEET_CUTE,
             gradual_interest: [8, 8, 8, 9, 8, 8, 8, 8, 8]
+        },
+        "memoir_of_a_snail": {
+            letterboxd_url: "https://boxd.it/EgX8",
+            my_rating: 8.5,
+            my_tags: ["Sad", "Bleak", "Sepia"],
+            my_review: ReactDomServer.renderToString(),
+            gradual_interest: [8, 8, 8, 9, 9, 9, 8, 8, 8]
         },
 
         //
@@ -4197,6 +4251,12 @@ const database = {
             my_tags: ["Questioning reality", "Atmospheric", "Mysterious", "A story within a story", "Anti-Hollywood"],
             my_review: "",
             custom_poster_url: "https://www.themoviedb.org/t/p/original/aO5xuvfujX3cFg9evUVZuJlroEW.jpg"
+        },
+        "myth of man": {
+            letterboxd_url: "https://boxd.it/KrD6",
+            my_rating: 8.0,
+            my_tags: ["Silent film"],
+            my_review: "",
         },
     },
     
@@ -4543,6 +4603,15 @@ const database = {
             gradual_interest: [8, 8, 8, 7, 9, 10, 7, 9, 10, 10, 9, 10],
             custom_poster_url: "https://www.themoviedb.org/t/p/original/3WDKfLdU2FP8gjVcXTpNvV9fWdA.jpg"
         },
+        "rich flu": {
+            letterboxd_url: "https://boxd.it/zdoO",
+            my_rating: 8.0,
+            my_tags: [
+                "Chaotic",
+            ],
+            my_review: "",
+            gradual_interest: [7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8],
+        },
 
         //
         "rocky": {
@@ -4855,6 +4924,14 @@ const database = {
         },
 
         //
+        "spring summer fall winter and spring": {
+            my_rating: 9.0,
+            letterboxd_url: "https://boxd.it/2b6W",
+            my_review: ReactDomServer.renderToString(),
+            my_tags: [
+                "Buddhism"
+            ],
+        },
         "spring_and_chaos": {
             my_rating: 8.0,
             letterboxd_url: "https://boxd.it/1u02",
@@ -4987,7 +5064,14 @@ const database = {
             gradual_interest: [8, 9, 9, 9, 8, 8, 8, 9, 9, 9, 9, 8, 9, 9],
             custom_poster_url: "https://www.themoviedb.org/t/p/original/jwwUtmqKTlDad8cmxdAeTDf61GF.jpg"
         },
-    
+        "to live": {
+            letterboxd_url: "https://boxd.it/1j6S",
+            my_rating: 8.5,
+            my_tags: [""],
+            my_review: "",
+            gradual_interest: [8, 7, 8, 8, 9, 9, 8, 8, 8, 9, 8, 8, 8, 8],
+        },
+
         //
         "tekkonkinkreet": {
             letterboxd_url: "https://boxd.it/1Pui",
@@ -5029,7 +5113,14 @@ const database = {
             my_review: "",
             custom_poster_url: "https://www.themoviedb.org/t/p/original/1kLYRzVj6byWvFa3SLrAOcfgnfp.jpg"
         },
-    
+
+        "til we meet again": {
+            letterboxd_url: "https://boxd.it/ttg0",
+            my_rating: 8.0,
+            my_tags: [""],
+            my_review: "",
+        },
+
         "triangle": {
             letterboxd_url: "https://boxd.it/1tQG",
             my_rating: 9.5,
@@ -5240,6 +5331,14 @@ const database = {
             my_tags: [""],
             gradual_interest: [7, 7, 8, 8, 8, 7, 7, 8, 8, 9],
             custom_poster_url: "https://image.tmdb.org/t/p/original/iCIycswWbX1EDS6PYYBcR9ohrC.jpg",
+        },
+
+        "zinnia flower": {
+            letterboxd_url: "https://boxd.it/ct1A",
+            my_rating: 8.5,
+            my_tags: [""],
+            my_review: ReactDomServer.renderToString(),
+            gradual_interest: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
         },
 
         "zombieland": {

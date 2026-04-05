@@ -89,3 +89,29 @@ export default class App extends Component {
   }
 
 }
+
+
+export const initGlobalLightbox = () => {
+    document.addEventListener('click', (e) => {
+      console.log(e);
+      // Check if the clicked element has our specific class
+        if (e.target.classList.contains('film-screenshot')) {
+            const imageUrl = e.target.getAttribute('data-full');
+            openFullscreen(imageUrl);
+        }
+    });
+};
+
+function openFullscreen(url) {
+    console.log(url);
+    
+    const view = document.getElementById('FullImageView');
+    const img = document.getElementById('FullImage');
+    
+    if (img !== null && view !== null) {
+        img.src = url;
+        view.style.display = 'flex';
+        // Prevent scrolling background while looking at the photo
+        document.body.style.overflow = 'hidden';
+    }
+}

@@ -11,12 +11,13 @@
 export function display_fullscreen_image(src) {
     console.log(src);
     
-    let full_image = document.getElementById('FullImage');
-    let full_image_view = document.getElementById('FullImageView');
+    let img = document.getElementById('FullImage');
 
-    if (full_image !== null && full_image_view !== null) {
-        full_image.src = src;
-        full_image_view.display = "block";
+    if (img !== null) {
+        img.src = src;
+        img.style.display = 'flex';
+        // Prevent scrolling background while looking at the photo
+        document.body.style.overflow = 'hidden';
     }
 }
 
