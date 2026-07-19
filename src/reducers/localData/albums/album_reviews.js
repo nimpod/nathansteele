@@ -970,6 +970,16 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
+		"boards of canada - inferno": {
+			lastfm_url: "https://www.last.fm/music/Boards+of+Canada/Inferno",
+			rym_url: "https://rateyourmusic.com/release/album/boards-of-canada/inferno/",
+			spotify_url: "https://open.spotify.com/album/0mu3EvWYfNwBfISSg0q03p?si=eHs9F-UpR4GvKUgbUT1Atg",
+			year_of_release: "2026",
+			date_of_review: "2026",
+			genres: "Ambient; IDM; Hauntology; Downtempo; Electronic",
+			my_rating: 9.0,
+			my_review: "",
+		},
 
 		//
 		"bruno_sanfilippo__ver_sacrum": {
@@ -1342,6 +1352,17 @@ const database = {
 		},
 
 
+		"Chancha Via Circuito - Bienaventuranza": {
+			lastfm_url: "https://www.last.fm/music/Chancha+Via+Circuito/Bienaventuranza",
+			rym_url: "https://rateyourmusic.com/release/album/chancha-via-circuito/bienaventuranza/",
+			spotify_url: "https://open.spotify.com/album/4drzgKTRP2tpl3Sic0osBQ?si=ImmGOTihRKyOv4LVlj-_RA",
+			year_of_release: "2018",
+			date_of_review: "2026",
+			genres: "Latin electronic; Indigenous Andean music; Digital Cumbia; Folktronica",
+			country: "Argentina",
+			my_rating: 8.0,
+			my_review: ""
+		},
 		"Charaxes - Colors Tease": {
 			lastfm_url: "https://www.last.fm/music/charaxes/Colors+Tease",
 			rym_url: "https://rateyourmusic.com/release/album/charaxes/colors-tease/",
@@ -1624,6 +1645,16 @@ const database = {
 		},
 
 
+		"Dixie Dregs - Free Fall": {
+			lastfm_url: "https://www.last.fm/music/Dixie+Dregs/Free+Fall",
+			rym_url: "https://rateyourmusic.com/release/album/dixie-dregs/free-fall/",
+			spotify_url: "",
+			year_of_release: "1977",
+			date_of_review: "2026",
+			genres: "Jazz rock; Jazz fusion; Jazz; Progressive rock; Country rock",
+			my_rating: 8.0,
+			my_review: ""
+		},
 		"Deki Alem - Forget In Mass": {
 			lastfm_url: "https://www.last.fm/music/Deki+Alem/Forget+in+Mass",
 			rym_url: "https://rateyourmusic.com/release/album/deki-alem/forget-in-mass/",
@@ -4277,7 +4308,7 @@ const database = {
 			year_of_release: "2016",
 			genres: "Art rock; Chamber pop; Ambient pop; Art pop",
 			custom_cover_url: "https://lastfm.freetls.fastly.net/i/u/770x0/28db3fdca036fb53c62754694a89d3fd.jpg#28db3fdca036fb53c62754694a89d3fd",
-			my_rating: 9.0,
+			my_rating: 9.5,
 			my_review: ReactDomServer.renderToString(Radiohead_AMoonShapedPool()),
 			date_of_review: "2016",
 		},
@@ -4394,6 +4425,7 @@ const database = {
 			my_rating: 8.0,
 			my_review: "",
 		},
+
 
 
 		"Ryuichi Sakamoto - Playing the piano 12122020": {
